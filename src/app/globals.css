@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.mainCarelyoNavbar {
+  @apply max-h-[32px] top-[25px] left-[144px] gap-2.5;
+}
+.upperNavbar-text {
+  @apply w-[99px] h-[17px]  leading-[17px]  text-left w-full max-w-screen-lg;
+}
+.topNavbar-black {
+  @apply h-[65px] bg-[rgba(22,28,40,1)];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.topNavbarInner {
+  @apply flex w-[391px] h-[32px] top-[25px] left-[144px] gap-2.5 font-[Impact,"Inter",sans-serif] font-medium text-sm text-white leading-[17px];
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.getCareButton {
+  @apply max-w-[208px] max-h-[52px] pl-9 pr-9 pt-3 pb-3 rounded-[35px] gap-3 bg-[rgba(69,172,96,1)];
+}
+.healthCarePlatform {
+  @apply w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px];
+}
+.healthCarePlatform-Inner {
+  @apply text-[64px]  leading-[83px];
+}
+.hCPFM-ISText {
+  @apply relative w-[624px] h-[52px];
+  top: 620.69140625px;
+  left: 125px;
+  opacity: 0.5;
 }
