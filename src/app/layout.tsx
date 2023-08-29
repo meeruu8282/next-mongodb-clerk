@@ -21,20 +21,28 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="mainContainerNavbar">
           <div>
-            <div className="topNavbar-black  ">
+            <div className="h-[65px] bg-[rgba(22,28,40,1)]  ">
               <div className="topNavbarInner">
-                <h1 className="upperNavbar-text">FOR PATIENTS</h1>
+                <h1 className="h-[17px]  leading-[17px]  text-left w-full max-w-screen-lg">
+                  FOR PATIENTS
+                </h1>
 
-                <h1 className="upperNavbar-text">FOR PROVIDERS</h1>
-                <h1 className="upperNavbar-text">FOR PARTNERS</h1>
-                <h1 className="upperNavbar-text">FOR SHOP</h1>
+                <h1 className="h-[17px]  leading-[17px]  text-left w-full max-w-screen-lg">
+                  FOR PROVIDERS
+                </h1>
+                <h1 className="h-[17px]  leading-[17px]  text-left w-full max-w-screen-lg">
+                  FOR PARTNERS
+                </h1>
+                <h1 className="h-[17px]  leading-[17px]  text-left w-full max-w-screen-lgt">
+                  FOR SHOP
+                </h1>
               </div>
             </div>
-            <div className="mainCarelyoNavbar">
+            <div className="max-h-32px top-25px left-144px">
               <Navbar />
             </div>
-            <div className="healthCarePlatform">
-              <h1 className="healthCarePlatform-Inner"></h1>
+            <div className="w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px]">
+              <h1 className="text-[64px]  leading-[83px];"></h1>
               <h2 hCPFM-ISText></h2>
             </div>
           </div>
@@ -42,7 +50,7 @@ export default function RootLayout({
 
         {children}
 
-        <div className="bg-gray-100 flex justify-center h-[422px] top-[5978px] justify-between">
+        <div className="bg-gray-100 flex  h-[422px] top-[5978px] justify-between">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* About Section */}
