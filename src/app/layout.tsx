@@ -1,4 +1,5 @@
 import Navbar from "./providers/Components/navbar";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="mainContainerNavbar">
           <div>
-            <div className="topNavbar-black">
+            <div className="topNavbar-black  ">
               <div className="topNavbarInner">
                 <h1 className="upperNavbar-text">FOR PATIENTS</h1>
 
@@ -33,14 +34,8 @@ export default function RootLayout({
               <Navbar />
             </div>
             <div className="healthCarePlatform">
-              <h1 className="healthCarePlatform-Inner">
-                Healthcare Platform for Providers!
-              </h1>
-              <h2 hCPFM-ISText>
-                Are you an independent doctor, family physician, or managing a
-                small to medium-sized clinic or hospital? We at Carelyo are here
-                for you!
-              </h2>
+              <h1 className="healthCarePlatform-Inner"></h1>
+              <h2 hCPFM-ISText></h2>
             </div>
           </div>
         </div>

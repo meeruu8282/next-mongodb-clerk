@@ -30,3 +30,19 @@
   left: 125px;
   opacity: 0.5;
 }
+.ulPlatform {
+  @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-60;
+  transform-origin: top, text-poppin;
+}
+.dropdown-hidden {
+  @apply transform -translate-y-full; /* göm den uppåt */
+  visibility: hidden;
+}
+
+.dropdown-visible {
+  @apply block transform translate-y-0; /* visa den och placera den i sitt normala läge */
+  visibility: visible;
+}
+.nav-item {
+  @apply flex space-x-4 text-2xl text-black leading-normal inline-flex items-center h-auto border-none bg-transparent p-0 cursor-pointer;
+}

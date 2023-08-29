@@ -1,5 +1,5 @@
 import Image from "next/image";
 
 export default function Home() {
-  return <main className="overflow-hidden">home</main>;
+  return <div className="overflow-hidden">home</div>;
 }
