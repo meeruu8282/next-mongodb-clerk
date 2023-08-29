@@ -44,5 +44,14 @@
   visibility: visible;
 }
 .nav-item {
-  @apply flex space-x-4 text-2xl text-black leading-normal inline-flex items-center h-auto border-none bg-transparent p-0 cursor-pointer;
+  @apply flex space-x-4 text-2xl text-black leading-normal inline-flex items-center h-auto border-none bg-transparent p-0 cursor-pointer flex items-center space-x-2;;
+
+}
+.nav-item-chevron {
+  @apply text-xs transition-transform ease-in-out duration-300;
+
+  /* Rotera pilen när knappen är öppen (beroende på isOpen state) */
+}
+.nav-item.open .nav-item-chevron {
+  @apply transform rotate-180;
 }

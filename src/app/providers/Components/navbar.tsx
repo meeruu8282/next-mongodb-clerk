@@ -1,4 +1,5 @@
 "use client";
+import "font-awesome/css/font-awesome.min.css";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -13,7 +14,7 @@ export default function Navbar() {
         howitwork
       </Link>
       <button onClick={() => setIsOpen(!isOpen)} className=" nav-item">
-        Platform
+        Platform <i className="fa fa-chevron-down"></i>
       </button>
       <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
         <ul className="ulPlatform  ">
@@ -33,23 +34,32 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/providers/platsforms/diagCenters" />
-            DiagCenters
+            <Link href="/providers/platforms/labCenters">
+              <nav>labCententer</nav>
+            </Link>
           </li>
           <li>
-            <Link href="/providers/platsforms/diagCenters" />
+            <Link href="/providers/platforms/pharmacies">
+              <nav>Pharmacies</nav>
+            </Link>
           </li>
-        </ul>{" "}
+
+          <li>
+            <Link href="/providers/platforms/seDoctors">
+              <nav> SeDoctors </nav>
+            </Link>
+          </li>
+        </ul>
       </div>
 
-      <Link href="/prising" className="text-black text-2xl">
-        <nav> Prising </nav>
+      <Link href="/pricing" className="text-black text-2xl">
+        <nav> Pricing </nav>
       </Link>
       <Link href="/blog" className="text-black  text-2xl">
-        Blog
+        <nav> Blog </nav>
       </Link>
       <Link href="/help" className="text-black  text-2xl">
-        Help
+        <nav> Help </nav>
       </Link>
       <button className=" getCareButton">Get Care</button>
     </div>
