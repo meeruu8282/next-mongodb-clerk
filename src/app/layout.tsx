@@ -51,39 +51,57 @@ export default function RootLayout({
 
         {children}
         <div className="bg-gray-100 h-[422px] top-[5978px] flex justify-between">
-          <div className="flex mt-9 bg-blue-500 w-[1440px] h-[270px] p-[0px] pr-[88px] pl-[88px]">
-          
-              {" "}
-              {/* Lägg till flex här */}
-              <div className=" mt-0 bg-red-400 w-[332px] h-[114.09] p-8">
-                <div className=" bg-purple-200 w-[113px] h-[68.09px] ">
-                  <Image
-                    src="/Mask group.png"
-                    alt="Mask Image"
-                    width={113}
-                    height={68.09}
-                  />
-                  <div className="w-[332px] h-[22px] bg-blue-300 ">
-                    <p className="font-[Poppins,sans-serif] font-normal ">
-                      Delivering Better Healthcare Solutions
-                    </p>
-                  </div>
+          <div className="flex mt-9 bg-blue-500 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px] ">
+            {/* Lägg till flex här */}
+            <div className="  bg-red-400 w-[332px] h-[114.09px] ">
+              <div className="     bg-purple-200 w-[113px] h-[68.09px] ">
+                <Image
+                  src="/Mask group.png"
+                  alt="Mask Image"
+                  width={113}
+                  height={68.09}
+                />
+              </div>
+              <div className="w-[332px] h-[22px] bg-blue-300  top-0">
+                <p className="text-[Poppins] font-normal text-[16px] ">
+                  Delivering Better Healthcare Solutions
+                </p>
+              </div>
+            </div>
+            <div className="bg-gray-500 w-[150px] h-[270px]">
+              <div className="w-[150px] h-[22px]">
+                <p className="text-[Poppins] font-semibold text-[16px] custom-leading ">
+                  NAVIGATION LINKS
+                </p>
+              </div>
+              <div className="bg-green-100 w-[150px] h-[222px] gap-[18px] text-[Poppins] font-medium text-[16px]">
+                <nav className="bg-green-200">home</nav>
+                <nav>About Us</nav>
+                <nav className="bg-green-300"> Platforms</nav>
+                <nav> Partners</nav>
+              </div>
+            </div>
+            <div>
+              <div className="bg-yellow-500 w-[205px] h-[110px] gap-[24px] text-[Poppins ,sans-serif]] text-[16px]]">
+                <h1 className=" w-[205px] h-[24px]">CONTACT INFORMATION</h1>
+                <div>
+                  <h2 className="w-[205px] h-[22px] font-normal">
+                    {" "}
+                    info@carelyo.io
+                  </h2>
+                </div>
+                <div>
+                  <h2 className="w-[205px] h-[22px]"> +1 (123) 456-7890</h2>
                 </div>
               </div>
-              <div className="bg-gray-500 w-[150px] h-[270px]">
-                <div className="w-[150px] h-[22px]">
-                  <p className="text-[Poppins] font-semibold text-[16px] custom-leading ">
-                    NAVIGATION LINKS
-                  </p>
-                </div>
-                <div className="bg-green-100 w-[150px] h-[222px] gap-[18px] text-[Poppins] font-medium text-[16px]">
-                  <nav className="bg-green-200">home</nav>
-                  <nav>About Us</nav>
-                  <nav className="bg-green-300"> Platforms</nav>
-                  <nav> Partners</nav>
+            </div>
+            <div>
+              <div className=" bg-white w-[136px] h-[194px] gap-[65px]">
+                <div>
+                  <h1>SOCIAL MEDIA</h1>
                 </div>
               </div>
-            
+            </div>
           </div>
         </div>
       </body>
