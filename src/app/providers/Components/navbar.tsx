@@ -1,7 +1,8 @@
 "use client";
-
+import Image from "next/image";
 import "font-awesome/css/font-awesome.min.css";
 
+import a from "./app.png";
 import { useState } from "react";
 import Link from "next/link";
 export default function Navbar() {
@@ -9,6 +10,16 @@ export default function Navbar() {
 
   return (
     <div className="nav-item">
+      <div>
+        <Link href="/">
+          <Image
+            src="/Mask group.png"
+            alt="Mask Image"
+            width={114}
+            height={68.69}
+          />
+        </Link>
+      </div>
       <Link href="/" className="text-black text-2xl">
         Home
       </Link>
@@ -52,7 +63,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <Link href="/providers/platforms/pricing" className="text-black text-2xl">
+      <Link href="/providers/pricing" className="text-black text-2xl">
         <nav> Pricing </nav>
       </Link>
       <Link href="/providers/blog" className="text-black  text-2xl">
@@ -61,7 +72,13 @@ export default function Navbar() {
       <Link href="/providers/help" className="text-black  text-2xl">
         <nav> Help </nav>
       </Link>
-      <button className=" getCareButton">Get Care</button>
+
+      <button className="CarelyoButton">
+        <div>
+          <div className="carelyoButtonText">Carelyo</div>
+          <i className="fa fa-chevron-right"></i>
+        </div>
+      </button>
     </div>
   );
 }

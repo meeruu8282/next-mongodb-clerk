@@ -1,5 +1,6 @@
 import Navbar from "./providers/Components/navbar";
-
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -22,7 +23,7 @@ export default function RootLayout({
         <div className="mainContainerNavbar">
           <div>
             <div className="h-[65px] bg-[rgba(22,28,40,1)]  ">
-              <div className="topNavbarInner">
+              <div className="topNavbarInner ">
                 <h1 className="h-[17px]  leading-[17px]  text-left w-full max-w-screen-lg">
                   FOR PATIENTS
                 </h1>
@@ -49,48 +50,40 @@ export default function RootLayout({
         </div>
 
         {children}
-
-        <div className="bg-gray-100 flex  h-[422px] top-[5978px] justify-between">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* About Section */}
-              <div>
-                <h2 className="text-xl font-bold mb-3">About Us</h2>
-                <p>CREYELO</p>
+        <div className="bg-gray-100 h-[422px] top-[5978px] flex justify-between">
+          <div className="flex mt-9 bg-blue-500 w-[1440px] h-[270px] p-[0px] pr-[88px] pl-[88px]">
+          
+              {" "}
+              {/* Lägg till flex här */}
+              <div className=" mt-0 bg-red-400 w-[332px] h-[114.09] p-8">
+                <div className=" bg-purple-200 w-[113px] h-[68.09px] ">
+                  <Image
+                    src="/Mask group.png"
+                    alt="Mask Image"
+                    width={113}
+                    height={68.09}
+                  />
+                  <div className="w-[332px] h-[22px] bg-blue-300 ">
+                    <p className="font-[Poppins,sans-serif] font-normal ">
+                      Delivering Better Healthcare Solutions
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              {/* Links Section */}
-              <div>
-                <h2 className="text-xl font-bold mb-3">Quick Links</h2>
-                <ul>
-                  <li className="mb-2">
-                    <a href="/" className="hover:text-indigo-400">
-                      Home
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="/about" className="hover:text-indigo-400">
-                      About
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="/services" className="hover:text-indigo-400">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/contact" className="hover:text-indigo-400">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
+              <div className="bg-gray-500 w-[150px] h-[270px]">
+                <div className="w-[150px] h-[22px]">
+                  <p className="text-[Poppins] font-semibold text-[16px] custom-leading ">
+                    NAVIGATION LINKS
+                  </p>
+                </div>
+                <div className="bg-green-100 w-[150px] h-[222px] gap-[18px] text-[Poppins] font-medium text-[16px]">
+                  <nav className="bg-green-200">home</nav>
+                  <nav>About Us</nav>
+                  <nav className="bg-green-300"> Platforms</nav>
+                  <nav> Partners</nav>
+                </div>
               </div>
-
-              {/* Copyright Section */}
-              <div className="md:text-right text-center">
-                <p>© 2023 Carelyo. All rights reserved.</p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </body>
