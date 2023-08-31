@@ -18,7 +18,7 @@ export default function Sedoctors() {
         </div>
      
       {/* Green background container */}
-      <div className="greenBackground relative flex justify-center items-center">
+      <div className="greenBackground">
 
           {/* Corner triangle */}
           <div className="absolute right-0 top-0">

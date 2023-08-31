@@ -4,12 +4,12 @@
 
 @layer components {
   .greenBackground{
-    @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md
+    @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center
 
   }
 
   .greenBackgroundTriangle{
-    @apply  w-[264px] h-[254px] bottom-0  bg-greenBackgroundObjects border-transparent border-solid 
+    @apply  w-[264px] h-[254px] bg-greenBackgroundObjects border-transparent border-solid  
   }
 
   .greenCircleContainer{
