@@ -1,23 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer utilities {
-  .max-h-32px {
-    max-height: 32px;
-  }
-  .top-25px {
-    top: 25px;
-  }
-  .left-144px {
-    left: 144px;
-  }
-}
 
 .topNavbarInner {
-  @apply flex w-[391px] h-[32px] top-[25px] left-[144px] gap-[9px] text-[Inter] font-medium text-sm text-white leading-[17px];
+  @apply flex w-[391px] h-[32px] text-white left-[144px] px-[9]   font-[Poppins];
 }
 .getCareButton {
-  @apply bg-gray-700 text-white px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
+  @apply bg-gray-700 px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
 }
 .getCareButton:hover {
   @apply bg-green-400;
@@ -33,7 +22,7 @@
   opacity: 0.5;
 }
 .ulPlatform {
-  @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-60;
+  @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
   transform-origin: top, text-poppin;
 }
 .dropdown-hidden {
@@ -46,13 +35,14 @@
   visibility: visible;
 }
 .nav-item {
-  @apply flex text-2xl text-black leading-normal  items-center h-auto border-none bg-transparent p-0 cursor-pointer  space-x-2;
+  @apply flex text-2xl   text-black font-[Poppins] leading-normal  items-center  border-none bg-transparent p-0 cursor-pointer   bg-red-300
+   h-[65px] space-x-9;
 }
-.CarelyoButton {
-  @apply bg-[rgba(69,172,96,1)]  text-white px-4 py-2 rounded-md transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+.carelyoButton {
+  @apply bg-[rgba(69,172,96,1)] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
 }
 .carelyoButtonText {
-  @apply w-[96px] h-[22px];
+  @apply h-[22px] text-[16px]  flex items-center justify-between w-full ;
 }
 
 .footertext {
