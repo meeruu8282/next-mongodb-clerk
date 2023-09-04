@@ -4,10 +4,9 @@ export default function Sedoctors() {
   return (
     <div className=" h-auto ">
       <div className=" flex justify-end ">
-
         <div className=" w-[1315px] h-[836px]  bg-blue-300">
-          <div className="w-[858px] h-[192px] top-[258px] left-[291px] gap-[64px]">
-            <div className="w-[838px] h-[104px] max-w-screen-sm mx-auto">
+          <div className="w-[858px] h-[192px] top-[258px] left-[291px] gap-[64px] bg-orange-300">
+            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
               <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
                 Joining carelyo as a{" "}
                 <span className="text-greenText whitespace-normal">
@@ -23,19 +22,18 @@ export default function Sedoctors() {
               </p>
             </div>
           </div>
+          <div className="  w-[289px] h-[396px] left-0 mt-[200px] bg-violet-400"></div>
+          <div className="absolute right-0 bottom-0 ">
+            <Image
+              layout="intrinsic "
+              width={970}
+              height={596}
+              src="/heartdoctor.png"
+              alt="heartDoctor"
+            />  
+          </div>
         </div>
-        <div className="absolute right-0 bottom-0">
-              <Image
-                layout="intrinsic "
-                width={970}
-                height={596}
-                src="/heartdoctor.png"
-                alt="heartDoctor"
-              />
-            </div>
       </div>
-
-   
 
       {/* Green background container */}
       <div className="greenBackground">
