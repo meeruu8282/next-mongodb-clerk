@@ -4,7 +4,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faTwitter,
+  faFacebookF,
+} from "@fortawesome/free-brands-svg-icons";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -44,10 +49,10 @@ export default function RootLayout({
         </div>
 
         {children}
-        <div className="bg-gray-100 h-[300px] top-[5978px] flex ">
-          <div className="flex justify-between items-center  mt-9  w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
+        <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10">
+          <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
             {/* Lägg till flex här */}
-            <div className="  w-[332px] h-[114.09px] ">
+            <div className="  w-[332px] h-[114.09px] mt-[-175px] ">
               <div className="w-[113px] h-[68.09px]  ">
                 <Image
                   src="/Mask group.png"
@@ -56,7 +61,7 @@ export default function RootLayout({
                   height={68.09}
                 />
               </div>
-              <div className="w-[332px] h-[22px]  top-0 ">
+              <div className="w-[332px] h-[22px]   mt-5 ">
                 <p className="font-[Poppins] font-normal text-[16px] ">
                   Delivering Better Healthcare Solutions
                 </p>
@@ -68,20 +73,20 @@ export default function RootLayout({
                   NAVIGATION LINKS
                 </p>
               </div>
-              <div className=" w-[150px] h-[222px] gap-[18px] font-[Poppins] font-medium text-[16px]  ">
+              <div className=" w-[150px] h-[222px] gap-[18px] font-[Poppins] font-medium text-[16px] ">
                 <nav className="mt-5">Home</nav>
                 <nav className="mt-2">About Us</nav>
                 <nav className="mt-2"> Platforms</nav>
                 <nav className="mt-2"> Partners</nav>
               </div>
             </div>
-            <div>
+            <div className="  flex flex-col justify-start mt-[-160px]">
               <div className=" w-[205px] h-[110px] gap-[24px]  text-[16px]">
-                <h1 className=" flex justify-center  items-center font-[Poppins] w-[205px] h-[24px]">
+                <h1 className="  font-[Poppins] w-[205px] h-[24px] font-semibold">
                   CONTACT INFORMATION
                 </h1>
-                <div className="">
-                  <h2 className="w-[205px] h-[22px] font-normal font-[Poppins]">
+                <div>
+                  <h2 className="w-[205px] h-[22px] font-normal ">
                     info@carelyo.io
                   </h2>
                 </div>
@@ -91,9 +96,57 @@ export default function RootLayout({
               </div>
             </div>
             <div>
-              <div className="w-[136px] h-[194px] gap-[65px] ">
-                <div>
-                  <h1 className="font-[Poppins]">SOCIAL MEDIA</h1>
+              <div className="w-[136px] h-[194px] gap-[65px]  mt-[-90px]">
+                <div className="">
+                  <h1 className="font-[Poppins]  font-semibold">
+                    SOCIAL MEDIA
+                  </h1>
+                </div>
+                <div className="w[136px] h-[40px] flex mt-3  space-x-3">
+                  <div className="w-[40px] h-[40px]  rounded-lg flex justify-center items-center bg-gradient-to-br from-[#405DE6] via-[#5851DB] via-[#FD1D1D] to-[#FCAF45]    ">
+                    <a
+                      className="w-[25px] h-[25px]  "
+                      href="https://www.instagram.com/your_username/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        size="1x"
+                        color="white"
+                      />
+                    </a>
+                  </div>
+
+                  <div className="w-[37.33px] h-[40px] radius-[50px]  ">
+                    <a
+                      className="W-[20px] h-[20px]"
+                      href="https://twitter.com/your_twitter_username"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faTwitter}
+                        size="2x"
+                        color="#1DA1F2"
+                      />
+                    </a>
+                  </div>
+                  <div className="w-[40px] h-[40px] rounded-[100px] bg-[#1877F2] flex justify-center  ">
+                    <div className="w-[18px] h-[18px]flex items-center mt-1">
+                      <a
+                        href="https://www.facebook.com/your_facebook_username/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon
+                          icon={faFacebookF}
+                          size="1x"
+                          color="white"
+                        />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

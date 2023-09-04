@@ -2,6 +2,7 @@
 import Image from "next/image";
 import "font-awesome/css/font-awesome.min.css";
 
+
 import a from "./app.png";
 import { useState } from "react";
 import Link from "next/link";
