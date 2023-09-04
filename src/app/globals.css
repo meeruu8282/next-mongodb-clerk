@@ -40,7 +40,7 @@
    h-[65px] space-x-9;
 }
 .carelyoButton {
-  @apply bg-[rgba(69,172,96,1)] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+  @apply bg-[#45AC60] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
 }
 .carelyoButtonText {
   @apply h-[22px] text-[16px]  flex items-center justify-between w-full;

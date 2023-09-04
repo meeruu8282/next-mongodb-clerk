@@ -45,10 +45,10 @@ export default function RootLayout({
 
         {children}
         <div className="bg-gray-100 h-[300px] top-[5978px] flex ">
-          <div className="flex mt-9  w-screen h-[270px] p-[0px] pr-[88px] pl-[88px] ">
+          <div className="flex justify-between items-center  mt-9  w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
             {/* Lägg till flex här */}
             <div className="  w-[332px] h-[114.09px] ">
-              <div className="    w-[113px] h-[68.09px] ">
+              <div className="w-[113px] h-[68.09px]  ">
                 <Image
                   src="/Mask group.png"
                   alt="Mask Image"
@@ -56,31 +56,31 @@ export default function RootLayout({
                   height={68.09}
                 />
               </div>
-              <div className="w-[332px] h-[22px]  top-0">
+              <div className="w-[332px] h-[22px]  top-0 ">
                 <p className="font-[Poppins] font-normal text-[16px] ">
                   Delivering Better Healthcare Solutions
                 </p>
               </div>
             </div>
-            <div className=" w-[150px] h-[270px]">
-              <div className="w-[150px] h-[22px]">
-                <p className="font-[Poppins] font-semibold text-[16px] custom-leading ">
+            <div className=" w-[170px] h-[270px] ">
+              <div className="w-[170px] h-[22px]  ">
+                <p className="font-[Poppins] font-semibold text-[16px]  ">
                   NAVIGATION LINKS
                 </p>
               </div>
-              <div className=" w-[150px] h-[222px] gap-[18px] font-[Poppins] font-medium text-[16px]">
-                <nav>Home</nav>
-                <nav>About Us</nav>
-                <nav> Platforms</nav>
-                <nav> Partners</nav>
+              <div className=" w-[150px] h-[222px] gap-[18px] font-[Poppins] font-medium text-[16px]  ">
+                <nav className="mt-5">Home</nav>
+                <nav className="mt-2">About Us</nav>
+                <nav className="mt-2"> Platforms</nav>
+                <nav className="mt-2"> Partners</nav>
               </div>
             </div>
             <div>
-              <div className=" w-[205px] h-[110px] gap-[24px]  text-[16px]]">
-                <h1 className="  font-[Poppins] w-[205px] h-[24px]">
+              <div className=" w-[205px] h-[110px] gap-[24px]  text-[16px]">
+                <h1 className=" flex justify-center  items-center font-[Poppins] w-[205px] h-[24px]">
                   CONTACT INFORMATION
                 </h1>
-                <div>
+                <div className="">
                   <h2 className="w-[205px] h-[22px] font-normal font-[Poppins]">
                     info@carelyo.io
                   </h2>
@@ -105,11 +105,11 @@ export default function RootLayout({
           </div>
 
           <div className="">
-            <div className="text-white flex space-x-4  font-[Poppins]">
-              <h3 className="pr-4 flex justify-end">legal</h3>
-              <h3 className="pr-4 flex justify-end">Acceptable Use Policy</h3>
-              <h3 className="pr-4 flex justify-end">Privacy Policy</h3>
-              <h3 className="pr-4 flex justify-end">Terms of Service</h3>
+            <div className="text-white flex space-x-9  font-[Poppins]">
+              <h3 className="flex justify-end">legal</h3>
+              <h3 className="flex justify-end">Acceptable Use Policy</h3>
+              <h3 className=" flex justify-end">Privacy Policy</h3>
+              <h3 className=" flex justify-end">Terms of Service</h3>
             </div>
           </div>
         </div>
