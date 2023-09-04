@@ -25,3 +25,52 @@
 
 }
 
+@layer components {
+  .topNavbarInner {
+    @apply flex w-[391px] h-[32px] text-white left-[144px] px-[9]   font-[Poppins];
+  }
+  
+  .getCareButton {
+    @apply bg-gray-700 px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
+  }
+  .getCareButton:hover {
+    @apply bg-green-400;
+  }
+  .getCareButton i {
+    @apply ml-2;
+  }
+  
+  .hCPFM-ISText {
+    @apply relative w-[624px] h-[52px];
+    top: 620.69140625px;
+    left: 125px;
+    opacity: 0.5;
+  }
+  .ulPlatform {
+    @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
+    transform-origin: top, text-poppin;
+  }
+  .dropdown-hidden {
+    @apply transform -translate-y-full; /* göm den uppåt */
+    visibility: hidden;
+  }
+  
+  .dropdown-visible {
+    @apply block transform translate-y-0.5; /* visa den och placera den i sitt normala läge */
+    visibility: visible;
+  }
+  .nav-item {
+    @apply flex    text-black font-[Poppins] leading-normal    border-none bg-transparent p-0 cursor-pointer  
+     h-[65px] space-x-9;
+  }
+  .carelyoButton {
+    @apply bg-[#45AC60] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+  }
+  .carelyoButtonText {
+    @apply h-[22px] text-[16px]  flex items-center justify-between w-full;
+  }
+  
+  .footertext {
+    @apply flex flex-col items-end space-y-2;
+  }
+}

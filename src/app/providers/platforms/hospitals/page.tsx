@@ -1,4 +1,6 @@
-import Image from "next/image";
+
+import Image from 'next/image'
+
 
 export default function Hospitals() {
   return (
@@ -25,3 +27,4 @@ export default function Hospitals() {
     </div>
   );
 }
+
