@@ -3,34 +3,57 @@ import Image from "next/image";
 export default function Sedoctors() {
   return (
     <div className=" h-auto ">
-      <h1 className="text-center text-3xl ">
-        Joining carelyo as a{" "}
-        <span className="text-greenText">
-          Self-Employed <br /> Doctors
-        </span>{" "}
-        comes with numerous advantages
-      </h1>
-      <p className="text-center">
-        With our innovative features and comprehensive support, we aim to
-        empower your practice and enhance patient care.
-      </p>
+      <div className=" flex justify-end ">
+        <div className=" w-[1315px] h-[836px]  bg-blue-300">
+          <div className="w-[858px] h-[192px] top-[258px] left-[291px] gap-[64px] bg-orange-300">
+            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
+              <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
+                Joining carelyo as a{" "}
+                <span className="text-greenText whitespace-normal">
+                  Self-Employed <br /> Doctors
+                </span>{" "}
+                comes with numerous advantages
+              </h1>
+            </div>
+            <div className="w-[858px] h-[64px] opacity-[50%]">
+              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
+                With our innovative features and comprehensive support, we aim
+                to empower your practice and enhance patient care.
+              </p>
+            </div>
+          </div>
+          <div className="  w-[289px] h-[396px] left-0 mt-[200px] bg-violet-400"></div>
+          <div className="absolute right-0 bottom-0 ">
+            <Image
+              layout="intrinsic "
+              width={970}
+              height={596}
+              src="/heartdoctor.png"
+              alt="heartDoctor"
+            />  
+          </div>
+        </div>
+      </div>
+
       {/* Green background container */}
       <div className="greenBackground">
-        <div className="relative">
-          {/* Corner triangle */}
+        {/* Corner triangle */}
+        <div className="absolute right-0 top-0">
           <div
             className="greenBackgroundTriangle"
             style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
           ></div>
-          {/* Circle div overlapping the container */}
-          <div className="greenCircleContainer">
-            <div
-              className="greenCircle"
-              style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)" }}
-            ></div>
-          </div>
+        </div>
+        {/* Circle div overlapping the container */}
+        <div className="greenCircleContainer">
+          <div
+            className="greenCircle"
+            style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
+          ></div>
+        </div>
 
-          <div className=" absolute w-[1221px] h-[530px] top-[102px] right-[126px] border-radius-[20px] ">
+        <div className="relative">
+          <div className=" w-[1221px] h-[530px] border-radius-[20px]  ">
             <div className="absolute right-0 top-0">
               <Image
                 layout="intrinsic "
@@ -55,7 +78,6 @@ export default function Sedoctors() {
               </div>
             </div>
 
-            
             <div className="absolute w-[612px] h-[264px] bottom-0 left-0 gap-[32px]">
               <div className="absolute w-[290px] h-[264px] gap-[32px] left-0 top-0">
                 <div className=" w-[290px] h-[116px] gap-[12px] top-0 left-0 ">
@@ -73,7 +95,6 @@ export default function Sedoctors() {
                   </div>
                 </div>
                 <div className=" absolute w-[290px] h-[116px] gap-[12px] bottom-0  left-0 ">
-
                   {/* first checkmark */}
                   <div className="h-[45px] w-[45px] rounded-lg p-3 bg-[#FFFFFF] bg-opacity-[10%] gap-10  ">
                     <div className="flex justify-center items-center w-[24px] h-[24px]">
@@ -82,11 +103,10 @@ export default function Sedoctors() {
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
                             <div className="text-[#FFFFFF] text-2xl">
                               <svg
-                                className="w-[10px] h-[10px]"
+                                className="w-[20px] h-[20px]"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   stroke-linecap="round"
@@ -125,11 +145,10 @@ export default function Sedoctors() {
                       <div className="flex justify-center items-center w-[10px] h-[6px]">
                         <div className="text-[#FFFFFF] text-2xl">
                           <svg
-                            className="w-[10px] h-[10px]"
+                            className="w-[20px] h-[20px]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               stroke-linecap="round"
@@ -168,11 +187,10 @@ export default function Sedoctors() {
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
                             <div className="text-[#FFFFFF] text-2xl">
                               <svg
-                                className="w-[10px] h-[10px]"
+                                className="w-[20px] h-[20px]"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   stroke-linecap="round"
@@ -211,11 +229,10 @@ export default function Sedoctors() {
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
                             <div className="text-[#FFFFFF] text-2xl">
                               <svg
-                                className="w-[10px] h-[10px]"
+                                className="w-[20px] h-[20px]"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   stroke-linecap="round"
