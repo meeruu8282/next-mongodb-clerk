@@ -1,4 +1,5 @@
 import Navbar from "./providers/Components/navbar";
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -10,6 +11,7 @@ import {
   faTwitter,
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -39,6 +41,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
+
           <div className="  max-h-32px top-25px left-144px">
             <Navbar />
           </div>
