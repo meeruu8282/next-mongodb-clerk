@@ -1,3 +1,6 @@
+import CheckboxItem from "../Components/checkboxItem";
+import CarelyoButton from "../Components/getStartedButton";
+import CustomContentBox from "../Components/customContentBox";
 export default function Pricing() {
   return (
     <div className=" justify-center items-center ">
@@ -19,19 +22,43 @@ export default function Pricing() {
         </div>
       </div>
 
-      <div className="  flex  mt-[414px] ml-[125px]  gap-[8px] w-[1190px] h-[463px] bg-green-300">
-        <div className="w-[391px] h-[463px] rounded-[25px] bg-red-400">
-          <div className="w-[333.98px] h-[413.09px] mt-[27.61px] ml-[29.23px] justify-between bg-red-200">
-            <div className="w-[333.98px] h-[249px] gap-[10px] bg-blue-500">
-              <div className="w-[333.98px] h-[32px] bg-yellow-400">
-                <div className="w-[224px h-[26px] text-[#45AC60]">
-                  Independent Doctor
-                </div>
-                <div className="w-[32px] h-[32px] rounded-md border-[2px]"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="  flex   w-[1190px] h-[463px]">
+        <CustomContentBox
+          title="Independent Doctor"
+          monthlyCost="$29/month"
+          descriptionLines={["Enhanced features for", "independent doctors."]}
+          features={[
+            "Appointment management",
+            "Custom branding",
+            "Multiple specialty listings",
+          ]}
+          buttonText="Get Started"
+        />
+        <CustomContentBox
+          title="Clinic"
+          monthlyCost="$99/month"
+          descriptionLines={[
+            "Perfect for small clinics with a more providers and advanced features.",
+          ]}
+          features={[
+            "Appointment management",
+            "Custom branding",
+            "Multiple specialty listings",
+          ]}
+          buttonText="Get Started"
+        />
+
+        <CustomContentBox
+          title="Hospital"
+          monthlyCost="$29/month"
+          descriptionLines={["Enhanced features for", "independent doctors."]}
+          features={[
+            "Appointment management",
+            "Custom branding and clinic profile",
+            "EHR integration",
+          ]}
+          buttonText="Get Started"
+        />
       </div>
     </div>
   );

@@ -68,4 +68,7 @@
   .carelyoButtonText {
     @apply h-[22px] text-[16px]  flex items-center justify-between w-full;
   }
+  .checkmarkPricing{
+    
+  }
 }
