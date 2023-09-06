@@ -56,7 +56,7 @@
   }
   
   .dropdown-visible {
-    @apply block transform translate-y-0.5; /* visa den och placera den i sitt normala läge */
+    @apply block z-50 transform translate-y-0.5; /* visa den och placera den i sitt normala läge */
     visibility: visible;
   }
   .nav-item {
