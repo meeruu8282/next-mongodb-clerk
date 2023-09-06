@@ -22,18 +22,21 @@ export default function Pricing() {
         </div>
       </div>
 
-      <div className="  flex   w-[1190px] h-[463px]">
-        <CustomContentBox
-          title="Independent Doctor"
-          monthlyCost="$29/month"
-          descriptionLines={["Enhanced features for", "independent doctors."]}
-          features={[
-            "Appointment management",
-            "Custom branding",
-            "Multiple specialty listings",
-          ]}
-          buttonText="Get Started"
-        />
+      <div className="  flex w-[1190px] h-[463px]">
+        <div>
+          <CustomContentBox
+            title="Independent Doctor"
+            monthlyCost="$29/month"
+            descriptionLines={["Enhanced features for", "independent doctors."]}
+            features={[
+              "Appointment management",
+              "Custom branding",
+              "Multiple specialty listings",
+            ]}
+            buttonText="Get Started"
+          />
+        </div>
+
         <CustomContentBox
           title="Clinic"
           monthlyCost="$99/month"
@@ -42,20 +45,22 @@ export default function Pricing() {
           ]}
           features={[
             "Appointment management",
-            "Custom branding",
-            "Multiple specialty listings",
+            "Custom branding and clinic profile",
+            "EHR integration",
           ]}
           buttonText="Get Started"
         />
 
         <CustomContentBox
           title="Hospital"
-          monthlyCost="$29/month"
-          descriptionLines={["Enhanced features for", "independent doctors."]}
+          monthlyCost="$499/month"
+          descriptionLines={[
+            "Suitable for small hospitals with limited departments.",
+          ]}
           features={[
             "Appointment management",
-            "Custom branding and clinic profile",
-            "EHR integration",
+            "Provider and department profiles for up to 10 departments",
+            "Reporting and analytics",
           ]}
           buttonText="Get Started"
         />
