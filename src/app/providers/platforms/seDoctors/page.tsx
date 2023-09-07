@@ -470,7 +470,7 @@ export default function Sedoctors() {
                   />
                 </div>
                 <div className="w-[350px] h-[114px] gap-[24px]">
-                  <div className="w-[346px] h-[114px] gap-[16px]">
+                  <div className=" w-[346px] h-[114px] gap-[16px] ">
                     <div className="w-[329.62px] h-[54px] gap-[3px]">
                       <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0">
                         Dr. Thamson
@@ -479,7 +479,7 @@ export default function Sedoctors() {
                       Primary Care Physician
                       </p>
                     </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] ">
+                    <p className=" w-[329px] h-[44px] text-[Poppins] bottom-0 text-[16px] leading-[22px] tracking-[0em]  text-[#A6A6A6] ">
                     Medical center with cutting-edge technology and a team professionals.
                     </p>
                   </div>
