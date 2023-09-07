@@ -43,7 +43,7 @@ const getCheckmarkSize  = () => {
   case "checkSmall": 
     return "w-[20px] h-[20px]"
     case "medium": 
-    return "w-4 h-4"
+    return "w-5 h-5"
     case "large": 
     return "w-[32px] h-[32px]"
 
