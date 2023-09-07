@@ -1,3 +1,7 @@
 export default function Help() {
-  return <div className="decoration-wavy"> help</div>;
+  return (
+    <div className="flex justify-center ">
+      
+    </div>
+  );
 }

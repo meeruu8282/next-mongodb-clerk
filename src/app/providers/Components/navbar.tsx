@@ -5,9 +5,9 @@ import "font-awesome/css/font-awesome.min.css";
 import a from "./app.png";
 import { useState } from "react";
 import Link from "next/link";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
       <div className=" w-full  text-2xl h-[68.69px] mt-1">
@@ -22,6 +22,7 @@ export default function Navbar() {
               />
             </Link>
           </div>
+          <div></div>
 
           <div className="w-[820px] h-[52px] gap-[52px]  ">
             <div className="absolute flex   w-[350px] h-[52px] gap-[17px]  mt-0 right-[300px] ">
@@ -42,17 +43,27 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <button className="carelyoButton ">
+              <button className="carelyoButton absolute ">
                 <div>
-                  <div className="carelyoButtonText  flex items-center justify-center text-[16px] w-full">
+                  <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                     Get Carelyo
-                    <div>
-                      <Image
-                        src="/Frame 1000005968.png"
-                        alt="arrow "
-                        width={28}
-                        height={28}
-                      />
+                    <div className="ml-3">
+                      <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
