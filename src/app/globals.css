@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+
   .greenBackground{
     @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center
 
@@ -14,14 +15,17 @@
 
   .greenCircleContainer{
     @apply absolute top-[530px] left-1/2 transform -translate-x-1/2 w-[487px] h-[487px]
-  }
-
-  .greenCircle{ 
-    @apply rounded-full bg-gradient-to-b from-greenBackgroundObjects to-transparent to-40% backdrop-blur-md h-full relative overflow-hidden
 
   }
 
+  .greenCircle {
+    @apply rounded-full bg-gradient-to-b from-greenBackgroundObjects to-transparent to-40% backdrop-blur-md h-full relative overflow-hidden;
+  }
 
+
+  .checkmark {
+    @apply bg-[rgba(69,172,96,1)] text-white flex items-center justify-center w-6 h-6 rounded-full;
+  }
 
 }
 
@@ -29,7 +33,7 @@
   .topNavbarInner {
     @apply flex w-[391px] h-[32px] text-white left-[144px] px-[9]   font-[Poppins];
   }
-  
+
   .getCareButton {
     @apply bg-gray-700 px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
   }
@@ -39,7 +43,7 @@
   .getCareButton i {
     @apply ml-2;
   }
-  
+
   .hCPFM-ISText {
     @apply relative w-[624px] h-[52px];
     top: 620.69140625px;
@@ -54,9 +58,11 @@
     @apply transform -translate-y-full; /* göm den uppåt */
     visibility: hidden;
   }
-  
+
   .dropdown-visible {
+
     @apply block z-50 transform translate-y-0.5; /* visa den och placera den i sitt normala läge */
+
     visibility: visible;
   }
   .nav-item {
@@ -69,8 +75,7 @@
   .carelyoButtonText {
     @apply h-[22px] text-[16px]  flex items-center justify-between w-full;
   }
-  
-  .footertext {
-    @apply flex flex-col items-end space-y-2;
+  .checkmarkPricing{
+    
   }
 }
