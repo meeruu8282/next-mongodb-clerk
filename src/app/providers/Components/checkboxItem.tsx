@@ -27,7 +27,7 @@ const getContainerSize  = () => {
     case "checkSmall": 
     return "w-[24px] h-[24px]"
     case "medium": 
-    return "w-4 h-4"
+    return "w-4 h-5"
     case "large": 
     return "w-[32px] h-[32px]"
     default:
