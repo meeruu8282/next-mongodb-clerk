@@ -1,68 +1,77 @@
+// "use client" is not a standard directive in TypeScript/JavaScript and may be removed.
 "use client";
-import { useState } from "react";
+
+// Ernesto C: Importing the useState hook from React to manage component's state.
+import { useEffect, useState } from "react";
+
+// Ernesto C: Defining an interface for the CheckboxItem component's props. 
+// It specifies the allowable values for id, size, and checkMark.
 type CheckboxItemProps = {
-  size?: "small"|"medium" | "large";
-  checkMark?: "checkSmall" | "checkMedium"| "checkLarge"    } 
+  id?: "1" | "2" | "3";
+  size?: "small" | "medium" | "large";
+  checkMark?: "checkSmall" | "checkMedium" | "checkLarge";
+}; 
 
-const CheckboxItem: React.FC<CheckboxItemProps> = ( {size = "medium" , checkMark= "medium"}) => {
+// Ernesto C: Defining the CheckboxItem component with default values for its props.
+const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark = "medium", id = "id" }) => {
  
-const [isChecked, setIsChecked] =useState<boolean>(false)
-const [inputSize ,SetInputsize] = useState("")
-const toggleCheckbox = () =>{
+  // Ernesto C: State to track whether the checkbox is checked or not.
+  const [isChecked, setIsChecked] = useState<boolean>(false);
 
-  setIsChecked(prevChecked => !prevChecked )
+  // Ernesto C: State to track the size of the input box. 
+  // But this state is never updated in the current code.
+  const [inputSize, SetInputsize] = useState("");
+
+  // Ernesto C: Function that toggles the isChecked state between true and false when the checkbox is clicked.
+ 
+
+useEffect(()=> {
+if(id==="1"){
+setIsChecked(true)
 }
+}, [id] )
 
-const getContainerSize  = () => {
+const toggleCheckbox = () => {
+  if(id ==="1") return;
+  setIsChecked(prevChecked => !prevChecked);
+};
 
 
 
-  switch(inputSize) {
-    case "small": 
-    return "w-[24px] h-[24px]"
-    case "medium": 
-    return "w-4 h-4"
-    case "large": 
-    return "w-[32px] h-[32px]"
-    case "checkSmall": 
-    return "w-[24px] h-[24px]"
-    case "medium": 
-    return "w-4 h-5"
-    case "large": 
-    return "w-[32px] h-[32px]"
-    default:
-      return 'w-5 h-5';
 
+  // Ernesto C: Function that returns CSS class names based on the value of inputSize.
+  const getContainerSize = () => {
+    switch (size) {
+      case "small":
+     return "w-[20px] h-[20px]";
+      case "medium": 
+       return "w-[24px] h-[24px]";
+      case "large": 
+     return "w-[32px] h-[32px]";
+      default:
+        return 'w-5 h-5';
+    }
+  };
+
+  // Ernesto C: Function that returns CSS class names based on the value of checkMark.
+  const getCheckmarkSize = () => {
+    switch (checkMark) {
+      case "checkSmall": 
+        return "w-[20px] h-[20px]";
+      case "checkMedium": 
+        return "w-5 h-5";
+      case "checkLarge": 
+        return "w-[32px] h-[32px]";
+      default:
+        return 'w-5 h-5';
+    }
   }
-}
-const getCheckmarkSize  = () => {
 
-
-
-  switch(checkMark) {
-  case "checkSmall": 
-    return "w-[20px] h-[20px]"
-    case "medium": 
-    return "w-5 h-5"
-    case "large": 
-    return "w-[32px] h-[32px]"
-
-
-
-
-    default:
-      return 'w-5 h-5';
-
-  }
-}
-
+  // Ernesto C: Rendering the checkbox item. The checkbox can be toggled and shows a checkmark if checked.
   return (
     <div className="w-[333.98] h-[24px] ">
       <div className="flex">
-        <div className={getContainerSize()  + " border-[2px] rounded-lg border-[#45AC60] text-[#45AC60] "}
-        onClick={toggleCheckbox}
-        
-        >
+        <div className={`${getContainerSize()} + " border-[2px] rounded-lg border-[#45AC60] text-[#45AC60] " `} onClick={toggleCheckbox}>
           { isChecked && (
           <svg
             xmlns="http://www.w3.org/2000/svg"

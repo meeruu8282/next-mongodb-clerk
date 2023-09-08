@@ -28,7 +28,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
             <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">
               <p className="text-[-2%] leading-tight">{title}</p>
             </div>
-            <div className=" "> <CheckboxItem size="large" /> </div>
+            <div className=" "> <CheckboxItem size="large"   checkMark="checkLarge"/> </div>
           </div>
 
           <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
@@ -45,7 +45,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
             {features.map((feature, idx) => (
               <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
                 <div className="w-[24px] h-[24px]">
-                  <CheckboxItem checkMark="checkSmall" />
+                  <CheckboxItem   checkMark="checkSmall" id="1" />
                 </div>
                 <div className=" w-[331.98px] h-[24px] opacity-50">
                   <p >{feature}</p>
