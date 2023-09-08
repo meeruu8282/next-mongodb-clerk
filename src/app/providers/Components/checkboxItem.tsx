@@ -1,13 +1,74 @@
-const CheckboxItem: React.FC = () => {
+"use client";
+import { useState } from "react";
+type CheckboxItemProps = {
+  size?: "small"|"medium" | "large";
+  checkMark?: "checkSmall" | "checkMedium"| "checkLarge"    } 
+
+const CheckboxItem: React.FC<CheckboxItemProps> = ( {size = "medium" , checkMark= "medium"}) => {
+ 
+const [isChecked, setIsChecked] =useState<boolean>(false)
+const [inputSize ,SetInputsize] = useState("")
+const toggleCheckbox = () =>{
+
+  setIsChecked(prevChecked => !prevChecked )
+}
+
+const getContainerSize  = () => {
+
+
+
+  switch(inputSize) {
+    case "small": 
+    return "w-[24px] h-[24px]"
+    case "medium": 
+    return "w-4 h-4"
+    case "large": 
+    return "w-[32px] h-[32px]"
+    case "checkSmall": 
+    return "w-[24px] h-[24px]"
+    case "medium": 
+    return "w-4 h-5"
+    case "large": 
+    return "w-[32px] h-[32px]"
+    default:
+      return 'w-5 h-5';
+
+  }
+}
+const getCheckmarkSize  = () => {
+
+
+
+  switch(checkMark) {
+  case "checkSmall": 
+    return "w-[20px] h-[20px]"
+    case "medium": 
+    return "w-5 h-5"
+    case "large": 
+    return "w-[32px] h-[32px]"
+
+
+
+
+    default:
+      return 'w-5 h-5';
+
+  }
+}
+
   return (
     <div className="w-[333.98] h-[24px] ">
       <div className="flex">
-        <div className="w-[24px] h-[24px] border-[2px] rounded-lg border-[#45AC60] text-[#45AC60] ">
+        <div className={getContainerSize()  + " border-[2px] rounded-lg border-[#45AC60] text-[#45AC60] "}
+        onClick={toggleCheckbox}
+        
+        >
+          { isChecked && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5"
+            className={getCheckmarkSize()}
           >
             <path
               fill-rule="evenodd"
@@ -15,6 +76,7 @@ const CheckboxItem: React.FC = () => {
               clip-rule="evenodd"
             />
           </svg>
+          )}
         </div>
       </div>
     </div>
