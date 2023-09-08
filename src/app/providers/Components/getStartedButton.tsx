@@ -4,8 +4,10 @@ interface CarelyoButtonProps {
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary";
   className?: string;
+  onClick?: () => void;
 }
 const CarelyoButton: React.FC<CarelyoButtonProps> = ({
+  onClick,
   buttonText,
   size = "medium",
   color = "primary",
@@ -32,6 +34,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
 
   return (
     <button
+    onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
     >
       <div>
