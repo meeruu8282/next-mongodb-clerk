@@ -73,5 +73,13 @@
   .carelyoButtonText {
     @apply h-[22px] text-[16px]  flex items-center justify-between w-full;
   }
+/* Styles.css eller en annan .css fil */
+.selectRoleCard {
+  transition: border 0.3s;  /* mjuk övergång */
+}
+
+.selectRoleCard:hover {
+  border: 3px solid #45AC60;
+}
 
 }

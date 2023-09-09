@@ -29,17 +29,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                 width: '521px',
                 height: "631px",
                 margin: '100px auto',
-                backgroundColor: 'white',
+                backgroundColor: ' #FFFFFF',
                 padding: '32px',
                 borderRadius: '24px',
                 gap: "24px",
                 // Endast suddig effekt
                 zIndex: 500 // Modalen bör ha en högre zIndex än overlayen
             }}>
-              
 
+               
 
                 {children}
+                <div className='w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center'>
+                    <div className='w-[67px] h-[22px] text-[#FFFFFF] flex items-center font-semibold'>Confirm </div>
+
+                </div>
                 <button onClick={onClose}></button>
             </div>
 

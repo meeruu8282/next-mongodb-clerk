@@ -14,7 +14,7 @@ interface CustomContentBoxProps {
   features: string[];
   buttonText: string;
 }
-type RoleCardProps = {
+type selectRoleCardProps = {
   title: string;
   description: string;
 };
@@ -28,12 +28,12 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const RoleCard: React.FC<RoleCardProps> = ({ title, description }) => {
+  const SelectRoleCard: React.FC<selectRoleCardProps> = ({ title, description }) => {
 
     return (
-      <div className=" flex justify-center text-center  items-center w-[457px] h-[112px] border-[1px] rounded-[10px]">
-        <div className="w-[360px] h-[64px]  flex   items-center bg-purple-300">
-          <div className="w-[64px] h-[64px] bg-slate-500 flex justify-center">
+      <div className=" selectRoleCard  flex justify-center text-center  items-center w-[457px] h-[112px] border-[1px] rounded-[10px]  ">
+        <div className="w-[360px] h-[64px]  flex   items-center ">
+          <div className="w-[64px] h-[64px]  flex justify-center">
             <div className="items-center">
 
               <Image
@@ -46,7 +46,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
             </div>
 
           </div>
-          <div className="bg-yellow-500 items-center ">
+          <div className=" items-center ">
 
             <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%] text-center">{title}</h1>
             <p className="w-[272px] h-[22px]">{description}</p>
@@ -109,27 +109,20 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 
           />
           <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-            <div className='w-[457px] border-[1px]flex items-center bg-yellow-200'>
-              <div className='w-[457px] h-[51px] font-[Poppins] text-[14px] tracking-[-2%]  mt-[-2px] text-center'> Select Your Role</div>
+            <div className='w-[457px] border-[1px]flex items-center '>
+              <div className='w-[457px] h-[51px] font-[Poppins] font-semibold text-[32px] tracking-[-2%]  mt-[-2px] text-center'> Select Your Role</div>
 
-              <div className='w-[457px] h-[22px] font-[Poppins] opacity-50 text-center'>Choose one of role available</div>
+              <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
             </div>
-            <div className="w-[457px] h-[384px] bg-pink-500  ">
+            <div className=" w-[457px] h-[384px]   ">
 
-              <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
-              {/* Du kan enkelt lägga till fler kort här. */}
-              <RoleCard title="Clinic" description="Paragraph of explanation is here ya" />
-
-
-              <RoleCard title="Hospital" description="Paragraph of explanation is here ya" />
-              {/* Du kan enkelt lägga till fler kort här. */}
+              <SelectRoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
+             
+              <SelectRoleCard   title="Clinic" description="Paragraph of explanation is here ya" />
 
 
-
-
-
-
-
+              <SelectRoleCard title="Hospital" description="Paragraph of explanation is here ya" />
+            
 
             </div>
 
