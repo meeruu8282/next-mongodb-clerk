@@ -13,6 +13,10 @@ interface CustomContentBoxProps {
   features: string[];
   buttonText: string;
 }
+type RoleCardProps = {
+  title: string;
+  description: string;
+};
 
 const CustomContentBox: React.FC<CustomContentBoxProps> = ({
   title,
@@ -23,6 +27,24 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
+  const RoleCard: React.FC<RoleCardProps> = ({title,description}) => {
+  
+    return (
+      <div className="w-[457px] h-[112px] border-[1px] rounded-[10px] bg-orange-400">
+        <div className="w-[360px] h-[64px] flex">
+          <div className="w-[64px] h-[64px] bg-green-200"></div>
+          <div className="bg-white">
+            <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%]">{title}</h1>
+            <p className="w-[272px] h-[22px]">{description}</p>
+          </div>
+          <div className="w-[28px] h-[28px]">
+            <CheckboxItem />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
 
 
   return (
@@ -66,21 +88,45 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
             size="large"
             color="primary"
             buttonSize="lb"
-           onClick={()=> setModalOpen(true)}
+            onClick={() => setModalOpen(true)}
 
 
 
           />
-
           <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-            <h1>Detta är en modal!</h1>
-            <p>Du kan stänga mig genom att klicka på "Stäng" knappen nedan.</p>
+            <div className='w-[457px] border-[1px]flex items-center bg-yellow-200'>
+              <div className='w-[457px] h-[51px] font-[Poppins] text-[14px] tracking-[-2%]  mt-[-2px] text-center'> Select Your Role</div>
+
+              <div className='w-[457px] h-[22px] font-[Poppins] opacity-50 text-center'>Choose one of role available</div>
+            </div>
+            <div className="w-[457px] h-[384px] bg-pink-500  ">
+           
+                <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
+                {/* Du kan enkelt lägga till fler kort här. */}
+                <RoleCard title="Another Role" description="Another description" />
+          
+              
+                <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
+                {/* Du kan enkelt lägga till fler kort här. */}
+                <RoleCard title="Another Role" description="Another description" />
+       
+
+         
+     
+
+
+
+            </div>
+
+
             <button onClick={() => setModalOpen(false)}>Stäng</button>
           </Modal>
 
+
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
+
 
   );
 };
