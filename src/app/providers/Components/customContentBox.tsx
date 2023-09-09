@@ -1,5 +1,6 @@
 
 "use client";
+import Image from "next/image";
 import React from "react";
 import Modal from "../Components/popup"
 import CarelyoButton from "./getStartedButton";
@@ -27,19 +28,33 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const RoleCard: React.FC<RoleCardProps> = ({title,description}) => {
-  
+  const RoleCard: React.FC<RoleCardProps> = ({ title, description }) => {
+
     return (
-      <div className="w-[457px] h-[112px] border-[1px] rounded-[10px] bg-orange-400">
-        <div className="w-[360px] h-[64px] flex">
-          <div className="w-[64px] h-[64px] bg-green-200"></div>
-          <div className="bg-white">
-            <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%]">{title}</h1>
+      <div className=" flex justify-center text-center  items-center w-[457px] h-[112px] border-[1px] rounded-[10px]">
+        <div className="w-[360px] h-[64px]  flex   items-center bg-purple-300">
+          <div className="w-[64px] h-[64px] bg-slate-500 flex justify-center">
+            <div className="items-center">
+
+              <Image
+                src="/mdi_doctor.png"
+                alt="Mask Image"
+                width={32}
+                height={32}
+              />
+
+            </div>
+
+          </div>
+          <div className="bg-yellow-500 items-center ">
+
+            <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%] text-center">{title}</h1>
             <p className="w-[272px] h-[22px]">{description}</p>
           </div>
-          <div className="w-[28px] h-[28px]">
-            <CheckboxItem />
-          </div>
+
+        </div>
+        <div className="w-[28px] h-[28px] ml-6 rounded-full">
+          <CheckboxItem size="medium" checkMark="checkMedium" id="4" />
         </div>
       </div>
     );
@@ -100,19 +115,19 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
               <div className='w-[457px] h-[22px] font-[Poppins] opacity-50 text-center'>Choose one of role available</div>
             </div>
             <div className="w-[457px] h-[384px] bg-pink-500  ">
-           
-                <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
-                {/* Du kan enkelt lägga till fler kort här. */}
-                <RoleCard title="Another Role" description="Another description" />
-          
-              
-                <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
-                {/* Du kan enkelt lägga till fler kort här. */}
-                <RoleCard title="Another Role" description="Another description" />
-       
 
-         
-     
+              <RoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
+              {/* Du kan enkelt lägga till fler kort här. */}
+              <RoleCard title="Clinic" description="Paragraph of explanation is here ya" />
+
+
+              <RoleCard title="Hospital" description="Paragraph of explanation is here ya" />
+              {/* Du kan enkelt lägga till fler kort här. */}
+
+
+
+
+
 
 
 

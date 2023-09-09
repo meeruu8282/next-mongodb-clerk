@@ -7,13 +7,15 @@ import { useEffect, useState } from "react";
 // Ernesto C: Defining an interface for the CheckboxItem component's props. 
 // It specifies the allowable values for id, size, and checkMark.
 type CheckboxItemProps = {
-  id?: "1" | "2" | "3";
+  id?: "1" | "2" | "3"|"4"
   size?: "small" | "medium" | "large";
   checkMark?: "checkSmall" | "checkMedium" | "checkLarge";
+  roundedType?: "full" | "lg" | "none";
+
 };
 
 // Ernesto C: Defining the CheckboxItem component with default values for its props.
-const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark = "medium", id = "id" }) => {
+const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark = "medium", id = "id",roundedType = "lg" }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   // Ernesto C: State to track whether the checkbox is checked or not.
@@ -27,7 +29,10 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
 
 
   useEffect(() => {
-    if (id === "1") {
+    if (id === "1" ) {
+      setIsChecked(true)
+    }
+    if (id === "4" ) {
       setIsChecked(true)
     }
   }, [id])
@@ -37,14 +42,25 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
     setIsChecked(prevChecked => !prevChecked);
   };
 
-
+  const getRoundingClass = () => {
+    switch (roundedType) {
+      case "full":
+        return "rounded-full";
+      case "lg":
+        return "rounded-lg";
+      case "none":
+        return "";
+      default:
+        return "rounded-lg";
+    }
+  };
 
 
   // Ernesto C: Function that returns CSS class names based on the value of inputSize.
   const getContainerSize = () => {
     switch (size) {
       case "small":
-        return "w-[20px] h-[20px]";
+        return "w-[20px] h-[20px] rounded-full";
       case "medium":
         return "w-[24px] h-[24px]";
       case "large":
@@ -72,27 +88,43 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
   return (
     <div className="w-[333.98] h-[24px] ">
       <div className="flex">
-        <div className={`${getContainerSize()} + " border-[2px] rounded-lg border-[#45AC60] text-[#45AC60] " `} onClick={toggleCheckbox}>
+        <div className={`${getContainerSize()} + " border-[2px] ${getRoundingClass()} border-[#45AC60] text-[#45AC60] " `} onClick={toggleCheckbox}>
           {isChecked && (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className={getCheckmarkSize()}
-            >
-              <path
-                fill-rule="evenodd"
-                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                clip-rule="evenodd"
-              />
-            </svg>
+            <>
+              {id === "4" ? (
+                // New SVG checkmark for id="4"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className={getCheckmarkSize()}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              ) : (
+                // Original SVG checkmark for other id values
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className={getCheckmarkSize()}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </>
           )}
         </div>
-       
-
       </div>
     </div>
   );
+  
 };
 
 export default CheckboxItem;
