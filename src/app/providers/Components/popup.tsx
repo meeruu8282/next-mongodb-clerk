@@ -59,10 +59,6 @@ const Modal: React.FC<ModalProps & selectRoleCardProps> = ({ isOpen, onClose, ch
         );
     }
 
-
-
-
-
     if (!isOpen) return null;
 
     return (
@@ -97,11 +93,11 @@ const Modal: React.FC<ModalProps & selectRoleCardProps> = ({ isOpen, onClose, ch
                     <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
                 </div>
                 <div className=''>
-                    <SelectRoleCard  imageSrc="/doctor.big.png" imageHeight={64} imageWidth={64} title='Independent Doctor' description='Paragraph of explanation is here ya'
+                    <SelectRoleCard imageSrc="/doctor.big.png" imageHeight={64} imageWidth={64} title='Independent Doctor' description='Paragraph of explanation is here ya'
 
 
                     />
-                    <SelectRoleCard  imageSrc='/Frame 1000005697.png' imageAlt='1' imageHeight={64} imageWidth={64} title='Clinic' description='Paragraph of explanation is here ya' />
+                    <SelectRoleCard imageSrc='/Frame 1000005697.png' imageAlt='1' imageHeight={64} imageWidth={64} title='Clinic' description='Paragraph of explanation is here ya' />
 
                     <SelectRoleCard imageSrc='/hospital.png' title='Hospital' description='Paragraph of explanation is here ya' />
                 </div>

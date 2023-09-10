@@ -37,7 +37,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
     >
-      <div>
+      <div className="">
         <div className="carelyoButtonText flex items-center justify-center w-full">
           {buttonText}
           <div className="ml-3">
@@ -48,7 +48,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-5 h-4"
+                className="w-5 h-5"
               >
                 <path
                   strokeLinecap="round"

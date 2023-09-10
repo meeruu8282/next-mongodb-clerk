@@ -29,15 +29,13 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const [isModal1Open, setModal1Open] = useState(false);
-  const [isModal2Open, setModal2Open] = useState(false);
-  const [isModal3Open, setModal3Open] = useState(false);
+ 
 
 
   return (
-    <div className="w-[391.33px] h-[463px]  border-[3px] rounded-[25px] justify-between   border-[#45AC60]   ">
-      <div className="  ">
-        <div className="w-[333.98px] h-[249px] gap-[10px]  ">
+    <div className="w-[391.33px] h-[463px]  border-[3px] rounded-[25px]    border-[#45AC60]   ">
+      <div className=" w-[333.98px] h-[413,09px] mt-[27.61px] ml-[27.67px] item-center   ">
+        
           <div className="w-[333.98px] flex justify-between h-[32px] p-2 ">
             <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">
               <p className="text-[-2%] leading-tight">{title}</p>
@@ -67,9 +65,9 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
               </div>
             ))}
           </div>
-        </div>
+       
 
-        <div className="mt-[100px] ml-3 justify-center items-center">
+        <div className=" mt-[80px]  justify-center items-center">
           <CarelyoButton
             buttonText={buttonText}
             size="large"
