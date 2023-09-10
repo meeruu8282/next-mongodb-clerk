@@ -7,6 +7,7 @@ import CarelyoButton from "./getStartedButton";
 import CheckboxItem from './checkboxItem';
 import { useState } from 'react';
 
+
 interface CustomContentBoxProps {
   title: string;
   monthlyCost: string;
@@ -14,7 +15,7 @@ interface CustomContentBoxProps {
   features: string[];
   buttonText: string;
 }
-type selectRoleCardProps = {
+type SelectRoleCardProps = {
   title: string;
   description: string;
 };
@@ -28,38 +29,9 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 }) => {
 
   const [isModalOpen, setModalOpen] = useState(false);
-  const SelectRoleCard: React.FC<selectRoleCardProps> = ({ title, description }) => {
-
-    return (
-      <div className=" selectRoleCard  flex justify-center text-center  items-center w-[457px] h-[112px] border-[1px] rounded-[10px]  ">
-        <div className="w-[360px] h-[64px]  flex   items-center ">
-          <div className="w-[64px] h-[64px]  flex justify-center">
-            <div className="items-center">
-
-              <Image
-                src="/mdi_doctor.png"
-                alt="Mask Image"
-                width={32}
-                height={32}
-              />
-
-            </div>
-
-          </div>
-          <div className=" items-center ">
-
-            <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%] text-center">{title}</h1>
-            <p className="w-[272px] h-[22px]">{description}</p>
-          </div>
-
-        </div>
-        <div className="w-[28px] h-[28px] ml-6 rounded-full">
-          <CheckboxItem size="medium" checkMark="checkMedium" id="4" />
-        </div>
-      </div>
-    );
-  }
-
+  const [isModal1Open, setModal1Open] = useState(false);
+  const [isModal2Open, setModal2Open] = useState(false);
+  const [isModal3Open, setModal3Open] = useState(false);
 
 
   return (
@@ -109,27 +81,13 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 
           />
           <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-            <div className='w-[457px] border-[1px]flex items-center '>
-              <div className='w-[457px] h-[51px] font-[Poppins] font-semibold text-[32px] tracking-[-2%]  mt-[-2px] text-center'> Select Your Role</div>
-
-              <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
-            </div>
-            <div className=" w-[457px] h-[384px]   ">
-
-              <SelectRoleCard title="Independent Doctor" description="Paragraph of explanation is here ya" />
-             
-              <SelectRoleCard   title="Clinic" description="Paragraph of explanation is here ya" />
+        </Modal >
 
 
-              <SelectRoleCard title="Hospital" description="Paragraph of explanation is here ya" />
-            
-
-            </div>
-
-
-            <button onClick={() => setModalOpen(false)}>Stäng</button>
-          </Modal>
-
+           
+          
+          
+          
 
         </div>
       </div >

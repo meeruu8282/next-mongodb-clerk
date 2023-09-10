@@ -88,7 +88,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
   return (
     <div className="w-[333.98] h-[24px] ">
       <div className="flex">
-        <div className={`${getContainerSize()} + " border-[2px] ${getRoundingClass()} border-[#45AC60] text-[#45AC60] " `} onClick={toggleCheckbox}>
+        <div className={`${getContainerSize()} ${id !== "4" ? `border-[2px] ${getRoundingClass()} border-[#45AC60]` : ''} text-[#45AC60]`} onClick={toggleCheckbox}>
           {isChecked && (
             <>
               {id === "4" ? (
@@ -99,7 +99,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={getCheckmarkSize()}
+                  className="w-[28px] h-[28px]"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
