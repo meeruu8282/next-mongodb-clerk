@@ -3,30 +3,25 @@
 @tailwind utilities;
 
 @layer components {
-
-  .greenBackground{
-    @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center
-
+  .greenBackground {
+    @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
   }
 
-  .greenBackgroundTriangle{
-    @apply  w-[264px] h-[254px] bg-greenBackgroundObjects border-transparent border-solid  
+  .greenBackgroundTriangle {
+    @apply w-[264px] h-[254px] bg-greenBackgroundObjects border-transparent border-solid;
   }
 
-  .greenCircleContainer{
-    @apply absolute top-[530px] left-1/2 transform -translate-x-1/2 w-[487px] h-[487px]
-
+  .greenCircleContainer {
+    @apply absolute top-[530px] left-1/2 transform -translate-x-1/2 w-[487px] h-[487px];
   }
 
   .greenCircle {
     @apply rounded-full bg-gradient-to-b from-greenBackgroundObjects to-transparent to-40% backdrop-blur-md h-full relative overflow-hidden;
   }
 
-
   .checkmark {
     @apply bg-[rgba(69,172,96,1)] text-white flex items-center justify-center w-6 h-6 rounded-full;
   }
-
 }
 
 @layer components {
@@ -66,8 +61,7 @@
     visibility: visible;
   }
   .nav-item {
-    @apply flex    text-black font-[Poppins] leading-normal    border-none bg-transparent p-0 cursor-pointer  
-     h-[65px] space-x-9;
+    @apply flex     text-black font-[Poppins];
   }
   .carelyoButton {
     @apply bg-[#45AC60] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
@@ -75,7 +69,12 @@
   .carelyoButtonText {
     @apply h-[22px] text-[16px]  flex items-center justify-between w-full;
   }
-  .checkmarkPricing{
-    
+  /* Styles.css eller en annan .css fil */
+  .selectRoleCard {
+    transition: border 0.3s; /* mjuk övergång */
+  }
+
+  .selectRoleCard:hover {
+    border: 3px solid #45ac60;
   }
 }
