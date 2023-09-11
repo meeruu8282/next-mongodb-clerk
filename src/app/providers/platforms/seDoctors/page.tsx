@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CarelyoButton from "../../Components/getStartedButton";
+import EllipseBackground from "../../Components/ellipseBackground"
+import SuperCharge from "../../Components/superCharge";
 
 export default function Sedoctors() {
   return (
@@ -420,7 +423,8 @@ export default function Sedoctors() {
                       </p>
                     </div>
                     <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] ">
-                    Highly experienced primary care physician with over 20 years of practice.                      
+                      Highly experienced primary care physician with over 20
+                      years of practice.
                     </p>
                   </div>
                 </div>
@@ -445,12 +449,12 @@ export default function Sedoctors() {
                         Dr. John Smith
                       </h1>
                       <p className="w-[285px] h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C]">
-                      Cardiologist
-
+                        Cardiologist
                       </p>
                     </div>
                     <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] ">
-                    Renowned cardiologist specializing in the diagnosis & treatment of heart conditions.
+                      Renowned cardiologist specializing in the diagnosis &
+                      treatment of heart conditions.
                     </p>
                   </div>
                 </div>
@@ -476,11 +480,12 @@ export default function Sedoctors() {
                         Dr. Thamson
                       </h1>
                       <p className="w-[285px] h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C]">
-                      Primary Care Physician
+                        Primary Care Physician
                       </p>
                     </div>
                     <p className=" w-[329px] h-[44px] text-[Poppins] bottom-0 text-[16px] leading-[22px] tracking-[0em]  text-[#A6A6A6] ">
-                    Medical center with cutting-edge technology and a team professionals.
+                      Medical center with cutting-edge technology and a team
+                      professionals.
                     </p>
                   </div>
                 </div>
@@ -514,6 +519,8 @@ export default function Sedoctors() {
           </button>
         </div>
       </div>
+       {/* Code in components folder then superCarge */}
+     <SuperCharge/>
     </div>
   );
 }
