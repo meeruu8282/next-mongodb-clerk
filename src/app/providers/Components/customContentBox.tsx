@@ -1,6 +1,12 @@
+
+"use client";
+import Image from "next/image";
 import React from "react";
+import Modal from "../Components/popup"
 import CarelyoButton from "./getStartedButton";
-import CheckboxItem from "./checkboxItem";
+import CheckboxItem from './checkboxItem';
+import { useState } from 'react';
+
 
 interface CustomContentBoxProps {
   title: string;
@@ -9,6 +15,10 @@ interface CustomContentBoxProps {
   features: string[];
   buttonText: string;
 }
+type SelectRoleCardProps = {
+  title: string;
+  description: string;
+};
 
 const CustomContentBox: React.FC<CustomContentBoxProps> = ({
   title,
@@ -17,15 +27,20 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
   features,
   buttonText,
 }) => {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+ 
+
+
   return (
-    <div className="w-[391.33px] h-[463px] mt-[27.61px] ml-[29.23px] border-[3px] rounded-[25px] justify-between  border-[#45AC60]  ">
-      <div className="  ">
-        <div className="w-[333.98px] h-[249px] gap-[10px]  ">
+    <div className="w-[391.33px] h-[463px]  border-[3px] rounded-[25px]    border-[#45AC60]   ">
+      <div className=" w-[333.98px] h-[413,09px] mt-[27.61px] ml-[27.67px] item-center   ">
+        
           <div className="w-[333.98px] flex justify-between h-[32px] p-2 ">
             <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">
               <p className="text-[-2%] leading-tight">{title}</p>
             </div>
-            <div className="w-[32px] h-[32px] border-[2px] rounded-lg border-[#45AC60] "></div>
+            <div className=" "> <CheckboxItem size="large" checkMark="checkLarge" /> </div>
           </div>
 
           <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
@@ -42,7 +57,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
             {features.map((feature, idx) => (
               <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
                 <div className="w-[24px] h-[24px]">
-                  <CheckboxItem />
+                  <CheckboxItem checkMark="checkSmall" id="1" />
                 </div>
                 <div className=" w-[331.98px] h-[24px] opacity-50">
                   <p >{feature}</p>
@@ -50,18 +65,33 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
               </div>
             ))}
           </div>
-        </div>
+       
 
-        <div className="mt-[100px] ml-3 justify-center items-center">
+        <div className=" mt-[80px]  justify-center items-center  ">
           <CarelyoButton
             buttonText={buttonText}
             size="large"
             color="primary"
             buttonSize="lb"
+            onClick={() => setModalOpen(true)}
+
+
+
           />
+          <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        </Modal >
+
+
+           
+          
+          
+          
+
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
+
+
   );
 };
 
