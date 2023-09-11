@@ -37,8 +37,8 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
     >
-      <div className="">
-        <div className="carelyoButtonText flex items-center justify-center w-full">
+      <div className="  rounden-full ">
+        <div className="carelyoButtonText flex items-center justify-center w-full  ">
           {buttonText}
           <div className="ml-3">
             <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">

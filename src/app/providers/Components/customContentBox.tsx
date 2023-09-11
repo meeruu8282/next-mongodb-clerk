@@ -67,7 +67,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
           </div>
        
 
-        <div className=" mt-[80px]  justify-center items-center">
+        <div className=" mt-[80px]  justify-center items-center  ">
           <CarelyoButton
             buttonText={buttonText}
             size="large"

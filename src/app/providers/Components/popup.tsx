@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import CheckboxItem from './checkboxItem';
-
+import Svg from './svg';
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -10,40 +10,36 @@ interface ModalProps {
 type selectRoleCardProps = {
     title?: string;
     description?: string;
-    imageSrc?: string;
-    imageAlt?: string;
-    imageWidth?: number;
-    imageHeight?: number;
+    imageSrc?: "svgOne" | "svgTwo" | "svgThree" | string;
 };
-const Modal: React.FC<ModalProps & selectRoleCardProps> = ({ isOpen, onClose, children, title, description,
+type SVGComponents = {
+    [Key: string]: React.FC;
 
+};
+
+const Modal: React.FC<ModalProps & selectRoleCardProps> = ({
+    isOpen, onClose, children, title, description,
+    imageSrc
 
 }) => {
 
     const SelectRoleCard: React.FC<selectRoleCardProps> = ({ title,
         description,
-        imageSrc = "/",
-        imageAlt = "",
-        imageWidth = 64,
-        imageHeight = 64 }) => {
+
+
+
+    }) => {
+
+
+
+
+
 
         return (
             <div className=" selectRoleCard  flex justify-center text-center   items-center w-[457px] h-[112px] border-[1px] rounded-[10px] mt-6  ">
                 <div className="w-[360px] h-[64px]  flex   items-center  justify-between">
                     <div className="w-[64px] h-[64px]  flex justify-center ">
-                        <div className="  flex  items-center justify-between border-[1px] rounded-full  ">
-
-                            <Image
-
-                                src={imageSrc}
-                                alt={imageAlt}
-                                width={imageWidth}
-                                height={imageHeight}
-                            />
-
-
-                        </div>
-
+                        <div className="  flex  items-center justify-between border-[1px] rounded-full  "></div>
                     </div>
                     <div className="  text-left">
 
@@ -87,19 +83,23 @@ const Modal: React.FC<ModalProps & selectRoleCardProps> = ({ isOpen, onClose, ch
                 // Endast suddig effekt
                 zIndex: 500 // Modalen bör ha en högre zIndex än overlayen
             }}>
-                <div className='w-[457px] border-[1px]flex items-center '>
+                <div className='w-[457px] border-[1px]flex items-center  '>
                     <div className='w-[457px] h-[51px] font-[Poppins] font-semibold text-[32px] tracking-[-2%]  mt-[-2px] text-center'> Select Your Role</div>
 
                     <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
                 </div>
                 <div className=''>
-                    <SelectRoleCard imageSrc="/doctor.big.png" imageHeight={64} imageWidth={64} title='Independent Doctor' description='Paragraph of explanation is here ya'
+
+
+                    <SelectRoleCard imageSrc='svgOne' title='Independent Doctor' description='Paragraph of explanation is here ya'
 
 
                     />
-                    <SelectRoleCard imageSrc='/Frame 1000005697.png' imageAlt='1' imageHeight={64} imageWidth={64} title='Clinic' description='Paragraph of explanation is here ya' />
+                    <SelectRoleCard imageSrc='SVGOne' title='Clinic' description='Paragraph of explanation is here ya' />
 
-                    <SelectRoleCard imageSrc='/hospital.png' title='Hospital' description='Paragraph of explanation is here ya' />
+                    <SelectRoleCard imageSrc='SVGOne' title='Hospital' description='Paragraph of explanation is here ya' />
+                    <button onClick={onClose}>Close</button>
+
                 </div>
 
                 <div className=" w-[457px] h-[384px]   ">

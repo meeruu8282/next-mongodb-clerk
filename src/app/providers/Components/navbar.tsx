@@ -44,13 +44,18 @@ export default function Navbar() {
       </div>
 
       {/* Carelyo knappen och flaggan */}
-      <div className="flex items-center gap-4">
-        <Image src="/image 519.png" alt="flagg" width={28} height={28} />
-
-        <div className="flex items-center">
-          <p className="text-[16px] font-[Poppins] text-1xl font-semibold mr-2">en</p>
+      <div className="flex  gap-6  justify-center  ">
+        <div className="w-[125px] h-[52px] flex items-center space-x-5 border-[1px] border-[#45AC60] rounded-[35px] " >  <Image src="/image 519.png" alt="flagg" width={28} height={28} /> 
+        
+        
+        <div className="flex items-center ">
+          <p className="text-[16px] font-[Poppins] text-1xl  font-semibold  ">en</p>
           <i className="fa fa-chevron-down text-[10px]"></i>
         </div>
+         </div>
+       
+
+       
         
         <button className="carelyoButton">
           <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
