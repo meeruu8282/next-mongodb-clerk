@@ -72,7 +72,9 @@ export default function Navbar() {
           </div>
         </div>
 
+
         <div className="flex  gap-6  justify-center  ">
+
         <div className="w-[125px] h-[52px] flex items-center space-x-5 border-[1px] border-[#45AC60] rounded-[35px] " >  <Image src="/image 519.png" alt="flagg" width={28} height={28} /> 
         
         
@@ -82,6 +84,7 @@ export default function Navbar() {
         </div>
          </div>
        
+
 
        
         
