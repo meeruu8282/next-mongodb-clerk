@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Image from 'next/image';
 import CheckboxItem from './checkboxItem';
+import { SvgIcon1, SvgIcon2, SvgIcon3 } from './svgComponent';
+
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -9,45 +12,56 @@ interface ModalProps {
 type selectRoleCardProps = {
     title?: string;
     description?: string;
-    imageSrc?: "svgOne" | "svgTwo" | "svgThree" | string;
-};
-type SVGComponents = {
-    [Key: string]: React.FC;
-
+    imageSrc: 'icon1' | 'icon2' | 'icon3';
 };
 
-const Modal: React.FC<ModalProps & selectRoleCardProps> = ({
-    isOpen, onClose, children, title, description,
-    imageSrc
+const SelectRoleCard: React.FC<selectRoleCardProps> = ({ title,
+    description, imageSrc = "icon1"
+}) => {
+
+    const renderIcon = () => {
+        switch (imageSrc) {
+            case 'icon1': return <SvgIcon1 />;
+            case 'icon2': return <SvgIcon2 />;
+            case 'icon3': return <SvgIcon3 />;
+            default: return null;
+        }
+    }
+
+
+    return (
+        <div className=" selectRoleCard  iconHover flex justify-center text-center   items-center w-[457px] h-[112px] border-[1px] rounded-[10px] mt-6   ">
+            <div className="w-[360px] h-[64px]  flex   items-center  justify-between">
+                <div className="w-[64px] h-[64px]  flex justify-center items-center">
+                    <div className=" flex  items-center   border-[1px] rounded-full w-[64px] h-[64px]">
+                        {renderIcon()}
+
+
+                    </div>
+                </div>
+                <div className="  text-left  ">
+
+                    <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%]  font-semibold">{title}</h1>
+                    <p className="w-[272px] h-[22px] font-normal text-[Poppins ">{description}</p>
+                </div>
+
+            </div>
+            <div className="w-[28px] h-[28px] border-[1px] ml-6 rounded-full">
+                <CheckboxItem size="large" checkMark="checkMedium" id="4" />
+            </div>
+
+        </div>
+    );
+}
+
+
+const Modal: React.FC<ModalProps> = ({
+    isOpen, onClose, children,
+
+
 
 }) => {
 
-    const SelectRoleCard: React.FC<selectRoleCardProps> = ({ title,
-        description,
-
-
-
-    }) => {
-
-        return (
-            <div className=" selectRoleCard  flex justify-center text-center   items-center w-[457px] h-[112px] border-[1px] rounded-[10px] mt-6  ">
-                <div className="w-[360px] h-[64px]  flex   items-center  justify-between">
-                    <div className="w-[64px] h-[64px]  flex justify-center ">
-                        <div className="  flex  items-center justify-between border-[1px] rounded-full  "></div>
-                    </div>
-                    <div className="  text-left">
-
-                        <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%]  font-semibold">{title}</h1>
-                        <p className="w-[272px] h-[22px] font-normal text-[Poppins]">{description}</p>
-                    </div>
-
-                </div>
-                <div className="w-[28px] h-[28px] border-[1px] ml-6 rounded-full">
-                    <CheckboxItem size="large" checkMark="checkMedium" id="4" />
-                </div>
-            </div>
-        );
-    }
 
     if (!isOpen) return null;
 
@@ -82,24 +96,26 @@ const Modal: React.FC<ModalProps & selectRoleCardProps> = ({
 
                     <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
                 </div>
-                <div className=''>
 
 
-                    <SelectRoleCard imageSrc='svgOne' title='Independent Doctor' description='Paragraph of explanation is here ya'
+
+                <SelectRoleCard imageSrc='icon1' title='Independent Doctor' description='Paragraph of explanation is here ya'
 
 
-                    />
-                    <SelectRoleCard imageSrc='SVGOne' title='Clinic' description='Paragraph of explanation is here ya' />
+                />
+                <SelectRoleCard imageSrc='icon2' title='Independent Doctor' description='Paragraph of explanation is here ya' />
 
-                    <SelectRoleCard imageSrc='SVGOne' title='Hospital' description='Paragraph of explanation is here ya' />
-                    <button onClick={onClose}>Close</button>
+                <SelectRoleCard imageSrc='icon3' title='Independent Doctor' description='Paragraph of explanation is here ya' />
+                <button onClick={onClose}>Close</button>
 
-                </div>
 
-                <div className=" w-[457px] h-[384px]   ">
+
+
+
+                <div className=" w-[457px] h-[384px]">
 
                     <div className='w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center mt-6'>
-                        <div className='w-[67px] h-[22px] text-[#FFFFFF] flex items-center font-semibold   '>Confirm </div>
+                        <div className='w-[67px] h-[22px] text-[#FFFFFF] flex items-center font-semibold'>Confirm </div>
 
                     </div>
                 </div>

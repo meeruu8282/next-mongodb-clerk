@@ -51,10 +51,10 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="  max-h-32px top-25px left-144px">
+          <div className="  max-h-32px top-25px left-144px ">
             <Navbar />
           </div>
-          <div className="w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px]">
+          <div className="w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px] ">
             <h1 className="text-[64px]  leading-[83px];"></h1>
             <h2 hCPFM-ISText></h2>
           </div>

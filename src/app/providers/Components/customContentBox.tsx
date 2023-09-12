@@ -1,12 +1,12 @@
 
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import Modal from "../Components/popup"
 import CarelyoButton from "./getStartedButton";
 import CheckboxItem from './checkboxItem';
 import { useState } from 'react';
-
 
 interface CustomContentBoxProps {
   title: string;
@@ -34,7 +34,7 @@ const CustomContentBox: React.FC<CustomContentBoxProps> = ({
 
   return (
     <div className="w-[391.33px] h-[463px]  border-[3px] rounded-[25px]    border-[#45AC60]   ">
-      <div className=" w-[333.98px] h-[413,09px] mt-[27.61px] ml-[27.67px] item-center   ">
+      <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px] item-center   ">
         
           <div className="w-[333.98px] flex justify-between h-[32px] p-2 ">
             <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">

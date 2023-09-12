@@ -76,5 +76,15 @@
 
   .selectRoleCard:hover {
     border: 3px solid #45ac60;
+
   }
+  .iconHover:hover {
+    fill: #45AC60;  /* the desired color */
+    
+}
+.iconHover:hover path {
+  fill: #45AC60;  /* the desired color */
+  
+}
+
 }

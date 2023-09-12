@@ -99,7 +99,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-[28px] h-[28px]"
+                  className="w-[32px] h-[32px] "
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
