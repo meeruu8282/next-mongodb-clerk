@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import CheckboxItem from './checkboxItem';
-import Svg from './svg';
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -29,11 +28,6 @@ const Modal: React.FC<ModalProps & selectRoleCardProps> = ({
 
 
     }) => {
-
-
-
-
-
 
         return (
             <div className=" selectRoleCard  flex justify-center text-center   items-center w-[457px] h-[112px] border-[1px] rounded-[10px] mt-6  ">

@@ -26,7 +26,37 @@ export default function Navbar() {
 
           <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
             <ul className="ulPlatform">
-              {/* ... rest of your links */}
+            <li>
+                    <Link href="/providers/platforms/clinics " className="">
+                      Clinics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/providers/platforms/diagCenters">
+                      <nav> Diagnostisk Center </nav>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/providers/platforms/hospitals">
+                      <nav> Hostpital </nav>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/providers/platforms/labCenters">
+                      <nav>labCententer</nav>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/providers/platforms/pharmacies">
+                      <nav>Pharmacies</nav>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link href="/providers/platforms/seDoctors">
+                      <nav> SeDoctors </nav>
+                    </Link>
+                  </li>
             </ul>
           </div>
 
