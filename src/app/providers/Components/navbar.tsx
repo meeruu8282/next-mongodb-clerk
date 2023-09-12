@@ -2,136 +2,79 @@
 import Image from "next/image";
 import "font-awesome/css/font-awesome.min.css";
 
-import a from "./app.png";
 import { useState } from "react";
 import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full  h-[68.69px] flex justify-between items-center px-[200px]">
-      {/* Logotyp */}
-      <Link href="/">
-        <Image src="/Mask group.png" alt="Mask Image" width={114} height={68.69} />
-      </Link>
+    <div>
+      <div className="w-full  h-[68.69px] flex justify-between items-center px-[200px] ">
 
-      {/* Navigation */}
-      <div className="flex gap-4">
-        <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal">
-          <Link href="/providers/howItWorks" className="w-[105px] h-[22px] text-[16px]">How it work</Link>
-          
-          <button onClick={() => setIsOpen(!isOpen)} className="flex text-1xl w-[70px] h-[22px] text-[16px]">
-            Platform <i className="fa fa-chevron-down"></i>
-          </button>
-
-          <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
-            <ul className="ulPlatform">
-            <li>
-                    <Link href="/providers/platforms/clinics " className="">
-                      Clinics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/diagCenters">
-                      <nav> Diagnostisk Center </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/hospitals">
-                      <nav> Hostpital </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/labCenters">
-                      <nav>labCententer</nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/pharmacies">
-                      <nav>Pharmacies</nav>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/providers/platforms/seDoctors">
-                      <nav> SeDoctors </nav>
-                    </Link>
-                  </li>
-            </ul>
-          </div>
-
-          <Link href="/providers/pricing" className="text-black">
-            <nav className="flex w-[50px] h-[22px] text-[16px]">Pricing</nav>
-          </Link>
-          
-          <Link href="/providers/blog" className="text-black w-[28px] h-[22px] gap-[5px] text-[16px]">Blog</Link>
-          
-          <Link href="/providers/help" className="text-black gap-[5px">
-            <nav className="flex text-1xl h-[22px] text-[16px]">Help</nav>
-          </Link>
-        </div>
-      </div>
+        <Link href="/">
+          <Image src="/Mask group.png" alt="Mask Image" width={114} height={68.69} />
+        </Link>
 
 
-              <button className="carelyoButton ">
-                <div>
-                  <div className="carelyoButtonText  flex items-center justify-center text-[16px] w-full">
-                    Get Carelyo
-                    <div>
-                      <Image
-                        src="/Frame 1000005968.png"
-                        alt="arrow "
-                        width={28}
-                        height={28}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </button>
+        <div className="flex gap-4 ">
+          <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal">
+            <Link href="/providers/howItWorks" className="w-[105px] h-[22px] text-[16px]">How it work</Link>
+
+            <button onClick={() => setIsOpen(!isOpen)} className="flex text-1xl w-[70px] h-[22px] text-[16px]">
+              Platform <i className="fa fa-chevron-down"></i>
+            </button>
+
+            <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
+              <ul className="ulPlatform">
+                <li>
+                  <Link href="/providers/platforms/clinics " className="">
+                    Clinics
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/providers/platforms/diagCenters">
+                    <nav> Diagnostisk Center </nav>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/providers/platforms/hospitals">
+                    <nav> Hostpital </nav>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/providers/platforms/labCenters">
+                    <nav>labCententer</nav>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/providers/platforms/pharmacies">
+                    <nav>Pharmacies</nav>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/providers/platforms/seDoctors">
+                    <nav> SeDoctors </nav>
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <div className="w-[418px] h-[24px] gap-[10px]  flex mt-4 ">
-              <Link
-                href="/providers/howItWorks"
-                className="  w-[105px] h-[22px] text-[16px] "
-              >
-                howitwork
-              </Link>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex text-1xl w-[70px] h-[22px] text-[16px] "
-              >
-                Platform <i className="fa fa-chevron-down"></i>
-              </button>
-              <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
-                <ul className="ulPlatform">
-                  <li>
-                    <Link href="/providers/platforms/clinics " className="">
-                      Clinics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/diagCenters">
-                      <nav> Diagnostisk Center </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/hospitals">
-                      <nav> Hostpital </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/labCenters">
-                      <nav>labCententer</nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/pharmacies">
-                      <nav>Pharmacies</nav>
-                    </Link>
-                  </li>
 
-      {/* Carelyo knappen och flaggan */}
-      <div className="flex  gap-6  justify-center  ">
+            <Link href="/providers/pricing" className="text-black">
+              <nav className="flex w-[50px] h-[22px] text-[16px]">Pricing</nav>
+            </Link>
+
+            <Link href="/providers/blog" className="text-black w-[28px] h-[22px] gap-[5px] text-[16px]">Blog</Link>
+
+            <Link href="/providers/help" className="text-black gap-[5px">
+              <nav className="flex text-1xl h-[22px] text-[16px]">Help</nav>
+            </Link>
+          </div>
+        </div>
+
+
+        <div className="flex  gap-6  justify-center  ">
+
         <div className="w-[125px] h-[52px] flex items-center space-x-5 border-[1px] border-[#45AC60] rounded-[35px] " >  <Image src="/image 519.png" alt="flagg" width={28} height={28} /> 
         
         
@@ -158,6 +101,9 @@ export default function Navbar() {
           </div>
         </button>
       </div>
+
+      </div>
+    
     </div>
   );
 }
