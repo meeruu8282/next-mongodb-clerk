@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import SuperCharge from '../../Components/superCharge';
 
 
 export default function Hospitals() {
@@ -24,6 +25,8 @@ export default function Hospitals() {
 
         <div className="relative"></div>
       </div>
+       {/* Code in components folder then superCarge */}
+     <SuperCharge/>
     </div>
   );
 }

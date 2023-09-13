@@ -1,10 +1,16 @@
 
 
 import Image from 'next/image'
+import SuperCharge from '../../Components/superCharge'
+import JoinCarelyheader from '../../Components/joinCarelyoheader'
 
 export default function Clinics() {
   return (
     <div>
+
+      <JoinCarelyheader userType='Self-Employed Doctors'/>
+
+
     {/* Green background container */}
     <div className="greenBackground">
       {/* Corner triangle */}
@@ -24,6 +30,8 @@ export default function Clinics() {
 
       <div className="relative"></div>
     </div>
+     {/* Code in components folder then superCarge */}
+     <SuperCharge/>
   </div>
   )
 }

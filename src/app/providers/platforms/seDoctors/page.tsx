@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarelyoButton from "../../Components/getStartedButton";
-import EllipseBackground from "../../Components/ellipseBackground"
+import EllipseBackground from "../../Components/ellipseBackground";
 import SuperCharge from "../../Components/superCharge";
 
 export default function Sedoctors() {
   return (
-    <div className=" h-auto ">
+    <div className=" h-auto w-auto flex flex-col">
       <div className=" flex justify-end ">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
           <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
@@ -43,15 +43,15 @@ export default function Sedoctors() {
                   <div className="flex justify-center items-center w-[30px] h-[30px]">
                     {/* icon */}{" "}
                     <svg
+                      width="19"
+                      height="19"
+                      viewBox="0 0 19 19"
+                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
                     >
                       <path
-                        fill-rule="evenodd"
-                        d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                        clip-rule="evenodd"
+                        d="M9.5 0.75C4.67 0.75 0.75 4.67 0.75 9.5C0.75 14.33 4.67 18.25 9.5 18.25C14.33 18.25 18.25 14.33 18.25 9.5C18.25 4.67 14.33 0.75 9.5 0.75ZM9.5 3.375C10.9525 3.375 12.125 4.5475 12.125 6C12.125 7.4525 10.9525 8.625 9.5 8.625C8.0475 8.625 6.875 7.4525 6.875 6C6.875 4.5475 8.0475 3.375 9.5 3.375ZM9.5 15.8C7.3125 15.8 5.37875 14.68 4.25 12.9825C4.27625 11.2413 7.75 10.2875 9.5 10.2875C11.2413 10.2875 14.7238 11.2413 14.75 12.9825C13.6213 14.68 11.6875 15.8 9.5 15.8Z"
+                        fill="#45AC60"
                       />
                     </svg>
                   </div>
@@ -67,17 +67,15 @@ export default function Sedoctors() {
                   <div className="flex justify-center items-center w-[21px] h-[21px]">
                     {/* icon */}
                     <svg
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
-                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                        d="M11.5625 10.25H10.8712L10.6262 10.0137C11.4837 9.01625 12 7.72125 12 6.3125C12 3.17125 9.45375 0.625 6.3125 0.625C3.17125 0.625 0.625 3.17125 0.625 6.3125C0.625 9.45375 3.17125 12 6.3125 12C7.72125 12 9.01625 11.4837 10.0137 10.6262L10.25 10.8712V11.5625L14.625 15.9287L15.9287 14.625L11.5625 10.25ZM6.3125 10.25C4.13375 10.25 2.375 8.49125 2.375 6.3125C2.375 4.13375 4.13375 2.375 6.3125 2.375C8.49125 2.375 10.25 4.13375 10.25 6.3125C10.25 8.49125 8.49125 10.25 6.3125 10.25Z"
+                        fill="#45AC60"
                       />
                     </svg>
                   </div>
@@ -92,16 +90,15 @@ export default function Sedoctors() {
                   <div className="flex justify-center items-center w-[21px] h-[21px]">
                     {/* icon */}
                     <svg
+                      width="17"
+                      height="19"
+                      viewBox="0 0 17 19"
+                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-[#45AC60] h-[21px] w-[21px]"
                     >
-                      <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
                       <path
-                        fill-rule="evenodd"
-                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
-                        clip-rule="evenodd"
+                        d="M14.625 2.5H13.75V1.625C13.75 1.14375 13.3562 0.75 12.875 0.75C12.3938 0.75 12 1.14375 12 1.625V2.5H5V1.625C5 1.14375 4.60625 0.75 4.125 0.75C3.64375 0.75 3.25 1.14375 3.25 1.625V2.5H2.375C1.40375 2.5 0.63375 3.2875 0.63375 4.25L0.625 16.5C0.625 17.4625 1.40375 18.25 2.375 18.25H14.625C15.5875 18.25 16.375 17.4625 16.375 16.5V4.25C16.375 3.2875 15.5875 2.5 14.625 2.5ZM14.625 15.625C14.625 16.1062 14.2312 16.5 13.75 16.5H3.25C2.76875 16.5 2.375 16.1062 2.375 15.625V6.875H14.625V15.625ZM4.125 8.625H5.875V10.375H4.125V8.625ZM7.625 8.625H9.375V10.375H7.625V8.625ZM11.125 8.625H12.875V10.375H11.125V8.625Z"
+                        fill="#45AC60"
                       />
                     </svg>
                   </div>
@@ -116,17 +113,15 @@ export default function Sedoctors() {
                   <div className="flex justify-center items-center w-[21px] h-[21px]">
                     {/* icon */}
                     <svg
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
-                      xmlns="http://www.w3.org/2000/svg"
+                      width="19"
+                      height="19"
+                      viewBox="0 0 19 19"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                        d="M2.5 2.5H16.5V13H3.52375L2.5 14.0238V2.5ZM2.5 0.75C1.5375 0.75 0.75875 1.5375 0.75875 2.5L0.75 18.25L4.25 14.75H16.5C17.4625 14.75 18.25 13.9625 18.25 13V2.5C18.25 1.5375 17.4625 0.75 16.5 0.75H2.5ZM4.25 9.5H11.25V11.25H4.25V9.5ZM4.25 6.875H14.75V8.625H4.25V6.875ZM4.25 4.25H14.75V6H4.25V4.25Z"
+                        fill="#45AC60"
                       />
                     </svg>
                   </div>
@@ -406,9 +401,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={350}
-                    height={233}
-                    src="/DrSarah.png"
+                    width={700}
+                    height={466}
+                    src="/DrSarah.jpg"
                     alt="DrSarah"
                   />
                 </div>
@@ -436,9 +431,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={970}
-                    height={596}
-                    src="/DrJohnSmith.png"
+                    width={351}
+                    height={233}
+                    src="/DrJohnSmith.jpg"
                     alt="DrJohnSmith"
                   />
                 </div>
@@ -467,9 +462,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={970}
-                    height={596}
-                    src="/DrThamson.png"
+                    width={350}
+                    height={233}
+                    src="/DrThamson.jpg"
                     alt="DrThamson"
                   />
                 </div>
@@ -519,8 +514,8 @@ export default function Sedoctors() {
           </button>
         </div>
       </div>
-       {/* Code in components folder then superCarge */}
-     <SuperCharge/>
+      {/* Code in components folder then superCarge */}
+      <SuperCharge />
     </div>
   );
 }

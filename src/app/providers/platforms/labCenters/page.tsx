@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SuperCharge from "../../Components/superCharge";
 
 export default function LabCenters() {
   return (
@@ -22,6 +23,8 @@ export default function LabCenters() {
 
         <div className="relative"></div>
       </div>
+       {/* Code in components folder then superCarge */}
+     <SuperCharge/>
     </div>
   );
 }

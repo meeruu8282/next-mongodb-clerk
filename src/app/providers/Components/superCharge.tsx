@@ -10,6 +10,7 @@ const SuperCharge: React.FC = () => {
         {/* Green background container */}
         <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
           <div className=" absolute top-[35px] left-[271px]">
+            {/* background with about 50 circles */}
              <EllipseBackground/>
           </div>
        
@@ -70,7 +71,7 @@ const SuperCharge: React.FC = () => {
                 layout=" "
                 width={49}
                 height={50}
-                src="/Ellipse.png"
+                src="/Ellipse.jpg"
                 alt="Ellipse"
               />
               <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B]"></div>
