@@ -1,6 +1,6 @@
 interface CarelyoButtonProps {
   buttonText: string;
-  buttonSize?: "sb" | "mb" | "lb";
+  buttonSize?: "sb" | "mb" | "lb"|"vLB";
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary";
   className?: string;
@@ -25,6 +25,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     sb: "w-[12px] h-[12px]",
     mb: "w-[208px] h-[52px]",
     lb: "w-[333.98px] h-[50px]",
+    vLB: " w-[181px] h-[72px]"
 };
 
   const colorClasses = {
