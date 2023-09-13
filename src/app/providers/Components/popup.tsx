@@ -97,7 +97,7 @@ const Modal: React.FC<ModalProps> = ({
                     <div className='w-[457px] h-[22px] font-[Poppins] font-normal text-[14px] opacity-50 text-center'>Choose one of role available</div>
                 </div>
 
-
+                
 
                 <SelectRoleCard imageSrc='icon1' title='Independent Doctor' description='Paragraph of explanation is here ya'
 

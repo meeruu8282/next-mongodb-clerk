@@ -1,8 +1,10 @@
 "use client";
+
 import Image from "next/image";
 import "font-awesome/css/font-awesome.min.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import DropdownMenu from "./dropDownMenu";
 
 
 type Props = {
@@ -11,7 +13,9 @@ type Props = {
 
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+
+
+
 
   return (
     <div>
@@ -20,51 +24,15 @@ export default function Navbar() {
         <Link href="/">
           <Image src="/Mask group.png" alt="Mask Image" width={114} height={68.69} />
         </Link>
-
+        
+         
         <div className="w-[820px] h-[52px] flex  items-center gap-10 ">
           <div className="flex gap-3  ">
             <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal">
               <Link href="/providers/howItWorks" className="w-[105px] h-[22px] text-[16px]">How it work</Link>
 
-              <button onClick={() => setIsOpen(!isOpen)} className="flex text-1xl w-[70px] h-[22px] text-[16px]">
-                Platform <i className="fa fa-chevron-down"></i>
-              </button>
+              <DropdownMenu />
 
-              <div className={isOpen ? "dropdown-visible" : "dropdown-hidden"}>
-                <ul className="ulPlatform">
-                  <li>
-                    <Link href="/providers/platforms/clinics " className="">
-                      Clinics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/diagCenters">
-                      <nav> Diagnostisk Center </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/hospitals">
-                      <nav> Hostpital </nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/labCenters">
-                      <nav>labCententer</nav>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/providers/platforms/pharmacies">
-                      <nav>Pharmacies</nav>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/providers/platforms/seDoctors">
-                      <nav> SeDoctors </nav>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
 
               <Link href="/providers/pricing" className="text-black">
                 <nav className="flex w-[50px] h-[22px] text-[16px]">Pricing</nav>
@@ -113,4 +81,4 @@ export default function Navbar() {
 
     </div>
   );
-}
+} 

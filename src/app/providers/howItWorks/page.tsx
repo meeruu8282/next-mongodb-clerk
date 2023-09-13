@@ -20,6 +20,9 @@ export default function Howitwork() {
  
 </div>
       </div>
+
+<div className=""></div>
+
     </div>
   );
 }
