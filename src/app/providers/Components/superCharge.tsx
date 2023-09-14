@@ -87,7 +87,7 @@ const SuperCharge: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute flex justify-center items-center w-[68px] h-[68.02px] top-[250px]  left-[450px] p-22 rounded-[20px] gap-8 bg-[#2B9B5B]  ">
+          <div className="absolute flex justify-center items-center w-[68px] h-[68.02px] top-[250px]  left-[440px] p-22 rounded-[20px] gap-8 bg-[#2B9B5B]  ">
             <div className="w-[24px] h-[24px] flex justify-center items-center ">
               <svg
                 width="16"
@@ -115,10 +115,12 @@ const SuperCharge: React.FC = () => {
                 <p className="">Connect through Carelyo now!</p>
               </div>
             </div>
-            <CarelyoButton
-              className=" absolute w-[228px] h-[72px] p-[22px 32px] bottom-0 rounded-[25px]  border bg-gradient-to-br from-[rgba(255, 255, 255, 0.4)] via-[rgba(255, 255, 255, 0.2)] to-[rgba(255, 255, 255, 0.1)] bg-gradient-to-t from-[rgba(255, 255, 255, 0.5)] to-[rgba(255, 255, 255, 0.5)] gap-[12px] "
+            <div className=' absolute rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  '>
+              <CarelyoButton
+              className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-20 bg-[#FFFFFF] gap-[12px] font-semibold "
               buttonText="Connect Today"
             />
+             </div>
           </div>
           {/* white line under Productivity */}
           <svg
