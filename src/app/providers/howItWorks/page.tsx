@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import CarelyoButton from "../Components/getStartedButton";
 import Greenbackground from "../Components/greenBackground";
+
 import { Public_Sans } from "next/font/google";
+
 export default function Howitwork() {
   return (
     <div className=" relative justify-center   flex-col ">
@@ -23,6 +25,7 @@ export default function Howitwork() {
                 <div className="w-[116px] h-[22px]  font-semibold text-[16px] text-[#000000]"> <p>Discover More</p>
 
                   <div className="w-[24px] h-[24px] ">
+
 
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clipPath="url(#clip0_341_3389)">
@@ -49,32 +52,68 @@ export default function Howitwork() {
 
         <div className="bg-gray-200 justify-between w-[668px] h-[667px]"> <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />   </div>
       </div>
-      <div className="flex justify-center items-center h-screen">   <div className=" relative w-[1440px] h-[929px] top-[px] " >  <Greenbackground />
-        <div> <div className="flex flex-col  justify-center items-center ">     <div className=" absolute top-[70px] w-[1190px] h-[809px] border-[1px]  items-center ">
-          
-        <div className="w-[373.51px] h-[323px] top-[194px] left-[126.01px] border-[1px] rounded-[25px] ">
-      <div className="w-[289px] h-[247px] ">
-        <div className="w-[281px] h-[29px]">
-          <p className="text-[Poppins] font-semibold text-[24px] text-[#FFFFFF]">Self-Employed Doctors</p>
+      <div className=" relative flex justify-center items-center h-screen">
+        <div className="  w-[1440px] h-[929px] top-[px] " >  <Greenbackground />
+          <div> <div className="flex flex-col   justify-center  ">
+            <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px] border-[1px] shadow-lg  border-blue-500 items-center ">
+              <div className=" absolute w-[439.96px] h-[96px] mt-0"> <p className="font-[Poppins] font-normal text-[#FFFFFF] text-[32px] mb-[-2%]">Who Can Become a  </p>
+                <p className="font-[Poppins] font-bold text-[#FFFFFF] text-[32px]">Carelyo Health Provider?</p>
+              </div>
+              <div className="absolute  mt-[110px]  w-[373.51px] h-[323px] border-[1px] rounded-[25px] bg-opacity-20 bg-[#FFFFFF]">
+                <div className="w-[289px] h-[247px] border-[1px] ml-4 mt-2  border-[black]">
+
+                  <div className="w-[80px] h-[80px] border-[1px]">
+                    <Image className=""
+                      layout="fixed"
+                      width={80}
+                      height={80}
+                      src="/Ellipse_11520.svg"
+                      alt=""
+                    />
+                    <div className="w-[281px] h-[143px] border-[1px] border-pink-500 gap-[10px] ">
+                      <p className=" w-[281px] h-[29px] border-[1px] border-yellow-500 text-[Poppins] font-semibold text-[24px] text-[#FFFFFF]">Self-Employed Doctors</p>
+                      <p className=" font-[Poppind] text-[16px] text-[#FFFFFF] font-normal opacity-[75%] leading-7 mt-2">If you are a self-employed doctor running your own practice, 
+                      Carlo offers you the opportunity to expand your reach with online</p>
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+
+
+              </div >
+
+
+              <div className=" absolute right-0 mt-[110px] w-[782.26px] h-[323px] border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px]">
+                <div className=" absolute w-[361px] h-[246px] bottom-0 right-0">
+                  <Image
+                    layout="fixed"
+                    width={361}
+                    height={246}
+                    src="/image-r.svg"
+                    alt=""
+                  />
+
+                </div>
+
+
+              </div>
+
+              <div className="absolute bottom-[0] w-[782.26px] h-[323px] border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px]"></div>
+              <div className="absolute bottom-[0] w-[373.51px] h-[323px] right-0 border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px]"></div>
+
+            </div>
+
+
+
+
+          </div>
+          </div>
+
         </div>
 
-<p className="h-[289px] w-[143px] gap-[10px]"></p>
-
-      </div>
-
-
-        </div>
-          
-          
-          </div>  
-        
-      
-        
-        
-        </div>
-        </div>
-
-      </div>
       </div>
 
 

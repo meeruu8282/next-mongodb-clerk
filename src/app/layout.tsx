@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className=" h-[157.69px] gap-[24px] ">
-          <div> </div>
+          <div>  </div>
           <div className="h-[65px] bg-[rgba(22,28,40,1)]  flex items-end ">
             <div className="topNavbarInner justify-end ml-28">
               <div className="  w-[391px] h-[17px]">
@@ -61,19 +61,20 @@ export default function RootLayout({
         </div>
 
         {children}
-          <div className=" flex justify-center items-center h-screen">    <SuperCharge/>  </div>
-      
+        <div className=" flex justify-center items-center h-screen">    <SuperCharge />  </div>
+
 
         <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10">
           <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
             {/* Lägg till flex här */}
             <div className="  w-[332px] h-[114.09px] mt-[-175px] ">
               <div className="w-[113px] h-[68.09px]  ">
-                <Image
-                  src="/Mask group.png"
-                  alt="Mask Image"
-                  width={113}
-                  height={68.09}
+                <Image className=""
+                  layout="fixed"
+                  width={80}
+                  height={80}
+                  src="/logo.svg"
+                  alt=""
                 />
               </div>
               <div className="w-[332px] h-[22px]   mt-5 ">
