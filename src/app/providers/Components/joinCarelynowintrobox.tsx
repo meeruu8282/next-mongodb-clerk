@@ -1,5 +1,7 @@
 // components/joinCarelynowintrobox.tsx
 import Image from "next/image";
+import Link from 'next/link';
+
 
 interface CardTemplateProps {
   imageSrc: string;
@@ -84,7 +86,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               </div>
             </div>
 
-            <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
+            <div className="flex items-center w-[300px] h-[45px] gap-[16px] ">
               <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
@@ -98,13 +100,13 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                   />
                 </div>
               </div>
-              <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
+              <div className=" text-[Poppins] text-[16px]  w-400 left-0  h-[22px] justify-center justify-items-center">
                 {/* text */}
                 {icon3text}
               </div>
             </div>
 
-            <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
+            <div className="flex items-center w-[350px] h-[45px] gap-[16px] ">
               <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
@@ -118,14 +120,15 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                   />
                 </div>
               </div>
-              <div className="text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
+              <div className="text-[Poppins] text-[16px] w-400 left-0  h-[22px] justify-center justify-items-center">
                 {/* text */}
                 {icon4text}
               </div>
             </div>
           </div>
+          <Link href="/providers/auth/signIn" passHref>
           {/* Button */}
-          <button className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
+          <button  className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
             <div>
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Join Carelyo Now
@@ -150,6 +153,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               </div>
             </div>
           </button>
+          </Link>
         </div>
       </div>
     </div>

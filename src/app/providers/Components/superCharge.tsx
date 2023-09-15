@@ -6,7 +6,7 @@ import EllipseBackground from "../Components/ellipseBackground"
 const SuperCharge: React.FC = () => { 
 
     return (
-        <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] ">
+        <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] mt-[100px] ">
         {/* Green background container */}
         <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
           <div className=" absolute top-[35px] left-[271px]">
@@ -117,7 +117,7 @@ const SuperCharge: React.FC = () => {
             </div>
             <div className=' absolute rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  '>
               <CarelyoButton
-              className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-20 bg-[#FFFFFF] gap-[12px] font-semibold "
+              className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
               buttonText="Connect Today"
             />
              </div>

@@ -17,7 +17,8 @@ const config: Config = {
         greenText: '#45AC60',
         greenBackgroundFrom: '#45AC60',
         greenBackgroundTo: '#7EDC97',
-        greenBackgroundObjects: '#45AC6040'
+        greenBackgroundObjects: '#45AC6040',
+        
         
       },
     },
