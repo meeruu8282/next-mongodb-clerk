@@ -4,42 +4,45 @@
 // Ernesto C: Importing the useState hook from React to manage component's state.
 import { useEffect, useState } from "react";
 
-// Ernesto C: Defining an interface for the CheckboxItem component's props. 
+// Ernesto C: Defining an interface for the CheckboxItem component's props.
 // It specifies the allowable values for id, size, and checkMark.
 type CheckboxItemProps = {
-  id?: "1" | "2" | "3"|"4"
+  id?: "1" | "2" | "3" | "4";
   size?: "small" | "medium" | "large";
   checkMark?: "checkSmall" | "checkMedium" | "checkLarge";
   roundedType?: "full" | "lg" | "none";
-
 };
 
 // Ernesto C: Defining the CheckboxItem component with default values for its props.
-const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark = "medium", id = "id",roundedType = "lg" }) => {
+const CheckboxItem: React.FC<CheckboxItemProps> = ({
+  size = "medium",
+  checkMark = "medium",
+  id = "id",
+  roundedType = "lg",
+}) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   // Ernesto C: State to track whether the checkbox is checked or not.
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
-  // Ernesto C: State to track the size of the input box. 
+  // Ernesto C: State to track the size of the input box.
   // But this state is never updated in the current code.
   const [inputSize, SetInputsize] = useState("");
 
   // Ernesto C: Function that toggles the isChecked state between true and false when the checkbox is clicked.
 
-
   useEffect(() => {
-    if (id === "1" ) {
-      setIsChecked(true)
+    if (id === "1") {
+      setIsChecked(true);
     }
-    if (id === "4" ) {
-      setIsChecked(true)
+    if (id === "4") {
+      setIsChecked(true);
     }
-  }, [id])
+  }, [id]);
 
   const toggleCheckbox = () => {
     if (id === "1") return;
-    setIsChecked(prevChecked => !prevChecked);
+    setIsChecked((prevChecked) => !prevChecked);
   };
 
   const getRoundingClass = () => {
@@ -55,7 +58,6 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
     }
   };
 
-
   // Ernesto C: Function that returns CSS class names based on the value of inputSize.
   const getContainerSize = () => {
     switch (size) {
@@ -66,7 +68,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
       case "large":
         return "w-[32px] h-[32px]";
       default:
-        return 'w-5 h-5';
+        return "w-5 h-5";
     }
   };
 
@@ -80,15 +82,22 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
       case "checkLarge":
         return "w-[32px] h-[32px]";
       default:
-        return 'w-5 h-5';
+        return "w-5 h-5";
     }
-  }
+  };
 
   // Ernesto C: Rendering the checkbox item. The checkbox can be toggled and shows a checkmark if checked.
   return (
     <div className="w-[333.98] h-[24px] ">
       <div className="flex">
-        <div className={`${getContainerSize()} ${id !== "4" ? `border-[2px] ${getRoundingClass()} border-[#45AC60]` : ''} text-[#45AC60]`} onClick={toggleCheckbox}>
+        <div
+          className={`${getContainerSize()} ${
+            id !== "4"
+              ? `border-[2px] ${getRoundingClass()} border-[#45AC60]`
+              : ""
+          } text-[#45AC60]`}
+          onClick={toggleCheckbox}
+        >
           {isChecked && (
             <>
               {id === "4" ? (
@@ -101,7 +110,11 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
                   stroke="currentColor"
                   className="w-[32px] h-[32px] "
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               ) : (
                 // Original SVG checkmark for other id values
@@ -124,7 +137,6 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({ size = "medium", checkMark 
       </div>
     </div>
   );
-  
 };
 
 export default CheckboxItem;

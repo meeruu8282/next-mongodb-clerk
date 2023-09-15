@@ -1,21 +1,15 @@
-
-
 import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
 
-
 export default function Pricing() {
-
-
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
       <div className=" flex flex-col justify-center items-center left-[125px] ">
         <div className="w-[921px] h-[108px] flex flex-col text-center">
-          <h1 className="text-3xl font-semibold ">
-            Choose Your Plan
-          </h1>
+          <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>
           <p className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
-            Choose the plan that suits your needs and subscribe to the Carelyo platform
+            Choose the plan that suits your needs and subscribe to the Carelyo
+            platform
           </p>
         </div>
       </div>
@@ -59,10 +53,6 @@ export default function Pricing() {
           buttonText="Get Started"
         />
       </div>
-
-
-
-
     </div>
   );
 }
