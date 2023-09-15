@@ -2,6 +2,7 @@
 
 import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
+import SuperCharge from "../Components/superCharge";
 
 
 export default function Pricing() {
@@ -59,9 +60,8 @@ export default function Pricing() {
           buttonText="Get Started"
         />
       </div>
-
-
-
+       {/* Code in components folder then superCarge */}
+     <SuperCharge/>
 
     </div>
   );
