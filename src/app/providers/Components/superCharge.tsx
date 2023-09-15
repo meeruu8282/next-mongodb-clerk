@@ -6,10 +6,11 @@ import EllipseBackground from "../Components/ellipseBackground"
 const SuperCharge: React.FC = () => { 
 
     return (
-        <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] ">
+        <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] mt-[100px] ">
         {/* Green background container */}
         <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
           <div className=" absolute top-[35px] left-[271px]">
+            {/* background with about 50 circles */}
              <EllipseBackground/>
           </div>
        
@@ -70,7 +71,7 @@ const SuperCharge: React.FC = () => {
                 layout=" "
                 width={49}
                 height={50}
-                src="/Ellipse.png"
+                src="/Ellipse.jpg"
                 alt="Ellipse"
               />
               <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B]"></div>
@@ -86,7 +87,7 @@ const SuperCharge: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute flex justify-center items-center w-[68px] h-[68.02px] top-[250px]  left-[450px] p-22 rounded-[20px] gap-8 bg-[#2B9B5B]  ">
+          <div className="absolute flex justify-center items-center w-[68px] h-[68.02px] top-[250px]  left-[440px] p-22 rounded-[20px] gap-8 bg-[#2B9B5B]  ">
             <div className="w-[24px] h-[24px] flex justify-center items-center ">
               <svg
                 width="16"
@@ -114,10 +115,12 @@ const SuperCharge: React.FC = () => {
                 <p className="">Connect through Carelyo now!</p>
               </div>
             </div>
-            <CarelyoButton
-              className=" absolute w-[228px] h-[72px] p-[22px 32px] bottom-0 rounded-[25px]  border bg-gradient-to-br from-[rgba(255, 255, 255, 0.4)] via-[rgba(255, 255, 255, 0.2)] to-[rgba(255, 255, 255, 0.1)] bg-gradient-to-t from-[rgba(255, 255, 255, 0.5)] to-[rgba(255, 255, 255, 0.5)] gap-[12px] "
+            <div className=' absolute rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  '>
+              <CarelyoButton
+              className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
               buttonText="Connect Today"
             />
+             </div>
           </div>
           {/* white line under Productivity */}
           <svg

@@ -1,8 +1,9 @@
 import Link from "next/link";
+
 import Image from "next/image";
 import CarelyoButton from "../Components/getStartedButton";
 import Greenbackground from "../Components/greenBackground";
-
+import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
 
 export default function Howitwork() {
@@ -231,6 +232,10 @@ export default function Howitwork() {
           </div>
         </div>
       </div>
+
+
+     <SuperCharge/>
+
     </div>
   );
 }

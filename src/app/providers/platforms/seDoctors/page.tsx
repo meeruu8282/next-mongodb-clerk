@@ -1,18 +1,19 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarelyoButton from "../../Components/getStartedButton";
-import EllipseBackground from "../../Components/ellipseBackground"
+import EllipseBackground from "../../Components/ellipseBackground";
 import SuperCharge from "../../Components/superCharge";
+import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
 
 export default function Sedoctors() {
   return (
-    <div className=" h-auto ">
+    <div className=" h-auto w-auto flex flex-col">
       <div className=" flex justify-end ">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
+        <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
             <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
               <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
-                Joining carelyo as a{" "}
+              Joining carelyo as a{" "}
                 <span className="text-greenText whitespace-normal font-bold">
                   Self-Employed <br /> Doctors
                 </span>{" "}
@@ -26,143 +27,21 @@ export default function Sedoctors() {
               </p>
             </div>
           </div>
-          <div className="absolute right-0 bottom-0">
-            <Image
-              className=""
-              layout="fixed "
-              width={970}
-              height={596}
-              src="/heartdoctor.png"
-              alt="heartDoctor"
-            />
-          </div>
-          <div className=" absolute w-[289px] h-[396px] top-[190px] left-0 mt-[200px] ">
-            <div className=" flex flex-col w-[289px] h-[276px] gap-[32px] ">
-              <div className=" flex items-center w-[289px] h-[45px] gap-[16px] ">
-                <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
-                  <div className="flex justify-center items-center w-[30px] h-[30px]">
-                    {/* icon */}{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
+          {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
+          <JoinCarelynowintrobox
+            icon1="/profileicon.svg"
+            icon2="/searchicon.svg"
+            icon3="/calendericon.svg"
+            icon4="/chatbubbleicon.svg"
+            icon1text="Sign-Up and Profile Creation"
+            icon2text="Verification and Validation"
+            icon3text="Schedule Management"
+            icon4text="Starts Accepting Patients"
+            
+            imageSrc="/heartdoctor.png"
 
-                <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                  Sign-Up and Profile Creation
-                </div>
-              </div>
-
-              <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-                <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
-                  <div className="flex justify-center items-center w-[21px] h-[21px]">
-                    {/* icon */}
-                    <svg
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                  Verification and Validation
-                </div>
-              </div>
-
-              <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-                <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
-                  <div className="flex justify-center items-center w-[21px] h-[21px]">
-                    {/* icon */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="text-[#45AC60] h-[21px] w-[21px]"
-                    >
-                      <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
-                      <path
-                        fill-rule="evenodd"
-                        d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                  Schedule Management
-                </div>
-              </div>
-
-              <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-                <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
-                  <div className="flex justify-center items-center w-[21px] h-[21px]">
-                    {/* icon */}
-                    <svg
-                      className=" text-[#45AC60] h-[21px] w-[21px]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                  Starts Accepting Patients
-                </div>
-              </div>
-            </div>
-            {/* Button */}
-            <button className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
-              <div>
-                <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
-                  Join Carelyo Now
-                  <div className="ml-3">
-                    <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        className="w-5 h-5"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-          </div>
+            // ... other props for section of tamplate
+          />
         </div>
       </div>
 
@@ -406,9 +285,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={350}
-                    height={233}
-                    src="/DrSarah.png"
+                    width={700}
+                    height={466}
+                    src="/DrSarah.jpg"
                     alt="DrSarah"
                   />
                 </div>
@@ -436,9 +315,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={970}
-                    height={596}
-                    src="/DrJohnSmith.png"
+                    width={351}
+                    height={233}
+                    src="/DrJohnSmith.jpg"
                     alt="DrJohnSmith"
                   />
                 </div>
@@ -467,9 +346,9 @@ export default function Sedoctors() {
                   <Image
                     className=""
                     layout="fixed "
-                    width={970}
-                    height={596}
-                    src="/DrThamson.png"
+                    width={350}
+                    height={233}
+                    src="/DrThamson.jpg"
                     alt="DrThamson"
                   />
                 </div>
@@ -519,8 +398,8 @@ export default function Sedoctors() {
           </button>
         </div>
       </div>
-       {/* Code in components folder then superCarge */}
-     <SuperCharge/>
+      {/* Code in components folder then superCarge */}
+      <SuperCharge />
     </div>
   );
 }

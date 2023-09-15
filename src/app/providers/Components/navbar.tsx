@@ -54,6 +54,7 @@ export default function Navbar() {
             </div>
           </div>
 
+
           <div className="flex  gap-6  justify-center ">
             <div className="flex  w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center  gap-3 ">
               <div className=" w-[28px] h-[28px] flex justify-center items-center ">
@@ -99,6 +100,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      </div>
+    
     </div>
   );
 }
