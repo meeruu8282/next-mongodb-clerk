@@ -1,8 +1,8 @@
 interface CarelyoButtonProps {
   buttonText: string;
-  buttonSize?: "sb" | "mb" | "lb";
+  buttonSize?: "sb" | "mb" | "lb" | "vLB" | "jCb" | "gCb"
   size?: "small" | "medium" | "large";
-  color?: "primary" | "secondary";
+  color?: "primary" | "secondary" | "third";
   className?: string;
   onClick?: () => void;
 }
@@ -16,8 +16,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
 }) => {
   const baseClass = "carelyoButton ";
   const sizeClasses = {
-   
-    small: "text-sm",
+    small: "text-[13px]",
     medium: "text-[16px]",
     large: "text-lg",
   };
@@ -25,16 +24,20 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     sb: "w-[12px] h-[12px]",
     mb: "w-[208px] h-[52px]",
     lb: "w-[333.98px] h-[50px]",
-};
+    vLB: " w-[181px] h-[72px]",
+    jCb: "w-[174px] h-[60px]", // Join Carelyo Button
+    gCb: "w-[168px] h-[60px]" // Get Carelyo button
+  };
 
   const colorClasses = {
     primary: " text-[#FFFFFF]  bg-[#45AC60]",
     secondary: "text-black bg-gray-300",
+    third: "bg-opacity-20 bg-[#FFFFFF] ",
   };
 
   return (
     <button
-    onClick={onClick}
+      onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
     >
       <div className="  rounden-full ">
@@ -48,9 +51,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-
                 className="w-5 h-5"
-
               >
                 <path
                   strokeLinecap="round"
