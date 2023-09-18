@@ -4,16 +4,17 @@ import CarelyoButton from "../../Components/getStartedButton";
 import EllipseBackground from "../../Components/ellipseBackground";
 import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 
 export default function Sedoctors() {
   return (
     <div className=" h-auto w-auto flex flex-col">
       <div className=" flex justify-end ">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-        <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
+          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
             <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
               <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
-              Joining carelyo as a{" "}
+                Joining carelyo as a{" "}
                 <span className="text-greenText whitespace-normal font-bold">
                   Self-Employed <br /> Doctors
                 </span>{" "}
@@ -37,7 +38,6 @@ export default function Sedoctors() {
             icon2text="Verification and Validation"
             icon3text="Schedule Management"
             icon4text="Starts Accepting Patients"
-            
             imageSrc="/heartdoctor.png"
 
             // ... other props for section of tamplate
@@ -268,136 +268,22 @@ export default function Sedoctors() {
         </div>
       </div>
 
-      <div className="relative flex flex-col justify-center items-center  w-[1192px] h-[620px] mt-[100px] left-[125px] gap-[48px]">
-        <div className=" flex justify-center items-center w-[669px] h-[52px]">
-          <h2 className=" text-[Poppins] text-[40px] w-600 line-height-[52px] tracking-[-2%] text-center font-bold ">
-            <span className="text-greenText whitespace-normal">
-              10k+ Doctors
-            </span>{" "}
-            Who Have Joined
-          </h2>
-        </div>
-        <div className="  w-[1192px] h-[520px] gap-[24px]">
-          <div className=" flex flex-row w-[1192px] h-[424px] justify-between">
-            <div className=" flex justify-center items-center w-[379px] h-[424px] rounded-[25px]">
-              <div className=" w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
-                <div className="w-[350px] h-[233px] rounded-[25px]">
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={700}
-                    height={466}
-                    src="/DrSarah.jpg"
-                    alt="DrSarah"
-                  />
-                </div>
-                <div className="w-[350px] h-[114px] gap-[24px]">
-                  <div className="w-[346px] h-[114px] gap-[16px]">
-                    <div className="w-[329.62px] h-[54px] gap-[3px]">
-                      <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0">
-                        Dr. Sarah Aulia
-                      </h1>
-                      <p className="w-[285px] h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C]">
-                        Primary Care Physician
-                      </p>
-                    </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] ">
-                      Highly experienced primary care physician with over 20
-                      years of practice.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" flex justify-center items-center  w-[379px] h-[424px] rounded-[25px]">
-              <div className="  w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
-                <div className="w-[350px] h-[233px] rounded-[25px]">
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={351}
-                    height={233}
-                    src="/DrJohnSmith.jpg"
-                    alt="DrJohnSmith"
-                  />
-                </div>
-                <div className="w-[350px] h-[114px] gap-[24px]">
-                  <div className="w-[346px] h-[114px] gap-[16px]">
-                    <div className="w-[329.62px] h-[54px] gap-[3px]">
-                      <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0">
-                        Dr. John Smith
-                      </h1>
-                      <p className="w-[285px] h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C]">
-                        Cardiologist
-                      </p>
-                    </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] ">
-                      Renowned cardiologist specializing in the diagnosis &
-                      treatment of heart conditions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className=" flex justify-center items-center w-[379px] h-[424px] rounded-[25px]">
-              <div className=" w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
-                <div className="w-[350px] h-[233px] rounded-[25px]">
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={350}
-                    height={233}
-                    src="/DrThamson.jpg"
-                    alt="DrThamson"
-                  />
-                </div>
-                <div className="w-[350px] h-[114px] gap-[24px]">
-                  <div className=" w-[346px] h-[114px] gap-[16px] ">
-                    <div className="w-[329.62px] h-[54px] gap-[3px]">
-                      <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0">
-                        Dr. Thamson
-                      </h1>
-                      <p className="w-[285px] h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C]">
-                        Primary Care Physician
-                      </p>
-                    </div>
-                    <p className=" w-[329px] h-[44px] text-[Poppins] bottom-0 text-[16px] leading-[22px] tracking-[0em]  text-[#A6A6A6] ">
-                      Medical center with cutting-edge technology and a team
-                      professionals.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="carelyoButton absolute w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0  bottom-0">
-            <div>
-              <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
-                Get Carelyo
-                <div className="ml-3">
-                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
+      <WhoHaveJoinedTamplate
+        greenHeaderpart={"10k+ Doctors"}
+        blackHeaderpart={"Who Have Joined"}
+        imageSrc1={"/DrSarah.jpg"}
+        imageSrc2={"/DrJohnSmith.jpg"}
+        imageSrc3={"/DrThamson.jpg"}
+        imageHeader1={"Dr. Sarah Aulia"}
+        imageHeader2={"Dr. John Smith"}
+        imageHeader3={"Dr. Thamson"}
+        titleParagraph1={"Primary Care Physician"}
+        titleParagraph2={"Cardiologist"}
+        titleParagraph3={"Primary Care Physician"}
+        infoParagraph1={"Highly experienced primary care physician with over 20 years of practice."}
+        infoParagraph2={"Renowned cardiologist specializing in the diagnosis & treatment of heart conditions."}
+        infoParagraph3={"Medical center with cutting-edge technology and a team professionals. "}
+      />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
     </div>
