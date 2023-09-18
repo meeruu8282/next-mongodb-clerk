@@ -42,7 +42,7 @@ interface WhoHaveJoinedTamplateProps {
   }) => {
   return (
     <div className="relative flex flex-col justify-center items-center  w-[1192px] h-[620px] mt-[100px] left-[125px] gap-[48px]">
-        <div className=" flex justify-center items-center w-[669px] h-[52px]">
+        <div className=" flex justify-center items-center h-[52px] ">
           <h2 className=" text-[Poppins] text-[40px] w-600 line-height-[52px] tracking-[-2%] text-center font-bold ">
             <span className="text-greenText whitespace-normal">
             {greenHeaderpart}
@@ -139,6 +139,7 @@ interface WhoHaveJoinedTamplateProps {
               </div>
             </div>
           </div>
+          <Link href="/providers/auth/signIn" passHref>
           <button className="carelyoButton absolute w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0  bottom-0">
             <div>
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
@@ -164,6 +165,7 @@ interface WhoHaveJoinedTamplateProps {
               </div>
             </div>
           </button>
+          </Link>
         </div>
       </div>
   )
