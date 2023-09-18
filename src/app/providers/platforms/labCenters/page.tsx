@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 
 export default function LabCenters() {
   return (
@@ -61,6 +62,22 @@ export default function LabCenters() {
 
         <div className="relative"></div>
       </div>
+      <WhoHaveJoinedTamplate
+        greenHeaderpart={"2000+ Laboratory Centers"}
+        blackHeaderpart={"Who Have Joined"}
+        imageSrc1={"/bioLab.jpg"}
+        imageSrc2={"/precisionlab.jpg"}
+        imageSrc3={"/healthquest.jpg"}
+        imageHeader1={"BioLab Diagnostics"}
+        imageHeader2={"Precision Lab Solutions"}
+        imageHeader3={"HealthQuest Laboratories"}
+        titleParagraph1={"Clinical Pathology & Molecular Diagnostics"}
+        titleParagraph2={"Pathology and Genetic Testing"}
+        titleParagraph3={"Hematology and Microbiology"}
+        infoParagraph1={"Providing accurate and reliable diagnostic testing services"}
+        infoParagraph2={"Delivering high-quality testing solutions for healthcare professionals and patients."}
+        infoParagraph3={"Delivering high-quality testing solutions for healthcare professionals and patients."}
+      />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
     </div>

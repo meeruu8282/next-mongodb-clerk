@@ -61,7 +61,7 @@ export default function RootLayout({
         </div>
 
         {children}
-        <div className=" flex justify-center items-center h-screen">    <SuperCharge />  </div>
+        
 
 
 
@@ -183,6 +183,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        
       </body>
     </html>
   );
