@@ -5,7 +5,7 @@ import CheckboxItem from "./checkboxItem";
 import { SvgIcon1, SvgIcon2, SvgIcon3 } from "./svgComponent";
 import { link } from "fs";
 import Link from "next/link";
-
+import StyledBox from "./styleBox";
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -14,7 +14,8 @@ interface ModalProps {
 type selectRoleCardProps = {
     title?: string;
     description?: string;
-    imageSrc: "icon1" | "icon2" | "icon3";
+    imageSrc: "icon1" | "icon2" | "icon3"; 
+    
 };
 
 const SelectRoleCard: React.FC<selectRoleCardProps> = ({
@@ -40,7 +41,7 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
             <div className="w-[360px] h-[64px]  flex   items-center  justify-between">
                 <div className="w-[64px] h-[64px]  flex justify-center items-center">
                     <div className=" flex  items-center   border-[1px] rounded-full w-[64px] h-[64px]">
-                        {renderIcon()}
+                    {renderIcon()}
                     </div>
                 </div>
                 <div className="  text-left  ">
@@ -53,7 +54,7 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
                 </div>
             </div>
             <div className="w-[28px] h-[28px] border-[1px] ml-6 rounded-full">
-                <CheckboxItem size="large" checkMark="checkMedium" id="4" />
+             
             </div>
         </div>
     );
@@ -127,7 +128,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                                 <nav className="flex text-1xl h-[22px] text-[16px]">
                                     Confirm
                                 </nav>
-                            </Link>{" "}
+                            </Link>
                         </div>
                     </div>
                 </div>

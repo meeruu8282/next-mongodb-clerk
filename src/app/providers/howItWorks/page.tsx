@@ -77,7 +77,7 @@ export default function Howitwork() {
         </div>
       </div>
       <div className=" relative flex justify-center items-center h-screen w-full">
-        <div className="  w-[1440px] h-[929px] ">
+        <div className="w-[1440px] h-[929px] ">
           <Greenbackground />
           <div>
             <div className="flex flex-col   justify-center  ">
@@ -281,24 +281,61 @@ export default function Howitwork() {
                   Registering as healthcare service providers. Create a
                   comprehensive profile by entering their personal information
                 </p>
-
-
-                
               </div>
             </div>
           </div>
-          <div className="absolute right-[160px] top-[732px] transform -translate-y-[50%]">
-                <Image
-                  className="  "
-                  layout="fixed"
-                  width={42}
-                  height={204}
-                  src="/Vector677.svg"
-                  alt="677"
-                />
+          <div className="absolute right-[60px] top-[732px] transform -translate-y-[50%]">
+            <Image
+              className="  "
+              layout="fixed"
+              width={42}
+              height={204}
+              src="/Vector677.svg"
+              alt="677"
+            />
+          </div>
+
+          <div className="w-[597px] h-[575.94px] ml-[130px] justify-center  mt-[715px]">
+            <div className="flex justify-center items-center w-[552px] h-[60px]">
+              <div className=" w-[58px] h-[60px]">
+                <p className="font-[Poppins] font-semibold text-[40px] text-[#45AC60] leading-[60px] ">
+                  #2
+                </p>
               </div>
+              <div className=" items-center w-[475px] h-[48px]">
+                <p className=" font-[Poppins] font-medium text-[32px] leading-[48px] ">
+                  Listing Services and Availability
+                </p>{" "}
+              </div>
+            </div>
+
+            <div className="w-[597] h-[66px] ml-5">
+              <p className=" font-[Poppins] text-[20px] leading-[32px] tracking-tighter opacity-50">
+              
+                List the healthcare services they offer on their profile page.
+                Shares their clinic.carelyo.io website with patient{" "}
+              </p>
+            </div>
+            <div className=" absolute justify-centerw-[554px] h-[425px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5 right-[110px]">
+              <div className="w-[518.74px] h-[394.39px] ">
+            <div>
+            <Image
+            className=" absolute "
+            layout="fixed"
+            width={518.74}
+            height={394.39}
+            src="/Group 1000005951 1 (1).svg"
+            alt=""
+          />
+
+            </div>
+
+
+              </div>
+            </div>
+          </div>
         </div>
-       
+
         <div className="flex justify-center ">
           <Image
             className="  bg-[#45AC600D] h-[2111px] w-[1px] border-[1px] mt-[100px]  item-center "

@@ -30,7 +30,7 @@ function DropdownMenu() {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="z-[1000]">
+    <div ref={dropdownRef} className="z-[1000]" id="dropdownPlatform">
       <button onClick={() => setIsOpen(!isOpen)}>Platform</button>
 
       <div className={isOpen ? "block " : "hidden"}>

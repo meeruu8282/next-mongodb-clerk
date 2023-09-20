@@ -30,6 +30,7 @@ export default function Pricing() {
         <CustomContentBox
           title="Clinic"
           monthlyCost="$99/month"
+          
           descriptionLines={[
             "Perfect for small clinics with more providers and advanced features.",
           ]}
@@ -41,6 +42,7 @@ export default function Pricing() {
           buttonText="Get Started"
         />
         <CustomContentBox
+        
           title="Hospital"
           monthlyCost="$499/month"
           descriptionLines={[
