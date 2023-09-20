@@ -1,4 +1,3 @@
-// components/joinCarelynowintrobox.tsx
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -14,7 +13,7 @@ interface CardTemplateProps {
   icon3text: string;
   icon4text: string;
 
-  // ... andra props för varje sektion av din mall
+ 
 }
 
 const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
@@ -28,10 +27,10 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
   icon3text,
   icon4text,
 
-  // ... andra props för varje sektion av din mall
+
 }) => {
   return (
-    <div className=" flex justify-end ">
+    <div className=" flex justify-end left-0 ">
       <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
         <div className="absolute right-0 bottom-0">
           <Image
