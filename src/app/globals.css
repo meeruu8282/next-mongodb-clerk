@@ -86,6 +86,10 @@
   fill: #45AC60;  /* the desired color */
   
 }
+.selectRoleCard:hover > .noHoverEffect {
+  background-color: inherit;
+}
+
 
 .blogo{
   background-image: url(svgPath);

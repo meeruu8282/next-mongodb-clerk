@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Modal from "../Components/popup";
 import CarelyoButton from "./getStartedButton";
