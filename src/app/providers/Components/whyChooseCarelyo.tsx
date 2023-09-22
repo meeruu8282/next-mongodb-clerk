@@ -3,6 +3,7 @@ import Link from 'next/link';
 import CarelyoButton from "./getStartedButton";
 
 
+
 interface WhychooseCarelyoTamplateProps {
  
   image: string;
@@ -54,10 +55,12 @@ const WhychooseCarelyo: React.FC<WhychooseCarelyoTamplateProps> = ({
           </div>
         </div>
         <div className="flex flex-col h-[72px] " >
+        <Link href="/providers/pricing" passHref>
            <CarelyoButton
           buttonText={buttonsText}
           className="flex flex-col justify-center items-center w-[184px]  text-[16px] font-semibold line-h-22.4 h-[72px] "
         />  
+        </Link>
         </div>
 
 

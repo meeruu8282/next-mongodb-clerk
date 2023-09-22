@@ -125,7 +125,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               </div>
             </div>
           </div>
-          <Link href="/providers/auth/signIn" passHref>
+          <Link href="/providers/pricing" passHref>
           {/* Button */}
           <button  className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
             <div>
