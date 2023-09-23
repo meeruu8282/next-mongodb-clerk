@@ -2,20 +2,34 @@
 import { BoxProps } from "./styleBox";
 import { useEffect, useState } from "react";
 import StyledBox from "./styleBox";
+import ToggleableBox from "./ToggleableBoxProps";
+export interface CheckboxItemProps {
 
-type CheckboxItemProps = {
-  CustomComponent: React.ComponentType<BoxProps>;
-  boxProps?: BoxProps; // för att skicka in storlek etc.ny>;
-};
+  boxProps?: BoxProps & { isChecked?: boolean }; // uppdatera här också
+  id: number;
+
+}
 
 const CheckboxItem: React.FC<CheckboxItemProps> = ({
-  CustomComponent,
-  boxProps,
+
+ 
+ 
 }) => {
+  function handelToggle(id: number): void {
+    // Implementera din logik här för att hantera klickhändelsen
+    console.log(`Toggle box with ID ${id}`);
+    // Du kan ändra tillståndet för rutan här om det är relevant
+  }
+  
+  
+  
   return (
-    <div className="w-[333.98] h-[24px] ">
+    <div>
+    
       <div className="flex">
-        <CustomComponent {...boxProps} />
+      
+      <ToggleableBox id={1} isChecked={false} onToggle={handelToggle} />
+        
       </div>
     </div>
   );

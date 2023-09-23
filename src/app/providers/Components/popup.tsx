@@ -140,7 +140,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         zIndex: 1000, // För att säkerställa att overlayen och modalen ligger ovanför all annat innehåll
       }}
     >
-    
       <div
         style={{
           width: "521px",
@@ -164,17 +163,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           </div>
         </div>
         <div
-        onClick={onClose}
-        style={{
-          position: "absolute",
-          
-          cursor: "pointer",
-          zIndex: 1500,
-        }}
-      >
-      <FontAwesomeIcon icon={faTimes} style={{ color: 'black' }} />
+          onClick={onClose}
+          style={{
+            position: "absolute",
 
-      </div>
+            cursor: "pointer",
+            zIndex: 1500,
+          }}
+        >
+          <FontAwesomeIcon icon={faTimes} style={{ color: "black" }} />
+        </div>
         <RoleSelection />
 
         <div className=" w-[457px] h-[384px]">

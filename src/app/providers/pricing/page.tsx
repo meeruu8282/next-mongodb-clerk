@@ -1,8 +1,29 @@
+"use client";
+import React from "react";
+
 import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
 import SuperCharge from "../Components/superCharge";
+import StyledBox from "../Components/styleBox";
+import ClickableBox from "../Components/chck";
+import ToggleableBox from "../Components/ToggleableBoxProps";
 
 export default function Pricing() {
+  const [selectedBox, setSelectedBox] = useState<number | null>(null);
+
+  const [isChecked, setIsChecked] = useState(false);
+
+
+
+
+
+
+
+
+
+  
+
+
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
       <div className=" flex flex-col justify-center items-center left-[125px] ">
@@ -14,8 +35,10 @@ export default function Pricing() {
           </p>
         </div>
       </div>
-
+     
       <div className="flex  justify-between w-[1190px] h-[463px] ">
+    
+     
         <CustomContentBox
           title="Independent Doctor"
           monthlyCost="$29/month"
@@ -26,11 +49,13 @@ export default function Pricing() {
             "Multiple specialty listings",
           ]}
           buttonText="Get Started"
-        />
+          id={1}
+          selectedBox={selectedBox} // Skicka med selectedBox
+          setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
+            />
         <CustomContentBox
           title="Clinic"
           monthlyCost="$99/month"
-          
           descriptionLines={[
             "Perfect for small clinics with more providers and advanced features.",
           ]}
@@ -40,9 +65,14 @@ export default function Pricing() {
             "EHR integration",
           ]}
           buttonText="Get Started"
+         id={2}
+         selectedBox={selectedBox} // Skicka med selectedBox
+         setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
+    
         />
+       
         <CustomContentBox
-        
+      
           title="Hospital"
           monthlyCost="$499/month"
           descriptionLines={[
@@ -54,13 +84,15 @@ export default function Pricing() {
             "Reporting and analytics",
           ]}
           buttonText="Get Started"
+        
+          id={3} 
+          selectedBox={selectedBox} // Skicka med selectedBox
+          setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />
       </div>
 
-       {/* Code in components folder then superCarge */}
-     <SuperCharge/>
-
-
+      {/* Code in components folder then superCarge */}
+      <SuperCharge />
     </div>
   );
 }

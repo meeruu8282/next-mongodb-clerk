@@ -95,4 +95,23 @@
   background-image: url(svgPath);
 }
 
+/* ClickableBox.module.css */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white; /* Vit bakgrundsfärg */
+  border: 2px solid #ccc; /* Grå kantlinje */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box.checked {
+  background-color: white; /* Vit bakgrundsfärg när kryssad */
+  border: 2px solid #45ac60; /* Grön kantlinje när kryssad */
+  color: #45ac60; /* Grön textfärg när kryssad */
+}
+
+
 }
