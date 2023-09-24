@@ -29,6 +29,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
       <div className="flex">
       
       <ToggleableBox id={1} isChecked={false} onToggle={handelToggle} />
+      
         
       </div>
     </div>

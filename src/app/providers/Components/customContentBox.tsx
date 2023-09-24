@@ -78,6 +78,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
         <div className={`text-[Poppins] font-normal text-[14px] mt-5 ml-2 ${id === selectedBox ? "text-white" : ""}`}>
   {features.map((feature, idx) => (
     <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
+     <StyledBox width="22px" height="22px"/>
       <div className="w-[331.98px] h-[24px] opacity-50">
         <p>{feature}</p>
       </div>
