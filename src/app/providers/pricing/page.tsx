@@ -5,7 +5,7 @@ import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
 import SuperCharge from "../Components/superCharge";
 import StyledBox from "../Components/styleBox";
-import ClickableBox from "../Components/chck";
+
 import ToggleableBox from "../Components/ToggleableBoxProps";
 
 export default function Pricing() {
@@ -13,21 +13,10 @@ export default function Pricing() {
 
   const [isChecked, setIsChecked] = useState(false);
 
-
-
-
-
-
-
-
-
-  
-
-
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
       <div className=" flex flex-col justify-center items-center left-[125px] ">
-        <div className="w-[921px] h-[108px] flex flex-col text-center">
+        <div className="w-[921px] h-[108px] flex flex-col text-center ">
           <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>
           <p className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
             Choose the plan that suits your needs and subscribe to the Carelyo
@@ -35,10 +24,8 @@ export default function Pricing() {
           </p>
         </div>
       </div>
-     
-      <div className="flex  justify-between w-[1190px] h-[463px] ">
-    
-     
+
+      <div className="flex  justify-between w-[1190px] h-[463px]  ">
         <CustomContentBox
           title="Independent Doctor"
           monthlyCost="$29/month"
@@ -52,7 +39,8 @@ export default function Pricing() {
           id={1}
           selectedBox={selectedBox} // Skicka med selectedBox
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
-            />
+          
+        />
         <CustomContentBox
           title="Clinic"
           monthlyCost="$99/month"
@@ -65,14 +53,12 @@ export default function Pricing() {
             "EHR integration",
           ]}
           buttonText="Get Started"
-         id={2}
-         selectedBox={selectedBox} // Skicka med selectedBox
-         setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
-    
+          id={2}
+          selectedBox={selectedBox} // Skicka med selectedBox
+          setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />
-       
+
         <CustomContentBox
-      
           title="Hospital"
           monthlyCost="$499/month"
           descriptionLines={[
@@ -84,8 +70,7 @@ export default function Pricing() {
             "Reporting and analytics",
           ]}
           buttonText="Get Started"
-        
-          id={3} 
+          id={3}
           selectedBox={selectedBox} // Skicka med selectedBox
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />

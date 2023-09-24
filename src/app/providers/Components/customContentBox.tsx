@@ -36,21 +36,30 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   setSelectedBox, // Ta emot setSelectedBox som en prop
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
-
+  const [selectedBoxes, setSelectedBoxes] = useState<number[]>([])
   return (
-    <div className="w-[391.33px] h-[463px]  border-[3px] rounded-[25px]    border-[#45AC60]   ">
+    <div
+      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
+        selectedBoxes.length > 0 ? "bg-[#45AC60]" : ""
+      }`}
+    >
       <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px] item-center   ">
-        <div className="w-[333.98px] flex justify-between h-[32px] p-2 ">
+        <div className="w-[333.98px] flex justify-between h-[32px] p-2  ">
           <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">
             <p className="text-[-2%] leading-tight">{title}</p>
           </div>
 
           <ToggleableBox
             id={id}
-            isChecked={id === selectedBox} // Uppdatera isChecked baserat på ditt behov
-            // Markera rutan om dess ID matchar den markerade rutan
+            isChecked={selectedBoxes.includes(id)} // Check if the box's ID is in the selectedBoxes array
             onToggle={() => {
-              setSelectedBox(id); // Uppdatera den markerade rutan när rutan klickas på
+              if (selectedBoxes.includes(id)) {
+                // If already selected, remove from the array
+                setSelectedBoxes(selectedBoxes.filter((boxId) => boxId !== id));
+              } else {
+                // If not selected, add to the array
+                setSelectedBoxes([...selectedBoxes, id]);
+              }
             }}
           />
         </div>
@@ -75,7 +84,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           ))}
         </div>
 
-        <div className=" mt-[80px]  justify-center items-center  ">
+        <div className=" mt-[80px]  justify-center items-center border rounded-[35px]  ">
           <CarelyoButton
             buttonText={buttonText}
             size="large"
