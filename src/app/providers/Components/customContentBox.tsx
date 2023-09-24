@@ -36,36 +36,37 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   setSelectedBox, // Ta emot setSelectedBox som en prop
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedBoxes, setSelectedBoxes] = useState<number[]>([])
+
   return (
     <div
-      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
-        selectedBoxes.length > 0 ? "bg-[#45AC60]" : ""
-      }`}
+    className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
+      id === selectedBox ? "bg-[#45AC60]" : ""
+    }`}
     >
       <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px] item-center   ">
         <div className="w-[333.98px] flex justify-between h-[32px] p-2  ">
-          <div className=" justify-between items-center w-[224px] h-[26px] text-[#45AC60] ">
+          <div className={`justify-between items-center w-[224px] h-[26px] text-[#45AC60] ${
+              id === selectedBox ? "text-white" : ""
+            }`}
+          >
             <p className="text-[-2%] leading-tight">{title}</p>
           </div>
 
           <ToggleableBox
             id={id}
-            isChecked={selectedBoxes.includes(id)} // Check if the box's ID is in the selectedBoxes array
+            isChecked={id === selectedBox} // Kolla om rutan har samma id som selectedBox
             onToggle={() => {
-              if (selectedBoxes.includes(id)) {
-                // If already selected, remove from the array
-                setSelectedBoxes(selectedBoxes.filter((boxId) => boxId !== id));
-              } else {
-                // If not selected, add to the array
-                setSelectedBoxes([...selectedBoxes, id]);
-              }
+              setSelectedBox(id === selectedBox ? null : id); // Om samma ruta klickas igen, avmarkera den genom att sätta selectedBox till null, annars markera den genom att sätta selectedBox till id
             }}
           />
+            
+        
         </div>
 
         <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
-          <h1 className="text-[-2%] leading-tight font-[Poppins] font-semibold">
+          <h1 className={`leading-tight font-[Poppins] font-semibold ${
+              id === selectedBox ? "text-white" : ""
+            }`}>
             {monthlyCost}
           </h1>
         </div>
@@ -74,15 +75,15 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             <p key={idx}>{line}</p>
           ))}
         </div>
-        <div className="text-[Poppins] font-normal text-[14px] mt-5 ml-2">
-          {features.map((feature, idx) => (
-            <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
-              <div className=" w-[331.98px] h-[24px] opacity-50">
-                <p>{feature}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className={`text-[Poppins] font-normal text-[14px] mt-5 ml-2 ${id === selectedBox ? "text-white" : ""}`}>
+  {features.map((feature, idx) => (
+    <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
+      <div className="w-[331.98px] h-[24px] opacity-50">
+        <p>{feature}</p>
+      </div>
+    </div>
+  ))}
+</div>
 
         <div className=" mt-[80px]  justify-center items-center border rounded-[35px]  ">
           <CarelyoButton
