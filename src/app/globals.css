@@ -95,6 +95,7 @@
   background-image: url(svgPath);
 }
 
+
 /* ClickableBox.module.css */
 .box {
   width: 100px;
@@ -165,6 +166,12 @@
   top: 100%; 
   left: 0;  
 
+}
+
+
+
+.hover-bordereffect:hover {
+  border-color: #45AC60; /* Change the border color on hover */
 }
 
 

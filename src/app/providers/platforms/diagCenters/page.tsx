@@ -1,5 +1,6 @@
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
 import SuperCharge from "../../Components/superCharge";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 
 export default function DiagCenters() {
   return (
@@ -37,6 +38,22 @@ export default function DiagCenters() {
           />
         </div>
       </div>
+      <WhoHaveJoinedTamplate
+        greenHeaderpart={"500+ Diagnostic Centers"}
+        blackHeaderpart={"Who Have Joined"}
+        imageSrc1={"/medlab.jpg"}
+        imageSrc2={"/radiance.jpg"}
+        imageSrc3={"/pathogen.jpg"}
+        imageHeader1={"MedLab Diagnostics"}
+        imageHeader2={"Radiance Imaging Center"}
+        imageHeader3={"PathoGen Diagnostics"}
+        titleParagraph1={"General laboratory diagnostics"}
+        titleParagraph2={"Medical imaging services"}
+        titleParagraph3={"Molecular diagnostics, genetic testing"}
+        infoParagraph1={"Offering a wide range of laboratory tests and screenings."}
+        infoParagraph2={"Specialized diagnostic center focused on advanced medical imaging services."}
+        infoParagraph3={"Offering comprehensive genetic testing and infectious disease screenings.s."}
+      />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
     </div>

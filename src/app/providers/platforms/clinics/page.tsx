@@ -1,4 +1,5 @@
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 const Clinics = () => {
   return (
     <div>
@@ -41,6 +42,22 @@ const Clinics = () => {
           />
         </div>
       </div>
+      <WhoHaveJoinedTamplate
+        greenHeaderpart={"500+ Clinics"}
+        blackHeaderpart={"Who Have Joined"}
+        imageSrc1={"/Dentist.jpg"}
+        imageSrc2={"/rehab.jpg"}
+        imageSrc3={"/DrThamson.jpg"}
+        imageHeader1={"Happy Smiles Dental Clinic"}
+        imageHeader2={"Elite Physiotherapy Center"}
+        imageHeader3={"Serenity MentalHealth Clinic"}
+        titleParagraph1={"Dentistry"}
+        titleParagraph2={"Physiotherapy"}
+        titleParagraph3={"Mental Health"}
+        infoParagraph1={"At Happy Smiles Dental Clinic, we believe in creating healthy and beautiful smiles"}
+        infoParagraph2={"Specializes in providing expert physiotherapy services to help patients"}
+        infoParagraph3={"Compassionate environment for individuals seeking mental health services"}
+      />
     </div>
   );
 };

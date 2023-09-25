@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import CarelyoButton from "../Components/getStartedButton";
 import EllipseBackground from "../Components/ellipseBackground"
+import Link from 'next/link';
 
 const SuperCharge: React.FC = () => { 
 
@@ -115,12 +116,14 @@ const SuperCharge: React.FC = () => {
                 <p className="">Connect through Carelyo now!</p>
               </div>
             </div>
+            <Link href="/providers/auth/signIn" passHref>
             <div className=' absolute rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  '>
               <CarelyoButton
               className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
               buttonText="Connect Today"
             />
              </div>
+             </Link>
           </div>
           {/* white line under Productivity */}
           <svg

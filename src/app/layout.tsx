@@ -65,6 +65,7 @@ export default function RootLayout({
 
         {children}
 
+
         <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10 ">
           <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
             {/* Lägg till flex här */}
@@ -184,6 +185,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        
       </body>
     </html>
   );

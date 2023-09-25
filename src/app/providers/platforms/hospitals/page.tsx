@@ -1,6 +1,8 @@
 import Image from "next/image";
 import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
+import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
 
 export default function Hospitals() {
   return (
@@ -55,9 +57,38 @@ export default function Hospitals() {
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
           ></div>
         </div>
-
-        <div className="relative"></div>
       </div>
+
+      <WhychooseCarelyo
+        image={"/enhanceefficancy.jpg"}
+        header={"Enhancing Efficiency and Quality of Care"}
+        paragraph={"By embracing Carelyo's platform, hospitals can unlock numerous advantages that lead to improved efficiency and quality of care. Join Carelyo today and experience the power of a comprehensive platform designed to elevate your hospital's operations, streamline workflows, and provide exceptional care to your patients. Together, let's shape the future of healthcare."}
+        buttonsText={"Join Carelyo"}
+        reverseDirection={true}
+      />
+
+      <WhoHaveJoinedTamplate
+        greenHeaderpart={"15+ Hospitals"}
+        blackHeaderpart={"Who Have Joined"}
+        imageSrc1={"/Dentist.jpg"}
+        imageSrc2={"/rehab.jpg"}
+        imageSrc3={"/DrThamson.jpg"}
+        imageHeader1={"Harmony Medical Center"}
+        imageHeader2={"Serenity Hospital"}
+        imageHeader3={"Ciputra Hospital"}
+        titleParagraph1={"General Medicine, Surgery, Pediatrics"}
+        titleParagraph2={"Cardiology, Orthopedics, Neurology"}
+        titleParagraph3={"Obstetrics and Gynecology, Dermatology"}
+        infoParagraph1={
+          "Healthcare providing comprehensive medical services to patients."
+        }
+        infoParagraph2={
+          "Renowned healthcare facility its commitment to excellence in patient care."
+        }
+        infoParagraph3={
+          "Healthcare institution that prioritizes patient well-being and comfort."
+        }
+      />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
     </div>
