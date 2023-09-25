@@ -25,8 +25,8 @@ export default function Pricing() {
         </div>
       </div>
 
-      <div className="flex  justify-between w-[1190px] h-[463px]  ">
-        <CustomContentBox
+      <div className="flex  justify-between w-[1190px] h-[463px]" >
+        <CustomContentBox 
           title="Independent Doctor"
           monthlyCost="$29/month"
           descriptionLines={["Enhanced features for", "independent doctors."]}

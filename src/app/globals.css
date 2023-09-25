@@ -112,5 +112,20 @@
   border: 2px solid #45ac60; /* Grön kantlinje när kryssad */
   color: #45ac60; /* Grön textfärg när kryssad */
 }
+/* styles.css eller din .scss fil */
+.dropdown-content {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: transform, opacity;
+  pointer-events: none; /* to prevent clicking on hidden items */
+}
+
+.dropdown-content.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 }

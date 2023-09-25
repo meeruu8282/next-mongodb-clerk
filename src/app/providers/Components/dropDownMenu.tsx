@@ -30,7 +30,9 @@ function DropdownMenu() {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="z-[1000]" id="dropdownPlatform">
+    <div ref={dropdownRef} className="z-[1000]" id="dropdownPlatform "
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}>
       <button onClick={() => setIsOpen(!isOpen)}>Platform</button>
 
       <div className={isOpen ? "block " : "hidden"}>
