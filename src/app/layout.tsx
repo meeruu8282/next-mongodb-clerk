@@ -39,11 +39,11 @@ export default function RootLayout({
                   <div>
                     <div>
                       <h1>
-                        FOR PROVIDERS{" "}
+                        FOR PROVIDERS
                         <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]">
-                          {" "}
+                          
                         </div>
-                      </h1>{" "}
+                      </h1>
                     </div>
                   </div>
 
@@ -59,7 +59,7 @@ export default function RootLayout({
           </div>
           <div className="w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px] ">
             <h1 className="text-[64px]  leading-[83px];"></h1>
-            <h2 hCPFM-ISText></h2>
+        
           </div>
         </div>
 
@@ -122,7 +122,7 @@ export default function RootLayout({
                   </h1>
                 </div>
                 <div className="w[136px] h-[40px] flex mt-3  space-x-3">
-                  <div className="w-[40px] h-[40px]  rounded-lg flex justify-center items-center bg-gradient-to-br from-[#405DE6] via-[#5851DB] via-[#FD1D1D] to-[#FCAF45]    ">
+                  <div className="w-[40px] h-[40px]  rounded-lg flex justify-center items-center bg-[#45AC60]     ">
                     <a
                       className="w-[25px] h-[25px]  "
                       href="https://www.instagram.com/your_username/"

@@ -140,13 +140,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const getLinkForRole = () => {
     switch (selectedRole) {
       case "icon1":
-        return "/providers/auth/DoctorSignUp";
+        return "/providers/auth/signUp";
       case "icon2":
-        return "/providers/auth/DoctorSignUp";
+        return "/providers/auth/signUp";
       case "icon3":
         return"/";
       default:
-        return "/providers/auth/doctorSignUp";
+        return "/providers/auth/signUp";
     }
   };
 
