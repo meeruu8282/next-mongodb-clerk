@@ -127,5 +127,45 @@
   pointer-events: auto;
 }
 
+/* Initially set max-height to 0 to hide the dropdown and set the opacity to 0 */
+#dropdownPlatform .dropdown-list {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+/* When active, set a specific max-height value that you know will cover the dropdown's full height. 
+   This number might need to be adjusted depending on the actual height of your dropdown content. */
+#dropdownPlatform .dropdown-list.block {
+  max-height: 500px;  /* Adjust this value as necessary */
+  opacity: 1;
+}
+
+/* Keep the styles for the hidden state as you've defined previously */
+#dropdownPlatform .dropdown-list.hidden {
+  display: none;
+}
+
+#dropdownPlatform > div {
+  transform: translateY(-100%);   /* Startposition: Dölj den helt ovanför dess normala position */
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;   /* Här styr du hur länge animationen tar */
+  will-change: transform, opacity;
+}
+
+#dropdownPlatform > div.block {
+  transform: translateY(0);    /* Slutposition: Sätt den till sin normala position */
+  opacity: 1;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%; 
+  left: 0;  
+
+}
+
 
 }

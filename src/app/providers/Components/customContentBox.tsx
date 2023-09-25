@@ -58,8 +58,9 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             isChecked={id === selectedBox} // Kolla om rutan har samma id som selectedBox
             onToggle={() => {
               setSelectedBox(id === selectedBox ? null : id); // Om samma ruta klickas igen, avmarkera den genom att sätta selectedBox till null, annars markera den genom att sätta selectedBox till id
-            }}
-          />
+
+
+            } } isButtonEnabled={false}          />
         </div>
 
         <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
@@ -103,13 +104,16 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           ))}
         </div>
 
-        <div className=" mt-[80px]  justify-center items-center border rounded-[35px]  ">
+        <div className=" mt-[80px]  justify-center items-center  rounded-[35px] border-2 border-[white]">
           <CarelyoButton
             buttonText={buttonText}
             size="large"
             color="primary"
             buttonSize="lb"
+            
             onClick={() => setModalOpen(true)}
+            
+          
           />
           <Modal
             isOpen={isModalOpen}

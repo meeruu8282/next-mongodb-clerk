@@ -1,10 +1,14 @@
+import Link from "next/link";
+import React from "react";
 interface CarelyoButtonProps {
-  buttonText: string;
+  buttonText?: string;
   buttonSize?: "sb" | "mb" | "lb" | "vLB" | "jCb" | "gCb"
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary" | "third";
   className?: string;
   onClick?: () => void;
+  linkMeTo? :string
+
 }
 const CarelyoButton: React.FC<CarelyoButtonProps> = ({
   onClick,
@@ -13,6 +17,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
   color = "primary",
   className = "",
   buttonSize = "mb",
+  linkMeTo
 }) => {
   const baseClass = "carelyoButton ";
   const sizeClasses = {
@@ -35,7 +40,8 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     third: "bg-opacity-20 bg-[#FFFFFF] ",
   };
 
-  return (
+  const ButtonContent = (
+  
     <button
       onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
@@ -64,6 +70,13 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
         </div>
       </div>
     </button>
-  );
+  )
+    if(linkMeTo){
+      return <Link href={linkMeTo}>{ButtonContent}</Link>;
+
+    }
+    return ButtonContent;
+
+  
 };
 export default CarelyoButton;

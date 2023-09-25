@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, MouseEventHandler } from "react";
+import React, { useState, MouseEventHandler, useEffect } from "react";
 
 import Image from "next/image";
 import CheckboxItem from "./checkboxItem";
@@ -9,13 +9,13 @@ import {
   SvgIcon3,
   SvgCheckmarkGreen,
 } from "./svgComponent";
-import { link } from "fs";
+
 import Link from "next/link";
-import StyledBox from "./styleBox";
+
 import { type } from "os";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, fas, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
+
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface ModalProps {
@@ -30,15 +30,18 @@ type selectRoleCardProps = {
   isSelected: boolean;
   onSelect?: () => void;
   imageSrc: "icon1" | "icon2" | "icon3";
+  onRoleChange: (role: "icon1" | "icon2" | "icon3" | null) => void;
 };
 
 const SelectRoleCard: React.FC<selectRoleCardProps> = ({
+ 
   title,
   description,
   imageSrc,
   isSelected,
   onSelect,
 }) => {
+  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
   const [showIcon, setShowIcon] = useState(false);
 
   const renderIcon = () => {
@@ -53,6 +56,9 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
         return null;
     }
   };
+
+
+
 
   return (
     <div
@@ -89,10 +95,12 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
     </div>
   );
 };
-const RoleSelection = () => {
-  const [selectedRole, setSelectedRole] = useState<
-    "icon1" | "icon2" | "icon3" | null
-  >(null);
+const RoleSelection: React.FC<selectRoleCardProps> = ({ onRoleChange }) => {
+  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
+
+  useEffect(() => {
+    onRoleChange(selectedRole);
+  }, [selectedRole]);
 
   return (
     <div>
@@ -101,30 +109,48 @@ const RoleSelection = () => {
         title="Independent Doctor"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon1"}
-        onSelect={() => setSelectedRole("icon1")}
-        currentSelectedRole={selectedRole}
-      />
+        onSelect={() => setSelectedRole("icon1")} currentSelectedRole={null} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+          throw new Error("Function not implemented.");
+        } }        />
       <SelectRoleCard
         imageSrc="icon2"
         title="Clinic"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon2"}
         onSelect={() => setSelectedRole("icon2")}
-        currentSelectedRole={selectedRole}
-      />
+        currentSelectedRole={selectedRole} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+          throw new Error("Function not implemented.");
+        } }      />
       <SelectRoleCard
         imageSrc="icon3"
         title="Hospital"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon3"}
         onSelect={() => setSelectedRole("icon3")}
-        currentSelectedRole={selectedRole}
-      />
+        currentSelectedRole={selectedRole} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+          throw new Error("Function not implemented.");
+        } }      />
     </div>
   );
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
+
+  const getLinkForRole = () => {
+    switch (selectedRole) {
+      case "icon1":
+        return "/providers/auth/DoctorSignUp";
+      case "icon2":
+        return "/providers/auth/DoctorSignUp";
+      case "icon3":
+        return"/";
+      default:
+        return "/providers/auth/doctorSignUp";
+    }
+  };
+
+
   if (!isOpen) return null;
 
   return (
@@ -173,13 +199,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         >
           <FontAwesomeIcon icon={faTimes} style={{ color: "black" }} />
         </div>
-        <RoleSelection />
+        <RoleSelection onRoleChange={setSelectedRole} currentSelectedRole={null} isSelected={false} imageSrc={"icon1"}/>
 
         <div className=" w-[457px] h-[384px]">
           <div className="w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center mt-6">
             <div className="w-[67px] h-[22px]flex items-center font-semibold">
               <Link
-                href="/providers/auth/signIn"
+                href={getLinkForRole()}
                 className=" text-[#FFFFFF]  gap-[5px}"
               >
                 <nav className="flex text-1xl h-[22px] text-[16px]">

@@ -40,6 +40,7 @@ export default function Pricing() {
           selectedBox={selectedBox} // Skicka med selectedBox
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
           
+          
         />
         <CustomContentBox
           title="Clinic"
@@ -56,6 +57,7 @@ export default function Pricing() {
           id={2}
           selectedBox={selectedBox} // Skicka med selectedBox
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
+          
         />
 
         <CustomContentBox
@@ -70,6 +72,7 @@ export default function Pricing() {
             "Reporting and analytics",
           ]}
           buttonText="Get Started"
+          
           id={3}
           selectedBox={selectedBox} // Skicka med selectedBox
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
