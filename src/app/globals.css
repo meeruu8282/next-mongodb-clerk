@@ -91,4 +91,8 @@
   background-image: url(svgPath);
 }
 
+.hover-bordereffect:hover {
+  border-color: #45AC60; /* Change the border color on hover */
+}
+
 }
