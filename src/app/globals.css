@@ -86,13 +86,93 @@
   fill: #45AC60;  /* the desired color */
   
 }
+.selectRoleCard:hover > .noHoverEffect {
+  background-color: inherit;
+}
+
 
 .blogo{
   background-image: url(svgPath);
 }
 
+
+/* ClickableBox.module.css */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white; /* Vit bakgrundsfärg */
+  border: 2px solid #ccc; /* Grå kantlinje */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box.checked {
+  background-color: white; /* Vit bakgrundsfärg när kryssad */
+  border: 2px solid #45ac60; /* Grön kantlinje när kryssad */
+  color: #45ac60; /* Grön textfärg när kryssad */
+}
+/* styles.css eller din .scss fil */
+.dropdown-content {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: transform, opacity;
+  pointer-events: none; /* to prevent clicking on hidden items */
+}
+
+.dropdown-content.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Initially set max-height to 0 to hide the dropdown and set the opacity to 0 */
+#dropdownPlatform .dropdown-list {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+/* When active, set a specific max-height value that you know will cover the dropdown's full height. 
+   This number might need to be adjusted depending on the actual height of your dropdown content. */
+#dropdownPlatform .dropdown-list.block {
+  max-height: 500px;  /* Adjust this value as necessary */
+  opacity: 1;
+}
+
+/* Keep the styles for the hidden state as you've defined previously */
+#dropdownPlatform .dropdown-list.hidden {
+  display: none;
+}
+
+#dropdownPlatform > div {
+  transform: translateY(-100%);   /* Startposition: Dölj den helt ovanför dess normala position */
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;   /* Här styr du hur länge animationen tar */
+  will-change: transform, opacity;
+}
+
+#dropdownPlatform > div.block {
+  transform: translateY(0);    /* Slutposition: Sätt den till sin normala position */
+  opacity: 1;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%; 
+  left: 0;  
+
+}
+
+
+
 .hover-bordereffect:hover {
   border-color: #45AC60; /* Change the border color on hover */
 }
+
 
 }

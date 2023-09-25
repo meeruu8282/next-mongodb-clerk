@@ -29,24 +29,27 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className=" h-[157.69px] gap-[24px] ">
-          <div>  </div>
+          <div> </div>
           <div className="h-[65px] bg-[rgba(22,28,40,1)]  flex items-end ">
             <div className="topNavbarInner justify-end ml-28">
               <div className="  w-[391px] h-[17px]">
-
-
                 <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
                   <h1>FOR PATIENTS</h1>
-                  <div > </div>
+                  <div> </div>
                   <div>
-
-                    <div><h1>FOR PROVIDERS <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]" > </div></h1> </div>
+                    <div>
+                      <h1>
+                        FOR PROVIDERS{" "}
+                        <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]">
+                          {" "}
+                        </div>
+                      </h1>{" "}
+                    </div>
                   </div>
 
                   <h1>FOR PARTNERS</h1>
                   <h1>FOR SHOP</h1>
                 </div>
-
               </div>
             </div>
           </div>
@@ -61,16 +64,15 @@ export default function RootLayout({
         </div>
 
         {children}
-        
 
 
-
-        <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10">
+        <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10 ">
           <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
             {/* Lägg till flex här */}
             <div className="  w-[332px] h-[114.09px] mt-[-175px] ">
               <div className="w-[113px] h-[68.09px]  ">
-                <Image className=""
+                <Image
+                  className=""
                   layout="fixed"
                   width={80}
                   height={80}

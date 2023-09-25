@@ -10,7 +10,7 @@ type Props = {
 function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
-
+  let closeTimeout = useRef<any>(null); // För att hålla referensen till setTimeout
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -28,12 +28,28 @@ function DropdownMenu() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);  // Avbryter tidigare fördröjning om menyn öppnas igen
+    }
+  }
+  const handleMouseLeave = () => {
+    closeTimeout.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 500);  // Fördröj stängningen med 500 ms
+  }
 
   return (
-    <div ref={dropdownRef} className="z-[1000]">
+    <div
+      ref={dropdownRef}
+      className=" relative z-[1000]"
+      id="dropdownPlatform "
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button onClick={() => setIsOpen(!isOpen)}>Platform</button>
-
-      <div className={isOpen ? "block " : "hidden"}>
+      <div className={isOpen ? "dropdown-list block" : "dropdown-list hidden"}>
         <ul className="mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
