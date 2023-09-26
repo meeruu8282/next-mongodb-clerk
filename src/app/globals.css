@@ -39,12 +39,7 @@
     @apply ml-2;
   }
 
-  .hCPFM-ISText {
-    @apply relative w-[624px] h-[52px];
-    top: 620.69140625px;
-    left: 125px;
-    opacity: 0.5;
-  }
+  
   .ulPlatform {
     @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
     transform-origin: top, text-poppin;

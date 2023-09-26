@@ -44,9 +44,9 @@ interface JoinCarelyoHeaderProps {
           </h1>
         </div>
         <div className="w-[858px] h-[64px] opacity-[50%]">
-          <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
+          <div className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
             {headerSubtitle}
-          </p>
+          </div>
         </div>
       </div>
       <div className="absolute right-0 bottom-0">
@@ -165,13 +165,13 @@ interface JoinCarelyoHeaderProps {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     className="w-5 h-5"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M8.25 4.5l7.5 7.5-7.5 7.5"
                     />
                   </svg>

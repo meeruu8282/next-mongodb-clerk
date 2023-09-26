@@ -75,9 +75,9 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
           <h1 className="w-[272px] h-[32px] text-[Poppins] text-[20px] tracking-[-2%]  font-semibold">
             {title}
           </h1>
-          <p className="w-[272px] h-[22px] font-normal text-[Poppins ">
+          <div className="w-[272px] h-[22px] font-normal text-[Poppins ">
             {description}
-          </p>
+          </div>
         </div>
       </div>
       <div

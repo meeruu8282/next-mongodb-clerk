@@ -18,13 +18,24 @@ export default function Pricing() {
       <div className=" flex flex-col justify-center items-center left-[125px] ">
         <div className="w-[921px] h-[108px] flex flex-col text-center ">
           <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>
-          <p className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
+          <div className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
             Choose the plan that suits your needs and subscribe to the Carelyo
             platform
-          </p>
+          </div>
         </div>
       </div>
+      <div className="w-[1100px] h-[22px] flex mb-6  justify-center items-center "><div className="w-[22px] h-[22px] border border-black rounded-full mr-2 flex "> </div> 
+      <div className=" flex text-[16px] font-[Popins]   pr-4  "><h3 >Annual billing   </h3><p className="text-[#45AC60] "> save 20% </p></div>
+      <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 "> </div> 
+      <div className="text-[16px] font-[Popins] flex pr-4"><h3  className="pr-1">Quarterly billing </h3>  <p className="text-[#45AC60]">save 15%</p> </div>
+      <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 "> </div> 
+      <div className="text-[16px] font-[Popins] flex w"><h3 >Monthly billing</h3></div>
+      
+      </div>
+      <div >
 
+
+      </div>
       <div className="flex  justify-between w-[1190px] h-[463px]" >
         <CustomContentBox 
           title="Independent Doctor"

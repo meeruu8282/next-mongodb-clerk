@@ -57,11 +57,11 @@ const Keypointsbox: React.FC<KeyPointsBoxTamplateProps> = ({
               <div className=" w-[309.34px] h-[88px] opacity-50">
       
 
-                <p className=" text-[Poppins] text-[16px] font-normal line-h-22.4">
+                <div className=" text-[Poppins] text-[16px] font-normal line-h-22.4">
                 {paragraph}
 
 
-                </p>
+                </div>
               </div>
               <div className=" w-[309.34px] h-[22px] ">
             

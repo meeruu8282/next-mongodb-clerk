@@ -81,16 +81,16 @@ export default function RootLayout({
                 />
               </div>
               <div className="w-[332px] h-[22px]   mt-5 ">
-                <p className="font-[Poppins] font-normal text-[16px] ">
+                <div className="font-[Poppins] font-normal text-[16px] ">
                   Delivering Better Healthcare Solutions
-                </p>
+                </div>
               </div>
             </div>
             <div className=" w-[170px] h-[270px] ">
               <div className="w-[170px] h-[22px]  ">
-                <p className="font-[Poppins] font-semibold text-[16px]  ">
+                <div className="font-[Poppins] font-semibold text-[16px]  ">
                   NAVIGATION LINKS
-                </p>
+                </div>
               </div>
               <div className=" w-[150px] h-[222px] gap-[18px] font-[Poppins] font-medium text-[16px] ">
                 <nav className="mt-5">Home</nav>

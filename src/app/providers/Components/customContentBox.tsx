@@ -50,7 +50,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
               id === selectedBox ? "text-white" : ""
             }`}
           >
-            <p className="text-[-2%] leading-tight">{title}</p>
+            <div className="text-[-2%] leading-tight"> {title} </div>
           </div>
 
           <ToggleableBox
@@ -58,9 +58,9 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             isChecked={id === selectedBox} // Kolla om rutan har samma id som selectedBox
             onToggle={() => {
               setSelectedBox(id === selectedBox ? null : id); // Om samma ruta klickas igen, avmarkera den genom att sätta selectedBox till null, annars markera den genom att sätta selectedBox till id
-
-
-            } } isButtonEnabled={false}          />
+            }}
+            isButtonEnabled={false}
+          />
         </div>
 
         <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
@@ -78,7 +78,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           }`}
         >
           {descriptionLines.map((line, idx) => (
-            <p key={idx}>{line}</p>
+            <div key={idx}> {line}</div>
           ))}
         </div>
         <div
@@ -87,18 +87,23 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           }`}
         >
           {features.map((feature, idx) => (
-            <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5"
-            
-            
-            key={idx}>
+            <div className="flex w-[333.98] h-[24px] gap-[8px] mt-5" key={idx}>
               <div>
-                <StyledBox type="fixed" width="24px" height="24px" id={id} selectedBox={selectedBox} />
+                <StyledBox
+                  type="fixed"
+                  width="24px"
+                  height="24px"
+                  id={id}
+                  selectedBox={selectedBox}
+                />
               </div>
 
-              <div className={`w-[331.98px] h-[24px] opacity-50${
-              id === selectedBox ? "text-[#FFFFFF] opacity-[100]" : ""
-            }`}    >
-                <p>{feature}</p>
+              <div
+                className={`w-[331.98px] h-[24px] opacity-50${
+                  id === selectedBox ? "text-[#FFFFFF] opacity-[100]" : ""
+                }`}
+              >
+                <div> {feature} </div>
               </div>
             </div>
           ))}
@@ -110,10 +115,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             size="large"
             color="primary"
             buttonSize="lb"
-            
             onClick={() => setModalOpen(true)}
-            
-          
           />
           <Modal
             isOpen={isModalOpen}

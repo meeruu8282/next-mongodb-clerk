@@ -66,9 +66,9 @@ export default function Navbar() {
               </div>
 
               <div className="flex items-center bg-white ">
-                <p className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
+                <div className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
                   en
-                </p>
+                </div>
                 <i className="fa fa-chevron-down text-[10px]"></i>
               </div>
             </div>
