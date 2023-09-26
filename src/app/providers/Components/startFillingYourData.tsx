@@ -1,11 +1,21 @@
-import StyledBox from "../../Components/styleBox";
+
+
+import { ReactNode } from "react";
+import StyledBox from "./styleBox";
 import {
   MdcnLicense,
   AccuntCircle,
   EmailIcon,
   HouseIcon,
-} from "../../Components/svgComponent";
-export default function DoctorSignUp() {
+} from "./svgComponent";
+
+
+export default function SignUpProvisers(props: {
+    Adress: string;
+    telOrMobileNumber: string;
+    licens: ReactNode;
+   providersName: string, startFillingDataTitel: string, 
+}) {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="justify-center items-center">
@@ -13,7 +23,7 @@ export default function DoctorSignUp() {
           <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
               <h1 className=" text-[40px] font-[Poppins] font-semibold ">
-                Start Filling Your Personal Data
+                {props.startFillingDataTitel || "personal Data"}
               </h1>
             </div>
             <div className="w-[921px] h-[32px] opacity-50 flex justify-center items-center">
@@ -37,7 +47,7 @@ export default function DoctorSignUp() {
                 <div className="  w-[1114px] h-[430px]  mb-0">
                   <div className=" flex  w-[1114px] h-[84px]  ">
                     <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
-                      Full Name
+                  {props.providersName}
                     </div>
 
                     <div className="flex-col w-[551px] h-[84px]   ">
@@ -81,7 +91,7 @@ export default function DoctorSignUp() {
                   </div>
                   <div className=" flex  w-[1114px] h-[84px] ">
                     <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
-                      <h2 className="w-[156px] h-[22px]">Telephone Number</h2>
+                      <h2 className="w-[156px] h-[22px]">{props.telOrMobileNumber}</h2>
                     </div>
 
                     <div className="flex-col w-[551px] h-[84px]  ">
@@ -104,18 +114,14 @@ export default function DoctorSignUp() {
                     <div className="w-[551px] h-[84px]  ">
                       <div>
                         <div className=" flex w-[115px] h-[22px] font-[Poppins] font-semibold">
-                          MCDN Lincense
+                         {props.licens}
                         </div>
                         <div className=" flex items-center w-[551px] h-[54px]  mt-[6px] ">
                           <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] ">
                             <MdcnLicense />
                           </div>
                           <div className="w-[485px] h-[22px]">
-                            <input
-                              type="text"
-                              placeholder=""
-                              className=" "
-                            />
+                            <input type="text" placeholder="" className=" " />
                           </div>
                         </div>
                       </div>
@@ -127,20 +133,19 @@ export default function DoctorSignUp() {
                   <div>
                     <div className=" w-[1114px] h-[190px] gab-[16px] ">
                       <div className="W-[109px] h-[22px] font-[Poppins] font-semibold text-[16px] ">
-                        Your Address
+                      {props.Adress}
                       </div>
                       <div className="flex w-[1082px] h-[22px] mt-3">
-                        
                         <div className=" flex justify-between w-[519px] h-[22px] ">
                           <HouseIcon />
-                       
-                        <div className=" ">
-                          <input
-                            type="text"
-                            placeholder=""
-                            className="w-[485px]"
-                          />
-                        </div>
+
+                          <div className=" ">
+                            <input
+                              type="text"
+                              placeholder=""
+                              className="w-[485px]"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
