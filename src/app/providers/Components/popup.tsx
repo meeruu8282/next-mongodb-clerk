@@ -151,6 +151,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const [selectedRole, setSelectedRole] = useState<
     "icon1" | "icon2" | "icon3" | null
   >(null);
+  const [showWarning, setShowWarning] = useState(false);
+
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    if (!selectedRole) {
+      e.preventDefault(); // Förhindra att länken navigerar om ingen roll är vald.
+      
+      alert("please select your role!")
+    }
+  };
 
   const getLinkForRole = () => {
     switch (selectedRole) {
@@ -227,7 +238,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                 href={getLinkForRole()}
                 className=" text-[#FFFFFF]  gap-[5px}"
               >
-                <nav className="flex text-1xl h-[22px] text-[16px]">
+                <nav
+                  onClick={handleLinkClick}
+                  className="flex text-1xl h-[22px] text-[16px]"
+                >
                   Confirm
                 </nav>
               </Link>
