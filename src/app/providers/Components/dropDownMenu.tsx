@@ -53,44 +53,43 @@ function DropdownMenu() {
         <ul className="mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
-              <p className="block px-4 py-2 hover:text-[#5EEF84]  cursor-pointer">
-                Clinics
-              </p>
+            
+              <div  className="block px-4 py-2 hover:text-[#5EEF84]  cursor-pointer"       >   Clinics </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/diagCenters">
-              <p className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
                 Diagnostisk Center
-              </p>
+              </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/hospitals">
-              <p className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
                 Hostpital
-              </p>
+              </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/labCenters">
-              <p className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
                 LabCenter
-              </p>
+              </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/pharmacies">
-              <p className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
                 Pharmacies
-              </p>
+              </div>
             </Link>
           </li>
           <li>
             <Link href="/providers/platforms/seDoctors">
-              <p className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
                 SeDoctors
-              </p>
+              </div>
             </Link>
           </li>
         </ul>
