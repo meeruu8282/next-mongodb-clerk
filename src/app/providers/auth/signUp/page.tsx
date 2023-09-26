@@ -1,11 +1,21 @@
+
 import StyledBox from "../../Components/styleBox";
 
+
+
+
+
 export default function DoctorSignUp() {
+
+
+
+
+
   return (
-    <div className="  relative">
-      <div>
-        <div className=" flex justify-center items-center top-0 w-screen h-[554px]  bg-[#45AC601A]">
-          <div className="w-[921px] h-[108px]  justify-center flex  bg-red-600 flex-col">
+    <div className="flex flex-col justify-center items-center">
+      <div className="justify-center items-center">
+        <div className="  flex justify-center items-center top-0 w-screen h-[554px]  bg-[#45AC601A]">
+          <div className="w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
               <h1 className=" text-[40px] font-[Poppins] font-semibold">
                 Start Filling Your Personal Data
@@ -19,14 +29,14 @@ export default function DoctorSignUp() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="  w-[1194px] h-[662px] border border-black flex justify-center items-center">
-        <div className="w-[1114px] h-[582px] border border-red-500 ">
+      
+      
+        <div className="flex flex-col justify-center items-center  ">
+        <div className="w-[1114px] h-[582px] border border-black ">
           <div className="w-[135px] h-[32px]">
-            <p className=" font-normal font-[Poppins] text-[20px]">
+            <h2 className=" font-normal font-[Poppins] text-[20px]">
               Personal Data
-            </p>
+            </h2>
           </div>
           <div className=" justify-end  w-[1114px] h-[526px] border border-green-500">
             <div className="  w-[1114px] h-[430px] border border-yellow-500 mb-0">
@@ -38,8 +48,7 @@ export default function DoctorSignUp() {
                 <div className="flex-col w-[551px] h-[84px] border-[1px] border-blue-500 ">
                   <div className=" absolute w-[551px] h-[54px] border-black border-[2px] mt-7 justify-center  items-center ">
                     <div className="w-[519px] h-[22px]  justify-center items-center">
-                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   item-center border">
-                        {" "}
+                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center border">
                         <input
                           type="text"
                           placeholder=""
@@ -118,7 +127,7 @@ export default function DoctorSignUp() {
                 <div className="flex-col w-[551px] h-[84px] border-[1px] border-blue-500 ">
                   <div className=" absolute w-[551px] h-[54px] border-black border-[2px] mt-7 justify-center  items-center ">
                     <div className="w-[519px] h-[22px]  justify-center items-center">
-                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   item-center border">
+                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center border">
                         <input
                           type="text"
                           placeholder=""
@@ -155,7 +164,7 @@ export default function DoctorSignUp() {
                       MCDN Lincense
                     </div>
                     <div className=" flex items-center w-[551px] h-[54px] border mt-[6px] border-purple-500">
-                      <div className=" flex justify-center item-center w-[22.33px] h-[18.67px] border border-orange-500">
+                      <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] border border-orange-500">
                         <svg
                           width="22"
                           height="22"
@@ -206,26 +215,28 @@ export default function DoctorSignUp() {
               </div>
               <div></div>
 
-              <div className=" flex w-[1114px] h-[24px] justify-center items-center border">
+              <div className="  flex w-[1114px] h-[24px] border  border-black">
                 <div className="  flex pr-1">
-                  {" "}
-                  <StyledBox width="24px" height="24px" type="fixed" />{" "}
+                  <StyledBox width="24px" height="24px" type="fixed" />
                 </div>
-                <div className="  w-[1082px] h-[22px] font-[Poppins] font-normal text-[16px]">
+                <div className=" flex w-full h-[22px] font-[Poppins] font-normal  text-[16px]">
+                  I have read and agree to Carelyo for Doctor Services
+                  <h4 className=" flex ml-3 text-[#45AC60] text-[16px] font-normal font-Poppins "> Terms of use and Privacy Policy. </h4>
+                </div>
+              
+                   
                 
-                  I have read and agree to Carelyo for Doctor Services <div  className="  text-[#45AC60]"> Terms of
-                  use and Privacy Policy.  
-                  <div className="w-[1114px] h-[54px]"> 
-
-                  <div className="w-[549px] h-[54px] rounded-[8px]"></div>
-                  </div>
-                  
-                  </div>                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+      
+      
+      </div>
+
+     
     </div>
   );
 }

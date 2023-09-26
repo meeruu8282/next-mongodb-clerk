@@ -10,21 +10,21 @@ export default function Howitwork() {
   return (
     <div className="  justify-center items-center   ">
       <div className="flex items-center">
-        <div className="  w-[624px] h-[480px] top-[288.69px] left-[125px] m-[130px] font-[Poppins] ml-[80px]  ">
-          <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold ">
+      <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
+      <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
             <div className="w-[185px] h-[22px]">Welcome to Carelyo 👋</div>
           </div>
           <div className="w-[522px] h-[249px] top-[347.69px] left-[125px] font-semibold text-[64px] text-[#000000] px-[16px]">
             <h1>Healthcare Platform for Providers!</h1>
           </div>
-          <div className="w-[624px] h-[52px] top-[520.69px] left-[125px] opacity-50 font-normal text-[16px] mt-7 px-4 ">
+          <div className="w-[624px] h-[52px] top-[520.69px] left-[125px] opacity-50 font-normal text-[16px] mt-7 px-4">
             <div>
               Are you an independent doctor, family physician, or managing a
               small to medium-sized clinic or hospital? We at Carelyo are here
               for you!
             </div>
           </div>
-          <div className="w-[361px] h-[72px]   flex ml-6  mt-6 item-center ">
+          <div className="w-[361px] h-[72px]   flex ml-6  mt-6 item-center pr-12 md:pr-0 ">
             <div className="">
               <CarelyoButton
                 buttonText="Get Started"
@@ -72,12 +72,13 @@ export default function Howitwork() {
           </div>
         </div>
 
-        <div className=" absolute right-0 w-[668px] h-[667px] mr-[60px]">
+        <div className="absolute right-0 w-full md:w-[668px] h-auto md:h-[667px] md:mr-[60px] hidden md:block">
+
           <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />
         </div>
       </div>
-      <div className=" relative flex justify-center items-center h-screen w-full">
-        <div className="w-[1440px] h-[929px] ">
+      <div className="relative w-full flex justify-center items-center">
+      <div className="w-full md:w-[1440px] h-[929px]">
           <Greenbackground />
           <div>
             <div className="flex flex-col   justify-center  ">
@@ -228,8 +229,8 @@ export default function Howitwork() {
         </div>
       </div>
 
-      <div className=" w-[737] h-[60px] mt-[100px]  justify-center flex items-center">
-        <h1 className="font-[Poppins] font-semibold text-[40px] ">
+      <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center">
+        <h1 className="font-[Poppins] font-semibold text-[40px]">
           An easier way to interact with patient
         </h1>
       </div>
