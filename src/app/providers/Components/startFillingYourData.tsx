@@ -1,5 +1,3 @@
-
-
 import { ReactNode } from "react";
 import StyledBox from "./styleBox";
 import {
@@ -9,12 +7,11 @@ import {
   HouseIcon,
 } from "./svgComponent";
 
-
 export default function SignUpProvisers(props: {
-    Adress: string;
-    telOrMobileNumber: string;
-    licens: ReactNode;
-   providersName: string, startFillingDataTitel: string, 
+  Adress: string;
+  telOrMobileNumber: string;
+  licens: ReactNode;
+  providersName: string;
 }) {
   return (
     <div className="flex flex-col justify-center items-center">
@@ -23,7 +20,7 @@ export default function SignUpProvisers(props: {
           <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
               <h1 className=" text-[40px] font-[Poppins] font-semibold ">
-                {props.startFillingDataTitel || "personal Data"}
+                Start Filling Your Personal Data
               </h1>
             </div>
             <div className="w-[921px] h-[32px] opacity-50 flex justify-center items-center">
@@ -40,14 +37,14 @@ export default function SignUpProvisers(props: {
             <div className="w-[1114px] h-[582px] ">
               <div className=" justify-end  w-[1114px] h-[526px] mt-5 ">
                 <div className="w-[135px] h-[32px] ">
-                  <h2 className=" font-normal font-[Poppins] text-[20px]">
+                  <h2 className=" font-normal font-[Poppins] text-[20px] ">
                     Personal Data
                   </h2>
                 </div>
                 <div className="  w-[1114px] h-[430px]  mb-0">
                   <div className=" flex  w-[1114px] h-[84px]  ">
-                    <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
-                  {props.providersName}
+                    <div className=" absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+                      {props.providersName}
                     </div>
 
                     <div className="flex-col w-[551px] h-[84px]   ">
@@ -91,7 +88,9 @@ export default function SignUpProvisers(props: {
                   </div>
                   <div className=" flex  w-[1114px] h-[84px] ">
                     <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
-                      <h2 className="w-[156px] h-[22px]">{props.telOrMobileNumber}</h2>
+                      <h2 className="w-[156px] h-[22px]">
+                        {props.telOrMobileNumber}
+                      </h2>
                     </div>
 
                     <div className="flex-col w-[551px] h-[84px]  ">
@@ -114,7 +113,7 @@ export default function SignUpProvisers(props: {
                     <div className="w-[551px] h-[84px]  ">
                       <div>
                         <div className=" flex w-[115px] h-[22px] font-[Poppins] font-semibold">
-                         {props.licens}
+                          {props.licens}
                         </div>
                         <div className=" flex items-center w-[551px] h-[54px]  mt-[6px] ">
                           <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] ">
@@ -133,7 +132,7 @@ export default function SignUpProvisers(props: {
                   <div>
                     <div className=" w-[1114px] h-[190px] gab-[16px] ">
                       <div className="W-[109px] h-[22px] font-[Poppins] font-semibold text-[16px] ">
-                      {props.Adress}
+                        {props.Adress}
                       </div>
                       <div className="flex w-[1082px] h-[22px] mt-3">
                         <div className=" flex justify-between w-[519px] h-[22px] ">

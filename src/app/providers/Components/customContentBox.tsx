@@ -36,7 +36,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   setSelectedBox, // Ta emot setSelectedBox som en prop
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
-  console.log("kollarID:", selectedBox);
+ 
   return (
     <div
       className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${

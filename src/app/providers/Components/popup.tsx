@@ -34,14 +34,15 @@ type selectRoleCardProps = {
 };
 
 const SelectRoleCard: React.FC<selectRoleCardProps> = ({
- 
   title,
   description,
   imageSrc,
   isSelected,
   onSelect,
 }) => {
-  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
+  const [selectedRole, setSelectedRole] = useState<
+    "icon1" | "icon2" | "icon3" | null
+  >(null);
   const [showIcon, setShowIcon] = useState(false);
 
   const renderIcon = () => {
@@ -56,9 +57,6 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
         return null;
     }
   };
-
-
-
 
   return (
     <div
@@ -96,7 +94,9 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
   );
 };
 const RoleSelection: React.FC<selectRoleCardProps> = ({ onRoleChange }) => {
-  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
+  const [selectedRole, setSelectedRole] = useState<
+    "icon1" | "icon2" | "icon3" | null
+  >(null);
 
   useEffect(() => {
     onRoleChange(selectedRole);
@@ -109,47 +109,61 @@ const RoleSelection: React.FC<selectRoleCardProps> = ({ onRoleChange }) => {
         title="Independent Doctor"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon1"}
-        onSelect={() => setSelectedRole("icon1")} currentSelectedRole={null} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+        onSelect={() => setSelectedRole("icon1")}
+        currentSelectedRole={null}
+        onRoleChange={function (
+          role: "icon1" | "icon2" | "icon3" | null
+        ): void {
           throw new Error("Function not implemented.");
-        } }        />
+        }}
+      />
       <SelectRoleCard
         imageSrc="icon2"
         title="Clinic"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon2"}
         onSelect={() => setSelectedRole("icon2")}
-        currentSelectedRole={selectedRole} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+        currentSelectedRole={selectedRole}
+        onRoleChange={function (
+          role: "icon1" | "icon2" | "icon3" | null
+        ): void {
           throw new Error("Function not implemented.");
-        } }      />
+        }}
+      />
       <SelectRoleCard
         imageSrc="icon3"
         title="Hospital"
         description="Paragraph of explanation is here ya"
         isSelected={selectedRole === "icon3"}
         onSelect={() => setSelectedRole("icon3")}
-        currentSelectedRole={selectedRole} onRoleChange={function (role: "icon1" | "icon2" | "icon3" | null): void {
+        currentSelectedRole={selectedRole}
+        onRoleChange={function (
+          role: "icon1" | "icon2" | "icon3" | null
+        ): void {
           throw new Error("Function not implemented.");
-        } }      />
+        }}
+      />
     </div>
   );
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  const [selectedRole, setSelectedRole] = useState<"icon1" | "icon2" | "icon3" | null>(null);
+  const [selectedRole, setSelectedRole] = useState<
+    "icon1" | "icon2" | "icon3" | null
+  >(null);
 
   const getLinkForRole = () => {
     switch (selectedRole) {
       case "icon1":
         return "/providers/auth/signUp";
       case "icon2":
-        return "/providers/auth/signUp";
+        return "auth/clinicSignUp";
       case "icon3":
-        return"/";
+        return "auth/signUpHospital";
       default:
-        return "/providers/auth/signUp";
+        return "/";
     }
   };
-
 
   if (!isOpen) return null;
 
@@ -199,7 +213,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         >
           <FontAwesomeIcon icon={faTimes} style={{ color: "black" }} />
         </div>
-        <RoleSelection onRoleChange={setSelectedRole} currentSelectedRole={null} isSelected={false} imageSrc={"icon1"}/>
+        <RoleSelection
+          onRoleChange={setSelectedRole}
+          currentSelectedRole={null}
+          isSelected={false}
+          imageSrc={"icon1"}
+        />
 
         <div className=" w-[457px] h-[384px]">
           <div className="w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center mt-6">
