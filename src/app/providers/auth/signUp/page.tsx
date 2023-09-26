@@ -15,14 +15,14 @@ export default function DoctorSignUp() {
     <div className="flex flex-col justify-center items-center">
       <div className="justify-center items-center">
         <div className="  flex justify-center items-center top-0 w-screen h-[554px]  bg-[#45AC601A]">
-          <div className="w-[921px] h-[108px]  justify-center flex  flex-col">
+          <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
-              <h1 className=" text-[40px] font-[Poppins] font-semibold">
+              <h1 className=" text-[40px] font-[Poppins] font-semibold ">
                 Start Filling Your Personal Data
               </h1>
             </div>
             <div className="w-[921px] h-[32px] opacity-50 flex justify-center items-center">
-              <p className="flex justify-center items-center">
+              <p className="flex justify-center items-center ">
                 Please provide your personal data for us. We require essential
                 information.
               </p>
@@ -30,25 +30,26 @@ export default function DoctorSignUp() {
           </div>
         </div>
       
-      
-        <div className="flex flex-col justify-center items-center  ">
-        <div className="w-[1114px] h-[582px] border border-black ">
-          <div className="w-[135px] h-[32px]">
+        <div className="  flex justify-center items-center h-screen  ">
+        <div className="custom-shadow flex flex-col justify-center items-center top-[0px] h-[662px] w-[1194px] border rounded-[25px]">
+        <div className="w-[1114px] h-[582px] ">
+          <div className="w-[135px] h-[32px] ">
             <h2 className=" font-normal font-[Poppins] text-[20px]">
               Personal Data
             </h2>
           </div>
-          <div className=" justify-end  w-[1114px] h-[526px] border border-green-500">
-            <div className="  w-[1114px] h-[430px] border border-yellow-500 mb-0">
-              <div className=" flex  w-[1114px] h-[84px] border border-gray-400">
+          <div className=" justify-end  w-[1114px] h-[526px] ">
+            <div className="  w-[1114px] h-[430px]  mb-0">
+              <div className=" flex  w-[1114px] h-[84px]  ">
                 <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
-                  Full Name{" "}
+                  
+                  Full Name
                 </div>
 
-                <div className="flex-col w-[551px] h-[84px] border-[1px] border-blue-500 ">
-                  <div className=" absolute w-[551px] h-[54px] border-black border-[2px] mt-7 justify-center  items-center ">
+                <div className="flex-col w-[551px] h-[84px]   ">
+                  <div className=" absolute w-[551px] h-[54px]   mt-7 justify-center  items-center ">
                     <div className="w-[519px] h-[22px]  justify-center items-center">
-                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center border">
+                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center">
                         <input
                           type="text"
                           placeholder=""
@@ -79,13 +80,13 @@ export default function DoctorSignUp() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[551px] h-[84px] border border-pink-400">
+                <div className="w-[551px] h-[84px]  ">
                   <div>
                     <div className="w-[45px] h-[22px] font-[Poppins] font-semibold">
                       Email
                     </div>
-                    <div className=" flex items-center w-[551px] h-[54px] border mt-[6px] border-purple-500">
-                      <div className=" flex justify-center item-center w-[22.33px] h-[18.67px] border border-orange-500">
+                    <div className=" flex items-center w-[551px] h-[54px]  mt-[6px] ">
+                      <div className=" flex justify-center item-center w-[22.33px] h-[18.67px] ">
                         <svg
                           width="22"
                           height="22"
@@ -119,15 +120,15 @@ export default function DoctorSignUp() {
                   <div className="w-[551px] h-[54px]"></div>
                 </div>
               </div>
-              <div className=" flex  w-[1114px] h-[84px] border border-gray-400">
+              <div className=" flex  w-[1114px] h-[84px] ">
                 <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
                   Telefon Numner
                 </div>
 
-                <div className="flex-col w-[551px] h-[84px] border-[1px] border-blue-500 ">
-                  <div className=" absolute w-[551px] h-[54px] border-black border-[2px] mt-7 justify-center  items-center ">
+                <div className="flex-col w-[551px] h-[84px]  ">
+                  <div className=" absolute w-[551px] h-[54px] mt-7 justify-center  items-center  ">
                     <div className="w-[519px] h-[22px]  justify-center items-center">
-                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center border">
+                      <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center ">
                         <input
                           type="text"
                           placeholder=""
@@ -158,13 +159,13 @@ export default function DoctorSignUp() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[551px] h-[84px] border border-pink-400">
+                <div className="w-[551px] h-[84px]  ">
                   <div>
                     <div className=" flex w-[115px] h-[22px] font-[Poppins] font-semibold">
                       MCDN Lincense
                     </div>
-                    <div className=" flex items-center w-[551px] h-[54px] border mt-[6px] border-purple-500">
-                      <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] border border-orange-500">
+                    <div className=" flex items-center w-[551px] h-[54px]  mt-[6px] ">
+                      <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] ">
                         <svg
                           width="22"
                           height="22"
@@ -200,7 +201,7 @@ export default function DoctorSignUp() {
               </div>
 
               <div>
-                <div className="w-[1114px] h-[190px] gab-[16px] border-[4px] border-red-500">
+                <div className="w-[1114px] h-[190px] gab-[16px] ">
                   <div className="W-[109px] h-[22px] font-[Poppins] font-semibold text-[16px] ">
                     Your Address
                   </div>
@@ -215,7 +216,7 @@ export default function DoctorSignUp() {
               </div>
               <div></div>
 
-              <div className="  flex w-[1114px] h-[24px] border  border-black">
+              <div className="  flex w-[1114px] h-[24px] mt-[100px]">
                 <div className="  flex pr-1">
                   <StyledBox width="24px" height="24px" type="fixed" />
                 </div>
@@ -228,12 +229,29 @@ export default function DoctorSignUp() {
                 
               </div>
             </div>
-          </div>
+            
         </div>
+        
       </div>
+      <div className=" w-[1114px] h-[54px] flex font-[Poppins] ">
+        <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-[#45AC60] hover:bg-[#45AC60]  hover:text-[#FFFFFF] ">
+          
+          <h1 className=" w-[41px] h-[22px]  flex justify-center items-center">Back</h1>
+          
+          
+          
+          </div>
+          <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-[#45AC60]  hover:text-white hover:bg-[#45AC60]">
+          
+          <h1 className="  w-[75px] h-[22px]  flex justify-center items-center">Continue</h1>
+          
+          
+          
+          </div>
+      </div>
+          </div>
       
-      
-      
+          </div>
       </div>
 
      

@@ -8,7 +8,7 @@ import { Public_Sans } from "next/font/google";
 
 export default function Howitwork() {
   return (
-    <div className="  justify-center items-center   ">
+    <div className=" w-screen justify-center items-center   ">
       <div className="flex items-center">
       <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
       <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
@@ -72,13 +72,13 @@ export default function Howitwork() {
           </div>
         </div>
 
-        <div className="absolute right-0 w-full md:w-[668px] h-auto md:h-[667px] md:mr-[60px] hidden md:block">
+        <div className="absolute right-0 w-screen md:w-[668px] h-auto md:h-[667px] md:mr-[60px] hidden md:block">
 
           <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />
         </div>
       </div>
-      <div className="relative w-full flex justify-center items-center">
-      <div className="w-full md:w-[1440px] h-[929px]">
+      <div className="relative w-screen flex justify-center items-center">
+      <div className=" w-screen md:w-[1440px] h-[929px]">
           <Greenbackground />
           <div>
             <div className="flex flex-col   justify-center  ">
