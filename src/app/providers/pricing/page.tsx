@@ -7,6 +7,7 @@ import SuperCharge from "../Components/superCharge";
 import StyledBox from "../Components/styleBox";
 
 import ToggleableBox from "../Components/ToggleableBoxProps";
+import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 
 export default function Pricing() {
   const [selectedBox, setSelectedBox] = useState<number | null>(null);
@@ -15,6 +16,7 @@ export default function Pricing() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
+      <BlurBackGroundDesign/>
       <div className=" flex flex-col justify-center items-center left-[125px] ">
         <div className="w-[921px] h-[108px] flex flex-col text-center ">
           <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>

@@ -3,11 +3,13 @@ import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
 
 export default function Hospitals() {
   return (
-    <div>
+    <div> 
       <div className=" flex justify-end ">
+      <BlurBackGroundDesign/>
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
           <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
             <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
@@ -59,15 +61,17 @@ export default function Hospitals() {
         </div>
       </div>
 
-      <WhychooseCarelyo
+      <WhychooseCarelyo //Tamplate in Components folder
         image={"/enhanceefficancy.jpg"}
         header={"Enhancing Efficiency and Quality of Care"}
         paragraph={"By embracing Carelyo's platform, hospitals can unlock numerous advantages that lead to improved efficiency and quality of care. Join Carelyo today and experience the power of a comprehensive platform designed to elevate your hospital's operations, streamline workflows, and provide exceptional care to your patients. Together, let's shape the future of healthcare."}
         buttonsText={"Join Carelyo"}
-        reverseDirection={true}
+        reverseDirection={true}  //makes the tamplate be mirror reversed- reuses tamplate code but changes design
       />
-
-      <WhoHaveJoinedTamplate
+      
+      
+  
+      <WhoHaveJoinedTamplate //Tamplate in Components folder
         greenHeaderpart={"15+ Hospitals"}
         blackHeaderpart={"Who Have Joined"}
         imageSrc1={"/Dentist.jpg"}

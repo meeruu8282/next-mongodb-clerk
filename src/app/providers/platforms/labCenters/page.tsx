@@ -2,10 +2,12 @@ import Image from "next/image";
 import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
 
 export default function LabCenters() {
   return (
     <div>
+      <BlurBackGroundDesign/>
       <div className=" flex justify-end ">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
           <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
