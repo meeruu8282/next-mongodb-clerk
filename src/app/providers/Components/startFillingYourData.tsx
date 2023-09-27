@@ -14,16 +14,16 @@ export default function SignUpProvisers(props: {
   providersName: string;
 }) {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="justify-center items-center">
-        <div className="  flex justify-center items-center top-0 w-screen h-[554px]  bg-[#45AC601A]">
+    <div className=" justify-center items-center">
+    
+        <div className="background-greenFillText  absolute z-[-500] flex justify-center items-center w-screen h-[554px] top-0  bg-[#45AC601A]">
           <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
               <h1 className=" text-[40px] font-[Poppins] font-semibold ">
                 Start Filling Your Personal Data
               </h1>
             </div>
-            <div className="w-[921px] h-[32px] opacity-50 flex justify-center items-center">
+            <div className=" w-[921px] h-[32px] opacity-50 flex justify-center items-center">
               <p className="flex justify-center items-center ">
                 Please provide your personal data for us. We require essential
                 information.
@@ -32,9 +32,9 @@ export default function SignUpProvisers(props: {
           </div>
         </div>
 
-        <div className="  flex justify-center items-center h-screen  ">
-          <div className=" custom-shadow bg-[#FFFFFF] flex flex-col justify-center items-center top-[0px] h-[662px] w-[1194px] rounded-[25px]">
-            <div className="w-[1114px] h-[582px] ">
+        <div className=" flex justify-center items-center   ">
+          <div className=" custom-shadow  bg-white relative z-10 mt-[300px] flex flex-col justify-center items-center  h-[662px] w-[1194px] rounded-[25px]">
+            <div className="w-[1114px] h-[582px]  ">
               <div className=" justify-end  w-[1114px] h-[526px] mt-5 ">
                 <div className="w-[135px] h-[32px] ">
                   <h2 className=" font-normal font-[Poppins] text-[20px] ">
@@ -43,24 +43,25 @@ export default function SignUpProvisers(props: {
                 </div>
                 <div className="  w-[1114px] h-[430px]  mb-0">
                   <div className=" flex  w-[1114px] h-[84px]  ">
-                    <div className=" absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+                    <div className=" absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px] ">
                       {props.providersName}
                     </div>
 
-                    <div className="flex-col w-[551px] h-[84px]   ">
-                      <div className=" absolute w-[551px] h-[54px]   mt-7 justify-center  items-center ">
-                        <div className="w-[519px] h-[22px]  justify-center items-center">
-                          <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center ">
+                    <div className="flex justify-center items-center w-[551px] h-[84px]   ">
+                      <div className="  w-[551px] h-[54px]   flex justify-center  items-center ">
+                      <div className=" w-[22px] h-[22px] flex justify-center items-center ">
+                            <AccuntCircle />
+                          </div>
+                        <div className="w-[519px] h-[22px]  flex justify-center items-center">
+                          <div className="   w-[498px] h-[22px] flex   items-center ">
                             <input
                               type="text"
                               placeholder=""
-                              className="w-[498px] h-[22px]"
+                              className="w-[498px] h-[22px] border-[2px] rounded-[25px] hover:border-green-500"
                             />
                           </div>
 
-                          <div className=" w-[22px] h-[22px]flex justify-center items-center ">
-                            <AccuntCircle />
-                          </div>
+                        
                         </div>
                       </div>
                     </div>
@@ -77,50 +78,51 @@ export default function SignUpProvisers(props: {
                             <input
                               type="text"
                               placeholder=""
-                              className="w-[485px] h-[22px]"
+                              className="w-[485px] h-[22px] border-[2px] rounded-[25px] hover:border-green-500"
                             />
                           </div>
                         </div>
                       </div>
 
-                      <div className="w-[551px] h-[54px]"></div>
+                    
                     </div>
                   </div>
-                  <div className=" flex  w-[1114px] h-[84px] ">
-                    <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]  ">
+                  <div className=" flex  w-[1114px] h-[84px]   ">
+                    <div className=" absolute w-[82px] h-[22px] font-semibold font-[Poppins] text-[16px]   ">
                       <h2 className="w-[156px] h-[22px]">
                         {props.telOrMobileNumber}
                       </h2>
                     </div>
 
-                    <div className="flex-col w-[551px] h-[84px]  ">
-                      <div className=" absolute w-[551px] h-[54px] mt-7 justify-center  items-center  ">
-                        <div className="w-[519px] h-[22px]  justify-center items-center">
-                          <div className=" absolute ml-6 w-[498px] h-[22px] flex   items-center ">
+                    <div className="flex w-[551px] h-[84px]  justify-center  items-center">
+                      <div className=" absolute w-[551px] h-[54px]   flex justify-center  items-center">
+                        <div className="w-[519px] h-[22px] flex items-center ">
+                        <div className=" w-[22.33px] h-[18.67px] mr-2">
+                            <AccuntCircle />
+                          </div>
+                          <div>
                             <input
                               type="text"
                               placeholder=""
-                              className="w-[498px] h-[22px]"
+                              className="  w-[489px]  h-[22px] border-[2px] rounded-[25px] hover:border-green-500"
                             />
                           </div>
 
-                          <div className=" w-[22px] h-[22px]flex justify-center items-center ">
-                            <AccuntCircle />
-                          </div>
+                        
                         </div>
                       </div>
                     </div>
                     <div className="w-[551px] h-[84px]  ">
                       <div>
-                        <div className=" flex w-[115px] h-[22px] font-[Poppins] font-semibold">
+                        <div className=" flex w-[115px] h-[22px] font-[Poppins] font-semibold ">
                           {props.licens}
                         </div>
-                        <div className=" flex items-center w-[551px] h-[54px]  mt-[6px] ">
+                        <div className=" flex items-center  w-[551px] h-[54px]  ">
                           <div className=" flex justify-center items-center w-[22.33px] h-[18.67px] ">
                             <MdcnLicense />
                           </div>
                           <div className="w-[485px] h-[22px]">
-                            <input type="text" placeholder="" className=" " />
+                            <input type="text" placeholder="" className="w-[498px] h-[22px]  border-[2px] rounded-[25px] hover:border-green-500" />
                           </div>
                         </div>
                       </div>
@@ -142,7 +144,7 @@ export default function SignUpProvisers(props: {
                             <input
                               type="text"
                               placeholder=""
-                              className="w-[485px]"
+                              className="w-[485px] border-[2px] rounded-[25px] hover:border-green-500"
                             />
                           </div>
                         </div>
@@ -158,8 +160,8 @@ export default function SignUpProvisers(props: {
                     <div className=" flex w-full h-[22px] font-[Poppins] font-normal  text-[16px]">
                       I have read and agree to Carelyo for Doctor Services
                       <h4 className=" flex ml-3 text-[#45AC60] text-[16px] font-normal font-Poppins ">
-                        {" "}
-                        Terms of use and Privacy Policy.{" "}
+                  
+                        Terms of use and Privacy Policy.
                       </h4>
                     </div>
                   </div>
@@ -181,6 +183,6 @@ export default function SignUpProvisers(props: {
           </div>
         </div>
       </div>
-    </div>
+   
   );
 }

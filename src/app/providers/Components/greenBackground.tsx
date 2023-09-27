@@ -4,7 +4,7 @@ export default function Greenbackground() {
   return (
     <div>
     {/* Green background container */}
-    <div className="greenBackground w-[1440px] h-[929px] ">
+    <div className="greenBackground w-screen h-[929px] items-center ">
       {/* Corner triangle */}
       <div className="absolute right-0 top-0">
         <div

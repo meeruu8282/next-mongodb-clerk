@@ -79,7 +79,9 @@ export default function Howitwork() {
       </div>
       <div className="relative w-screen flex justify-center items-center">
       <div className=" w-screen md:w-[1440px] h-[929px]">
-          <Greenbackground />
+          <Greenbackground 
+      
+          />
           <div>
             <div className="flex flex-col   justify-center  ">
               <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px]  shadow-lg items-center ">
