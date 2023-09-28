@@ -20,10 +20,7 @@ interface CustomContentBoxProps {
   selectedBox: number | null; // Lägg till selectedBox som en prop
   setSelectedBox: (id: number | null) => void;
 }
-type SelectRoleCardProps = {
-  title: string;
-  description: string;
-};
+
 
 const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   id,
@@ -36,7 +33,22 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   setSelectedBox, // Ta emot setSelectedBox som en prop
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
- 
+
+  const handleButtonClick = () => {
+    if (id === null) {
+    
+      alert("Please choose a plan"); // Alert when id is null
+      setModalOpen(false)
+      return;
+    }
+    else if (id === selectedBox ) {  return  setModalOpen(true)   }
+
+   else {
+   
+   }
+   
+  };
+  console.log('1a log id ', id)
   return (
     <div
       className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
@@ -59,7 +71,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             onToggle={() => {
               setSelectedBox(id === selectedBox ? null : id); // Om samma ruta klickas igen, avmarkera den genom att sätta selectedBox till null, annars markera den genom att sätta selectedBox till id
             }}
-            isButtonEnabled={false}
+          
           />
         </div>
 
@@ -115,7 +127,9 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             size="large"
             color="primary"
             buttonSize="lb"
-            onClick={() => setModalOpen(true)}
+            onClick={() => 
+              handleButtonClick()
+            }
           />
           <Modal
             isOpen={isModalOpen}

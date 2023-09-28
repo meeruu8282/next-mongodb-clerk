@@ -17,7 +17,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
 }) => {
   function handelToggle(id: number): void {
     // Implementera din logik här för att hantera klickhändelsen
-    console.log(`Toggle box with ID ${id}`);
+   
     // Du kan ändra tillståndet för rutan här om det är relevant
   }
   
@@ -28,7 +28,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
     
       <div className="flex">
       
-      <ToggleableBox id={1} isChecked={false} onToggle={handelToggle} isButtonEnabled={false} />
+      <ToggleableBox id={1} isChecked={false} onToggle={handelToggle}  />
       
         
       </div>

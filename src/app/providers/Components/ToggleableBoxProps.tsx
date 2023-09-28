@@ -12,14 +12,14 @@ type ToggleableBoxProps = {
   id: number;
   isChecked: boolean;
   onToggle: (id: number) => void;
-  isButtonEnabled: boolean;
+
 };
 
 const ToggleableBox: React.FC<ToggleableBoxProps> = ({
   id,
   isChecked,
   onToggle,
-  isButtonEnabled
+ 
 }) => {
   const [localChecked, setLocalChecked] = useState(isChecked);
 
