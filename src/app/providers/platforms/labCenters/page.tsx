@@ -3,6 +3,8 @@ import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
 import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import CarleyoProvides from "../../Components/carleyoProvides";
+import ConvinientManagement from "../../Components/convinientManagement";
 
 export default function LabCenters() {
   return (
@@ -31,6 +33,9 @@ export default function LabCenters() {
               </p>
             </div>
           </div>
+
+
+
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox
             icon1="/profileicon.svg"
@@ -45,25 +50,64 @@ export default function LabCenters() {
           />
         </div>
       </div>
-      {/* Green background container */}
-      <div className="greenBackground">
+
+
+
+       {/* Green background container */}
+       <div className="greenBackground w-screen h-[647px] mt-20 ">
         {/* Corner triangle */}
-        <div className="absolute right-0 top-0">
+        <div className="absolute right-0 top-0 z-[-1]">
           <div
             className="greenBackgroundTriangle"
             style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
           ></div>
         </div>
         {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer">
+        <div className="greenCircleContainer z-[-1]">
           <div
-            className="greenCircle"
-            style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
+            className="greenCircle "
+            style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 24%, 0% 24%)" }}
           ></div>
         </div>
 
-        <div className="relative"></div>
+        <div className=" flex flex-row w-[1192px] h-[484px] left-[125px] top-[82px] gap-[81px]">
+          <CarleyoProvides
+            header={"Revolutionize your laboratory center's with Carelyo"}
+            paragraph={"Look no further than Carelyo, the leading platform designed specifically for laboratory centers."}
+            checktext1={"Sample management and test result tracking"}
+            checktext2={"Communication and integrated reporting"}
+            checktext3={"Enhance efficiency, accuracy, and collaboration within laboratory center."}
+            buttontext={"Join us today"}
+          />
+
+          <div className=" relative w-[521px] h-[484px]   ">
+            <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
+              <div
+                className="greenCircle  bg-[#45AC60] w-[100px]  h-[100px] "
+                style={{ clipPath: "polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)" }}
+              ></div>
+            </div>
+
+            <div className=" absolute bottom-0 w-[521px] h-[472px] top-[12px]  ">
+              <div className=" absolute w-[460px] h-[472px]  right-0  rounded-[85px] ">
+                <Image
+                  className=""
+                  layout="fixed "
+                  fill
+                  src="/revolutionize.png"
+                  alt="Cecktable"
+                />
+              </div>
+            </div>
+            <ConvinientManagement text="Convenient Management" />
+          </div>
+        </div>
       </div>
+     
+
+
+
+
       <WhoHaveJoinedTamplate
         greenHeaderpart={"2000+ Laboratory Centers"}
         blackHeaderpart={"Who Have Joined"}
