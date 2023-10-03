@@ -12,10 +12,10 @@ import CarleyoProvides from "../../Components/carleyoProvides";
 
 const Clinics = () => {
   return (
-    <div>
+    <div className="">
       <BlurBackGroundDesign />
 
-      <div className=" flex justify-end mt-20">
+      <div className="  flex  justify-end mt-20">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
           <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
             <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">

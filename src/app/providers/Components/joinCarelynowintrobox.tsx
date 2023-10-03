@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import style from '../platforms/clinics/clinics.module.css'
 
 
 interface CardTemplateProps {
@@ -30,9 +31,9 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 
 }) => {
   return (
-    <div className=" flex justify-end left-0 ">
-      <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-        <div className="absolute right-0 bottom-0">
+    <div className="  flex justify-end left-0  ">
+      <div className="relative w-[1315px]  h-[836px]  mt-15 mb-20 flex items-center ">
+        <div className={`absolute ${style.joincarelynowintrobox} right-0 bottom-0`}>
           <Image
             className=""
             layout="fixed "
@@ -41,6 +42,12 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             src={imageSrc}
             alt="Costomimage"
           />
+
+
+
+
+
+
         </div>
         <div className=" absolute w-[289px] h-[396px] top-[190px] left-0 mt-[200px] ">
           <div className=" flex flex-col w-[289px] h-[276px] gap-[32px] ">
@@ -154,6 +161,9 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
           </button>
           </Link>
         </div>
+
+
+        
       </div>
     </div>
   );
