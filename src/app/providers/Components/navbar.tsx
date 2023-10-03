@@ -54,7 +54,6 @@ export default function Navbar() {
             </div>
           </div>
 
-
           <div className="flex  gap-6  justify-center ">
             <div className="flex  w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center  gap-3 ">
               <div className=" w-[28px] h-[28px] flex justify-center items-center ">
@@ -67,9 +66,9 @@ export default function Navbar() {
               </div>
 
               <div className="flex items-center bg-white ">
-                <p className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
+                <div className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
                   en
-                </p>
+                </div>
                 <i className="fa fa-chevron-down text-[10px]"></i>
               </div>
             </div>
@@ -83,13 +82,13 @@ export default function Navbar() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
                       className="w-5 h-5"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M8.25 4.5l7.5 7.5-7.5 7.5"
                       />
                     </svg>
@@ -100,9 +99,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      </div>
-    
-    
+    </div>
   );
 }

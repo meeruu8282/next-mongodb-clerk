@@ -4,7 +4,7 @@
 
 @layer components {
   .greenBackground {
-    @apply relative h-[730px] w-screen bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
+    @apply relative h-[730px]  bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
   }
 
   .greenBackgroundTriangle {
@@ -39,12 +39,7 @@
     @apply ml-2;
   }
 
-  .hCPFM-ISText {
-    @apply relative w-[624px] h-[52px];
-    top: 620.69140625px;
-    left: 125px;
-    opacity: 0.5;
-  }
+  
   .ulPlatform {
     @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
     transform-origin: top, text-poppin;
@@ -172,6 +167,11 @@
 
 .hover-bordereffect:hover {
   border-color: #45AC60; /* Change the border color on hover */
+}
+
+
+.custom-shadow {
+  box-shadow: 0px 12px 60px 50px #0000000D;
 }
 
 
