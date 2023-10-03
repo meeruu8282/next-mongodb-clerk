@@ -193,7 +193,7 @@ export default function Howitwork() {
                       width={361}
                       height={246}
                       src="/image587.png"
-                      alt=""
+                      alt="1"
                     />
                   </div>
                 </div>
