@@ -4,10 +4,12 @@ import Keypointsbox from "../../Components/keypointsbox";
 import SuperCharge from "../../Components/superCharge";
 import Image from "next/image";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
 
 export default function Pharmacies() {
   return (
     <div className="">
+      <BlurBackGroundDesign/>
       <div className=" flex justify-end ">
         <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
           <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">

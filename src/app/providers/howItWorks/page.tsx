@@ -5,10 +5,15 @@ import CarelyoButton from "../Components/getStartedButton";
 import Greenbackground from "../Components/greenBackground";
 import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
+import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 
 export default function Howitwork() {
   return (
+   
+
+
     <div className=" w-screen justify-center items-center   ">
+      <BlurBackGroundDesign/>
       <div className="flex items-center">
       <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
       <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
