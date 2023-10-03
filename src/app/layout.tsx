@@ -73,6 +73,7 @@ export default function RootLayout({
                   height={80}
                   src="/logo.svg"
                   alt="logo"
+                  priority
                 />
               </div>
               <div className="w-[332px] h-[22px]   mt-5 ">

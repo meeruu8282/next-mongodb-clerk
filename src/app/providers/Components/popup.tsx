@@ -17,6 +17,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, fas, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { getLinkForRole } from "./getLinkForRole";
+import { link } from "fs";
 
 interface ModalProps {
   isOpen: boolean;
@@ -148,10 +150,13 @@ const RoleSelection: React.FC<selectRoleCardProps> = ({ onRoleChange }) => {
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+ 
+
   const [selectedRole, setSelectedRole] = useState<
     "icon1" | "icon2" | "icon3" | null
   >(null);
-  const [showWarning, setShowWarning] = useState(false);
+
+
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -163,19 +168,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     }
   };
 
-  const getLinkForRole = () => {
-    switch (selectedRole) {
-      case "icon1":
-        return "/providers/auth/signUp";
-      case "icon2":
-        return "auth/clinicSignUp";
-      case "icon3":
-        return "auth/signUpHospital";
-      default:
-        return "/";
-    }
-  };
-
+  
   if (!isOpen) return null;
 
   return (
