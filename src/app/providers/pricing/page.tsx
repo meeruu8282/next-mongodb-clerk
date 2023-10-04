@@ -11,6 +11,7 @@ import Head from "next/head";
 
 export default function Pricing() {
   const [selectedBox, setSelectedBox] = useState<number | null>(null);
+  console.log("selectedbox pricing", {selectedBox})
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
@@ -18,7 +19,7 @@ export default function Pricing() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className=" flex flex-col justify-center items-center left-[125px] ">
+      <div className=" flex flex-col justify-center items-center left-[125px] mt-11 ">
         <div className="w-[921px] h-[108px] flex flex-col text-center ">
           <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>
           <div className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
@@ -56,7 +57,9 @@ export default function Pricing() {
           ]}
           buttonText="Get Started"
           id={1}
+          
           selectedBox={selectedBox} // Skicka med selectedBox
+      
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />
         <CustomContentBox

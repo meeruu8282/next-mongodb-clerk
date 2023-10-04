@@ -2,14 +2,18 @@
 
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import Modal from "../Components/popup";
 import CarelyoButton from "./getStartedButton";
 import CheckboxItem, { CheckboxItemProps } from "./checkboxItem";
+import * as React from "react";
 
 import { useState } from "react";
 import StyledBox from "./styleBox";
 import ToggleableBox from "./ToggleableBoxProps";
+import { faL } from "@fortawesome/free-solid-svg-icons";
+
+import Link from "next/link";
+import { link } from "fs";
 
 interface CustomContentBoxProps {
   title: string;
@@ -20,10 +24,6 @@ interface CustomContentBoxProps {
   selectedBox: number | null; // Lägg till selectedBox som en prop
   setSelectedBox: (id: number | null) => void;
 }
-type SelectRoleCardProps = {
-  title: string;
-  description: string;
-};
 
 const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   id,
@@ -36,7 +36,12 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   setSelectedBox, // Ta emot setSelectedBox som en prop
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
- 
+
+  const handleLinkToPlanSignUp = () => {
+    alert("här ska länken vara ");
+  };
+
+  console.log("1a log id ", id);
   return (
     <div
       className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
@@ -59,7 +64,6 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             onToggle={() => {
               setSelectedBox(id === selectedBox ? null : id); // Om samma ruta klickas igen, avmarkera den genom att sätta selectedBox till null, annars markera den genom att sätta selectedBox till id
             }}
-            isButtonEnabled={false}
           />
         </div>
 
@@ -115,8 +119,15 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
             size="large"
             color="primary"
             buttonSize="lb"
-            onClick={() => setModalOpen(true)}
+            onClick={() => {
+              if (selectedBox === null) {
+                setModalOpen(true);
+              } else {
+                <Link href="/providers/auth/signUp"></Link>;
+              }
+            }}
           />
+
           <Modal
             isOpen={isModalOpen}
             onClose={() => setModalOpen(false)}

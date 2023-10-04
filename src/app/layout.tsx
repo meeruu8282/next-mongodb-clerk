@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className=" h-[157.69px] gap-[24px] ">
+        <div className=" h-[157.69px] gap-[24px] z-auto ">
           <div> </div>
-          <div className="h-[65px] bg-[rgba(22,28,40,1)]  flex items-end ">
+          <div className="h-[65px] w-screen bg-[rgba(22,28,40,1)]  flex items-end ">
             <div className="topNavbarInner justify-end ml-28">
               <div className="  w-[391px] h-[17px]">
                 <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
@@ -40,9 +40,7 @@ export default function RootLayout({
                     <div>
                       <h1>
                         FOR PROVIDERS
-                        <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]">
-                          
-                        </div>
+                        <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]"></div>
                       </h1>
                     </div>
                   </div>
@@ -57,14 +55,12 @@ export default function RootLayout({
           <div className="  max-h-32px top-25px left-144px ">
             <Navbar />
           </div>
-          <div className="w-[624px] h-[480px] top-[288.69140625px] left-[125px] rounded-[30px] ">
+          <div className="w-[624px] h-[480px] top-[288.69px] left-[125px] rounded-[30px] ">
             <h1 className="text-[64px]  leading-[83px];"></h1>
-        
           </div>
         </div>
 
         {children}
-
 
         <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10 ">
           <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
@@ -73,11 +69,11 @@ export default function RootLayout({
               <div className="w-[113px] h-[68.09px]  ">
                 <Image
                   className=""
-                  layout="fixed"
                   width={80}
                   height={80}
                   src="/logo.svg"
-                  alt=""
+                  alt="logo"
+                  priority
                 />
               </div>
               <div className="w-[332px] h-[22px]   mt-5 ">
@@ -185,7 +181,6 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        
       </body>
     </html>
   );

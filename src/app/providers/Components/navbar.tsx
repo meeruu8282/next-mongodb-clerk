@@ -12,7 +12,7 @@ type Props = {
 
 export default function Navbar() {
   return (
-    <div>
+    <div >
       <div className="w-full  h-[68.69px] flex justify-between items-center px-[120px] ">
         <Link href="/">
           <Image
@@ -25,7 +25,7 @@ export default function Navbar() {
 
         <div className="w-[820px] h-[52px] flex  items-center gap-10 ">
           <div className="flex gap-3  ">
-            <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal">
+            <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal z-[1000px]">
               <Link
                 href="/providers/howItWorks"
                 className="w-[105px] h-[22px] text-[16px]"
