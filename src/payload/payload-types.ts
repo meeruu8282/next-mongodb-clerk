@@ -8,17 +8,17 @@
 
 export interface Config {
   collections: {
+    blogposts: Blogpost;
+    categories: Category;
+    healthcarefacilitydetails: Healthcarefacilitydetail;
+    facilitytypes: Facilitytype;
+    specializations: Specialization;
+    users: User;
     pages: Page;
     posts: Post;
     projects: Project;
     media: Media;
-    categories: Category;
-    users: User;
     comments: Comment;
-    blogposts: Blogpost;
-    healthcarefacilitydetails: Healthcarefacilitydetail;
-    facilitytypes: Facilitytype;
-    specializations: Specialization;
     redirects: Redirect;
   };
   globals: {
@@ -26,6 +26,231 @@ export interface Config {
     header: Header;
     footer: Footer;
   };
+}
+export interface Blogpost {
+  id: string;
+  featuredImage: string | Media;
+  meta: {
+    title: string;
+    description?: string;
+    keywords?: string;
+    readTime?: string;
+  };
+  categories?: string[] | Category[];
+  publishedDate?: string;
+  authors: string[] | User[];
+  populatedAuthors?: {
+    id?: string;
+    name?: string;
+  }[];
+  hero: {
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
+    richText: {
+      [k: string]: unknown;
+    }[];
+    links?: {
+      link: {
+        type?: 'reference' | 'custom';
+        newTab?: boolean;
+        reference: {
+          value: string | Page;
+          relationTo: 'pages';
+        };
+        url: string;
+        label: string;
+        appearance?: 'default' | 'primary' | 'secondary';
+      };
+      id?: string;
+    }[];
+    media: string | Media;
+  };
+  layout: (
+    | {
+        invertBackground?: boolean;
+        richText: {
+          [k: string]: unknown;
+        }[];
+        links?: {
+          link: {
+            type?: 'reference' | 'custom';
+            newTab?: boolean;
+            reference: {
+              value: string | Page;
+              relationTo: 'pages';
+            };
+            url: string;
+            label: string;
+            appearance?: 'primary' | 'secondary';
+          };
+          id?: string;
+        }[];
+        id?: string;
+        blockName?: string;
+        blockType: 'cta';
+      }
+    | {
+        invertBackground?: boolean;
+        columns?: {
+          size?: 'oneThird' | 'half' | 'twoThirds' | 'full';
+          richText: {
+            [k: string]: unknown;
+          }[];
+          enableLink?: boolean;
+          link?: {
+            type?: 'reference' | 'custom';
+            newTab?: boolean;
+            reference: {
+              value: string | Page;
+              relationTo: 'pages';
+            };
+            url: string;
+            label: string;
+            appearance?: 'default' | 'primary' | 'secondary';
+          };
+          id?: string;
+        }[];
+        id?: string;
+        blockName?: string;
+        blockType: 'content';
+      }
+    | {
+        invertBackground?: boolean;
+        position?: 'default' | 'fullscreen';
+        media: string | Media;
+        id?: string;
+        blockName?: string;
+        blockType: 'mediaBlock';
+      }
+    | {
+        introContent: {
+          [k: string]: unknown;
+        }[];
+        populateBy?: 'collection' | 'selection';
+        relationTo?: 'posts' | 'projects';
+        categories?: string[] | Category[];
+        limit?: number;
+        selectedDocs?:
+          | (
+              | {
+                  value: string;
+                  relationTo: 'posts';
+                }
+              | {
+                  value: string;
+                  relationTo: 'projects';
+                }
+            )[]
+          | (
+              | {
+                  value: Post;
+                  relationTo: 'posts';
+                }
+              | {
+                  value: Project;
+                  relationTo: 'projects';
+                }
+            )[];
+        populatedDocs?:
+          | (
+              | {
+                  value: string;
+                  relationTo: 'posts';
+                }
+              | {
+                  value: string;
+                  relationTo: 'projects';
+                }
+            )[]
+          | (
+              | {
+                  value: Post;
+                  relationTo: 'posts';
+                }
+              | {
+                  value: Project;
+                  relationTo: 'projects';
+                }
+            )[];
+        populatedDocsTotal?: number;
+        id?: string;
+        blockName?: string;
+        blockType: 'archive';
+      }
+  )[];
+  relatedPosts?: string[] | Blogpost[];
+  slug?: string;
+  updatedAt: string;
+  createdAt: string;
+  _status?: 'draft' | 'published';
+}
+export interface Media {
+  id: string;
+  alt: string;
+  caption?: {
+    [k: string]: unknown;
+  }[];
+  updatedAt: string;
+  createdAt: string;
+  url?: string;
+  filename?: string;
+  mimeType?: string;
+  filesize?: number;
+  width?: number;
+  height?: number;
+  sizes?: {
+    thumbnail?: {
+      url?: string;
+      width?: number;
+      height?: number;
+      mimeType?: string;
+      filesize?: number;
+      filename?: string;
+    };
+    card?: {
+      url?: string;
+      width?: number;
+      height?: number;
+      mimeType?: string;
+      filesize?: number;
+      filename?: string;
+    };
+    tablet?: {
+      url?: string;
+      width?: number;
+      height?: number;
+      mimeType?: string;
+      filesize?: number;
+      filename?: string;
+    };
+  };
+}
+export interface Category {
+  id: string;
+  title?: string;
+  parent?: string | Category;
+  breadcrumbs?: {
+    doc?: string | Category;
+    url?: string;
+    label?: string;
+    id?: string;
+  }[];
+  updatedAt: string;
+  createdAt: string;
+}
+export interface User {
+  id: string;
+  name?: string;
+  roles: ('admin' | 'user' | 'author' | 'doctor')[];
+  updatedAt: string;
+  createdAt: string;
+  email: string;
+  resetPasswordToken?: string;
+  resetPasswordExpiration?: string;
+  salt?: string;
+  hash?: string;
+  loginAttempts?: number;
+  lockUntil?: string;
+  password?: string;
 }
 export interface Page {
   id: string;
@@ -174,60 +399,6 @@ export interface Page {
   updatedAt: string;
   createdAt: string;
   _status?: 'draft' | 'published';
-}
-export interface Media {
-  id: string;
-  alt: string;
-  caption?: {
-    [k: string]: unknown;
-  }[];
-  updatedAt: string;
-  createdAt: string;
-  url?: string;
-  filename?: string;
-  mimeType?: string;
-  filesize?: number;
-  width?: number;
-  height?: number;
-  sizes?: {
-    thumbnail?: {
-      url?: string;
-      width?: number;
-      height?: number;
-      mimeType?: string;
-      filesize?: number;
-      filename?: string;
-    };
-    card?: {
-      url?: string;
-      width?: number;
-      height?: number;
-      mimeType?: string;
-      filesize?: number;
-      filename?: string;
-    };
-    tablet?: {
-      url?: string;
-      width?: number;
-      height?: number;
-      mimeType?: string;
-      filesize?: number;
-      filename?: string;
-    };
-  };
-}
-export interface Category {
-  id: string;
-  title?: string;
-  parent?: string | Category;
-  breadcrumbs?: {
-    doc?: string | Category;
-    url?: string;
-    label?: string;
-    id?: string;
-  }[];
-  updatedAt: string;
-  createdAt: string;
 }
 export interface Post {
   id: string;
@@ -498,21 +669,6 @@ export interface Post {
   createdAt: string;
   _status?: 'draft' | 'published';
 }
-export interface User {
-  id: string;
-  name?: string;
-  roles: ('admin' | 'user' | 'author' | 'doctor')[];
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string;
-  resetPasswordExpiration?: string;
-  salt?: string;
-  hash?: string;
-  loginAttempts?: number;
-  lockUntil?: string;
-  password?: string;
-}
 export interface Project {
   id: string;
   title: string;
@@ -659,170 +815,6 @@ export interface Project {
     description?: string;
     image?: string | Media;
   };
-  updatedAt: string;
-  createdAt: string;
-  _status?: 'draft' | 'published';
-}
-export interface Comment {
-  id: string;
-  user?: string | User;
-  populatedUser?: {
-    id?: string;
-    name?: string;
-  };
-  doc?: string | Post;
-  comment?: string;
-  updatedAt: string;
-  createdAt: string;
-  _status?: 'draft' | 'published';
-}
-export interface Blogpost {
-  id: string;
-  title: string;
-  categories?: string[] | Category[];
-  publishedDate?: string;
-  authors: string[] | User[];
-  populatedAuthors?: {
-    id?: string;
-    name?: string;
-  }[];
-  hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
-    richText: {
-      [k: string]: unknown;
-    }[];
-    links?: {
-      link: {
-        type?: 'reference' | 'custom';
-        newTab?: boolean;
-        reference: {
-          value: string | Page;
-          relationTo: 'pages';
-        };
-        url: string;
-        label: string;
-        appearance?: 'default' | 'primary' | 'secondary';
-      };
-      id?: string;
-    }[];
-    media: string | Media;
-  };
-  image?: string | Media;
-  layout: (
-    | {
-        invertBackground?: boolean;
-        richText: {
-          [k: string]: unknown;
-        }[];
-        links?: {
-          link: {
-            type?: 'reference' | 'custom';
-            newTab?: boolean;
-            reference: {
-              value: string | Page;
-              relationTo: 'pages';
-            };
-            url: string;
-            label: string;
-            appearance?: 'primary' | 'secondary';
-          };
-          id?: string;
-        }[];
-        id?: string;
-        blockName?: string;
-        blockType: 'cta';
-      }
-    | {
-        invertBackground?: boolean;
-        columns?: {
-          size?: 'oneThird' | 'half' | 'twoThirds' | 'full';
-          richText: {
-            [k: string]: unknown;
-          }[];
-          enableLink?: boolean;
-          link?: {
-            type?: 'reference' | 'custom';
-            newTab?: boolean;
-            reference: {
-              value: string | Page;
-              relationTo: 'pages';
-            };
-            url: string;
-            label: string;
-            appearance?: 'default' | 'primary' | 'secondary';
-          };
-          id?: string;
-        }[];
-        id?: string;
-        blockName?: string;
-        blockType: 'content';
-      }
-    | {
-        invertBackground?: boolean;
-        position?: 'default' | 'fullscreen';
-        media: string | Media;
-        id?: string;
-        blockName?: string;
-        blockType: 'mediaBlock';
-      }
-    | {
-        introContent: {
-          [k: string]: unknown;
-        }[];
-        populateBy?: 'collection' | 'selection';
-        relationTo?: 'posts' | 'projects';
-        categories?: string[] | Category[];
-        limit?: number;
-        selectedDocs?:
-          | (
-              | {
-                  value: string;
-                  relationTo: 'posts';
-                }
-              | {
-                  value: string;
-                  relationTo: 'projects';
-                }
-            )[]
-          | (
-              | {
-                  value: Post;
-                  relationTo: 'posts';
-                }
-              | {
-                  value: Project;
-                  relationTo: 'projects';
-                }
-            )[];
-        populatedDocs?:
-          | (
-              | {
-                  value: string;
-                  relationTo: 'posts';
-                }
-              | {
-                  value: string;
-                  relationTo: 'projects';
-                }
-            )[]
-          | (
-              | {
-                  value: Post;
-                  relationTo: 'posts';
-                }
-              | {
-                  value: Project;
-                  relationTo: 'projects';
-                }
-            )[];
-        populatedDocsTotal?: number;
-        id?: string;
-        blockName?: string;
-        blockType: 'archive';
-      }
-  )[];
-  relatedPosts?: string[] | Blogpost[];
-  slug?: string;
   updatedAt: string;
   createdAt: string;
   _status?: 'draft' | 'published';
@@ -989,6 +981,19 @@ export interface Specialization {
   title?: string;
   updatedAt: string;
   createdAt: string;
+}
+export interface Comment {
+  id: string;
+  user?: string | User;
+  populatedUser?: {
+    id?: string;
+    name?: string;
+  };
+  doc?: string | Post;
+  comment?: string;
+  updatedAt: string;
+  createdAt: string;
+  _status?: 'draft' | 'published';
 }
 export interface Redirect {
   id: string;
