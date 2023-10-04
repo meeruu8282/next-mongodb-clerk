@@ -5,6 +5,8 @@ import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
 import SuperCharge from "../Components/superCharge";
 
+import ToggleableBox from "../Components/ToggleableBoxProps";
+import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 import Head from "next/head";
 
 export default function Pricing() {
@@ -13,6 +15,7 @@ export default function Pricing() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
+      <BlurBackGroundDesign/>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

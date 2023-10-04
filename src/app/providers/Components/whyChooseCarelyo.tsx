@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CarelyoButton from "./getStartedButton";
 
 
-
+// Define an interface
 interface WhychooseCarelyoTamplateProps {
  
   image: string;
@@ -11,6 +11,7 @@ interface WhychooseCarelyoTamplateProps {
   paragraph: string;
   buttonsText: string;
  
+    // Optional property: reverseDirection, which is a boolean, used to make the tamplate mirror reversed (used in )
   reverseDirection?: boolean;
 
 
