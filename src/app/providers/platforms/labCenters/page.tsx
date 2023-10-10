@@ -1,39 +1,30 @@
 import Image from "next/image";
 import SuperCharge from "../../Components/superCharge";
-import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
-import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
+import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
 import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
-import CarleyoProvides from "../../Components/carleyoProvides";
+import CarleyoProvides from "../../Components/carleyoProvides/carleyoProvides";
 import ConvinientManagement from "../../Components/convinientManagement";
+import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function LabCenters() {
   return (
-    <div>
-      <BlurBackGroundDesign/>
-      <div className=" flex justify-end ">
-        <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
-            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
-              <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
-                <span className="text-greenText whitespace-normal font-bold">
-                  Unleash
-                </span>{" "}
-                the Potential of Your{" "}
-                <span className="text-greenText whitespace-normal font-bold">
-                  Laboratory Center
-                </span>{" "}
-                with Carelyo
-              </h1>
-            </div>
-            <div className="w-[858px] h-[64px] opacity-[50%]">
-              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
-                By joining Carelyo, you can unlock a world of opportunities to
-                streamline your workflows, optimize resource management, and
-                provide exceptional patient care.
-              </p>
-            </div>
-          </div>
+    <div className="">
+    <BlurBackGroundDesign />
 
+    <div className="  flex  justify-end mt-20">
+      <div className=" relative w-screen h-auto mt-15">
+        <FirstTextinplatform
+          headerGreenText1={"Unleash"}
+          headerBlackText2={"the Potential of Your"}
+          headerGreenText2="Laboratory Center"
+          headerBlackText3="with Carelyo"
+          
+          headerBlackText4=""
+          paragraph1={
+            "By joining Carelyo, you can unlock a world of opportunities to streamline your workflows, optimize resource management, and provide exceptional patient care."
+          }
+        />
 
 
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}

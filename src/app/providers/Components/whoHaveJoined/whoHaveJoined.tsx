@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
+import style from './whoHaveJoined.module.css'
 
 interface WhoHaveJoinedTamplateProps {
     greenHeaderpart: string;
@@ -18,7 +19,7 @@ interface WhoHaveJoinedTamplateProps {
     infoParagraph2: string;
     infoParagraph3: string;
   
-    // ... andra props för varje sektion av din mall
+   
   }
   
   const WhoHaveJoinedTamplate: React.FC<WhoHaveJoinedTamplateProps> = ({
@@ -38,11 +39,13 @@ interface WhoHaveJoinedTamplateProps {
     infoParagraph3,
     
   
-    // ... andra props för varje sektion av din mall
+  
   }) => {
   return (
-    <div className="relative flex flex-col justify-center items-center  w-[1192px] h-[620px] mt-[100px] left-[125px] gap-[48px]">
-        <div className=" flex justify-center items-center h-[52px] ">
+
+    <div className='flex justify-center items-center '>
+    <div className="relative flex flex-col justify-center items-center w-screen h-auto  max-w-[1192px] min-h-[620px] mt-[100px]  gap-[48px] ">
+        <div className=" flex justify-center items-center w-screen h-auto max-h-[52px] ">
           <h2 className=" text-[Poppins] text-[40px] w-600 line-height-[52px] tracking-[-2%] text-center font-bold ">
             <span className="text-greenText whitespace-normal">
             {greenHeaderpart}
@@ -50,9 +53,9 @@ interface WhoHaveJoinedTamplateProps {
             {blackHeaderpart}
           </h2>
         </div>
-        <div className="  w-[1192px] h-[520px] gap-[24px]">
-          <div className=" flex flex-row w-[1192px] h-[424px] justify-between">
-            <div className=" flex justify-center items-center w-[379px] h-[424px] rounded-[25px]">
+        <div className="  max-w-[1192px] min-h-[520px] w-screen h-auto gap-[24px] ">
+          <div className={`flex ${style.flex} flex-row max-w-[1192px] min-h-[424px] w-screen h-auto justify-between`} >
+            <div className={`flex ${style.flexitem} justify-center items-center w-[379px] h-[424px] rounded-[25px]`} >
               <div className=" w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
                 <div className="w-[350px] h-[233px] rounded-[25px]">
                   <Image
@@ -81,7 +84,7 @@ interface WhoHaveJoinedTamplateProps {
                 </div>
               </div>
             </div>
-            <div className=" flex justify-center items-center  w-[379px] h-[424px] rounded-[25px]">
+            <div className={`flex justify-center ${style.flexitem} items-center  w-[379px] h-[424px] rounded-[25px]`}>
               <div className="  w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
                 <div className="w-[350px] h-[233px] rounded-[25px]">
                   <Image
@@ -111,18 +114,21 @@ interface WhoHaveJoinedTamplateProps {
               </div>
             </div>
 
-            <div className=" flex justify-center items-center w-[379px] h-[424px] rounded-[25px]">
+            <div className= {`flex justify-center ${style.flexitem} items-center w-[379px] h-[424px] rounded-[25px]`}>
               <div className=" w-[350px] h-[371] gap-[24px] top-[17px] left-[14px]">
                 <div className="w-[350px] h-[233px] rounded-[25px]">
                   <Image
                     className=""
                     layout="fixed "
-                    width={350}
+                    width={351}
                     height={233}
                     src={imageSrc3}
                     alt="Costomimage3"
                   />
                 </div>
+
+                <div className="w-[350px] h-[114px] gap-[24px]">
+              
                 <div className="w-[346px] h-[130px] gap-[16px]">
                     <div className="w-[350px] h-[70px] gap-[3px] ">
                       <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5 ">
@@ -135,11 +141,13 @@ interface WhoHaveJoinedTamplateProps {
                     <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] mt-1 ">
                     {infoParagraph3}
                     </p>
-                  </div>
+                  </div> 
+                   </div>
               </div>
             </div>
           </div>
-          <Link href="/providers/auth/signIn" passHref>
+         
+        </div> <Link href="/providers/auth/signIn" passHref>
           <button className="carelyoButton absolute w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0  bottom-0">
             <div>
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
@@ -166,7 +174,7 @@ interface WhoHaveJoinedTamplateProps {
             </div>
           </button>
           </Link>
-        </div>
+      </div>
       </div>
   )
 }
