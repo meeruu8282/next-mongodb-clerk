@@ -12,7 +12,7 @@ import {
 
 import Link from "next/link";
 
-import { type } from "os";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, fas, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -228,7 +228,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           <div className="w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center mt-6">
             <div className="w-[67px] h-[22px]flex items-center font-semibold">
               <Link
-                href={getLinkForRole()}
+            
+             href={getLinkForRole("auth/clinicSignUp", {
+              independentDoctor: "independentDoctor",
+              clinic: "auth/clinicSignUp",
+              hospital: "hospital"
+            })}
+
+
                 className=" text-[#FFFFFF]  gap-[5px}"
               >
                 <nav

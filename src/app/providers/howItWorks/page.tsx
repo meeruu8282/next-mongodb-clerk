@@ -6,19 +6,18 @@ import Greenbackground from "../Components/greenBackground";
 import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
 
-import HowItWorksBenifit from "../Components/howitworksBenefitPart";
 import "./howitwork.css";
 import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
-
+import HowItWorksBenifit from "./howItWorksBenifit";
+import HowItWorksPatient from "./HowItWorksPatien";
+import HowItWorksPartFour from "./HowItWorksPartFour";
+import HowItWorksPartFive from "./howItWorksPartFive";
 
 export default function Howitwork() {
   return (
-   
-
-
-    <div className=" w-screen justify-center items-center   ">
-      <BlurBackGroundDesign/>
+    <div className=" w-full justify-center items-center overflow-hidden  md:overflow-hidden">
+      <BlurBackGroundDesign />
       <div className="flex items-center">
         <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
           <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
@@ -82,12 +81,18 @@ export default function Howitwork() {
           </div>
         </div>
 
-        <div className="absolute right-0 w-screen md:w-[668px] h-auto md:h-[667px] md:mr-[60px] hidden md:block">
-          <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />
+        <div className="absolute right-0  ">
+          <Image
+            src="/firstpageRec.png"
+            alt="entre"
+            width={668}
+            height={667}
+            className=" rounded-[25px] mr-1"
+          />
         </div>
       </div>
       <div className="relative w-screen flex justify-center items-center">
-        <div className=" w-screen md:w-[1440px] h-[929px]">
+        <div className=" w-auto  h-[929px]">
           <Greenbackground />
           <div>
             <div className="flex flex-col   justify-center  ">
@@ -238,15 +243,15 @@ export default function Howitwork() {
         </div>
       </div>
 
-      <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center">
+      <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center ">
         <h1 className="font-[Poppins] font-semibold text-[40px]">
           An easier way to interact with patient
         </h1>
       </div>
 
-      <div className="flex border border-blue-500 ">
-        <div className="leftside-of-howitwork w-full  flex flex-col items-center mt-[100px] border border-yellow-400   relative">
-          <div className="bg-red-300 flex items-center justify-center w-[185px] h-[66px] mb-[20px] pr-1 border ">
+      <div className="flex    ">
+        <div className="leftside-of-howitwork w-full  flex flex-col items-center   h-[1700px]     relative">
+          <div className=" flex items-center justify-center w-[185px] h-[66px] mb-[20px] pr-1  ">
             <div className="w-[66px] h-[66px]">
               <Image
                 layout="fixed"
@@ -261,9 +266,9 @@ export default function Howitwork() {
             </div>
           </div>
 
-          <div className=" absolute w-[552.12px] h-[570px]  justify-between mt-[160px] items-center flex flex-col border border-black">
+          <div className=" absolute w-[552.12px] h-[570px]  justify-between mt-[160px] items-center flex flex-col">
             <div className="w-[532px] h-[60px] items-center">
-              <div className="flex border items-center border-white">
+              <div className="flex items-center ">
                 <div className="w-[50px] h-[60px] text-[#45AC60] leading-[60px] text-[40px] font-[Poppins] font-semibold">
                   #1
                 </div>
@@ -302,18 +307,18 @@ export default function Howitwork() {
               height={204}
               src="/Vector677.svg"
               alt="677"
-              priority
+             
             />
           </div>
 
-          <div className="w-[597px] h-[575.94px] ml-[130px] justify-center  mt-[715px]">
+          <div className="w-[597px] h-[575.94px]  ml-[130px] justify-center  mt-[715px]">
             <div className="flex justify-center items-center w-[552px] h-[60px]">
               <div className=" w-[58px] h-[60px]">
                 <div className="font-[Poppins] font-semibold text-[40px] text-[#45AC60] leading-[60px] ">
                   #2
                 </div>
               </div>
-              <div className=" items-center w-[475px] h-[48px]">
+              <div className=" items-center w-[475px] h-[48px] ">
                 <div className=" font-[Poppins] font-medium text-[32px] leading-[48px] ">
                   Listing Services and Availability
                 </div>
@@ -336,150 +341,79 @@ export default function Howitwork() {
                     height={394.39}
                     src="/Group 1000005951 1 (1).svg"
                     alt="add service"
-                    priority
                   />
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="w-[431px] h-[60px] flex  justify-center items-center font-semibold font-[Poppns]">
-            <div>
-              <h1 className="w-[61px] h-[60px] text-[40px] items-center text-[#45AC60]">
-                {" "}
-                #5
-              </h1>
-            </div>
-            <div>
-              <h1 className="w-[351px] h-[48px] text-[32px]">
-                Consultation and Care
-              </h1>
             </div>
           </div>
         </div>
 
         <div className="flex justify-center  ">
           <Image
-            className="  bg-[#45AC600D] h-[2111px] w-[1px] border-[1px] mt-[100px]  item-center "
+            className="  bg-[#45AC600D] h-[1850px] w-[1px] border-[1px] mt-[100px]  item-center "
             layout="fixed"
             width={66}
             height={66}
             src="/E11539.svg"
-            alt=""
+            alt="a"
           />
         </div>
 
-        <div className="right side  w-full  bg-blue-500 ">
-          <div className=" fle justify-center   ">
-            <div className="flex justify-center">
-              <div className=" flex  items-center justify-between w-[185px] h-[66px] mt-[100px]  border  ">
-                <div className="">
-                  <Image
-                    layout="fixed"
-                    width={66}
-                    height={66}
-                    src="/E11539.svg"
-                    alt=""
-                    priority
-                  />
-                </div>
-                <div className="w-[94px] h-[30px] items-center">
-                  <div className="font-[Poppins] font-normal">Patient</div>
-                </div>
-              </div>
-            </div>
+        <div className="right side  w-full h-[1700px] ">
+          <div className=" flex justify-center items-center">
+            {" "}
+            <HowItWorksPatient />
           </div>
+          <div className="w-[115.5px] h-[230.5px] ml-[200px] mt-[60px]"> </div>
+          <HowItWorksPartFour />
         </div>
       </div>
-
-      <div className="flex justify-center items-center">
-        <div className="w-[1175px] h-[607px]  flex justify-between ">
-          <div className="bild för 5 ipad ">
-            <Image
-              layout="fixed"
-              width={598}
-              height={395}
-              src="/ipadimagehowItWorks708.png"
-              alt="ipad girl"
-              priority
-            />
-          </div>
-          <div className="bild för 5 mobil mr-[300px]">
-            <Image
-              layout="fixed"
-              width={210}
-              height={380}
-              src="/mobilePhonehowitworksimage707.png"
-              alt="mobilephone"
-              priority
-            />
-          </div>
-          <div className=" absolute flex  justify-center items-center w-[1175px] h-[153px] mt-[450px]">
-            <div className="flex justify-center items-center text-vänster w-[580px] h-[153px] border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97]">
-              <div className=" w-[538px] h-[96px] flex justify-center items-center">
-                <h2 className="">
-                  During the consultation, providers engage with the client,
-                  conduct assessments, diagnose conditions, recommend
-                  treatments, and provide medical advice.
-                </h2>
-              </div>
-            </div>
-            <div className=" ml-5 flex justify-center items-center text-vänster w-[580px] h-[153px]  border rounded-[35px]  bg-gradient-to-br from-[#45AC60] to-[#7EDC97] ">
-              <div className="w-[538px] h-[96px] flex justify-center items-center ">
-                <h2 className="">
-                  Virtual consultation or visit your provider in person. Discuss
-                  your health concerns, receive medical advice, and ask any
-                  questions you may have.
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className=" mb-9">
+        <HowItWorksPartFive />
       </div>
 
-      <div className="flex w-[1190px] h-[574px] border border-green-500 items-center justify-center">
-        <div className="w-[558px] h-[484px] ">
-          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] bg-yellow-500">
+      <div className="flex w-auto h-[574px]  items-center justify-center">
+        <div className="w-[558px] h-[484px] justify-center  items-center">
+          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] ">
             THE BENEFITS OF JOINING CARELYO AS A PROVIDER
           </h1>
 
+          <div className="flex flex-col justify-between items-center  w-[558px] h-[484px] mr-3">
+            <HowItWorksBenifit
+              sections={[
+                {
+                  width: "558px",
+                  height: "110px",
 
-          <div className="flex flex-col justify-between w-[558px] h-[484px] mr-3">
-    
-          <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "110px",
-
-                title: "Expanded Reach and Patient Base",
-                description:
-                  "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
-              },
-            ]}
-          />
-             <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "142px",
-                title: "Easy Appointment Management",
-                description:
-                  "Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. ",
-              },
-            ]}
-          />
-             <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "142px",
-                title: "Expanded Reach and Patient Base",
-                description:
-                  "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
-              },
-            ]}
-          />
-            </div>
+                  title: "Expanded Reach and Patient Base",
+                  description:
+                    "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
+                },
+              ]}
+            />
+            <HowItWorksBenifit
+              sections={[
+                {
+                  width: "558px",
+                  height: "142px",
+                  title: "Easy Appointment Management",
+                  description:
+                    "Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. ",
+                },
+              ]}
+            />
+            <HowItWorksBenifit
+              sections={[
+                {
+                  width: "558px",
+                  height: "142px",
+                  title: "Expanded Reach and Patient Base",
+                  description:
+                    "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
+                },
+              ]}
+            />
+          </div>
         </div>
         <div className="womenwithcomputer ml-5 flex">
           <Image
@@ -492,7 +426,7 @@ export default function Howitwork() {
           />
         </div>
       </div>
-      <div className="">
+      <div className="flex justify-center items-center">
         <SuperCharge />
       </div>
     </div>

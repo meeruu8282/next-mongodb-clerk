@@ -11,20 +11,22 @@ import Head from "next/head";
 
 export default function Pricing() {
   const [selectedBox, setSelectedBox] = useState<number | null>(null);
-  console.log("selectedbox pricing", {selectedBox})
+  console.log("selectedbox pricing", { selectedBox });
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen ">
-      <BlurBackGroundDesign/>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+      <BlurBackGroundDesign />
+
       <div className=" flex flex-col justify-center items-center left-[125px] mt-11 ">
         <div className="w-[921px] h-[108px] flex flex-col text-center ">
-          <h1 className="text-3xl font-semibold ">Choose Your Plan</h1>
-          <div className="w-[921px] h-[32px] opacity-50 font-[Poppins] font-normal mt-4">
-            Choose the plan that suits your needs and subscribe to the Carelyo
-            platform
+          <h1 className=" md:text-3xl text-xl font-semibold ">
+            Choose Your Plan
+          </h1>
+          <div className=" sm:text-xl text-[13px] leading-[32px] opacity-50 font-[Poppins] font-normal mt-4">
+            <h2>
+              Choose the plan that suits your needs and subscribe to the Carelyo
+              platform
+            </h2>
           </div>
         </div>
       </div>
@@ -57,9 +59,7 @@ export default function Pricing() {
           ]}
           buttonText="Get Started"
           id={1}
-          
           selectedBox={selectedBox} // Skicka med selectedBox
-      
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />
         <CustomContentBox

@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const SuperCharge: React.FC = () => {
   return (
-    <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] mt-[100px] ">
+    <div className=" relative w-[1280px]   lg:w-[1000px]  md:w-[800px] md:h-[380px] h-[446px] mt-[100px]">
       {/* Green background container */}
-      <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
+      <div className="greenBackground w-[1258px]  h-[373px] rounded-[40px]  ">
         <div className=" absolute top-[35px] left-[271px]">
           {/* background with about 50 circles */}
           <EllipseBackground />
@@ -50,6 +50,7 @@ const SuperCharge: React.FC = () => {
             height={212}
             src="/Superchargehead.png"
             alt="Superchargehead"
+          
           />
           <Image
             className="absolute bottom-0"

@@ -44,7 +44,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   console.log("1a log id ", id);
   return (
     <div
-      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
+      className={`customContentBoxBackgrund w-[100%] max-w-[391.33px]  h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
         id === selectedBox ? "bg-[#45AC60]" : ""
       }`}
     >

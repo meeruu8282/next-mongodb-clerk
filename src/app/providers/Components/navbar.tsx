@@ -5,14 +5,17 @@ import "font-awesome/css/font-awesome.min.css";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import DropdownMenu from "./dropDownMenu";
+import { HamburgerMenu } from "./svgComponent";
 
 type Props = {
   message: string;
 };
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div >
+    <div>
+      
       <div className="w-full  h-[68.69px] flex justify-between items-center px-[120px] ">
         <Link href="/">
           <Image
@@ -22,11 +25,43 @@ export default function Navbar() {
             height={68.69}
           />
         </Link>
-
-        <div className="w-[820px] h-[52px] flex  items-center gap-10 ">
-          <div className="flex gap-3  ">
-            <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal z-[1000px]">
+       
+        <div className="flex items-center justify-between p-4 ">
+          <div className="flex items-center gap-10 ">
+            <div className="hidden md:flex items-center gap-10 z-[1000px]">
+          
               <Link
+                href="/providers/howItWorks"
+                className="w-[105px] h-[22px] text-[16px]"
+              >
+                How it work
+              </Link>
+
+              <DropdownMenu />
+
+              <Link href="/providers/pricing" className="text-black">
+                <nav className="flex w-[50px] h-[22px] text-[16px]">
+                  Pricing
+                </nav>
+              </Link>
+
+              <Link
+                href="/providers/blog"
+                className="text-black w-[28px] h-[22px] gap-[5px] text-[16px]"
+              >
+                Blog
+              </Link>
+
+              <Link href="/providers/help" className="text-black gap-[5px}">
+                <nav className="flex text-1xl h-[22px] text-[16px]">Help</nav>
+              </Link>
+             
+            </div>
+            
+         
+            {/* Mobile menu */}
+            <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
+            <Link
                 href="/providers/howItWorks"
                 className="w-[105px] h-[22px] text-[16px]"
               >
@@ -54,7 +89,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex  gap-6  justify-center ">
+          <div className="hidden md:flex gap-6  justify-center ">
             <div className="flex  w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center  gap-3 ">
               <div className=" w-[28px] h-[28px] flex justify-center items-center ">
                 <Image
@@ -73,7 +108,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <button className="carelyoButton">
+            <button className="carelyoButton hidden md:block">
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Get Carelyo
                 <div className="ml-3">
@@ -96,9 +131,18 @@ export default function Navbar() {
                 </div>
               </div>
             </button>
-          </div>
-        </div>
+
+    
+           
       </div>
-    </div>
+          </div>
+       
+          <button  className="md:hidden w-[35px] h-[35px]" onClick={() => setIsMenuOpen(!isMenuOpen)}>    <HamburgerMenu  /> </button>
+        </div>
+      
+
+      </div>
+     
+  
   );
 }
