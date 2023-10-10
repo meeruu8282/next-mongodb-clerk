@@ -10,6 +10,7 @@ import { RelatedPosts } from '../../../_blocks/RelatedPosts'
 import { Blocks } from '../../../_components/Blocks'
 import { ProjectHero } from '../../../_heros/ProjectHero'
 import { generateMeta } from '../../../_utilities/generateMeta'
+import { formatBlogPosts } from "@/app/_utilities/formatBlogPosts"
 
 // Force this page to be dynamic so that Next.js does not cache it
 // See the note in '../../../[slug]/page.tsx' about this
@@ -18,12 +19,15 @@ export const dynamic = 'force-dynamic'
 export default async function Blog() {
 
   let blogPosts: Blogpost[] | null = null
+
   try {
-    blogPosts = await fetchDocs<Blogpost>('blogposts')
-    console.log(blogPosts)
+    //blogPosts = await fetchDocs<Blogpost>('blogposts')
+    //console.log(blogPosts)
+    
   } catch (error) {
 
   }
+
 
   return (
     <div>Blog

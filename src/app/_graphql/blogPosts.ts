@@ -11,6 +11,13 @@ export const BLOGPOSTS = `
         meta {
           description
         }
+        featuredImage {
+          url
+        }
+        updatedAt
+        populatedAuthors {
+          name
+        }
       }
     }
   }
