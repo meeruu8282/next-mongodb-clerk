@@ -1,10 +1,11 @@
 import path from 'path'
 import type { CollectionConfig } from 'payload/types'
+import { slateEditor } from '@payloadcms/richtext-slate'
 
 export const Media: CollectionConfig = {
   slug: 'media',
   admin: {
-    group: 'Media'
+    group: 'Media',
   },
   upload: {
     staticDir: path.resolve(__dirname, '../../../media'),
@@ -32,7 +33,7 @@ export const Media: CollectionConfig = {
         height: undefined,
         position: 'centre',
       },
-    ]
+    ],
   },
   access: {
     read: () => true,
@@ -46,9 +47,11 @@ export const Media: CollectionConfig = {
     {
       name: 'caption',
       type: 'richText',
-      admin: {
-        elements: ['link'],
-      },
+      editor: slateEditor({
+        admin: {
+          elements: ['link'],
+        },
+      }),
     },
   ],
 }

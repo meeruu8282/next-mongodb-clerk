@@ -7,6 +7,9 @@ import type { GenerateTitle } from '@payloadcms/plugin-seo/types'
 import dotenv from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
+import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { slateEditor } from "@payloadcms/richtext-slate";
+import { webpackBundler } from "@payloadcms/bundler-webpack";
 
 import Categories from './collections/Categories'
 import Comments from './collections/Comments'
@@ -38,10 +41,15 @@ export default buildConfig({
     user: 'users',
     components: {
     },
+    bundler: webpackBundler(),
   },
+  editor: slateEditor({}),
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   collections: [BlogPosts, Categories, HealthCareFacilityDetails, FacilityTypes, Specializations, Users, Pages, Posts, Projects, Media, Comments,],
   globals: [Settings, Header, Footer],
+  db: mongooseAdapter({
+    url: process.env.MONGODB_URI,
+  }),
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

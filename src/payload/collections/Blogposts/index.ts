@@ -64,7 +64,7 @@ export const BlogPosts: CollectionConfig = {
         },
         {
           name: 'description',
-          label: 'Desription',
+          label: 'Description',
           type: 'textarea',
         },
         {
@@ -97,16 +97,7 @@ export const BlogPosts: CollectionConfig = {
           pickerAppearance: 'dayAndTime',
         },
       },
-      hooks: {
-        beforeChange: [
-          ({ siblingData, value }) => {
-            if (siblingData._status === 'published' && !value) {
-              return new Date()
-            }
-            return value
-          },
-        ],
-      },
+      
     },
     {
       name: 'authors',

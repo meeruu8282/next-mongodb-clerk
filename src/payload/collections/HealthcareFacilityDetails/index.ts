@@ -79,16 +79,7 @@ export const HealthCareFacilityDetails: CollectionConfig = {
           pickerAppearance: 'dayAndTime',
         },
       },
-      hooks: {
-        beforeChange: [
-          ({ siblingData, value }) => {
-            if (siblingData._status === 'published' && !value) {
-              return new Date()
-            }
-            return value
-          },
-        ],
-      },
+      
     },
     {
       name: 'doctors',
