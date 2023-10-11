@@ -1,36 +1,32 @@
 import CarelyoButton from "../../Components/getStartedButton";
-import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
+import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
 import Keypointsbox from "../../Components/keypointsbox";
 import SuperCharge from "../../Components/superCharge";
 import Image from "next/image";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function Pharmacies() {
   return (
     <div className="">
-      <div className=" flex justify-end ">
-        <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
-            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
-              <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
-                <span className="text-greenText whitespace-normal font-bold">
-                  Efficient
-                </span>{" "}
-                and Customer-Centric
-                <span className="text-greenText whitespace-normal font-bold">
-                  {" "}
-                  Pharmacy Management
-                </span>{" "}
-                with Carelyo{" "}
-              </h1>
-            </div>
-            <div className="w-[858px] h-[64px] opacity-[50%]">
-              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
-                Platform dedicated to revolutionizing pharmacy services and
-                enhancing efficiency in medication management.
-              </p>
-            </div>
-          </div>
+    <BlurBackGroundDesign />
+
+    <div className="  flex  justify-end mt-20">
+      <div className=" relative w-screen h-auto mt-15">
+        <FirstTextinplatform
+          headerGreenText1={"Efficient"}
+          headerBlackText2={"and Customer-Centric"}
+          headerGreenText2="Pharmacy Management"
+          headerBlackText3="with Carelyo"
+          
+          headerBlackText4=""
+          paragraph1={
+            "Platform dedicated to revolutionizing pharmacy services and enhancing efficiency in medication management."
+          }
+        />
+
+        
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox
             icon1="/profileicon.svg"

@@ -1,0 +1,43 @@
+
+
+@media (max-width: 1320px) {
+    .joincarelynowintrobox {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1320px) {
+    .middle {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1320px) {
+    .icontextbackground {
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 1%;
+    }
+  }
+  
+  @media (min-width: 730px)  {
+      .bigtextbackground {
+        width: 100%;
+      }
+    }
+  
+    @media (max-width: 580px)  {
+      .changehight {
+          height: 400px;
+          
+      }
+    }
+  
+  
+    @media (max-width: 580px)  {
+      .hideimage {
+         
+          display: none;
+          
+      }
+    }

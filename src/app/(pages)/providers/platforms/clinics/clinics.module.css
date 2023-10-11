@@ -1,0 +1,93 @@
+@media (max-width: 1280px)  {
+    .hidingimage {
+       
+        display: none;
+        
+    }
+  }
+
+
+  @media (max-width: 1025px)  {
+    .hidingimages {
+       
+        display: none;
+        left: 0px;
+        
+    }
+
+  
+  }
+
+ 
+  @media (max-width: 1025px)  {
+   .centertext {
+       
+        justify-content: center;
+       
+      
+        
+    }
+  
+  }
+
+
+  @media (max-width: 1025px)  {
+    .changeabsolute {
+        
+        position: relative;
+        right: 0px;
+        
+       
+         
+     }
+   
+   }
+
+   @media (max-width: 515px)  {
+    .buttonsize {
+    
+        width: fit-content;
+        left: 0px;
+        
+        
+        
+       
+         
+     }
+   
+   }
+
+
+
+   @media (max-width: 1280px)  {
+    .textboxdesign {
+    
+        background-color: white;
+        border-width: 2px;
+        border-color: #45AC60;
+        padding: 5px;
+        border-radius: 35px;
+         
+     }
+   
+   }
+
+   @media (max-width: 1200px)  {
+    .hidegreenbackgroundimg {
+    
+        display: none;
+       
+         
+     }
+   
+   }
+
+   @media (max-width: 1200px)  {
+    .changetextcenter {
+    
+       justify-content: center;
+       
+         
+     }
+   
+   }

@@ -3,31 +3,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarelyoButton from "../../Components/getStartedButton";
 import EllipseBackground from "../../Components/ellipseBackground";
 import SuperCharge from "../../Components/superCharge";
-import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
-import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
+import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function Sedoctors() {
   return (
-    <div className=" h-auto w-auto flex flex-col">
-      <div className=" flex justify-end ">
-        <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
-            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
-              <h1 className="text-center  md:text-2xl lg:text-3xl whitespace-normal ">
-                Joining carelyo as a{" "}
-                <span className="text-greenText whitespace-normal font-bold">
-                  Self-Employed <br /> Doctors
-                </span>{" "}
-                comes with numerous advantages
-              </h1>
-            </div>
-            <div className="w-[858px] h-[64px] opacity-[50%]">
-              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
-                With our innovative features and comprehensive support, we aim
-                to empower your practice and enhance patient care.
-              </p>
-            </div>
-          </div>
+    <div className="">
+      <BlurBackGroundDesign />
+
+      <div className="  flex  justify-end mt-20">
+        <div className=" relative w-screen h-auto mt-15">
+          <FirstTextinplatform
+            headerBlackText1={"Joining Carelyo as a"}
+            headerGreenText1={"Self-Employed Doctors"}
+            headerBlackText2="comes with numerous advantages"
+            paragraph1={
+              "With our innovative features and comprehensive support, we aim to empower your practice and enhance patient care."
+            }
+          />
+
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox
             icon1="/profileicon.svg"
@@ -280,9 +276,15 @@ export default function Sedoctors() {
         titleParagraph1={"Primary Care Physician"}
         titleParagraph2={"Cardiologist"}
         titleParagraph3={"Primary Care Physician"}
-        infoParagraph1={"Highly experienced primary care physician with over 20 years of practice."}
-        infoParagraph2={"Renowned cardiologist specializing in the diagnosis & treatment of heart conditions."}
-        infoParagraph3={"Medical center with cutting-edge technology and a team professionals. "}
+        infoParagraph1={
+          "Highly experienced primary care physician with over 20 years of practice."
+        }
+        infoParagraph2={
+          "Renowned cardiologist specializing in the diagnosis & treatment of heart conditions."
+        }
+        infoParagraph3={
+          "Medical center with cutting-edge technology and a team professionals. "
+        }
       />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
