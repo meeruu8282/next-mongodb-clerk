@@ -1,15 +1,15 @@
 "use client";
-
+import style from 'costumbox.module.css'
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "../Components/popup";
-import CarelyoButton from "./getStartedButton";
-import CheckboxItem, { CheckboxItemProps } from "./checkboxItem";
+import Modal from "../popup";
+import CarelyoButton from "../getStartedButton";
+import CheckboxItem, { CheckboxItemProps } from "../checkboxItem";
 import * as React from "react";
 
 import { useState } from "react";
-import StyledBox from "./styleBox";
-import ToggleableBox from "./ToggleableBoxProps";
+import StyledBox from "../styleBox";
+import ToggleableBox from "../ToggleableBoxProps";
 import { faL } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "next/link";
@@ -43,8 +43,8 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
 
   console.log("1a log id ", id);
   return (
-    <div
-      className={`customContentBoxBackgrund w-[100%] max-w-[391.33px]  h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
+    <div 
+      className= {` customContentBoxBackgrund w-[100%] max-w-[391.33px]  h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
         id === selectedBox ? "bg-[#45AC60]" : ""
       }`}
     >

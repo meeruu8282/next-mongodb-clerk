@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import CustomContentBox from "../Components/customContentBox";
+import CustomContentBox from "../Components/costumBox/customContentBox";
 import { useState } from "react";
 import SuperCharge from "../Components/superCharge";
 
@@ -22,7 +22,7 @@ export default function Pricing() {
           <h1 className=" md:text-3xl text-xl font-semibold ">
             Choose Your Plan
           </h1>
-          <div className=" sm:text-xl text-[13px] leading-[32px] opacity-50 font-[Poppins] font-normal mt-4">
+          <div className=" sm:text-xl text-[11px] leading-[32px] opacity-50 font-[Poppins] font-normal mt-4">
             <h2>
               Choose the plan that suits your needs and subscribe to the Carelyo
               platform
