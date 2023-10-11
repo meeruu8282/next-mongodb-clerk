@@ -1,36 +1,29 @@
 import Image from "next/image";
 import SuperCharge from "../../Components/superCharge";
-import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox";
-import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined";
+import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
+import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
 import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
-import CarleyoProvides from "../../Components/carleyoProvides";
+import CarleyoProvides from "../../Components/carleyoProvides/carleyoProvides";
 import ConvinientManagement from "../../Components/convinientManagement";
+import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function Hospitals() {
   return (
-    <div> 
-      <div className=" flex justify-end ">
-      <BlurBackGroundDesign/>
-        <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
-          <div className="  absolute w-[858px] h-[192px] left-[150px] gap-[64px] ">
-            <div className="w-[838px]  h-[104px] max-w-screen-sm mx-auto">
-              <h1 className="text-center text-[40px] md:text-2xl lg:text-3xl whitespace-normal ">
-                <span className="text-greenText whitespace-normal font-semibold">
-                  Empowering Hospitals
-                </span>{" "}
-                for Better <br /> Healthcare with Carelyo
-              </h1>
-            </div>
-            <div className="w-[921px] h-[64px] opacity-[50%]">
-              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
-                Joining Carelyo as a hospital brings a multitude of advantages
-                and benefits that can transform the way you provide healthcare
-                services.
-              </p>
-            </div>
-          </div>
+    <div className="">
+    <BlurBackGroundDesign />
 
+    <div className="  flex  justify-end mt-20">
+      <div className=" relative w-screen h-auto mt-15">
+
+        <FirstTextinplatform
+         
+          headerGreenText1={"Empowering Hospitals"} 
+          headerBlackText2={"for Better Healthcare with Carelyo"}
+          paragraph1={
+            "Joining Carelyo as a hospital brings a multitude of advantages and benefits that can transform the way you provide healthcare services."
+          }
+        />
 
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox

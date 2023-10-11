@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from 'next/link';
-import UnionCheckmark from "./unionCheckmark";
-import CarelyoButton from "./getStartedButton";
+import UnionCheckmark from "../unionCheckmark";
+import CarelyoButton from "../getStartedButton";
+import style from './carleyoProvides.module.css'
 
 
 interface CarleyoProvidesTemplateProps {
@@ -27,40 +28,40 @@ const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
 }) => {
   const addtext= buttontext
   return (
-    <div className=" flex flex-col w-[592px] h-[481px] gap-[32px] ">
-            <div className=" flex flex-col w-[592px] h-[172px] gap-[16px] ">
-              <div className=" w-[592px] h-[104px]">
-                <h1 className="text-[poppins] text-4xl font-semibold leading-13 tracking-tight text-left text-[#FFFFFF]">
+    <div className=" flex flex-col h-screen w-auto max-w-[592px] max-h-[481px] ml-5 gap-[32px]  ">
+            <div className=" flex flex-col h-auto w-screen max-w-[592px] max-h-[172px] gap-[16px] ">
+              <div className=" w-screen h-auto max-w-[592px] max-h-[104px]">
+                <h1 className="text-[poppins] sm:text-[20px] md:text-[30px] lg:text-[40px] font-semibold leading-13 tracking-tight text-left text-[#FFFFFF]">
                   {header}
                 </h1>
               </div>
-              <div className="w-[592px] h-[96px]">
-                <p className="text-[poppins] text-[20px] font-normal leading-8 tracking-tight text-left text-[#FFFFFF] opacity-75">
+              <div className=" w-screen h-auto max-w-[592px] max-h-[96px]">
+                <p className="text-[poppins]  md:text-[15px] lg:text-[20px] font-normal leading-8 tracking-tight text-left text-[#FFFFFF] opacity-75">
                   {paragraph}
                 </p>
               </div>
             </div>
 
-            <div className=" flex flex-col w-[592px] h-[181px] gap-[16px] ">
-              <div className=" flex flex-row items-center w-[592px] h-[45px] gap-[12px]">
+            <div className=" flex flex-col w-screen h-auto max-w-[592px] max-h-[181px] gap-[16px] ">
+              <div className=" flex flex-row items-center w-screen h-auto max-w-[592px] max-h-[45px] mt-5 gap-[12px]">
                 <UnionCheckmark />
-                <div className="w-[380px] ">
-                  <p className="  text-[Poppins] text-[20px] font-normal text-base leading-6 tracking-tight  text-[#FFFFFF] opacity-75 ">
+                <div className={` w-screen h-auto max-w-[380px] ${style.textsize}  sm:text-[10px] md:text-[15px] lg:text-[20px]`}>
+                  <p className="  text-[Poppins]   font-normal text-base leading-6 tracking-tight  text-[#FFFFFF] opacity-75 ">
                     {checktext1}
                   </p>
                 </div>
               </div>
-              <div className=" flex flex-row items-center w-[592px] h-[45px] gap-[12px] ">
+              <div className=" flex flex-row items-center w-screen h-auto max-w-[592px] max-h-[45px] gap-[12px] ">
                 <UnionCheckmark />
-                <div className="w-[380px] ">
+                <div className=" max-w-[380px] w-screen h-auto ">
                   <p className="  text-[Poppins]  text-[20px] font-normal text-base leading-6 tracking-tight  text-[#FFFFFF] opacity-75 ">
                     {checktext2}{" "}
                   </p>
                 </div>
               </div>
-              <div className=" flex flex-row items-center w-[592px] h-[45px] gap-[12px]">
+              <div className=" flex flex-row items-center w-screen h-auto max-w-[592px] max-h-[45px] gap-[12px]">
                 <UnionCheckmark />
-                <div className="w-[380px] ">
+                <div className="max-w-[380px] w-screen h-auto  ">
                   <p className="  text-[Poppins]  text-[20px] font-normal text-base leading-6 tracking-tight  text-[#FFFFFF] opacity-75 ">
                     {checktext3}{" "}
                   </p>
