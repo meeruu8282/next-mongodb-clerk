@@ -46,13 +46,6 @@ export const BlogPosts: CollectionConfig = {
   },
   fields: [
     {
-      name: 'featuredImage',
-      label: 'Featured Image',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-    },
-    {
       name: 'meta',
       label: 'Meta',
       type: 'group',
@@ -76,7 +69,14 @@ export const BlogPosts: CollectionConfig = {
           name: 'readTime',
           label: 'Read Time',
           type: 'text',
-        }
+        },
+        {
+          name: 'image',
+          label: 'Featured Image',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+        },
       ]
     },
     {

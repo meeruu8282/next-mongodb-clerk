@@ -9,10 +9,9 @@ export const BLOGPOSTS = `
       docs {
         slug
         meta {
+          title
           description
-        }
-        featuredImage {
-          url
+          image
         }
         updatedAt
         populatedAuthors {
@@ -28,7 +27,10 @@ export const BLOGPOST = `
     Blogposts(where: { slug: { equals: $slug }}, limit: 1, draft: $draft) {
       docs {
         id
-        title
+        meta {
+          title
+          image
+        }
         hero {
           type
           richText

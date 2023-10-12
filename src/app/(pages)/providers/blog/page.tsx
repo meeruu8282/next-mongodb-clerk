@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { fetchDocs } from '../../../_api/fetchDocs'
+import { fetchDoc } from "@/app/_api/fetchDoc"
 import { RelatedPosts } from '../../../_blocks/RelatedPosts'
 import { Blocks } from '../../../_components/Blocks'
 import { ProjectHero } from '../../../_heros/ProjectHero'
@@ -21,7 +22,7 @@ export default async function Blog() {
   let blogPosts: Blogpost[] | null = null
 
   try {
-    //blogPosts = await fetchDocs<Blogpost>('blogposts')
+    blogPosts = await fetchDocs<Blogpost>('blogposts')
     //console.log(blogPosts)
     
   } catch (error) {
@@ -48,4 +49,20 @@ export async function generateStaticParams() {
   } catch (error) {
     return []
   }
+}
+
+export async function generateMetadata({ params: { slug } }): Promise<Metadata> {
+  const { isEnabled: isDraftMode } = draftMode()
+
+  let blogPost: Blogpost | null = null
+
+  try {
+    blogPost = await fetchDoc<Blogpost>({
+      collection: 'blogposts',
+      slug,
+      draft: isDraftMode,
+    })
+  } catch (error) {}
+
+  return generateMeta({ doc: blogPost })
 }

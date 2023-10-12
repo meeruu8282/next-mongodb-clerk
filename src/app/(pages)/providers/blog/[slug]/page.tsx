@@ -9,44 +9,69 @@ import { fetchDocs } from '@/app/_api/fetchDocs'
 import { RelatedPosts } from '@/app/_blocks/RelatedPosts'
 import { Blocks } from '@/app/_components/Blocks'
 import { generateMeta } from '@/app/_utilities/generateMeta'
+import { PostHero } from '@/app/_heros/PostHero'
 
 // Force this page to be dynamic so that Next.js does not cache it
 // See the note in '../../../[slug]/page.tsx' about this
 export const dynamic = 'force-dynamic'
 
 export default async function BlogPost({ params: { slug } }) {
-    const { isEnabled: isDraftMode } = draftMode()
-  
-    let blogPost: Blogpost | null = null
-  
-    try {
-      blogPost = await fetchDoc<Blogpost>({
-        collection: 'blogposts',
-        slug,
-        draft: isDraftMode,
-      })
-    } catch (error) {
-      console.error(error) // eslint-disable-line no-console
-    }
-  
-    if (!blogPost) {
-      notFound()
-    }
-  
-    const { layout } = blogPost
+  const { isEnabled: isDraftMode } = draftMode()
 
-    return(
-        <React.Fragment>
-            
-        </React.Fragment>
-    )
+  let blogPost: Blogpost | null = null
+
+  try {
+    blogPost = await fetchDoc<Blogpost>({
+      collection: 'blogposts',
+      slug,
+      draft: isDraftMode,
+    })
+  } catch (error) {
+    console.error(error) // eslint-disable-line no-console
+  }
+
+  if (!blogPost) {
+    notFound()
+  }
+
+  const { layout } = blogPost
+
+  return (
+    <React.Fragment>
+
+      <Blocks blocks={layout} />
+
+      <Blocks
+        disableTopPadding
+        blocks={[
+
+        ]}
+      />
+    </React.Fragment>
+  )
 }
 
 export async function generateStaticParams() {
-    try {
-      const blogPosts = await fetchDocs<Blogpost>('blogposts')
-      return blogPosts?.map(({ slug }) => slug)
-    } catch (error) {
-      return []
-    }
+  try {
+    const blogPosts = await fetchDocs<Blogpost>('blogposts')
+    return blogPosts?.map(({ slug }) => slug)
+  } catch (error) {
+    return []
   }
+}
+
+export async function generateMetadata({ params: { slug } }): Promise<Metadata> {
+  const { isEnabled: isDraftMode } = draftMode()
+
+  let blogPost: Blogpost | null = null
+
+  try {
+    blogPost = await fetchDoc<Blogpost>({
+      collection: 'blogposts',
+      slug,
+      draft: isDraftMode,
+    })
+  } catch (error) { }
+
+  return generateMeta({ doc: blogPost })
+}
