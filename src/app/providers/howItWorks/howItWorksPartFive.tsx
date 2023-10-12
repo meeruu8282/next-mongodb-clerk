@@ -32,7 +32,7 @@ const HowItWorksPartFive: React.FC = () => {
               layout="fixed"
               width={210}
               height={380}
-              src="/"
+              src="/mobilePhonehowitworksimage707.png"
               alt="mobilephone"
         
             />

@@ -25,7 +25,7 @@ const HowItWorksPatient: React.FC = ({}) => {
           layout="fixed"
           width={546}
           height={307}
-          src="/NewMacbookProMockupFrontView1.png"
+          src="/NewMacbookProMockupFrontView.png"
           alt=""
          
         />

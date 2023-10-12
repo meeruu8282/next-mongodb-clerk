@@ -95,8 +95,8 @@ export default function Howitwork() {
         <div className=" w-auto  h-[929px]">
           <Greenbackground />
           <div>
-            <div className="flex flex-col   justify-center  ">
-              <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px]  shadow-lg items-center ">
+            <div className="flex flex-col   justify-center items-center ">
+              <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px]  shadow-lg   justify-center items-center ">
                 <div className=" absolute w-[439.96px] h-[96px] mt-0">
                   <div className="font-[Poppins] font-normal text-[#FFFFFF] text-[32px] mb-[-2%]">
                     Who Can Become a
@@ -243,14 +243,14 @@ export default function Howitwork() {
         </div>
       </div>
 
-      <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center ">
-        <h1 className="font-[Poppins] font-semibold text-[40px]">
+      <div className="  w-auto h-[60px] mt-[100px]  justify-center flex items-center bg-blue-500">
+        <h1 className=" flex justify-center items-center font-[Poppins] font-semibold text-[32px] sm:text-[40px]">
           An easier way to interact with patient
         </h1>
       </div>
 
-      <div className="flex    ">
-        <div className="leftside-of-howitwork w-full  flex flex-col items-center   h-[1700px]     relative">
+      <div className="flex  justify-center w-auto  bg-yellow-500  ">
+        <div className="leftside-of-howitwork  flex flex-col items-center   w-auto  bg-red-500  relative">
           <div className=" flex items-center justify-center w-[185px] h-[66px] mb-[20px] pr-1  ">
             <div className="w-[66px] h-[66px]">
               <Image
@@ -287,7 +287,9 @@ export default function Howitwork() {
                   src="/iPadPro.png"
                   alt="ipad"
                 />
-              </div>
+              </div> 
+              
+         
             </div>
 
             <div className="  w-[552.12px] h-[151px] rounded-[25px] border   bg-gradient-to-br from-[#45AC60] to-[#7EDC97]  flex items-center justify-center ">
@@ -297,11 +299,9 @@ export default function Howitwork() {
                   comprehensive profile by entering their personal information
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="absolute right-[60px] top-[732px] transform -translate-y-[50%]">
+              <div className="  ">
             <Image
-              className="  "
+              className=" absolute  "
               layout="fixed"
               width={42}
               height={204}
@@ -310,8 +310,14 @@ export default function Howitwork() {
              
             />
           </div>
+            </div>
+           
+           
+          </div>
+   
 
           <div className="w-[597px] h-[575.94px]  ml-[130px] justify-center  mt-[715px]">
+         
             <div className="flex justify-center items-center w-[552px] h-[60px]">
               <div className=" w-[58px] h-[60px]">
                 <div className="font-[Poppins] font-semibold text-[40px] text-[#45AC60] leading-[60px] ">
@@ -331,9 +337,9 @@ export default function Howitwork() {
                 Shares their clinic.carelyo.io website with patient
               </div>
             </div>
-            <div className=" absolute justify-centerw-[554px] h-[425px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5 right-[110px]">
-              <div className="w-[518.74px] h-[394.39px] ">
-                <div>
+            <div className="   ">
+             
+                <div className="bg-pink-500 justify-center w-[518.74px] h-[394.39px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5">
                   <Image
                     className=" absolute   "
                     layout="fixed"
@@ -343,7 +349,7 @@ export default function Howitwork() {
                     alt="add service"
                   />
                 </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -359,7 +365,7 @@ export default function Howitwork() {
           />
         </div>
 
-        <div className="right side  w-full h-[1700px] ">
+        <div className="right side   w-auto h-auto min-w-[700px] bg-blue-500">
           <div className=" flex justify-center items-center">
             {" "}
             <HowItWorksPatient />

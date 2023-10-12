@@ -26,7 +26,7 @@ export default function Navbar() {
           />
         </Link>
        
-        <div className="flex items-center justify-between p-4 ">
+        <div className="flex items-center justify-between p-4 mr-2 ">
           <div className="flex items-center gap-10 ">
             <div className="hidden md:flex items-center gap-10 z-[1000px]">
           
@@ -84,12 +84,12 @@ export default function Navbar() {
               </Link>
 
               <Link href="/providers/help" className="text-black gap-[5px}">
-                <nav className="flex text-1xl h-[22px] text-[16px]">Help</nav>
+                <nav className="flex text-1xl h-[22px] text-[16px] ">Help</nav>
               </Link>
             </div>
           </div>
 
-          <div className="hidden md:flex gap-6  justify-center ">
+          <div className="hidden md:flex gap-6  justify-center ml-3">
             <div className="flex  w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center  gap-3 ">
               <div className=" w-[28px] h-[28px] flex justify-center items-center ">
                 <Image
