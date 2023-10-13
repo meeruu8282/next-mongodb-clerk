@@ -126,7 +126,6 @@ export default function RootLayout({
                   <div className="w-[40px] h-[40px]  rounded-lg flex justify-center items-center bg-[#45AC60]     ">
                     <a
                       className="w-[25px] h-[25px]  "
-                      href="https://www.instagram.com/your_username/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -141,7 +140,6 @@ export default function RootLayout({
                   <div className="w-[40px] h-[40px] radius-[50px]  ">
                     <a
                       className="W-[20px] h-[20px]"
-                      href="https://twitter.com/your_twitter_username"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -154,11 +152,7 @@ export default function RootLayout({
                   </div>
                   <div className="w-[40px] h-[40px] rounded-[100px] bg-[#1877F2] flex justify-center  ">
                     <div className="w-[18px] h-[18px]flex items-center mt-1">
-                      <a
-                        href="https://www.facebook.com/your_facebook_username/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon
                           icon={faFacebookF}
                           size="1x"

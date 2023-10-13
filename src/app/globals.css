@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
   .greenBackground {
     @apply relative h-[730px]  bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
@@ -175,4 +176,24 @@
 }
 
 
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* For an aspect ratio of 16:9, adjust as needed */
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+/* Visa hamburgermenyn och dölj knappen under 700px */
+@media (max-width: 700px) {
+  .carelyoButton {
+    display: none;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
 }

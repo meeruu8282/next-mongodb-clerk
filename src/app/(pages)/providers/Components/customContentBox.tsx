@@ -7,7 +7,7 @@ import CarelyoButton from "./getStartedButton";
 import CheckboxItem, { CheckboxItemProps } from "./checkboxItem";
 import * as React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import StyledBox from "./styleBox";
 import ToggleableBox from "./ToggleableBoxProps";
 import { faL } from "@fortawesome/free-solid-svg-icons";
@@ -37,6 +37,14 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
+
+  
+ 
+
+
+
+
+
   const handleLinkToPlanSignUp = () => {
     alert("här ska länken vara ");
   };
@@ -44,11 +52,11 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   console.log("1a log id ", id);
   return (
     <div
-      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
+      className={`  max-w-[391.33px] flex justify-center items-center h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
         id === selectedBox ? "bg-[#45AC60]" : ""
       }`}
     >
-      <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px] item-center   ">
+      <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px]    ">
         <div className="w-[333.98px] flex justify-between h-[32px] p-2  ">
           <div
             className={`justify-between items-center w-[224px] h-[26px] text-[#45AC60] ${
@@ -113,8 +121,9 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           ))}
         </div>
 
-        <div className=" mt-[80px]  justify-center items-center  rounded-[35px] border-2 border-[white]">
+        <div className=" flex mt-[80px] justify-center items-center rounded-[35px]  border-[white] mr-4 z-10">
           <CarelyoButton
+         
             buttonText={buttonText}
             size="large"
             color="primary"
