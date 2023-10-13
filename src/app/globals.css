@@ -9,7 +9,7 @@
   }
 
   .greenBackgroundTriangle {
-    @apply w-[264px] h-[254px] bg-greenBackgroundObjects border-transparent border-solid;
+    @apply w-screen h-[254px] bg-greenBackgroundObjects border-transparent border-solid;
   }
 
   .greenCircleContainer {

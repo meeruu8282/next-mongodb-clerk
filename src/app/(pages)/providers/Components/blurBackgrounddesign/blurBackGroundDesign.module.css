@@ -1,0 +1,21 @@
+
+
+
+@media (max-width: 1200px)  {
+    .changeellipseposition {
+        left: 700px;     
+    }
+  }
+
+
+  @media (max-width: 980px)  {
+    .changeellipseposition {
+        left: 500px;   
+    }
+  }
+
+  @media (max-width: 800px)  {
+    .changeellipseposition {
+        display: none; 
+    }
+  }
