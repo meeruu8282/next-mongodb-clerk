@@ -20,6 +20,8 @@ export interface Config {
     media: Media;
     comments: Comment;
     redirects: Redirect;
+    'payload-preferences': PayloadPreference;
+    'payload-migrations': PayloadMigration;
   };
   globals: {
     settings: Settings;
@@ -29,12 +31,12 @@ export interface Config {
 }
 export interface Blogpost {
   id: string;
-  featuredImage: string | Media;
   meta: {
     title: string;
     description?: string;
     keywords?: string;
     readTime?: string;
+    image: string | Media;
   };
   categories?: string[] | Category[];
   publishedDate?: string;
@@ -53,8 +55,8 @@ export interface Blogpost {
         type?: 'reference' | 'custom';
         newTab?: boolean;
         reference: {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         };
         url: string;
         label: string;
@@ -75,8 +77,8 @@ export interface Blogpost {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -100,8 +102,8 @@ export interface Blogpost {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -132,43 +134,43 @@ export interface Blogpost {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -250,7 +252,7 @@ export interface User {
   hash?: string;
   loginAttempts?: number;
   lockUntil?: string;
-  password?: string;
+  password: string;
 }
 export interface Page {
   id: string;
@@ -266,8 +268,8 @@ export interface Page {
         type?: 'reference' | 'custom';
         newTab?: boolean;
         reference: {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         };
         url: string;
         label: string;
@@ -288,8 +290,8 @@ export interface Page {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -313,8 +315,8 @@ export interface Page {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -345,43 +347,43 @@ export interface Page {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -420,8 +422,8 @@ export interface Post {
         type?: 'reference' | 'custom';
         newTab?: boolean;
         reference: {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         };
         url: string;
         label: string;
@@ -442,8 +444,8 @@ export interface Post {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -467,8 +469,8 @@ export interface Post {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -499,43 +501,43 @@ export interface Post {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -556,8 +558,8 @@ export interface Post {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -581,8 +583,8 @@ export interface Post {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -613,43 +615,43 @@ export interface Post {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -684,8 +686,8 @@ export interface Project {
         type?: 'reference' | 'custom';
         newTab?: boolean;
         reference: {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         };
         url: string;
         label: string;
@@ -706,8 +708,8 @@ export interface Project {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -731,8 +733,8 @@ export interface Project {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -763,43 +765,43 @@ export interface Project {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -840,8 +842,8 @@ export interface Healthcarefacilitydetail {
         type?: 'reference' | 'custom';
         newTab?: boolean;
         reference: {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         };
         url: string;
         label: string;
@@ -863,8 +865,8 @@ export interface Healthcarefacilitydetail {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -888,8 +890,8 @@ export interface Healthcarefacilitydetail {
             type?: 'reference' | 'custom';
             newTab?: boolean;
             reference: {
-              value: string | Page;
               relationTo: 'pages';
+              value: string | Page;
             };
             url: string;
             label: string;
@@ -920,43 +922,43 @@ export interface Healthcarefacilitydetail {
         selectedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocs?:
           | (
               | {
-                  value: string;
                   relationTo: 'posts';
+                  value: string;
                 }
               | {
-                  value: string;
                   relationTo: 'projects';
+                  value: string;
                 }
             )[]
           | (
               | {
-                  value: Post;
                   relationTo: 'posts';
+                  value: Post;
                 }
               | {
-                  value: Project;
                   relationTo: 'projects';
+                  value: Project;
                 }
             )[];
         populatedDocsTotal?: number;
@@ -1002,19 +1004,45 @@ export interface Redirect {
     type?: 'reference' | 'custom';
     reference:
       | {
-          value: string | Page;
           relationTo: 'pages';
+          value: string | Page;
         }
       | {
-          value: string | Post;
           relationTo: 'posts';
+          value: string | Post;
         }
       | {
-          value: string | Blogpost;
           relationTo: 'blogposts';
+          value: string | Blogpost;
         };
     url: string;
   };
+  updatedAt: string;
+  createdAt: string;
+}
+export interface PayloadPreference {
+  id: string;
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
+  key?: string;
+  value?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+export interface PayloadMigration {
+  id: string;
+  name?: string;
+  batch?: number;
   updatedAt: string;
   createdAt: string;
 }
@@ -1032,8 +1060,8 @@ export interface Header {
       type?: 'reference' | 'custom';
       newTab?: boolean;
       reference: {
-        value: string | Page;
         relationTo: 'pages';
+        value: string | Page;
       };
       url: string;
       label: string;
@@ -1050,8 +1078,8 @@ export interface Footer {
       type?: 'reference' | 'custom';
       newTab?: boolean;
       reference: {
-        value: string | Page;
         relationTo: 'pages';
+        value: string | Page;
       };
       url: string;
       label: string;
@@ -1060,4 +1088,31 @@ export interface Footer {
   }[];
   updatedAt?: string;
   createdAt?: string;
+}
+
+
+declare module 'payload' {
+  export interface GeneratedTypes {
+    collections: {
+      'blogposts': Blogpost
+      'categories': Category
+      'healthcarefacilitydetails': Healthcarefacilitydetail
+      'facilitytypes': Facilitytype
+      'specializations': Specialization
+      'users': User
+      'pages': Page
+      'posts': Post
+      'projects': Project
+      'media': Media
+      'comments': Comment
+      'redirects': Redirect
+      'payload-preferences': PayloadPreference
+      'payload-migrations': PayloadMigration
+    }
+    globals: {
+      'settings': Settings
+      'header': Header
+      'footer': Footer
+    }
+  }
 }
