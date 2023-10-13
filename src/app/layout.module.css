@@ -1,20 +1,16 @@
 
-
-
-
-
-  @media (max-width: 850px)  {
-    .responsivefooter {
-       
-        flex-direction: column;
-        width: 300px;
-    }
+@media (max-width: 850px)  {
+  .responsivefooter {
+     
+      flex-direction: column;
+      width: 300px;
   }
+}
 
 
-  @media (max-width: 850px)  {
-    .responsivefooter {
-       
-        justify-content: center;
-    }
+@media (max-width: 850px)  {
+  .responsivefooter {
+     
+      justify-content: center;
   }
+}
