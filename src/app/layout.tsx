@@ -11,8 +11,7 @@ import {
   faTwitter,
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
-import SuperCharge from "./(pages)/providers/Components/superCharge/superCharge";
-import style from './layout.module.css'
+import SuperCharge from "./(pages)/providers/Components/superCharge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,16 +27,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
-      <body className={inter.className} >
+      <body className={inter.className}>
         <div className=" h-[157.69px] gap-[24px] z-auto ">
-        
+          <div> </div>
           <div className="h-[65px] w-screen bg-[rgba(22,28,40,1)]  flex items-end ">
             <div className="topNavbarInner justify-end ml-28">
               <div className="  w-[391px] h-[17px]">
                 <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
                   <h1>FOR PATIENTS</h1>
-                
+                  <div> </div>
                   <div>
                     <div>
                       <h1>
@@ -53,7 +51,6 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          
 
           <div className="  max-h-32px top-25px left-144px ">
             <Navbar />
@@ -65,11 +62,10 @@ export default function RootLayout({
 
         {children}
 
-        <div className="bg-gray-100  items-center  h-auto  flex flex-row mt-10 " >
-          <div className={`flex flex-row justify-center ${style.justifycenter}  items-center  h-auto p-5  mt-5 w-screen  `} >
-            <div className={` relative flex justify-between  ${style.responsivefooter} flex-row w-screen `}>
-               {/* Lägg till flex här */}
-            <div className="  w-[300px] h-[114.09px]  ">
+        <div className="bg-gray-100 h-[300px] top-[5978px] flex flex-cool mt-10 ">
+          <div className="flex justify-between items-center  mt-5 w-screen h-[270px] p-[0px] pr-[88px] pl-[88px]  ">
+            {/* Lägg till flex här */}
+            <div className="  w-[332px] h-[114.09px] mt-[-175px] ">
               <div className="w-[113px] h-[68.09px]  ">
                 <Image
                   className=""
@@ -80,15 +76,14 @@ export default function RootLayout({
                   priority
                 />
               </div>
-              <div className="w-[332px] h-[22px]  ">
+              <div className="w-[332px] h-[22px]   mt-5 ">
                 <div className="font-[Poppins] font-normal text-[16px] ">
                   Delivering Better Healthcare Solutions
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col  justify-center h-auto max-w-[170px] max-h-[200px]  ">
-              
-              <div className="max-w-[170px] max-h-[22px]  ">
+            <div className=" w-[170px] h-[270px] ">
+              <div className="w-[170px] h-[22px]  ">
                 <div className="font-[Poppins] font-semibold text-[16px]  ">
                   NAVIGATION LINKS
                 </div>
@@ -100,7 +95,7 @@ export default function RootLayout({
                 <nav className="mt-2"> Partners</nav>
               </div>
             </div>
-            <div className="  h-[110px]  flex flex-col justify-start ">
+            <div className="  flex flex-col justify-start mt-[-160px]">
               <div className=" w-[205px] h-[110px] gap-[24px]  text-[16px]">
                 <h1 className="  font-[Poppins] w-[205px] h-[24px] font-semibold">
                   CONTACT INFORMATION
@@ -116,16 +111,17 @@ export default function RootLayout({
               </div>
             </div>
             <div>
-              <div className="  w-[136px] h-[100px] gap-[65px] ">
+              <div className="w-[136px] h-[194px] gap-[65px]  mt-[-90px]">
                 <div className="">
                   <h1 className="font-[Poppins]  font-semibold">
                     SOCIAL MEDIA
                   </h1>
                 </div>
-                <div className="w-[136px] h-[40px] flex mt-3  space-x-3">
+                <div className="w[136px] h-[40px] flex mt-3  space-x-3">
                   <div className="w-[40px] h-[40px]  rounded-lg flex justify-center items-center bg-[#45AC60]     ">
                     <a
                       className="w-[25px] h-[25px]  "
+                      href="https://www.instagram.com/your_username/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -137,9 +133,10 @@ export default function RootLayout({
                     </a>
                   </div>
 
-                  <div className="w-[40px] h-[40px] radius-[50px]  ">
+                  <div className="w-[37.33px] h-[40px] radius-[50px]  ">
                     <a
                       className="W-[20px] h-[20px]"
+                      href="https://twitter.com/your_twitter_username"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -152,7 +149,11 @@ export default function RootLayout({
                   </div>
                   <div className="w-[40px] h-[40px] rounded-[100px] bg-[#1877F2] flex justify-center  ">
                     <div className="w-[18px] h-[18px]flex items-center mt-1">
-                      <a target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://www.facebook.com/your_facebook_username/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <FontAwesomeIcon
                           icon={faFacebookF}
                           size="1x"
@@ -164,8 +165,6 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            </div>
-           
           </div>
         </div>
         <div className="h-[74px] bg-black w-full flex justify-between items-center px-4 font-[Poppins]">

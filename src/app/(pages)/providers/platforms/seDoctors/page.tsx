@@ -2,10 +2,10 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarelyoButton from "../../Components/getStartedButton";
 import EllipseBackground from "../../Components/ellipseBackground";
-import SuperCharge from "../../Components/superCharge/superCharge";
+import SuperCharge from "../../Components/superCharge";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
-import BlurBackGroundDesign from "../../Components/blurBackgrounddesign/blurBackGroundDesign";
+import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function Sedoctors() {

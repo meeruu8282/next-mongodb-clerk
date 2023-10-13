@@ -38,7 +38,7 @@ export const seed = async (payload: Payload): Promise<void> => {
 
   payload.logger.info(`— Clearing collections and globals...`)
 
-  /* clear the database
+  // clear the database
   await Promise.all([
     ...collections.map(async collection =>
       payload.delete({
@@ -52,7 +52,7 @@ export const seed = async (payload: Payload): Promise<void> => {
         data: {},
       }),
     ), // eslint-disable-line function-paren-newline
-  ])*/
+  ])
 
   payload.logger.info(`— Seeding demo author and user...`)
 

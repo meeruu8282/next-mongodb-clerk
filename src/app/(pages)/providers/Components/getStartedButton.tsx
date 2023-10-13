@@ -1,11 +1,8 @@
 import Link from "next/link";
 import React from "react";
-
-type ButtonSize = "sb" | "mb" | "lb" | "vLB" | "jCb" | "gCb";
 interface CarelyoButtonProps {
-  
   buttonText?: string;
-  buttonSize?: ButtonSize;
+  buttonSize?: "sb" | "mb" | "lb" | "vLB" | "jCb" | "gCb"
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary" | "third";
   className?: string;
@@ -19,7 +16,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
   size = "medium",
   color = "primary",
   className = "",
-  buttonSize = "lb",
+  buttonSize = "mb",
   linkMeTo
 }) => {
   const baseClass = "carelyoButton ";
@@ -29,7 +26,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     large: "text-lg",
   };
   const buttonSizeClasses = {
-    sb: "w-[12px] h-[12px] ",
+    sb: "w-[12px] h-[12px]",
     mb: "w-[208px] h-[52px]",
     lb: "w-[333.98px] h-[50px]",
     vLB: " w-[181px] h-[72px]",
@@ -49,11 +46,11 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
       onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
     >
-      <div className="  ">
-        <div className="carelyoButtonText flex items-center justify-center   ">
+      <div className="  rounden-full ">
+        <div className="carelyoButtonText flex items-center justify-center w-full  ">
           {buttonText}
           <div className="ml-3">
-            <div className="rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
+            <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

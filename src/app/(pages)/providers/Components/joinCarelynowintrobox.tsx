@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
 
-import style from './joinCarelynow.module.css'
-
 
 interface CardTemplateProps {
   imageSrc: string;
@@ -31,12 +29,21 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 
 
 }) => {
-  return ( 
-    // responsive css for  ${style.} is in joinCarelynow.module.css file 
-    <div className={` flex justify-end ${style.changehight} left-0  `}>
-      <div className={`relative w-[1315px]  h-auto ${style.middle}  flex items-center justify-between mt-8 `}> 
-        <div className=" absolute z-[3]  w-[289px] h-auto mb-20 left-0  ">
-        <div className={`flex flex-col w-screen h-[276px] gap-[32px] ${style.bigtextbackground} ${style.icontextbackground}`}>
+  return (
+    <div className=" flex justify-end left-0 ">
+      <div className=" relative w-[1315px] h-[836px] mt-15 mb-20 ">
+        <div className="absolute right-0 bottom-0">
+          <Image
+            className=""
+            layout="fixed "
+            width={970}
+            height={591}
+            src={imageSrc}
+            alt="Costomimage"
+          />
+        </div>
+        <div className=" absolute w-[289px] h-[396px] top-[190px] left-0 mt-[200px] ">
+          <div className=" flex flex-col w-[289px] h-[276px] gap-[32px] ">
             <div className=" flex items-center w-[289px] h-[45px] gap-[16px] ">
               <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[30px] h-[30px]">
@@ -118,9 +125,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               </div>
             </div>
           </div>
-          
-        </div>
-<Link href="/providers/pricing" passHref>
+          <Link href="/providers/pricing" passHref>
           {/* Button */}
           <button  className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
             <div>
@@ -148,20 +153,8 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             </div>
           </button>
           </Link>
-        <div className={` ${style.hideimage}  h-auto ${style.joincarelynowintrobox} right-0 bottom-0 `}>
-          <Image
-            className=" "
-            layout="fixed "
-            width={970}
-            height={591}
-            src={imageSrc}
-            alt="Costomimage"
-          />
-        </div>  
-        
+        </div>
       </div>
-
-      
     </div>
   );
 };
