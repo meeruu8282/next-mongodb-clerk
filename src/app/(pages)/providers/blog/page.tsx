@@ -1,4 +1,4 @@
-import SuperCharge from "../Components/superCharge"
+import SuperCharge from "../Components/superCharge/superCharge"
 import React from 'react'
 
 import { Blogpost } from "@/payload/payload-types"

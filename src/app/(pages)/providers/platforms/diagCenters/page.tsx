@@ -1,7 +1,7 @@
-import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import BlurBackGroundDesign from "../../Components/blurBackgrounddesign/blurBackGroundDesign";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
-import SuperCharge from "../../Components/superCharge";
+import SuperCharge from "../../Components/superCharge/superCharge";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
 
 export default function DiagCenters() {

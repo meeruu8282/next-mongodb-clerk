@@ -1,10 +1,10 @@
 import CarelyoButton from "../../Components/getStartedButton";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
 import Keypointsbox from "../../Components/keypointsbox";
-import SuperCharge from "../../Components/superCharge";
+import SuperCharge from "../../Components/superCharge/superCharge";
 import Image from "next/image";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
-import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import BlurBackGroundDesign from "../../Components/blurBackgrounddesign/blurBackGroundDesign";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
 
 export default function Pharmacies() {

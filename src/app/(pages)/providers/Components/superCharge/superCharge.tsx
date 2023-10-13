@@ -1,48 +1,51 @@
 import React from "react";
 import Image from "next/image";
-import CarelyoButton from "../Components/getStartedButton";
-import EllipseBackground from "../Components/ellipseBackground";
+import CarelyoButton from "../getStartedButton";
+import EllipseBackground from "../ellipseBackground";
 import Link from "next/link";
+import style from './superCharge.module.css'
 
 const SuperCharge: React.FC = () => {
   return (
-    <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] mt-[100px] bg-blue-500 ">
+    <div className=" relative flex justify-center w-screen h-auto    max-h-[446px]   ">
       {/* Green background container */}
-      <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
-        <div className=" absolute top-[35px] left-[271px]">
+      <div className="greenBackground w-screen max-w-[1258px] max-h-[373px] rounded-[40px] ">
+        <div className={`absolute top-[35px] ${style.hideellipse} left-[271px]`} >
           {/* background with about 50 circles */}
           <EllipseBackground />
         </div>
         {/* Green background rectangle */}
         <div
-          className=" absolute w-[415px] h-[373px] top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-[#45AC60] opacity-5"
+          className={`absolute w-[415px] h-[373px] ${style.removefirstrectangle} top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-[#45AC60] opacity-5`} 
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
         >
-          {/* Corner triangle */}
+          
         </div>
+        {/* Corner triangle */}
         <div
           className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] top-0 right-0  rounded-tr-[40px]"
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 0%, 0% 0%)" }}
         ></div>
         {/* Green background rectangle */}
         <div
-          className=" absolute w-[415px] h-[373px] top-0 left-0 rounded-bl-[40px] rounded-tl-[40px] bg-[#45AC60] opacity-5"
-          style={{ clipPath: "polygon(0% 50%, 100% 100%, 0% 100%, 0% 0%)" }}
+          className={`absolute w-[415px] h-[373px] ${style.removesecondrectangle}  top-0 left-0 rounded-bl-[40px] rounded-tl-[40px]  bg-[#45AC60] opacity-5`} 
+          style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
         >
-          {/* Corner triangle */}
+          
         </div>
+        {/* Corner triangle */}
         <div
-          className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] bottom-0 left-0 c  rounded-bl-[40px]"
+          className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] bottom-0 left-0 rounded-bl-[40px]"
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
         ></div>
         {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer left-[950px] top-[178px]">
+        <div className={`greenCircleContainer ${style.removecircle} left-[950px] top-[178px]`}>
           <div
             className="greenCircle"
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
           ></div>
         </div>
-        <div className=" absolute w-[401px] h-[446px] bottom-0  left-[150px] ">
+        <div className={`absolute w-[401px] ${style.hidedoctorimage}  h-[446px] bottom-0  left-[150px]`}  >
           <Image
             className="absolute"
             layout="fixed "
@@ -60,7 +63,7 @@ const SuperCharge: React.FC = () => {
             alt="Superchargebody"
           />
         </div>
-        <div className=" absolute bg-[#FFFFFF]  top-20 w-[226px]  h-[99.03px] left-[55px] p-[25px 22px] rounded-[20px] gap-8">
+        <div className={`absolute bg-[#FFFFFF] ${style.hidedoctorimage}   top-20 w-[226px]   h-[99.03px] left-[55px] p-[25px 22px] rounded-[20px] gap-8`} >
           <div className="relative w-[49px] h-[49px] top-[25px] left-[22px] ">
             <Image
               className="absolute "
@@ -70,7 +73,7 @@ const SuperCharge: React.FC = () => {
               src="/Ellipse.jpg"
               alt="Ellipse"
             />
-            <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B]"></div>
+            <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B] "></div>
           </div>
 
           <div className=" absolute w-[125px] h-[49px] top-[25px] left-[80px] gap-[4px] ">
@@ -82,7 +85,7 @@ const SuperCharge: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="absolute flex justify-center items-center w-[68px] h-[68.02px] top-[250px]  left-[440px] p-22 rounded-[20px] gap-8 bg-[#2B9B5B]  ">
+        <div className={`absolute flex justify-center ${style.hidedoctorimage} items-center w-[68px] h-[68.02px] top-[250px]  left-[440px]  rounded-[20px] gap-8 bg-[#2B9B5B] `} >
           <div className="w-[24px] h-[24px] flex justify-center items-center ">
             <svg
               width="16"
@@ -98,43 +101,47 @@ const SuperCharge: React.FC = () => {
             </svg>
           </div>
         </div>
-        <div className=" absolute w-[593px] h-[270px] top-[51px] left-[576px] gap-[36px] ">
-          <div className=" relative w-[593px] h-[162px] gap-[12px] ">
-            <div className="w-[593px] h-[120px]">
-              <h1 className="  text-[poppins] text-[40px] font-semibold leading-15 tracking-normal  text-left text-[#FFFFFF]">
+        <div className={`absolute flex flex-col ${style.centertext} ${style.alignback} w-screen h-auto  max-w-[593px] max-h-[270px] top-[51px] left-[576px] gap-[36px] `} >
+          <div className=" relative w-screen max-w-[593px] min-h-[162px] gap-[12px] ">
+            <div className="max-w-[593px] max-h-[120px] w-screen h-auto">
+              <h1 className={`text-[poppins] text-[40px] ${style.mediumtext}  font-semibold leading-15 tracking-normal  text-left text-[#FFFFFF]`} >
                 Supercharge Productivity with Carelyo!
               </h1>
             </div>
-            <div className=" absolute w-[307px] h-[30px] opacity-80 text-[#FFFFFF] bottom-0">
+            <div className=" w-screen h-auto  max-w-[307px] min-h-[30px] opacity-80 text-[#FFFFFF] bottom-0">
               <p className="">Connect through Carelyo now!</p>
             </div>
           </div>
-          <Link href="/providers/auth/signIn" passHref>
-            <div className=" absolute rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  ">
+          
+             <Link href="/providers/auth/signIn" passHref>
+            <div className="  rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)] ">
               <CarelyoButton
                 className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
                 buttonText="Connect Today"
               />
             </div>
           </Link>
-        </div>
-        {/* white line under Productivity */}
-        <svg
-          className=" absolute top-[108px] left-[850px]"
-          width="204"
-          height="11"
-          viewBox="0 0 204 11"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M2 8.02206C33.4225 3.49432 117.414 -2.84451 202 8.02206"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
-        </svg>
        
+         
+          {/* white line under Productivity */}
+          <svg
+            className={`absolute  ${style.moveunderline} ${style.removeline} top-[55px] left-[270px]`} 
+            width="204"
+            height="11"
+            viewBox="0 0 204 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 8.02206C33.4225 3.49432 117.414 -2.84451 202 8.02206"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+
+
       </div>
     </div>
   );

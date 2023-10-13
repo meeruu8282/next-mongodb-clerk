@@ -3,19 +3,21 @@ import CarelyoButton from "../../Components/getStartedButton";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
 import Image from "next/image";
-import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
+import BlurBackGroundDesign from "../../Components/blurBackgrounddesign/blurBackGroundDesign";
 import ConvinientManagement from "../../Components/convinientManagement";
 import CarleyoProvides from "../../Components/carleyoProvides/carleyoProvides";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
 import style from './clinics.module.css'
-import SuperCharge from "../../Components/superCharge";
+import SuperCharge from "../../Components/superCharge/superCharge";
 
 const Clinics = () => {
   return (
-    <div className="">
+
+    
+    <div className="w-screen ">
       <BlurBackGroundDesign />
 
-      <div className="  flex  justify-end mt-20">
+      <div className="  flex  justify-end mt-[10px]">
         <div className=" relative w-screen h-auto mt-15">
           <FirstTextinplatform
             headerBlackText1={"Boost Your"}
@@ -44,7 +46,7 @@ const Clinics = () => {
         </div>
       </div>
 
-      <div className={` relative flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px] mt-40  `}>
+      <div className={` relative flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px]   `}>
 
         
         <div className={` absolute h-[100%] w-[100%] ${style.changeabsolute} ${style.hidingimages} left-[125px] max-w-[501px] max-h-[556.79px]  `}>
@@ -112,7 +114,7 @@ const Clinics = () => {
       </div>
 
       {/* Green background container */}
-      <div className="greenBackground flex justify-center items-center w-screen  max-h-[647px] mt-20 ">
+      <div className="greenBackground flex justify-center items-center w-screen  max-h-[647px] mt-10 ">
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
           <div

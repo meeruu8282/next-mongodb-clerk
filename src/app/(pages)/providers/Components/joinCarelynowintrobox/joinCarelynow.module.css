@@ -9,6 +9,7 @@
   @media (max-width: 1320px) {
     .middle {
       width: 100%;
+     
     }
   }
   
@@ -26,7 +27,7 @@
       }
     }
   
-    @media (max-width: 580px)  {
+    @media (max-width: 970px)  {
       .changehight {
           height: 400px;
           
@@ -34,10 +35,22 @@
     }
   
   
-    @media (max-width: 580px)  {
+    @media (max-width: 970px)  {
       .hideimage {
          
           display: none;
+          
+      }
+    }
+
+    @media (max-width: 970px)  {
+      .icontextbackground {
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0%;
+       
+         
+         
           
       }
     }
