@@ -3,10 +3,10 @@ import React from "react";
 
 import CustomContentBox from "../Components/customContentBox";
 import { useState } from "react";
-import SuperCharge from "../Components/superCharge";
+import SuperCharge from "../Components/superCharge/superCharge";
 
 import ToggleableBox from "../Components/ToggleableBoxProps";
-import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
+import BlurBackGroundDesign from "../Components/blurBackgrounddesign/blurBackGroundDesign";
 import Head from "next/head";
 
 export default function Pricing() {

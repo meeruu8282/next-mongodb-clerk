@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import CarelyoButton from "../Components/getStartedButton";
 import Greenbackground from "../Components/greenBackground";
-import SuperCharge from "../Components/superCharge";
+import SuperCharge from "../Components/superCharge/superCharge";
 import { Public_Sans } from "next/font/google";
 
 import HowItWorksBenifit from "../Components/howitworksBenefitPart";
 import "./howitwork.css";
 import { title } from "process";
-import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
+import BlurBackGroundDesign from "../Components/blurBackgrounddesign/blurBackGroundDesign";
 
 
 export default function Howitwork() {

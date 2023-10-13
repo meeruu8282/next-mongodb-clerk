@@ -1,5 +1,5 @@
-import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
-import SuperCharge from "../Components/superCharge";
+import BlurBackGroundDesign from "../Components/blurBackgrounddesign/blurBackGroundDesign";
+import SuperCharge from "../Components/superCharge/superCharge";
 
 export default function Help() {
   return (
