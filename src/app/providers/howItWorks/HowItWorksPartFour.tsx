@@ -21,7 +21,7 @@ const HowItWorksPartFour: React.FC = () => {
             layout="fixed"
             width={518}
             height={311}
-            src="/JepretanLayar 2023-07-01pukul09.261.png"
+            src="/drsamuel.jpg"
             alt="appointment_booking"
            
           />

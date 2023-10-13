@@ -16,17 +16,17 @@ import HowItWorksPartFive from "./howItWorksPartFive";
 
 export default function Howitwork() {
   return (
-    <div className=" w-full justify-center items-center overflow-hidden  md:overflow-hidden">
+    <div className=" w-full justify-center items-center overflow-hidden  ">
       <BlurBackGroundDesign />
-      <div className="flex items-center">
-        <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
-          <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
-            <div className="w-[185px] h-[22px]">Welcome to Carelyo 👋</div>
+      <div className="flex items-center ">
+        <div className="w-auto border md:w-[624px] sm:z-20  md:h-[480px]  md:m-[90px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
+          <div className="w-[233px] h-[46px]  left-[125px] gap-2 text-[16px] xl:text-[20px]  text-[#45AC60] font-semibold">
+            <div className="w-[185px] h-[22px] xl:w-auto">Welcome to Carelyo 👋</div>
           </div>
-          <div className="w-[522px] h-[249px] top-[347.69px] left-[125px] font-semibold text-[64px] text-[#000000] px-[16px]">
+          <div className="w-[522px] h-[249px] xl:h-auto xl:text-[75px] top-[347.69px] left-[125px] font-semibold text-[64px] text-[#000000] px-[16px]">
             <h1>Healthcare Platform for Providers!</h1>
           </div>
-          <div className="w-[624px] h-[52px] top-[520.69px] left-[125px] opacity-50 font-normal text-[16px] mt-7 px-4">
+          <div className="w-[624px] h-[52px] xl:w-[720] xl:text-[19px] top-[520.69px] left-[125px] opacity-50 font-normal text-[16px] mt-7 px-4 pr-6">
             <div>
               Are you an independent doctor, family physician, or managing a
               small to medium-sized clinic or hospital? We at Carelyo are here
@@ -81,13 +81,13 @@ export default function Howitwork() {
           </div>
         </div>
 
-        <div className="absolute right-0  ">
+        <div className="absolute right-1 pl-5 w-auto ">
           <Image
             src="/firstpageRec.png"
             alt="entre"
             width={668}
             height={667}
-            className=" rounded-[25px] mr-1"
+            className=" rounded-[25px] xl:w-[820px] xl:h-[819px] mr-1"
           />
         </div>
       </div>
@@ -250,7 +250,7 @@ export default function Howitwork() {
       </div>
 
       <div className="flex  justify-center w-auto  bg-yellow-500  ">
-        <div className="leftside-of-howitwork  flex flex-col items-center   w-auto  bg-red-500  relative">
+        <div className="leftside-of-howitwork  flex flex-col items-center  min-w-[700px] w-auto  bg-red-500  relative">
           <div className=" flex items-center justify-center w-[185px] h-[66px] mb-[20px] pr-1  ">
             <div className="w-[66px] h-[66px]">
               <Image
@@ -287,37 +287,30 @@ export default function Howitwork() {
                   src="/iPadPro.png"
                   alt="ipad"
                 />
-              </div> 
-              
-         
+              </div>
             </div>
 
-            <div className="  w-[552.12px] h-[151px] rounded-[25px] border   bg-gradient-to-br from-[#45AC60] to-[#7EDC97]  flex items-center justify-center ">
+            <div className="  w-[552.12px] h-[151px] rounded-[25px] border ml-[40px] z-20 bg-gradient-to-br from-[#45AC60] to-[#7EDC97]  flex items-center justify-center ">
               <div className="w-[490px] h-[96px] justify-center items-center ">
                 <div className="  flex justify-center items-center text-[20px] text-[Poppins] ">
                   Registering as healthcare service providers. Create a
                   comprehensive profile by entering their personal information
                 </div>
               </div>
-              <div className="  ">
+            </div>
+          </div>
+
+          <div className=" absolute  right-[5%] mt-[95%] ">
             <Image
-              className=" absolute  "
+              className="flex "
               layout="fixed"
               width={42}
               height={204}
               src="/Vector677.svg"
               alt="677"
-             
             />
           </div>
-            </div>
-           
-           
-          </div>
-   
-
-          <div className="w-[597px] h-[575.94px]  ml-[130px] justify-center  mt-[715px]">
-         
+          <div className="w-[552px] h-[575.94px]  justify-center  mt-[740px] ml-[115px]  ">
             <div className="flex justify-center items-center w-[552px] h-[60px]">
               <div className=" w-[58px] h-[60px]">
                 <div className="font-[Poppins] font-semibold text-[40px] text-[#45AC60] leading-[60px] ">
@@ -338,18 +331,16 @@ export default function Howitwork() {
               </div>
             </div>
             <div className="   ">
-             
-                <div className="bg-pink-500 justify-center w-[518.74px] h-[394.39px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5">
-                  <Image
-                    className=" absolute   "
-                    layout="fixed"
-                    width={518.74}
-                    height={394.39}
-                    src="/Group 1000005951 1 (1).svg"
-                    alt="add service"
-                  />
-                </div>
-             
+              <div className="bg-pink-500 justify-center w-[518.74px] h-[394.39px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5">
+                <Image
+                  className=" absolute   "
+                  layout="fixed"
+                  width={518.74}
+                  height={394.39}
+                  src="/Group 1000005951 1 (1).svg"
+                  alt="add service"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -374,13 +365,13 @@ export default function Howitwork() {
           <HowItWorksPartFour />
         </div>
       </div>
-      <div className=" mb-9">
+      <div className=" border w-auto max-w-[1000px] flex jus ">
         <HowItWorksPartFive />
       </div>
 
       <div className="flex w-auto h-[574px]  items-center justify-center">
         <div className="w-[558px] h-[484px] justify-center  items-center">
-          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] ">
+          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] text-[#45AC60]">
             THE BENEFITS OF JOINING CARELYO AS A PROVIDER
           </h1>
 
@@ -413,9 +404,9 @@ export default function Howitwork() {
                 {
                   width: "558px",
                   height: "142px",
-                  title: "Expanded Reach and Patient Base",
+                  title: "Synchronized Patient Communication",
                   description:
-                    "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
+                    "Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations.",
                 },
               ]}
             />

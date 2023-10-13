@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const HowItWorksPartFive: React.FC = () => {
   return (
-    <div className="  ">
-      <div className="w-[431px] h-[60px] flex  justify-center items-center font-semibold font-[Poppns]">
+    <div className=" justify-center  bg-yellow-500 w-auto flex flex-col ml-10">
+      <div className="w-[431px] h-[60px] flex  justify-center items-center font-semibold font-[Poppns] bg-blue-500 ml-3" >
         <div>
-          <h1 className="w-[61px] h-[60px] text-[40px] items-center text-[#45AC60]">
+          <h1 className="w-[61px] h-[60px] text-[40px] items-center text-[#45AC60] ">
             #5
           </h1>
         </div>
