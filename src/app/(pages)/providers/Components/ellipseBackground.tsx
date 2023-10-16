@@ -2,7 +2,7 @@ import React from 'react'
 
 const EllipseBackground: React.FC = () => { 
 
-    return (
+    return (  //green all the green small cirkles thats in navbar and supercharge
     <div className='w-[256.29px] h-[234.26px]'>
     <svg width="257" height="235" viewBox="0 0 257 235" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="2" cy="2.02206" r="2" fill="#45AC60"/>

@@ -13,10 +13,13 @@ import SuperCharge from "../../Components/superCharge";
 const Clinics = () => {
   return (
     <div className="">
+      {/* code for green tamplate funktions is in componentsdolder*/}
       <BlurBackGroundDesign />
 
       <div className="  flex  justify-end mt-20">
         <div className=" relative w-screen h-auto mt-15">
+
+           {/* Use firstTextinplatform-component in componentsfolder and send in your costomised props to the tamplate */}
           <FirstTextinplatform
             headerBlackText1={"Boost Your"}
             headerGreenText1={"Clinic's Efficiency"}
@@ -44,10 +47,10 @@ const Clinics = () => {
         </div>
       </div>
 
-      <div className={` relative flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px] mt-40  `}>
-
-        
-        <div className={` absolute h-[100%] w-[100%] ${style.changeabsolute} ${style.hidingimages} left-[125px] max-w-[501px] max-h-[556.79px]  `}>
+      {/* All media queries are imported from clinic.module.css by using style.nameofmediaquery  */}
+       {/* Seamless Appointment Management component, maybe change to tamplate? */}
+      <div className={` relative  flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px] mt-40  `}>
+        <div className={` absolute  h-[100%] w-[100%] ${style.changeabsolute} ${style.hidingimages} left-[125px] max-w-[501px] max-h-[556.79px]  `}>
           <div className=" absolute bottom-0 w-[100%] h-[100%] max-h-[481px] max-w-[501px] rounded-[25px] bg-[#FAFAFA]"></div>
           
           <div className="  max-w-[501px] max-h-[556.79px] w-[100%] h-auto bottom-0  ">
@@ -97,7 +100,8 @@ const Clinics = () => {
          
         </div>
 
-        <div className={` ${style.hidingimage} absolute w-[382px] h-[264px] left-[339px]  top-[400px] `}>
+        {/* Practice Schedule img */}
+        <div className={` ${style.hidingimage} bg-red-500 absolute w-[382px] h-[264px] left-[339px]  top-[400px] `}>
           <div className=" absolute flex justify-center items-center w-[382px] h-[264px] rounded-[25px] bg-[#FFFFFF] shadow-2xl ">
             <Image
               className=""
@@ -111,13 +115,15 @@ const Clinics = () => {
         </div>
       </div>
 
-      {/* Green background container */}
+      {/* Green background container, some of the css in background is in global */} 
       <div className="greenBackground flex justify-center items-center w-screen  max-h-[647px] mt-20 ">
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
           <div
             className="greenBackgroundTriangle"
-            style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
+      
+            
+            style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }} //Style change how much of a square has to be cut out to create a triangle
           ></div>
         </div>
         {/* Circle div overlapping the container */}
@@ -128,7 +134,10 @@ const Clinics = () => {
           ></div>
         </div>
 
-        <div className={` absolute flex  ${style.changetextcenter} flex-row  max-w-[1192px] w-screen max-h-[484px]  h-auto gap-[80px] `}>
+
+
+        {/* Centralized Patient Records*/}
+        <div className={` bg-red-600 absolute flex  ${style.changetextcenter} flex-row  max-w-[1192px] w-screen max-h-[484px]  h-auto gap-[80px] `}>
           <CarleyoProvides
             header={"Centralized Patient Records"}
             paragraph={
@@ -162,13 +171,14 @@ const Clinics = () => {
                   alt="Cecktable"
                 />
               </div>
-            </div>
-            <ConvinientManagement text="Convenient Records Feature" />
-          </div>
+            </div> 
+             {/* in componens folder*/}
+            <ConvinientManagement text="Convenient Records Feature" /> 
+          </div> 
         </div>
       </div>
 
-      {/* Tamplate in components folder  */}
+      {/* add/remove props for Tamplate in components folder change the content below   */}
       <WhoHaveJoinedTamplate
         greenHeaderpart={"500+ Clinics"}
         blackHeaderpart={"Who Have Joined"}
@@ -191,6 +201,7 @@ const Clinics = () => {
           "Compassionate environment for individuals seeking mental health services"
         }
       />
+      {/*componentsfolder */}
       <SuperCharge/>
     </div>
   );

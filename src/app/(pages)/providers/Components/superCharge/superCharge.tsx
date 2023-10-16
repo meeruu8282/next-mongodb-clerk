@@ -76,6 +76,7 @@ const SuperCharge: React.FC = () => {
             <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B] "></div>
           </div>
 
+          {/* improvement make 24/7 a tamplate and reuse the code */}
           <div className=" absolute w-[125px] h-[49px] top-[25px] left-[80px] gap-[4px] ">
             <h2 className="  w-[140px] h-[24px] font-poppins text-base font-semibold leading-6 tracking-wide text-left ">
               24/7 Assistance

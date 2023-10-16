@@ -7,10 +7,12 @@ import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined"
 export default function DiagCenters() {
   return (
     <div className="">
+      {/*code in components folder */}
     <BlurBackGroundDesign />
 
     <div className="  flex  justify-end mt-20">
       <div className=" relative w-screen h-auto mt-15">
+         {/* add/remove props for Tamplate in components folder change the content below   */}
         <FirstTextinplatform
           headerBlackText1={"Strengthening "}
           headerGreenText1={"Diagnostic Centers"}
@@ -36,6 +38,19 @@ export default function DiagCenters() {
           />
         </div>
       </div>
+
+
+      {/* Robust Features for Diagnostic Test Management and Tracking not yet implemented but it should be here */}
+
+
+      {/*How Carelyo can reinforce? not yet implemented but code for it should be here */}
+
+
+
+
+
+
+       {/* add/remove props for Tamplate in components folder change the content below   */}
       <WhoHaveJoinedTamplate
         greenHeaderpart={"500+ Diagnostic Centers"}
         blackHeaderpart={"Who Have Joined"}

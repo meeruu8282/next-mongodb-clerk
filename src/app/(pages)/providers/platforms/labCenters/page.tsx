@@ -44,6 +44,19 @@ export default function LabCenters() {
 
 
 
+
+       {/* Joining Carelyo Enables You to: not yet implemented, but code should be here  */}
+
+
+
+
+
+
+
+
+
+
+
        {/* Green background container */}
        <div className="greenBackground w-screen h-[647px] mt-20 ">
         {/* Corner triangle */}
@@ -61,7 +74,9 @@ export default function LabCenters() {
           ></div>
         </div>
 
-        <div className=" flex flex-row w-[1192px] h-[484px] left-[125px] top-[82px] gap-[81px]">
+        {/*Revolutionize your laboratory center's with Carelyo contentbelow*/}
+        <div className=" bg-red-500 flex flex-row w-[1192px] h-[484px] left-[125px] top-[82px] gap-[81px]">
+          {/* Use the tamplate in componentsfolder and send in your costomised props to the tamplate or change content in the tamplate below*/}
           <CarleyoProvides
             header={"Revolutionize your laboratory center's with Carelyo"}
             paragraph={"Look no further than Carelyo, the leading platform designed specifically for laboratory centers."}
@@ -90,7 +105,8 @@ export default function LabCenters() {
                 />
               </div>
             </div>
-            <ConvinientManagement text="Convenient Management" />
+            {/*componentsfolder */}
+            <ConvinientManagement text="Convenient Management" /> 
           </div>
         </div>
       </div>

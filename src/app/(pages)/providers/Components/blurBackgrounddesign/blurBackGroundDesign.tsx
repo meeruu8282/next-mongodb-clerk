@@ -10,6 +10,7 @@ const BlurBackGroundDesign: React.FC = () => {
           <div className="  w-[487px] h-[487px] left-[-85px] top-[251px] bg-[#45AC60] opacity-[18%] blur rounded-[100%] "></div>
         </div>
       </div>
+      {/*style from blurBackGroundDesign.module.css */}
       <div className={`absolute ${style.changeellipseposition} w-[256.3px] h-[234.26px] top-[-27px] opacity-25 z-[-2] left-[870px]`} >
        
             <EllipseBackground />

@@ -32,7 +32,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 
 }) => {
   return ( 
-    // responsive css for  ${style.} is in joinCarelynow.module.css file 
+    // responsive css for  ${style.nameofmediaquerie} is in joinCarelynow.module.css file 
     <div className={` flex justify-end ${style.changehight} left-0  `}>
       <div className={`relative w-[1315px]  h-auto ${style.middle}  flex items-center justify-between mt-8 `}> 
         <div className=" absolute z-[3]  w-[289px] h-auto mb-20 left-0  ">

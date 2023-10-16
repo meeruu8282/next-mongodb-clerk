@@ -6,9 +6,9 @@ import style from './carleyoProvides.module.css'
 
 
 interface CarleyoProvidesTemplateProps {
-  header: string;
-  paragraph: string;
-  checktext1: string;
+  header: string;   // A string for the header of the component.
+  paragraph: string;   // A string for the main paragraph content.
+  checktext1: string;  // A string for the first checkbox label.
   checktext2: string;
   checktext3: string;
   buttontext: string;
@@ -44,7 +44,8 @@ const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
 
             <div className=" flex flex-col w-screen h-auto max-w-[592px] max-h-[181px] gap-[16px] ">
               <div className=" flex flex-row items-center w-screen h-auto max-w-[592px] max-h-[45px] mt-5 gap-[12px]">
-                <UnionCheckmark />
+                {/*in components folder */}
+                <UnionCheckmark />  {/* mediaquerey is called by style from  carleyoProvides.module.css */}
                 <div className={` w-screen h-auto max-w-[380px] ${style.textsize}  sm:text-[10px] md:text-[15px] lg:text-[20px]`}>
                   <p className="  text-[Poppins]   font-normal text-base leading-6 tracking-tight  text-[#FFFFFF] opacity-75 ">
                     {checktext1}

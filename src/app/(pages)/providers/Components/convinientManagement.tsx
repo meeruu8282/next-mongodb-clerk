@@ -2,15 +2,18 @@ import React from "react";
 import Image from "next/image";
 
 interface ConvinientManagementTemplateProps {
-  text: string;
+  text: string;   // string
 
-  // ... andra props för varje sektion av din mall
+  // ... other props for sections of the tamplate 
 }
 
 const ConvinientManagement: React.FC<ConvinientManagementTemplateProps> = ({
+
   text,
+
+
 }) => {
-  return (
+  return ( 
     <div className=" absolute flex flex-row items-center justify-center w-[294px] h-[74px] top-[370px]  p-[25px 22px] rounded-[20px] gap-[8px] bg-[#FFFFFF] shadow-[5%]">
       <Image
         className=""
@@ -25,7 +28,7 @@ const ConvinientManagement: React.FC<ConvinientManagementTemplateProps> = ({
         <h1 className=" text-[Poppins] text-[16px] font-normal leading-[24px] tracking-tighter text-left ">
       
 
-     {text}
+     {text} 
 
         </h1>
       </div>

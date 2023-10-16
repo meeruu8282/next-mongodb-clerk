@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 
 interface CardTemplateProps {
-  imageSrc: string;
+  imageSrc: string;  // string
   icon1: string;
   icon2: string;
   icon3: string;
@@ -12,6 +12,8 @@ interface CardTemplateProps {
   icon2text: string;
   icon3text: string;
   icon4text: string;
+
+  // add more props if you want 
 
  
 }
