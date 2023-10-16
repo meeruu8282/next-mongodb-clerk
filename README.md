@@ -9,8 +9,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   - [Introduction](#introduction)
   - [Features](#features)
   - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+    - [Learn More](#learn-more)
+      - [Youtube clips that can be helpfull](#youtube-clips-that-can-be-helpfull)
+        - [ How images is implemented](#How-images-is-implemented)
+        - [ How tailwind works 10:00-49:00](#How-tailwind-works-10:00-49:00)
+        - [ Routing](#Routing)
+        - [ How to do tamplates High-Quality React Components ](#High-Quality-React-Components)
+        - [ how to use css files with module ](#How-to-style-with-module.css)
+        - [ How to get glow when hovering ](#How-to-get-glow-when-hovering)
+    - [Deploy on Vercel](#deploy-on-vercel)
   - [Usage](#usage)
   - [Configuration](#configuration)
   - [Contributing](#contributing)
@@ -46,6 +53,30 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+
+## Youtube clips that can be helpfull
+
+  ## - How images is implemented
+    https://www.youtube.com/watch?v=EBSrVW5MXoo&ab_channel=Joshtriedcoding 
+
+  ## - How tailwind works 10:00-49:00
+    https://www.youtube.com/watch?v=tS7upsfuxmo&ab_channel=JavaScriptMastery
+
+  ## - Routing 
+    https://www.youtube.com/watch?v=P4W_LaotmNI&ab_channel=RyanToronto 
+
+  ## - High-Quality React Components 
+    Best Practices for Reusability in react code 
+    https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding 
+
+  ## - How to style with module.css
+    Dont forget if you using tailwind css and you have to use {` ${style.nameofcss} `} syntax 
+    https://www.youtube.com/watch?v=If5LI88_aY8&ab_channel=LeonvanZyl 
+
+  ## - How to get glow when hovering
+    https://www.youtube.com/watch?v=5W6kEP65AH4&t=212s&ab_channel=TailwindLabs 
+
 
 ## Learn More
 

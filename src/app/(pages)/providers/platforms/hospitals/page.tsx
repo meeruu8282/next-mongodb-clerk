@@ -40,7 +40,7 @@ export default function Hospitals() {
         </div>
       </div>
 
-      {/* Green background container */}
+      {/* Green background container */}  {/* Integrated Hospital Management*/}
       <div className="greenBackground w-screen h-[730px] mt-20 ">
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
@@ -57,9 +57,8 @@ export default function Hospitals() {
           ></div>
         </div>
 
+        {/* content in Integrated Hospital Management*/}
         <div className=" flex flex-row w-[1192px] h-[484px] left-[125px] top-[82px] gap-[81px]">
-        
-
           <div className=" relative w-[521px] h-[484px]">
             <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
               <div
@@ -80,12 +79,13 @@ export default function Hospitals() {
               </div>
             </div>
             <div className=" absolute right-0 w-[294px] h-[74px]">
+              {/*tamplate in components folder */}
                <ConvinientManagement text="Convenient Management" />
             </div>
            
           </div>
 
-  <CarleyoProvides
+            <CarleyoProvides
             header={"Integrated Hospital Management"}
             paragraph={"Carelyo platform provides a comprehensive solution for managing all aspects of your hospital's operations. "}
             checktext1={"Patient admissions and discharge"}
@@ -103,7 +103,7 @@ export default function Hospitals() {
         header={"Enhancing Efficiency and Quality of Care"}
         paragraph={"By embracing Carelyo's platform, hospitals can unlock numerous advantages that lead to improved efficiency and quality of care. Join Carelyo today and experience the power of a comprehensive platform designed to elevate your hospital's operations, streamline workflows, and provide exceptional care to your patients. Together, let's shape the future of healthcare."}
         buttonsText={"Join Carelyo"}
-        reverseDirection={true}  //makes the tamplate be mirror reversed- reuses tamplate code but changes design
+        reverseDirection={true}  //makes the tamplate be mirror reversed- reuses tamplate code but changes design, mutch less code
       />
       
       

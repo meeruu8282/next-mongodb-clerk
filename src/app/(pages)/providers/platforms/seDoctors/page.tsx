@@ -41,6 +41,8 @@ export default function Sedoctors() {
         </div>
       </div>
 
+
+      {/* code below can be improved to be less code by implementing tamplate, and use exported icon from figma instead of the code for icons it has now */}
       {/* Green background container */}
       <div className="greenBackground">
         {/* Corner triangle */}
@@ -263,6 +265,8 @@ export default function Sedoctors() {
           </div>
         </div>
       </div>
+
+      {/* use WhoHavejoinedtamplate in componentsfolder and send in your costomised props to the tamplate or cgange content below  */}
 
       <WhoHaveJoinedTamplate
         greenHeaderpart={"10k+ Doctors"}

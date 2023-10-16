@@ -41,7 +41,7 @@ export default function Pharmacies() {
           />
         </div>
       </div>
-
+       {/* Here are the key points you can expect from Carelyo component */}
       <div className=" relative  w-[1192px] h-[120px] left-[125px] gap-[142px] ">
         <div className=" absolute left-0 w-[526px] h-[120px]">
           <h1 className="  text-[Poppins] h-[120px] text-[40px] font-400 tracking-tight text-left leading-60  ">
@@ -55,7 +55,8 @@ export default function Pharmacies() {
           </p>
         </div>
       </div>
-
+  
+       {/*  send in your costomised props in componensfolder or change the content below */}
       <div className=" relative flex-row flex justify-center items-center w-[1191px] h-[316px] left-[125px] gap-[24px] mt-20 ">
         <Keypointsbox
           icon={"/Medicinepill.svg"}
@@ -84,9 +85,10 @@ export default function Pharmacies() {
           linkto={"/providers/auth/signIn"}
           linktext={"Explore Now"}
         />
+        
       </div>
 
-     
+     {/*  send in your costomised props in componensfolder or change the content below */}
       <WhychooseCarelyo 
         image={"/youhavealotofreasons.jpg"}
         header={"You Have Lots Of Reasons To Choose Us"}

@@ -43,7 +43,10 @@ interface WhoHaveJoinedTamplateProps {
   }) => {
   return (
 
+    
+
     <div className='flex justify-center items-center '>
+      {/* mediaqueries is imorted from whoHaveJoined.module.css with  ${style.nameofmediaquerie}   */}
     <div className="relative flex flex-col justify-center items-center w-screen h-auto  max-w-[1192px] min-h-[620px] mt-[100px]  gap-[48px] ">
         <div className=" flex justify-center items-center w-screen h-auto max-h-[52px] ">
           <h2 className=" text-[Poppins] text-[40px] w-600 line-height-[52px] tracking-[-2%] text-center font-bold ">

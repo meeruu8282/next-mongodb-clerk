@@ -36,7 +36,7 @@ interface FirstTextinplatformTamplateProps {
   
     // ... andra props för varje sektion av din mall
   }) => {
-  return (
+  return (  // first header text thats in all platform components
     <div className=" w-screen h-auto ">
             <div className="w-screen  h-auto max-w-[838px] mx-auto">
               <h1 className="text-center sm:text-[20px] md:text-[30px] lg:text-[40px]  whitespace-normal ">
