@@ -8,6 +8,7 @@ interface JoiningCarelyoEnablesYoutoTamplateProps {
     // values that is used in this tamplate/file. 
     header: string;
     paragraph: string;
+    image: string;
 
     // Values used in the hovertextbox template/file.
     header01: string;
@@ -29,6 +30,7 @@ interface JoiningCarelyoEnablesYoutoTamplateProps {
   const JoiningCarelyoEnablesYouto: React.FC<JoiningCarelyoEnablesYoutoTamplateProps> = ({
     header,
     paragraph,
+    image,
 
 
     header01,
@@ -49,18 +51,27 @@ interface JoiningCarelyoEnablesYoutoTamplateProps {
   return (
 
     <div className=" w-screen flex justify-center mt-20 ">
-    <div className=" bg-red-600 flex flex-col justify-between w-[1191px] h-[886px] ">
-      <div className=" bg-orange-400 flex justify-between flex-col w-[946px] h-[140px] mx-auto ">
-        <h1 className=" w-[946px] h-[52px] text-[poppins] bg bg-green-500 mx-auto  text-4xl font-normal leading-13 tracking-wide text-center">
+    <div className="flex flex-col justify-between w-[1191px] h-[886px] ">
+      <div className=" flex justify-between flex-col w-[946px] h-[140px] mx-auto ">
+        <h1 className=" w-[946px] h-[52px] text-[poppins] mx-auto  text-4xl font-normal leading-13 tracking-wide text-center">
           {header}
         </h1>
-        <p className=" bg-blue-600 w-[946px] h-[64px] opacity-50 text-[poppins]  text-[20px]  leading-8  text-center">
+        <p className=" w-[946px] h-[64px] opacity-50 text-[poppins]  text-[20px]  leading-8  text-center">
          {paragraph}
         </p>
       </div>
-      <div className=" bg-yellow-300 flex justify-between w-[1191px] h-[689px] border-2 border-solid rounded-md">
-        <div className="w-[530px] h-[682px] rounded-[25px] bg-violet-600"></div>
-        <div className=" bg-green-500 h-[689px] w-[600px] flex flex-col justify-between">
+      <div className=" flex justify-between w-[1191px] h-[689px] rounded-md">
+        <div className="w-[530px] h-[682px] rounded-[25px] ">
+        <Image
+            className=""
+            width={530}
+            height={682}
+            src={image}
+            alt="chemistdoctor"
+          />
+
+        </div>
+        <div className=" h-[689px] w-[600px] flex flex-col justify-between">
          <Hovertextbox header01={header01} paragraph01={paragraph01}/>
          <Hovertextbox header01={header02} paragraph01={paragraph02}/>
          <Hovertextbox header01={header03} paragraph01={paragraph03}/>
