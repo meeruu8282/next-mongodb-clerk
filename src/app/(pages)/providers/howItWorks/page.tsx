@@ -20,7 +20,7 @@ export default function Howitwork() {
 
     <div className=" w-screen justify-center items-center   ">
       <BlurBackGroundDesign/>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center">
         <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
           <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
             <div className="w-[185px] h-[22px]">Welcome to Carelyo 👋</div>
@@ -408,53 +408,7 @@ export default function Howitwork() {
       </div>
 
 
-      {/* <div className="flex justify-center items-center">
-        <div className="w-[1175px] h-[607px]  flex justify-between ">
-          <div className="bild för 5 ipad ">
-            <Image
-              layout="fixed"
-              width={598}
-              height={395}
-              src="/ipadimagehowItWorks708.png"
-              alt="ipad girl"
-              priority
-            />
-          </div>
-          <div className="bild för 5 mobil mr-[300px]">
-            <Image
-              layout="fixed"
-              width={210}
-              height={380}
-              src="/mobilePhonehowitworksimage707.png"
-              alt="mobilephone"
-              priority
-            />
-          </div>
-          <div className=" absolute flex  justify-center items-center w-[1175px] h-[153px] mt-[450px]">
-            <div className="flex justify-center items-center text-vänster w-[580px] h-[153px] border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97]">
-              <div className=" w-[538px] h-[96px] flex justify-center items-center">
-                <h2 className="">
-                  During the consultation, providers engage with the client,
-                  conduct assessments, diagnose conditions, recommend
-                  treatments, and provide medical advice.
-                </h2>
-              </div>
-            </div>
-            <div className=" ml-5 flex justify-center items-center text-vänster w-[580px] h-[153px]  border rounded-[35px]  bg-gradient-to-br from-[#45AC60] to-[#7EDC97] ">
-              <div className="w-[538px] h-[96px] flex justify-center items-center ">
-                <h2 className="">
-                  Virtual consultation or visit your provider in person. Discuss
-                  your health concerns, receive medical advice, and ask any
-                  questions you may have.
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-
-
+      
 
       <div className="flex w-[1190px] h-[574px] border border-green-500 items-center justify-center">
         <div className="w-[558px] h-[484px] ">
