@@ -5,6 +5,7 @@ import CarelyoButton from "../Components/getStartedButton";
 import Greenbackground from "../Components/greenBackground";
 import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
+import HowItWorksPartFive from "./howItWorksPartFive";
 
 import HowItWorksBenifit from "../Components/howitworksBenefitPart";
 import "./howitwork.css";
@@ -19,7 +20,7 @@ export default function Howitwork() {
 
     <div className=" w-screen justify-center items-center   ">
       <BlurBackGroundDesign/>
-      <div className="flex items-center">
+      <div className="flex justify-center items-center">
         <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
           <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
             <div className="w-[185px] h-[22px]">Welcome to Carelyo 👋</div>
@@ -369,7 +370,7 @@ export default function Howitwork() {
         </div>
 
         <div className="right side  w-full  bg-blue-500 ">
-          <div className=" fle justify-center   ">
+          <div className=" flex justify-center   ">
             <div className="flex justify-center">
               <div className=" flex  items-center justify-between w-[185px] h-[66px] mt-[100px]  border  ">
                 <div className="">
@@ -391,7 +392,23 @@ export default function Howitwork() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      
+
+      <div className=" w-full flex justify-center items-center">
+        <div className="w-[100%] ">
+      <HowItWorksPartFive 
+      hashtagNumber={"#5"}
+      header={"Consultation and Care"}
+      imageSrc1={"/ipadimagehowItWorks708.png"}
+      imageSrc2={"/mobilePhonehowitworksimage707.png"}
+      text1={"During the consultation, providers engage with the client, conduct assessments, diagnose conditions, recommend treatments, and provide medical advice."}
+      text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."} 
+      /> 
+       </div>
+      </div>
+
+
+      {/* <div className="flex justify-center items-center">
         <div className="w-[1175px] h-[607px]  flex justify-between ">
           <div className="bild för 5 ipad ">
             <Image
@@ -434,7 +451,10 @@ export default function Howitwork() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
 
       <div className="flex w-[1190px] h-[574px] border border-green-500 items-center justify-center">
         <div className="w-[558px] h-[484px] ">
