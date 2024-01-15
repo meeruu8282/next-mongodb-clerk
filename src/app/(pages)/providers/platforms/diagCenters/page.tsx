@@ -1,29 +1,30 @@
-import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
-import FirstTextinplatform from "../../Components/firstTextinplatform";
-import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
-import SuperCharge from "../../Components/superCharge";
-import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
+import BlurBackGroundDesign from '../../Components/blurBackGroundDesign'
+import FirstTextinplatform from '../../Components/firstTextinplatform'
+import JoinCarelynowintrobox from '../../Components/joinCarelynowintrobox/joinCarelynowintrobox'
+import SuperCharge from '../../Components/superCharge'
+import WhoHaveJoinedTamplate from '../../Components/whoHaveJoined/whoHaveJoined'
+import Hoverfeaturesbox from './hoverfeaturesbox'
+import Hovertextbox from './hoverfeaturesbox'
+import RobustFeaturesforDiagnostic from './robustFeaturesforDiagnostic'
 
 export default function DiagCenters() {
   return (
     <div className="">
       {/*code in components folder */}
-    <BlurBackGroundDesign />
+      <BlurBackGroundDesign />
 
-    <div className="  flex  justify-end mt-20">
-      <div className=" relative w-screen h-auto mt-15">
-         {/* add/remove props for Tamplate in components folder change the content below   */}
-        <FirstTextinplatform
-          headerBlackText1={"Strengthening "}
-          headerGreenText1={"Diagnostic Centers"}
-          headerBlackText2="for Enhanced Efficiency"
-       
-          paragraph1={
-            "Empower diagnostic centers and streamline their processes, allowing them to provide high-quality services to patients."
-          }
-        />
+      <div className="  flex  justify-end mt-20">
+        <div className=" relative w-screen h-auto mt-15">
+          {/* add/remove props for Tamplate in components folder change the content below   */}
+          <FirstTextinplatform
+            headerBlackText1={'Strengthening '}
+            headerGreenText1={'Diagnostic Centers'}
+            headerBlackText2="for Enhanced Efficiency"
+            paragraph1={
+              'Empower diagnostic centers and streamline their processes, allowing them to provide high-quality services to patients.'
+            }
+          />
 
-        
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox
             icon1="/profileicon.svg"
@@ -39,8 +40,28 @@ export default function DiagCenters() {
         </div>
       </div>
 
+      {/* Robust Features for Diagnostic Test Management and Tracking */}
+    <RobustFeaturesforDiagnostic 
+         header={'Robust Features for Diagnostic Test Management and Tracking'} 
+         paragraph={"Together, let's revolutionize healthcare and make a positive impact on patient well-being."}
+            
+            icon1={'/pappericon.svg'} 
+            header1={'01 Centralized Diagnostic Test Management'} 
+            paragraph1={'Provides a centralized system to manage diagnostic test records, including patient information, test requests, and results.'} 
+            
+            icon2={'/profilewaveicon.svg'} 
+            header2={'02 Efficient Access to Patient Records'} 
+            paragraph2={'Allows healthcare providers to easily access patient records, enabling quick retrieval of relevant information.'} 
+          
+            icon3={'/calendericon.svg'} 
+            header3={'03 Streamlined Test Request Management'} 
+            paragraph3={'Can create and track test requests, assign them to appropriate personnel, monitor their progress in real-time.'} 
+            
+            icon4={'/clock.svg'} 
+            header4={'04 Real-Time Result Tracking'} 
+            paragraph4={'Offers real-time tracking of diagnostic test results, keeping healthcare providers updated on the progress of each test.'} 
+            />
 
-      {/* Robust Features for Diagnostic Test Management and Tracking not yet implemented but it should be here */}
 
 
       {/*How Carelyo can reinforce? not yet implemented but code for it should be here */}
@@ -50,25 +71,34 @@ export default function DiagCenters() {
 
 
 
-       {/* add/remove props for Tamplate in components folder change the content below   */}
+
+
+
+
+
+      {/* add/remove props for Tamplate in components folder change the content below   */}
       <WhoHaveJoinedTamplate
-        greenHeaderpart={"500+ Diagnostic Centers"}
-        blackHeaderpart={"Who Have Joined"}
-        imageSrc1={"/medlab.jpg"}
-        imageSrc2={"/radiance.jpg"}
-        imageSrc3={"/pathogen.jpg"}
-        imageHeader1={"MedLab Diagnostics"}
-        imageHeader2={"Radiance Imaging Center"}
-        imageHeader3={"PathoGen Diagnostics"}
-        titleParagraph1={"General laboratory diagnostics"}
-        titleParagraph2={"Medical imaging services"}
-        titleParagraph3={"Molecular diagnostics, genetic testing"}
-        infoParagraph1={"Offering a wide range of laboratory tests and screenings."}
-        infoParagraph2={"Specialized diagnostic center focused on advanced medical imaging services."}
-        infoParagraph3={"Offering comprehensive genetic testing and infectious disease screenings.s."}
+        greenHeaderpart={'500+ Diagnostic Centers'}
+        blackHeaderpart={'Who Have Joined'}
+        imageSrc1={'/medlab.jpg'}
+        imageSrc2={'/radiance.jpg'}
+        imageSrc3={'/pathogen.jpg'}
+        imageHeader1={'MedLab Diagnostics'}
+        imageHeader2={'Radiance Imaging Center'}
+        imageHeader3={'PathoGen Diagnostics'}
+        titleParagraph1={'General laboratory diagnostics'}
+        titleParagraph2={'Medical imaging services'}
+        titleParagraph3={'Molecular diagnostics, genetic testing'}
+        infoParagraph1={'Offering a wide range of laboratory tests and screenings.'}
+        infoParagraph2={
+          'Specialized diagnostic center focused on advanced medical imaging services.'
+        }
+        infoParagraph3={
+          'Offering comprehensive genetic testing and infectious disease screenings.s.'
+        }
       />
       {/* Code in components folder then superCarge */}
       <SuperCharge />
     </div>
-  );
+  )
 }
