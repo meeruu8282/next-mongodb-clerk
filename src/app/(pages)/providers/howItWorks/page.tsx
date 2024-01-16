@@ -87,6 +87,10 @@ export default function Howitwork() {
           <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />
         </div>
       </div>
+
+
+
+      
       <div className="relative w-screen flex justify-center items-center">
         <div className=" w-screen md:w-[1440px] h-[929px]">
           <Greenbackground />
@@ -410,21 +414,21 @@ export default function Howitwork() {
 
       
 
-      <div className="flex w-[1190px] h-[574px] border border-green-500 items-center justify-center">
-        <div className="w-[558px] h-[484px] ">
-          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] bg-yellow-500">
+      <div className="flex w-full h-auto border border-green-500 items-center justify-center ">
+       <div className="flex w-[90%] flex-row justify-center items-center gap-6 border border-black">
+        <div className=" w-auto h-[100%] border border-red-700 ">
+          <h1 className="flex justify-start items-center h-[26px] font-[Poppins] font-semibold text-[16px] text-[#45AC60]">
             THE BENEFITS OF JOINING CARELYO AS A PROVIDER
           </h1>
 
 
-          <div className="flex flex-col justify-between w-[558px] h-[484px] mr-3">
+          <div className="flex flex-col justify-start items-center w-[100%] h-auto max-h-[584px]  ">
     
           <HowItWorksBenifit
             sections={[
               {
-                width:"558px",
+                width:"100%",
                 height: "110px",
-
                 title: "Expanded Reach and Patient Base",
                 description:
                   "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
@@ -434,7 +438,7 @@ export default function Howitwork() {
              <HowItWorksBenifit
             sections={[
               {
-                width:"558px",
+                width:"100%",
                 height: "142px",
                 title: "Easy Appointment Management",
                 description:
@@ -445,7 +449,7 @@ export default function Howitwork() {
              <HowItWorksBenifit
             sections={[
               {
-                width:"558px",
+                width:"100%",
                 height: "142px",
                 title: "Expanded Reach and Patient Base",
                 description:
@@ -455,17 +459,23 @@ export default function Howitwork() {
           />
             </div>
         </div>
-        <div className="womenwithcomputer ml-5 flex">
+        <div className="womenwithcomputer hidden lg:flex justify-center items-center w-[100%] ">
+         
           <Image
             layout="fixed"
             width={557}
-            height={559}
+            height={759}
             src="/Rectangle34624354.png"
             alt="womenWithComputer"
             priority
           />
+       
+        </div>
         </div>
       </div>
+
+
+
       <div className="">
         <SuperCharge />
       </div>
