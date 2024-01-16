@@ -1,0 +1,38 @@
+@media (max-width: 1080px)  {
+    .hidingimage {
+       
+        display: none;
+       
+
+        
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .make95Width {
+       
+        width: 75%;
+       
+
+        
+    }
+  }
+
+  @media (max-width: 405px)  {
+    .flexCol {
+       
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: start;
+       gap: 2rem;
+
+       
+
+        
+    }
+  }
+
+
+
+

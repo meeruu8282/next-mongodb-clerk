@@ -11,6 +11,7 @@ import HowItWorksBenifit from "../Components/howitworksBenefitPart";
 import "./howitwork.css";
 import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
+import HowItWorksWelcome from "./HowItWorksWelcome";
 
 
 export default function Howitwork() {
@@ -18,9 +19,16 @@ export default function Howitwork() {
    
 
 
+   
+
+
     <div className=" w-screen justify-center items-center   ">
       <BlurBackGroundDesign/>
-      <div className="flex items-center">
+      <div className="w-full flex justify-center items-center mb-14">
+        <HowItWorksWelcome/>
+      </div>
+     
+      {/* <div className="flex items-center">
         <div className="w-full md:w-[624px] h-auto md:h-[480px] top-0 md:top-[288.69px] left-0 md:left-[125px] md:m-[130px] font-[Poppins] md:ml-[80px] pl-8 md:pl-12">
           <div className="w-[233px] h-[46px] top-[288.69px] left-[125px] gap-2 text-[16px] text-[#45AC60] font-semibold">
             <div className="w-[185px] h-[22px]">Welcome to Carelyo 👋</div>
@@ -35,7 +43,7 @@ export default function Howitwork() {
               for you!
             </div>
           </div>
-          <div className="w-[361px] h-[72px]   flex ml-6  mt-6 item-center pr-12 md:pr-0 ">
+          <div className="w-[361px] h-[72px] flex ml-6  mt-6 item-center pr-12 md:pr-0 ">
             <div className="">
               <CarelyoButton
                 buttonText="Get Started"
@@ -86,7 +94,14 @@ export default function Howitwork() {
         <div className="absolute right-0 w-screen md:w-[668px] h-auto md:h-[667px] md:mr-[60px] hidden md:block">
           <Image src="/firstpageRec.png" alt="entre" width={668} height={667} />
         </div>
-      </div>
+      </div> */}
+
+
+
+
+
+
+
       <div className="relative w-screen flex justify-center items-center">
         <div className=" w-screen md:w-[1440px] h-[929px]">
           <Greenbackground />
