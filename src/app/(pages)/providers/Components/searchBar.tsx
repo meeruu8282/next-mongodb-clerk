@@ -45,7 +45,7 @@ export default function SearchBar() {
                         <label className="text-[poppins] text-[25px] font-semibold leading-15 tracking-normal  text-left text-[#FFFFFF]" htmlFor="SearchHelp">Welcome to the Carelyo Help Center!</label>
                         <div className="flex pt-2.5">
                             <div className="relative w-full">
-                                <input type="search" name="" id="SearchHelp" placeholder="Search Blog here..." className="peer z-10 bg transparent w-full h-[65px] rounded-[20px] border cursor-pointer focus:border-lime-300 focus:cursor-text pl-14 pr-4" />
+                                <input type="search" name="" id="SearchHelp" placeholder="Search Blog here..." className="peer z-10 bg transparent w-full h-[65px] rounded-[20px] border cursor-pointer focus:outline-none focus:cursor-text pl-14 pr-4" />
                                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-[22px] ml-6">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8806 0.5C15.2506 0.5 19.6186 4.868 19.6186 10.238C19.6186 12.7715 18.6463 15.0823 17.0553 16.8165L20.186 19.9407C20.479 20.2337 20.48 20.7077 20.187 21.0007C20.041 21.1487 19.848 21.2217 19.656 21.2217C19.465 21.2217 19.273 21.1487 19.126 21.0027L15.9575 17.843C14.2907 19.1778 12.1773 19.977 9.8806 19.977C4.5106 19.977 0.141602 15.608 0.141602 10.238C0.141602 4.868 4.5106 0.5 9.8806 0.5ZM9.8806 2C5.3376 2 1.6416 5.695 1.6416 10.238C1.6416 14.781 5.3376 18.477 9.8806 18.477C14.4226 18.477 18.1186 14.781 18.1186 10.238C18.1186 5.695 14.4226 2 9.8806 2Z" fill="#9ca2ad" />
                                 </svg>
