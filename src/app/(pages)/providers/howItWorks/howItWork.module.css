@@ -1,20 +1,12 @@
 @media (max-width: 1080px)  {
-    .hidingimage {
-       
+    .hidingImage {
         display: none;
-       
-
-        
     }
   }
 
   @media (max-width: 1080px)  {
-    .make95Width {
-       
-        width: 75%;
-       
-
-        
+    .make85Width {
+        width: 85%;
     }
   }
 
@@ -26,16 +18,11 @@
        justify-content: center;
        align-items: start;
        gap: 2rem;
-
-       
-
-        
     }
   }
 
-
   @media (max-width: 1080px)  {
-    .justiceCenter {
+    .flexJusticeCenter {
        
        display: flex;
        justify-content: center;
@@ -44,7 +31,5 @@
 
     }
   }
-
-
 
 

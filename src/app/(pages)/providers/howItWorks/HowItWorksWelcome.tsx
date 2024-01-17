@@ -35,25 +35,25 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
-                <div className={`flex w-full justify-start items-center ${style.make95Width}`}>
+                <div className={`flex w-full justify-start items-center ${style.make85Width}`}>
                     <h1 className="text-[16px] text-[#45AC60] font-semibold font-[Poppins]">
                         {welcomeText}
                     </h1>
                 </div>
 
-                <div className={`flex w-full justify-start items-center ${style.justiceCenter}`}>
-                    <h2 className={`text-6xl w-[45%] ${style.make95Width} font-semibold font-[Poppins]`}>
+                <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
+                    <h2 className={`text-6xl w-[45%] ${style.make85Width} font-semibold font-[Poppins]`}>
                         {text1}
                     </h2>
                 </div>
 
-                <div className={`flex w-full justify-start items-center ${style.justiceCenter}`}>
-                    <p className={`text-md w-[70%] ${style.make95Width} font-normal font-[Poppins]`}>
+                <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
+                    <p className={`text-md w-[70%] ${style.make85Width} font-normal font-[Poppins]`}>
                         {text2}
                     </p>
                 </div>
 
-                <div className={`flex flex-row w-full justify-start items-center gap-7 ${style.flexColumn} ${style.make95Width}`}>
+                <div className={`flex flex-row w-full justify-start items-center gap-7 ${style.flexColumn} ${style.make85Width}`}>
                     <div className="">
                         <CarelyoButton
                             buttonText={textButton1}
@@ -104,7 +104,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
             </div>
 
-            <div className={`w-full h-[100%] flex justify-end items-center  ${style.hidingimage} `}>
+            <div className={`w-full h-[100%] flex justify-end items-center  ${style.hidingImage} `}>
                 <Image 
                     src={imageSrc}
                     alt="entre"
