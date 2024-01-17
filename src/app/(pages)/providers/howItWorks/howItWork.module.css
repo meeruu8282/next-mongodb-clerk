@@ -1,0 +1,35 @@
+@media (max-width: 1240px)  {
+    .hidingImage {
+        display: none;
+    }
+  }
+
+  @media (max-width: 1240px)  {
+    .make85Width {
+        width: 85%;
+    }
+  }
+
+  @media (max-width: 405px)  {
+    .flexColumn {
+       
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: start;
+       gap: 2rem;
+    }
+  }
+
+  @media (max-width: 1240px)  {
+    .flexJusticeCenter {
+       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+
+    }
+  }
+
+
