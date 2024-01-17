@@ -1,49 +1,62 @@
 import CarelyoButton from "../Components/getStartedButton";
 import Image from 'next/image';
 import style from './howItWork.module.css'
+import React from "react";
 
 
 
 interface HowItsWorkWelcomeTemplateProps {
 
-    Welcome
+    welcomeText: string;
+    text1: string;
+    text2: string;
+    textButton1: string;
+    textButton2: string;
     imageSrc: string;
 }
 
 
 
+const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({ 
 
 
+    welcomeText,
+    text1,
+    text2,
+    textButton1,
+    textButton2,
+    imageSrc
 
-const HowItWorksWelcome = () => {
+
+}) => {
     return (
 
         <div className="flex w-[80%] h-full flex-row justify-center items-center">
 
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
-                <div className="flex w-full justify-start items-center ">
-                    <h1 className="text-[16px] text-[#45AC60] font-semibold">
-                        Welcome to Carelyo 👋
+                <div className={`flex w-full justify-start items-center ${style.make95Width}`}>
+                    <h1 className="text-[16px] text-[#45AC60] font-semibold font-[Poppins]">
+                        {welcomeText}
                     </h1>
                 </div>
 
-                <div className="flex w-full justify-start items-center ">
-                    <h2 className={`text-6xl w-[45%] ${style.make95Width} font-semibold font `}>
-                        Healthcare Platform for Providers!
+                <div className={`flex w-full justify-start items-center ${style.justiceCenter}`}>
+                    <h2 className={`text-6xl w-[45%] ${style.make95Width} font-semibold font-[Poppins]`}>
+                        {text1}
                     </h2>
                 </div>
 
-                <div className="flex w-full  justify-start items-center">
-                    <p className={`text-md w-[70%] ${style.make95Width} font-normal`}>
-                        Are you an independent doctor, family physician, or managing a small to medium-sized clinic or hospital? We at Carelyo are here for you!
+                <div className={`flex w-full justify-start items-center ${style.justiceCenter}`}>
+                    <p className={`text-md w-[70%] ${style.make95Width} font-normal font-[Poppins]`}>
+                        {text2}
                     </p>
                 </div>
 
-                <div className={`flex flex-row w-full justify-start items-center gap-7 ${style.flexCol} `}>
+                <div className={`flex flex-row w-full justify-start items-center gap-7 ${style.flexColumn} ${style.make95Width}`}>
                     <div className="">
                         <CarelyoButton
-                            buttonText="Get Started"
+                            buttonText={textButton1}
                             buttonSize="vLB"
                             color="primary"
                             size="small"
@@ -53,7 +66,7 @@ const HowItWorksWelcome = () => {
                         <div className="w-full ">
                             <div className="w-[116px] h-[22px] flex">
                                 <div className="font-semibold text-[16px] text-[#000000] font-[Poppins]">
-                                    Discover More
+                                    {textButton2}
                                 </div>
                             </div>
                         </div>
@@ -88,14 +101,16 @@ const HowItWorksWelcome = () => {
                     </div>
 
                 </div>
-                
+
             </div>
 
             <div className={`w-full h-[100%] flex justify-end items-center  ${style.hidingimage} `}>
-                <Image src="/firstpageRec.png"
+                <Image 
+                    src={imageSrc}
                     alt="entre"
                     width={698}
                     height={667} />
+
             </div>
 
         </div>

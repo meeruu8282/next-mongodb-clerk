@@ -19,7 +19,7 @@
   }
 
   @media (max-width: 405px)  {
-    .flexCol {
+    .flexColumn {
        
        display: flex;
        flex-direction: column;
@@ -30,6 +30,18 @@
        
 
         
+    }
+  }
+
+
+  @media (max-width: 1080px)  {
+    .justiceCenter {
+       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+
     }
   }
 
