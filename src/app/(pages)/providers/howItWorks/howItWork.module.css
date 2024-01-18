@@ -12,7 +12,6 @@
 
   @media (max-width: 405px)  {
     .flexColumn {
-       
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -23,13 +22,76 @@
 
   @media (max-width: 1240px)  {
     .flexJusticeCenter {
-       
        display: flex;
        justify-content: center;
        align-items: center;
-       
-
+    }
+  }
+  @media (max-width: 1080px)  {
+    .hidingImageW1080 {
+        display: none;
     }
   }
 
 
+  @media (max-width: 1300px)  {
+    .makeWidth80 {
+        width: 75%;
+    }
+  }
+
+  @media (max-width: 1150px)  {
+    .makeWidth75 {
+        width: 70%;
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .center {
+     
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .buttonStart {
+     
+      display: flex;
+      justify-items: center;
+      align-items: start;
+      
+      
+    }
+  }
+
+  @media (max-width: 780px)  {
+    .madeItToCol {
+     
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      
+      
+    }
+  }
+  
+  @media (max-width: 780px)  {
+    .madeItTo90Width {
+     
+      width: 100%;
+      
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .text100width {
+     
+    
+        width: 100%;
+    }
+  }
+
+
+  

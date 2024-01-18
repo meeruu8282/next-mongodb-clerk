@@ -12,6 +12,7 @@ import "./howitwork.css";
 import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 import HowItWorksWelcome from "./HowItWorksWelcome";
+import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
 
 
 export default function Howitwork() {
@@ -19,9 +20,9 @@ export default function Howitwork() {
    
 
 
-    <div className=" w-screen justify-center items-center   ">
+    <div className=" w-screen justify-center items-center">
       <BlurBackGroundDesign/>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center mb-12">
         <HowItWorksWelcome 
         welcomeText={"Welcome to Carelyo 👋"} 
         text1={"Healthcare Platform for Providers!"} 
@@ -32,13 +33,17 @@ export default function Howitwork() {
         />
       </div>
      
-     
 
-      <div className="relative w-screen flex justify-center items-center">
+     <div className="w-full flex justify-center items-center">
+     <HowItWorksGreenbackground/>
+     </div>
+      
+
+      {/* <div className="w-screen flex justify-center items-center">
         <div className=" w-screen md:w-[1440px] h-[929px]">
-          <Greenbackground />
-          <div>
-            <div className="flex flex-col   justify-center  ">
+          <Greenbackground /> 
+          <HowItWorksGreenbackground/>
+             <div className="flex flex-col   justify-center  ">
               <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px]  shadow-lg items-center ">
                 <div className=" absolute w-[439.96px] h-[96px] mt-0">
                   <div className="font-[Poppins] font-normal text-[#FFFFFF] text-[32px] mb-[-2%]">
@@ -181,10 +186,10 @@ export default function Howitwork() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> 
+     
         </div>
-      </div>
+      </div> */}
 
       <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center">
         <h1 className="font-[Poppins] font-semibold text-[40px]">
