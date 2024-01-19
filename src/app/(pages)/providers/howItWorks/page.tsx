@@ -12,6 +12,7 @@ import "./howitwork.css";
 import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 import HowItWorksWelcome from "./HowItWorksWelcome";
+import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
 
 
 export default function Howitwork() {
@@ -19,9 +20,9 @@ export default function Howitwork() {
    
 
 
-    <div className=" w-screen justify-center items-center   ">
+    <div className=" w-screen justify-center items-center">
       <BlurBackGroundDesign/>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center mb-12">
         <HowItWorksWelcome 
         welcomeText={"Welcome to Carelyo 👋"} 
         text1={"Healthcare Platform for Providers!"} 
@@ -32,159 +33,31 @@ export default function Howitwork() {
         />
       </div>
      
-     
 
-      <div className="relative w-screen flex justify-center items-center">
-        <div className=" w-screen md:w-[1440px] h-[929px]">
-          <Greenbackground />
-          <div>
-            <div className="flex flex-col   justify-center  ">
-              <div className=" absolute top-[60px] w-[1190px] ml-[125px] h-[809px]  shadow-lg items-center ">
-                <div className=" absolute w-[439.96px] h-[96px] mt-0">
-                  <div className="font-[Poppins] font-normal text-[#FFFFFF] text-[32px] mb-[-2%]">
-                    Who Can Become a
-                  </div>
-                  <div className="font-[Poppins] font-bold text-[#FFFFFF] text-[32px]">
-                    Carelyo Health Provider?
-                  </div>
-                </div>
-                <div className=" absolute right-2  w-[588px] h-[64px] ">
-                  <div className=" mt-4 text-white">
-                    Carelyo welcomes a wide range of healthcare professionals
-                    and institutions to join as providers on our platform.
-                  </div>
-                </div>
+     <div className="w-full flex justify-center items-center">
+     <HowItWorksGreenbackground 
+          heading1={"Who Can Become a"}
+          heading1Bold={"Carelyo Health Provider?"}
+          heading2={"Carelyo welcomes a wide range of healthcare professionals and institutions to join as providers on our platform. "}
+          title1={"Self-Employed Doctors"}
+          text1={"If you are a self-employed doctor running your own practice, Carlo offers you the opportunity to expand your reach with online"}
+          buttonText1={"Join Carelyo"}   
+          imageSrc1={"/Ellipse_11520.svg"}
+          title2={"Clinics and Hospitals"}
+          text2={"By joining Carelyo, you can streamline your appointment booking process, enhance patient communication, and improve overall efficiency."}
+          imageSrc2={"/image-r.svg"}
+          title3={"Diagnostic Laboratory Centers"}
+          text3={"Carelyo offers to seamlessly connect with referring healthcare providers, share test results securely, and ensure timely communication for better patient care."}
+          imageSrc3={"/image587.png"}
+          buttonText2={"Get Carelyo"}
+          title4={"Pharmacy"}
+          text4={"By joining, you can simplify medication management, & enhance collaboration with healthcare providers."}
+          imageSrc4={"/Ellipse11520.svg"}        
+          />
+     </div>
+      
 
-                <div className="absolute  mt-[110px]  w-[373.51px] h-[323px] border-[1px] rounded-[25px] bg-opacity-20 bg-[#FFFFFF]">
-                  <div className="w-[289px] h-[247px]  ml-4 mt-2">
-                    <div className="w-[80px] h-[80px] ">
-                      <Image
-                        className=""
-                        layout="fixed"
-                        width={80}
-                        height={80}
-                        src="/Ellipse_11520.svg"
-                        alt=""
-                      />
-                      <div className="w-[281px] h-[143px]  ">
-                        <div className=" w-[281px] h-[29px]   text-[Poppins] font-semibold text-[24px] text-[#FFFFFF]">
-                          Self-Employed Doctors
-                        </div>
-                        <div className=" font-[Poppind] text-[16px] text-[#FFFFFF] font-normal opacity-[75%] leading-7 mt-2 mr-8">
-                          If you are a self-employed doctor running your own
-                          practice, Carlo offers you the opportunity to expand
-                          your reach with online
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className=" absolute right-0 mt-[110px] w-[782.26px] h-[323px] border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px]">
-                  <div className="absolute w-[436px] h-[224px] left-10 top-10  z-[500] ">
-                    <div className="w-[436px] h-[38px]">
-                      <div className="font-[Poppins] font-semibold text-[32px] text-[#FFFFFF]">
-                        Clinics and Hospitals
-                      </div>
-                    </div>
-                    <div className=" w-[436px] h-[78px] opacity-75 text-[Poppins]">
-                      <div className=" mr-6 font-normal text-[16px] mt-3 text-white">
-                        By joining Carelyo, you can streamline your appointment
-                        booking process, enhance patient communication, and
-                        improve overall efficiency.
-                      </div>
-                    </div>
-
-                    <div className=" absolute rounded-[25px] w-[228px] h-[72px] bottom-0   bg-gradient-to-br from-[#45AC60] via-[#7EDC97] to-[#EFEEE8]] ">
-                      <CarelyoButton
-                        className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
-                        buttonText="Connect Today"
-                      />
-                    </div>
-                  </div>
-                  <div className=" absolute w-[361px] h-[246px] bottom-0 right-0">
-                    <Image
-                      layout="fixed"
-                      width={361}
-                      height={246}
-                      src="/image-r.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div className="absolute bottom-[0] w-[782.26px] h-[323px] border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px]">
-                  <div className=" absolute top-[55px] ml-[55px] w-[505px] h-[224px] left-0  z-[1000] ">
-                    <div className="">
-                      <h1 className="font-Poppins font-semibold text-[32px] text-[#FFFFFF] mt-0">
-                        Diagnostic Laboratory Centers
-                      </h1>
-                      <div className="w-[460px] h-[78px] ">
-                        <div className="font-[Poppins] font-normal text-[16px] leading-[-2%] text-[#FFFFFF] opacity-[75%] ">
-                          Carelyo offers to seamlessly connect with referring
-                          <div>
-                            healthcare providers, share test results securely,
-                            and
-                          </div>
-                          <div>
-                            ensure timely communication for better patient care.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className=" absolute bottom-0  rounded-[30px]  bg-gradient-to-br from-[#45AC60] via-[#7EDC97] to-[#EFEEE8]">
-                      <CarelyoButton
-                        buttonText="Get Carelyo"
-                        color="third"
-                        buttonSize="gCb"
-                        size="small"
-                      />
-                    </div>
-                  </div>
-
-                  <div className=" absolute  w-[347px] h-[312px]   right-0 ">
-                    <Image
-                      layout="fixed"
-                      width={361}
-                      height={246}
-                      src="/image587.png"
-                      alt="12"
-                    />
-                  </div>
-                </div>
-                <div className="absolute bottom-[0] w-[373.51px] h-[323px] right-0  border-[1px] bg-opacity-20 bg-[#FFFFFF] rounded-[25px] font-[Poppins]  ">
-                  <div className="w-[307px] h-[226px]   ml-8 mt-14">
-                    <div className=" absolute w-[80px] h-[80px]  rounded-full bg-[#7EDC97] ml-2 top-13">
-                      <Image
-                        layout="fixed"
-                        width={80}
-                        height={80}
-                        src="/Ellipse11520.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div className=" absolute w-[307px] h-[117px]   gab-[10px] bottom-11">
-                      <div>
-                        <h1 className="w-[127px] h-[29px] font-semibold text-[24px] text-[#FFFFFF]">
-                          Pharmacy
-                        </h1>
-                      </div>
-
-                      <div className="w-[307px] h-[78px]">
-                        <h1 className=" absolute  opacity-[75%] font-[Poppins] font-normal text-[16px] leading-[-2%] text-[#FFFFFF] bottom-0">
-                          By joining, you can simplify medication management, &
-                          enhance collaboration with healthcare providers.
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center">
         <h1 className="font-[Poppins] font-semibold text-[40px]">

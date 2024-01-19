@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 interface HowItsWorkPartFiveTamplateProps {
   imageSrc1: string;
   imageSrc2: string;
