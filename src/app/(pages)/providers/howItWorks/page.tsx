@@ -36,7 +36,8 @@ export default function Howitwork() {
 
      <div className="w-full flex justify-center items-center">
      <HowItWorksGreenbackground 
-          heading1={"Who Can Become a Carelyo Health Provider?"}
+          heading1={"Who Can Become a"}
+          heading1Bold={"Carelyo Health Provider?"}
           heading2={"Carelyo welcomes a wide range of healthcare professionals and institutions to join as providers on our platform. "}
           title1={"Self-Employed Doctors"}
           text1={"If you are a self-employed doctor running your own practice, Carlo offers you the opportunity to expand your reach with online"}

@@ -8,7 +8,9 @@ import Image from "next/image";
 interface HowItsWorksGreenbackgroundTemplateProps {
 
     heading1: string;
+    heading1Bold: string;
     heading2: string;
+    
 
     title1: string;
     title2: string;
@@ -34,6 +36,7 @@ interface HowItsWorksGreenbackgroundTemplateProps {
 
 const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProps> = ({
     heading1,
+    heading1Bold,
     heading2,
     title1,
     title2,
@@ -58,7 +61,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                 {/* Header */}
                 <div className="flex w-[90%] flex-row justify-between items-center font-normal pt-12">
                     <div className="flex justify-start items-center">
-                        <h1 className="font-[Poppins] text-4xl w-[70%]">{heading1}</h1>
+                        <h1 className="font-[Poppins] text-4xl">{heading1} <span className="block font-bold">{heading1Bold}</span></h1>
                     </div>
                     <div className="flex justify-end items-centerw-[90%]">
                         <h2 className="font-[Poppins] text-xl w-[80%]"> {heading2} </h2>
