@@ -9,7 +9,7 @@ export default function Help() {
       <BlurBackGroundDesign/>
       <SearchBar/>
       <HelpCenter/>
-     <SuperCharge className="m-0"/>
+     <SuperCharge/>
     </div>
   );
 }

@@ -2,7 +2,11 @@ import HelpCard from "./helpCard";
 
 export default function () {
     return (
-        <div className="relative flex w-[1258px] flex-wrap">
+        <div className="relative flex w-[1258px] flex-wrap justify-between">
+            <div className="w-full mt-12 mb-2">
+                <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5">Help Center</h1>
+                <p className="h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C] mt-6">At Carelyo, we are committed to providing you with the guidance and technical support you need.</p>
+            </div>
             <HelpCard
                 icon={"/helpCardImg.png"}
                 header={"Getting Started"}
