@@ -2,10 +2,10 @@ import EllipseBackground from "./ellipseBackground";
 
 export default function SearchBar() {
     return (
-        <div className=" relative w-[1258px] h-[267px] top-[top: 2652px] left-[91px] mt-[100px">
+        <div className=" relative w-[1258px] h-[267px] top-[top: 2652px] mt-[100px">
             {/* Green background container */}
             <div className="greenBackground w-[1258px] h-[267px] rounded-[40px] ">
-                <div className=" absolute top-[20px] left-[271px]">
+                <div className=" absolute top-[20px]">
                     {/* background with about 50 circles */}
                     <EllipseBackground/>
                 </div>
