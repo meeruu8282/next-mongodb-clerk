@@ -35,7 +35,24 @@ export default function Howitwork() {
      
 
      <div className="w-full flex justify-center items-center">
-     <HowItWorksGreenbackground/>
+     <HowItWorksGreenbackground 
+          heading1={"Who Can Become a Carelyo Health Provider?"}
+          heading2={"Carelyo welcomes a wide range of healthcare professionals and institutions to join as providers on our platform. "}
+          title1={"Self-Employed Doctors"}
+          text1={"If you are a self-employed doctor running your own practice, Carlo offers you the opportunity to expand your reach with online"}
+          buttonText1={"Join Carelyo"}   
+          imageSrc1={"/Ellipse_11520.svg"}
+          title2={"Clinics and Hospitals"}
+          text2={"By joining Carelyo, you can streamline your appointment booking process, enhance patient communication, and improve overall efficiency."}
+          imageSrc2={"/image-r.svg"}
+          title3={"Diagnostic Laboratory Centers"}
+          text3={"Carelyo offers to seamlessly connect with referring healthcare providers, share test results securely, and ensure timely communication for better patient care."}
+          imageSrc3={"/image587.png"}
+          buttonText2={"Get Carelyo"}
+          title4={"Pharmacy"}
+          text4={"By joining, you can simplify medication management, & enhance collaboration with healthcare providers."}
+          imageSrc4={"/Ellipse11520.svg"}        
+          />
      </div>
       
 
