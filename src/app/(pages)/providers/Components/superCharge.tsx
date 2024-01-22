@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const SuperCharge: React.FC = () => {
   return (
-    <div className=" relative   w-[1258px] h-[446px] top-[top: 2652px] left-[91px] mt-[100px] bg-blue-500 ">
+    <div className=" relative w-[1258px] h-[446px] top-[top: 2652px] mt-[100px]">
       {/* Green background container */}
       <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
         <div className=" absolute top-[35px] left-[271px]">
