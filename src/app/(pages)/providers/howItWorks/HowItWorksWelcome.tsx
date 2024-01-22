@@ -104,14 +104,13 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
             </div>
 
-            <div className={`w-full h-[100%] flex justify-end items-center  ${style.hidingImage} `}>
+            <div className={`w-full h-[100%] flex justify-end items-center ${style.hidingImage}`}>
                 <Image 
                     src={imageSrc}
                     alt="entre"
                     width={698}
                     height={667} />
-
-            </div>
+            </div> 
 
         </div>
 

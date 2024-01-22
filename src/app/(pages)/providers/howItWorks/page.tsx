@@ -7,7 +7,8 @@ import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
 import HowItWorksPartFive from "./howItWorksPartFive";
 
-import HowItWorksBenifit from "../Components/howitworksBenefitPart";
+
+import HowItWorksBenefits from "./HowItWorksBenefits";
 import "./howitwork.css";
 import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
@@ -17,31 +18,31 @@ import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
 
 export default function Howitwork() {
   return (
-   
+
 
 
     <div className=" w-screen justify-center items-center">
-      <BlurBackGroundDesign/>
+      <BlurBackGroundDesign />
       <div className="w-full flex justify-center items-center mb-12">
-        <HowItWorksWelcome 
-        welcomeText={"Welcome to Carelyo 👋"} 
-        text1={"Healthcare Platform for Providers!"} 
-        text2={"Are you an independent doctor, family physician, or managing a small to medium-sized clinic or hospital? We at Carelyo are here for you!"} 
-        textButton1={"Get Started"} 
-        textButton2={"Discover More"}
-        imageSrc={"/firstpageRec.png"}
+        <HowItWorksWelcome
+          welcomeText={"Welcome to Carelyo 👋"}
+          text1={"Healthcare Platform for Providers!"}
+          text2={"Are you an independent doctor, family physician, or managing a small to medium-sized clinic or hospital? We at Carelyo are here for you!"}
+          textButton1={"Get Started"}
+          textButton2={"Discover More"}
+          imageSrc={"/firstpageRec.png"}
         />
       </div>
-     
 
-     <div className="w-full flex justify-center items-center">
-     <HowItWorksGreenbackground 
+
+      <div className="w-full flex justify-center items-center">
+        <HowItWorksGreenbackground
           heading1={"Who Can Become a"}
           heading1Bold={"Carelyo Health Provider?"}
           heading2={"Carelyo welcomes a wide range of healthcare professionals and institutions to join as providers on our platform. "}
           title1={"Self-Employed Doctors"}
           text1={"If you are a self-employed doctor running your own practice, Carlo offers you the opportunity to expand your reach with online"}
-          buttonText1={"Join Carelyo"}   
+          buttonText1={"Join Carelyo"}
           imageSrc1={"/Ellipse_11520.svg"}
           title2={"Clinics and Hospitals"}
           text2={"By joining Carelyo, you can streamline your appointment booking process, enhance patient communication, and improve overall efficiency."}
@@ -52,12 +53,12 @@ export default function Howitwork() {
           buttonText2={"Get Carelyo"}
           title4={"Pharmacy"}
           text4={"By joining, you can simplify medication management, & enhance collaboration with healthcare providers."}
-          imageSrc4={"/Ellipse11520.svg"}        
-          />
-     </div>
-      
+          imageSrc4={"/Ellipse11520.svg"}
+        />
+      </div>
 
-      
+
+
 
       <div className="w-full md:w-[737px] h-[60px] mt-[100px] justify-center flex items-center">
         <h1 className="font-[Poppins] font-semibold text-[40px]">
@@ -212,80 +213,48 @@ export default function Howitwork() {
         </div>
       </div>
 
-      
+
 
       <div className=" w-full flex justify-center items-center">
         <div className="w-[100%] ">
-      <HowItWorksPartFive 
-      hashtagNumber={"#5"}
-      header={"Consultation and Care"}
-      imageSrc1={"/ipadimagehowItWorks708.png"}
-      imageSrc2={"/mobilePhonehowitworksimage707.png"}
-      text1={"During the consultation, providers engage with the client, conduct assessments, diagnose conditions, recommend treatments, and provide medical advice."}
-      text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."} 
-      /> 
-       </div>
-      </div>
-
-
-      
-
-      <div className="flex w-[1190px] h-[574px] border border-green-500 items-center justify-center">
-        <div className="w-[558px] h-[484px] ">
-          <h1 className="w-[460px] h-[26px] font-[Poppins] font-semibold text-[16px] bg-yellow-500">
-            THE BENEFITS OF JOINING CARELYO AS A PROVIDER
-          </h1>
-
-
-          <div className="flex flex-col justify-between w-[558px] h-[484px] mr-3">
-    
-          <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "110px",
-
-                title: "Expanded Reach and Patient Base",
-                description:
-                  "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
-              },
-            ]}
-          />
-             <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "142px",
-                title: "Easy Appointment Management",
-                description:
-                  "Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. ",
-              },
-            ]}
-          />
-             <HowItWorksBenifit
-            sections={[
-              {
-                width:"558px",
-                height: "142px",
-                title: "Expanded Reach and Patient Base",
-                description:
-                  "Reach a larger pool of potential patients, including those who prefer the convenience of online consultations.",
-              },
-            ]}
-          />
-            </div>
-        </div>
-        <div className="womenwithcomputer ml-5 flex">
-          <Image
-            layout="fixed"
-            width={557}
-            height={559}
-            src="/Rectangle34624354.png"
-            alt="womenWithComputer"
-            priority
+          <HowItWorksPartFive
+            hashtagNumber={"#5"}
+            header={"Consultation and Care"}
+            imageSrc1={"/ipadimagehowItWorks708.png"}
+            imageSrc2={"/mobilePhonehowitworksimage707.png"}
+            text1={"During the consultation, providers engage with the client, conduct assessments, diagnose conditions, recommend treatments, and provide medical advice."}
+            text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."}
           />
         </div>
       </div>
+
+
+
+
+
+
+
+      <div className="w-full flex justify-center items-center mt-8">
+        <HowItWorksBenefits
+          image={"/Rectangle34624354.png"}
+          header={"THE BENEFITS OF JOINING CARELYO AS A PROVIDER"}
+          checkmarkboxheader1={"Expanded Reach and Patient Base"}
+          checkmarkboxparagraph1={"Reach a larger pool of potential patients, including those who prefer the convenience of online consultations. "}
+          checkmarkboxheader2={"Easy Appointment Management"}
+          checkmarkboxparagraph2={"Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. "}
+          checkmarkboxheader3={"Synchronized Patient Communication"}
+          checkmarkboxparagraph3={"Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations."}
+        />
+      </div>
+
+
+
+
+
+
+
+
+
       <div className="">
         <SuperCharge />
       </div>

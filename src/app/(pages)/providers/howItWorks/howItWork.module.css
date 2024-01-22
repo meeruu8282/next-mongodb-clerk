@@ -27,6 +27,8 @@
        align-items: center;
     }
   }
+
+  
   @media (max-width: 1080px)  {
     .hidingImageW1080 {
         display: none;
@@ -92,6 +94,25 @@
         width: 100%;
     }
   }
+  
+
+  @media (max-width: 1080px)  {
+    .textXlarge {
+     
+    
+       font-size: x-large;
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .textMedium {
+     
+    
+       font-size: medium;
+    }
+  }
+  
+
 
 
   
