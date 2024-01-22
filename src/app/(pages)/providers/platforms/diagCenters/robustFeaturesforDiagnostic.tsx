@@ -1,4 +1,3 @@
-import Image from "next/legacy/image"
 import Hoverfeaturesbox from './hoverfeaturesbox'
 
 interface RobustFeaturesforDiagnosticTamplateProps {
