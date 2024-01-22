@@ -40,7 +40,8 @@ function DropdownMenu() {
     }, 500);  // Fördröj stängningen med 500 ms
   }
 
-  return (
+  return ( 
+  
     <div
       ref={dropdownRef}
       className=" relative z-[1000]"
@@ -48,9 +49,19 @@ function DropdownMenu() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button onClick={() => setIsOpen(!isOpen)}>Platform</button>
+     
+      <button className=" w-[85px] flex justify-between items-center font-semibold " onClick={() => setIsOpen(!isOpen)}>Platform  
+         <Image
+            className="relative "
+            width={12}
+            height={9}
+            src="/platformdropdownarrow.svg"
+            alt=""
+          /> </button>  
+      
+      
       <div className={isOpen ? "dropdown-list block" : "dropdown-list hidden"}>
-        <ul className="mt-2 border rounded shadow-lg bg-white ">
+        <ul className=" w-[200px] mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
             
