@@ -12,7 +12,6 @@ type Props = {
 
 export default function Navbar() {
   return (
-    <div >
       <div className="w-full  h-[68.69px] flex justify-between items-center px-[120px] ">
         <Link href="/">
           <Image
@@ -23,12 +22,12 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="w-[820px] h-[52px] flex  items-center gap-10 ">
+        <div className="w-[820px] h-[52px] flex  items-center md:justify-end gap-10 ">
           <div className="flex gap-3  ">
             <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal z-[1000px]">
               <Link
                 href="/providers/howItWorks"
-                className="w-[105px] h-[22px] text-[16px]"
+                className="w-[105px] h-[22px] text-base"
               >
                 How it work
               </Link>
@@ -36,25 +35,25 @@ export default function Navbar() {
               <DropdownMenu />
 
               <Link href="/providers/pricing" className="text-black">
-                <nav className="flex w-[50px] h-[22px] text-[16px]">
+                <nav className="flex w-[50px] h-[22px] text-base">
                   Pricing
                 </nav>
               </Link>
 
               <Link
                 href="/providers/blog"
-                className="text-black w-[28px] h-[22px] gap-[5px] text-[16px]"
+                className="text-black w-[28px] h-[22px] gap-[5px] text-base"
               >
                 Blog
               </Link>
 
               <Link href="/providers/help" className="text-black gap-[5px}">
-                <nav className="flex text-1xl h-[22px] text-[16px]">Help</nav>
+                <nav className="flex text-1xl h-[22px] text-base">Help</nav>
               </Link>
             </div>
           </div>
 
-          <div className="flex  gap-6  justify-center ">
+          <div className="hidden lg:flex  gap-6 justify-center ">
             <div className="flex  w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center  gap-3 ">
               <div className=" w-[28px] h-[28px] flex justify-center items-center ">
                 <Image
@@ -65,7 +64,7 @@ export default function Navbar() {
                 />
               </div>
 
-              <div className="flex items-center bg-white ">
+              <div className="hidden md:flex  items-center bg-white ">
                 <div className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
                   en
                 </div>
@@ -99,6 +98,5 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
