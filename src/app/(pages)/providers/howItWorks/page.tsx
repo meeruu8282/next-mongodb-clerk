@@ -14,6 +14,7 @@ import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 import HowItWorksWelcome from "./HowItWorksWelcome";
 import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
+import HowItWorksPartFour from "./HowItWorksPartFour";
 
 
 export default function Howitwork() {
@@ -56,6 +57,12 @@ export default function Howitwork() {
           imageSrc4={"/Ellipse11520.svg"}
         />
       </div>
+
+      
+
+
+  
+      
 
 
 
@@ -211,6 +218,16 @@ export default function Howitwork() {
             </div>
           </div>
         </div>
+      </div>
+
+
+      <div className="flex">
+      <HowItWorksPartFour 
+      hashtagNumber={"#4"}
+       header={"Appointment Booking"} 
+       imageSrc={"/drsamuel.jpg"} 
+       text1={`Select the "See a Doctor" option to schedule an appointment.`} 
+       text2={"Choose a convenient date and time for your appointment."}/>
       </div>
 
 
