@@ -1,4 +1,4 @@
-import Navbar from "./(pages)/providers/Components/navbar";
+import Navbar from "./(pages)/providers/Components/NavBar/navbar";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +12,7 @@ import {
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
 import SuperCharge from "./(pages)/providers/Components/superCharge";
-
+import NavbarMobile from "./(pages)/providers/Components/NavBar/NavbarMobile";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -53,7 +53,8 @@ export default function RootLayout({
           </div>
 
           <div className="  max-h-32px top-25px left-144px ">
-            <Navbar />
+       {/*      <Navbar /> */}
+       <NavbarMobile/>
           </div>
           <div className="w-[624px] h-[480px] top-[288.69px] left-[125px] rounded-[30px] ">
             <h1 className="text-[64px]  leading-[83px];"></h1>
