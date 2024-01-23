@@ -16,10 +16,6 @@ interface seamlessAppointmentManagementTamplateProps {
     textbutton: string;
    
     
-   
-   
-  
-    
   }
 
   const SeamlessAppointmentManagement: React.FC<seamlessAppointmentManagementTamplateProps> = ({
@@ -30,12 +26,7 @@ interface seamlessAppointmentManagementTamplateProps {
     paragraph,
     textbutton,
     
-   
-  
-   
-    
-  
-   
+
   }) => {
   return (
        // All media queries are imported from clinic.module.css by using style.nameofmediaquery 
