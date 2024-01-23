@@ -1,5 +1,3 @@
-import Link from "next/link";
-import CarelyoButton from "../../Components/getStartedButton";
 import JoinCarelynowintrobox from "../../Components/joinCarelynowintrobox/joinCarelynowintrobox";
 import WhoHaveJoinedTamplate from "../../Components/whoHaveJoined/whoHaveJoined";
 import Image from "next/image";
@@ -9,6 +7,7 @@ import CarleyoProvides from "../../Components/carleyoProvides/carleyoProvides";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
 import style from './clinics.module.css'
 import SuperCharge from "../../Components/superCharge";
+import SeamlessAppointmentManagement from "./seamlessApointmentManagement";
 
 const Clinics = () => {
   return (
@@ -47,73 +46,14 @@ const Clinics = () => {
         </div>
       </div>
 
-      {/* All media queries are imported from clinic.module.css by using style.nameofmediaquery  */}
-       {/* Seamless Appointment Management component, maybe change to tamplate? */}
-      <div className={` relative  flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px] mt-40  `}>
-        <div className={` absolute  h-[100%] w-[100%] ${style.changeabsolute} ${style.hidingimages} left-[125px] max-w-[501px] max-h-[556.79px]  `}>
-          <div className=" absolute bottom-0 w-[100%] h-[100%] max-h-[481px] max-w-[501px] rounded-[25px] bg-[#FAFAFA]"></div>
-          
-          <div className="  max-w-[501px] max-h-[556.79px] w-[100%] h-auto bottom-0  ">
-            <Image
-              className=" absolute "
-              layout="fixed "
-              width={501}
-              height={501}
-              src="/Superchargehead.png"
-              alt="Superchargehead"
-            />
-            <Image
-              className="absolute  bottom-0"
-              layout="fixed "
-              width={501}
-              height={501}
-              src="/Superchargebody.png"
-              alt="Superchargebody"
-            />
-          </div>
-        </div>
-        <div className={` absolute flex  flex-col h-auto   max-w-[514px] ${style.changeabsolute} ${style.textboxdesign} right-[40px] gap-[32px] `}>
-          <div className="    h-auto  w-full gap-[24px] ">
-            <div className="  top-0 w-full h-full">
-              <h1 className=" text-[Poppins] text-[40px] font-normal leading-60 tracking-tighter text-left">
-                Seamless Appointment Management
-              </h1>
-            </div>
-            <div className="  bottom-0 w-full h-full opacity-[50%]">
-              <p className="text-[poppins] text-[20px] font-normal leading-32 tracking-tighter text-left text-[#000000]">
-                Our intuitive interface allows you to efficiently manage
-                appointments, allocate resources, and eliminate scheduling
-                conflicts. Visualize your clinic's daily schedule with a
-                user-friendly calendar view.
-              </p>
-            </div>
-             <div className={` mt-[30px] h-[72px]  ${style.buttonsize}`}>
-             <Link href="/providers/pricing" passHref>
-            <CarelyoButton
-              buttonText="Manage your appointment"
-              className={` absolute bottom-0 w-[308px] ${style.buttonsize} mb-1  h-[72px]  gap-[12px] text-[16px] font-semibold line-h-22.4`}
-            />
-          </Link>
-          </div>
-          </div>
-         
-         
-        </div>
-
-        {/* Practice Schedule img */}
-        <div className={` ${style.hidingimage} bg-red-500 absolute w-[382px] h-[264px] left-[339px]  top-[400px] `}>
-          <div className=" absolute flex justify-center items-center w-[382px] h-[264px] rounded-[25px] bg-[#FFFFFF] shadow-2xl ">
-            <Image
-              className=""
-              layout="fixed "
-              width={300}
-              height={234}
-              src="/LargeCheckTable.png"
-              alt="Cecktable"
-            />
-          </div>
-        </div>
-      </div>
+    
+      <SeamlessAppointmentManagement 
+      image1={"/Superchargehead.png"} 
+      image2={"/Superchargebody.png"} 
+      image3={"/LargeCheckTable.png"} 
+      header={"Seamless Appointment Management"} 
+      paragraph={"Our intuitive interface allows you to efficiently manage appointments, allocate resources, and eliminate scheduling conflicts. Visualize your clinic's daily schedule with a user-friendly calendar view."} 
+      textbutton={"Manage your appointment"}/>
 
       {/* Green background container, some of the css in background is in global */} 
       <div className="greenBackground flex justify-center items-center w-screen  max-h-[647px] mt-20 ">
@@ -137,7 +77,7 @@ const Clinics = () => {
 
 
         {/* Centralized Patient Records*/}
-        <div className={` bg-red-600 absolute flex  ${style.changetextcenter} flex-row  max-w-[1192px] w-screen max-h-[484px]  h-auto gap-[80px] `}>
+        <div className={` absolute flex  ${style.changetextcenter} flex-row  max-w-[1192px] w-screen max-h-[484px]  h-auto gap-[80px] `}>
           <CarleyoProvides
             header={"Centralized Patient Records"}
             paragraph={
