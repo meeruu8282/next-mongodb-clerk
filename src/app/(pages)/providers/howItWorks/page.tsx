@@ -6,6 +6,7 @@ import Greenbackground from "../Components/greenBackground";
 import SuperCharge from "../Components/superCharge";
 import { Public_Sans } from "next/font/google";
 import HowItWorksPartFive from "./howItWorksPartFive";
+import HowItWorksPartOne from "./HowItWorksPartOne";
 
 
 import HowItWorksBenefits from "./HowItWorksBenefits";
@@ -90,39 +91,20 @@ export default function Howitwork() {
             </div>
           </div>
 
-          <div className=" absolute w-[552.12px] h-[570px]  justify-between mt-[160px] items-center flex flex-col border border-black">
-            <div className="w-[532px] h-[60px] items-center">
-              <div className="flex border items-center border-white">
-                <div className="w-[50px] h-[60px] text-[#45AC60] leading-[60px] text-[40px] font-[Poppins] font-semibold">
-                  #1
-                </div>
-                <div className="w-[457px] h-[48px] border border-white flex items-center  mb-0">
-                  <h1 className="font-[Poppins] font-normal text-[32px] leading-[48px]">
-                    Registration & Profile Creation
-                  </h1>
-                </div>
-              </div>
-              <div>
-                <Image
-                  className="  ml-8 mt-5 "
-                  layout="fixed"
-                  width={466}
-                  height={310.26}
-                  src="/iPadPro.png"
-                  alt="ipad"
-                />
-              </div>
-            </div>
+       
 
-            <div className="  w-[552.12px] h-[151px] rounded-[25px] border   bg-gradient-to-br from-[#45AC60] to-[#7EDC97]  flex items-center justify-center ">
-              <div className="w-[490px] h-[96px] justify-center items-center ">
-                <div className="  flex justify-center items-center text-[20px] text-[Poppins] ">
-                  Registering as healthcare service providers. Create a
-                  comprehensive profile by entering their personal information
-                </div>
-              </div>
-            </div>
-          </div>
+       
+       
+          <HowItWorksPartOne 
+           hashtagNumber={"#1"} 
+           header={" Registration & Profile Creation"} 
+           imageSrc={"/iPadPro.png"}
+           text1={"Registering as healthcare service providers."} 
+           text2={"Create a comprehensive profile by entering their personal information"}/>
+          
+
+          
+
           <div className="absolute right-[60px] top-[732px] transform -translate-y-[50%]">
             <Image
               className="  "
