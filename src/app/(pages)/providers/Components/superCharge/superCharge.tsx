@@ -28,7 +28,7 @@ const SuperCharge: React.FC = () => {
         ></div>
         {/* Green background rectangle */}
         <div
-          className={`absolute w-[415px] h-[373px] ${style.removesecondrectangle}  top-0 left-0 rounded-bl-[40px] rounded-tl-[40px]  bg-[#45AC60] opacity-5`} 
+          className={`absolute w-[415px] h-[373px] ${style.removesecondrectangle} top-0 left-0 rounded-bl-[40px] rounded-tl-[40px]  bg-[#45AC60] opacity-5`} 
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
         >
           
