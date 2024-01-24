@@ -1,16 +1,9 @@
-import Link from "next/link";
-
 import Image from "next/image";
-import CarelyoButton from "../Components/getStartedButton";
-import Greenbackground from "../Components/greenBackground";
 import SuperCharge from "../Components/superCharge";
-import { Public_Sans } from "next/font/google";
 import HowItWorksPartFive from "./howItWorksPartFive";
-
 
 import HowItWorksBenefits from "./HowItWorksBenefits";
 import "./howitwork.css";
-import { title } from "process";
 import BlurBackGroundDesign from "../Components/blurBackGroundDesign";
 import HowItWorksWelcome from "./HowItWorksWelcome";
 import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
@@ -57,12 +50,6 @@ export default function Howitwork() {
           imageSrc4={"/Ellipse11520.svg"}
         />
       </div>
-
-      
-
-
-  
-      
 
 
 
@@ -221,15 +208,6 @@ export default function Howitwork() {
       </div>
 
 
-      <div className="flex">
-      <HowItWorksPartFour 
-      hashtagNumber={"#4"}
-       header={"Appointment Booking"} 
-       imageSrc={"/drsamuel.jpg"} 
-       text1={`Select the "See a Doctor" option to schedule an appointment.`} 
-       text2={"Choose a convenient date and time for your appointment."}/>
-      </div>
-
 
 
       <div className=" w-full flex justify-center items-center">
@@ -243,6 +221,14 @@ export default function Howitwork() {
             text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."}
           />
         </div>
+
+      <div className="flex">
+      <HowItWorksPartFour 
+      hashtagNumber={"#4"}
+       header={"Appointment Booking"} 
+       imageSrc={"/drsamuel.jpg"} 
+       text1={`Select the "See a Doctor" option to schedule an appointment.`} 
+       text2={"Choose a convenient date and time for your appointment."}/>
       </div>
 
 
@@ -262,8 +248,38 @@ export default function Howitwork() {
           checkmarkboxheader3={"Synchronized Patient Communication"}
           checkmarkboxparagraph3={"Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations."}
         />
+      <div className=" w-full flex justify-center items-center">
+        <div className="w-[100%] ">
+          <HowItWorksPartFive
+            hashtagNumber={"#5"}
+            header={"Consultation and Care"}
+            imageSrc1={"/ipadimagehowItWorks708.png"}
+            imageSrc2={"/mobilePhonehowitworksimage707.png"}
+            text1={"During the consultation, providers engage with the client, conduct assessments, diagnose conditions, recommend treatments, and provide medical advice."}
+            text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."}
+          />
+        </div>
       </div>
 
+
+
+
+
+
+
+
+      <div className="w-full flex justify-center items-center mt-8">
+        <HowItWorksBenefits
+          image={"/Rectangle34624354.png"}
+          header={"THE BENEFITS OF JOINING CARELYO AS A PROVIDER"}
+          checkmarkboxheader1={"Expanded Reach and Patient Base"}
+          checkmarkboxparagraph1={"Reach a larger pool of potential patients, including those who prefer the convenience of online consultations. "}
+          checkmarkboxheader2={"Easy Appointment Management"}
+          checkmarkboxparagraph2={"Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. "}
+          checkmarkboxheader3={"Synchronized Patient Communication"}
+          checkmarkboxparagraph3={"Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations."}
+        />
+      </div>
 
 
 
