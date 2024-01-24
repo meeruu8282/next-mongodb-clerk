@@ -25,12 +25,12 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
         <div className="flex flex-col justify-center items-center w-full max-w-[552.12px] mx-auto h-full max-h-[570px] text-[Poppins] ">
 
 
-            <div className="flex w-[100%] flex-row justify-start items-center font-normal gap-7 pb-3">
+            <div className="flex w-[100%] flex-row justify-start items-center font-normal pb-3 gap-6">
                 <div className="flex justify-center items-center">
                     <h1 className="flex justify-center items-center text-[Poppins] text-4xl font-semibold text-[#45AC60] leading-10">{hashtagNumber}</h1>
                 </div>
                 <div className="flex justify-center items-center">
-                    <h2 className={`flex justify-center items-center text-[Poppins] text-3xl font-normal text-[#000000] leading-10 ${style.textXlarge}`}> {header}</h2>
+                    <h2 className="flex justify-center items-center text-[Poppins] text-3xl font-normal text-[#000000] leading-10"> {header}</h2>
                 </div>
             </div>
 
