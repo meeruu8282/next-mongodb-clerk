@@ -2,6 +2,7 @@ import Image from "next/image";
 import SuperCharge from "../Components/superCharge";
 import HowItWorksPartFive from "./howItWorksPartFive";
 import HowItWorksPartOne from "./HowItWorksPartOne";
+import HowItWorksPartTwo from "./HowItWorksPartTwo";
 
 import HowItWorksBenefits from "./HowItWorksBenefits";
 import "./howitwork.css";
@@ -104,54 +105,15 @@ export default function Howitwork() {
             />
           </div>
 
-          <div className="w-[597px] h-[575.94px] ml-[130px] justify-center  mt-[715px]">
-            <div className="flex justify-center items-center w-[552px] h-[60px]">
-              <div className=" w-[58px] h-[60px]">
-                <div className="font-[Poppins] font-semibold text-[40px] text-[#45AC60] leading-[60px] ">
-                  #2
-                </div>
-              </div>
-              <div className=" items-center w-[475px] h-[48px]">
-                <div className=" font-[Poppins] font-medium text-[32px] leading-[48px] ">
-                  Listing Services and Availability
-                </div>
-              </div>
-            </div>
+          <div className="w-full flex justify-center items-center mt-10">
 
-            <div className="w-[597] h-[66px] ml-5">
-              <div className=" font-[Poppins] text-[20px] leading-[32px] tracking-tighter opacity-50">
-                List the healthcare services they offer on their profile page.
-                Shares their clinic.carelyo.io website with patient
-              </div>
-            </div>
-            <div className=" absolute justify-centerw-[554px] h-[425px] border-[2px] border-[#45AC60] rounded-[25px] flex items-center mt-5 right-[110px]">
-              <div className="w-[518.74px] h-[394.39px] ">
-                <div>
-                  <Image
-                    className=" absolute   "
-                    layout="fixed"
-                    width={518.74}
-                    height={394.39}
-                    src="/Group 1000005951 1 (1).svg"
-                    alt="add service"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-[431px] h-[60px] flex  justify-center items-center font-semibold font-[Poppns]">
-            <div>
-              <h1 className="w-[61px] h-[60px] text-[40px] items-center text-[#45AC60]">
-                {" "}
-                #5
-              </h1>
-            </div>
-            <div>
-              <h1 className="w-[351px] h-[48px] text-[32px]">
-                Consultation and Care
-              </h1>
-            </div>
+            <HowItWorksPartTwo 
+            hashtagNumber={"#2"}
+             header={"Listing Services and Availability"} 
+             text1={"List the healthcare services they offer on their profile page."} 
+             text2={"Shares their clinic.carelyo.io website with patient"}
+             imageSrc={"/Group 1000005951 1 (1).svg"} />
+           
           </div>
         </div>
 
