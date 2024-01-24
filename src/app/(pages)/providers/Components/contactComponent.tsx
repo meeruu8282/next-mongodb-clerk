@@ -55,7 +55,7 @@ export default function ContactComponent() {
                                 <path d="M2.5 2.5H16.5V13H3.52375L2.5 14.0238V2.5ZM2.5 0.75C1.5375 0.75 0.75875 1.5375 0.75875 2.5L0.75 18.25L4.25 14.75H16.5C17.4625 14.75 18.25 13.9625 18.25 13V2.5C18.25 1.5375 17.4625 0.75 16.5 0.75H2.5ZM4.25 9.5H11.25V11.25H4.25V9.5ZM4.25 6.875H14.75V8.625H4.25V6.875ZM4.25 4.25H14.75V6H4.25V4.25Z" fill="#8E8E8F" />
                             </svg>
                             <textarea
-                                className="pl-11 h-[8.5rem] resize-none text-[Poppins] text-[16px] border rounded h-full w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="pl-11 h-[8.5rem] resize-none text-[Poppins] text-[16px] border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="message"
                                 placeholder="Tell us a little about carelyo..."
                             />
