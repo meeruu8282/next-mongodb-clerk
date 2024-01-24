@@ -269,10 +269,9 @@ export default function Howitwork() {
 
 
 
-
-      <div className="">
         <SuperCharge />
       </div>
+    </div>
     </div>
   );
 }
