@@ -11,10 +11,6 @@ interface HowItsWorkPartFourTemplateProps {
 
 
 
-
-
-
-
 const HowItWorksPartFour: React.FC<HowItsWorkPartFourTemplateProps> = ({
   imageSrc,
   hashtagNumber,
