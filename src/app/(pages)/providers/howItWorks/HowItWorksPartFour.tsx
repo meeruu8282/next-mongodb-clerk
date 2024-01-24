@@ -1,42 +1,71 @@
 import Image from "next/image";
 
-const HowItWorksPartFour: React.FC = () => {
-  return (
-    <div className="  ">
-      <div className="flex flex-col w-[518px] h-[581px]  ml-11">
-        <div className="w-[416px] h-[60px] gap-[16px] flex ">
-          <div className="w-[62px] h-[60px] font-semibold font-[Poppins] text-[40px]">
-            <h4 className=" text-[#45AC60]">#4</h4>
-          </div>
+interface HowItsWorkPartFourTemplateProps {
+  imageSrc: string;
+  hashtagNumber: string;
+  header: string;
+  text1: string;
+  text2: string;
+  
+}
 
-          <div className="flex items-center">
-            {" "}
-            <h1 className="font-normal text-[32px] font-[Poppins]">
-              Appointment Booking
-            </h1>{" "}
-          </div>
+
+
+
+
+
+
+const HowItWorksPartFour: React.FC<HowItsWorkPartFourTemplateProps> = ({
+  imageSrc,
+  hashtagNumber,
+  header,
+  text1,
+  text2
+  
+}) => {
+  return (
+   
+
+
+    <div className="flex flex-col w-full max-w-[518px] mx-auto justify-center h-full  max-h-[581px] items-center text-[Poppins]">
+
+      {/* Header */}
+      <div className="flex w-[90%] flex-row justify-start items-center font-normal gap-4 pb-3">
+        <div className="flex justify-center items-center">
+          <h1 className="flex justify-center items-center text-[Poppins] text-5xl font-semibold text-[#45AC60] leading-10">{hashtagNumber}</h1>
         </div>
-        <div>
-          <Image className="rounded-[25px]"
-            layout="fixed"
-            width={518}
-            height={311}
-            src="/drsamuel.jpg"
-            alt="appointment_booking"
-           
-          />
-        </div>
-        <div className="w-[518px] h-[172px]  rounded-[25px]  bg-gradient-to-br from-[#45AC60] to-[#7EDC97]   flex justify-center items-center mt-9">
-          <div className="w-[456px] h-[128px] flex justify-center items-center ">
-            <h3 className="text-[20px] font-normal leading-[32px] text-[#FAFAFA] flex justify-center items-center font-[Poppin]">
-    
-              Select the "See a Doctor" option to schedule an appointment.
-              Choose a convenient date and time for your appointment.
-            </h3>
-          </div>
+        <div className="flex justify-center items-center">
+          <h2 className="flex justify-center items-center text-[Poppins] text-3xl font-normal text-[#000000] leading-10"> {header}</h2>
         </div>
       </div>
+
+      <div className="flex w-[90%] flex-row justify-center items-center font-normal pb-3">
+        <Image className="rounded-3xl"
+         layout="responsive"
+          width={518}
+          height={311}
+          src={imageSrc}
+          alt="appointment_booking"
+
+        />
+      </div>
+
+      <div className="flex w-[90%] flex-col justify-center items-center font-normal  bg-gradient-to-br from-[#45AC60] to-[#7EDC97] rounded-3xl text-[Poppins]">
+        <p className="flex flex-col justify-center items-center w-[100%] px-6 py-4 text-[#FAFAFA]">  {text1} <br />  {text2}
+        </p>
+      
+      </div>
+
+
+
     </div>
+
+  
+
+
+
+
+
   );
 };
 export default HowItWorksPartFour;
