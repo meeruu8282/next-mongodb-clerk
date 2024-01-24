@@ -89,7 +89,7 @@ export default function ContactComponent() {
                         <Image
                             src="/Map.png"
                             alt="Map of Swedcon18s location"
-                            width={480}
+                            width={490}
                             height={480}
                         />
                         <button className="absolute bottom-6 right-8 bg-[#FFFFFF] text-[#45AC60] py-2.5 px-5 rounded-[18px]" onClick={() => setIsOpen(true)}>View map</button>
