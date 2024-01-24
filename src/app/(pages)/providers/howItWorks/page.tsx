@@ -203,6 +203,7 @@ export default function Howitwork() {
             text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."}
           />
         </div>
+        </div>
 
       <div className="flex">
       <HowItWorksPartFour 
@@ -230,6 +231,8 @@ export default function Howitwork() {
           checkmarkboxheader3={"Synchronized Patient Communication"}
           checkmarkboxparagraph3={"Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations."}
         />
+        </div>
+          
       <div className=" w-full flex justify-center items-center">
         <div className="w-[100%] ">
           <HowItWorksPartFive
@@ -271,7 +274,7 @@ export default function Howitwork() {
 
         <SuperCharge />
       </div>
-    </div>
-    </div>
+   
+  
   );
 }
