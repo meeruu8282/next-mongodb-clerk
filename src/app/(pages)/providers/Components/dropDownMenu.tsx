@@ -48,13 +48,13 @@ function DropdownMenu() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button onClick={() => setIsOpen(!isOpen)}>Platform</button>
+      <button className="hover:text-[#45AC60]" onClick={() => setIsOpen(!isOpen)}>Platform</button>
       <div className={isOpen ? "dropdown-list block" : "dropdown-list hidden"}>
         <ul className="mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
-            
-              <div  className="block px-4 py-2 hover:text-[#5EEF84]  cursor-pointer"       >   Clinics </div>
+
+              <div  className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer"       >   Clinics </div>
             </Link>
           </li>
           <li className="border-b">
