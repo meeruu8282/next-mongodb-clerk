@@ -15,8 +15,8 @@ export default function SignUpProvisers(props: {
 }) {
   return (
     <div className=" justify-center items-center">
-    
-        <div className="background-greenFillText  absolute z-[-500] flex justify-center items-center w-screen h-[554px] top-0  bg-[#45AC601A]">
+
+        <div className="background-greenFillText  absolute z-[-500] flex justify-center items-center w-screen h-[554px] top-0  bg-sageOpacityHigh">
           <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
             <div className="w-[883px] h-[52px] flex justify-center ">
               <h1 className=" text-[40px] font-[Poppins] font-semibold ">
@@ -61,7 +61,7 @@ export default function SignUpProvisers(props: {
                             />
                           </div>
 
-                        
+
                         </div>
                       </div>
                     </div>
@@ -84,7 +84,7 @@ export default function SignUpProvisers(props: {
                         </div>
                       </div>
 
-                    
+
                     </div>
                   </div>
                   <div className=" flex  w-[1114px] h-[84px]   ">
@@ -108,7 +108,7 @@ export default function SignUpProvisers(props: {
                             />
                           </div>
 
-                        
+
                         </div>
                       </div>
                     </div>
@@ -159,8 +159,8 @@ export default function SignUpProvisers(props: {
                     </div>
                     <div className=" flex w-full h-[22px] font-[Poppins] font-normal  text-[16px]">
                       I have read and agree to Carelyo for Doctor Services
-                      <h4 className=" flex ml-3 text-[#45AC60] text-[16px] font-normal font-Poppins ">
-                  
+                      <h4 className=" flex ml-3 text-sage text-[16px] font-normal font-Poppins ">
+
                         Terms of use and Privacy Policy.
                       </h4>
                     </div>
@@ -169,12 +169,12 @@ export default function SignUpProvisers(props: {
               </div>
             </div>
             <div className=" w-[1114px] h-[54px] flex font-[Poppins] ">
-              <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-[#45AC60] hover:bg-[#45AC60]  hover:text-[#FFFFFF] ">
+              <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage hover:bg-sage  hover:text-white ">
                 <h1 className=" w-[41px] h-[22px]  flex justify-center items-center">
                   Back
                 </h1>
               </div>
-              <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-[#45AC60]  hover:text-white hover:bg-[#45AC60]">
+              <div className=" flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage  hover:text-white hover:bg-sage">
                 <h1 className="  w-[75px] h-[22px]  flex justify-center items-center">
                   Continue
                 </h1>
@@ -183,6 +183,6 @@ export default function SignUpProvisers(props: {
           </div>
         </div>
       </div>
-   
+
   );
 }

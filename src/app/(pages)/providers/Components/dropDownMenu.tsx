@@ -40,8 +40,8 @@ function DropdownMenu() {
     }, 500);  // Fördröj stängningen med 500 ms
   }
 
-  return ( 
-  
+  return (
+
     <div
       ref={dropdownRef}
       className=" relative z-[1000]"
@@ -50,57 +50,57 @@ function DropdownMenu() {
       onMouseLeave={handleMouseLeave}
     >
 
-     
-      <button className=" w-[85px] flex justify-between items-center font-semibold " onClick={() => setIsOpen(!isOpen)}>Platform  
+
+      <button className=" w-[85px] flex justify-between items-center font-semibold " onClick={() => setIsOpen(!isOpen)}>Platform
          <Image
             className="relative "
             width={12}
             height={9}
             src="/platformdropdownarrow.svg"
             alt=""
-          /> </button>  
-      
-      
+          /> </button>
+
+
 
       <div className={isOpen ? "dropdown-list block" : "dropdown-list hidden"}>
         <ul className=" w-[200px] mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
 
-              <div  className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer"       >   Clinics </div>
+              <div  className="block px-4 py-2 hover:text-sage  cursor-pointer"       >   Clinics </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/diagCenters">
-              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-sage  cursor-pointer">
                 Diagnostisk Center
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/hospitals">
-              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-sage  cursor-pointer">
                 Hostpital
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/labCenters">
-              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-sage  cursor-pointer">
                 LabCenter
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/pharmacies">
-              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-sage  cursor-pointer">
                 Pharmacies
               </div>
             </Link>
           </li>
           <li>
             <Link href="/providers/platforms/seDoctors">
-              <div className="block px-4 py-2 hover:text-[#45AC60]  cursor-pointer">
+              <div className="block px-4 py-2 hover:text-sage  cursor-pointer">
                 SeDoctors
               </div>
             </Link>

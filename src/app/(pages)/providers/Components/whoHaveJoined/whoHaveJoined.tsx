@@ -18,10 +18,10 @@ interface WhoHaveJoinedTamplateProps {
     infoParagraph1: string;
     infoParagraph2: string;
     infoParagraph3: string;
-  
-   
+
+
   }
-  
+
   const WhoHaveJoinedTamplate: React.FC<WhoHaveJoinedTamplateProps> = ({
     greenHeaderpart,
     blackHeaderpart,
@@ -37,13 +37,13 @@ interface WhoHaveJoinedTamplateProps {
     infoParagraph1,
     infoParagraph2,
     infoParagraph3,
-    
-  
-  
+
+
+
   }) => {
   return (
 
-    
+
 
     <div className='flex justify-center items-center '>
       {/* mediaqueries is imorted from whoHaveJoined.module.css with  ${style.nameofmediaquerie}   */}
@@ -76,11 +76,11 @@ interface WhoHaveJoinedTamplateProps {
                       <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5 ">
                       {imageHeader1}
                       </h1>
-                      <p className=" h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C] mt-2 ">
+                      <p className=" h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLight mt-2 ">
                       {titleParagraph1}
                       </p>
                     </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] mt-1 ">
+                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLighter mt-1 ">
                     {infoParagraph1}
                     </p>
                   </div>
@@ -105,11 +105,11 @@ interface WhoHaveJoinedTamplateProps {
                       <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5 ">
                       {imageHeader2}
                       </h1>
-                      <p className="h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C] mt-2 ">
+                      <p className="h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLight mt-2 ">
                       {titleParagraph2}
                       </p>
                     </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] mt-1 ">
+                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLighter mt-1 ">
                     {infoParagraph2}
                     </p>
                   </div>
@@ -131,32 +131,32 @@ interface WhoHaveJoinedTamplateProps {
                 </div>
 
                 <div className="w-[350px] h-[114px] gap-[24px]">
-              
+
                 <div className="w-[346px] h-[130px] gap-[16px]">
                     <div className="w-[350px] h-[70px] gap-[3px] ">
                       <h1 className="text-[Poppins] text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5 ">
                       {imageHeader3}
                       </h1>
-                      <p className=" h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C] mt-2 ">
+                      <p className=" h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLight mt-2 ">
                       {titleParagraph3}
                       </p>
                     </div>
-                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-[#A6A6A6] mt-1 ">
+                    <p className="w-[329px] h-[44px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLighter mt-1 ">
                     {infoParagraph3}
                     </p>
-                  </div> 
+                  </div>
                    </div>
               </div>
             </div>
           </div>
-         
+
         </div> <Link href="/providers/auth/signIn" passHref>
           <button className="carelyoButton absolute w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0  bottom-0">
             <div>
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Get Carelyo
                 <div className="ml-3">
-                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
+                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

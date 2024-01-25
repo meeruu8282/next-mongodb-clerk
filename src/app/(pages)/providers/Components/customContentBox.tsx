@@ -44,15 +44,15 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
   console.log("1a log id ", id);
   return (
     <div
-      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-[#45AC60] ${
-        id === selectedBox ? "bg-[#45AC60]" : ""
+      className={`customContentBoxBackgrund w-[391.33px] h-[463px] border-[3px] rounded-[25px] border-sage ${
+        id === selectedBox ? "bg-sage" : ""
       }`}
     >
       <div className=" w-[333.98px] h-[413.09px] mt-[27.61px] ml-[27.67px] item-center   ">
         <div className="w-[333.98px] flex justify-between h-[32px] p-2  ">
           <div
-            className={`justify-between items-center w-[224px] h-[26px] text-[#45AC60] ${
-              id === selectedBox ? "text-white" : ""
+            className={`justify-between items-center w-[224px] h-[26px] ${
+              id === selectedBox ? "text-white" : "text-sage"
             }`}
           >
             <div className="text-[-2%] leading-tight"> {title} </div>
@@ -70,7 +70,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
         <div className="flex ml-1 mt-3 text-[32px] w-[224px] h-[51px]">
           <h1
             className={`leading-tight font-[Poppins] font-semibold ${
-              id === selectedBox ? "text-[#FFFFFF] " : ""
+              id === selectedBox ? "text-white " : ""
             }`}
           >
             {monthlyCost}
@@ -78,7 +78,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
         </div>
         <div
           className={`ml-3 w-[198px] h-[44px] opacity-50 font-[Poppins] font-normal text-[14px] ${
-            id === selectedBox ? "text-[#FFFFFF] opacity-[100]" : ""
+            id === selectedBox ? "text-white opacity-[100]" : ""
           }`}
         >
           {descriptionLines.map((line, idx) => (
@@ -104,7 +104,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
 
               <div
                 className={`w-[331.98px] h-[24px] opacity-50${
-                  id === selectedBox ? "text-[#FFFFFF] opacity-[100]" : ""
+                  id === selectedBox ? "text-white opacity-[100]" : ""
                 }`}
               >
                 <div> {feature} </div>
@@ -113,7 +113,7 @@ const CustomContentBox: React.FC<CheckboxItemProps & CustomContentBoxProps> = ({
           ))}
         </div>
 
-        <div className=" mt-[80px]  justify-center items-center  rounded-[35px] border-2 border-[white]">
+        <div className="mt-[80px] justify-center items-center rounded-[35px] hover:outline hover:outline-2 hover:outline-white">
           <CarelyoButton
             buttonText={buttonText}
             size="large"

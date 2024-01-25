@@ -9,16 +9,16 @@ interface CheckTextboxTemplateProps {
 }
 
 const CheckTextbox: React.FC<CheckTextboxTemplateProps> = ({
-  
+
   header,
   paragraph,
 
- 
+
 }) => {
   return (
     <div className=" flex flex-col justify-start items-center gap-2 ">
     <div className="flex flex-row justify-center items-center w-full">
-      <div className="h-auto w-auto rounded-2xl p-2 bg-[#45AC60] bg-opacity-[10%] gap-3">
+      <div className="h-auto w-auto rounded-2xl p-2 bg-sage bg-opacity-[10%] gap-3">
       <div className="w-auto h-auto rounded-full items-center">
               <svg
                 width="20"

@@ -45,7 +45,7 @@ export default function LabCenters() {
       <JoiningCarelyoEnablesYouto
         header={"Joining Carelyo Enables You to:"}
         paragraph={"Don't miss out on the transformative power of Carelyo for your laboratory center. Join our platform today and unlock a new era of efficiency, accuracy, and excellence in laboratory services"}
-        image={"/chemistdoctor.png"}  
+        image={"/chemistdoctor.png"}
         header01={"01. Streamline Workflows"}
         paragraph01={"Simplify and automate essential processes, reducing manual efforts and eliminating errors. From sample intake to result delivery, experience a seamless workflow that saves time and improves productivity."}
         header02={"02. Optimize Resource Management"}
@@ -53,7 +53,7 @@ export default function LabCenters() {
         header03={"03. Enhance Patient Care"}
         paragraph03={"Provide patients with accurate and timely test results, enabling faster diagnoses and personalized treatment plans. With Carelyo, you can deliver superior patient experiences, fostering trust and loyalty among your clientele."}
         header04={"04. Foster Collaboration"}
-        paragraph04={"Collaborate seamlessly with healthcare providers, referring physicians, and patients. Share test results securely, exchange critical information, and facilitate effective communication to deliver comprehensive care."} 
+        paragraph04={"Collaborate seamlessly with healthcare providers, referring physicians, and patients. Share test results securely, exchange critical information, and facilitate effective communication to deliver comprehensive care."}
             />
 
       {/* Joining Carelyo Enables You to: not yet implemented, but code should be here  */}
@@ -92,7 +92,7 @@ export default function LabCenters() {
           <div className=" relative w-[521px] h-[484px]   ">
             <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
               <div
-                className="greenCircle  bg-[#45AC60] w-[100px]  h-[100px] "
+                className="greenCircle  bg-sage w-[100px]  h-[100px] "
                 style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
               ></div>
             </div>

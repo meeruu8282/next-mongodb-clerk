@@ -82,7 +82,7 @@ const SelectRoleCard: React.FC<selectRoleCardProps> = ({
       </div>
       <div
         className={`   flex justify-center items-center w-[23.33px] h-[23.33px] border rounded-full mt-6 ml-6 ${
-          isSelected ? "t bg-[#45AC60]" : ""
+          isSelected ? "bg-sage" : ""
         }`}
         onClick={onSelect}
       >
@@ -150,7 +150,7 @@ const RoleSelection: React.FC<selectRoleCardProps> = ({ onRoleChange }) => {
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
- 
+
 
   const [selectedRole, setSelectedRole] = useState<
     "icon1" | "icon2" | "icon3" | null
@@ -163,12 +163,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   ) => {
     if (!selectedRole) {
       e.preventDefault(); // Förhindra att länken navigerar om ingen roll är vald.
-      
+
       alert("please select your role!")
     }
   };
 
-  
+
   if (!isOpen) return null;
 
   return (
@@ -225,11 +225,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         />
 
         <div className=" w-[457px] h-[384px]">
-          <div className="w-[457px] h-[54px] bg-[#45AC60] flex justify-center items-center mt-6">
+          <div className="w-[457px] h-[54px] bg-sage flex justify-center items-center mt-6">
             <div className="w-[67px] h-[22px]flex items-center font-semibold">
               <Link
                 href={getLinkForRole()}
-                className=" text-[#FFFFFF]  gap-[5px}"
+                className=" text-white  gap-[5px}"
               >
                 <nav
                   onClick={handleLinkClick}

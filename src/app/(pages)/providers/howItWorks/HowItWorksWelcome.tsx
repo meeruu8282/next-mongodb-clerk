@@ -17,7 +17,7 @@ interface HowItsWorkWelcomeTemplateProps {
 
 
 
-const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({ 
+const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
 
     welcomeText,
@@ -36,7 +36,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
                 <div className={`flex w-full justify-start items-center ${style.make85Width}`}>
-                    <h1 className="text-[16px] text-[#45AC60] font-semibold font-[Poppins]">
+                    <h1 className="text-[16px] text-sage font-semibold font-[Poppins]">
                         {welcomeText}
                     </h1>
                 </div>
@@ -65,7 +65,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                     <div className="flex">
                         <div className="w-full ">
                             <div className="w-[116px] h-[22px] flex">
-                                <div className="font-semibold text-[16px] text-[#000000] font-[Poppins]">
+                                <div className="font-semibold text-[16px] text-black font-[Poppins]">
                                     {textButton2}
                                 </div>
                             </div>
@@ -105,12 +105,12 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
             </div>
 
             <div className={`w-full h-[100%] flex justify-end items-center ${style.hidingImage}`}>
-                <Image 
+                <Image
                     src={imageSrc}
                     alt="entre"
                     width={698}
                     height={667} />
-            </div> 
+            </div>
 
         </div>
 
@@ -118,7 +118,3 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 };
 
 export default HowItWorksWelcome;
-
-
-
-
