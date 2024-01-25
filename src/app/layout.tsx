@@ -69,7 +69,12 @@ export default function RootLayout({
 <div className="min-h-screen">
         {children}
         </div>
-        <FooterMobile/>
+        <div className="hidden md:block">
+            <Footer/>
+        </div>
+        <div className="block md:hidden">
+            <FooterMobile/>
+        </div>
       </body>
     </html>
   )
