@@ -24,7 +24,7 @@ const HowItWorksPartTwo: React.FC<HowItsWorkPartTwoTemplateProps> = ({
 
         <div className="flex flex-col w-full max-w-[597px] mx-auto justify-center h-full  max-h-[575.94px] items-center text-[Poppins]">
 
-            <div className="flex w-[100%] flex-row justify-start items-center font-normal gap-4 ">
+            <div className="flex w-[100%] flex-row justify-start items-center font-normal gap-6 ">
                 <div className="flex justify-center items-center">
                     <h2 className="flex justify-center items-center text-[Poppins] text-4xl font-semibold text-[#45AC60] leading-10"> {hashtagNumber} </h2>
                 </div>
