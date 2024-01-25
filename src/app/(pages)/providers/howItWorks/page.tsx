@@ -3,6 +3,7 @@ import SuperCharge from "../Components/superCharge";
 import HowItWorksPartFive from "./howItWorksPartFive";
 import HowItWorksPartOne from "./HowItWorksPartOne";
 import HowItWorksPartTwo from "./HowItWorksPartTwo";
+import HowItWorksThree from "./HowItWorksThree";
 
 import HowItWorksBenefits from "./HowItWorksBenefits";
 import "./howitwork.css";
@@ -138,6 +139,18 @@ export default function Howitwork() {
           </div>
         </div>
       </div>
+
+
+       <div className="w-full flex justify-center items-center">
+       <HowItWorksThree 
+      imageSrc={"/NewMacbookProMockupFrontView.png"} 
+      hashtagNumber={"#3"} 
+      header={"Write your heading here"} 
+      text1={"Visit the website provided by your provider to access their Carelyo platform."} 
+      text2={"If it's your first time using the Carelyo platform, complete your profile by providing necessary personal and medical information."}/>
+
+       </div>
+      
 
 
 
