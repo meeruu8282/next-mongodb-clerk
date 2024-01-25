@@ -1,12 +1,12 @@
 import Image from "next/image"
 export default function LocationComponent() {
     return (
-        <div className="w-full h-[295px] bg-[#FAFAFA] flex justify-center mt-20">
+        <div className="w-full h-[295px] bg-neutral-50 flex justify-center mt-20">
             <div className="w-[1258px] flex justify-between">
                 <div className="flex flex-col justify-center">
-                    <a className="text-[#45AC60] pb-4" href="">Our locations</a>
+                    <a className="text-sage pb-4" href="">Our locations</a>
                     <h1 className="py-4 text-[Poppins] text-[33px] leading-[29px] font-semibold">Visit our stores</h1>
-                    <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C]">Find us at these locations.</p>
+                    <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-grayLight">Find us at these locations.</p>
                 </div>
                 <div className="flex flex-col justify-center">
                     <Image
@@ -16,7 +16,7 @@ export default function LocationComponent() {
                         height={68}
                     />
                     <h3 className="py-4 text-[Poppins] text-[22px] leading-[29px] font-semibold">Address</h3>
-                    <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C]">Swedcon18 AB, Allmogevägen 106,<br></br> 352 53 Växjö, Sweden</p>
+                    <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-grayLight">Swedcon18 AB, Allmogevägen 106,<br></br> 352 53 Växjö, Sweden</p>
                 </div>
                 <div className="flex flex-col p-2 justify-center">
                     <div className="flex pb-4">
@@ -33,7 +33,7 @@ export default function LocationComponent() {
                         </svg>
                         <div className="flex flex-col pl-4">
                             <h3 className="text-[Poppins] text-[20px] leading-[29px] font-semibold">Email</h3>
-                            <a href="mailto:hello@swedcon18.com" className="text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C] pt-4">hello@swedcon18.com</a>
+                            <a href="mailto:hello@swedcon18.com" className="text-[Poppins] text-[16px] leading-[22px] text-grayLight pt-4">hello@swedcon18.com</a>
                         </div>
                     </div>
                     <div className="flex pt-4 py-4">
@@ -50,7 +50,7 @@ export default function LocationComponent() {
                         </svg>
                         <div className="flex flex-col pl-4">
                             <h3 className="text-[Poppins] text-[20px] leading-[29px] font-semibold">Phone Number</h3>
-                            <a href="tel:+46701410631" className="text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C] pt-4">+46701410631</a>
+                            <a href="tel:+46701410631" className="text-[Poppins] text-[16px] leading-[22px] text-grayLight pt-4">+46701410631</a>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ interface CheckTextboxTamplateProps {
 }
 
 const CheckTextbox: React.FC<CheckTextboxTamplateProps> = ({
-  
+
   header,
   paragraph,
 
@@ -17,7 +17,7 @@ const CheckTextbox: React.FC<CheckTextboxTamplateProps> = ({
   return (
     <div className=" flex flex-col justify-between ">
     <div className="flex flex-row items-center gap-2">
-      <div className="h-[45px] w-[45px] rounded-[15px] p-3 bg-[#45AC60] bg-opacity-[10%] gap-10  ">
+      <div className="h-[45px] w-[45px] rounded-[15px] p-3 bg-sage bg-opacity-[10%] gap-10  ">
         <Image
           className=""
           layout="fixed"

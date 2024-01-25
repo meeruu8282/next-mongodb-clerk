@@ -51,7 +51,7 @@ const JoinCarelyheader: React.FC<JoinCarelyoHeaderProps> = ({ userType }) => {
         <div className=" absolute w-[289px] h-[396px] top-[190px] left-0 mt-[200px] ">
           <div className=" flex flex-col w-[289px] h-[276px] gap-[32px] ">
             <div className=" flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[30px] h-[30px]">
                   {/* icon */}{" "}
                   <svg
@@ -75,7 +75,7 @@ const JoinCarelyheader: React.FC<JoinCarelyoHeaderProps> = ({ userType }) => {
             </div>
 
             <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <svg
@@ -98,7 +98,7 @@ const JoinCarelyheader: React.FC<JoinCarelyoHeaderProps> = ({ userType }) => {
             </div>
 
             <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <svg
@@ -121,7 +121,7 @@ const JoinCarelyheader: React.FC<JoinCarelyoHeaderProps> = ({ userType }) => {
             </div>
 
             <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <svg
@@ -149,7 +149,7 @@ const JoinCarelyheader: React.FC<JoinCarelyoHeaderProps> = ({ userType }) => {
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Join Carelyo Now
                 <div className="ml-3">
-                  <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
+                  <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

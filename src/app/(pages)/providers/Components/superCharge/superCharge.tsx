@@ -16,10 +16,10 @@ const SuperCharge: React.FC = () => {
         </div>
         {/* Green background rectangle */}
         <div
-          className={`absolute w-[415px] h-[373px] ${style.removefirstrectangle} top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-[#45AC60] opacity-5`} 
+          className={`absolute w-[415px] h-[373px] ${style.removefirstrectangle} top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-sage opacity-5`}
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
         >
-          
+
         </div>
         {/* Corner triangle */}
         <div
@@ -28,10 +28,10 @@ const SuperCharge: React.FC = () => {
         ></div>
         {/* Green background rectangle */}
         <div
-          className={`absolute w-[415px] h-[373px] ${style.removesecondrectangle} top-0 left-0 rounded-bl-[40px] rounded-tl-[40px]  bg-[#45AC60] opacity-5`} 
+          className={`absolute w-[415px] h-[373px] ${style.removesecondrectangle} top-0 left-0 rounded-bl-[40px] rounded-tl-[40px]  bg-sage opacity-5`}
           style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
         >
-          
+
         </div>
         {/* Corner triangle */}
         <div
@@ -63,7 +63,7 @@ const SuperCharge: React.FC = () => {
             alt="Superchargebody"
           />
         </div>
-        <div className={`absolute bg-[#FFFFFF] ${style.hidedoctorimage}   top-20 w-[226px]   h-[99.03px] left-[55px] p-[25px 22px] rounded-[20px] gap-8`} >
+        <div className={`absolute bg-white ${style.hidedoctorimage}   top-20 w-[226px]   h-[99.03px] left-[55px] p-[25px 22px] rounded-[20px] gap-8`} >
           <div className="relative w-[49px] h-[49px] top-[25px] left-[22px] ">
             <Image
               className="absolute "
@@ -73,7 +73,7 @@ const SuperCharge: React.FC = () => {
               src="/Ellipse.jpg"
               alt="Ellipse"
             />
-            <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-[#2B9B5B] "></div>
+            <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-sageDark "></div>
           </div>
 
           {/* improvement make 24/7 a tamplate and reuse the code */}
@@ -86,7 +86,7 @@ const SuperCharge: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className={`absolute flex justify-center ${style.hidedoctorimage} items-center w-[68px] h-[68.02px] top-[250px]  left-[440px]  rounded-[20px] gap-8 bg-[#2B9B5B] `} >
+        <div className={`absolute flex justify-center ${style.hidedoctorimage} items-center w-[68px] h-[68.02px] top-[250px]  left-[440px]  rounded-[20px] gap-8 bg-sageDark `} >
           <div className="w-[24px] h-[24px] flex justify-center items-center ">
             <svg
               width="16"
@@ -105,28 +105,28 @@ const SuperCharge: React.FC = () => {
         <div className={`absolute flex flex-col ${style.centertext} ${style.alignback} w-screen h-auto  max-w-[593px] max-h-[270px] top-[51px] left-[576px] gap-[36px] `} >
           <div className=" relative w-screen max-w-[593px] min-h-[162px] gap-[12px] ">
             <div className="max-w-[593px] max-h-[120px] w-screen h-auto">
-              <h1 className={`text-[poppins] text-[40px] ${style.mediumtext}  font-semibold leading-15 tracking-normal  text-left text-[#FFFFFF]`} >
+              <h1 className={`text-[poppins] text-[40px] ${style.mediumtext}  font-semibold leading-15 tracking-normal  text-left text-white`} >
                 Supercharge Productivity with Carelyo!
               </h1>
             </div>
-            <div className=" w-screen h-auto  max-w-[307px] min-h-[30px] opacity-80 text-[#FFFFFF] bottom-0">
+            <div className=" w-screen h-auto  max-w-[307px] min-h-[30px] opacity-80 text-white bottom-0">
               <p className="">Connect through Carelyo now!</p>
             </div>
           </div>
-          
+
              <Link href="/providers/auth/signIn" passHref>
             <div className="  rounded-[25px] w-[228px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)] ">
               <CarelyoButton
-                className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-[#FFFFFF] gap-[12px] font-semibold "
+                className=" absolute w-[228px] h-[72px] p-[22px 32px] rounded-[25px]  border bg-opacity-25 bg-white gap-[12px] font-semibold "
                 buttonText="Connect Today"
               />
             </div>
           </Link>
-       
-         
+
+
           {/* white line under Productivity */}
           <svg
-            className={`absolute  ${style.moveunderline} ${style.removeline} top-[55px] left-[270px]`} 
+            className={`absolute  ${style.moveunderline} ${style.removeline} top-[55px] left-[270px]`}
             width="204"
             height="11"
             viewBox="0 0 204 11"

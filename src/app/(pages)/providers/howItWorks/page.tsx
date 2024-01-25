@@ -80,35 +80,35 @@ export default function Howitwork() {
             </div>
           </div>
 
-       
 
-       
+
+
           <div className="w-full flex justify-center items-center mt-10">
-          <HowItWorksPartOne 
-           hashtagNumber={"#1"} 
-           header={" Registration & Profile Creation"} 
+          <HowItWorksPartOne
+           hashtagNumber={"#1"}
+           header={" Registration & Profile Creation"}
            imageSrc={"/iPadPro.png"}
-           text1={"Registering as healthcare service providers."} 
+           text1={"Registering as healthcare service providers."}
            text2={"Create a comprehensive profile by entering their personal information"}/>
           </div>
 
-          
+
 
           <div className="w-full flex justify-center items-center mt-10">
 
-            <HowItWorksPartTwo 
+            <HowItWorksPartTwo
             hashtagNumber={"#2"}
-             header={"Listing Services and Availability"} 
-             text1={"List the healthcare services they offer on their profile page."} 
+             header={"Listing Services and Availability"}
+             text1={"List the healthcare services they offer on their profile page."}
              text2={"Shares their clinic.carelyo.io website with patient"}
              imageSrc={"/Group 1000005951 1 (1).svg"} />
-           
+
           </div>
         </div>
 
         <div className="flex justify-center  ">
           <Image
-            className="  bg-[#45AC600D] h-[2111px] w-[1px] border-[1px] mt-[100px]  item-center "
+            className="bg-sageOpacityHigher h-[2111px] w-[1px] border-[1px] mt-[100px]  item-center "
             layout="fixed"
             width={66}
             height={66}
@@ -142,26 +142,26 @@ export default function Howitwork() {
 
 
        <div className="w-full flex justify-center items-center">
-       <HowItWorksThree 
-      imageSrc={"/NewMacbookProMockupFrontView.png"} 
-      hashtagNumber={"#3"} 
-      header={"Write your heading here"} 
-      text1={"Visit the website provided by your provider to access their Carelyo platform."} 
+       <HowItWorksThree
+      imageSrc={"/NewMacbookProMockupFrontView.png"}
+      hashtagNumber={"#3"}
+      header={"Write your heading here"}
+      text1={"Visit the website provided by your provider to access their Carelyo platform."}
       text2={"If it's your first time using the Carelyo platform, complete your profile by providing necessary personal and medical information."}/>
 
        </div>
-      
+
 
 
 
 
 
       <div className="flex">
-      <HowItWorksPartFour 
+      <HowItWorksPartFour
       hashtagNumber={"#4"}
-       header={"Appointment Booking"} 
-       imageSrc={"/drsamuel.jpg"} 
-       text1={`Select the "See a Doctor" option to schedule an appointment.`} 
+       header={"Appointment Booking"}
+       imageSrc={"/drsamuel.jpg"}
+       text1={`Select the "See a Doctor" option to schedule an appointment.`}
        text2={"Choose a convenient date and time for your appointment."}/>
       </div>
 
@@ -179,7 +179,7 @@ export default function Howitwork() {
         </div>
         </div>
 
-    
+
       <div className="w-full flex justify-center items-center mt-8">
         <HowItWorksBenefits
           image={"/Rectangle34624354.png"}
@@ -201,7 +201,7 @@ export default function Howitwork() {
 
         <SuperCharge />
   </div>
-   
-  
+
+
   );
 }

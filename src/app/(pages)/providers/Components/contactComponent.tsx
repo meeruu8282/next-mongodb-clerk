@@ -6,12 +6,12 @@ export default function ContactComponent() {
     return (
         <div className="flex flex-col justify-start w-[1258px] mt-[100px]">
             <div>
-                <button className="carelyoButton bg-opacity-10 text-[#45AC60] text-[poppins] font-semibold hover:text-[#FFFFFF]">Contact Us</button>
-                <p className="w-4/6 text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mt-6">Send us your questions, comments or suggestions and we will reply you as quickly as possible. Please read through our <a className="text-[#45AC60] font-medium text-opacity-50 underline hover:text-opacity-100" href="">FAQ</a> there's a good chance an answer to your question is there.</p>
+                <button className="carelyoButton bg-opacity-10 text-sage text-[poppins] font-semibold hover:text-white">Contact Us</button>
+                <p className="w-4/6 text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-grayLight mt-6">Send us your questions, comments or suggestions and we will reply you as quickly as possible. Please read through our <a className="text-sage font-medium text-opacity-50 underline hover:text-opacity-100" href="">FAQ</a> there's a good chance an answer to your question is there.</p>
             </div>
             <div className="flex w-[1258px] justify-between mt-6">
                 <div className="flex flex-col justify-center w-[50%]">
-                    <p className="text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mb-6">Carelyo open for all.</p>
+                    <p className="text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-grayLight mb-6">Carelyo open for all.</p>
                     <form>
                         <div className="mb-4">
                             <label className="text-[Poppins] text-[16px] block text-gray-700 text-sm font-bold mb-2" htmlFor="fullname">
@@ -79,7 +79,7 @@ export default function ContactComponent() {
                                     <path d="M21.3333 0H2.66667C1.2 0 0 1.2 0 2.66667V21.3333C0 22.8 1.2 24 2.66667 24H21.3333C22.8 24 24 22.8 24 21.3333V2.66667C24 1.2 22.8 0 21.3333 0ZM10.28 17.72C9.76 18.24 8.92 18.24 8.4 17.72L3.61333 12.9333C3.09333 12.4133 3.09333 11.5733 3.61333 11.0533C4.13333 10.5333 4.97333 10.5333 5.49333 11.0533L7.91912 13.4791C8.70017 14.2602 9.9665 14.2602 10.7475 13.4791L18.5067 5.72C19.0267 5.2 19.8667 5.2 20.3867 5.72C20.9067 6.24 20.9067 7.08 20.3867 7.6L10.28 17.72Z" fill="#45AC60" />
                                 </svg>
                             </div>
-                            <label htmlFor="remember" className="ms-2 text-sm font-medium">I agree with the <a href="#" className="text-[#45AC60] hover:underline">Terms of use and Privacy Policy</a>.</label>
+                            <label htmlFor="remember" className="ms-2 text-sm font-medium">I agree with the <a href="#" className="text-sage hover:underline">Terms of use and Privacy Policy</a>.</label>
                         </div>
                     </form>
                     <button className="carelyoButton rounded-md w-full">Send Message</button>
@@ -92,7 +92,7 @@ export default function ContactComponent() {
                             width={490}
                             height={480}
                         />
-                        <button className="absolute bottom-6 right-8 bg-[#FFFFFF] text-[#45AC60] py-2.5 px-5 rounded-[18px]" onClick={() => setIsOpen(true)}>View map</button>
+                        <button className="absolute bottom-6 right-8 bg-white text-sage py-2.5 px-5 rounded-[18px]" onClick={() => setIsOpen(true)}>View map</button>
                     </div>
                 </div>
                 {isOpen && (

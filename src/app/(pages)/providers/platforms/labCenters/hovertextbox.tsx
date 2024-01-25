@@ -14,9 +14,9 @@ const Hovertextbox: React.FC<HovertextboxTamplateProps> = ({
 }) => {
   return (
     <div className="relative group">
-      <div className="absolute group-hover:-inset-10 bg-[#45AC60] rounded-[25px] blur opacity-5  "></div>
+      <div className="absolute group-hover:-inset-10 bg-sage rounded-[25px] blur opacity-5  "></div>
 
-      <div className=" relative flex flex-col justify-center items-center w-[629px] h-[180px] bg-white  rounded-[25px]  hover:border-[1px] border-[#45AC60] ">
+      <div className=" relative flex flex-col justify-center items-center w-[629px] h-[180px] bg-white  rounded-[25px]  hover:border-[1px] border-sage ">
         <div className="  w-[594.24px] h-[122px] gap-[16px] rounded-[25px] ">
           <div className=" w-[594.24px] h-[126px] gap-[16px] ">
             <h1 className="w-[442px] h-[32px] text-[poppins] text-[24px] font-semibold leading-8 text-left ">
@@ -27,7 +27,7 @@ const Hovertextbox: React.FC<HovertextboxTamplateProps> = ({
               {paragraph01}
             </p>
           </div>
-          <div className="w-[526px] border-[1px] left-0  border-[#45AC60] group-hover:hidden "></div>
+          <div className="w-[526px] border-[1px] left-0  border-sage group-hover:hidden "></div>
         </div>
       </div>
     </div>

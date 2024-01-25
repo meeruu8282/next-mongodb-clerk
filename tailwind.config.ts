@@ -18,8 +18,16 @@ const config: Config = {
         greenBackgroundFrom: '#45AC60',
         greenBackgroundTo: '#7EDC97',
         greenBackgroundObjects: '#45AC6040',
-        
-        
+
+        sage: '#45AC60',
+        sageLight: '#7EDC97',
+        sageDark: '#2B9B5B',
+        sageOpacityHigh: '#45AC601A',
+        sageOpacityHigher: '#45AC600D',
+        grayLight: '#9C9C9C',
+        grayLighter: '#A6A6A6',
+        stone: '#8E8E8F',
+
       },
     },
   },
