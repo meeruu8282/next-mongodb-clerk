@@ -4,15 +4,15 @@ export default function SearchBar() {
     return (
         <div className=" relative w-[1258px] h-[267px] top-[top: 2652px] mt-[100px">
             {/* Green background container */}
-            <div className="greenBackground w-[1258px] h-[267px] rounded-[40px] ">
+            <div className="greenBackground w-[1258px] h-[267px] rounded-[40px] overflow-hidden">
                 <div className=" absolute top-[20px] left-[315px]">
                     {/* background with about 50 circles */}
                     <EllipseBackground/>
                 </div>
                 {/* Green background rectangle */}
                 <div
-                    className=" absolute w-[415px] h-[267px] top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-[#45AC60] opacity-5"
-                    style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
+                    className="absolute w-[415px] h-[267px] top-0 right-[-50px] rounded-tr-[40px] rounded-br-[40px] bg-[#45AC60] opacity-5"
+                    style={{ clipPath: "polygon(0% 0%, 70% 110%, 100.5% 90%, 40.5% 0%)" }}
                 >
                     {/* Corner triangle */}
                 </div>
@@ -27,17 +27,13 @@ export default function SearchBar() {
                 >
                     {/* Corner triangle */}
                 </div>
-                <div
-                    className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] bottom-0 left-0 c  rounded-bl-[40px]"
-                    style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
-                ></div>
-                <div className="greenCircleContainer left-[1100px] top-[185px]">
+                <div className="greenCircleContainer left-[1000px] top-[182px]">
                     <div
                         className="greenCircle"
                         style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)",
-                        height: "150px",
-                        width: "300px",
-                   borderRadius: "50%"}}
+                        height: "487px",
+                        width: "487px",
+                   borderRadius: "100%"}}
                     ></div>
                 </div>
                 <form action="" className="flex relative w-3/4 v-max mx-auto">

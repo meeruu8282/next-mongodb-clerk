@@ -1,4 +1,8 @@
+'use client'
+import Image from "next/image";
+import { useState } from "react";
 export default function ContactComponent() {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="flex flex-col justify-start w-[1258px] mt-[100px]">
             <div>
@@ -6,7 +10,7 @@ export default function ContactComponent() {
                 <p className="w-4/6 text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mt-6">Send us your questions, comments or suggestions and we will reply you as quickly as possible. Please read through our <a className="text-[#45AC60] font-medium text-opacity-50 underline hover:text-opacity-100" href="">FAQ</a> there's a good chance an answer to your question is there.</p>
             </div>
             <div className="flex w-[1258px] justify-between mt-6">
-                <div className="flex flex-col w-[48%]">
+                <div className="flex flex-col justify-center w-[50%]">
                     <p className="text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mb-6">Carelyo open for all.</p>
                     <form>
                         <div className="mb-4">
@@ -51,23 +55,57 @@ export default function ContactComponent() {
                                 <path d="M2.5 2.5H16.5V13H3.52375L2.5 14.0238V2.5ZM2.5 0.75C1.5375 0.75 0.75875 1.5375 0.75875 2.5L0.75 18.25L4.25 14.75H16.5C17.4625 14.75 18.25 13.9625 18.25 13V2.5C18.25 1.5375 17.4625 0.75 16.5 0.75H2.5ZM4.25 9.5H11.25V11.25H4.25V9.5ZM4.25 6.875H14.75V8.625H4.25V6.875ZM4.25 4.25H14.75V6H4.25V4.25Z" fill="#8E8E8F" />
                             </svg>
                             <textarea
-                                className="pl-11 h-[150px] resize-none text-[Poppins] text-[16px] border rounded h-full w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="pl-11 h-[8.5rem] resize-none text-[Poppins] text-[16px] border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="message"
                                 placeholder="Tell us a little about carelyo..."
                             />
                         </div>
                         <div className="flex items-start mb-6">
                             <div className="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" className="accent-[#45AC60] w-4 h-4 rounded" required />
+                                <input id="remember" type="checkbox" value="" className="
+                                peer
+                                w-4
+                                h-4
+                                "
+                                    required />
+                                <svg className="
+                                    absolute
+                                    w-4 h-4
+                                    hidden peer-checked:block
+                                    pointer-events-none
+                                    "
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.33333 3.33334C1.33333 2.22877 2.22876 1.33333 3.33333 1.33333H20.6667C21.7712 1.33333 22.6667 2.22876 22.6667 3.33333V20.6667C22.6667 21.7712 21.7712 22.6667 20.6667 22.6667H3.33334C2.22877 22.6667 1.33333 21.7712 1.33333 20.6667V3.33334Z" fill="white" />
+                                    <path d="M21.3333 0H2.66667C1.2 0 0 1.2 0 2.66667V21.3333C0 22.8 1.2 24 2.66667 24H21.3333C22.8 24 24 22.8 24 21.3333V2.66667C24 1.2 22.8 0 21.3333 0ZM10.28 17.72C9.76 18.24 8.92 18.24 8.4 17.72L3.61333 12.9333C3.09333 12.4133 3.09333 11.5733 3.61333 11.0533C4.13333 10.5333 4.97333 10.5333 5.49333 11.0533L7.91912 13.4791C8.70017 14.2602 9.9665 14.2602 10.7475 13.4791L18.5067 5.72C19.0267 5.2 19.8667 5.2 20.3867 5.72C20.9067 6.24 20.9067 7.08 20.3867 7.6L10.28 17.72Z" fill="#45AC60" />
+                                </svg>
                             </div>
                             <label htmlFor="remember" className="ms-2 text-sm font-medium">I agree with the <a href="#" className="text-[#45AC60] hover:underline">Terms of use and Privacy Policy</a>.</label>
                         </div>
                     </form>
                     <button className="carelyoButton rounded-md w-full">Send Message</button>
                 </div>
-                <div className="flex flex-col w-[48%]">
-                    map
+                <div className="flex justify-center w-[50%]">
+                    <div className="relative">
+                        <Image
+                            src="/Map.png"
+                            alt="Map of Swedcon18s location"
+                            width={490}
+                            height={480}
+                        />
+                        <button className="absolute bottom-6 right-8 bg-[#FFFFFF] text-[#45AC60] py-2.5 px-5 rounded-[18px]" onClick={() => setIsOpen(true)}>View map</button>
+                    </div>
                 </div>
+                {isOpen && (
+                    <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black z-50" onClick={() => setIsOpen(false)}>
+                        <Image
+                            src="/Map.png"
+                            alt="Map of Swedcon18s location"
+                            className="object-contain"
+                            width={500}
+                            height={500}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     )
