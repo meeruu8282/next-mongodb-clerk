@@ -26,7 +26,9 @@ const config: Config = {
         sageOpacityHigher: '#45AC600D',
         grayLight: '#9C9C9C',
         grayLighter: '#A6A6A6',
+        grayDark: '#323232',
         stone: '#8E8E8F',
+        cadetGray: '#9ca2ad',
 
       },
     },

@@ -54,31 +54,31 @@ const NavbarMobile = () => {
       </nav>
       <div className={`w-screen h-full bg-white z-50 absolute fullscreen-menu ${isMenuOpen ? 'flex' : 'hidden'}`} >
         <div className="nav-links flex flex-col items-center justify-center h-full w-full text-4xl gap-9 pb-20">
-          <Link href="/providers/howItWorks" className="text-black hover:text-[#45AC60]">
+          <Link href="/providers/howItWorks" className="text-black hover:text-sage">
             <span>How it works</span>
           </Link>
           <div>
-            <div  className="text-black text-center hover:text-[#45AC60]" onClick={handlePlatformHover}>
+            <div  className="text-black text-center hover:text-sage" onClick={handlePlatformHover}>
                 Platform
             </div>
-            <ul className={`${isPlatformOpen ? 'block' : 'hidden'} text-center border-[#45ac60] border-b-2 p-2 flex flex-col gap-5`}>
-              <li ><Link className='text-center hover:text-[#45AC60]' href="/providers/platforms/diagCenters">Diagnostisk Center</Link></li>
-              <li><Link className='hover:text-[#45AC60]' href="/providers/platforms/hospitals">Hostpital</Link></li>
-              <li><Link className='hover:text-[#45AC60]' href="/providers/platforms/labCenters">LabCenter</Link></li>
-              <li><Link className='hover:text-[#45AC60]'href="/providers/platforms/pharmacies">Pharmacies</Link></li>
-              <li><Link className="hover:text-[#45AC60]" href="/providers/platforms/seDoctors">SeDoctors</Link></li>
+            <ul className={`${isPlatformOpen ? 'block' : 'hidden'} text-center border-sage border-b-2 p-2 flex flex-col gap-5`}>
+              <li ><Link className='text-center hover:text-sage' href="/providers/platforms/diagCenters">Diagnostisk Center</Link></li>
+              <li><Link className='hover:text-sage' href="/providers/platforms/hospitals">Hostpital</Link></li>
+              <li><Link className='hover:text-sage' href="/providers/platforms/labCenters">LabCenter</Link></li>
+              <li><Link className='hover:text-sage'href="/providers/platforms/pharmacies">Pharmacies</Link></li>
+              <li><Link className="hover:text-sage" href="/providers/platforms/seDoctors">SeDoctors</Link></li>
             </ul>
           </div>
-          <Link href="/providers/pricing" className="text-black hover:text-[#45AC60]">
+          <Link href="/providers/pricing" className="text-black hover:text-sage">
             <span>Pricing</span>
           </Link>
-          <Link href="/providers/blog" className="text-black hover:text-[#45AC60]">
+          <Link href="/providers/blog" className="text-black hover:text-sage">
             <span>Blog</span>
           </Link>
-          <Link href="/providers/help" className="text-black hover:text-[#45AC60]">
+          <Link href="/providers/help" className="text-black hover:text-sage">
             <span>Help</span>
           </Link>
-          <div className="flex w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center gap-2">
+          <div className="flex w-[125px] h-[52px] border-[1px] border-sage rounded-[35px] justify-center items-center gap-2">
           <div className="w-[28px] h-[28px] flex justify-center items-center ">
             <Image src="/image 519.png" alt="flagg" width={28} height={28} />
           </div>
@@ -95,7 +95,7 @@ const NavbarMobile = () => {
           <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
             Get Carelyo
             <div className="ml-3">
-              <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
+              <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
