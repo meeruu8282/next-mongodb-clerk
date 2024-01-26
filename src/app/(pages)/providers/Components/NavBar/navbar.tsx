@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden lg:flex w-[125px] h-[52px] border-[1px] border-[#45AC60] rounded-[35px] justify-center items-center gap-3">
+        <div className="hidden lg:flex w-[125px] h-[52px] border-[1px] border-sage rounded-[35px] justify-center items-center gap-3">
           <div className="w-[28px] h-[28px] flex justify-center items-center ">
             <Image src="/image 519.png" alt="flagg" width={28} height={28} />
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
           <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
             Get Carelyo
             <div className="ml-3">
-              <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
+              <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
