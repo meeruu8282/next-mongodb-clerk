@@ -67,7 +67,7 @@ export default function Howitwork() {
         </div>
 
         <div className={`flex flex-row w-[100%] justify-center${style.make85Width}`}>
-          <div className="leftside w-full  flex flex-col items-center justify-start">
+          <div className="leftside w-[100%]  flex flex-col items-center justify-start">
             <div className="flex items-center justify-between w-[185px] h-[66px] mb-[6%] mt-[6%]">
               <div className="w-[66px] h-[66px]">
                 <Image
@@ -117,7 +117,7 @@ export default function Howitwork() {
           </div>
 
 
-          <div className="right side w-full flex flex-col justify-start items-center ">
+          <div className="rightside w-[100%] flex flex-col justify-start items-center ">
         
               <div className=" flex items-center justify-between w-[185px] h-[66px] mt-[6%]">
                 <div className="w-[66px] h-[66px]">
@@ -145,7 +145,7 @@ export default function Howitwork() {
                   text2={"If it's your first time using the Carelyo platform, complete your profile by providing necessary personal and medical information."} />
               </div>
 
-              <div className="flex justify-center items-center pr-[55%]">
+              <div className="flex justify-center items-center pr-[60%]">
                 <svg width="121" height="233" viewBox="0 0 121 233" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M68 230.5H38C18.67 230.5 3 214.83 3 195.5V85C3 65.67 18.67 50 38 50H83.5C102.83 50 118.5 34.33 118.5 15V0" stroke="#45AC60" stroke-width="5" stroke-dasharray="10 10" />
                 </svg>
