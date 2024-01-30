@@ -184,8 +184,8 @@ export default function Howitwork() {
             imageSrc1={"/ipadimagehowItWorks708.png"}
             imageSrc2={"/mobilePhonehowitworksimage707.png"}
             text1={"During the consultation, providers engage with the client, conduct assessments, diagnose conditions, recommend treatments, and provide medical advice."}
-            text2={"Virtual consultation or visit your provider in person. Discuss your health concerns, receive medical advice, and ask any questions you may have."}
-          />
+            listText1={"Virtual consultation or visit your provider in person."} 
+            listText2={"Discuss your health concerns, receive medical advice, and ask any questions you may have."}   />
       </div>
 
       </div>
