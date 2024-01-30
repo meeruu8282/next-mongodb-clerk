@@ -20,7 +20,8 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
 
 }) => {
   return (
-    <div className="w-screen flex flex-col justify-center items-center  mt-9 ">
+    <div className="w-screen flex flex-col justify-center items-center">
+     
 
 
 
