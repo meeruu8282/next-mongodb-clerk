@@ -17,8 +17,8 @@ export default function Hospitals() {
       <div className=" relative w-screen h-auto mt-15">
 
         <FirstTextinplatform
-         
-          headerGreenText1={"Empowering Hospitals"} 
+
+          headerGreenText1={"Empowering Hospitals"}
           headerBlackText2={"for Better Healthcare with Carelyo"}
           paragraph1={
             "Joining Carelyo as a hospital brings a multitude of advantages and benefits that can transform the way you provide healthcare services."
@@ -62,7 +62,7 @@ export default function Hospitals() {
           <div className=" relative w-[521px] h-[484px]">
             <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
               <div
-                className="greenCircle  bg-[#45AC60] w-[100px]  h-[100px] "
+                className="greenCircle  bg-sage w-[100px]  h-[100px] "
                 style={{ clipPath: "polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)" }}
               ></div>
             </div>
@@ -82,7 +82,7 @@ export default function Hospitals() {
               {/*tamplate in components folder */}
                <ConvinientManagement text="Convenient Management" />
             </div>
-           
+
           </div>
 
             <CarleyoProvides
@@ -105,9 +105,9 @@ export default function Hospitals() {
         buttonsText={"Join Carelyo"}
         reverseDirection={true}  //makes the tamplate be mirror reversed- reuses tamplate code but changes design, mutch less code
       />
-      
-      
-  
+
+
+
       <WhoHaveJoinedTamplate //Tamplate in Components folder
         greenHeaderpart={"15+ Hospitals"}
         blackHeaderpart={"Who Have Joined"}

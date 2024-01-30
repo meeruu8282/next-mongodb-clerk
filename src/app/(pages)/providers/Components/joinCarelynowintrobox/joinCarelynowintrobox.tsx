@@ -15,7 +15,7 @@ interface CardTemplateProps {
   icon3text: string;
   icon4text: string;
 
- 
+
 }
 
 const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
@@ -31,14 +31,14 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 
 
 }) => {
-  return ( 
-    // responsive css for  ${style.nameofmediaquerie} is in joinCarelynow.module.css file 
+  return (
+    // responsive css for  ${style.nameofmediaquerie} is in joinCarelynow.module.css file
     <div className={` flex justify-end ${style.changehight} left-0  `}>
-      <div className={`relative w-[1315px]  h-auto ${style.middle}  flex items-center justify-between mt-8 `}> 
+      <div className={`relative w-[1315px]  h-auto ${style.middle}  flex items-center justify-between mt-8 `}>
         <div className=" absolute z-[3]  w-[289px] h-auto mb-20 left-0  ">
         <div className={`flex flex-col w-screen h-[276px] gap-[32px] ${style.bigtextbackground} ${style.icontextbackground}`}>
             <div className=" flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[30px] h-[30px]">
                   {/* icon */}
                   <Image
@@ -59,7 +59,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             </div>
 
             <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <Image
@@ -79,7 +79,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             </div>
 
             <div className="flex items-center w-[300px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <Image
@@ -99,7 +99,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             </div>
 
             <div className="flex items-center w-[350px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-[#45AC60] bg-opacity-[10%]  ">
+              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
                 <div className="flex justify-center items-center w-[21px] h-[21px]">
                   {/* icon */}
                   <Image
@@ -118,7 +118,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               </div>
             </div>
           </div>
-          
+
         </div>
 <Link href="/providers/pricing" passHref>
           {/* Button */}
@@ -127,7 +127,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Join Carelyo Now
                 <div className="ml-3">
-                  <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]  ">
+                  <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -157,11 +157,11 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             src={imageSrc}
             alt="Costomimage"
           />
-        </div>  
-        
+        </div>
+
       </div>
 
-      
+
     </div>
   );
 };

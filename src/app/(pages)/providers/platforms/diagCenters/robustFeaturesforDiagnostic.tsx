@@ -51,38 +51,38 @@ const RobustFeaturesforDiagnostic: React.FC<RobustFeaturesforDiagnosticTamplateP
     <div className="">
       <div className=" flex justify-center w-screen">
         <div className="relative flex flex-col items-center justify-between w-[1190px] h-[499px] rounded-[25px] mt-[150px] ">
-          <div className=" w-[1190px] h-[309px] flex justify-center rounded-[25px] bg-[#FAFAFA]">
+          <div className=" w-[1190px] h-[309px] flex justify-center rounded-[25px] bg-neutral-50">
             <div className=" flex justify-between items-center h-[84px] w-[1090px] mt-12">
               <h1 className="w-[529px] h-[84px] text-[poppins] text-2xl font-semibold leading-10 tracking-normal text-left ">
                 {header}
               </h1>
-              <p className=" w-[389.64px] h-[42px] text-[poppins] text-[16px] text-right font-normal text-base leading-[20.8px]  text-[#A6A6A6]">
+              <p className=" w-[389.64px] h-[42px] text-[poppins] text-[16px] text-right font-normal text-base leading-[20.8px]  text-grayLighter">
                 {paragraph}
               </p>
             </div>
           </div>
           <div className=" absolute flex justify-between w-[1116px] h-[306px] gap-[16px] bottom-0 ">
-            <Hoverfeaturesbox 
-            icon={icon1} 
-            header={header1} 
+            <Hoverfeaturesbox
+            icon={icon1}
+            header={header1}
             paragraph={paragraph1} />
 
-            <Hoverfeaturesbox 
-            icon={icon2} 
-            header={header2} 
+            <Hoverfeaturesbox
+            icon={icon2}
+            header={header2}
             paragraph={paragraph2} />
 
-            <Hoverfeaturesbox 
-            icon={icon3} 
-            header={header3} 
+            <Hoverfeaturesbox
+            icon={icon3}
+            header={header3}
             paragraph={paragraph3} />
 
-            <Hoverfeaturesbox 
-            icon={icon4} 
-            header={header4} 
+            <Hoverfeaturesbox
+            icon={icon4}
+            header={header4}
             paragraph={paragraph4} />
 
-    
+
           </div>
         </div>
       </div>

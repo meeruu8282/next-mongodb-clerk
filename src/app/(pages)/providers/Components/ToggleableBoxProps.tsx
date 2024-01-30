@@ -19,7 +19,7 @@ const ToggleableBox: React.FC<ToggleableBoxProps> = ({
   id,
   isChecked,
   onToggle,
- 
+
 }) => {
   const [localChecked, setLocalChecked] = useState(isChecked);
 
@@ -32,22 +32,13 @@ const ToggleableBox: React.FC<ToggleableBoxProps> = ({
   };
   return (
     <div
-      className={`box ${isChecked ? "checked" : ""}`}
-      style={{
-        width: "32px",
-        height: "32px",
-        borderRadius: "10px",
-        border: "2px solid #45AC60", // Grön kantfärg
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer", // Lägg till pekarkursorn för att indikera att den är klickbar
-      }}
+      className={`box ${isChecked ? "checked" : ""} h-[32px] w-[32px] border border-2
+       border-sage rounded-[10px] flex justify-center items-center cursor-pointer`}
       onClick={handleToggle}
     >
       {localChecked ? (
         <div className="checked">
-          <FontAwesomeIcon icon={faCheck} color="#45AC60" size="lg" />
+          <FontAwesomeIcon icon={faCheck} className="text-sage" size="lg" />
         </div>
       ) : null}
 

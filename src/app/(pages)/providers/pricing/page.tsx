@@ -29,17 +29,17 @@ export default function Pricing() {
         </div>
       </div>
       <div className="w-[1100px] h-[22px] flex mb-8  justify-center items-center ">
-        <div className=" hover:border-[#45AC60]  w-[22px] h-[22px] border border-black rounded-full mr-2 flex "></div>
+        <div className=" hover:border-sage  w-[22px] h-[22px] border border-black rounded-full mr-2 flex "></div>
         <div className=" flex text-[16px] font-[Popins] font-semibold  pr-4  ">
           <h3 className="pr-1">Annual billing </h3>
-          <p className="text-[#45AC60] "> save 20% </p>
+          <p className="text-sage "> save 20% </p>
         </div>
-        <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 hover:border-[#45AC60]  "></div>
+        <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 hover:border-sage  "></div>
         <div className="text-[16px] font-[Popins] flex pr-4 font-semibold">
           <h3 className="pr-1">Quarterly billing </h3>{" "}
-          <p className="text-[#45AC60]">save 15%</p>{" "}
+          <p className="text-sage">save 15%</p>{" "}
         </div>
-        <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 hover:border-[#45AC60] "></div>
+        <div className="w-[22px] h-[22px] border border-black rounded-full mr-2 hover:border-sage "></div>
         <div className="text-[16px] font-[Popins] flex font-semibold">
           <h3>Monthly billing</h3>
         </div>
@@ -57,9 +57,9 @@ export default function Pricing() {
           ]}
           buttonText="Get Started"
           id={1}
-          
+
           selectedBox={selectedBox} // Skicka med selectedBox
-      
+
           setSelectedBox={setSelectedBox} // Skicka med setSelectedBox
         />
         <CustomContentBox

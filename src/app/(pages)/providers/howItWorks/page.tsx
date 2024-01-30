@@ -95,7 +95,7 @@ export default function Howitwork() {
                 text2={"Create a comprehensive profile by entering their personal information"} />
             </div>
 
-          
+
 
         
             <div className="w-[100%] flex justify-center items-center  mx-auto">

@@ -61,7 +61,7 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
           >
             <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
               <div
-                className="greenCircle  bg-[#45AC60]  w-[100px]  h-[100px] "
+                className="greenCircle  bg-sage  w-[100px]  h-[100px] "
                 style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
               ></div>
             </div>

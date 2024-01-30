@@ -16,7 +16,7 @@ interface HowcarelyocanreinforcecompTamplateProps {
 }
 
 const Howcarelyocanreinforcecomp: React.FC<HowcarelyocanreinforcecompTamplateProps> = ({
-  
+
     image,
     header,
 
@@ -32,7 +32,7 @@ const Howcarelyocanreinforcecomp: React.FC<HowcarelyocanreinforcecompTamplatePro
   // ... andra props för varje sektion av din mall
 }) => {
   return (
-    <div className="flex justify-center items-center h-[669px] w-screen mt-8 bg-[#FAFAFA]">
+    <div className="flex justify-center items-center h-[669px] w-screen mt-8 bg-neutral-50">
     <div className="flex justify-between items-center gap-[20px]">
       <div className=" relative h-[600px] w-[570px] flex justify-between ">
         <div className="w-[509px] h-[600px] flex items-center ">
@@ -62,14 +62,14 @@ const Howcarelyocanreinforcecomp: React.FC<HowcarelyocanreinforcecompTamplatePro
             {header}
         </div>
         <div className="w-[591px] h-[527px]  flex flex-col justify-between ">
-         <CheckTextbox 
-         header={checkmarkboxheader1} 
+         <CheckTextbox
+         header={checkmarkboxheader1}
          paragraph={checkmarkboxparagraph1}/>
-          <CheckTextbox 
-         header={checkmarkboxheader2} 
+          <CheckTextbox
+         header={checkmarkboxheader2}
          paragraph={checkmarkboxparagraph2}/>
-          <CheckTextbox 
-         header={checkmarkboxheader3} 
+          <CheckTextbox
+         header={checkmarkboxheader3}
          paragraph={checkmarkboxparagraph3}/>
 
         </div>

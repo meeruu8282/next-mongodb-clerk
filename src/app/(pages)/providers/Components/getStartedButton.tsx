@@ -35,13 +35,13 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
   };
 
   const colorClasses = {
-    primary: " text-[#FFFFFF]  bg-[#45AC60]",
+    primary: " text-white  bg-sage",
     secondary: "text-black bg-gray-300",
-    third: "bg-opacity-20 bg-[#FFFFFF] ",
+    third: "bg-opacity-20 bg-white ",
   };
 
   const ButtonContent = (
-  
+
     <button
       onClick={onClick}
       className={`${baseClass} ${colorClasses[color]} ${sizeClasses[size]} ${buttonSizeClasses[buttonSize]} } ${className}`}
@@ -50,7 +50,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
         <div className="carelyoButtonText flex items-center justify-center w-full  ">
           {buttonText}
           <div className="ml-3">
-            <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
+            <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -77,6 +77,6 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     }
     return ButtonContent;
 
-  
+
 };
 export default CarelyoButton;

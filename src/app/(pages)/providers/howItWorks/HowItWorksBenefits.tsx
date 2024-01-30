@@ -7,48 +7,48 @@ interface BenefitsTemplateProps {
     image: string
     header: string
 
-  
+
     checkmarkboxheader1: string
     checkmarkboxparagraph1: string
     checkmarkboxheader2: string
     checkmarkboxparagraph2: string
     checkmarkboxheader3: string
     checkmarkboxparagraph3: string
-  
+
   }
-  
+
   const HowItWorksBenefits: React.FC<BenefitsTemplateProps> = ({
-    
+
       image,
       header,
-  
+
       checkmarkboxheader1,
       checkmarkboxparagraph1,
       checkmarkboxheader2,
       checkmarkboxparagraph2,
       checkmarkboxheader3,
       checkmarkboxparagraph3,
-  
-  
-  
+
+
+
   }) => {
     return (
       <div className="flex justify-center flex-row  items-center h-[100%] w-[90%] mt-8 ">
         <div className={`flex flex-col w-2/4 justify-center items-start ${style.center}`}>
           <div className=" w-[100%] h-auto text-[poppins]  font-semibold pb-7">
-              <h1 className=" text-[#45AC60] text-base font-semibold">{header}</h1>
+              <h1 className=" text-sage text-base font-semibold">{header}</h1>
           </div>
           <div className="flex flex-col justify-between items-center">
-           <CheckTextbox 
-           header={checkmarkboxheader1} 
+           <CheckTextbox
+           header={checkmarkboxheader1}
            paragraph={checkmarkboxparagraph1}/>
-            <CheckTextbox 
-           header={checkmarkboxheader2} 
+            <CheckTextbox
+           header={checkmarkboxheader2}
            paragraph={checkmarkboxparagraph2}/>
-            <CheckTextbox 
-           header={checkmarkboxheader3} 
+            <CheckTextbox
+           header={checkmarkboxheader3}
            paragraph={checkmarkboxparagraph3}/>
-  
+
           </div>
         </div>
 
@@ -77,16 +77,9 @@ interface BenefitsTemplateProps {
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
     </div>
     )
   }
   export default HowItWorksBenefits;
-  
-
-
-
-
-
-

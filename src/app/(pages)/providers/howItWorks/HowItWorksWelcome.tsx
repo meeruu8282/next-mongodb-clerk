@@ -17,7 +17,7 @@ interface HowItsWorkWelcomeTemplateProps {
 
 
 
-const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({ 
+const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
 
     welcomeText,
@@ -36,7 +36,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
                 <div className={`flex w-full justify-start items-center ${style.make85Width}`}>
-                    <h1 className="text-[16px] text-[#45AC60] font-semibold font-[Poppins]">
+                    <h1 className="text-[16px] text-sage font-semibold font-[Poppins]">
                         {welcomeText}
                     </h1>
                 </div>
@@ -65,7 +65,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                     <div className="flex">
                         <div className="w-full ">
                             <div className="w-[116px] h-[22px] flex">
-                                <div className="font-semibold text-[16px] text-[#000000] font-[Poppins]">
+                                <div className="font-semibold text-[16px] text-black font-[Poppins]">
                                     {textButton2}
                                 </div>
                             </div>
@@ -82,7 +82,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                                     <g clipPath="url(#clip0_341_3389)">
                                         <path
                                             d="M5 13.6914H16.17L11.29 18.5714C10.9 18.9614 10.9 19.6014 11.29 19.9914C11.68 20.3814 12.31 20.3814 12.7 19.9914L19.29 13.4014C19.68 13.0114 19.68 12.3814 19.29 11.9914L12.71 5.39138C12.32 5.00138 11.69 5.00138 11.3 5.39138C10.91 5.78138 10.91 6.41138 11.3 6.80138L16.17 11.6914H5C4.45 11.6914 4 12.1414 4 12.6914C4 13.2414 4.45 13.6914 5 13.6914Z"
-                                            fill="#323232"
+                                            className="fill-current text-grayDark"
                                         />
                                     </g>
                                     <defs>
@@ -105,12 +105,12 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
             </div>
 
             <div className={`w-full h-[100%] flex justify-end items-center ${style.hidingImage}`}>
-                <Image 
+                <Image
                     src={imageSrc}
                     alt="entre"
                     width={698}
                     height={667} />
-            </div> 
+            </div>
 
         </div>
 
@@ -118,7 +118,3 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 };
 
 export default HowItWorksWelcome;
-
-
-
-

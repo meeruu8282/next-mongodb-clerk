@@ -7,7 +7,7 @@ interface HowItsWorkPartFiveTamplateProps {
   header: string;
   text1: string;
   text2: string;
-  
+
 }
 
 const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
@@ -17,17 +17,18 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
   header,
   text1,
   text2
-  
+
 }) => {
   return (
     <div className="w-screen flex flex-col justify-center items-center">
      
 
-      
+
+
        <div className="flex flex-row justify-center items-center w-full ">
        <div className="w-[90%] h-auto flex justify-center items-center font-semibold font-[Poppns] gap-3 " >
         <div className="flex justify-start items-center w-[100%] border gap-3">
-           <h1 className="text-[40px] text-[#45AC60] ">
+           <h1 className="text-[40px] text-sage ">
             {hashtagNumber}
            </h1>
            <h1 className="text-[32px]  font-[Poppns] text-black">
@@ -36,8 +37,8 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
        </div>
        </div>
        </div>
- 
- 
+
+
        <div className="flex-row justify-center items-center hidden lg:flex w-full ">
        <div className="flex justify-center items-center w-[90%] gap-4 ">
          <div className="w-[100%] h-auto flex justify-center items-center gap-10 ">
@@ -63,20 +64,20 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
          </div>
          </div>
        </div>
- 
 
- 
+
+
 
        <div className=" flex justify-center items-center w-full">
            <div className="flex flex-col md:flex-row justify-center items-center w-[90%] h-[100%] gap-5 mt-3">
-             <div className="flex justify-center items-center w-auto max-w-xl lg:justify-center lg:items-center border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97]">
+             <div className="flex justify-center items-center w-auto max-w-xl lg:justify-center lg:items-center border rounded-[35px] bg-gradient-to-br from-sage to-sageLight">
                <div className=" w-[100%] h-[100%]  flex justify-center items-center ">
                  <p className=" text-black font-[Poppns] px-6 py-4 text-xl" >
                    {text1}
                  </p>
                </div>
              </div>
-             <div className="flex justify-center items-center w-auto h-auto max-w-xl lg:justify-center lg:items-center min-h-38 border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97] ">
+             <div className="flex justify-center items-center w-auto h-auto max-w-xl lg:justify-center lg:items-center min-h-38 border rounded-[35px] bg-gradient-to-br from-sage to-sageLight ">
                <div className="w-[100%] h-[100%] flex justify-center items-center ">
                  <p className=" text-white font-[Poppns] px-6 py-4 text-xl">
                    {text2}
@@ -85,13 +86,8 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
              </div>
            </div>
           </div>
-      
+
      </div>
   );
 };
 export default HowItWorksPartFive;
-
-
-
-
-
