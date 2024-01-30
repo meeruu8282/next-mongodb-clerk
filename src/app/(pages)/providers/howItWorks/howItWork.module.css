@@ -104,14 +104,7 @@
     }
   }
 
-  @media (max-width: 1080px)  {
-    .textMedium {
-     
-    
-       font-size: medium;
-    }
-  }
-  
+
   
   @media (max-width: 1080px)  {
     .textMedium {
@@ -120,6 +113,28 @@
        font-size: medium;
     }
   }
+
+  @media (max-width: 1080px)  {
+    .textLarge {
+
+      font-size: large;
+     
+      
+    }
+  }
+
+  @media (max-width: 740px)  {
+    .flexboxColumn {
+
+      display: flex;
+      flex-direction: column;
+
+     
+      
+    }
+  }
+
+  
   
 
   @media (max-width: 1120px)  {
