@@ -20,7 +20,7 @@
   }
 
   .checkmark {
-    @apply bg-[rgba(69,172,96,1)] text-white flex items-center justify-center w-6 h-6 rounded-full;
+    @apply bg-[#45ac60] text-white flex items-center justify-center w-6 h-6 rounded-full;
   }
 }
 
@@ -39,7 +39,7 @@
     @apply ml-2;
   }
 
-  
+
   .ulPlatform {
     @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
     transform-origin: top, text-poppin;
@@ -75,11 +75,11 @@
   }
   .iconHover:hover {
     fill: #45AC60;  /* the desired color */
-    
+
 }
 .iconHover:hover path {
   fill: #45AC60;  /* the desired color */
-  
+
 }
 .selectRoleCard:hover > .noHoverEffect {
   background-color: inherit;
@@ -132,7 +132,7 @@
 
 }
 
-/* When active, set a specific max-height value that you know will cover the dropdown's full height. 
+/* When active, set a specific max-height value that you know will cover the dropdown's full height.
    This number might need to be adjusted depending on the actual height of your dropdown content. */
 #dropdownPlatform .dropdown-list.block {
   max-height: 500px;  /* Adjust this value as necessary */
@@ -158,8 +158,8 @@
 
 .dropdown-list {
   position: absolute;
-  top: 100%; 
-  left: 0;  
+  top: 100%;
+  left: 0;
 
 }
 
