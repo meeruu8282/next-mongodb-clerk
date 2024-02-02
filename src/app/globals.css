@@ -74,26 +74,26 @@
 
   }
 
-.selectRoleCard:hover {
-  fill: theme('colors.sage');
-
+  .selectRoleCard:hover {
+    fill: theme('colors.sage');  /* the desired color */
 }
+
 .selectRoleCard:hover:not(.noHoverEffect) .iconHover path {
-  fill: theme('colors.sage');
-
-
-.iconHover:hover {
-  fill: #45AC60;  /* the desired color */
-
+  fill: theme('colors.sage');  /* the desired color */
 }
+
+/*   .iconHover:hover {
+    fill: #45AC60;
+}
+
 .iconHover:hover path {
-  fill: #45AC60;  /* the desired color */
-
+  fill: #45AC60;
 }
+ */
+
 .selectRoleCard:hover > .noHoverEffect {
   background-color: inherit;
 }
-
 
 .blogo{
   background-image: url(svgPath);
