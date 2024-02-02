@@ -31,24 +31,24 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 }) => {
     return (
 
-        <div className="flex w-[80%] h-full flex-row justify-center items-center">
+        <div className="flex w-[90%] h-auto flex-row justify-center items-center">
 
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
                 <div className={`flex w-full justify-start items-center ${style.make85Width}`}>
-                    <h1 className="text-[16px] text-sage font-semibold font-[Poppins]">
+                    <h1 className="text-base text-sage font-semibold text-[Poppins]">
                         {welcomeText}
                     </h1>
                 </div>
 
                 <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <h2 className={`text-6xl w-[45%] ${style.make85Width} font-semibold font-[Poppins]`}>
+                    <h2 className={`text-6xl w-[45%] ${style.make85Width} font-semibold text-[Poppins]`}>
                         {text1}
                     </h2>
                 </div>
 
                 <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <p className={`text-md w-[70%] ${style.make85Width} font-normal font-[Poppins]`}>
+                    <p className={`text-md w-[70%] ${style.make85Width} font-normal text-[Poppins]`}>
                         {text2}
                     </p>
                 </div>
@@ -64,14 +64,14 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                     </div>
                     <div className="flex">
                         <div className="w-full ">
-                            <div className="w-[116px] h-[22px] flex">
-                                <div className="font-semibold text-[16px] text-black font-[Poppins]">
+                            <div className="w-[7.2rem] h-[1.4rem]">
+                                <div className="font-semibold text-base text-black text-[Poppins]">
                                     {textButton2}
                                 </div>
                             </div>
                         </div>
                         <div className="">
-                            <div className="w-[24px] h-[24px]">
+                            <div className="w-[1.5rem] h-[1.5rem]">
                                 <svg
                                     width="24"
                                     height="25"

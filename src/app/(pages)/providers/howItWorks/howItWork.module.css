@@ -147,4 +147,14 @@
   
 
 
+  @media (max-width: 780px) {
+    .minHeight {
+      height: 16rem;
+    }
+  }
   
+  @media (max-width: 600px) {
+    .minHeight {
+      height: 12rem;
+    }
+  }

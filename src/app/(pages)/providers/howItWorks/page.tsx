@@ -19,9 +19,9 @@ export default function Howitwork() {
 
 
 
-    <div className=" w-screen justify-center items-center flex flex-col">
-      <BlurBackGroundDesign />
-      <div className="w-full flex justify-center items-center mb-12">
+    <div className="w-screen justify-center items-center flex flex-col">
+       {/* <BlurBackGroundDesign />  */}
+      <div className="w-full flex justify-center items-center min-h-screen">
         <HowItWorksWelcome
           welcomeText={"Welcome to Carelyo 👋"}
           text1={"Healthcare Platform for Providers!"}
@@ -33,7 +33,7 @@ export default function Howitwork() {
       </div>
 
 
-      <div className="w-full flex justify-center items-center h-screen">
+      <div className="w-full flex justify-center items-center h-screen ">
         <HowItWorksGreenbackground
           heading1={"Who Can Become a"}
           heading1Bold={"Carelyo Health Provider?"}
@@ -190,6 +190,19 @@ export default function Howitwork() {
 
       </div>
 
+
+
+      <div className="Mobilemode twoside section">
+        
+
+      </div>
+
+
+
+
+
+
+
       <div className="flex justify-center items-center w-full">
       <HowItWorksBenefits 
       image={"/Rectangle34624354.png"} 
@@ -205,7 +218,7 @@ export default function Howitwork() {
 
      
 
-      <SuperCharge />
+      {/* <SuperCharge /> */}
     </div>
 
 
