@@ -20,7 +20,7 @@
   }
 
   .checkmark {
-    @apply bg-[rgba(69,172,96,1)] text-white flex items-center justify-center w-6 h-6 rounded-full;
+    @apply bg-[#45ac60] text-white flex items-center justify-center w-6 h-6 rounded-full;
   }
 }
 
@@ -73,12 +73,21 @@
     border: 3px solid theme('colors.sage');
 
   }
-  .selectRoleCard:hover {
-    fill: theme('colors.sage');  /* the desired color */
+
+.selectRoleCard:hover {
+  fill: theme('colors.sage');
 
 }
 .selectRoleCard:hover:not(.noHoverEffect) .iconHover path {
-  fill: theme('colors.sage');  /* the desired color */
+  fill: theme('colors.sage');
+
+
+.iconHover:hover {
+  fill: #45AC60;  /* the desired color */
+
+}
+.iconHover:hover path {
+  fill: #45AC60;  /* the desired color */
 
 }
 .selectRoleCard:hover > .noHoverEffect {
