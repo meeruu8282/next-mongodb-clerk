@@ -39,7 +39,7 @@
     @apply ml-2;
   }
 
-  
+
   .ulPlatform {
     @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
     transform-origin: top, text-poppin;
@@ -59,7 +59,7 @@
     @apply flex     text-black font-[Poppins];
   }
   .carelyoButton {
-    @apply bg-[#45AC60] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+    @apply bg-sage rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
   }
   .carelyoButtonText {
     @apply h-[22px]   flex items-center justify-between w-full;
@@ -70,16 +70,16 @@
   }
 
   .selectRoleCard:hover {
-    border: 3px solid #45ac60;
+    border: 3px solid theme('colors.sage');
 
   }
-  .iconHover:hover {
-    fill: #45AC60;  /* the desired color */
-    
+  .selectRoleCard:hover {
+    fill: theme('colors.sage');  /* the desired color */
+
 }
-.iconHover:hover path {
-  fill: #45AC60;  /* the desired color */
-  
+.selectRoleCard:hover:not(.noHoverEffect) .iconHover path {
+  fill: theme('colors.sage');  /* the desired color */
+
 }
 .selectRoleCard:hover > .noHoverEffect {
   background-color: inherit;
@@ -132,7 +132,7 @@
 
 }
 
-/* When active, set a specific max-height value that you know will cover the dropdown's full height. 
+/* When active, set a specific max-height value that you know will cover the dropdown's full height.
    This number might need to be adjusted depending on the actual height of your dropdown content. */
 #dropdownPlatform .dropdown-list.block {
   max-height: 500px;  /* Adjust this value as necessary */
@@ -158,8 +158,8 @@
 
 .dropdown-list {
   position: absolute;
-  top: 100%; 
-  left: 0;  
+  top: 100%;
+  left: 0;
 
 }
 

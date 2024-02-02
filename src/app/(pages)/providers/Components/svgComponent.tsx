@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 export const SvgIcon1 = () => (
-  <div className="  flex items-center m-auto ">
+  <div className="iconHover  flex items-center m-auto ">
     <svg
       width="21.33px"
       height="26.67px"
