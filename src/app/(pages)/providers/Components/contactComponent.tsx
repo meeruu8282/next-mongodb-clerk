@@ -4,13 +4,17 @@ import { useState } from "react";
 export default function ContactComponent() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="flex flex-col justify-start w-[1258px] mt-[100px]">
-            <div>
-                <button className="carelyoButton bg-opacity-10 text-[#45AC60] text-[poppins] font-semibold hover:text-[#FFFFFF]">Contact Us</button>
-                <p className="w-4/6 text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mt-6">Send us your questions, comments or suggestions and we will reply you as quickly as possible. Please read through our <a className="text-[#45AC60] font-medium text-opacity-50 underline hover:text-opacity-100" href="">FAQ</a> there's a good chance an answer to your question is there.</p>
+        <div className="flex flex-col w-[95%] lg:w-[90%] max-w-[1258px] mt-[100px] align-center items-center">
+            <div className="w-[95%] lg:w-full">
+                <div className="flex justify-center lg:justify-start">
+                    <button className="carelyoButton bg-opacity-10 text-[#45AC60] text-[poppins] font-semibold hover:text-[#FFFFFF]">Contact Us</button>
+                </div>
+                <div className="flex justify-center lg:justify-start">
+                    <p className="w-5/6 text-center lg:text-left lg:w-4/6 text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mt-6">Send us your questions, comments or suggestions and we will reply you as quickly as possible. Please read through our <a className="text-[#45AC60] font-medium text-opacity-50 underline hover:text-opacity-100" href="">FAQ</a> there's a good chance an answer to your question is there.</p>
+                </div>
             </div>
-            <div className="flex w-[1258px] justify-between mt-6">
-                <div className="flex flex-col justify-center w-[50%]">
+            <div className="flex w-[95%] lg:w-full flex-col lg:flex-row justify-center align-end mt-6">
+                <div className="flex flex-col justify-center w-[100%] lg:w-[50%]">
                     <p className="text-[Poppins] text-[16px] leading-[22px] tracking-[0em] text-[#9C9C9C] mb-6">Carelyo open for all.</p>
                     <form>
                         <div className="mb-4">
@@ -84,7 +88,7 @@ export default function ContactComponent() {
                     </form>
                     <button className="carelyoButton rounded-md w-full">Send Message</button>
                 </div>
-                <div className="flex justify-center w-[50%]">
+                <div className="flex justify-center w-[100%] mt-10 lg:mt-0 lg:w-[50%]">
                     <div className="relative">
                         <Image
                             src="/Map.png"

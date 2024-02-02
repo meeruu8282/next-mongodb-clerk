@@ -1,14 +1,14 @@
 import Image from "next/image"
 export default function LocationComponent() {
     return (
-        <div className="w-full h-[295px] bg-[#FAFAFA] flex justify-center mt-20">
-            <div className="w-[1258px] flex justify-between">
-                <div className="flex flex-col justify-center">
+        <div className="w-full h-[700px] lg:h-[295px] bg-[#FAFAFA] flex flex-col lg:flex-row justify-center mt-20 text-center lg:text-left">
+            <div className="w-[90%] max-w-[1258px] flex flex-col lg:flex-row justify-between">
+                <div className="flex flex-col justify-center items-center">
                     <a className="text-[#45AC60] pb-4" href="">Our locations</a>
                     <h1 className="py-4 text-[Poppins] text-[33px] leading-[29px] font-semibold">Visit our stores</h1>
                     <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C]">Find us at these locations.</p>
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex mt-11 lg:mt-0 flex-col justify-center items-center lg:items-left">
                     <Image
                         src="/Mask group.png"
                         alt="Mask Image"
@@ -18,9 +18,9 @@ export default function LocationComponent() {
                     <h3 className="py-4 text-[Poppins] text-[22px] leading-[29px] font-semibold">Address</h3>
                     <p className="py-4 text-[Poppins] text-[16px] leading-[22px] text-[#9C9C9C]">Swedcon18 AB, Allmogevägen 106,<br></br> 352 53 Växjö, Sweden</p>
                 </div>
-                <div className="flex flex-col p-2 justify-center">
+                <div className="flex flex-col p-2 justify-center items-center lg:items-left mt-11 lg:mt-0">
                     <div className="flex pb-4">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="ml-6" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="22" fill="#45AC60" fill-opacity="0.15" />
                             <g clip-path="url(#clip0_341_1234)">
                                 <path d="M30 14H14C12.9 14 12.01 14.9 12.01 16L12 28C12 29.1 12.9 30 14 30H30C31.1 30 32 29.1 32 28V16C32 14.9 31.1 14 30 14ZM29.6 18.25L22.53 22.67C22.21 22.87 21.79 22.87 21.47 22.67L14.4 18.25C14.15 18.09 14 17.82 14 17.53C14 16.86 14.73 16.46 15.3 16.81L22 21L28.7 16.81C29.27 16.46 30 16.86 30 17.53C30 17.82 29.85 18.09 29.6 18.25Z" fill="#45AC60" />
