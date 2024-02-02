@@ -12,6 +12,7 @@ import HowItWorksWelcome from "./HowItWorksWelcome";
 import HowItWorksGreenbackground from "./HowItWorksGreenbackground";
 import HowItWorksPartFour from "./HowItWorksPartFour";
 import style from './howItWork.module.css'
+import SuperChargeMobile from "../Components/superCharge/SuperChargeMobile";
 
 
 export default function Howitwork() {
@@ -97,7 +98,7 @@ export default function Howitwork() {
 
 
 
-        
+
             <div className="w-[100%] flex justify-center items-center  mx-auto">
 
               <HowItWorksPartTwo
@@ -118,7 +119,7 @@ export default function Howitwork() {
 
 
           <div className="rightside w-[100%] flex flex-col justify-start items-center ">
-        
+
               <div className=" flex items-center justify-between w-[185px] h-[66px] mt-[6%]">
                 <div className="w-[66px] h-[66px]">
                   <Image
@@ -165,12 +166,12 @@ export default function Howitwork() {
                   text2={"Choose a convenient date and time for your appointment."} />
               </div>
 
-              
 
 
 
 
-          
+
+
 
           </div>
 
@@ -204,21 +205,24 @@ export default function Howitwork() {
 
 
       <div className="flex justify-center items-center w-full">
-      <HowItWorksBenefits 
-      image={"/Rectangle34624354.png"} 
-      header={"THE BENEFITS OF JOINING CARELYO AS A PROVIDER"} 
+      <HowItWorksBenefits
+      image={"/Rectangle34624354.png"}
+      header={"THE BENEFITS OF JOINING CARELYO AS A PROVIDER"}
       checkmarkboxheader1={"Expanded Reach and Patient Base"}
        checkmarkboxparagraph1={"Reach a larger pool of potential patients, including those who prefer the convenience of online consultations. "}
-        checkmarkboxheader2={"Easy Appointment Management"} 
-        checkmarkboxparagraph2={"Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. "} 
-        checkmarkboxheader3={"Synchronized Patient Communication"} 
+        checkmarkboxheader2={"Easy Appointment Management"}
+        checkmarkboxparagraph2={"Through the integrated scheduling system, you can effortlessly manage and organize appointments, set availability, and view upcoming consultations. "}
+        checkmarkboxheader3={"Synchronized Patient Communication"}
         checkmarkboxparagraph3={"Communication between providers and patients using the platform's you can interact with patients before, during, and after consultations."}/>
 
       </div>
 
-     
 
-      {/* <SuperCharge /> */}
+<div className="md:block hidden">
+<SuperCharge />
+</div>
+<div className="block md:hidden"><SuperChargeMobile /></div>
+
     </div>
 
 
