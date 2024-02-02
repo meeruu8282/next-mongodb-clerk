@@ -59,7 +59,7 @@
     @apply flex     text-black font-[Poppins];
   }
   .carelyoButton {
-    @apply bg-[#45AC60] rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+    @apply bg-sage rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
   }
   .carelyoButtonText {
     @apply h-[22px]   flex items-center justify-between w-full;
@@ -70,21 +70,30 @@
   }
 
   .selectRoleCard:hover {
-    border: 3px solid #45ac60;
+    border: 3px solid theme('colors.sage');
 
   }
-  .iconHover:hover {
-    fill: #45AC60;  /* the desired color */
 
+  .selectRoleCard:hover {
+    fill: theme('colors.sage');  /* the desired color */
 }
+
+.selectRoleCard:hover:not(.noHoverEffect) .iconHover path {
+  fill: theme('colors.sage');  /* the desired color */
+}
+
+/*   .iconHover:hover {
+    fill: #45AC60;
+}
+
 .iconHover:hover path {
-  fill: #45AC60;  /* the desired color */
-
+  fill: #45AC60;
 }
+ */
+
 .selectRoleCard:hover > .noHoverEffect {
   background-color: inherit;
 }
-
 
 .blogo{
   background-image: url(svgPath);
