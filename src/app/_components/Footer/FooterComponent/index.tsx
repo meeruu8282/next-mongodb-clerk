@@ -24,8 +24,8 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
               <Image
                 src={inclusion.icon}
                 alt={inclusion.title}
-                width={36}
-                height={36}
+                width={105}
+                height={68}
                 className={classes.icon}
               />
               <h5 className={classes.title}>{inclusion.title}</h5>
@@ -38,14 +38,12 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
       <div className={classes.footer}>
         <Gutter>
           <div className={classes.wrap}>
-            <Link href="/">
-            </Link>
+           
+
             <p>{footer.copyright}</p>
+
             <div className={classes.socialLinks}>
               {navItems.map(item => {
-
-                const icon=''
-
                 return (
                   <Button
                     key={item.link.label}
@@ -55,7 +53,6 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     className={classes.socialLinksItem}
                   >
                     {item.link.label}
-                 
                   </Button>
                 )
               })}

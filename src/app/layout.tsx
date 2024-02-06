@@ -61,8 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <h1 className="text-[64px]  leading-[83px];"></h1>
           </div>
         </div>
-        <div className="min-h-screen">{children}</div>
-        <main className='main'>{children}</main>
+        <main className='min-h-screen main'>{children}</main>
         <div className="">
           <Footer />
         </div>

@@ -1012,7 +1012,7 @@ export interface Header {
   createdAt?: string | null;
 }
 export interface Footer {
-  id: string,
+  id: string;
   copyright: string;
   navItems?:
     | {
