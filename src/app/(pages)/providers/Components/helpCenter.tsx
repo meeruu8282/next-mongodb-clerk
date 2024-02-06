@@ -43,7 +43,6 @@ export default function () {
         paragraph={
           "For real-time assistance, our live chat support is available to any urgent questions or concerns you may have."
         } />
-
     </div>
   )
 }
