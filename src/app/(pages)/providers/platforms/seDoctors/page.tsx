@@ -73,12 +73,12 @@ export default function Sedoctors() {
             </div>
             <div className="absolute  w-[685px] h-[226px] top-0 left-0 gap-[32px]">
               <div className="w-[505px] h-[104px]">
-                <h1 className="text-[poppins] text-[40px] text-[#FFFFFF] leading-[52px]">
+                <h1 className="text-[poppins] text-[40px] text-white leading-[52px]">
                   Here are the key benefits you can enjoy
                 </h1>
               </div>
               <div className=" absolute w-[685px] h-[90px] opacity-[75%] bottom-0">
-                <p className="text-[poppins] w-[400] text-[20px] letter-[-2%] text-[#FFFFFF] line-[30px] ">
+                <p className="text-[poppins] w-[400] text-[20px] letter-[-2%] text-white line-[30px] ">
                   Joining Carelyo as a self-employed doctor comes with numerous
                   advantages that can enhance your practice and provide a
                   seamless experience for both you and your patients.
@@ -91,12 +91,12 @@ export default function Sedoctors() {
                 <div className=" w-[290px] h-[116px] gap-[12px] top-0 left-0 ">
                   <div className=" absolute w-[233px] h-[116px] right-0 top-0 gap-[12px]">
                     <div className=" w-[233px] h-[52px]">
-                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-[#FFFFFF]">
+                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-white">
                         Empowered Patient Outreach
                       </h1>
                     </div>
                     <div className=" absolute w-[233px] h-[52px] opacity-[75%] bottom-0 right-0 ">
-                      <p className=" w-400 left-0 text-[16px] space-x-2 text-[#FFFFFF]">
+                      <p className=" w-400 left-0 text-[16px] space-x-2 text-white">
                         Reaching More Patients Than Ever Before
                       </p>
                     </div>
@@ -104,12 +104,12 @@ export default function Sedoctors() {
                 </div>
                 <div className=" absolute w-[290px] h-[116px] gap-[12px] bottom-0  left-0 ">
                   {/* first checkmark */}
-                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-[#FFFFFF] bg-opacity-[10%] gap-10  ">
+                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-white bg-opacity-[10%] gap-10  ">
                     <div className="flex justify-center items-center w-[24px] h-[24px]">
                       <div className="relative w-[24px] h-[24px] border-2 rounded-full">
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl">
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
-                            <div className="text-[#FFFFFF] text-2xl">
+                            <div className="text-white text-2xl">
                               <svg
                                 className="w-[20px] h-[20px]"
                                 fill="none"
@@ -133,12 +133,12 @@ export default function Sedoctors() {
 
                   <div className=" absolute w-[233px] h-[116px] right-0 top-0 gap-[12px] ">
                     <div className=" w-[233px] h-[52px]">
-                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-[#FFFFFF]">
+                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-white">
                         Efficient Documentation Management
                       </h1>
                     </div>
                     <div className=" absolute w-[233px] h-[52px] opacity-[75%] bottom-0 right-0 ">
-                      <p className=" w-400 left-0 text-[16px] space-x-2 text-[#FFFFFF]">
+                      <p className=" w-400 left-0 text-[16px] space-x-2 text-white">
                         Streamlined Patient History & Documentation
                       </p>
                     </div>
@@ -147,12 +147,12 @@ export default function Sedoctors() {
               </div>
 
               {/* Second checkmark */}
-              <div className="h-[45px] w-[45px] rounded-lg p-3 bg-[#FFFFFF] bg-opacity-[10%] gap-10  ">
+              <div className="h-[45px] w-[45px] rounded-lg p-3 bg-white bg-opacity-[10%] gap-10  ">
                 <div className="flex justify-center items-center w-[24px] h-[24px]">
                   <div className="relative w-[24px] h-[24px] border-2 rounded-full">
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl">
                       <div className="flex justify-center items-center w-[10px] h-[6px]">
-                        <div className="text-[#FFFFFF] text-2xl">
+                        <div className="text-white text-2xl">
                           <svg
                             className="w-[20px] h-[20px]"
                             fill="none"
@@ -178,24 +178,24 @@ export default function Sedoctors() {
                 <div className=" w-[290px] h-[116px] gap-[12px] top-0 right-0 ">
                   <div className=" absolute w-[233px] h-[116px] right-0 top-0 gap-[12px]">
                     <div className=" w-[233px] h-[52px]">
-                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-[#FFFFFF]">
+                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-white">
                         Fortified Messaging Network
                       </h1>
                     </div>
                     <div className=" absolute w-[233px] h-[52px] opacity-[75%] bottom-0 right-0 ">
-                      <p className=" w-400 left-0 text-[16px] space-x-2 text-[#FFFFFF]">
+                      <p className=" w-400 left-0 text-[16px] space-x-2 text-white">
                         Secure Communication Channels
                       </p>
                     </div>
                   </div>
 
                   {/* third checkmark */}
-                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-[#FFFFFF] bg-opacity-[10%] gap-10  ">
+                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-white bg-opacity-[10%] gap-10  ">
                     <div className="flex justify-center items-center w-[24px] h-[24px]">
                       <div className="relative w-[24px] h-[24px] border-2 rounded-full">
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl">
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
-                            <div className="text-[#FFFFFF] text-2xl">
+                            <div className="text-white text-2xl">
                               <svg
                                 className="w-[20px] h-[20px]"
                                 fill="none"
@@ -221,24 +221,24 @@ export default function Sedoctors() {
                 <div className=" absolute w-[290px] h-[116px] gap-[12px] bottom-0 right-0 ">
                   <div className=" absolute w-[233px] h-[116px] right-0 top-0 gap-[12px] ">
                     <div className=" w-[233px] h-[52px] ">
-                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-[#FFFFFF]">
+                      <h1 className=" text-[Poppins] w-500 line-[26px] text-left text-[20px] space-x-2  text-white">
                         Efficient Scheduling Solution
                       </h1>
                     </div>
                     <div className=" absolute w-[233px] h-[52px] opacity-[75%] bottom-0 right-0">
-                      <p className=" w-400 left-0 text-[16px] space-x-2 text-[#FFFFFF]">
+                      <p className=" w-400 left-0 text-[16px] space-x-2 text-white">
                         Convenient Appointment Management
                       </p>
                     </div>
                   </div>
 
                   {/* fourth checkmark */}
-                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-[#FFFFFF] bg-opacity-[10%] gap-10  ">
+                  <div className="h-[45px] w-[45px] rounded-lg p-3 bg-white bg-opacity-[10%] gap-10  ">
                     <div className="flex justify-center items-center w-[24px] h-[24px]">
                       <div className="relative w-[24px] h-[24px] border-2 rounded-full">
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl">
                           <div className="flex justify-center items-center w-[10px] h-[6px]">
-                            <div className="text-[#FFFFFF] text-2xl">
+                            <div className="text-white text-2xl">
                               <svg
                                 className="w-[20px] h-[20px]"
                                 fill="none"

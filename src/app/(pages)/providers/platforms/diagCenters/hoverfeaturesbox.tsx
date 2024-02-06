@@ -17,19 +17,19 @@ const Hoverfeaturesbox: React.FC<HoverfeaturesboxTamplateProps> = ({
 }) => {
   return (
     <div className='relative group'>
-       <div className="absolute group-hover:-inset-10 bg-[#45AC60] rounded-[25px] blur opacity-5  "></div>
+       <div className="absolute group-hover:-inset-10 bg-sage rounded-[25px] blur opacity-5  "></div>
 
-   
-    <div className=" relative flex flex-col items-center justify-between w-[267px] h-[306px] p-8   border-solid rounded-[15px] gap-[6px] bg-white hover:border-[1px] border-[#45AC60] ">
+
+    <div className=" relative flex flex-col items-center justify-between w-[267px] h-[306px] p-8   border-solid rounded-[15px] gap-[6px] bg-white hover:border-[1px] border-sage ">
       <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[15px] gap-[10px] relative">
-        <div className="absolute w-full h-full bg-[#45AC60] opacity-10 rounded-[15px]"></div>
+        <div className="absolute w-full h-full bg-sage opacity-10 rounded-[15px]"></div>
         <div className="absolute">
-          <Image 
-          className="" 
-          layout="fixed" 
-          width={25} 
-          height={25} 
-          src={icon} 
+          <Image
+          className=""
+          layout="fixed"
+          width={25}
+          height={25}
+          src={icon}
           alt="Custom icon" />
         </div>
       </div>
@@ -43,7 +43,7 @@ const Hoverfeaturesbox: React.FC<HoverfeaturesboxTamplateProps> = ({
           {paragraph}
         </p>
       </div>
-    </div> 
+    </div>
     </div>
   )
 }

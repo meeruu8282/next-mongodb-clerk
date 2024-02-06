@@ -27,10 +27,10 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
 
             <div className="flex w-[100%] flex-row justify-start items-center font-normal pb-3 gap-6">
                 <div className="flex justify-center items-center">
-                    <h1 className="flex justify-center items-center text-[Poppins] text-4xl font-semibold text-[#45AC60] leading-10">{hashtagNumber}</h1>
+                    <h1 className="flex justify-center items-center text-[Poppins] text-4xl font-semibold text-sage leading-10">{hashtagNumber}</h1>
                 </div>
                 <div className="flex justify-center items-center">
-                    <h2 className="flex justify-center items-center text-[Poppins] text-3xl font-normal text-[#000000] leading-10"> {header}</h2>
+                    <h2 className="flex justify-center items-center text-[Poppins] text-3xl font-normal text-black leading-10"> {header}</h2>
                 </div>
             </div>
 
@@ -45,10 +45,10 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
                 />
             </div>
 
-            <div className="flex w-[100%] flex-col justify-center items-center font-normal  bg-gradient-to-br from-[#45AC60] to-[#7EDC97] rounded-3xl text-[Poppins]">
+            <div className="flex w-[100%] flex-col justify-center items-center font-normal  bg-gradient-to-br from-sage to-sageLight rounded-3xl text-[Poppins]">
                 <div className="flex flex-col justify-center items-start w-[100%] p-5 gap-2">
-                    <p className="text-[#000000] font-normal text-[Poppins] text-xl"> {text1}</p>
-                    <p className="text-[#000000] font-normal text-[Poppins] text-xl"> {text2}</p>
+                    <p className="text-black font-normal text-[Poppins] text-xl"> {text1}</p>
+                    <p className="text-black font-normal text-[Poppins] text-xl"> {text2}</p>
                 </div>
             </div>
 
@@ -59,5 +59,3 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
     );
 };
 export default HowItWorksPartOne;
-
-

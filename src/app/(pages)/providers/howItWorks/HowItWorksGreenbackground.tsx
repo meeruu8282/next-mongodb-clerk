@@ -10,7 +10,7 @@ interface HowItsWorksGreenbackgroundTemplateProps {
     heading1: string;
     heading1Bold: string;
     heading2: string;
-    
+
 
     title1: string;
     title2: string;
@@ -56,8 +56,8 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
 }) => {
     return (
         <>
-      
-            <div className="flex flex-col w-[100%] justify-center h-full items-center bg-gradient-to-br from-[#45AC60] to-[#7EDC97] text-white gap-7">
+
+            <div className="flex flex-col w-[100%] justify-center h-full items-center bg-gradient-to-br from-sage to-sageLight text-white gap-7">
                 {/* Header */}
                 <div className="flex w-[90%] flex-row justify-between items-center font-normal pt-12 ">
                     <div className="flex justify-start items-center">
@@ -70,7 +70,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                 {/* Section */}
                 <div className="flex flex-col justify-center items-center gap-6 ">
                     <div className={`flex w-[90%] flex-row h-[100%] justify-center items-center gap-6 ${style.madeItToCol} `}>
-                        <div className={`flex flex-col w-2/6  h-[20.1875rem] justify-center items-start font-[Poppins] bg-white bg-opacity-10 border border-[#FFFFFF] rounded-3xl gap-4 p-8 ${style.madeItTo90Width}`}>
+                        <div className={`flex flex-col w-2/6  h-[20.1875rem] justify-center items-start font-[Poppins] bg-white bg-opacity-10 border border-white rounded-3xl gap-4 p-8 ${style.madeItTo90Width}`}>
                             <div className={`flex justify-center items-center ${style.hidingImageW1080}  `}>
                                 <Image
                                     layout="fixed"
@@ -87,7 +87,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                                 <p className="text-xl font-medium">{text1}</p>
                             </div>
                         </div>
-                        <div className={`flex w-4/6 h-[20.1875rem] font-[Poppins] border border-[#FFFFFF] rounded-3xl bg-white bg-opacity-10 ${style.madeItTo90Width}`}>
+                        <div className={`flex w-4/6 h-[20.1875rem] font-[Poppins] border border-white rounded-3xl bg-white bg-opacity-10 ${style.madeItTo90Width}`}>
                             <div className={`flex flex-col w-3/4 justify-center items-start gap-6 p-8 ${style.madeItTo90Width} `}>
                                 <div className="flex justify-center items-center p-4">
                                     <h1 className="font-semibold font-[Poppins] text-3xl">{title2}</h1>
@@ -118,7 +118,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                     </div>
                     <div className={`flex w-[90%] flex-row-reverse h-[100%] justify-center items-center gap-6 ${style.madeItToCol}`}>
 
-                        <div className={`flex flex-col w-2/6  h-[20.1875rem] justify-center items-start font-[Poppins] bg-white bg-opacity-10 border border-[#FFFFFF] rounded-3xl gap-4 p-8 ${style.madeItTo90Width}`}>
+                        <div className={`flex flex-col w-2/6  h-[20.1875rem] justify-center items-start font-[Poppins] bg-white bg-opacity-10 border border-white rounded-3xl gap-4 p-8 ${style.madeItTo90Width}`}>
                             <div className={`flex justify-center items-center ${style.hidingImageW1080}  `}>
                                 <Image
                                     layout="fixed"
@@ -136,7 +136,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                             </div>
                         </div>
 
-                        <div className={`flex w-4/6 h-[20.1875rem] font-[Poppins] border border-[#FFFFFF] bg-white bg-opacity-10 rounded-3xl ${style.madeItTo90Width}`}>
+                        <div className={`flex w-4/6 h-[20.1875rem] font-[Poppins] border border-white bg-white bg-opacity-10 rounded-3xl ${style.madeItTo90Width}`}>
 
                             <div className={`flex flex-col w-3/4 justify-center items-start gap-6 p-8 `}>
                                 <div className="flex justify-center items-center">
@@ -175,6 +175,3 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
 };
 
 export default HowItWorksGreenbackground
-
-
-

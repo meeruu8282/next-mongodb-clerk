@@ -1,4 +1,5 @@
 import Image from "next/image";
+import style from './howItWork.module.css'
 
 interface HowItsWorkPartFiveTamplateProps {
   imageSrc1: string;
@@ -6,8 +7,9 @@ interface HowItsWorkPartFiveTamplateProps {
   hashtagNumber: string;
   header: string;
   text1: string;
-  text2: string;
-  
+  listText1: string;
+  listText2: string;
+
 }
 
 const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
@@ -16,36 +18,38 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
   hashtagNumber,
   header,
   text1,
-  text2
-  
+  listText1,
+  listText2
+
 }) => {
   return (
-    <div className="w-screen flex flex-col justify-center items-center  mt-9 ">
+    <div className="w-[90%] flex flex-col justify-center items-center gap-4">
      
 
-      
+
+
        <div className="flex flex-row justify-center items-center w-full ">
-       <div className="w-[90%] h-auto flex justify-center items-center font-semibold font-[Poppns] gap-3 " >
-        <div className="flex justify-start items-center w-[100%] border gap-3">
-           <h1 className="text-[40px] text-[#45AC60] ">
+       <div className="w-[100%] h-auto flex justify-center items-center font-semibold text-[Poppins] gap-3 " >
+        <div className="flex justify-start items-center w-[100%] gap-3">
+           <h1 className="text-4xl text-sage ">
             {hashtagNumber}
            </h1>
-           <h1 className="text-[32px]  font-[Poppns] text-black">
+           <h1 className="text-3xl text-[Poppins] text-black">
              {header}
            </h1>
        </div>
        </div>
        </div>
- 
- 
-       <div className="flex-row justify-center items-center hidden lg:flex w-full ">
+
+
+       <div className={` flex flex-row justify-start items-center w-full h-full ${style.hidingImageW1080}`}>
        <div className="flex justify-center items-center w-[90%] gap-4 ">
-         <div className="w-[100%] h-auto flex justify-center items-center gap-10 ">
-           <div className="bild för 5 ipad border ">
+         <div className="w-[100%] h-auto flex justify-start items-center">
+           <div className="bild för 5 ipad pr-9">
              <Image
-               layout="fixed"
-               width={618}
-               height={418}
+             layout="responsive"
+               width={598}
+               height={395}
                src={imageSrc1}
                alt="ipad girl"
 
@@ -53,7 +57,7 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
            </div>
            <div className="bild för 5 mobil ">
              <Image
-               layout="fixed"
+           layout="responsive"
                width={210}
                height={424}
                src={imageSrc2}
@@ -63,35 +67,29 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
          </div>
          </div>
        </div>
- 
 
- 
 
-       <div className=" flex justify-center items-center w-full">
-           <div className="flex flex-col md:flex-row justify-center items-center w-[90%] h-[100%] gap-5 mt-3">
-             <div className="flex justify-center items-center w-auto max-w-xl lg:justify-center lg:items-center border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97]">
-               <div className=" w-[100%] h-[100%]  flex justify-center items-center ">
-                 <p className=" text-black font-[Poppns] px-6 py-4 text-xl" >
+
+
+        <div className={`flex flex-row justify-start items-center w-full h-full text-white text-[Poppins] ${style.flexboxColumn}`}>
+           <div className="flex flex-row justify-start items-center w-[100%] gap-4">
+             <div className="flex justify-center items-center w-[100%]  rounded-3xl bg-gradient-to-br from-sage to-sageLight p-5 h-[9.5rem]">
+               <div className={`w-[100%] h-[100%] flex flex-col justify-center items-start ${style.textMedium}`}>
+                 <p className={`text-black text-[Poppins] text-xl font-normal ${style.textMedium }`} >
                    {text1}
                  </p>
                </div>
              </div>
-             <div className="flex justify-center items-center w-auto h-auto max-w-xl lg:justify-center lg:items-center min-h-38 border rounded-[35px] bg-gradient-to-br from-[#45AC60] to-[#7EDC97] ">
-               <div className="w-[100%] h-[100%] flex justify-center items-center ">
-                 <p className=" text-white font-[Poppns] px-6 py-4 text-xl">
-                   {text2}
-                 </p>
+             <div className="flex flex-col justify-center items-center w-[100%] rounded-3xl bg-gradient-to-br from-sage to-sageLight p-5 h-[9.5rem]">
+               <div className={`w-[100%] h-[100%] flex flex-col justify-center items-start ${style.textMedium}`}>
+                <li className={`text-white text-[Poppins] text-xl font-normal ${style.textMedium }`}> {listText1}</li>
+                <li className={`text-white text-[Poppins] text-xl font-normal ${style.textMedium }`}> {listText2} </li>
                </div>
              </div>
            </div>
-          </div>
-      
+        </div>
+
      </div>
   );
 };
 export default HowItWorksPartFive;
-
-
-
-
-

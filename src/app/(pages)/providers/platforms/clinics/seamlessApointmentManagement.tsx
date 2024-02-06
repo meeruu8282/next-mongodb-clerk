@@ -14,8 +14,8 @@ interface seamlessAppointmentManagementTamplateProps {
     header: string;
     paragraph: string;
     textbutton: string;
-   
-    
+
+
   }
 
   const SeamlessAppointmentManagement: React.FC<seamlessAppointmentManagementTamplateProps> = ({
@@ -25,16 +25,16 @@ interface seamlessAppointmentManagementTamplateProps {
     header,
     paragraph,
     textbutton,
-    
+
 
   }) => {
   return (
-       // All media queries are imported from clinic.module.css by using style.nameofmediaquery 
+       // All media queries are imported from clinic.module.css by using style.nameofmediaquery
        // Seamless Appointment Management component
        <div className={` relative  flex flex-row w-screen justify-between ${style.centertext}  items-center  h-[680px] mt-40  `}>
        <div className={` absolute  h-[100%] w-[100%] ${style.changeabsolute} ${style.hidingimages} left-[125px] max-w-[501px] max-h-[556.79px]  `}>
-         <div className=" absolute bottom-0 w-[100%] h-[100%] max-h-[481px] max-w-[501px] rounded-[25px] bg-[#FAFAFA]"></div>
-         
+         <div className=" absolute bottom-0 w-[100%] h-[100%] max-h-[481px] max-w-[501px] rounded-[25px] bg-neutral-50"></div>
+
          <div className="  max-w-[501px] max-h-[556.79px] w-[100%] h-auto bottom-0  ">
            <Image
              className=" absolute "
@@ -62,7 +62,7 @@ interface seamlessAppointmentManagementTamplateProps {
              </h1>
            </div>
            <div className="  bottom-0 w-full h-full opacity-[50%]">
-             <p className="text-[poppins] text-[20px] font-normal leading-32 tracking-tighter text-left text-[#000000]">
+             <p className="text-[poppins] text-[20px] font-normal leading-32 tracking-tighter text-left text-black">
              {paragraph}
              </p>
            </div>
@@ -75,13 +75,13 @@ interface seamlessAppointmentManagementTamplateProps {
          </Link>
          </div>
          </div>
-        
-        
+
+
        </div>
 
        {/* Practice Schedule img */}
        <div className={` ${style.hidingimage} absolute w-[382px] h-[264px] left-[339px]  top-[400px] `}>
-         <div className=" absolute flex justify-center items-center w-[382px] h-[264px] rounded-[25px] bg-[#FFFFFF] shadow-2xl ">
+         <div className=" absolute flex justify-center items-center w-[382px] h-[264px] rounded-[25px] bg-white shadow-2xl ">
            <Image
              className=""
              layout="fixed "
@@ -94,7 +94,7 @@ interface seamlessAppointmentManagementTamplateProps {
        </div>
      </div>
 
-  
+
   );
 };
 export default SeamlessAppointmentManagement;
