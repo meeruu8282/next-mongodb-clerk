@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
         <div className="min-h-screen">{children}</div>
+        <main className='main'>{children}</main>
         <div className="">
           <Footer />
         </div>

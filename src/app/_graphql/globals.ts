@@ -24,7 +24,7 @@ export const FOOTER = `
 `
 
 export const FOOTER_QUERY = `
-query Header {
+query Footer {
   ${FOOTER}
 }
 `
