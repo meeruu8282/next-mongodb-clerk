@@ -510,6 +510,8 @@ input Blogpost_Meta_Image_where_and {
   sizes__tablet__filesize: Blogpost_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Blogpost_Meta_Image_sizes__tablet__filename_operator
   id: Blogpost_Meta_Image_id_operator
+  AND: [Blogpost_Meta_Image_where_and]
+  OR: [Blogpost_Meta_Image_where_or]
 }
 
 input Blogpost_Meta_Image_where_or {
@@ -542,6 +544,8 @@ input Blogpost_Meta_Image_where_or {
   sizes__tablet__filesize: Blogpost_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Blogpost_Meta_Image_sizes__tablet__filename_operator
   id: Blogpost_Meta_Image_id_operator
+  AND: [Blogpost_Meta_Image_where_and]
+  OR: [Blogpost_Meta_Image_where_or]
 }
 
 type Category {
@@ -1067,6 +1071,8 @@ input Page_Hero_Media_where_and {
   sizes__tablet__filesize: Page_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Page_Hero_Media_sizes__tablet__filename_operator
   id: Page_Hero_Media_id_operator
+  AND: [Page_Hero_Media_where_and]
+  OR: [Page_Hero_Media_where_or]
 }
 
 input Page_Hero_Media_where_or {
@@ -1099,6 +1105,8 @@ input Page_Hero_Media_where_or {
   sizes__tablet__filesize: Page_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Page_Hero_Media_sizes__tablet__filename_operator
   id: Page_Hero_Media_id_operator
+  AND: [Page_Hero_Media_where_and]
+  OR: [Page_Hero_Media_where_or]
 }
 
 union Page_Layout = Cta | Content | MediaBlock | Archive
@@ -1582,6 +1590,8 @@ input MediaBlock_Media_where_and {
   sizes__tablet__filesize: MediaBlock_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: MediaBlock_Media_sizes__tablet__filename_operator
   id: MediaBlock_Media_id_operator
+  AND: [MediaBlock_Media_where_and]
+  OR: [MediaBlock_Media_where_or]
 }
 
 input MediaBlock_Media_where_or {
@@ -1614,6 +1624,8 @@ input MediaBlock_Media_where_or {
   sizes__tablet__filesize: MediaBlock_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: MediaBlock_Media_sizes__tablet__filename_operator
   id: MediaBlock_Media_id_operator
+  AND: [MediaBlock_Media_where_and]
+  OR: [MediaBlock_Media_where_or]
 }
 
 type Archive {
@@ -2093,6 +2105,8 @@ input Post_Hero_Media_where_and {
   sizes__tablet__filesize: Post_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Post_Hero_Media_sizes__tablet__filename_operator
   id: Post_Hero_Media_id_operator
+  AND: [Post_Hero_Media_where_and]
+  OR: [Post_Hero_Media_where_or]
 }
 
 input Post_Hero_Media_where_or {
@@ -2125,6 +2139,8 @@ input Post_Hero_Media_where_or {
   sizes__tablet__filesize: Post_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Post_Hero_Media_sizes__tablet__filename_operator
   id: Post_Hero_Media_id_operator
+  AND: [Post_Hero_Media_where_and]
+  OR: [Post_Hero_Media_where_or]
 }
 
 union Post_Layout = Cta | Content | MediaBlock | Archive
@@ -2504,6 +2520,8 @@ input Post_Meta_Image_where_and {
   sizes__tablet__filesize: Post_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Post_Meta_Image_sizes__tablet__filename_operator
   id: Post_Meta_Image_id_operator
+  AND: [Post_Meta_Image_where_and]
+  OR: [Post_Meta_Image_where_or]
 }
 
 input Post_Meta_Image_where_or {
@@ -2536,6 +2554,8 @@ input Post_Meta_Image_where_or {
   sizes__tablet__filesize: Post_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Post_Meta_Image_sizes__tablet__filename_operator
   id: Post_Meta_Image_id_operator
+  AND: [Post_Meta_Image_where_and]
+  OR: [Post_Meta_Image_where_or]
 }
 
 enum Post__status {
@@ -2975,6 +2995,8 @@ input Project_Hero_Media_where_and {
   sizes__tablet__filesize: Project_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Project_Hero_Media_sizes__tablet__filename_operator
   id: Project_Hero_Media_id_operator
+  AND: [Project_Hero_Media_where_and]
+  OR: [Project_Hero_Media_where_or]
 }
 
 input Project_Hero_Media_where_or {
@@ -3007,6 +3029,8 @@ input Project_Hero_Media_where_or {
   sizes__tablet__filesize: Project_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Project_Hero_Media_sizes__tablet__filename_operator
   id: Project_Hero_Media_id_operator
+  AND: [Project_Hero_Media_where_and]
+  OR: [Project_Hero_Media_where_or]
 }
 
 union Project_Layout = Cta | Content | MediaBlock | Archive
@@ -3384,6 +3408,8 @@ input Project_Meta_Image_where_and {
   sizes__tablet__filesize: Project_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Project_Meta_Image_sizes__tablet__filename_operator
   id: Project_Meta_Image_id_operator
+  AND: [Project_Meta_Image_where_and]
+  OR: [Project_Meta_Image_where_or]
 }
 
 input Project_Meta_Image_where_or {
@@ -3416,6 +3442,8 @@ input Project_Meta_Image_where_or {
   sizes__tablet__filesize: Project_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Project_Meta_Image_sizes__tablet__filename_operator
   id: Project_Meta_Image_id_operator
+  AND: [Project_Meta_Image_where_and]
+  OR: [Project_Meta_Image_where_or]
 }
 
 enum Project__status {
@@ -3808,6 +3836,8 @@ input Page_Meta_Image_where_and {
   sizes__tablet__filesize: Page_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Page_Meta_Image_sizes__tablet__filename_operator
   id: Page_Meta_Image_id_operator
+  AND: [Page_Meta_Image_where_and]
+  OR: [Page_Meta_Image_where_or]
 }
 
 input Page_Meta_Image_where_or {
@@ -3840,6 +3870,8 @@ input Page_Meta_Image_where_or {
   sizes__tablet__filesize: Page_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Page_Meta_Image_sizes__tablet__filename_operator
   id: Page_Meta_Image_id_operator
+  AND: [Page_Meta_Image_where_and]
+  OR: [Page_Meta_Image_where_or]
 }
 
 enum Page__status {
@@ -4220,6 +4252,8 @@ input Blogpost_Hero_Media_where_and {
   sizes__tablet__filesize: Blogpost_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Blogpost_Hero_Media_sizes__tablet__filename_operator
   id: Blogpost_Hero_Media_id_operator
+  AND: [Blogpost_Hero_Media_where_and]
+  OR: [Blogpost_Hero_Media_where_or]
 }
 
 input Blogpost_Hero_Media_where_or {
@@ -4252,6 +4286,8 @@ input Blogpost_Hero_Media_where_or {
   sizes__tablet__filesize: Blogpost_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Blogpost_Hero_Media_sizes__tablet__filename_operator
   id: Blogpost_Hero_Media_id_operator
+  AND: [Blogpost_Hero_Media_where_and]
+  OR: [Blogpost_Hero_Media_where_or]
 }
 
 union Blogpost_Layout = Cta | Content | MediaBlock | Archive
@@ -4596,6 +4632,8 @@ input Blogpost_where_and {
   createdAt: Blogpost_createdAt_operator
   _status: Blogpost__status_operator
   id: Blogpost_id_operator
+  AND: [Blogpost_where_and]
+  OR: [Blogpost_where_or]
 }
 
 input Blogpost_where_or {
@@ -4625,6 +4663,8 @@ input Blogpost_where_or {
   createdAt: Blogpost_createdAt_operator
   _status: Blogpost__status_operator
   id: Blogpost_id_operator
+  AND: [Blogpost_where_and]
+  OR: [Blogpost_where_or]
 }
 
 type blogpostsDocAccess {
@@ -5832,6 +5872,8 @@ input BlogpostVersion_Version_Meta_Image_where_and {
   sizes__tablet__filesize: BlogpostVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: BlogpostVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: BlogpostVersion_Version_Meta_Image_id_operator
+  AND: [BlogpostVersion_Version_Meta_Image_where_and]
+  OR: [BlogpostVersion_Version_Meta_Image_where_or]
 }
 
 input BlogpostVersion_Version_Meta_Image_where_or {
@@ -5864,6 +5906,8 @@ input BlogpostVersion_Version_Meta_Image_where_or {
   sizes__tablet__filesize: BlogpostVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: BlogpostVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: BlogpostVersion_Version_Meta_Image_id_operator
+  AND: [BlogpostVersion_Version_Meta_Image_where_and]
+  OR: [BlogpostVersion_Version_Meta_Image_where_or]
 }
 
 type BlogpostVersion_Version_PopulatedAuthors {
@@ -6288,6 +6332,8 @@ input BlogpostVersion_Version_Hero_Media_where_and {
   sizes__tablet__filesize: BlogpostVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: BlogpostVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: BlogpostVersion_Version_Hero_Media_id_operator
+  AND: [BlogpostVersion_Version_Hero_Media_where_and]
+  OR: [BlogpostVersion_Version_Hero_Media_where_or]
 }
 
 input BlogpostVersion_Version_Hero_Media_where_or {
@@ -6320,6 +6366,8 @@ input BlogpostVersion_Version_Hero_Media_where_or {
   sizes__tablet__filesize: BlogpostVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: BlogpostVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: BlogpostVersion_Version_Hero_Media_id_operator
+  AND: [BlogpostVersion_Version_Hero_Media_where_and]
+  OR: [BlogpostVersion_Version_Hero_Media_where_or]
 }
 
 union BlogpostVersion_Version_Layout = Cta | Content | MediaBlock | Archive
@@ -6709,6 +6757,8 @@ input versionsBlogpost_where_and {
   updatedAt: versionsBlogpost_updatedAt_operator
   latest: versionsBlogpost_latest_operator
   id: versionsBlogpost_id_operator
+  AND: [versionsBlogpost_where_and]
+  OR: [versionsBlogpost_where_or]
 }
 
 input versionsBlogpost_where_or {
@@ -6742,6 +6792,8 @@ input versionsBlogpost_where_or {
   updatedAt: versionsBlogpost_updatedAt_operator
   latest: versionsBlogpost_latest_operator
   id: versionsBlogpost_id_operator
+  AND: [versionsBlogpost_where_and]
+  OR: [versionsBlogpost_where_or]
 }
 
 type Categories {
@@ -6877,6 +6929,8 @@ input Category_where_and {
   updatedAt: Category_updatedAt_operator
   createdAt: Category_createdAt_operator
   id: Category_id_operator
+  AND: [Category_where_and]
+  OR: [Category_where_or]
 }
 
 input Category_where_or {
@@ -6889,6 +6943,8 @@ input Category_where_or {
   updatedAt: Category_updatedAt_operator
   createdAt: Category_createdAt_operator
   id: Category_id_operator
+  AND: [Category_where_and]
+  OR: [Category_where_or]
 }
 
 type categoriesDocAccess {
@@ -7595,6 +7651,8 @@ input Healthcarefacilitydetail_Hero_Media_where_and {
   sizes__tablet__filesize: Healthcarefacilitydetail_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Healthcarefacilitydetail_Hero_Media_sizes__tablet__filename_operator
   id: Healthcarefacilitydetail_Hero_Media_id_operator
+  AND: [Healthcarefacilitydetail_Hero_Media_where_and]
+  OR: [Healthcarefacilitydetail_Hero_Media_where_or]
 }
 
 input Healthcarefacilitydetail_Hero_Media_where_or {
@@ -7627,6 +7685,8 @@ input Healthcarefacilitydetail_Hero_Media_where_or {
   sizes__tablet__filesize: Healthcarefacilitydetail_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Healthcarefacilitydetail_Hero_Media_sizes__tablet__filename_operator
   id: Healthcarefacilitydetail_Hero_Media_id_operator
+  AND: [Healthcarefacilitydetail_Hero_Media_where_and]
+  OR: [Healthcarefacilitydetail_Hero_Media_where_or]
 }
 
 input Healthcarefacilitydetail_Image_where {
@@ -7996,6 +8056,8 @@ input Healthcarefacilitydetail_Image_where_and {
   sizes__tablet__filesize: Healthcarefacilitydetail_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Healthcarefacilitydetail_Image_sizes__tablet__filename_operator
   id: Healthcarefacilitydetail_Image_id_operator
+  AND: [Healthcarefacilitydetail_Image_where_and]
+  OR: [Healthcarefacilitydetail_Image_where_or]
 }
 
 input Healthcarefacilitydetail_Image_where_or {
@@ -8028,6 +8090,8 @@ input Healthcarefacilitydetail_Image_where_or {
   sizes__tablet__filesize: Healthcarefacilitydetail_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: Healthcarefacilitydetail_Image_sizes__tablet__filename_operator
   id: Healthcarefacilitydetail_Image_id_operator
+  AND: [Healthcarefacilitydetail_Image_where_and]
+  OR: [Healthcarefacilitydetail_Image_where_or]
 }
 
 union Healthcarefacilitydetail_Layout = Cta | Content | MediaBlock | Archive
@@ -8335,6 +8399,8 @@ input Healthcarefacilitydetail_where_and {
   createdAt: Healthcarefacilitydetail_createdAt_operator
   _status: Healthcarefacilitydetail__status_operator
   id: Healthcarefacilitydetail_id_operator
+  AND: [Healthcarefacilitydetail_where_and]
+  OR: [Healthcarefacilitydetail_where_or]
 }
 
 input Healthcarefacilitydetail_where_or {
@@ -8361,6 +8427,8 @@ input Healthcarefacilitydetail_where_or {
   createdAt: Healthcarefacilitydetail_createdAt_operator
   _status: Healthcarefacilitydetail__status_operator
   id: Healthcarefacilitydetail_id_operator
+  AND: [Healthcarefacilitydetail_where_and]
+  OR: [Healthcarefacilitydetail_where_or]
 }
 
 type healthcarefacilitydetailsDocAccess {
@@ -9511,6 +9579,8 @@ input HealthcarefacilitydetailVersion_Version_Hero_Media_where_and {
   sizes__tablet__filesize: HealthcarefacilitydetailVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: HealthcarefacilitydetailVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: HealthcarefacilitydetailVersion_Version_Hero_Media_id_operator
+  AND: [HealthcarefacilitydetailVersion_Version_Hero_Media_where_and]
+  OR: [HealthcarefacilitydetailVersion_Version_Hero_Media_where_or]
 }
 
 input HealthcarefacilitydetailVersion_Version_Hero_Media_where_or {
@@ -9543,6 +9613,8 @@ input HealthcarefacilitydetailVersion_Version_Hero_Media_where_or {
   sizes__tablet__filesize: HealthcarefacilitydetailVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: HealthcarefacilitydetailVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: HealthcarefacilitydetailVersion_Version_Hero_Media_id_operator
+  AND: [HealthcarefacilitydetailVersion_Version_Hero_Media_where_and]
+  OR: [HealthcarefacilitydetailVersion_Version_Hero_Media_where_or]
 }
 
 input HealthcarefacilitydetailVersion_Version_Image_where {
@@ -9912,6 +9984,8 @@ input HealthcarefacilitydetailVersion_Version_Image_where_and {
   sizes__tablet__filesize: HealthcarefacilitydetailVersion_Version_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: HealthcarefacilitydetailVersion_Version_Image_sizes__tablet__filename_operator
   id: HealthcarefacilitydetailVersion_Version_Image_id_operator
+  AND: [HealthcarefacilitydetailVersion_Version_Image_where_and]
+  OR: [HealthcarefacilitydetailVersion_Version_Image_where_or]
 }
 
 input HealthcarefacilitydetailVersion_Version_Image_where_or {
@@ -9944,6 +10018,8 @@ input HealthcarefacilitydetailVersion_Version_Image_where_or {
   sizes__tablet__filesize: HealthcarefacilitydetailVersion_Version_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: HealthcarefacilitydetailVersion_Version_Image_sizes__tablet__filename_operator
   id: HealthcarefacilitydetailVersion_Version_Image_id_operator
+  AND: [HealthcarefacilitydetailVersion_Version_Image_where_and]
+  OR: [HealthcarefacilitydetailVersion_Version_Image_where_or]
 }
 
 union HealthcarefacilitydetailVersion_Version_Layout = Cta | Content | MediaBlock | Archive
@@ -10296,6 +10372,8 @@ input versionsHealthcarefacilitydetail_where_and {
   updatedAt: versionsHealthcarefacilitydetail_updatedAt_operator
   latest: versionsHealthcarefacilitydetail_latest_operator
   id: versionsHealthcarefacilitydetail_id_operator
+  AND: [versionsHealthcarefacilitydetail_where_and]
+  OR: [versionsHealthcarefacilitydetail_where_or]
 }
 
 input versionsHealthcarefacilitydetail_where_or {
@@ -10326,6 +10404,8 @@ input versionsHealthcarefacilitydetail_where_or {
   updatedAt: versionsHealthcarefacilitydetail_updatedAt_operator
   latest: versionsHealthcarefacilitydetail_latest_operator
   id: versionsHealthcarefacilitydetail_id_operator
+  AND: [versionsHealthcarefacilitydetail_where_and]
+  OR: [versionsHealthcarefacilitydetail_where_or]
 }
 
 type Facilitytypes {
@@ -10400,6 +10480,8 @@ input Facilitytype_where_and {
   updatedAt: Facilitytype_updatedAt_operator
   createdAt: Facilitytype_createdAt_operator
   id: Facilitytype_id_operator
+  AND: [Facilitytype_where_and]
+  OR: [Facilitytype_where_or]
 }
 
 input Facilitytype_where_or {
@@ -10407,6 +10489,8 @@ input Facilitytype_where_or {
   updatedAt: Facilitytype_updatedAt_operator
   createdAt: Facilitytype_createdAt_operator
   id: Facilitytype_id_operator
+  AND: [Facilitytype_where_and]
+  OR: [Facilitytype_where_or]
 }
 
 type facilitytypesDocAccess {
@@ -10584,6 +10668,8 @@ input Specialization_where_and {
   updatedAt: Specialization_updatedAt_operator
   createdAt: Specialization_createdAt_operator
   id: Specialization_id_operator
+  AND: [Specialization_where_and]
+  OR: [Specialization_where_or]
 }
 
 input Specialization_where_or {
@@ -10591,6 +10677,8 @@ input Specialization_where_or {
   updatedAt: Specialization_updatedAt_operator
   createdAt: Specialization_createdAt_operator
   id: Specialization_id_operator
+  AND: [Specialization_where_and]
+  OR: [Specialization_where_or]
 }
 
 type specializationsDocAccess {
@@ -10797,6 +10885,8 @@ input User_where_and {
   createdAt: User_createdAt_operator
   email: User_email_operator
   id: User_id_operator
+  AND: [User_where_and]
+  OR: [User_where_or]
 }
 
 input User_where_or {
@@ -10806,6 +10896,8 @@ input User_where_or {
   createdAt: User_createdAt_operator
   email: User_email_operator
   id: User_id_operator
+  AND: [User_where_and]
+  OR: [User_where_or]
 }
 
 type usersDocAccess {
@@ -11261,6 +11353,8 @@ input Page_where_and {
   createdAt: Page_createdAt_operator
   _status: Page__status_operator
   id: Page_id_operator
+  AND: [Page_where_and]
+  OR: [Page_where_or]
 }
 
 input Page_where_or {
@@ -11284,6 +11378,8 @@ input Page_where_or {
   createdAt: Page_createdAt_operator
   _status: Page__status_operator
   id: Page_id_operator
+  AND: [Page_where_and]
+  OR: [Page_where_or]
 }
 
 type pagesDocAccess {
@@ -11747,34 +11843,9 @@ type PagesDocAccessFields_meta_Delete {
 }
 
 type PagesDocAccessFields_meta_Fields {
-  overview: PagesDocAccessFields_meta_overview
   title: PagesDocAccessFields_meta_title
   description: PagesDocAccessFields_meta_description
   image: PagesDocAccessFields_meta_image
-  preview: PagesDocAccessFields_meta_preview
-}
-
-type PagesDocAccessFields_meta_overview {
-  create: PagesDocAccessFields_meta_overview_Create
-  read: PagesDocAccessFields_meta_overview_Read
-  update: PagesDocAccessFields_meta_overview_Update
-  delete: PagesDocAccessFields_meta_overview_Delete
-}
-
-type PagesDocAccessFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type PagesDocAccessFields_meta_title {
@@ -11843,29 +11914,6 @@ type PagesDocAccessFields_meta_image_Update {
 }
 
 type PagesDocAccessFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_preview {
-  create: PagesDocAccessFields_meta_preview_Create
-  read: PagesDocAccessFields_meta_preview_Read
-  update: PagesDocAccessFields_meta_preview_Update
-  delete: PagesDocAccessFields_meta_preview_Delete
-}
-
-type PagesDocAccessFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type PagesDocAccessFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -12401,6 +12449,8 @@ input PageVersion_Version_Hero_Media_where_and {
   sizes__tablet__filesize: PageVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: PageVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: PageVersion_Version_Hero_Media_id_operator
+  AND: [PageVersion_Version_Hero_Media_where_and]
+  OR: [PageVersion_Version_Hero_Media_where_or]
 }
 
 input PageVersion_Version_Hero_Media_where_or {
@@ -12433,6 +12483,8 @@ input PageVersion_Version_Hero_Media_where_or {
   sizes__tablet__filesize: PageVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: PageVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: PageVersion_Version_Hero_Media_id_operator
+  AND: [PageVersion_Version_Hero_Media_where_and]
+  OR: [PageVersion_Version_Hero_Media_where_or]
 }
 
 union PageVersion_Version_Layout = Cta | Content | MediaBlock | Archive
@@ -12810,6 +12862,8 @@ input PageVersion_Version_Meta_Image_where_and {
   sizes__tablet__filesize: PageVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: PageVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: PageVersion_Version_Meta_Image_id_operator
+  AND: [PageVersion_Version_Meta_Image_where_and]
+  OR: [PageVersion_Version_Meta_Image_where_or]
 }
 
 input PageVersion_Version_Meta_Image_where_or {
@@ -12842,6 +12896,8 @@ input PageVersion_Version_Meta_Image_where_or {
   sizes__tablet__filesize: PageVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: PageVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: PageVersion_Version_Meta_Image_id_operator
+  AND: [PageVersion_Version_Meta_Image_where_and]
+  OR: [PageVersion_Version_Meta_Image_where_or]
 }
 
 enum PageVersion_Version__status {
@@ -13159,6 +13215,8 @@ input versionsPage_where_and {
   updatedAt: versionsPage_updatedAt_operator
   latest: versionsPage_latest_operator
   id: versionsPage_id_operator
+  AND: [versionsPage_where_and]
+  OR: [versionsPage_where_or]
 }
 
 input versionsPage_where_or {
@@ -13186,6 +13244,8 @@ input versionsPage_where_or {
   updatedAt: versionsPage_updatedAt_operator
   latest: versionsPage_latest_operator
   id: versionsPage_id_operator
+  AND: [versionsPage_where_and]
+  OR: [versionsPage_where_or]
 }
 
 type Posts {
@@ -13520,6 +13580,8 @@ input Post_where_and {
   createdAt: Post_createdAt_operator
   _status: Post__status_operator
   id: Post_id_operator
+  AND: [Post_where_and]
+  OR: [Post_where_or]
 }
 
 input Post_where_or {
@@ -13549,6 +13611,8 @@ input Post_where_or {
   createdAt: Post_createdAt_operator
   _status: Post__status_operator
   id: Post_id_operator
+  AND: [Post_where_and]
+  OR: [Post_where_or]
 }
 
 type postsDocAccess {
@@ -14208,34 +14272,9 @@ type PostsDocAccessFields_meta_Delete {
 }
 
 type PostsDocAccessFields_meta_Fields {
-  overview: PostsDocAccessFields_meta_overview
   title: PostsDocAccessFields_meta_title
   description: PostsDocAccessFields_meta_description
   image: PostsDocAccessFields_meta_image
-  preview: PostsDocAccessFields_meta_preview
-}
-
-type PostsDocAccessFields_meta_overview {
-  create: PostsDocAccessFields_meta_overview_Create
-  read: PostsDocAccessFields_meta_overview_Read
-  update: PostsDocAccessFields_meta_overview_Update
-  delete: PostsDocAccessFields_meta_overview_Delete
-}
-
-type PostsDocAccessFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type PostsDocAccessFields_meta_title {
@@ -14304,29 +14343,6 @@ type PostsDocAccessFields_meta_image_Update {
 }
 
 type PostsDocAccessFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_preview {
-  create: PostsDocAccessFields_meta_preview_Create
-  read: PostsDocAccessFields_meta_preview_Read
-  update: PostsDocAccessFields_meta_preview_Update
-  delete: PostsDocAccessFields_meta_preview_Delete
-}
-
-type PostsDocAccessFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type PostsDocAccessFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -14873,6 +14889,8 @@ input PostVersion_Version_Hero_Media_where_and {
   sizes__tablet__filesize: PostVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: PostVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: PostVersion_Version_Hero_Media_id_operator
+  AND: [PostVersion_Version_Hero_Media_where_and]
+  OR: [PostVersion_Version_Hero_Media_where_or]
 }
 
 input PostVersion_Version_Hero_Media_where_or {
@@ -14905,6 +14923,8 @@ input PostVersion_Version_Hero_Media_where_or {
   sizes__tablet__filesize: PostVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: PostVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: PostVersion_Version_Hero_Media_id_operator
+  AND: [PostVersion_Version_Hero_Media_where_and]
+  OR: [PostVersion_Version_Hero_Media_where_or]
 }
 
 union PostVersion_Version_Layout = Cta | Content | MediaBlock | Archive
@@ -15284,6 +15304,8 @@ input PostVersion_Version_Meta_Image_where_and {
   sizes__tablet__filesize: PostVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: PostVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: PostVersion_Version_Meta_Image_id_operator
+  AND: [PostVersion_Version_Meta_Image_where_and]
+  OR: [PostVersion_Version_Meta_Image_where_or]
 }
 
 input PostVersion_Version_Meta_Image_where_or {
@@ -15316,6 +15338,8 @@ input PostVersion_Version_Meta_Image_where_or {
   sizes__tablet__filesize: PostVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: PostVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: PostVersion_Version_Meta_Image_id_operator
+  AND: [PostVersion_Version_Meta_Image_where_and]
+  OR: [PostVersion_Version_Meta_Image_where_or]
 }
 
 enum PostVersion_Version__status {
@@ -15700,6 +15724,8 @@ input versionsPost_where_and {
   updatedAt: versionsPost_updatedAt_operator
   latest: versionsPost_latest_operator
   id: versionsPost_id_operator
+  AND: [versionsPost_where_and]
+  OR: [versionsPost_where_or]
 }
 
 input versionsPost_where_or {
@@ -15733,6 +15759,8 @@ input versionsPost_where_or {
   updatedAt: versionsPost_updatedAt_operator
   latest: versionsPost_latest_operator
   id: versionsPost_id_operator
+  AND: [versionsPost_where_and]
+  OR: [versionsPost_where_or]
 }
 
 type Projects {
@@ -16022,6 +16050,8 @@ input Project_where_and {
   createdAt: Project_createdAt_operator
   _status: Project__status_operator
   id: Project_id_operator
+  AND: [Project_where_and]
+  OR: [Project_where_or]
 }
 
 input Project_where_or {
@@ -16047,6 +16077,8 @@ input Project_where_or {
   createdAt: Project_createdAt_operator
   _status: Project__status_operator
   id: Project_id_operator
+  AND: [Project_where_and]
+  OR: [Project_where_or]
 }
 
 type projectsDocAccess {
@@ -16558,34 +16590,9 @@ type ProjectsDocAccessFields_meta_Delete {
 }
 
 type ProjectsDocAccessFields_meta_Fields {
-  overview: ProjectsDocAccessFields_meta_overview
   title: ProjectsDocAccessFields_meta_title
   description: ProjectsDocAccessFields_meta_description
   image: ProjectsDocAccessFields_meta_image
-  preview: ProjectsDocAccessFields_meta_preview
-}
-
-type ProjectsDocAccessFields_meta_overview {
-  create: ProjectsDocAccessFields_meta_overview_Create
-  read: ProjectsDocAccessFields_meta_overview_Read
-  update: ProjectsDocAccessFields_meta_overview_Update
-  delete: ProjectsDocAccessFields_meta_overview_Delete
-}
-
-type ProjectsDocAccessFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type ProjectsDocAccessFields_meta_title {
@@ -16654,29 +16661,6 @@ type ProjectsDocAccessFields_meta_image_Update {
 }
 
 type ProjectsDocAccessFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_preview {
-  create: ProjectsDocAccessFields_meta_preview_Create
-  read: ProjectsDocAccessFields_meta_preview_Read
-  update: ProjectsDocAccessFields_meta_preview_Update
-  delete: ProjectsDocAccessFields_meta_preview_Delete
-}
-
-type ProjectsDocAccessFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -17214,6 +17198,8 @@ input ProjectVersion_Version_Hero_Media_where_and {
   sizes__tablet__filesize: ProjectVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: ProjectVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: ProjectVersion_Version_Hero_Media_id_operator
+  AND: [ProjectVersion_Version_Hero_Media_where_and]
+  OR: [ProjectVersion_Version_Hero_Media_where_or]
 }
 
 input ProjectVersion_Version_Hero_Media_where_or {
@@ -17246,6 +17232,8 @@ input ProjectVersion_Version_Hero_Media_where_or {
   sizes__tablet__filesize: ProjectVersion_Version_Hero_Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: ProjectVersion_Version_Hero_Media_sizes__tablet__filename_operator
   id: ProjectVersion_Version_Hero_Media_id_operator
+  AND: [ProjectVersion_Version_Hero_Media_where_and]
+  OR: [ProjectVersion_Version_Hero_Media_where_or]
 }
 
 union ProjectVersion_Version_Layout = Cta | Content | MediaBlock | Archive
@@ -17623,6 +17611,8 @@ input ProjectVersion_Version_Meta_Image_where_and {
   sizes__tablet__filesize: ProjectVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: ProjectVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: ProjectVersion_Version_Meta_Image_id_operator
+  AND: [ProjectVersion_Version_Meta_Image_where_and]
+  OR: [ProjectVersion_Version_Meta_Image_where_or]
 }
 
 input ProjectVersion_Version_Meta_Image_where_or {
@@ -17655,6 +17645,8 @@ input ProjectVersion_Version_Meta_Image_where_or {
   sizes__tablet__filesize: ProjectVersion_Version_Meta_Image_sizes__tablet__filesize_operator
   sizes__tablet__filename: ProjectVersion_Version_Meta_Image_sizes__tablet__filename_operator
   id: ProjectVersion_Version_Meta_Image_id_operator
+  AND: [ProjectVersion_Version_Meta_Image_where_and]
+  OR: [ProjectVersion_Version_Meta_Image_where_or]
 }
 
 enum ProjectVersion_Version__status {
@@ -17994,6 +17986,8 @@ input versionsProject_where_and {
   updatedAt: versionsProject_updatedAt_operator
   latest: versionsProject_latest_operator
   id: versionsProject_id_operator
+  AND: [versionsProject_where_and]
+  OR: [versionsProject_where_or]
 }
 
 input versionsProject_where_or {
@@ -18023,6 +18017,8 @@ input versionsProject_where_or {
   updatedAt: versionsProject_updatedAt_operator
   latest: versionsProject_latest_operator
   id: versionsProject_id_operator
+  AND: [versionsProject_where_and]
+  OR: [versionsProject_where_or]
 }
 
 type allMedia {
@@ -18406,6 +18402,8 @@ input Media_where_and {
   sizes__tablet__filesize: Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Media_sizes__tablet__filename_operator
   id: Media_id_operator
+  AND: [Media_where_and]
+  OR: [Media_where_or]
 }
 
 input Media_where_or {
@@ -18438,6 +18436,8 @@ input Media_where_or {
   sizes__tablet__filesize: Media_sizes__tablet__filesize_operator
   sizes__tablet__filename: Media_sizes__tablet__filename_operator
   id: Media_id_operator
+  AND: [Media_where_and]
+  OR: [Media_where_or]
 }
 
 type mediaDocAccess {
@@ -19409,6 +19409,8 @@ input Comment_where_and {
   createdAt: Comment_createdAt_operator
   _status: Comment__status_operator
   id: Comment_id_operator
+  AND: [Comment_where_and]
+  OR: [Comment_where_or]
 }
 
 input Comment_where_or {
@@ -19421,6 +19423,8 @@ input Comment_where_or {
   createdAt: Comment_createdAt_operator
   _status: Comment__status_operator
   id: Comment_id_operator
+  AND: [Comment_where_and]
+  OR: [Comment_where_or]
 }
 
 type commentsDocAccess {
@@ -19887,6 +19891,8 @@ input versionsComment_where_and {
   updatedAt: versionsComment_updatedAt_operator
   latest: versionsComment_latest_operator
   id: versionsComment_id_operator
+  AND: [versionsComment_where_and]
+  OR: [versionsComment_where_or]
 }
 
 input versionsComment_where_or {
@@ -19903,6 +19909,8 @@ input versionsComment_where_or {
   updatedAt: versionsComment_updatedAt_operator
   latest: versionsComment_latest_operator
   id: versionsComment_id_operator
+  AND: [versionsComment_where_and]
+  OR: [versionsComment_where_or]
 }
 
 type Redirect {
@@ -20048,6 +20056,8 @@ input Redirect_where_and {
   updatedAt: Redirect_updatedAt_operator
   createdAt: Redirect_createdAt_operator
   id: Redirect_id_operator
+  AND: [Redirect_where_and]
+  OR: [Redirect_where_or]
 }
 
 input Redirect_where_or {
@@ -20058,6 +20068,8 @@ input Redirect_where_or {
   updatedAt: Redirect_updatedAt_operator
   createdAt: Redirect_createdAt_operator
   id: Redirect_id_operator
+  AND: [Redirect_where_and]
+  OR: [Redirect_where_or]
 }
 
 type redirectsDocAccess {
@@ -20378,6 +20390,8 @@ input PayloadPreference_where_and {
   updatedAt: PayloadPreference_updatedAt_operator
   createdAt: PayloadPreference_createdAt_operator
   id: PayloadPreference_id_operator
+  AND: [PayloadPreference_where_and]
+  OR: [PayloadPreference_where_or]
 }
 
 input PayloadPreference_where_or {
@@ -20387,6 +20401,8 @@ input PayloadPreference_where_or {
   updatedAt: PayloadPreference_updatedAt_operator
   createdAt: PayloadPreference_createdAt_operator
   id: PayloadPreference_id_operator
+  AND: [PayloadPreference_where_and]
+  OR: [PayloadPreference_where_or]
 }
 
 type payload_preferencesDocAccess {
@@ -20965,6 +20981,7 @@ type HeaderUpdateDocAccess {
 }
 
 type Footer {
+  copyright: String!
   navItems: [Footer_NavItems!]
   updatedAt: DateTime
   createdAt: DateTime
@@ -21006,9 +21023,33 @@ type footerDocAccess {
 }
 
 type FooterDocAccessFields {
+  copyright: FooterDocAccessFields_copyright
   navItems: FooterDocAccessFields_navItems
   updatedAt: FooterDocAccessFields_updatedAt
   createdAt: FooterDocAccessFields_createdAt
+}
+
+type FooterDocAccessFields_copyright {
+  create: FooterDocAccessFields_copyright_Create
+  read: FooterDocAccessFields_copyright_Read
+  update: FooterDocAccessFields_copyright_Update
+  delete: FooterDocAccessFields_copyright_Delete
+}
+
+type FooterDocAccessFields_copyright_Create {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_copyright_Read {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_copyright_Update {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_copyright_Delete {
+  permission: Boolean!
 }
 
 type FooterDocAccessFields_navItems {
@@ -23887,34 +23928,9 @@ type PagesFields_meta_Delete {
 }
 
 type PagesFields_meta_Fields {
-  overview: PagesFields_meta_overview
   title: PagesFields_meta_title
   description: PagesFields_meta_description
   image: PagesFields_meta_image
-  preview: PagesFields_meta_preview
-}
-
-type PagesFields_meta_overview {
-  create: PagesFields_meta_overview_Create
-  read: PagesFields_meta_overview_Read
-  update: PagesFields_meta_overview_Update
-  delete: PagesFields_meta_overview_Delete
-}
-
-type PagesFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type PagesFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type PagesFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type PagesFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type PagesFields_meta_title {
@@ -23983,29 +23999,6 @@ type PagesFields_meta_image_Update {
 }
 
 type PagesFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type PagesFields_meta_preview {
-  create: PagesFields_meta_preview_Create
-  read: PagesFields_meta_preview_Read
-  update: PagesFields_meta_preview_Update
-  delete: PagesFields_meta_preview_Delete
-}
-
-type PagesFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type PagesFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type PagesFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type PagesFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -24760,34 +24753,9 @@ type PostsFields_meta_Delete {
 }
 
 type PostsFields_meta_Fields {
-  overview: PostsFields_meta_overview
   title: PostsFields_meta_title
   description: PostsFields_meta_description
   image: PostsFields_meta_image
-  preview: PostsFields_meta_preview
-}
-
-type PostsFields_meta_overview {
-  create: PostsFields_meta_overview_Create
-  read: PostsFields_meta_overview_Read
-  update: PostsFields_meta_overview_Update
-  delete: PostsFields_meta_overview_Delete
-}
-
-type PostsFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type PostsFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type PostsFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type PostsFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type PostsFields_meta_title {
@@ -24856,29 +24824,6 @@ type PostsFields_meta_image_Update {
 }
 
 type PostsFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type PostsFields_meta_preview {
-  create: PostsFields_meta_preview_Create
-  read: PostsFields_meta_preview_Read
-  update: PostsFields_meta_preview_Update
-  delete: PostsFields_meta_preview_Delete
-}
-
-type PostsFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type PostsFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type PostsFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type PostsFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -25485,34 +25430,9 @@ type ProjectsFields_meta_Delete {
 }
 
 type ProjectsFields_meta_Fields {
-  overview: ProjectsFields_meta_overview
   title: ProjectsFields_meta_title
   description: ProjectsFields_meta_description
   image: ProjectsFields_meta_image
-  preview: ProjectsFields_meta_preview
-}
-
-type ProjectsFields_meta_overview {
-  create: ProjectsFields_meta_overview_Create
-  read: ProjectsFields_meta_overview_Read
-  update: ProjectsFields_meta_overview_Update
-  delete: ProjectsFields_meta_overview_Delete
-}
-
-type ProjectsFields_meta_overview_Create {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_overview_Read {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_overview_Update {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_overview_Delete {
-  permission: Boolean!
 }
 
 type ProjectsFields_meta_title {
@@ -25581,29 +25501,6 @@ type ProjectsFields_meta_image_Update {
 }
 
 type ProjectsFields_meta_image_Delete {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_preview {
-  create: ProjectsFields_meta_preview_Create
-  read: ProjectsFields_meta_preview_Read
-  update: ProjectsFields_meta_preview_Update
-  delete: ProjectsFields_meta_preview_Delete
-}
-
-type ProjectsFields_meta_preview_Create {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_preview_Read {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_preview_Update {
-  permission: Boolean!
-}
-
-type ProjectsFields_meta_preview_Delete {
   permission: Boolean!
 }
 
@@ -27516,9 +27413,33 @@ type footerAccess {
 }
 
 type FooterFields {
+  copyright: FooterFields_copyright
   navItems: FooterFields_navItems
   updatedAt: FooterFields_updatedAt
   createdAt: FooterFields_createdAt
+}
+
+type FooterFields_copyright {
+  create: FooterFields_copyright_Create
+  read: FooterFields_copyright_Read
+  update: FooterFields_copyright_Update
+  delete: FooterFields_copyright_Delete
+}
+
+type FooterFields_copyright_Create {
+  permission: Boolean!
+}
+
+type FooterFields_copyright_Read {
+  permission: Boolean!
+}
+
+type FooterFields_copyright_Update {
+  permission: Boolean!
+}
+
+type FooterFields_copyright_Delete {
+  permission: Boolean!
 }
 
 type FooterFields_navItems {
@@ -28918,6 +28839,7 @@ enum Header_NavItems_Link_ReferenceRelationshipInputRelationTo {
 }
 
 input mutationFooterInput {
+  copyright: String!
   navItems: [mutationFooter_NavItemsInput]
   updatedAt: String
   createdAt: String
