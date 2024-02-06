@@ -2,22 +2,47 @@
 
 .footer {
   padding: 30px 0;
-  background-color: #333; /* Mörkgrå bakgrundsfärg */
-  color: #fff; /* Vit textfärg */
+  background-color: black;
+  color: white ;
 
   @include small-break {
     padding: calc(var(--base) * 2) 0;
   }
 }
 
-:global([data-theme='dark']) {
-  .footer {
-    background-color: #666; /* Ljusgrå bakgrundsfärg för mörkt tema */
-    color: #fff; /* Vit textfärg för mörkt tema */
+
+.inclusions {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 100px 0;
+
+  @include large-break {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mid-break {
+    margin: 60px 0;
+  }
+
+  @include extra-small-break {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Övriga stilregler för .wrap, .logo, .hr, .socialLinks osv. förblir oförändrade */
+.icon {
+  margin-bottom: 16px;
+}
+
+
+:global([data-theme='dark']) {
+  .footer {
+    background-color: var(--theme-elevation-50);
+    color: var(--theme-elevation-1000);
+  }
+}
 
 .wrap {
   display: flex;

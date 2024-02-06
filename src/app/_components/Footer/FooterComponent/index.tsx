@@ -39,24 +39,24 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <Gutter>
           <div className={classes.wrap}>
             <Link href="/">
-             
             </Link>
             <p>{footer.copyright}</p>
             <div className={classes.socialLinks}>
               {navItems.map(item => {
-                
+
+                const icon=''
 
                 return (
-                  <a
-                  key={item.link.label}
-                  href={item.link.url}
-                  target="_blank" // Öppna länkar i ny flik
-                  rel="noopener noreferrer" // Rekommenderad säkerhetspraxis för länkar som öppnar nya flikar
-                  className={classes.socialLinksItem}
-                >
-                
-                  <span>{item.link.label}</span> {/* Visa länkens etikett */}
-                </a>
+                  <Button
+                    key={item.link.label}
+                    el="link"
+                    href={item.link.url}
+                    newTab={true}
+                    className={classes.socialLinksItem}
+                  >
+                    {item.link.label}
+                 
+                  </Button>
                 )
               })}
             </div>
