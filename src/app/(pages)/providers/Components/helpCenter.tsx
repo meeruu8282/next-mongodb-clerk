@@ -1,5 +1,10 @@
 import HelpCard from "./helpCard";
 
+
+interface HelpCenterTemplateProps{
+  
+}
+
 export default function () {
   return (
     <div className="relative flex w-[95%] lg:w-[90%] flex-wrap justify-center lg:justify-between">
