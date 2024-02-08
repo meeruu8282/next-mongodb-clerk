@@ -1,6 +1,14 @@
 import EllipseBackground from "./ellipseBackground";
 
-export default function SearchBar() {
+interface SearchbarTemplateProps{
+    title: string;
+    undertitle: string;
+}
+
+const SearchBar: React.FC<SearchbarTemplateProps> = ({
+    title,
+    undertitle
+  }) => {
     return (
         <div className="relative w-[97%] md:w-[90%] h-[267px] top-[top: 2652px]">
             {/* Green background container */}
@@ -40,7 +48,7 @@ export default function SearchBar() {
                 </div>
                 <form action="" className="flex relative w-full p-4 md:p-0 md:w-3/4 v-max mx-auto">
                     <div className="flex flex-col w-full">
-                        <label className="text-[poppins] text-[25px] text-center md:text-left font-semibold leading-15 tracking-normal  text-left text-[#FFFFFF]" htmlFor="SearchHelp">Welcome to the Carelyo Help Center!</label>
+                        <label className="text-[poppins] text-[25px] text-center md:text-left font-semibold leading-15 tracking-normal text-[#FFFFFF]" htmlFor="SearchHelp">{title}</label>
                         <div className="flex flex-row pt-2.5">
                             <div className="relative w-full">
                                 <input type="search" name="" id="SearchHelp" placeholder="Search Blog here..." className="peer z-10 bg transparent w-full h-[65px] rounded-[20px] border cursor-pointer focus:outline-none text-[19px] md:text-[16px] focus:cursor-text pl-14 pr-4" />
@@ -48,7 +56,7 @@ export default function SearchBar() {
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8806 0.5C15.2506 0.5 19.6186 4.868 19.6186 10.238C19.6186 12.7715 18.6463 15.0823 17.0553 16.8165L20.186 19.9407C20.479 20.2337 20.48 20.7077 20.187 21.0007C20.041 21.1487 19.848 21.2217 19.656 21.2217C19.465 21.2217 19.273 21.1487 19.126 21.0027L15.9575 17.843C14.2907 19.1778 12.1773 19.977 9.8806 19.977C4.5106 19.977 0.141602 15.608 0.141602 10.238C0.141602 4.868 4.5106 0.5 9.8806 0.5ZM9.8806 2C5.3376 2 1.6416 5.695 1.6416 10.238C1.6416 14.781 5.3376 18.477 9.8806 18.477C14.4226 18.477 18.1186 14.781 18.1186 10.238C18.1186 5.695 14.4226 2 9.8806 2Z" className="fill-current text-cadetGray" />
                                 </svg>
                             </div>
-                            <button className="carelyoButton justify-center flex md:w-full items-center md:p-6 h-[65px] w-[65px] w-1/6 md:w-[160px] rounded-[20px] md:mt-0 ml-2 md:ml-6 p-4">
+                            <button className="carelyoButton justify-center flex items-center md:p-6 h-[65px] w-[65px] w-1/6 md:w-[160px] rounded-[20px] md:mt-0 ml-2 md:ml-6 p-4">
                                 <div className="">
                                     <div className="w-[40px] h-[40px] md:h-[28px] md:w-[28px] rounded-full flex justify-center items-center bg-[#FFFFFF] bg-opacity-[25%]">
 
@@ -62,9 +70,11 @@ export default function SearchBar() {
                                 </div>
                             </button>
                         </div>
+                        <div className="text-[poppins] text-[16px] text-center md:text-left font-semibold leading-15 tracking-normal w-full mt-4 text-[#FFFFFF]">{undertitle}</div>
                     </div>
                 </form>
             </div>
         </div>
     );
 }
+export default SearchBar
