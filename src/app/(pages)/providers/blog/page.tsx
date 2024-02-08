@@ -23,8 +23,8 @@ export default async function Blog() {
 
   try {
     blogPosts = await fetchDocs<Blogpost>('blogposts')
-    //console.log(blogPosts)
-    
+    console.log(blogPosts)
+
   } catch (error) {
 
   }
