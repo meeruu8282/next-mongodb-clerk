@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className=" h-[157.69px] gap-[24px] z-auto ">
           <div> </div>
-          <div className="h-[65px] w-screen bg-[rgba(22,28,40,1)]  flex items-end ">
+          <div className="h-[65px] w-screen hidden bg-[rgba(22,28,40,1)] md:flex items-end ">
             <div className="topNavbarInner justify-end ml-28">
               <div className="  w-[391px] h-[17px]">
                 <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
@@ -56,13 +56,13 @@ export default function RootLayout({
 
           <div className="  max-h-32px top-25px left-144px ">
           <div className="hidden md:block">
-  <Navbar />
+ <Navbar />
 </div>
 <div className="block md:hidden">
   <NavbarMobile />
 </div>
           </div>
-          <div className="w-[624px] h-[480px] top-[288.69px] left-[125px] rounded-[30px] ">
+          <div className="rounded-[30px] ">
             <h1 className="text-[64px]  leading-[83px];"></h1>
           </div>
         </div>

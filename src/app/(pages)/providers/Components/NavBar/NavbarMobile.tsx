@@ -15,6 +15,7 @@ const NavbarMobile = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsPlatformOpen(false);
   };
 
   const handlePlatformHover = () => {
@@ -52,30 +53,30 @@ const NavbarMobile = () => {
           </svg>
         </button>
       </nav>
-      <div className={`w-screen h-full bg-white z-50 absolute fullscreen-menu ${isMenuOpen ? 'flex' : 'hidden'}`} >
+      <div  className={`w-screen h-full bg-white z-50 absolute fullscreen-menu ${isMenuOpen ? 'flex' : 'hidden'}`} >
         <div className="nav-links flex flex-col items-center justify-center h-full w-full text-4xl gap-9 pb-20">
-          <Link href="/providers/howItWorks" className="text-black hover:text-sage">
+          <Link onClick={closeMenu} href="/providers/howItWorks" className="text-black hover:text-sage">
             <span>How it works</span>
           </Link>
           <div>
             <div  className="text-black text-center hover:text-sage" onClick={handlePlatformHover}>
                 Platform
             </div>
-            <ul className={`${isPlatformOpen ? 'block' : 'hidden'} text-center border-sage border-b-2 p-2 flex flex-col gap-5`}>
-              <li ><Link className='text-center hover:text-sage' href="/providers/platforms/diagCenters">Diagnostisk Center</Link></li>
-              <li><Link className='hover:text-sage' href="/providers/platforms/hospitals">Hostpital</Link></li>
-              <li><Link className='hover:text-sage' href="/providers/platforms/labCenters">LabCenter</Link></li>
-              <li><Link className='hover:text-sage'href="/providers/platforms/pharmacies">Pharmacies</Link></li>
-              <li><Link className="hover:text-sage" href="/providers/platforms/seDoctors">SeDoctors</Link></li>
+            <ul className={`${isPlatformOpen ? 'flex' : 'hidden'} text-center border-sage border-b-2 p-2 flex-col gap-5`}>
+              <li ><Link onClick={closeMenu} className='text-center hover:text-sage' href="/providers/platforms/diagCenters">Diagnostisk Center</Link></li>
+              <li><Link onClick={closeMenu} className='hover:text-sage' href="/providers/platforms/hospitals">Hostpital</Link></li>
+              <li><Link onClick={closeMenu} className='hover:text-sage' href="/providers/platforms/labCenters">LabCenter</Link></li>
+              <li><Link onClick={closeMenu} className='hover:text-sage'href="/providers/platforms/pharmacies">Pharmacies</Link></li>
+              <li><Link onClick={closeMenu} className="hover:text-sage" href="/providers/platforms/seDoctors">SeDoctors</Link></li>
             </ul>
           </div>
-          <Link href="/providers/pricing" className="text-black hover:text-sage">
+          <Link onClick={closeMenu} href="/providers/pricing" className="text-black hover:text-sage">
             <span>Pricing</span>
           </Link>
-          <Link href="/providers/blog" className="text-black hover:text-sage">
+          <Link onClick={closeMenu} href="/providers/blog" className="text-black hover:text-sage">
             <span>Blog</span>
           </Link>
-          <Link href="/providers/help" className="text-black hover:text-sage">
+          <Link onClick={closeMenu} href="/providers/help" className="text-black hover:text-sage">
             <span>Help</span>
           </Link>
           <div className="flex w-[125px] h-[52px] border-[1px] border-sage rounded-[35px] justify-center items-center gap-2">

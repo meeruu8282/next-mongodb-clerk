@@ -7,9 +7,11 @@ import SuperCharge from "../Components/superCharge";
 
 export default function Help() {
   return (
-    <div className="flex flex-col align-center items-center min-h-screen">
+    <div className="flex flex-col items-center min-h-screen">
       <BlurBackGroundDesign/>
-      <SearchBar/>
+      <SearchBar
+      title={"Welcome to the Carelyo Help Center!"}
+      undertitle={""}/>
       <HelpCenter/>
       <ContactComponent/>
       <LocationComponent/>
