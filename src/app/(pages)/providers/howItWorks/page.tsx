@@ -200,7 +200,7 @@ export default function Howitwork() {
        
 
       <div className="w-full justify-center flex items-center mb-[12%] mt-[10%]">
-          <h1 className="text-[Poppins] font-semibold text-lg sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
+          <h1 className={`text-[Poppins] font-semibold text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl ${style.text2Xl585} ${style.textXl480} ${style.textLg395} ${style.textBase360}`}>
             An easier way to interact with patient
           </h1>
         </div>

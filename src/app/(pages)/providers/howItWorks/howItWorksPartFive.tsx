@@ -34,7 +34,7 @@ const HowItWorksPartFive: React.FC<HowItsWorkPartFiveTamplateProps> = ({
            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl text-sage ">
             {hashtagNumber}
            </h1>
-           <h1 className="text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl text-[Poppins] font-normal text-black">
+           <h1 className={`flex justify-center items-center text-[Poppins] text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-normal text-black leading-10 ${style.textBase360}`}>
              {header}
            </h1>
        </div>

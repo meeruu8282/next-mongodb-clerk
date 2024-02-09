@@ -71,6 +71,38 @@
     }
   }
 
+  @media (max-width: 585px)  {
+    .text2Xl585 {
+      font-size: 1.5rem; 
+      line-height: 2rem;     
+    }
+  }
+
+  @media (max-width: 480px)  {
+    .textXl480 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;        
+    }
+  }
+
+  @media (max-width: 395px)  {
+    .textLg395 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;       
+    }
+  }
+
+
+
+  @media (max-width: 360px)  {
+    .textBase360 {
+      font-size: 1rem; /* 16px */
+      line-height: 1.5rem; /* 24px */      
+    }
+  }
+
+
+
 
 
 

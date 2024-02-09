@@ -32,7 +32,7 @@ const HowItWorksPartFour: React.FC<HowItsWorkPartFourTemplateProps> = ({
           <h1 className="flex justify-center items-center text-[Poppins] text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-semibold text-sage leading-10">{hashtagNumber}</h1>
         </div>
         <div className="flex justify-center items-center">
-          <h2 className="flex justify-center items-center text-[Poppins] text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-normal text-black leading-10"> {header}</h2>
+          <h2 className={`flex justify-center items-center text-[Poppins] text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-normal text-black leading-10 ${style.textBase360}`}> {header}</h2>
         </div>
       </div>
 
