@@ -60,6 +60,7 @@ export default function Howitwork() {
 
 
       <div className={`block flex-col w-full justify-center h-full items-center text-[Poppins] mx-auto my-auto mt-14 ${style.hideMobileMode}`}>
+        
 
         <div className="w-full justify-center flex items-center mb-5">
           <h1 className="text-[Poppins] font-semibold text-4xl">

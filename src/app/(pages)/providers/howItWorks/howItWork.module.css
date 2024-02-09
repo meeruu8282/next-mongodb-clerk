@@ -30,6 +30,15 @@
     }
   }
 
+  @media (max-width: 780px)  {
+    .removeMaxWidth780 {
+      max-width: none;
+     
+      
+     
+    }
+  }
+
 
   @media (max-width: 1240px)  {
     .flexJusticeCenter {

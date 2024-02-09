@@ -22,7 +22,7 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
     return (
 
 
-        <div className="flex flex-col justify-center items-center w-full max-w-[552.12px] mx-auto h-full max-h-[570px] text-[Poppins] ">
+        <div className={`flex flex-col justify-center items-center w-full max-w-[552.12px] mx-auto h-full max-h-[570px] text-[Poppins] ${style.removeMaxWidth780}`}>
 
 
             <div className="flex w-[100%] flex-row justify-start items-center font-normal pb-3 gap-6">

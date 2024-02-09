@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import style from './howItWork.module.css'
 
 
 interface HowItsWorkPartThreeTemplateProps {
@@ -24,7 +24,7 @@ const HowItWorksThree: React.FC<HowItsWorkPartThreeTemplateProps> = ({
 
 }) => {
   return (
-    <div className="flex flex-col w-full max-w-[546px] mx-auto justify-center h-full max-h-[781px] items-center text-[Poppins] mb-5  mt-10">
+    <div className={`flex flex-col w-full max-w-[546px] mx-auto justify-center h-full max-h-[781px] items-center text-[Poppins] mb-5  mt-10 ${style.removeMaxWidth780}`}>
 
     <div className="flex w-full flex-row justify-start items-center font-normal pb-3 gap-6">
       <div className="flex justify-center items-center">

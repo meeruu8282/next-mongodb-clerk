@@ -1,4 +1,5 @@
 import Image from "next/image";
+import style from './howItWork.module.css'
 
 interface HowItsWorkPartTwoTemplateProps {
     imageSrc: string;
@@ -22,7 +23,7 @@ const HowItWorksPartTwo: React.FC<HowItsWorkPartTwoTemplateProps> = ({
 }) => {
     return (
 
-        <div className="flex flex-col w-full max-w-[597px] mx-auto justify-center h-full  max-h-[575.94px] items-center text-[Poppins]">
+        <div className={`flex flex-col w-full max-w-[597px] mx-auto justify-center h-full  max-h-[575.94px] items-center text-[Poppins] ${style.removeMaxWidth780}`}>
 
             <div className="flex w-[100%] flex-row justify-start items-center font-normal gap-6 ">
                 <div className="flex justify-center items-center">
