@@ -33,12 +33,12 @@ interface BenefitsTemplateProps {
 
   }) => {
     return (
-      <div className="flex justify-center flex-row  items-center h-[100%] w-[90%] mt-8 ">
+      <div className="flex justify-center flex-row  items-center h-[100%] w-[90%] mt-8 mb-7">
         <div className={`flex flex-col w-2/4 justify-center items-start ${style.center}`}>
           <div className=" w-[100%] h-auto text-[poppins]  font-semibold pb-7">
-              <h1 className=" text-sage text-base font-semibold">{header}</h1>
+              <h1 className=" text-sage text-[Poppins] text-base sm:text-sm md:text-base lg:text-base xl:text-base font-semibold">{header}</h1>
           </div>
-          <div className="flex flex-col justify-between items-center">
+          <div className={`flex flex-col justify-between items-start ${style.addGap}`}>
            <CheckTextbox
            header={checkmarkboxheader1}
            paragraph={checkmarkboxparagraph1}/>
@@ -54,7 +54,7 @@ interface BenefitsTemplateProps {
 
 
 
-      <div className={`flex justify-center items-center gap-5 w-2/4 ${style.hidingImageW1080}`}>
+      <div className={`block justify-center items-center gap-5 w-2/4 ${style.hidingImageW1080}`}>
         <div className="h-[600px] w-full flex justify-center items-center">
           <div className="w-[509px] h-[600px] flex justify-center items-start ">
           <div className="flex justify-center items-center pr-2" >

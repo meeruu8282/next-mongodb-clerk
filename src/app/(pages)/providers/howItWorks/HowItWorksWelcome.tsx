@@ -31,30 +31,30 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 }) => {
     return (
 
-        <div className="flex w-[80%] h-full flex-row justify-center items-center">
+        <div className="flex w-[90%] h-auto flex-row justify-center items-center">
 
             <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
 
-                <div className={`flex w-full justify-start items-center ${style.make85Width}`}>
-                    <h1 className="text-[16px] text-sage font-semibold font-[Poppins]">
+                <div className={`flex w-full justify-start items-center ${style.make100Width1240}`}>
+                    <h1 className="text-sm sm:text-base md:text-base lg:text-base xl:text-base text-sage font-semibold text-[Poppins]">
                         {welcomeText}
                     </h1>
                 </div>
 
                 <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <h2 className={`text-6xl w-[45%] ${style.make85Width} font-semibold font-[Poppins]`}>
+                    <h2 className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl  w-[50%] ${style.make100Width1240} font-semibold text-[Poppins]`}>
                         {text1}
                     </h2>
                 </div>
 
                 <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <p className={`text-md w-[70%] ${style.make85Width} font-normal font-[Poppins]`}>
+                    <p className={`text-sm sm:text-base md:text-base lg:text-base xl:text-base w-[70%] ${style.make100Width1240} font-normal text-[Poppins]`}>
                         {text2}
                     </p>
                 </div>
 
-                <div className={`flex flex-row w-full justify-start items-center gap-7 ${style.flexColumn} ${style.make85Width}`}>
-                    <div className="">
+                <div className={`flex flex-row w-full justify-start items-center gap-2 ${style.flexColumn} ${style.make100Width1240}`}>
+                    <div className={`flex justify-start items-center ${style.width100On380}`}>
                         <CarelyoButton
                             buttonText={textButton1}
                             buttonSize="vLB"
@@ -62,16 +62,18 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                             size="small"
                         />
                     </div>
-                    <div className="flex">
-                        <div className="w-full ">
-                            <div className="w-[116px] h-[22px] flex">
-                                <div className="font-semibold text-[16px] text-black font-[Poppins]">
+                    <div className="flex w-full justify-start items-center pl-3">
+
+                    <div className="flex justify-center items-center">
+                        <div className="w-full">
+                            <div className="w-[7.2rem] h-[1.4rem]">
+                                <div className="font-semibold text-sm sm:text-base md:text-base lg:text-base xl:text-base text-black text-[Poppins]">
                                     {textButton2}
                                 </div>
                             </div>
                         </div>
                         <div className="">
-                            <div className="w-[24px] h-[24px]">
+                            <div className="w-[1.5rem] h-[1.5rem]">
                                 <svg
                                     width="24"
                                     height="25"
@@ -101,10 +103,13 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                     </div>
 
                 </div>
+                 
+
+                </div>
 
             </div>
 
-            <div className={`w-full h-[100%] flex justify-end items-center ${style.hidingImage}`}>
+            <div className={`rightside w-full h-[100%] block justify-end items-center ${style.hidingImage}`}>
                 <Image
                     src={imageSrc}
                     alt="entre"

@@ -19,7 +19,7 @@ const CheckTextbox: React.FC<CheckTextboxTemplateProps> = ({
     <div className=" flex flex-col justify-start items-center gap-2 ">
     <div className="flex flex-row justify-center items-center w-full">
       <div className="h-auto w-auto rounded-2xl p-2 bg-sage bg-opacity-[10%] gap-3">
-      <div className="w-auto h-auto rounded-full items-center">
+      <div className="w-auto h-auto rounded-full  items-center">
               <svg
                 width="20"
                 height="21"
@@ -35,11 +35,11 @@ const CheckTextbox: React.FC<CheckTextboxTemplateProps> = ({
             </div>
       </div>
 
-      <h1 className={`w-[100%] h-[38px] text-[poppins] text-2xl font-semibold pl-2 ${style.textXlarge}`}>
+      <h1 className={`w-[100%] h-[38px] text-[Poppins] text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-2xl font-semibold pl-2 ${style.changeHeightToAuto}`}>
         {header}
       </h1>
     </div>
-    <div className={`w-[100%] h-[128px] opacity-50 text-[poppins] text-xl font-normal ${style.textSmall}`}>
+    <div className={` w-[100%] h-[128px] opacity-50 text-[Poppins] text-sm sm:text-base md:text-base lg:text-lg xl:text-xl font-normal ${style.changeHeightToAuto}`}>
       {paragraph}
     </div>
   </div>

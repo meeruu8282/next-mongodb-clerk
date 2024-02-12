@@ -5,26 +5,47 @@
   }
 
   @media (max-width: 1240px)  {
-    .make85Width {
-        width: 85%;
+    .make100Width1240 {
+        width: 100%;
     }
   }
 
-  @media (max-width: 405px)  {
+
+  @media (max-width: 380px)  {
     .flexColumn {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: start;
-       gap: 2rem;
+      display: flex;
+      flex-direction: column;
+     
+      
+     
     }
   }
+
+  @media (max-width: 380px)  {
+    .width100On380 {
+    width: 100%;
+     
+      
+     
+    }
+  }
+
+  @media (max-width: 780px)  {
+    .removeMaxWidth780 {
+      max-width: none;
+     
+      
+     
+    }
+  }
+
 
   @media (max-width: 1240px)  {
     .flexJusticeCenter {
        display: flex;
        justify-content: center;
        align-items: center;
+    
     }
   }
 
@@ -32,8 +53,57 @@
   @media (max-width: 1080px)  {
     .hidingImageW1080 {
         display: none;
+        
     }
   }
+
+  @media (max-width: 780px)  {
+    .hidingImageW780 {
+        display: none;
+        
+    }
+  }
+
+  @media (max-width: 1080px)  {
+    .changeWidthToFull {
+       width: 4/4;
+        
+    }
+  }
+
+  @media (max-width: 585px)  {
+    .text2Xl585 {
+      font-size: 1.5rem; 
+      line-height: 2rem;     
+    }
+  }
+
+  @media (max-width: 480px)  {
+    .textXl480 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;        
+    }
+  }
+
+  @media (max-width: 395px)  {
+    .textLg395 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;       
+    }
+  }
+
+
+
+  @media (max-width: 360px)  {
+    .textBase360 {
+      font-size: 1rem; /* 16px */
+      line-height: 1.5rem; /* 24px */      
+    }
+  }
+
+
+
+
 
 
   @media (max-width: 1300px)  {
@@ -57,16 +127,7 @@
     }
   }
 
-  @media (max-width: 1080px)  {
-    .buttonStart {
-     
-      display: flex;
-      justify-items: center;
-      align-items: start;
-      
-      
-    }
-  }
+
 
   @media (max-width: 780px)  {
     .madeItToCol {
@@ -74,77 +135,141 @@
       flex-direction: column;
       justify-items: center;
       align-items: center;
+      width: 100%;
       
       
     }
   }
-  
-  @media (max-width: 780px)  {
-    .madeItTo90Width {
+
+
+
+  @media (max-width: 540px)  {
+    .madeItToCol540 {
      
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+   
+     
+    }
+  }
+
+  @media (max-width: 540px)  {
+    .madeIt100Width540 {
       width: 100%;
       
     }
   }
 
-  @media (max-width: 1080px)  {
-    .text100width {
-     
-    
-        width: 100%;
-    }
-  }
-  
+
+
 
   @media (max-width: 1080px)  {
-    .textXlarge {
-     
-    
-       font-size: x-large;
+    .madeIt100Width {
+      width: 100%;
+      
     }
   }
+
 
 
   
-  @media (max-width: 1080px)  {
-    .textMedium {
+  @media (max-width: 780px)  {
+    .madeItTo90Width {
      
-    
-       font-size: medium;
-    }
-  }
-
-  @media (max-width: 1080px)  {
-    .textLarge {
-
-      font-size: large;
+      width: 90%;
      
       
     }
   }
 
-  @media (max-width: 740px)  {
+
+  
+  @media (max-width: 780px)  {
     .flexboxColumn {
 
       display: flex;
       flex-direction: column;
-
-     
-      
+      justify-content: center;
+      align-items: center;
     }
   }
 
   
-  
-
   @media (max-width: 1120px)  {
     .height1500 {
-     
     
      height: 1500px;
     }
   }
   
+  @media (max-width: 780px) {
+    .minHeight {
+      height: 10rem;
+    
+    }
+  }
 
+  @media (max-width: 640px) {
+    .minHeight {
+      height: 9.3rem;
+     
+    
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .minHeight {
+      height: 8.8rem;
+    }
+  }
+
+  
+
+  @media (max-width: 780px) {
+    .showMobileMode {
+      display: block;
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .hideMobileMode {
+      display: none;
+    }
+  }
+
+ 
+
+  @media (max-width: 350px) {
+    .reducePaddingW350 {
+      padding: 0.3rem;
+      gap: 0.4rem;
+    }
+  }
+
+
+ 
+
+  @media (max-width: 1080px) {
+    .changeHeightToAuto {
+    
+      height: auto;
+      
+    }
+  }
+
+
+  
+  @media (max-width: 1080px) {
+    .addGap {
+    
+      gap: 2rem;
+      
+    }
+  }
+
+  
 
   
