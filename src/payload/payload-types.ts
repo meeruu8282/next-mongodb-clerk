@@ -63,6 +63,7 @@ export interface Blogpost {
             } | null;
             url?: string | null;
             label: string;
+            icon?: string | Media | null;
             appearance?: ('default' | 'primary' | 'secondary') | null;
           };
           id?: string | null;
@@ -87,6 +88,7 @@ export interface Blogpost {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -114,6 +116,7 @@ export interface Blogpost {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -268,6 +271,7 @@ export interface Page {
             } | null;
             url?: string | null;
             label: string;
+            icon?: string | Media | null;
             appearance?: ('default' | 'primary' | 'secondary') | null;
           };
           id?: string | null;
@@ -292,6 +296,7 @@ export interface Page {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -319,6 +324,7 @@ export interface Page {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -412,6 +418,7 @@ export interface Post {
             } | null;
             url?: string | null;
             label: string;
+            icon?: string | Media | null;
             appearance?: ('default' | 'primary' | 'secondary') | null;
           };
           id?: string | null;
@@ -436,6 +443,7 @@ export interface Post {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -463,6 +471,7 @@ export interface Post {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -537,6 +546,7 @@ export interface Post {
                     } | null;
                     url?: string | null;
                     label: string;
+                    icon?: string | Media | null;
                     appearance?: ('primary' | 'secondary') | null;
                   };
                   id?: string | null;
@@ -564,6 +574,7 @@ export interface Post {
                     } | null;
                     url?: string | null;
                     label: string;
+                    icon?: string | Media | null;
                     appearance?: ('default' | 'primary' | 'secondary') | null;
                   };
                   id?: string | null;
@@ -652,6 +663,7 @@ export interface Project {
             } | null;
             url?: string | null;
             label: string;
+            icon?: string | Media | null;
             appearance?: ('default' | 'primary' | 'secondary') | null;
           };
           id?: string | null;
@@ -676,6 +688,7 @@ export interface Project {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -703,6 +716,7 @@ export interface Project {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -798,6 +812,7 @@ export interface Healthcarefacilitydetail {
             } | null;
             url?: string | null;
             label: string;
+            icon?: string | Media | null;
             appearance?: ('default' | 'primary' | 'secondary') | null;
           };
           id?: string | null;
@@ -823,6 +838,7 @@ export interface Healthcarefacilitydetail {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -850,6 +866,7 @@ export interface Healthcarefacilitydetail {
                 } | null;
                 url?: string | null;
                 label: string;
+                icon?: string | Media | null;
                 appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
@@ -1004,6 +1021,7 @@ export interface Header {
           } | null;
           url?: string | null;
           label: string;
+          icon?: string | Media | null;
         };
         id?: string | null;
       }[]
@@ -1025,6 +1043,7 @@ export interface Footer {
           } | null;
           url?: string | null;
           label: string;
+          icon?: string | Media | null;
         };
         id?: string | null;
       }[]
@@ -1040,6 +1059,23 @@ export interface Footer {
           } | null;
           url?: string | null;
           label: string;
+          icon?: string | Media | null;
+        };
+        id?: string | null;
+      }[]
+    | null;
+  socialmedianavitems?:
+    | {
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+          icon?: string | Media | null;
         };
         id?: string | null;
       }[]

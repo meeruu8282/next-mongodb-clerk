@@ -35,5 +35,15 @@ export const Footer: GlobalConfig = {
         }),
       ],
     },
+    {
+      name: 'socialmedianavitems',
+      type: 'array',
+      maxRows: 3,
+      fields: [
+        link({
+          appearances: false,
+        }),
+      ],
+    },
   ],
 }

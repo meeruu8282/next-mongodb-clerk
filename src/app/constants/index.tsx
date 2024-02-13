@@ -14,7 +14,7 @@ export const inclusions = [
   },
   {
     title: 'SOCIAL MEDIA',
-    description: 'icons',
+   
   },
 ]
 

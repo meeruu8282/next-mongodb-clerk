@@ -23,6 +23,9 @@ export const FOOTER = `
     headernavItems {
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
+    socialmedianavitems {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+		}
   }
 `
 

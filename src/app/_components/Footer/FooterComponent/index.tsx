@@ -15,13 +15,15 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
 
   const navItems = footer.navItems || []
   const headernavItems = footer.headernavItems || []
+  const socialmedianavitems = footer.socialmedianavitems || []
+
 
   return (
     <footer className={classes.includes}>
       <Gutter>
-      <ul className={classes.inclusions}>
-  {inclusions.map((inclusion, index) => (
-    <li key={inclusion.title + index}>
+        <ul className={classes.inclusions}>
+          {inclusions.map((inclusion, index) => (
+            <li key={inclusion.title + index}>
               {inclusion.icon && (
                 <Image
                   src={inclusion.icon}
@@ -31,28 +33,54 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                   className={classes.icon}
                 />
               )}
-              
+
               <h5 className={classes.title}>{inclusion.title}</h5>
               <p className={classes.description}>{inclusion.description}</p>
               <div className={classes.navigator}>
-                  {inclusion.title === 'NAVIGATION LINKS' && (
-                <div className={classes.links}>
-                  {headernavItems.map(item => (
-                    <Button
-                      key={item.link.label}
-                      el="link"
-                      href={item.link.url}
-                    
-                      className={classes.navlinks}
-                    >
-                      {item.link.label}
-                    </Button>
-                  ))}
-                </div>
-              )}
-              </div>
+                {inclusion.title === 'NAVIGATION LINKS' && (
+                  <div className={classes.links}>
+                    {headernavItems.map(item => (
+                      <Button
+                        key={item.link.label}
+                        el="link"
+                        href={item.link.url}
+                        className={classes.navlinks}
+                      >
+                        {item.link.label}
+                      </Button>
+                    ))}
+                  </div>
+                )}
 
-            
+                {inclusion.title === 'SOCIAL MEDIA' && (
+                  <div className={classes.socialmedianavitems}>
+                    {socialmedianavitems.map(item => {
+
+                      const icon = item?.link?.icon as Media
+
+                      return(
+
+                           <Button
+                        key={item.link.label}
+                        el="link"
+                        href={item.link.url}
+                        className={classes.socialmedianavitems}
+                      >
+                        <Image
+                        src={icon?.url}
+                        alt={item.link.label}
+                        width={40}
+                        height={40}
+                        className={classes.socialmedianavitems}
+                        />
+                      </Button>
+                      
+                      )
+                   
+                    })}
+                  </div>
+                )}
+              </div>
             </li>
           ))}
         </ul>
