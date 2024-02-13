@@ -12,16 +12,17 @@
   display: grid;
   justify-content: center;
   gap: 30px;
-  padding: 0;
+  padding: 40px;
   grid-template-columns: repeat(4, 1fr);
   background-color: #FAFAFA;
+
 
   @include large-break {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @include mid-break {
-    margin: 60px 0;
+   
   }
 
   @include extra-small-break {
@@ -59,6 +60,7 @@
 }
 
 .socialLinks {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,3 +83,34 @@
 .hide {
   display: none;
 }
+
+
+.links .navlinks {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+.links {
+  display: flex;
+  flex-direction: column;
+  
+
+
+}
+
+
+
+.title {
+ 
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+

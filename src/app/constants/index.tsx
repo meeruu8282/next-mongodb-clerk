@@ -1,20 +1,20 @@
 export const inclusions = [
   {
     icon: '/logo.svg',
-    description: 'Free shipping for order above $150',
+    description: 'Delivering Better Healthcare Solutions',
    
   },
   {
-    title: 'NAVIGATION',
-    description: []
+    title: 'NAVIGATION LINKS',
+    links: [],
   },
   {
-    title: 'Online Support',
-    description: '24 hours a day, 7 days a week',
+    title: 'CONTACT INFORMATION',
+    description: 'info@carelyo.io',
   },
   {
-    title: 'Flexible Payment',
-    description: 'Pay with multiple credit cards',
+    title: 'SOCIAL MEDIA',
+    description: 'icons',
   },
 ]
 

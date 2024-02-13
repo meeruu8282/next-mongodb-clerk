@@ -20,6 +20,9 @@ export const FOOTER = `
     navItems {
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
+    headernavItems {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+		}
   }
 `
 

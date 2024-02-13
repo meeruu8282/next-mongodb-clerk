@@ -1,5 +1,4 @@
 import Navbar from './(pages)/providers/Components/NavBar/navbar'
-import { Footer } from './_components/Footer'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,6 +13,10 @@ import FooterComponent from './_components/Footer/FooterComponent'
 import { icon } from '@fortawesome/fontawesome-svg-core'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 import { Providers } from './_providers'
+import { HeaderNav } from './_components/Header/Nav'
+import  { Footer }  from './_components/Footer' 
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 

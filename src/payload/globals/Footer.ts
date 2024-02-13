@@ -25,5 +25,15 @@ export const Footer: GlobalConfig = {
         }),
       ],
     },
+    {
+      name: 'headernavItems',
+      type: 'array',
+      maxRows: 14,
+      fields: [
+        link({
+          appearances: false,
+        }),
+      ],
+    },
   ],
 }
