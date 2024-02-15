@@ -1,5 +1,6 @@
 import type { GlobalConfig } from 'payload/types'
 
+
 import link from '../fields/link'
 
 export const Footer: GlobalConfig = {
@@ -9,9 +10,47 @@ export const Footer: GlobalConfig = {
   },
   fields: [
     {
+      name: 'copyright',
+      label: 'Copyright',
+      type: 'text',
+      required: true,
+    },
+    {
       name: 'navItems',
       type: 'array',
       maxRows: 6,
+      fields: [
+        link({
+          appearances: false,
+        }),
+      ],
+    },
+    {
+      name: 'email',
+      label: 'Email',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'phonenumber',
+      label: 'Phonenumber',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'headernavItems',
+      type: 'array',
+      maxRows: 14,
+      fields: [
+        link({
+          appearances: false,
+        }),
+      ],
+    },
+    {
+      name: 'socialmedianavitems',
+      type: 'array',
+      maxRows: 3,
       fields: [
         link({
           appearances: false,
