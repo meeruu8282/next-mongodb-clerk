@@ -26495,6 +26495,8 @@ type HeaderUpdateDocAccess {
 type Footer {
   copyright: String!
   navItems: [Footer_NavItems!]
+  email: String!
+  phonenumber: String!
   headernavItems: [Footer_HeadernavItems!]
   socialmedianavitems: [Footer_Socialmedianavitems!]
   updatedAt: DateTime
@@ -27815,6 +27817,8 @@ type footerDocAccess {
 type FooterDocAccessFields {
   copyright: FooterDocAccessFields_copyright
   navItems: FooterDocAccessFields_navItems
+  email: FooterDocAccessFields_email
+  phonenumber: FooterDocAccessFields_phonenumber
   headernavItems: FooterDocAccessFields_headernavItems
   socialmedianavitems: FooterDocAccessFields_socialmedianavitems
   updatedAt: FooterDocAccessFields_updatedAt
@@ -28064,6 +28068,52 @@ type FooterDocAccessFields_navItems_id_Update {
 }
 
 type FooterDocAccessFields_navItems_id_Delete {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_email {
+  create: FooterDocAccessFields_email_Create
+  read: FooterDocAccessFields_email_Read
+  update: FooterDocAccessFields_email_Update
+  delete: FooterDocAccessFields_email_Delete
+}
+
+type FooterDocAccessFields_email_Create {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_email_Read {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_email_Update {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_email_Delete {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_phonenumber {
+  create: FooterDocAccessFields_phonenumber_Create
+  read: FooterDocAccessFields_phonenumber_Read
+  update: FooterDocAccessFields_phonenumber_Update
+  delete: FooterDocAccessFields_phonenumber_Delete
+}
+
+type FooterDocAccessFields_phonenumber_Create {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_phonenumber_Read {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_phonenumber_Update {
+  permission: Boolean!
+}
+
+type FooterDocAccessFields_phonenumber_Delete {
   permission: Boolean!
 }
 
@@ -34821,6 +34871,8 @@ type footerAccess {
 type FooterFields {
   copyright: FooterFields_copyright
   navItems: FooterFields_navItems
+  email: FooterFields_email
+  phonenumber: FooterFields_phonenumber
   headernavItems: FooterFields_headernavItems
   socialmedianavitems: FooterFields_socialmedianavitems
   updatedAt: FooterFields_updatedAt
@@ -35070,6 +35122,52 @@ type FooterFields_navItems_id_Update {
 }
 
 type FooterFields_navItems_id_Delete {
+  permission: Boolean!
+}
+
+type FooterFields_email {
+  create: FooterFields_email_Create
+  read: FooterFields_email_Read
+  update: FooterFields_email_Update
+  delete: FooterFields_email_Delete
+}
+
+type FooterFields_email_Create {
+  permission: Boolean!
+}
+
+type FooterFields_email_Read {
+  permission: Boolean!
+}
+
+type FooterFields_email_Update {
+  permission: Boolean!
+}
+
+type FooterFields_email_Delete {
+  permission: Boolean!
+}
+
+type FooterFields_phonenumber {
+  create: FooterFields_phonenumber_Create
+  read: FooterFields_phonenumber_Read
+  update: FooterFields_phonenumber_Update
+  delete: FooterFields_phonenumber_Delete
+}
+
+type FooterFields_phonenumber_Create {
+  permission: Boolean!
+}
+
+type FooterFields_phonenumber_Read {
+  permission: Boolean!
+}
+
+type FooterFields_phonenumber_Update {
+  permission: Boolean!
+}
+
+type FooterFields_phonenumber_Delete {
   permission: Boolean!
 }
 
@@ -36730,6 +36828,8 @@ enum Header_NavItems_Link_ReferenceRelationshipInputRelationTo {
 input mutationFooterInput {
   copyright: String!
   navItems: [mutationFooter_NavItemsInput]
+  email: String!
+  phonenumber: String!
   headernavItems: [mutationFooter_HeadernavItemsInput]
   socialmedianavitems: [mutationFooter_SocialmedianavitemsInput]
   updatedAt: String

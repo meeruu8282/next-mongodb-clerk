@@ -26,6 +26,18 @@ export const Footer: GlobalConfig = {
       ],
     },
     {
+      name: 'email',
+      label: 'Email',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'phonenumber',
+      label: 'Phonenumber',
+      type: 'text',
+      required: true,
+    },
+    {
       name: 'headernavItems',
       type: 'array',
       maxRows: 14,

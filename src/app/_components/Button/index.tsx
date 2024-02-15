@@ -17,6 +17,8 @@ export type Props = {
   disabled?: boolean
   invert?: boolean
   children?: React.ReactNode
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export const Button: React.FC<Props> = ({

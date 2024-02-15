@@ -1048,6 +1048,8 @@ export interface Footer {
         id?: string | null;
       }[]
     | null;
+  email: string;
+  phonenumber: string;
   headernavItems?:
     | {
         link: {
