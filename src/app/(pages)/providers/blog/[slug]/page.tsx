@@ -47,6 +47,7 @@ export default async function BlogPost({ params: { slug } }) {
 
         ]}
       />
+      <h1 className='text-4xl'>HEJHEJHEJHEJ</h1>
     </React.Fragment>
   )
 }
