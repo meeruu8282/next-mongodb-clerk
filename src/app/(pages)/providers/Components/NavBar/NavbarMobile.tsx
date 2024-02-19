@@ -63,6 +63,7 @@ const NavbarMobile = () => {
                 Platform
             </div>
             <ul className={`${isPlatformOpen ? 'flex' : 'hidden'} text-center border-sage border-b-2 p-2 flex-col gap-5`}>
+                <li ><Link onClick={closeMenu} className='hover:text-sage' href="/providers/platforms/clinics">Clinics</Link></li>
               <li ><Link onClick={closeMenu} className='text-center hover:text-sage' href="/providers/platforms/diagCenters">Diagnostisk Center</Link></li>
               <li><Link onClick={closeMenu} className='hover:text-sage' href="/providers/platforms/hospitals">Hostpital</Link></li>
               <li><Link onClick={closeMenu} className='hover:text-sage' href="/providers/platforms/labCenters">LabCenter</Link></li>
