@@ -34,7 +34,6 @@ export default function ContactComponent() {
                             width={490}
                             height={480}
                         />
-
                         <button className="absolute bottom-6 right-8 bg-[#FFFFFF] text-[#45AC60] py-2.5 px-5 rounded-[18px]" onClick={openModal}>View map</button>
                     </div>
                 </div>
