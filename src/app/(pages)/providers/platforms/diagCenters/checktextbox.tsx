@@ -1,41 +1,37 @@
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 
-interface CheckTextboxTamplateProps {
+interface CheckTextboxTemplateProps {
   header: string
   paragraph: string
-
-  // ... andra props för varje sektion av din mall
+  // Additional props as needed
 }
 
-const CheckTextbox: React.FC<CheckTextboxTamplateProps> = ({
-
+const CheckTextbox: React.FC<CheckTextboxTemplateProps> = ({
   header,
   paragraph,
-
-  // ... andra props för varje sektion av din mall
+  // Additional props as needed
 }) => {
   return (
-    <div className=" flex flex-col justify-between ">
-    <div className="flex flex-row items-center gap-2">
-      <div className="h-[45px] w-[45px] rounded-[15px] p-3 bg-sage bg-opacity-[10%] gap-10  ">
-        <Image
-          className=""
-          layout="fixed"
-          width={21.67}
-          height={21.67}
-          src="/greenunioncheckmark.svg"
-          alt="Unioncheckmark"
-        />
-      </div>
+    <div className="flex flex-col justify-between">
+      <div className="flex flex-row items-center gap-2">
+        <div className="rounded-[15px] p-3 bg-sage bg-opacity-10 flex items-center justify-center">
+          <Image
+            layout="intrinsic"
+            width={21.67}
+            height={21.67}
+            src="/greenunioncheckmark.svg"
+            alt="Unioncheckmark"
+          />
+        </div>
 
-      <h1 className=" w-[545px] h-[38px] text-[poppins] text-[24px] font-semibold leading-9 tracking-tighter text-left ">
-        {header}
-      </h1>
+        <h1 className="text-[poppins] text-lg md:text-xl font-semibold leading-tight text-left">
+          {header}
+        </h1>
+      </div>
+      <p className="opacity-50 text-[poppins] text-sm md:text-lg font-normal leading-snug text-left mt-2">
+        {paragraph}
+      </p>
     </div>
-    <div className=" w-[591px] h-[128px] opacity-50 text-[poppins] text-[20px] font-normal leading-8 tracking-tighter text-left">
-      {paragraph}
-    </div>
-  </div>
   )
 }
 export default CheckTextbox
