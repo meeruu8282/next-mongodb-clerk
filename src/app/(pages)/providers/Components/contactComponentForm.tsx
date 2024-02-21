@@ -35,6 +35,7 @@ return(
         peer
         w-4
         h-4
+        cursor-pointer
         "
         required />
         <Image
@@ -50,7 +51,7 @@ return(
             "
         />
     </div>
-    <label htmlFor="remember" className="ms-2 text-sm font-medium">I agree with the <a href="#" className="text-sage hover:underline">Terms of use and Privacy Policy</a>.</label>
+    <label htmlFor="remember" className="ms-2 text-sm font-medium">I agree with the <a href="#" className="text-sage hover:underline cursor-pointer">Terms of use and Privacy Policy</a>.</label>
 </div>
 <button className="carelyoButton rounded-md w-full">Send Message</button>
 </form>
