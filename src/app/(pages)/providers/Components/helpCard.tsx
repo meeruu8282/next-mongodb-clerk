@@ -5,6 +5,7 @@ interface HelpCardTemplateProps {
     icon: string;
     header: string;
     paragraph: string;
+    link: string;
 
   }
 
@@ -12,13 +13,14 @@ interface HelpCardTemplateProps {
     icon,
     header,
     paragraph,
+    link,
 
   }) => {
     return (
+      <a href={link}>
         <div className="relative h-[313px] max-w-[380px] group mt-7">
             <div className="absolute greenBackground inset-0 h-[313px] max-w-[380px] rounded-[25px] group-hover:blur opacity-50 transition duration-200"></div>
             <div className="relative bg-[#FFFFFF] group-hover:border-[1px] transition duration-200 border-[#45AC60] h-[313px] max-w-[380px] rounded-[25px] p-8 flex flex-col justify-center align-center ">
-
             <div>
             <Image
                   className="absolute top-[30px] h-[60px] w-[60px]"
@@ -33,6 +35,7 @@ interface HelpCardTemplateProps {
                 <p className="h-[22px] text-[Poppins] text-[16px] leading-[22px] tracking-[0em] left-0 text-grayLight mt-2">{paragraph}</p>
             </div>
         </div>
+        </a>
     )
 }
 export default HelpCard
