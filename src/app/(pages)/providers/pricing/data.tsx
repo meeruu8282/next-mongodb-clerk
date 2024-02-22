@@ -1,4 +1,5 @@
 interface dataTypeCard {
+  cardId: number;
   title: string;
   description: string;
   features: string[];
@@ -17,6 +18,7 @@ interface dataTypeSub {
 
 export const cardDescription: dataTypeCard[] = [
     {
+      cardId: 0,
       title: 'Independent Doctor',
       description: 'Enhanced features for \nindependent doctors.', //"\n" = new line
       features: [
@@ -26,6 +28,7 @@ export const cardDescription: dataTypeCard[] = [
       ]
     },
     {
+      cardId: 1,
       title: 'Clinic',
       description:
         'Perfect for small clinics with more providers and advanced features.',
@@ -36,6 +39,7 @@ export const cardDescription: dataTypeCard[] = [
       ]
     },
     {
+      cardId: 2,
       title: 'Hospital',
       description:
         'Suitable for small hospitals with limited departments.',

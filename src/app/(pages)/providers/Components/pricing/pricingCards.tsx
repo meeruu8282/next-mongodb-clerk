@@ -13,17 +13,18 @@ import style from "../../pricing/pricing.module.css"
 import { cardDescription } from '../../pricing/data';
 
 interface Product {
+  cardId?: number;
   title: string;
   price: string;
   productId: string;
 }
 
-interface PricingTableProps {
+interface CardsProps {
   onClickGetStarted: (productId: string) => void;
   products: Product[];
 }
 
-const PricingCards: React.FC<PricingTableProps> = ({
+const PricingCards: React.FC<CardsProps> = ({
   onClickGetStarted,
   products
 }) => {
@@ -59,7 +60,12 @@ const PricingCards: React.FC<PricingTableProps> = ({
       (desc) => desc.title === product.title
     );
     if (!cardDesc) return null;
-    return { ...product, description: cardDesc.description, features: cardDesc.features };
+    return {
+      ...product,
+      description: cardDesc.description,
+      features: cardDesc.features,
+      cardId: cardDesc.cardId
+    };
   });
 
   return (
@@ -68,18 +74,18 @@ const PricingCards: React.FC<PricingTableProps> = ({
         {/* Show 3 cards based on the selected billing type */}
         <div className={` ${style.cardContainer} grid grid-cols-1 gap-2 px-4`}>
 
-        {combinedData.map((data, index) => (
+        {combinedData.map((data) => (
           <div className={`${style.priceCard} min-w-[17.5rem] max-w-[29rem]
           h-auto py-5 px-7 border-[3px] rounded-[25px] border-sage
           ${
-            selectedCard === index ? "bg-sage" : ""
-          }`} key={index}>
+            selectedCard === data.cardId ? "bg-sage" : ""
+          }`} key={data.cardId}>
           <div className="h-full flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-center">
                 <div
                   className={`items-center font-semibold text-[-2%] text-sage
-                  ${selectedCard === index ? "text-white" : "text-sage"}`}
+                  ${selectedCard === data.cardId ? "text-white" : "text-sage"}`}
                 >
                 {data?.title}
                 </div>
@@ -87,13 +93,13 @@ const PricingCards: React.FC<PricingTableProps> = ({
                   className={`bg-white h-8 w-8 border-2 mt-1 border-sage
                   rounded-[10px] flex justify-center items-center cursor-pointer
                   ${
-                    selectedCard === index
+                    selectedCard === data.cardId
                     ? "border-white"
                     : "hover:border-greenHover"
                   }`}
-                  onClick={() => handleBoxClick(index)}
+                  onClick={() => handleBoxClick(data.cardId)}
                 >
-                  {selectedCard === index ? (
+                  {selectedCard === data.cardId ? (
                     <div className="checked">
                       <FontAwesomeIcon icon={faCheck} className="text-sage" size="lg" />
                     </div>
@@ -103,7 +109,7 @@ const PricingCards: React.FC<PricingTableProps> = ({
               <div className="mt-4 flex text-[32px]">
                 <h1
                   className={`leading-tight text-[Poppins] font-semibold ${
-                selectedCard === index ? "text-white" : ""
+                selectedCard === data.cardId ? "text-white" : ""
               }`}
                 >
                   {data?.price}
@@ -112,7 +118,7 @@ const PricingCards: React.FC<PricingTableProps> = ({
             <div
               className={`h-fit mr-4 mt-4 opacity-50 text-[Poppins] font-normal
               whitespace-pre-line text-[14px] ${
-                selectedCard === index ? "text-white opacity-[100]" : ""
+                selectedCard === data.cardId ? "text-white opacity-[100]" : ""
               }`}
             >
               {data?.description}
@@ -120,7 +126,7 @@ const PricingCards: React.FC<PricingTableProps> = ({
             <div
               className={`mt-4 mr-4 text-[Poppins] font-normal text-[14px]
               ${
-                selectedCard === index ? "text-white" : ""
+                selectedCard === data.cardId ? "text-white" : ""
               }`}
             >
 
@@ -131,13 +137,13 @@ const PricingCards: React.FC<PricingTableProps> = ({
                       type="fixed"
                       width="24px"
                       height="24px"
-                      id={index}
+                      id={data.cardId}
                       selectedBox={selectedCard}
                     />
                   </div>
                   <div
                     className={`h-fit opacity-50} ${
-                      selectedCard === index ? "text-white" : ""
+                      selectedCard === data.cardId ? "text-white" : ""
                     }`}
                   >
                     <div>{feature}</div>
@@ -155,12 +161,12 @@ const PricingCards: React.FC<PricingTableProps> = ({
                   buttonSize="prb"
                   className={`
                     ${
-                      selectedCard === index
+                      selectedCard === data.cardId
                         ? "outline outline-2 outline-white"
                         : "bg-sage"
                     }
                     ${
-                      selectedCard !== null && selectedCard !== index
+                      selectedCard !== null && selectedCard !== data.cardId
                         ? "pointer-events-none"
                         : ""
                     }

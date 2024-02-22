@@ -11,22 +11,23 @@ import { subscription } from '../../pricing/data';
 
 const billingCheckbox = [
   {
-    id: 'monthly',
+    name: 'monthly',
     text: 'Monthly billing'
   },
   {
-    id: 'quarterly',
+    name: 'quarterly',
     text: 'Quarterly billing',
     savingsText: 'save 15%'
   },
   {
-    id: 'yearly',
+    name: 'yearly',
     text: 'Annual billing',
     savingsText: 'save 20%'
   },
 ];
 
-interface Product {
+interface ProductTable {
+  cardId?: number;
   title: string;
   price: string;
   productId: string;
@@ -43,7 +44,7 @@ interface PricingTableProps {
 }
 
 const PricingTable: React.FC<PricingTableProps> = ({ selectedType, onClickGetStarted }) => {
-  const [products, setProducts] = useState<Product[]>(
+  const [products, setProducts] = useState<ProductTable[]>(
   subscription.find(item => item.duration === 'monthly')?.products || []
   );
 
@@ -65,25 +66,24 @@ const PricingTable: React.FC<PricingTableProps> = ({ selectedType, onClickGetSta
       <div className={` ${style.checkboxContainer} min-w-[320px] grid grid-cols-1
       px-3 gap-2 mb-8 mt-4 w-full`}>
 
-        {billingCheckbox.map((type, index) => (
-          <div className={` ${style.checkboxWrapper} flex flex-row justify-end
-          items-center`}>
+        {billingCheckbox.map((type) => (
+          <div key={type.name} className={` ${style.checkboxWrapper} flex flex-row
+          justify-end items-center`}>
 
             <div className={`${style.checkboxSaleText} text-sage font-semibold mt-2
             mb-1 mx-2 basis-1/3 flex justify-center items-center`}>
               {type?.savingsText}
             </div>
             <div
-              key={index}
               className={`${style.checkboxButton} px-5 py-3 mr-4 border-2 rounded-[10px]
               font-semibold hover:cursor-pointer basis-2/3 flex justify-center
               items-center text-center
               ${
-                type.id === selectedType.id
+                type.name === selectedType.id
                 ? "bg-sage text-white border-sage"
                 : "bg-white hover:border-sage"
               }`}
-              onClick={() => handleTypeChange(type.id)}
+              onClick={() => handleTypeChange(type.name)}
             >
               {type.text}
             </div>
