@@ -1,0 +1,91 @@
+
+@media (min-width: 400px)  {
+    .checkboxContainer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: fit-content;
+    }
+
+    .checkboxWrapper {
+        flex-direction: column;
+    }
+
+    .checkboxButton {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .priceCard {
+        max-width: 25rem;
+        height: 28.9rem;
+    }
+
+    .CardButtonSpace {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .checkboxButton {
+        flex-basis: auto;
+    }
+
+    .checkboxSaleText {
+        flex-basis: auto;
+    }
+}
+
+/* roleModal.tsx - component */
+@media (max-width: 660px) {
+
+    .roleModal {
+        justify-content: flex-start;
+    }
+
+    .roleModalContent {
+        padding: 2rem 1rem;
+    }
+
+    .roleModalTitle {
+        font-size: 1.5rem;
+    }
+
+    .roleModalCardContainer {
+        padding: 1.4rem 1.1rem;
+    }
+
+    .roleModalCard {
+        gap: 0.8rem;
+    }
+
+    .roleModalCardIcon {
+        background: none;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .roleModalCardtitle {
+        font-size: 1rem
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .roleModalCard {
+        gap: 0.5rem;
+    }
+
+    .roleModalCardtitle {
+        font-size: 1rem
+    }
+
+    .roleModalCardcheckbox {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

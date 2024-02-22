@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 interface CarelyoButtonProps {
   buttonText?: string;
-  buttonSize?: "sb" | "mb" | "lb" | "vLB" | "jCb" | "gCb"
+  buttonSize?: "sb" | "mb" | "lb" | "prb" | "vLB" | "jCb" | "gCb"
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary" | "third";
   className?: string;
@@ -29,6 +29,7 @@ const CarelyoButton: React.FC<CarelyoButtonProps> = ({
     sb: "w-[12px] h-[12px]",
     mb: "w-[208px] h-[52px]",
     lb: "w-[333.98px] h-[50px]",
+    prb: "w-full h-[50px]", //lb-button takes full width of parent
     vLB: " w-[181px] h-[72px]",
     jCb: "w-[174px] h-[60px]", // Join Carelyo Button
     gCb: "w-[168px] h-[60px]" // Get Carelyo button
