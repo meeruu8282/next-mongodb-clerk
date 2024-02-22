@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 interface HelpCardTemplateProps {
     icon: string;
     header: string;
