@@ -53,14 +53,24 @@ const LocationComponent: React.FC<LocationComponentTemplateProps> = ({
                 </div>
                 <div className="flex flex-col p-2 justify-center items-center lg:items-left mt-11 lg:mt-0">
                     <div className="flex pb-4">
-                        {logo2}
+                        <Image
+                            src={logo2}
+                            alt="Email logo"
+                            width={44}
+                            height={44}
+                        />
                         <div className="flex flex-col pl-4">
                             <h3 className="text-[Poppins] text-[20px] leading-[29px] font-semibold">{title3}</h3>
                             <a href="mailto:hello@swedcon18.com" className="text-[Poppins] text-[16px] leading-[22px] text-grayLight pt-4">{link2}</a>
                         </div>
                     </div>
-                    <div className="flex pt-4 py-4">
-                        {logo3}
+                    <div className="flex pt-4 pr-6">
+                        <Image
+                            src={logo3}
+                            alt="Email logo"
+                            width={44}
+                            height={44}
+                        />
                         <div className="flex flex-col pl-4">
                             <h3 className="text-[Poppins] text-[20px] leading-[29px] font-semibold">{title4}</h3>
                             <a href="tel:+46701410631" className="text-[Poppins] text-[16px] leading-[22px] text-grayLight pt-4">{link3}</a>
