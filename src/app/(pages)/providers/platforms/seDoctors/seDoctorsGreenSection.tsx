@@ -41,7 +41,7 @@ const SeDoctorsGreenSection:  React.FC<seDoctorsGreenTemplateProps> = ({
   return (
 <>
     <div className="flex justify-center items-center bg-green-500 w-screen h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/GreenbackgroundSeDoctorPage.svg")' }}>
-      <div className="flex flex-row justify-center items-center border border-black w-[90%] h-[80%] text-white ">
+      <div className="flex flex-row justify-center items-center w-[90%] h-[80%] text-white ">
         <div className="leftside flex justify-start items-center flex-col w-100% lg:w-1/2">
           <div className="flex flex-col gap-6 pb-7">
             <h1 className="text-[Poppins] font-semibold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl text-white"> {header}</h1>
@@ -50,7 +50,7 @@ const SeDoctorsGreenSection:  React.FC<seDoctorsGreenTemplateProps> = ({
 
          
 
-          <div className="checkbox grid grid-cols-2 gap-4 justify-center items-start">
+          <div className="checkbox grid grid-cols-2 gap-4 justify-center items-start ">
             <div className="justify-self-start"> 
                <SeDoctorsCheckbox header={checkmarkboxheader1} paragraph={checkmarkboxparagraph1}/>   
             </div>
@@ -64,7 +64,7 @@ const SeDoctorsGreenSection:  React.FC<seDoctorsGreenTemplateProps> = ({
 
         </div>
 
-        <div className="rightside  justify-end items-center w-1/2 lg:block hidden">
+        <div className="rightside h-auto  justify-end items-center w-1/2 lg:block hidden">
           <div className="flex justify-end items-center">
             <SeDoctorsImage />
           </div>
