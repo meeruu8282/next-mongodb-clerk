@@ -50,7 +50,7 @@ const SeDoctorsGreenSection:  React.FC<seDoctorsGreenTemplateProps> = ({
 
          
 
-          <div className="checkbox grid grid-cols-2 gap-4 justify-center items-start ">
+          <div className="checkbox grid grid-cols-2 gap-4 justify-center items-start">
             <div className="justify-self-start"> 
                <SeDoctorsCheckbox header={checkmarkboxheader1} paragraph={checkmarkboxparagraph1}/>   
             </div>
