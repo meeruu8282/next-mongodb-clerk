@@ -68,15 +68,22 @@ export default function DiagCenters() {
       />
 
       {/*How Carelyo can reinforce? */}
-    <Howcarelyocanreinforcecomp 
-    image={'/happydoctoroncomputer.png'} 
-    header={'How Carelyo can reinforce?'} 
-    checkmarkboxheader1={'Seamless Integration of Diagnostic Equipment'} 
-    checkmarkboxparagraph1={'Carelyo provides seamless connectivity options, allowing you to integrate various diagnostic devices and instruments directly into our system. This integration enhances efficiency in conducting tests and generating results.'} 
-    checkmarkboxheader2={'Accurate and Accessible Test Reports'} 
-    checkmarkboxparagraph2={'Enables you to generate comprehensive and customized reports based on diagnostic test results. These reports can be easily accessed and shared with patients.'} 
-    checkmarkboxheader3={'Improved Collaboration and Communication'} 
-    checkmarkboxparagraph3={'You can securely exchange messages, share files, and collaborate on patient cases, ensuring efficient coordination and a smooth diagnostic workflow.'}/>
+      <Howcarelyocanreinforcecomp
+        image={'/happydoctoroncomputer.png'}
+        header={'How Carelyo can reinforce?'}
+        checkmarkboxheader1={'Seamless Integration of Diagnostic Equipment'}
+        checkmarkboxparagraph1={
+          'Carelyo provides seamless connectivity options, allowing you to integrate various diagnostic devices and instruments directly into our system. This integration enhances efficiency in conducting tests and generating results.'
+        }
+        checkmarkboxheader2={'Accurate and Accessible Test Reports'}
+        checkmarkboxparagraph2={
+          'Enables you to generate comprehensive and customized reports based on diagnostic test results. These reports can be easily accessed and shared with patients.'
+        }
+        checkmarkboxheader3={'Improved Collaboration and Communication'}
+        checkmarkboxparagraph3={
+          'You can securely exchange messages, share files, and collaborate on patient cases, ensuring efficient coordination and a smooth diagnostic workflow.'
+        }
+      />
 
       {/* add/remove props for Tamplate in components folder change the content below   */}
       <WhoHaveJoinedTamplate
@@ -100,7 +107,6 @@ export default function DiagCenters() {
         }
       />
       {/* Code in components folder then superCarge */}
-      <SuperCharge />
     </div>
   )
 }
