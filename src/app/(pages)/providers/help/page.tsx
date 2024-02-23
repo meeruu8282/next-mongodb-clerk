@@ -12,7 +12,7 @@ export default function Help() {
       <BlurBackGroundDesign />
       <SearchBar
         title={"Welcome to the Carelyo Help Center!"}
-        undertitle={""} />
+        />
       <HelpCenter />
       <ContactComponent />
       <LocationComponent
