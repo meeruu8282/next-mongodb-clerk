@@ -18,10 +18,10 @@ const SeDoctorsCheckbox: React.FC<CheckboxTemplateProps> = ({
 })  => {
     return (
 
-      <div className="main flex flex-row min-h-[7rem] gap-2 justify-center ">
+      <div className="main flex flex-row min-h-[6rem] sm:min-h-[7rem] gap-2 justify-center ">
         <div className="leftside flex justify-center items-start ">
           <div className="flex justify-center items-center ">
-            <div className=" rounded-lg p-3 bg-white bg-opacity-[10%]">
+            <div className=" rounded-lg p-2 sm:p-3 bg-white bg-opacity-[10%]">
               <div className="border border-white rounded-full">
               <svg
                 className="w-[0.8rem] h-[0.8rem] sm:h-[1.2rem] sm:w-[1.2rem]"
