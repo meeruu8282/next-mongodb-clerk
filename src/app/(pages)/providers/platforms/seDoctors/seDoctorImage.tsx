@@ -6,30 +6,20 @@ const seDoctorsImage = () => {
     return (
 
 
-      //   <div className="lg:block hidden">
-      //   <Image
-      //     layout="fixed"
-      //     width={408}
-      //     height={530}
-      //     src="/doctor.png"
-      //     alt="Doctor"
-      //   />
-      // </div>
-
-
-<div className="lg:relative lg:block hidden overflow-visible">
-  
+<div className="lg:relative h-full lg:block hidden overflow-visible">
+  <div className="pr-8 pl-8">
   <Image
-  className="pr-5"
     layout="fixed"
     width={408}
     height={530}
     src="/doctor.png"
     alt="Doctor"
   />
+  </div>
+
   <div className="lg:absolute top-0 left-0 z-10">
 
-  <div className=" absolute bg-white  top-12 w-[226px]  h-[99.03px] rounded-[20px] pr-4 gap-8 " >
+  <div className="absolute bg-white top-12 w-[226px]  h-[99.03px] rounded-[20px] gap-8 " >
           <div className="relative w-[49px] h-[49px] top-[25px] left-[22px] ">
             <Image
               className="absolute "
@@ -51,11 +41,7 @@ const seDoctorsImage = () => {
             </p>
           </div>
         </div>
-    
-    
   </div>
-
-
 
   <div className="lg:absolute bottom-0 left-0 z-10">
     <div className="flex flex-row justify-center items-center w-[21.8rem] h-[4.6rem] bg-white rounded-2xl">
@@ -82,14 +68,7 @@ const seDoctorsImage = () => {
               </div>
             </div>
     </div>
-   
-
-
   </div>
-
-
-
-
   <div className="lg:absolute top-1/2 lg:right-0 transform -translate-y-1/2 z-10">
   <div className=" flex justify-center items-center w-[68px] h-[68.02px] rounded-lg   bg-white  ">
           <div className="w-[24px] h-[24px] flex justify-center items-center ">
@@ -112,7 +91,7 @@ const seDoctorsImage = () => {
       
 
 
-    )
+)
 }
 
 export default seDoctorsImage
