@@ -2,8 +2,8 @@ import Image from "next/image";
 import EllipseBackground from "./ellipseBackground";
 
 interface SearchbarTemplateProps {
-    title: string;
-    undertitle: string;
+    title?: string;
+    undertitle?: string;
 }
 
 const SearchBar: React.FC<SearchbarTemplateProps> = ({
