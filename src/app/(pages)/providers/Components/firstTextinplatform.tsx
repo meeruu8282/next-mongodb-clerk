@@ -37,11 +37,12 @@ interface FirstTextinplatformTamplateProps {
     // ... andra props för varje sektion av din mall
   }) => {
   return (  // first header text thats in all platform components
-    <div className=" w-screen h-auto ">
-            <div className="w-screen  h-auto max-w-[838px] mx-auto">
-              <h1 className="text-center sm:text-[20px] md:text-[30px] lg:text-[40px]  whitespace-normal ">
+    <div className=" w-screen h-auto flex justify-center items-center flex-col gap-4">
+   
+            <div className="w-[90%] h-auto md:max-w-[70%] lg:max-w-[60%] xl:max-w-[53%] mx-auto">
+              <h1 className="text-center text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl whitespace-normal text-[Poppins] font-bold">
                 {headerBlackText1}{" "}
-                <span className="text-greenText whitespace-normal font-bold">
+                <span className="text-greenText whitespace-normal font-bold ">
                   {headerGreenText1}
                 </span>{" "}
                 {headerBlackText2}{" "}
@@ -63,12 +64,12 @@ interface FirstTextinplatformTamplateProps {
 
               </h1>
             </div>
-            <div className="w-screen h-auto opacity-[50%] mt-3 max-w-[921px] mx-auto">
-              <p className="text-center font-poppins w-400  md:text-[15px] lg:text-[20px] ">
+            <div className="w-[90%] h-auto opacity-[50%]  md:max-w-[70%] lg:max-w-[60%] xl:max-w-[53%] mx-auto">
+              <p className="text-center text-[Poppins] text-sm sm:text-base md:text-xl lg:text-xl w-400 font-normal  ">
                 {paragraph1}
               </p>
             </div>
-          </div>
+        </div>
   )
 }
 
