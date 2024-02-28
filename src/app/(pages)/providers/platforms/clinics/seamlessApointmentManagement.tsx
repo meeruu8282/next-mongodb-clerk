@@ -33,9 +33,11 @@ interface seamlessAppointmentManagementTamplateProps {
          <div className=" absolute bottom-0 w-[100%] h-[100%] max-h-[481px] max-w-[501px]rounded-[25px] bg-neutral-50"></div>
 
          <div className="  max-w-[501px] max-h-[556.79px] w-[100%] h-auto bottom-0 ">
+
          <Image
              className= "absolute bottom-0"
              layout=" fixed"
+
              width={501}
              height={556.79}
              src={image1}
@@ -44,7 +46,9 @@ interface seamlessAppointmentManagementTamplateProps {
 
          </div>
        </div>
+
        <div className={` absolute flex  flex-col h-auto  max-w-[514px]  relative${style.changeabsolute} ${style.textboxdesign} right-[40px] gap-[32px] `}>
+
          <div className="    h-auto  w-full gap-[24px] ">
            <div className="  top-0 w-full h-full" >
              <h1 className=" text-[Poppins] text-[40px] font-normal leading-60 tracking-tighter text-left">

@@ -15,15 +15,24 @@ query Header {
 `
 
 export const FOOTER = `
-  Header {
+  Footer {
+    copyright
     navItems {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+		}
+    email
+    phonenumber
+    headernavItems {
+      link ${LINK_FIELDS({ disableAppearance: true })}
+		}
+    socialmedianavitems {
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
   }
 `
 
 export const FOOTER_QUERY = `
-query Header {
+query Footer {
   ${FOOTER}
 }
 `

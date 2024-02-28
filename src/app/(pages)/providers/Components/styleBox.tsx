@@ -16,8 +16,7 @@ interface FixedSVGProps {
   selectedBox?: number | null;
 }
 const FixedSVG: React.FC<FixedSVGProps> = ({ id, selectedBox }) => {
-  console.log("styleBox choosen selectedBox:", selectedBox);
-
+  /* console.log("styleBox choosen selectedBox:", selectedBox); */
 
 return(
   <svg
@@ -46,7 +45,6 @@ const StyledBox: React.FC<BoxProps> = ({
   selectedBox,
 }) => {
 
-
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div
@@ -56,7 +54,6 @@ const StyledBox: React.FC<BoxProps> = ({
         ...customStyle,
       }}
     >
-
       {isChecked && <SvgCheckmarkWhiteBackgound />}
       {type === "fixed" && <FixedSVG id={id} selectedBox={selectedBox} />}
       {/* Pass id and selectedBox to FixedSVG */}

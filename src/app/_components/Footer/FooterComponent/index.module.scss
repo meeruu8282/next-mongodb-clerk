@@ -1,0 +1,141 @@
+@use '../../../_css/queries.scss' as *;
+
+.footer {
+  padding: 20px 40px;
+  background-color: black;
+  color: white ;
+
+}
+
+
+.inclusions {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #FAFAFA;
+  position: relative;
+
+
+  @include large-break {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mid-break {
+   
+  }
+
+  @include extra-small-break {
+    grid-template-columns: 1fr;
+  }
+}
+
+.icon {
+  margin-bottom: 16px;
+}
+
+
+
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--base) / 2) var(--base);
+
+  @include small-break {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.logo {
+  width: 170px;
+}
+
+.hr {
+  border-color: white
+}
+
+.socialLinks {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--base) / 2) var(--base);
+
+  @include small-break {
+   
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.socialLinkItem {
+  width: 100%;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+.links .navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 8px;
+  padding: 0%;
+}
+
+
+.links {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0%;
+  
+
+
+}
+
+.contact {
+  margin-top: 8px;
+}
+
+
+
+.title {
+ 
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+}
+
+.socialmedianavitems{
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  
+  flex-direction: row;
+  align-items: start;
+  padding: 0%;
+ 
+
+}
+
+
+.navigator{
+
+
+}
