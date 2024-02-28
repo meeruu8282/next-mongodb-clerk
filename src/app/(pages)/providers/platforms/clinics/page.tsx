@@ -44,15 +44,12 @@ const Clinics = () => {
 
       {/* tamplate in clinicfolder there you can add props */} 
       <SeamlessAppointmentManagement
-        image1={'/Superchargehead.png'}
-        image2={'/Superchargebody.png'}
+        image1={'/centrelizedPatient.png'}
+
         image3={'/LargeCheckTable.png'}
         header={'Seamless Appointment Management'}
-        paragraph={
-          "Our intuitive interface allows you to efficiently manage appointments, allocate resources, and eliminate scheduling conflicts. Visualize your clinic's daily schedule with a user-friendly calendar view."
-        }
-        textbutton={'Manage your appointment'}
-      />
+        paragraph={"Our intuitive interface allows you to efficiently manage appointments, allocate resources, and eliminate scheduling conflicts. Visualize your clinic's daily schedule with a user-friendly calendar view."}
+        textbutton={'Manage your appointment'}   />
 
       {/* tamplate in clinicfolder there you can add props */} 
       <CentralizedPatientRecords
