@@ -15,12 +15,12 @@ const Hoverfeaturesbox: React.FC<HoverfeaturesboxTamplateProps> = ({
   // ... andra props för varje sektion av din mall
 }) => {
   return (
-    <div className="relative group max-w-xs mx-auto md:max-w-none">
-      <div className="absolute group-hover:-inset-10 bg-sage rounded-[25px] blur opacity-5"></div>
+    <div className="relative group max-w-xs mx-auto md:max-w-20">
+      <div className="absolute z-10 group-hover:-inset-10 bg-sage rounded-[25px] blur opacity-5"></div>
 
-      <div className="relative flex flex-col items-center justify-between p-8 border-solid rounded-[15px] gap-8 bg-white hover:border-[1px] border-sage">
+      <div className="relative flex flex-col items-center z-30 justify-between p-8 border-solid rounded-[15px] gap-8 bg-white hover:border-[1px] border-sage">
         <div className="flex items-center justify-center rounded-[15px] gap-[10px] relative">
-          <div className="absolute w-full h-full bg-sage opacity-10 rounded-[15px]"></div>
+          <div className="absolute z-20 w-full h-full bg-sage opacity-10 rounded-[15px]"></div>
           <div className="absolute">
             <Image
               className=""
