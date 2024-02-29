@@ -30,9 +30,9 @@ const WhychooseCarelyo: React.FC<WhychooseCarelyoTamplateProps> = ({
 }) => {
     const flexDirection = reverseDirection ? "row-reverse" : "row";
   return (
-    <div className=  " flex justify-center items-center h-[577px] top-[1870px] mt-20">
-    <div className={`flex flex-${flexDirection} justify-center items-center w-[1192px] h-[449px] gap-[114px] `}>
-      <div className="w-[449px] h-[449px]">
+    <div className= "flex justify-center items-center h-[full] top-[1870px] pb-[60px] pt-[40px] mt-20">
+    <div className={`flex flex-col md:flex-row flex-${flexDirection} justify-center w-[90%] items-center md:w-[1192px] h-[full] gap-[114px] `}>
+      <div className="w-[449px] h-[449px] hidden md:block">
         <Image
           className="rounded-[25px]"
           layout="fixed "
@@ -42,20 +42,30 @@ const WhychooseCarelyo: React.FC<WhychooseCarelyoTamplateProps> = ({
           alt="costomimage"
         />
       </div>
-      <div className=" w-[629px] h-[428px] gap-[32px] flex flex-col ">
+      <div className="w-[full] h-[full] gap-[32px] flex flex-col">
         <div className=" relative h-[304px] w-[629px] gap-[24px] ">
           <div className=" w-[514px] h-[120px]">
             <h1 className="text-[poppins] text-[40px] font-normal leading-60 tracking-tighter text-left">
               {header}
             </h1>
           </div>
-          <div className="  w-[629px] h-[190px] opacity-[50%] bottom-0  ">
-            <p className=" text-[Poppins] text-[20px] font-normal leading-8 tracking-tighter text-left">
+          <div className="w-[4/6] md:w-[629px] h-[190px] opacity-[50%] bottom-0  ">
+            <p className="text-[Poppins] text-[20px] font-normal leading-8 tracking-tighter text-left">
               {paragraph}
             </p>
           </div>
         </div>
-        <div className="flex flex-col h-[72px] " >
+        <div className="w-[full] h-[full] md:hidden">
+        <Image
+          className="rounded-[25px]"
+          layout="fixed "
+          width={449}
+          height={449}
+          src={image}
+          alt="customimage"
+        />
+      </div>
+        <div className="flex flex-col h-[72px]" >
         <Link href="/providers/pricing" passHref>
            <CarelyoButton
           buttonText={buttonsText}
