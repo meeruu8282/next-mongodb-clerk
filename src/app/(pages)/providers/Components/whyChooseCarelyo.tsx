@@ -31,7 +31,7 @@ const WhychooseCarelyo: React.FC<WhychooseCarelyoTamplateProps> = ({
     const flexDirection = reverseDirection ? "row-reverse" : "row";
   return (
     <div className= "flex justify-center items-center h-[full] top-[1870px] pb-[60px] pt-[40px] mt-20">
-    <div className={`flex flex-col md:flex-row flex-${flexDirection} justify-center w-[90%] items-center md:w-[1192px] h-[full] gap-[114px] `}>
+    <div className={`flex flex-${flexDirection} justify-center w-[90%] items-center md:w-[1192px] h-[full] gap-[114px] `}>
       <div className="w-[449px] h-[449px] hidden md:block">
         <Image
           className="rounded-[25px]"
