@@ -75,7 +75,6 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
           <div className="flex items-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
               <div className="flex justify-center items-center w-[50%] h-[50%]">
-
                 <Image
                   className=""
                   layout="responsive"
@@ -128,13 +127,6 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
   );
 };
 
