@@ -35,9 +35,9 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
   return (
 
     <div className="w-screen flex justify-center items-center mt-5 mb-8 ">
-      <div className="w-[95%] mx-auto h-auto flex items-center justify-center flex-col-reverse gap-6 lg:flex-row">
+      <div className="w-[90%] mx-auto h-auto flex items-center justify-center flex-col-reverse gap-6 lg:flex-row ">
         {/* vänstersida*/}
-        <div className="flex flex-col h-auto justify-center items-start gap-6 sm:max-w-[20.2rem] max-w-[13rem]">
+        <div className="flex flex-col h-auto justify-center items-start gap-6 sm:max-w-[20.2rem] max-w-[13rem] font-normal">
           <div className=" flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
               <div className="flex justify-center items-center w-[50%] h-[50%]">
@@ -51,7 +51,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base w-full h-[1.4rem] justify-center justify-items-center">
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center justify-items-center">
               {icon1text}
             </div>
           </div>
@@ -68,7 +68,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base w-full h-[1.4rem] justify-center items-center">
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center items-center">
               {icon2text}
             </div>
           </div>
@@ -86,7 +86,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base h-[1.4rem] justify-center justify-items-center">
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg h-[1.4rem] justify-center justify-items-center">
               {icon3text}
             </div>
           </div>
@@ -103,7 +103,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base h-[1.4rem] justify-center justify-items-center">
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg h-[1.4rem] justify-center justify-items-center">
               {icon4text}
             </div>
           </div>
