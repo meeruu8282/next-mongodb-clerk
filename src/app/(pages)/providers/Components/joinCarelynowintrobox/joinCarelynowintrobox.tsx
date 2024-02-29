@@ -37,10 +37,10 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
     <div className="w-screen flex justify-center items-center mt-5 mb-8 ">
       <div className="w-[95%] mx-auto h-auto flex items-center justify-center flex-col-reverse gap-6 lg:flex-row">
         {/* vänstersida*/}
-        <div className="flex flex-col h-auto justify-center items-start gap-6 max-w-[20.2rem]">
+        <div className="flex flex-col h-auto justify-center items-start gap-6 sm:max-w-[20.2rem] max-w-[13rem]">
           <div className=" flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[80%] h-[80%]">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
                 <Image
                   className=""
                   layout="responsive"
@@ -57,10 +57,10 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
           </div>
           <div className="flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[80%] h-[80%]">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
                 <Image
                   className=""
-                  layout="fixed "
+                  layout="responsive"
                   width={19}
                   height={19}
                   src={icon2}
@@ -74,11 +74,11 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
           </div>
           <div className="flex items-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[80%] h-[80%]">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
 
                 <Image
                   className=""
-                  layout="fixed "
+                  layout="responsive"
                   width={19}
                   height={19}
                   src={icon3}
@@ -92,10 +92,10 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
           </div>
           <div className="flex items-center w-full h-[2.8rem] gap-4 ">
             <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[80%] h-[80%]">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
                 <Image
                   className=""
-                  layout="fixed "
+                  layout="responsive"
                   width={19}
                   height={19}
                   src={icon4}
@@ -120,7 +120,6 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
         {/* högersida*/}
         <div className="flex flex-row justify-center items-center">
           <Image
-          //  className="place-self-end lg:max-w-[80%] max-w-full sm:max-w-[80%"
             width={1070}
             height={591}
             src={imageSrc}
