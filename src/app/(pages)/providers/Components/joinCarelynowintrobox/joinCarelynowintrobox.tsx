@@ -34,15 +34,13 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 }) => {
   return (
 
-    <div className="w-screen flex justify-center items-center border border-black mt-5 mb-8">
-      <div className="w-[90%] h-auto flex items-center justify-center flex-col-reverse gap-6 border border-blue-500 md:flex-row">
+    <div className="w-screen flex justify-center items-center mt-5 mb-8 ">
+      <div className="w-[95%] mx-auto h-auto flex items-center justify-center flex-col-reverse gap-6 lg:flex-row">
         {/* vänstersida*/}
-        <div className="flex flex-col h-auto justify-center items-start gap-6">
-
-          <div className=" flex items-center w-[289px] h-[45px] gap-4 ">
-            <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[30px] h-[30px]">
-
+        <div className="flex flex-col h-auto justify-center items-start gap-6 max-w-[20.2rem]">
+          <div className=" flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[80%] h-[80%]">
                 <Image
                   className=""
                   layout="responsive"
@@ -53,17 +51,13 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-
-            <div className=" text-[Poppins] text-[16px] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base w-[228px] h-[22px] justify-center justify-items-center">
-
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base w-full h-[1.4rem] justify-center justify-items-center">
               {icon1text}
             </div>
           </div>
-
-          <div className="flex items-center w-[289px] h-[45px] gap-4 ">
-            <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[21px] h-[21px]">
-
+          <div className="flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[80%] h-[80%]">
                 <Image
                   className=""
                   layout="fixed "
@@ -74,15 +68,13 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-[16px] w-[228px] h-[22px] justify-center justify-items-center">
-
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base w-full h-[1.4rem] justify-center items-center">
               {icon2text}
             </div>
           </div>
-
-          <div className="flex items-center w-[300px] h-[45px] gap-4 ">
-            <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[21px] h-[21px]">
+          <div className="flex items-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[80%] h-[80%]">
 
                 <Image
                   className=""
@@ -94,16 +86,13 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-[16px]   h-[22px] justify-center justify-items-center">
-
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base h-[1.4rem] justify-center justify-items-center">
               {icon3text}
             </div>
           </div>
-
-          <div className="flex items-center w-[300px] h-[45px] gap-4 ">
-            <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-              <div className="flex justify-center items-center w-[21px] h-[21px]">
-
+          <div className="flex items-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[80%] h-[80%]">
                 <Image
                   className=""
                   layout="fixed "
@@ -114,12 +103,11 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-[16px]   h-[22px] justify-center justify-items-center">
-
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-sm lg:text-base xl:text-base h-[1.4rem] justify-center justify-items-center">
               {icon4text}
             </div>
           </div>
-          <div className="flex place-self-center  md:place-self-start">
+          <div className="flex place-self-center md:place-self-start pt-7">
           <CarelyoButton
           className="w-full"
             buttonText="Join Carelyo Now"
@@ -128,39 +116,25 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
             size="small"
           />
           </div>
-
-       
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
         {/* högersida*/}
-        <div className="flex justify-center items-center">
-
+        <div className="flex flex-row justify-center items-center">
           <Image
-
+          //  className="place-self-end lg:max-w-[80%] max-w-full sm:max-w-[80%"
             width={1070}
             height={591}
             src={imageSrc}
             alt="Costomimage"
           />
-
-
-
         </div>
-
-
       </div>
     </div>
+
+
+
+
+
+
 
   );
 };
