@@ -14,7 +14,7 @@ const ConvinientManagement: React.FC<ConvinientManagementTemplateProps> = ({
 
 }) => {
   return (
-    <div className=" absolute flex flex-row items-center justify-center w-[294px] h-[74px] top-[370px]  p-[25px 22px] rounded-[20px] gap-[8px] bg-white shadow-[5%]">
+    <div className="  flex flex-row items-center justify-center max-w-[294px] w-[100%] h-[74px]   p-5 rounded-[20px] gap-[8px] bg-white shadow-[5%]">
       <Image
         className=""
         layout="fixed "
@@ -24,7 +24,7 @@ const ConvinientManagement: React.FC<ConvinientManagementTemplateProps> = ({
         alt="Unioncheckmark"
       />
 
-      <div className="w-[218px] h-[24px] flex justify-center items-center">
+      <div className="max-w-[218px] w-[100%] h-[24px] flex justify-center items-center">
         <h1 className=" text-[Poppins] text-[16px] font-normal leading-[24px] tracking-tighter text-left ">
 
 

@@ -25,9 +25,9 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
   image,
 }) => {
   return (
-    <div className={`  `}>
+    <div className={` h-auto w-screen mt-5 flex items-center justify-center `}>
       {/* Green background container, some of the css in background is in global */}
-      <div className="greenBackground flex justify-center items-center w-screen  max-h-[647px] mt-20 ">
+      <div className="greenBackground relative flex justify-center   items-center w-screen  h-auto   ">
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
           <div
@@ -36,16 +36,16 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
           ></div>
         </div>
         {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer z-[-1]">
+        <div className={` ${style.hidecircle}  greenCircleContainer bottom-0 z-[-1] `}>
           <div
-            className="greenCircle "
+            className="  bottom-0 greenCircle "
             style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 24%, 0% 24%)' }}
           ></div>
         </div>
 
         {/* Centralized Patient Records*/}
         <div
-          className={` absolute flex  ${style.changetextcenter} flex-row  max-w-[1192px] w-screen max-h-[484px]  h-auto gap-[80px] `}
+          className={`  flex flex-row ${style.changeflex} justify-between items-center my-20  max-w-[1192px] w-screen  h-auto  `}
         >
           <CarleyoProvides
             header={header}
@@ -57,28 +57,33 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
           />
 
           <div
-            className={`absolute ${style.hidegreenbackgroundimg} h-auto right-0 w-[521px] max-h-[484px]`}
+            className={`  flex relative ${style.imagemargin} max-h-[490px] max-w-[521px] w-full h-full `}
           >
-            <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
+            <div className=" absolute greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
               <div
-                className="greenCircle  bg-sage  w-[100px]  h-[100px] "
+                className="greenCircle   bg-sage  w-[100px]  h-auto "
                 style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
               ></div>
             </div>
 
-            <div className="  bottom-0 w-[521px] h-[472px] top-[12px]  ">
-              <div className=" absolute w-[460px] h-[472px]  right-0  rounded-[85px] ">
+            <div className={` relative flex justify-end items-center w-[521px] h-auto ${style.fixhight}`}>
+             
+              <div className="  right-0 max-w-[460px] max-h-[472px] w-[100%] h-auto rounded-[85px]">
                 <Image
-                  className=""
-                  layout="fixed "
-                  fill
+                  className=" px-4 right-0 "
+                  layout="responsive"
                   src={image}
+                  width={460}
+                  height={472}
                   alt="Cecktable"
                 />
               </div>
+                 <div className={`absolute ${style.hideconvinient} top-2/3 left-0 w-auto z-10`}>
+                {/* in components folder */}
+                <ConvinientManagement text={imagebubbletext} />
+              </div>
+
             </div>
-            {/* in componens folder*/}
-            <ConvinientManagement text={imagebubbletext} />
           </div>
         </div>
       </div>
