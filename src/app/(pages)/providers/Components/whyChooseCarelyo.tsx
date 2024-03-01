@@ -55,7 +55,7 @@ const WhychooseCarelyo: React.FC<WhychooseCarelyoTamplateProps> = ({
             </p>
           </div>
         </div>
-        <div className="w-[full] md:hidden flex justify-center px-[25px]">
+        <div className="w-[full] md:hidden flex justify-center px-[20px]">
         <Image
           className="rounded-[25px]"
           layout="fixed "
