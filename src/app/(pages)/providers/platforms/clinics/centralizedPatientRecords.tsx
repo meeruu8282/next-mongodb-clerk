@@ -28,10 +28,11 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
     <div className={` h-auto w-screen mt-5 flex items-center justify-center `}>
       {/* Green background container, some of the css in background is in global */}
       <div className="greenBackground relative flex justify-center   items-center w-screen  h-auto   ">
+
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
           <div
-            className="greenBackgroundTriangle"
+            className="greenBackgroundTriangle "
             style={{ clipPath: 'polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)' }} //Style change how much of a square has to be cut out to create a triangle
           ></div>
         </div>
@@ -70,6 +71,7 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
              
               <div className="  right-0 max-w-[460px] max-h-[472px] w-[100%] h-auto rounded-[85px]">
                 <Image
+
                   className=" px-4 right-0 "
                   layout="responsive"
                   src={image}
@@ -84,6 +86,8 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
               </div>
 
             </div>
+            {/* in componens folder*/}
+            <ConvinientManagement text={imagebubbletext}  />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import CarelyoButton from "../getStartedButton";
 
 import style from './joinCarelynow.module.css'
 
@@ -32,138 +33,105 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
 
 }) => {
   return (
-    // responsive css for  ${style.nameofmediaquerie} is in joinCarelynow.module.css file
-    <div className={` flex justify-end ${style.changehight} left-0  `}>
-      <div className={`relative w-[1315px]  h-auto ${style.middle}  flex items-center justify-between mt-8 `}>
-        <div className=" absolute z-[3]  w-[289px] h-auto mb-20 left-0  ">
-        <div className={`flex flex-col w-screen h-[276px] gap-[32px] ${style.bigtextbackground} ${style.icontextbackground}`}>
-            <div className=" flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-                <div className="flex justify-center items-center w-[30px] h-[30px]">
-                  {/* icon */}
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={19}
-                    height={19}
-                    src={icon1}
-                    alt="Costomicon1"
-                  />
-                </div>
-              </div>
 
-              <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                {/* text */}
-                {icon1text}
+    <div className="w-screen flex justify-center items-center mt-5 mb-8 ">
+      <div className="w-[90%] mx-auto h-auto flex items-center justify-center flex-col-reverse gap-6 lg:flex-row ">
+        {/* vänstersida*/}
+        <div className="flex flex-col h-auto justify-center items-start gap-6 sm:max-w-[20.2rem] max-w-[13rem] font-normal">
+          <div className=" flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
+                <Image
+                  className=""
+                  layout="responsive"
+                  width={19}
+                  height={19}
+                  src={icon1}
+                  alt="Costomicon1"
+                />
               </div>
             </div>
-
-            <div className="flex items-center w-[289px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-                <div className="flex justify-center items-center w-[21px] h-[21px]">
-                  {/* icon */}
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={19}
-                    height={19}
-                    src={icon2}
-                    alt="Costomicon2"
-                  />
-                </div>
-              </div>
-              <div className=" text-[Poppins] text-[16px] w-400 left-0 w-[228px] h-[22px] justify-center justify-items-center">
-                {/* text */}
-                {icon2text}
-              </div>
-            </div>
-
-            <div className="flex items-center w-[300px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-                <div className="flex justify-center items-center w-[21px] h-[21px]">
-                  {/* icon */}
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={19}
-                    height={19}
-                    src={icon3}
-                    alt="Costomicon3"
-                  />
-                </div>
-              </div>
-              <div className=" text-[Poppins] text-[16px]  w-400 left-0  h-[22px] justify-center justify-items-center">
-                {/* text */}
-                {icon3text}
-              </div>
-            </div>
-
-            <div className="flex items-center w-[350px] h-[45px] gap-[16px] ">
-              <div className="h-[45px] w-[45px] rounded-[15px] flex justify-center items-center bg-sage bg-opacity-[10%]  ">
-                <div className="flex justify-center items-center w-[21px] h-[21px]">
-                  {/* icon */}
-                  <Image
-                    className=""
-                    layout="fixed "
-                    width={19}
-                    height={19}
-                    src={icon4}
-                    alt="Costomicon4"
-                  />
-                </div>
-              </div>
-              <div className="text-[Poppins] text-[16px] w-400 left-0  h-[22px] justify-center justify-items-center">
-                {/* text */}
-                {icon4text}
-              </div>
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center justify-items-center">
+              {icon1text}
             </div>
           </div>
-
-        </div>
-<Link href="/providers/pricing" passHref>
-          {/* Button */}
-          <button  className="carelyoButton absolute w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold bottom-0">
-            <div>
-              <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
-                Join Carelyo Now
-                <div className="ml-3">
-                  <div className="h-[28px] w-[28px]  rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]  ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
+          <div className="flex flex-row items-center justify-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
+                <Image
+                  className=""
+                  layout="responsive"
+                  width={19}
+                  height={19}
+                  src={icon2}
+                  alt="Costomicon2"
+                />
               </div>
             </div>
-          </button>
-          </Link>
-        <div className={` ${style.hideimage}  h-auto ${style.joincarelynowintrobox} right-0 bottom-0 `}>
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center items-center">
+              {icon2text}
+            </div>
+          </div>
+          <div className="flex items-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
+                <Image
+                  className=""
+                  layout="responsive"
+                  width={19}
+                  height={19}
+                  src={icon3}
+                  alt="Costomicon3"
+                />
+              </div>
+            </div>
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg h-[1.4rem] justify-center justify-items-center">
+              {icon3text}
+            </div>
+          </div>
+          <div className="flex items-center w-full h-[2.8rem] gap-4 ">
+            <div className="h-[2.8rem] w-[2.8rem] rounded-2xl flex justify-center items-center bg-sage bg-opacity-[10%]  ">
+              <div className="flex justify-center items-center w-[50%] h-[50%]">
+                <Image
+                  className=""
+                  layout="responsive"
+                  width={19}
+                  height={19}
+                  src={icon4}
+                  alt="Costomicon4"
+                />
+              </div>
+            </div>
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg h-[1.4rem] justify-center justify-items-center">
+              {icon4text}
+            </div>
+          </div>
+          <div className="flex place-self-center md:place-self-start pt-7">
+          <CarelyoButton
+          className="w-full"
+            buttonText="Join Carelyo Now"
+            buttonSize="prb"
+            color="primary"
+            size="small"
+          />
+          </div>
+        </div>
+        {/* högersida*/}
+        <div className="flex flex-row justify-center items-center">
           <Image
-            className=" "
-            layout="fixed "
-            width={970}
+            width={1070}
             height={591}
             src={imageSrc}
             alt="Costomimage"
           />
         </div>
-
       </div>
-
-
     </div>
   );
 };
 
 export default JoinCarelynowintrobox;
+
+
+
+

@@ -1,19 +1,16 @@
-import Image from "next/image";
-import Link from 'next/link';
-import UnionCheckmark from "../unionCheckmark";
-import CarelyoButton from "../getStartedButton";
+import Image from 'next/image'
+import Link from 'next/link'
+import UnionCheckmark from '../unionCheckmark'
+import CarelyoButton from '../getStartedButton'
 import style from './carleyoProvides.module.css'
 
-
 interface CarleyoProvidesTemplateProps {
-  header: string;   // A string for the header of the component.
-  paragraph: string;   // A string for the main paragraph content.
-  checktext1: string;  // A string for the first checkbox label.
-  checktext2: string;
-  checktext3: string;
-  buttontext: string;
-
-
+  header: string // A string for the header of the component.
+  paragraph: string // A string for the main paragraph content.
+  checktext1: string // A string for the first checkbox label.
+  checktext2: string
+  checktext3: string
+  buttontext: string
 }
 
 const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
@@ -23,11 +20,10 @@ const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
   checktext2,
   checktext3,
   buttontext,
-
-
 }) => {
-  const addtext= buttontext
+  const addtext = buttontext
   return (
+
     <div className="  flex flex-col  h-auto w-[100%] max-w-[592px] p-3   gap-[32px]  ">
             <div className=" flex flex-col items-center h-auto w-[100%] max-w-[592px]   ">
               <div className="  w-[100%] h-auto">
@@ -80,9 +76,8 @@ const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
                 </div>
               </Link>
             </div>
-          </div>
+    </div>
+  )
+}
 
-  );
-};
-
-export default CarleyoProvides;
+export default CarleyoProvides
