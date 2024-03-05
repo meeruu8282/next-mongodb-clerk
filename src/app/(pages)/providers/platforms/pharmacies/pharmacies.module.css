@@ -1,0 +1,32 @@
+@media (max-width: 767px)  {
+    .centerAnd70w {
+    
+    width: 70%;
+    place-self: center;
+    }
+  }
+
+
+  @media (max-width: 767px)  {
+    .width90 {
+    
+    width: 90%;
+   
+    }
+  }
+
+  @media (max-width: 480px)  {
+    .widthFull {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 330px)  {
+    .testa {
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 4px;
+       padding-bottom: 4px;
+       gap: 2px;
+    }
+  }
