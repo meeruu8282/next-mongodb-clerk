@@ -50,7 +50,9 @@ export default function Hospitals() {
             style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 24%, 0% 24%)' }}
           ></div>
         </div>
-        <IntegratedHospitalManagement />
+        <IntegratedHospitalManagement 
+        image='/integratedHospitol.png'
+        />
       </div>
       <WhychooseCarelyo //Tamplate in Components folder
         image={'/enhanceefficancy.jpg'}

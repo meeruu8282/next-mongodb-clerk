@@ -2,7 +2,13 @@ import Image from "next/image";
 import ConvinientManagement from "./convinientManagement";
 import CarleyoProvides from "./carleyoProvides/carleyoProvides";
 
-export default function IntegratedHospitalManagement() {
+interface IntegratedHospitalManagementProps{
+    image: string
+}
+
+const IntegratedHospitalManagement: React.FC<IntegratedHospitalManagementProps>  = ({
+    image,
+  }) => {
     return (
 <div>
  <div className="items-center flex flex-col lg:flex-row w-[1192px] h-fit lg:h-[484px] left-[125px] top-[82px] gap-[81px]">
@@ -20,7 +26,7 @@ export default function IntegratedHospitalManagement() {
          className=""
          layout="fixed "
          fill
-         src="/integratedHospitol.png"
+         src={image}
          alt="integratedHospitol"
        />
      </div>
@@ -46,3 +52,4 @@ export default function IntegratedHospitalManagement() {
 </div>
   )
 }
+export default IntegratedHospitalManagement
