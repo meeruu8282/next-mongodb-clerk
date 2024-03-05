@@ -4,6 +4,7 @@ import SuperCharge from "../../Components/superCharge";
 import WhychooseCarelyo from "../../Components/whyChooseCarelyo";
 import BlurBackGroundDesign from "../../Components/blurBackGroundDesign";
 import FirstTextinplatform from "../../Components/firstTextinplatform";
+import KeyPoints from "./KeyPoints";
 
 export default function Pharmacies() {
   return (
@@ -39,52 +40,27 @@ export default function Pharmacies() {
           />
         </div>
       </div>
-       {/* Here are the key points you can expect from Carelyo component */}
-      <div className=" relative  w-[1192px] h-[120px] left-[125px] gap-[142px] ">
-        <div className=" absolute left-0 w-[526px] h-[120px]">
-          <h1 className="  text-[Poppins] h-[120px] text-[40px] font-400 tracking-tight text-left leading-60  ">
-            Here are the key points you can expect from Carelyo
-          </h1>
-        </div>
-        <div className=" absolute w-[524px] items-center h-[120px] justify-center right-0 ">
-          <p className=" text-[Poppins] h-[120px] flex items-center text-[20px] weight-400 tracking-tight opacity-50 right-0 text-left leading-60">
-            With Carelyo, we provide a comprehensive solution to streamline your
-            pharmacy operations and improve patient care.
-          </p>
-        </div>
-      </div>
-  
-       {/*  send in your costomised props in componensfolder or change the content below */}
-      <div className=" relative flex-row flex justify-center items-center w-[1191px] h-[316px] left-[125px] gap-[24px] mt-20 ">
-        <Keypointsbox
-          icon={"/Medicinepill.svg"}
-          header={"Drug Stock Tracking"}
-          paragraph={
-            "Easily track the inventory of medications in your pharmacy, ensuring you are aware of the availability of each drug."
-          }
-          linkto={"/providers/auth/signIn"}
-          linktext={"Explore Now"}
-        />
-        <Keypointsbox
-          icon={"/carticon.svg"}
-          header={"Order Management"}
-          paragraph={
-            "Streamline the process of managing medication orders through Carelyo, enabling efficient procurement and timely delivery to patients."
-          }
-          linkto={"/providers/auth/signIn"}
-          linktext={"Explore Now"}
-        />
-        <Keypointsbox
-          icon={"/expireclock.svg"}
-          header={"Expiration Date Monitoring"}
-          paragraph={
-            "Stay on top of medication expiration dates, helping you identify and manage medications nearing their expiry to ensure patient safety."
-          }
-          linkto={"/providers/auth/signIn"}
-          linktext={"Explore Now"}
-        />
-        
-      </div>
+
+      <KeyPoints header={"Here are the key points you can expect from Carelyo"}
+       text={"With Carelyo, we provide a comprehensive solution to streamline your pharmacy operations and improve patient care."}
+        checkmarkboxheader1={"Drug Stock Tracking"} 
+        checkmarkboxparagraph1={"Easily track the inventory of medications in your pharmacy, ensuring you are aware of the availability of each drug."} 
+        checkmarkboxheader2={"Order Management"} 
+        checkmarkboxparagraph2={"Streamline the process of managing medication orders through Carelyo, enabling efficient procurement and timely delivery to patients."} 
+        checkmarkboxheader3={"Expiration Date Monitoring"} 
+        checkmarkboxparagraph3={"Stay on top of medication expiration dates, helping you identify and manage medications nearing their expiry to ensure patient safety."} 
+        linkto1={"/providers/auth/signIn"}
+         linktext1={"Explore Now"} 
+         linkto2={"/providers/auth/signIn"} 
+         linktext2={"Explore Now"}
+          linkto3={"/providers/auth/signIn"} 
+          linktext3={"Explore Now"}
+           icon1={"/Medicinepill.svg"} 
+           icon2={"/carticon.svg"}
+            icon3={"/expireclock.svg"} />
+
+
+
 
      {/*  send in your costomised props in componensfolder or change the content below */}
       <WhychooseCarelyo 
