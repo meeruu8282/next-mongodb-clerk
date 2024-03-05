@@ -54,12 +54,18 @@ const NavbarMobile = () => {
         }`}
       >
         <div className="nav-links flex flex-col items-center justify-center h-full w-full text-4xl gap-9 pb-20">
-
-          <Link onClick={closeMenu} href="/providers/howItWorks" className="text-black hover:text-sage relative group border-b-2 border-sage">
+          <Link
+            onClick={closeMenu}
+            href="/providers/howItWorks"
+            className="text-black hover:text-sage relative group border-b-2 border-sage"
+          >
             <span>How it works</span>
           </Link>
           <div className="relative group">
-            <div className="text-black text-center hover:text-sage border-b-2 border-sage" onClick={handlePlatformHover}>
+            <div
+              className="text-black text-center hover:text-sage border-b-2 border-sage"
+              onClick={handlePlatformHover}
+            >
               Platform
             </div>
             <div className="absolute top-1/2 right-[-16%] transform -translate-y-1/2">
@@ -73,7 +79,6 @@ const NavbarMobile = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
-
             </div>
             <ul
               className={`${
@@ -137,14 +142,25 @@ const NavbarMobile = () => {
             </ul>
           </div>
 
-          <Link onClick={closeMenu} href="/providers/pricing" className="text-black hover:text-sage relative group border-b-2 border-sage">
-
+          <Link
+            onClick={closeMenu}
+            href="/providers/pricing"
+            className="text-black hover:text-sage relative group border-b-2 border-sage"
+          >
             <span>Pricing</span>
           </Link>
-          <Link onClick={closeMenu} href="/providers/blog" className="text-black hover:text-sage relative group border-b-2 border-sage">
+          <Link
+            onClick={closeMenu}
+            href="/providers/blog"
+            className="text-black hover:text-sage relative group border-b-2 border-sage"
+          >
             <span>Blog</span>
           </Link>
-          <Link onClick={closeMenu} href="/providers/help" className="text-black hover:text-sage relative group border-b-2 border-sage ">
+          <Link
+            onClick={closeMenu}
+            href="/providers/help"
+            className="text-black hover:text-sage relative group border-b-2 border-sage "
+          >
             <span>Help</span>
           </Link>
           <div className="flex w-[125px] h-[52px] border-[1px] border-sage rounded-[35px] justify-center items-center gap-2">
@@ -160,37 +176,37 @@ const NavbarMobile = () => {
             </div>
           </div>
 
+        <div className="">
+          <Link href="/providers/pricing">
+            <div className="carelyoButton lg:block" onClick={closeMenu}>
+              <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full h-full">
+                Get Carelyo
+                <div className="ml-3">
+                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
-<div className=''>
-
-<Link href="/providers/pricing">
-  <div className="carelyoButton lg:block" onClick={closeMenu}>
-    <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full h-full">
-      Get Carelyo
-      <div className="ml-3">
-        <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-5 h-5"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</Link>
-
         </div>
       </div>
     </>
   )
 }
 
-
 export default NavbarMobile
-
