@@ -105,7 +105,7 @@ export default function Navbar() {
             <i className="fa fa-chevron-down text-[10px]"></i>
           </div>
         </div>
-
+{/*
         <button className="carelyoButton hidden lg:block">
           <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
             Get Carelyo
@@ -124,7 +124,30 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-        </button>
+        </button> */}
+
+<Link href="/providers/pricing">
+  <div className="carelyoButton hidden lg:block">
+    <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full h-full">
+      Get Carelyo
+      <div className="ml-3">
+        <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</Link>
+
       </div>
     </div>
   );
