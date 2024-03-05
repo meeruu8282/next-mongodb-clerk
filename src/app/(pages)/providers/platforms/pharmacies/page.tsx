@@ -91,10 +91,7 @@ export default function Pharmacies() {
         image={"/youhavealotofreasons.jpg"}
         header={"You Have Lots Of Reasons To Choose Us"}
         paragraph={"Join Carelyo and experience the transformative power of our platform in streamlining pharmacy operations, enhancing patient care, and maximizing efficiency. Together, we can create a more seamless and customer-centric pharmacy experience that benefits both healthcare providers and patients alike."}
-        buttonsText={"Get Carelyo"}
-        
-
-        
+        buttonsText={"Get Carelyo"} 
       />
 
       {/* Code in components folder then superCarge */}

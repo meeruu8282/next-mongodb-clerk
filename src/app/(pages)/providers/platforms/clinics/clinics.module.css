@@ -20,6 +20,38 @@
   
   }
 
+  @media (max-width: 1115px)  {
+    .changeflex {
+
+      display: flex; 
+      flex-direction: column;        
+    }
+  }
+
+
+  @media (max-width: 1115px)  {
+    .imagemargin {
+
+     margin-top: 10px;     
+    }
+  }
+
+ 
+  @media (max-width: 1115px)  {
+    .hidecircle {
+
+     display: none;   
+    }
+  }
+
+  @media (max-width: 255px)  {
+    .hideconvinient {
+
+     display: none;   
+    }
+  }
+
+
  
   @media (max-width: 1025px)  {
    .centertext {
