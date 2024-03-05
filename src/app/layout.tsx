@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="hidden md:block">
                 <Navbar />
               </div>
-              <div className="">{/*<NavbarMobile />*/}</div>
+              <div className="block md:hidden"><NavbarMobile /></div>
             </div>
             <div className="rounded-[30px] ">
               <h1 className="text-[64px]  leading-[83px];"></h1>
