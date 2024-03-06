@@ -31,7 +31,7 @@ const Keypointsbox: React.FC<KeyPointsBoxTamplateProps> = ({
        
     
 <div className="flex justify-center items-center bg-white  md:h-[17.7rem] lg:h-[19.7rem] h-[15.7rem] rounded-3xl hover:shadow-2xl hover:border-[1px] border-sage transition duration-600 cursor-pointer my-auto">
-  <div className={`flex flex-col justify-center items-start gap-4 px-3 py-3 ${style.testa}`}>
+  <div className={`flex flex-col justify-center items-start gap-4 px-3 py-3 ${style.changePadding}`}>
     <div className="flex justify-center items-center bg-[#45AC601A] rounded-full sm:w-[4rem] sm:h-[4rem] w-[2.5rem] h-[2.5rem] p-2">
       <Image
         className="justify-center items-center"
@@ -42,7 +42,7 @@ const Keypointsbox: React.FC<KeyPointsBoxTamplateProps> = ({
         alt="Costo"
       />
     </div>
-    <div className="flex flex-col justify-start items-center gap-4">
+    <div className="flex flex-col justify-start items-center gap-2 sm:gap-4">
       <div className="w-full">
         <h1 className="text-[Poppins] text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl font-bold">
           {header}

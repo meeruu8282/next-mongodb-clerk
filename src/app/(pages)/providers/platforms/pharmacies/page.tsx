@@ -70,8 +70,7 @@ export default function Pharmacies() {
         buttonsText={"Get Carelyo"} 
       />
 
-      {/* Code in components folder then superCarge */}
-      <SuperCharge />
+     
     </div>
   );
 }
