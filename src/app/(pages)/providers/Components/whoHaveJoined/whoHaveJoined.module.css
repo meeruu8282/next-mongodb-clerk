@@ -15,3 +15,14 @@
       flex-basis: 50%; /* Two divs side by side on smaller screens */
     }
   }
+
+
+  
+   
+    @media (max-width: 768px) {
+      .ButtonCareley{
+       justify-content: center;
+      
+      }
+    }
+  

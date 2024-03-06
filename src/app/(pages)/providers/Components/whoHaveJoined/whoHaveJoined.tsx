@@ -149,9 +149,10 @@ interface WhoHaveJoinedTamplateProps {
               </div>
             </div>
           </div>
-
-        </div> <Link href="/providers/auth/signIn" passHref>
-          <button className="carelyoButton absolute w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0  bottom-0">
+      </div>
+      <div className={` w-screen h-[72px] flex flex-row items-center justify-end ${style.ButtonCareley}`}>
+         <Link href="/providers/auth/signIn" passHref>
+        <button className={`carelyoButton mx-8  w-[184px] h-[72px] p-[22px] gap-[12px] rounded-[35px] font-semibold right-0 bottom-0`}>
             <div>
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
                 Get Carelyo
@@ -177,6 +178,7 @@ interface WhoHaveJoinedTamplateProps {
             </div>
           </button>
           </Link>
+          </div>
       </div>
       </div>
   )
