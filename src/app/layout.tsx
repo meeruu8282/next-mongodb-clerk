@@ -30,18 +30,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="topNavbarInner justify-end ml-28">
                 <div className="  w-[391px] h-[17px]">
                   <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
-                    <h1>FOR PATIENTS</h1>
+                    <Link href="/patients/howitworks">
+                      <h1>FOR PATIENTS</h1>
+                    </Link>
                     <div> </div>
                     <div>
                       <div>
-                        <h1>
-                          FOR PROVIDERS
-                          <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]"></div>
-                        </h1>
+                        <Link href="/providers/howItWorks">
+                          <h1>
+                            FOR PROVIDERS
+                            <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]"></div>
+                          </h1>
+                        </Link>
                       </div>
                     </div>
-
-                    <h1>FOR PARTNERS</h1>
+                    <Link href="/partners/howitworks">
+                      <h1>FOR PARTNERS</h1>
+                    </Link>
                     <h1>FOR SHOP</h1>
                   </div>
                 </div>
@@ -52,7 +57,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="hidden md:block">
                 <Navbar />
               </div>
-              <div className="block md:hidden"><NavbarMobile /></div>
+              <div className="block md:hidden">
+                <NavbarMobile />
+              </div>
             </div>
             <div className="rounded-[30px] ">
               <h1 className="text-[64px]  leading-[83px];"></h1>
