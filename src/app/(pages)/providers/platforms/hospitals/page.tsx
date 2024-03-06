@@ -8,10 +8,10 @@ import IntegratedHospitalManagement from '../../Components/integratedHospitalMan
 
 export default function Hospitals() {
   return (
-    <div className="">
+    <div>
       <BlurBackGroundDesign />
-      <div className="  flex  justify-end mt-20">
-        <div className=" relative w-screen h-auto mt-15">
+      <div className=" flex justify-end mt-20">
+        <div className="relative w-screen h-auto mt-15">
           <FirstTextinplatform
             headerGreenText1={'Empowering Hospitals'}
             headerBlackText2={'for Better Healthcare with Carelyo'}
@@ -19,7 +19,6 @@ export default function Hospitals() {
               'Joining Carelyo as a hospital brings a multitude of advantages and benefits that can transform the way you provide healthcare services.'
             }
           />
-
           {/* Use joincarelynowintrobox-component in componentsfolder and send in your costomised props to the tamplate */}
           <JoinCarelynowintrobox
             icon1="/profileicon.svg"
@@ -34,26 +33,9 @@ export default function Hospitals() {
           />
         </div>
       </div>
-      {/* Green background container */} {/* Integrated Hospital Management*/}
-      <div className="greenBackground w-screen h-screen lg:h-[730px] mt-20 ">
-        {/* Corner triangle */}
-        <div className="absolute right-0 top-0 z-[-1]">
-          <div
-            className="greenBackgroundTriangle"
-            style={{ clipPath: 'polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)' }}
-          ></div>
-        </div>
-        {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer z-[-1]">
-          <div
-            className="greenCircle top-[83px]  "
-            style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 24%, 0% 24%)' }}
-          ></div>
-        </div>
-        <IntegratedHospitalManagement 
+      <IntegratedHospitalManagement //In Components folder
         image='/integratedHospitol.png'
-        />
-      </div>
+      />
       <WhychooseCarelyo //Tamplate in Components folder
         image={'/enhanceefficancy.jpg'}
         header={'Enhancing Efficiency and Quality of Care'}
