@@ -22,7 +22,7 @@
   }
 
   @media (max-width: 330px)  {
-    .testa {
+    .changePadding {
         padding-left: 4px;
         padding-right: 4px;
         padding-top: 4px;

@@ -73,8 +73,7 @@ export default function Pharmacies() {
         
       />
 
-      {/* Code in components folder then superCarge */}
-      <SuperCharge />
+     
     </div>
   );
 }
