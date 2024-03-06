@@ -31,10 +31,10 @@ const IntegratedHospitalManagement: React.FC<IntegratedHospitalManagementProps> 
        />
      </div>
    </div>
-   <div className="hidden lg:block lg:w-[294px] lg:h-[74px]  ">
+   <div className="absolute hidden lg:block lg:w-[294px] lg:h-[74px] bottom-[70px] right-[-25px]">
      {/* ConvienientManagement hidden temporary. Can not find the element that overlapping with the button.*/}
      {/*tamplate in components folder */}
-     <ConvinientManagement text="Convenient Management" />
+     <ConvinientManagement text="Convenient Management"/>
    </div>
  </div>
 
