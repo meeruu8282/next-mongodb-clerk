@@ -86,8 +86,6 @@ const CentralizedPatientRecords: React.FC<CentralizedPatientRecordsTamplateProps
               </div>
 
             </div>
-            {/* in componens folder*/}
-            <ConvinientManagement text={imagebubbletext}  />
           </div>
         </div>
       </div>
