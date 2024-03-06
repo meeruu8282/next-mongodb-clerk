@@ -57,6 +57,7 @@ const NavbarMobile = () => {
           <Link
             onClick={closeMenu}
             href="/providers/howItWorks"
+
             className="text-black hover:text-sage relative group border-b-2 border-sage"
           >
             <span>How it works</span>
@@ -79,6 +80,7 @@ const NavbarMobile = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
+
             </div>
             <ul
               className={`${
@@ -142,10 +144,12 @@ const NavbarMobile = () => {
             </ul>
           </div>
 
+
           <Link
             onClick={closeMenu}
             href="/providers/pricing"
             className="text-black hover:text-sage relative group border-b-2 border-sage"
+
           >
             <span>Pricing</span>
           </Link>
@@ -176,6 +180,7 @@ const NavbarMobile = () => {
             </div>
           </div>
 
+
         <div className="">
           <Link href="/providers/pricing">
             <div className="carelyoButton lg:block" onClick={closeMenu}>
@@ -203,6 +208,7 @@ const NavbarMobile = () => {
             </div>
           </Link>
         </div>
+
         </div>
       </div>
     </>

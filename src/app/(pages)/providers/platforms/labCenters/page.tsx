@@ -43,23 +43,31 @@ export default function LabCenters() {
       </div>
 
       <JoiningCarelyoEnablesYouto
-        header={"Joining Carelyo Enables You to:"}
-        paragraph={"Don't miss out on the transformative power of Carelyo for your laboratory center. Join our platform today and unlock a new era of efficiency, accuracy, and excellence in laboratory services"}
-        image={"/chemistdoctor.png"}
-        header01={"01. Streamline Workflows"}
-        paragraph01={"Simplify and automate essential processes, reducing manual efforts and eliminating errors. From sample intake to result delivery, experience a seamless workflow that saves time and improves productivity."}
-        header02={"02. Optimize Resource Management"}
-        paragraph02={"Efficiently manage laboratory resources, including equipment, supplies, and personnel. Maximize utilization, minimize wastage, and ensure smooth operations to meet the demands of your growing laboratory center."}
-        header03={"03. Enhance Patient Care"}
-        paragraph03={"Provide patients with accurate and timely test results, enabling faster diagnoses and personalized treatment plans. With Carelyo, you can deliver superior patient experiences, fostering trust and loyalty among your clientele."}
-        header04={"04. Foster Collaboration"}
-        paragraph04={"Collaborate seamlessly with healthcare providers, referring physicians, and patients. Share test results securely, exchange critical information, and facilitate effective communication to deliver comprehensive care."}
-            />
-
-      {/* Joining Carelyo Enables You to: not yet implemented, but code should be here  */}
+        header={'Joining Carelyo Enables You to:'}
+        paragraph={
+          "Don't miss out on the transformative power of Carelyo for your laboratory center. Join our platform today and unlock a new era of efficiency, accuracy, and excellence in laboratory services"
+        }
+        image={'/chemistdoctor.png'}
+        header01={'01. Streamline Workflows'}
+        paragraph01={
+          'Simplify and automate essential processes, reducing manual efforts and eliminating errors. From sample intake to result delivery, experience a seamless workflow that saves time and improves productivity.'
+        }
+        header02={'02. Optimize Resource Management'}
+        paragraph02={
+          'Efficiently manage laboratory resources, including equipment, supplies, and personnel. Maximize utilization, minimize wastage, and ensure smooth operations to meet the demands of your growing laboratory center.'
+        }
+        header03={'03. Enhance Patient Care'}
+        paragraph03={
+          'Provide patients with accurate and timely test results, enabling faster diagnoses and personalized treatment plans. With Carelyo, you can deliver superior patient experiences, fostering trust and loyalty among your clientele.'
+        }
+        header04={'04. Foster Collaboration'}
+        paragraph04={
+          'Collaborate seamlessly with healthcare providers, referring physicians, and patients. Share test results securely, exchange critical information, and facilitate effective communication to deliver comprehensive care.'
+        }
+      />
 
       {/* Green background container */}
-      <div className="greenBackground w-screen h-[647px] mt-20 ">
+      <div className="greenBackground w-screen h-auto mt-20 ">
         {/* Corner triangle */}
         <div className="absolute right-0 top-0 z-[-1]">
           <div
@@ -76,7 +84,7 @@ export default function LabCenters() {
         </div>
 
         {/*Revolutionize your laboratory center's with Carelyo contentbelow*/}
-        <div className="flex flex-row w-[1192px] h-[484px] left-[125px] top-[82px] gap-[81px]">
+        <div className=" my-[85px] px-3 flex flex-row w-full h-auto max-w-[1192px] ">
           {/* Use the tamplate in componentsfolder and send in your costomised props to the tamplate or change content in the tamplate below*/}
           <CarleyoProvides
             header={"Revolutionize your laboratory center's with Carelyo"}
@@ -89,21 +97,28 @@ export default function LabCenters() {
             buttontext={'Join us today'}
           />
 
-          <div className=" relative w-[521px] h-[484px]   ">
-            <div className="greenCircleContainer opacity-[25%] left-10 w-[52px] h-[52px] top-0 z-[-1]">
+          <div className=" bg-orange-400   relative flex flex-row justify-end w-[521px] h-auto  ">
+            <div className="greenCircleContainer bg-blue-600 opacity-[25%] left-10 w-[52px] h-[52px] top-0 ">
               <div
                 className="greenCircle  bg-sage w-[100px]  h-[100px] "
                 style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
               ></div>
             </div>
 
-            <div className=" absolute bottom-0 w-[521px] h-[472px] top-[12px]  ">
-              <div className=" absolute w-[460px] h-[472px]  right-0  rounded-[85px] ">
-                <Image className="" layout="fixed " fill src="/revolutionize.png" alt="Cecktable" />
-              </div>
+            <div className=" bg-blue-600 relative flex  justify-end items-end  w-[460px]   h-auto ">
+              <Image
+                className=" h-auto  w-[460px] "
+                layout="responsive "
+                fill
+                src="/revolutionize.png"
+                alt="Cecktable"
+              />
+              
             </div>
-            {/*componentsfolder */}
-            <ConvinientManagement text="Convenient Management" />
+            <div className=" bg-violet-600 absolute top-2/3 left-0 w-auto z-10">
+                {/*componentsfolder */}
+                <ConvinientManagement text="Convenient Management" />
+              </div>
           </div>
         </div>
       </div>
