@@ -1,4 +1,3 @@
-import React from 'react'
 import DeliveringBetterHealthcareSolution from '../components/DeliveringBetterHealthcareSolution'
 import UseCarelyoRightNow from '../components/UseCarelyoRightNow'
 import WhyJoinCarelyo from '../components/WhyJoinCarelyo'

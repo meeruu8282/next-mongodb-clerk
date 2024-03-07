@@ -168,7 +168,6 @@ const NavbarMobile = () => {
             <div className="w-[28px] h-[28px] flex justify-center items-center ">
               <Image src="/image 519.png" alt="flagg" width={28} height={28} />
             </div>
-
             <div className=" items-center bg-white ">
               <div className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
                 en
@@ -176,7 +175,6 @@ const NavbarMobile = () => {
               <i className="fa fa-chevron-down text-[10px]"></i>
             </div>
           </div>
-
           <div className="">
             <Link href="/providers/pricing">
               <div className="carelyoButton lg:block" onClick={closeMenu}>
