@@ -5,11 +5,11 @@ import Image from 'next/image'
 const DeliveringBetterHealthcareSolution = () => {
   return (
     <div className="flex w-full relative top-0 left-0">
-      <div className="w-1/2">
+      <div className="w-1/2 justify-center flex flex-col">
         <div className="mb-5">
           <WelcomeToCarelyo />
         </div>
-        <h1 className=" text-[6rem]">Delivering Better Healthcare Solutions</h1>
+        <h1 className=" text-[5rem] ">Delivering Better Healthcare Solutions</h1>
         <p className=" font-extralight text-base">
           Healthcare platform that seamlessly integrates telemedicine, electronic health records,
           and streamlined workflows for a convenient and efficient healthcare experience.
@@ -21,8 +21,15 @@ const DeliveringBetterHealthcareSolution = () => {
           </a>
         </div>
       </div>
-      <div className="w-1/2 flex justify-end">
-        <Image src="/girlWithHeadset.png" alt="?" width={600} height={600} objectFit="cover" />
+      <div className="w-1/2 flex justify-center">
+        <Image
+          src="/girlWithHeadset.png"
+          alt="?"
+          layout="responsive"
+          width={541}
+          height={487}
+          objectFit=""
+        />
       </div>
     </div>
   )
