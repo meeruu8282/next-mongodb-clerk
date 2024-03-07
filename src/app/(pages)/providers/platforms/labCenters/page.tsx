@@ -9,6 +9,7 @@ import FirstTextinplatform from '../../Components/firstTextinplatform'
 import Hovertextbox from './hovertextbox'
 import JoiningCarelyoEnablesYouto from './joiningCarelyoEnablesYouto'
 import style from './labCenter.module.css'
+import Revolutionizeyourlaboratory from './revolutionizeyourlaboratory'
 
 export default function LabCenters() {
   return (
@@ -67,65 +68,22 @@ export default function LabCenters() {
         }
       />
 
-      {/* Green background container */}
-      <div className="greenBackground relative w-screen h-auto mt-20 ">
-        {/* Corner triangle */}
-        <div className="absolute right-0 top-0 z-[-1]">
-          <div
-            className="greenBackgroundTriangle"
-            style={{ clipPath: 'polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)' }}
-          ></div>
-        </div>
-        {/* Circle div overlapping the container */}
-        <div className={` ${style.hidegreencircle} greenCircleContainer   z-[-1]`} >
-          <div
-            className="greenCircle  "
-            style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 31%, 0% 31%)' }}
-          ></div>
-        </div>
+     
 
-        {/*Revolutionize your laboratory center's with Carelyo contentbelow*/}
-        <div className={` justify-center items-center my-[85px] ${style.changetocol} px-3 flex flex-row w-full h-auto max-w-[1192px]`}  >
-          <div className='max-w-[592px] h-auto'>
-              {/* Use the tamplate in componentsfolder and send in your costomised props to the tamplate or change content in the tamplate below*/}
-          <CarleyoProvides
-            header={"Revolutionize your laboratory center's with Carelyo"}
-            paragraph={
-              'Look no further than Carelyo, the leading platform designed specifically for laboratory centers.'
-            }
-            checktext1={'Sample management and test result tracking'}
-            checktext2={'Communication and integrated reporting'}
-            checktext3={'Enhance efficiency, accuracy, and collaboration within laboratory center.'}
-            buttontext={'Join us today'}
-          />
-          </div>
-        
-
-          <div className="   relative flex flex-row justify-end w-full max-w-[521px] h-auto  ">
-            <div className="greenCircleContainer  opacity-[25%] left-10 w-[52px] h-[52px] top-0 ">
-              <div
-                className="greenCircle  bg-sage w-[100px]  h-[100px] "
-                style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
-              ></div>
-            </div>
-
-            <div className=" relative flex  justify-center items-center  h-[472px] w-full max-w-[460px]   ">
-              <Image
-                className=" h-auto w-full "
-                layout="responsive "
-                fill
-                src="/revolutionize.png"
-                alt="Cecktable"
-              />
-              
-            </div>
-            <div className=" absolute top-2/3 left-0 w-auto z-10">
-                {/*componentsfolder */}
-                <ConvinientManagement text="Convenient Management" />
-              </div>
-          </div>
-        </div>
-      </div>
+      <Revolutionizeyourlaboratory
+        header={"Revolutionize your laboratory center's with Carelyo"}
+        paragraph={
+          'Look no further than Carelyo, the leading platform designed specifically for laboratory centers.'
+        }
+        checktext1={'Sample management and test result tracking'}
+        checktext2={'Communication and integrated reporting'}
+        checktext3={
+          'Enhance efficiency, accuracy, and collaboration within laboratory center.'
+        }
+        image={'/revolutionize.png'}
+        buttontext={'Join us today'}
+        whitebubble={'Convenient Management'}
+      />
 
       <WhoHaveJoinedTamplate
         greenHeaderpart={'2000+ Laboratory Centers'}
