@@ -13,8 +13,8 @@ const IntegratedHospitalManagement: React.FC<IntegratedHospitalManagementProps> 
         <div className="bg-[url('/greenbackgroundHospitals.svg')] w-screen h-screen lg:h-[730px] mt-20 flex items-center justify-evenly">
             <div className="items-center flex flex-col lg:flex-row w-[1192px] h-fit lg:h-[484px] left-[125px] top-[px] gap-[81px]">
                 <div className="relative w-[286px] h-[295px] md:w-[359px] md:h-[370px] lg:w-[521px] lg:h-[484px]">
-                    <div className=" lg:absolute block bottom-0 w-[359px] h-[370px] lg:w-[521px] lg:h-[472px] top-[12px]  ">
-                        <div className=" lg:absolute w-[359px] h-[370px]  lg:w-[460px] lg:h-[472px]   rounded-[85px] ">
+                    <div className="lg:absolute block bottom-0 w-[359px] h-[370px] lg:w-[521px] lg:h-[472px] top-[12px]">
+                        <div className="lg:absolute w-[359px] h-[370px]  lg:w-[460px] lg:h-[472px] rounded-[85px] ">
                             <Image
                                 className=""
                                 layout="fixed "
