@@ -57,7 +57,6 @@ const NavbarMobile = () => {
           <Link
             onClick={closeMenu}
             href="/providers/howItWorks"
-
             className="text-black hover:text-sage relative group border-b-2 border-sage"
           >
             <span>How it works</span>
@@ -71,6 +70,7 @@ const NavbarMobile = () => {
             </div>
             <div className="absolute top-1/2 right-[-16%] transform -translate-y-1/2">
               <svg
+                onClick={handlePlatformHover}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -80,7 +80,6 @@ const NavbarMobile = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
-
             </div>
             <ul
               className={`${
@@ -144,12 +143,10 @@ const NavbarMobile = () => {
             </ul>
           </div>
 
-
           <Link
             onClick={closeMenu}
             href="/providers/pricing"
             className="text-black hover:text-sage relative group border-b-2 border-sage"
-
           >
             <span>Pricing</span>
           </Link>
@@ -180,35 +177,33 @@ const NavbarMobile = () => {
             </div>
           </div>
 
-
-        <div className="">
-          <Link href="/providers/pricing">
-            <div className="carelyoButton lg:block" onClick={closeMenu}>
-              <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full h-full">
-                Get Carelyo
-                <div className="ml-3">
-                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
+          <div className="">
+            <Link href="/providers/pricing">
+              <div className="carelyoButton lg:block" onClick={closeMenu}>
+                <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full h-full">
+                  Get Carelyo
+                  <div className="ml-3">
+                    <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        </div>
-
+            </Link>
+          </div>
         </div>
       </div>
     </>
