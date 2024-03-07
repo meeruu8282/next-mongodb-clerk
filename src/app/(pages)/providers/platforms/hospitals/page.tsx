@@ -8,9 +8,9 @@ import IntegratedHospitalManagement from '../../Components/integratedHospitalMan
 
 export default function Hospitals() {
   return (
-    <div>
+    <div className="">
       <BlurBackGroundDesign />
-      <div className=" flex justify-end mt-20">
+      <div className="flex justify-end mt-20">
         <div className="relative w-screen h-auto mt-15">
           <FirstTextinplatform
             headerGreenText1={'Empowering Hospitals'}
