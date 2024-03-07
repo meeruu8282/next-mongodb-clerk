@@ -26,11 +26,11 @@ const UseCarelyoRightNow = () => {
         Here's a step-by-step guide on how to utilize our services, including telemedicine,
         electronic health records (EHRs), and our streamlined workflow
       </p>
-      <div className="w-full flex gap-6 mt-6">
-        <div className="image-container w-1/2 flex justify-center items-center">
+      <div className="w-full lg:flex-row flex-col flex gap-6 mt-6">
+        <div className="image-container w-full lg:w-1/2 flex justify-center items-center">
           <img src="/girlWithMask.png" alt="?" />
         </div>
-        <div className="button-container w-1/2">
+        <div className="button-container w-full lg:w-1/2">
           <div className="flex flex-col">
             <Hovertextbox
               header01="01. Find a Provider Near You"

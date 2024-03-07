@@ -2,8 +2,8 @@ import React from 'react'
 
 const WhyJoinCarelyo = () => {
   return (
-    <div className="flex w-full">
-      <div className="text-container w-1/2">
+    <div className="flex lg:flex-row flex-col w-full">
+      <div className="text-container w-full lg:w-1/2">
         <h2 className="font-bold text-4xl mb-3">Why Join Carelyo?</h2>
         <p className="font-extralight mb-2">
           Telemedicine expands your healthcare reach, connecting you with specialists and healthcare
@@ -17,7 +17,7 @@ const WhyJoinCarelyo = () => {
           treatment plans.
         </p>
       </div>
-      <div className="w-1/2 flex justify-center align-center">
+      <div className="w-full lg:w-1/2 flex justify-center align-center">
         <img src="/GirlOnTablet.png" alt="girl on tablet" />
       </div>
     </div>
