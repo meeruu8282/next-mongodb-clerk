@@ -54,6 +54,24 @@ const NavbarMobile = () => {
         }`}
       >
         <div className="nav-links flex flex-col items-center justify-center h-full w-full text-4xl gap-9 pb-20">
+          {/* "Black navbar in mobile screen prototype"
+
+          Still needs to add functionality to the select tag
+          */}
+          <div className="mx-auto p-5">
+            <select
+              name="section"
+              id="section"
+              className=" text-base font-semibold border-4 border-solid border-sage bg-white w-full h-12 rounded-[35px] text-center"
+            >
+              <option value="patients">FOR PATIENTS</option>
+              <option value="providers">FOR PROVIDERS</option>
+              <option value="partner">FOR PARTNERS</option>
+              <option value="shop">FOR SHOP</option>
+            </select>
+          </div>
+          {/* "End of black navbar in mobile screen prototype" */}
+
           <Link
             onClick={closeMenu}
             href="/providers/howItWorks"
