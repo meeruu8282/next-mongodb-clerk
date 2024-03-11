@@ -42,7 +42,7 @@ interface FirstPartnerplatformTemplateProps {
             <div className="w-[90%] h-auto md:max-w-[70%] lg:max-w-[65%] xl:w-[48%] mx-auto flex justify-center items-center ">
               <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl whitespace-normal text-[Poppins] font-normal">
                 {headerBlackText1}{" "}
-                <span className="text-black whitespace-normal font-bold ">
+                <span className="text-greenText whitespace-normal font-bold ">
                   {headerGreenText1}
                 </span>{" "}
                 {headerBlackText2}{" "}
