@@ -52,15 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
             </div>
-
-            <div className="  max-h-32px top-25px left-144px ">
-              <div className="hidden md:block">
-                <Navbar />
-              </div>
-              <div className="block md:hidden">
-                <NavbarMobile />
-              </div>
-            </div>
             <div className="rounded-[30px] ">
               <h1 className="text-[64px]  leading-[83px];"></h1>
             </div>
