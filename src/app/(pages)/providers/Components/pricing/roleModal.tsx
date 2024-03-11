@@ -105,11 +105,12 @@ const RoleModal: React.FC<ModalProps> = ({
               )}
             </div>
             <div>
-              <h1 className={`${style.roleModalCardtitle} text-[1.1rem]
-              tracking-[-2%] font-bold`}>
+              <h1 className={`${style.roleModalCardtitle} text-[Poppins]
+              text-[1.1rem] tracking-[-2%] font-bold`}>
                 {card.title}
               </h1>
-              <div className="font-normal text-[0.9rem] tracking-tight text-gray-500">
+              <div className="font-normal text-[0.9rem] text-[Poppins]
+              tracking-tight text-gray-500">
                 {card.description}
               </div>
             </div>
@@ -152,11 +153,11 @@ const RoleModal: React.FC<ModalProps> = ({
         </div>
         {/* cards start */}
         <div className="flex flex-col items-center mb-4">
-          <div className={`${style.roleModalTitle} font-bold text-[1.8rem]
-          tracking-tight`}>
+          <div className={`${style.roleModalTitle} text-[Poppins] font-bold
+          text-[1.8rem] tracking-tight`}>
             Select Your Role
           </div>
-          <div className="font-normal text-[0.9rem] tracking-tight
+          <div className="text-[Poppins] font-normal text-[0.9rem] tracking-tight
           text-neutral-600 mb-2">
             Choose one of role available
           </div>
