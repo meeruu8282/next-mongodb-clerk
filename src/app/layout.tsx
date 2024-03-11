@@ -3,7 +3,7 @@ import Navbar from './(pages)/providers/Components/NavBar/navbar'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons'
@@ -16,36 +16,52 @@ import { HeaderNav } from './_components/Header/Nav'
 import { Footer } from './_components/Footer'
 import SuperChargeMobile from './(pages)/providers/Components/superCharge/SuperChargeMobile'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins'
+})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+      <body>
         <Providers>
-          <div className=" gap-[24px] z-auto ">
-            <div> </div>
-            <div className="h-[65px] w-screen hidden bg-[rgba(22,28,40,1)] md:flex items-end ">
-              <div className="topNavbarInner justify-end ml-28">
-                <div className="  w-[391px] h-[17px]">
-                  <div className="  flex space-x-3 h-[17px] text-[13px] font-[Inter] leading-5 ">
-                    <Link href="/patients/howitworks">
-                      <h1>FOR PATIENTS</h1>
-                    </Link>
-                    <div> </div>
+          <div className="mb-6 z-auto">
+            <div className="w-full mb-4 hidden bg-richBlack md:flex">
+              <div className="flex text-white justify-end ml-28">
+                  <div className="mt-6 mb-2 flex space-x-3 text-[13px] gap-6
+                  font-inter leading-5">
                     <div>
-                      <div>
-                        <Link href="/providers/howItWorks">
-                          <h1>
-                            FOR PROVIDERS
-                            <div className="bg-white w-[100px] h-[6px] rounded-tr-[25px] rounded-tl-[24px]"></div>
-                          </h1>
-                        </Link>
-                      </div>
+                      <Link href="/patients/howitworks">
+                        <h1>FOR PATIENTS</h1>
+                      </Link>
                     </div>
+                    <div>
+                      <Link href="/providers/howItWorks">
+                        <h1>
+                          FOR PROVIDERS
+                          <div className="flex justify-center">
+                            <div className="bg-white w-[95%] h-[6px] mt-1
+                            rounded-tr-[24px] rounded-tl-[24px]">
+                            </div>
+                          </div>
+                        </h1>
+                      </Link>
+                    </div>
+                  <div>
                     <Link href="/partners/howitworks">
                       <h1>FOR PARTNERS</h1>
                     </Link>
+                  </div>
+                  <div>
                     <h1>FOR SHOP</h1>
                   </div>
                 </div>
