@@ -108,7 +108,7 @@ const PricingCards: React.FC<CardsProps> = ({
               </div>
               <div className="mt-4 flex text-[32px]">
                 <h1
-                  className={`leading-tight text-[Poppins] font-semibold ${
+                  className={`leading-tight font-semibold ${
                 selectedCard === data.cardId ? "text-white" : ""
               }`}
                 >
@@ -116,7 +116,7 @@ const PricingCards: React.FC<CardsProps> = ({
                 </h1>
               </div>
             <div
-              className={`h-fit mr-4 mt-4 opacity-50 text-[Poppins] font-normal
+              className={`h-fit mr-4 mt-4 opacity-50 font-normal
               whitespace-pre-line text-[14px] ${
                 selectedCard === data.cardId ? "text-white opacity-[100]" : ""
               }`}
@@ -124,7 +124,7 @@ const PricingCards: React.FC<CardsProps> = ({
               {data?.description}
             </div>
             <div
-              className={`mt-4 mr-4 text-[Poppins] font-normal text-[14px]
+              className={`mt-4 mr-4 font-normal text-[14px]
               ${
                 selectedCard === data.cardId ? "text-white" : ""
               }`}

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply font-poppins;
+}
+
 @layer components {
   .greenBackground {
     @apply relative h-[730px]  bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
@@ -25,10 +29,6 @@
 }
 
 @layer components {
-  .topNavbarInner {
-    @apply flex w-[391px] h-[32px] text-white left-[144px] px-[9]   font-[Poppins];
-  }
-
   .getCareButton {
     @apply bg-gray-700 px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
   }
@@ -42,7 +42,7 @@
 
   .ulPlatform {
     @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
-    transform-origin: top, text-poppin;
+    transform-origin: top, font-poppins;
   }
   .dropdown-hidden {
     @apply transform -translate-y-full; /* göm den uppåt */
@@ -56,7 +56,7 @@
     visibility: visible;
   }
   .nav-item {
-    @apply flex     text-black font-[Poppins];
+    @apply flex     text-black font-poppins;
   }
   .carelyoButton {
     @apply bg-sage rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];

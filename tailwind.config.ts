@@ -30,7 +30,11 @@ const config: Config = {
         grayDark: '#323232',
         stone: '#8E8E8F',
         cadetGray: '#9ca2ad',
-
+        richBlack: '#161c28',
+      },
+      fontFamily: {
+        poppins: ['var(--font-poppins)'], //Tailwind default font:  font-poppins
+        inter: ['var(--font-inter)'],     //Tailwind use:  font-inter
       },
     },
   },
