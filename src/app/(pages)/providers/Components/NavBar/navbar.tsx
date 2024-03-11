@@ -15,6 +15,12 @@ type Props = {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+     setActiveLink(link);
+  };
+ 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -73,21 +79,21 @@ export default function Navbar() {
       >
         <div className="flex gap-3">
           <div className="flex w-[418px] h-[24px] justify-between text-[Poppins] font-normal z-[1000px]">
-            <Link href="/providers/howItWorks" className="w-[105px] h-[22px] text-base">
+            <Link href="/providers/howItWorks" className={`w-[105px] h-[22px] text-base ${activeLink === 'howItWorks' ? 'font-semibold' : ''}`} onClick={() => handleLinkClick('howItWorks')}>
               How it work
             </Link>
 
             <DropdownMenu />
 
-            <Link href="/providers/pricing" className="text-black">
+            <Link href="/providers/pricing" className={`text-black ${activeLink === 'Pricing' ? 'font-semibold' : ''}`} onClick={() => handleLinkClick('Pricing')}>
               <nav className="flex w-[50px] h-[22px] text-base">Pricing</nav>
             </Link>
 
-            <Link href="/providers/blog" className="text-black w-[28px] h-[22px] gap-[5px] text-base">
+            <Link href="/providers/blog" className={`text-black w-[28px] h-[22px] gap-[5px] text-base ${activeLink === 'Blog' ? 'font-semibold' : ''}`} onClick={() => handleLinkClick('Blog')}>
               Blog
             </Link>
 
-            <Link href="/providers/help" className="text-black gap-[5px]">
+            <Link href="/providers/help" className={`text-black gap-[5px] ${activeLink === 'Help' ? 'font-semibold' : ''}`} onClick={() => handleLinkClick('Help')}>
               <nav className="flex text-1xl h-[22px] text-base">Help</nav>
             </Link>
           </div>
