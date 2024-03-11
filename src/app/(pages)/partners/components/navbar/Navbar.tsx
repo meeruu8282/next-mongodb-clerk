@@ -4,7 +4,9 @@ import Image from 'next/image'
 import 'font-awesome/css/font-awesome.min.css'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+
 import React from 'react'
+
 
 type Props = {
   message: string

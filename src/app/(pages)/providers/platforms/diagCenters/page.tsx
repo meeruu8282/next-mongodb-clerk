@@ -5,10 +5,20 @@ import SuperCharge from '../../Components/superCharge'
 import WhoHaveJoinedTamplate from '../../Components/whoHaveJoined/whoHaveJoined'
 import RobustFeaturesforDiagnostic from './robustFeaturesforDiagnostic'
 import Howcarelyocanreinforcecomp from './howcarelyocanreinforcecomp'
+import Navbar from '../../Components/NavBar/navbar'
+import NavbarMobile from '../../Components/NavBar/NavbarMobile'
 
 export default function DiagCenters() {
   return (
     <div className="">
+      <div className="  max-h-32px top-25px left-144px ">
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+      </div>
       {/*code in components folder */}
       <BlurBackGroundDesign />
 

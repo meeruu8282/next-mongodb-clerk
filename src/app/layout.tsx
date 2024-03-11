@@ -8,7 +8,6 @@ import './globals.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import SuperCharge from './(pages)/providers/Components/superCharge'
-import NavbarMobile from './(pages)/providers/Components/NavBar/NavbarMobile'
 import FooterComponent from './_components/Footer/FooterComponent'
 import { icon } from '@fortawesome/fontawesome-svg-core'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
@@ -24,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div className=" h-[157.69px] gap-[24px] z-auto ">
+          <div className=" gap-[24px] z-auto ">
             <div> </div>
             <div className="h-[65px] w-screen hidden bg-[rgba(22,28,40,1)] md:flex items-end ">
               <div className="topNavbarInner justify-end ml-28">
@@ -52,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
             </div>
+
             <div className="rounded-[30px] ">
               <h1 className="text-[64px]  leading-[83px];"></h1>
             </div>
