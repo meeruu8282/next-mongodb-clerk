@@ -57,7 +57,7 @@ function DropdownMenu() {
     >
 
 
-      <button className={` ${selectedLink? "font-bold" : "hover:text-sage"} w-[85px] flex justify-between items-center`} onClick={() => setIsOpen(!isOpen)}>Platform
+      <button className={` ${selectedLink? "font-semibold" : "font-normal"} w-[85px] flex justify-between items-center`} onClick={() => setIsOpen(!isOpen)}>Platform
         <Image
           className="relative "
           width={12}
@@ -72,40 +72,40 @@ function DropdownMenu() {
         <ul className=" w-[200px] mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "clinics" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick("clinics")}>Clinics </div>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "clinics" ? "font-semibold" : "font-normal"}`}  onClick={() => handleLinkClick("clinics")}>Clinics </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/diagCenters">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "DiagnostiskCenter" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick("DiagnostiskCenter")}>
-                Diagnostisk Center
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "DiagnosticCenter" ? "font-semibold" : "font-normal"}`}onClick={() => handleLinkClick("DiagnosticCenter")}>
+              Diagnostic Center
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/hospitals">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "Hostpital" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick("Hostpital")}>
-                Hostpital
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "Hospitals" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("Hospitals")}>
+                Hospitals
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/labCenters">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === " LabCenter" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick(" LabCenter")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${selectedLink === "LabCenter" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("LabCenter")}>
                 LabCenter
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/pharmacies">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === " Pharmacies" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick(" Pharmacies")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${selectedLink === "Pharmacies" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("Pharmacies")}>
                 Pharmacies
               </div>
             </Link>
           </li>
           <li>
             <Link href="/providers/platforms/seDoctors">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "SeDoctors" ? "font-bold" : "hover:text-sage"}`} onClick={() => handleLinkClick("SeDoctors")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "SeDoctors" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("SeDoctors")}>
                 SeDoctors
               </div>
             </Link>
