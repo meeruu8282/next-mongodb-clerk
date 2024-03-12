@@ -5,10 +5,20 @@ import FirstTextinplatform from '../../Components/firstTextinplatform'
 import SuperCharge from '../../Components/superCharge'
 import SeamlessAppointmentManagement from './seamlessApointmentManagement'
 import CentralizedPatientRecords from './centralizedPatientRecords'
+import Navbar from '../../Components/NavBar/navbar'
+import NavbarMobile from '../../Components/NavBar/NavbarMobile'
 
 const Clinics = () => {
   return (
     <div className="">
+      <div className="  max-h-32px top-25px left-144px ">
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+      </div>
       {/* code for green tamplate funktions is in componentsdolder*/}
       <BlurBackGroundDesign />
 
@@ -41,17 +51,18 @@ const Clinics = () => {
         </div>
       </div>
 
-
-      {/* tamplate in clinicfolder there you can add props */} 
+      {/* tamplate in clinicfolder there you can add props */}
       <SeamlessAppointmentManagement
         image1={'/centrelizedPatient.png'}
-
         image3={'/LargeCheckTable.png'}
         header={'Seamless Appointment Management'}
-        paragraph={"Our intuitive interface allows you to efficiently manage appointments, allocate resources, and eliminate scheduling conflicts. Visualize your clinic's daily schedule with a user-friendly calendar view."}
-        textbutton={'Manage your appointment'}   />
+        paragraph={
+          "Our intuitive interface allows you to efficiently manage appointments, allocate resources, and eliminate scheduling conflicts. Visualize your clinic's daily schedule with a user-friendly calendar view."
+        }
+        textbutton={'Manage your appointment'}
+      />
 
-      {/* tamplate in clinicfolder there you can add props */} 
+      {/* tamplate in clinicfolder there you can add props */}
       <CentralizedPatientRecords
         header={'Centralized Patient Records'}
         paragraph={

@@ -8,10 +8,22 @@ import ConvinientManagement from '../../Components/convinientManagement'
 import FirstTextinplatform from '../../Components/firstTextinplatform'
 import Hovertextbox from './hovertextbox'
 import JoiningCarelyoEnablesYouto from './joiningCarelyoEnablesYouto'
+import style from './labCenter.module.css'
+import Revolutionizeyourlaboratory from './revolutionizeyourlaboratory'
+import Navbar from '../../Components/NavBar/navbar'
+import NavbarMobile from '../../Components/NavBar/NavbarMobile'
 
 export default function LabCenters() {
   return (
     <div className="">
+      <div className="  max-h-32px top-25px left-144px ">
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+      </div>
       <BlurBackGroundDesign />
 
       <div className="  flex  justify-end mt-20">
@@ -66,62 +78,18 @@ export default function LabCenters() {
         }
       />
 
-      {/* Green background container */}
-      <div className="greenBackground w-screen h-auto mt-20 ">
-        {/* Corner triangle */}
-        <div className="absolute right-0 top-0 z-[-1]">
-          <div
-            className="greenBackgroundTriangle"
-            style={{ clipPath: 'polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)' }}
-          ></div>
-        </div>
-        {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer z-[-1]">
-          <div
-            className="greenCircle "
-            style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 24%, 0% 24%)' }}
-          ></div>
-        </div>
-
-        {/*Revolutionize your laboratory center's with Carelyo contentbelow*/}
-        <div className=" my-[85px] px-3 flex flex-row w-full h-auto max-w-[1192px] ">
-          {/* Use the tamplate in componentsfolder and send in your costomised props to the tamplate or change content in the tamplate below*/}
-          <CarleyoProvides
-            header={"Revolutionize your laboratory center's with Carelyo"}
-            paragraph={
-              'Look no further than Carelyo, the leading platform designed specifically for laboratory centers.'
-            }
-            checktext1={'Sample management and test result tracking'}
-            checktext2={'Communication and integrated reporting'}
-            checktext3={'Enhance efficiency, accuracy, and collaboration within laboratory center.'}
-            buttontext={'Join us today'}
-          />
-
-          <div className=" bg-orange-400   relative flex flex-row justify-end w-[521px] h-auto  ">
-            <div className="greenCircleContainer bg-blue-600 opacity-[25%] left-10 w-[52px] h-[52px] top-0 ">
-              <div
-                className="greenCircle  bg-sage w-[100px]  h-[100px] "
-                style={{ clipPath: 'polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%)' }}
-              ></div>
-            </div>
-
-            <div className=" bg-blue-600 relative flex  justify-end items-end  w-[460px]   h-auto ">
-              <Image
-                className=" h-auto  w-[460px] "
-                layout="responsive "
-                fill
-                src="/revolutionize.png"
-                alt="Cecktable"
-              />
-              
-            </div>
-            <div className=" bg-violet-600 absolute top-2/3 left-0 w-auto z-10">
-                {/*componentsfolder */}
-                <ConvinientManagement text="Convenient Management" />
-              </div>
-          </div>
-        </div>
-      </div>
+      <Revolutionizeyourlaboratory
+        header={"Revolutionize your laboratory center's with Carelyo"}
+        paragraph={
+          'Look no further than Carelyo, the leading platform designed specifically for laboratory centers.'
+        }
+        checktext1={'Sample management and test result tracking'}
+        checktext2={'Communication and integrated reporting'}
+        checktext3={'Enhance efficiency, accuracy, and collaboration within laboratory center.'}
+        image={'/revolutionize.png'}
+        buttontext={'Join us today'}
+        whitebubble={'Convenient Management'}
+      />
 
       <WhoHaveJoinedTamplate
         greenHeaderpart={'2000+ Laboratory Centers'}
