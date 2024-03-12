@@ -2,6 +2,7 @@ import Image from "next/image";
 import "font-awesome/css/font-awesome.min.css";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 type Props = {
   message: string;
@@ -9,9 +10,10 @@ type Props = {
 
 function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("");
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   let closeTimeout = useRef<any>(null); // För att hålla referensen till setTimeout
+  const currentPath = usePathname();
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -41,11 +43,6 @@ function DropdownMenu() {
     }, 500);  // Fördröj stängningen med 500 ms
   }
 
-  const handleLinkClick = (link: string) => {
-    setSelectedLink(link);
-    setIsOpen(false);
-  }
-
   return (
 
     <div
@@ -57,7 +54,7 @@ function DropdownMenu() {
     >
 
 
-      <button className={` ${selectedLink? "font-semibold" : "font-normal"} w-[85px] flex justify-between items-center`} onClick={() => setIsOpen(!isOpen)}>Platform
+      <button className={` ${currentPath.startsWith("/providers/platforms/") ? "font-semibold" : "font-normal"} w-[85px] flex justify-between items-center`} onClick={() => setIsOpen(!isOpen)}>Platform
         <Image
           className="relative "
           width={12}
@@ -66,46 +63,44 @@ function DropdownMenu() {
           alt=""
         /> </button>
 
-
-
       <div className={isOpen ? "dropdown-list block" : "dropdown-list hidden"}>
         <ul className=" w-[200px] mt-2 border rounded shadow-lg bg-white ">
           <li className="border-b">
             <Link href="/providers/platforms/clinics">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "clinics" ? "font-semibold" : "font-normal"}`}  onClick={() => handleLinkClick("clinics")}>Clinics </div>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${currentPath === "/providers/platforms/clinics" ? "font-semibold" : "font-normal"}`}>Clinics </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/diagCenters">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "DiagnosticCenter" ? "font-semibold" : "font-normal"}`}onClick={() => handleLinkClick("DiagnosticCenter")}>
-              Diagnostic Center
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${currentPath === "/providers/platforms/diagCenters" ? "font-semibold" : "font-normal"}`}>
+                Diagnostic Center
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/hospitals">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "Hospitals" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("Hospitals")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${currentPath === "/providers/platforms/hospitals" ? "font-semibold" : "font-normal"}`}>
                 Hospitals
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/labCenters">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${selectedLink === "LabCenter" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("LabCenter")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${currentPath === "/providers/platforms/labCenters" ? "font-semibold" : "font-normal"}`}>
                 LabCenter
               </div>
             </Link>
           </li>
           <li className="border-b">
             <Link href="/providers/platforms/pharmacies">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${selectedLink === "Pharmacies" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("Pharmacies")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage ${currentPath === "/providers/platforms/pharmacies" ? "font-semibold" : "font-normal"}`}>
                 Pharmacies
               </div>
             </Link>
           </li>
           <li>
             <Link href="/providers/platforms/seDoctors">
-              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${selectedLink === "SeDoctors" ? "font-semibold" : "font-normal"}`} onClick={() => handleLinkClick("SeDoctors")}>
+              <div className={`block px-4 py-2 cursor-pointer hover:text-sage  ${currentPath === "/providers/platforms/seDoctors" ? "font-semibold" : "font-normal"}`}>
                 SeDoctors
               </div>
             </Link>
