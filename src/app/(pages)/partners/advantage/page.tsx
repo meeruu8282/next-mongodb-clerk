@@ -1,8 +1,15 @@
+
 import HelpCard from "./advantageCard";
+
+import React from 'react'
+import Navbar from '../Components/navbar/Navbar'
+import NavbarMobile from '../Components/navbar/NavbarMobile'
+
 
 
 export default function () {
   return (
+
     <div className="flex justify-center w-screen h-auto">
     <div className="relative flex  max-w-[1190px] w-[95%] lg:w-[90%] flex-wrap justify-center lg:justify-between">
       <div className="w-[70%] mt-6 md:mt-12 md:mb-2 mb-20 text-center md:text-left md:w-[90%]">
@@ -37,3 +44,7 @@ export default function () {
     </div>
   )
 };
+
+
+export default page
+
