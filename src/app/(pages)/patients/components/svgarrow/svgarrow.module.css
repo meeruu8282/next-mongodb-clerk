@@ -1,0 +1,19 @@
+
+
+
+
+.group {
+    cursor: pointer;
+  }
+  
+  .arrowbackground {
+    fill: #E7E7E9; /* Standard bakgrundsfärg */
+  }
+  
+  .arrow {
+    fill: #181818; /* Standard färg för pilen */
+  }
+  
+  .group:hover .arrow {
+    fill: green; /* Färg när man hovrar över pilen */
+  }
