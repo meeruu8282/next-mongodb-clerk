@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
-import NavbarMobile from '../components/navbar/NavbarMobile'
+import Navbar from '../Components/navbar/Navbar'
+import NavbarMobile from '../Components/navbar/NavbarMobile'
 
 const page = () => {
   return (
