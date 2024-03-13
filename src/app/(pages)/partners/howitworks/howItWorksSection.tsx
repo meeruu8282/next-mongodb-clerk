@@ -44,7 +44,7 @@ const HowItWorksSection: React.FC<HowItWorksSectionTemplateProps> = ({
     return (
         <div className='w-full flex justify-center items-center '>
             <div className='w-[90%] '>
-                <div className='flex justify-center sm:justify-start items-center mb-7'>
+                <div className='flex sm:justify-start justify-center items-center mb-7'>
                     <h1 className='font-bold text-[Poppins] text-2xl sm:text-2xl md:text-2xl lg:text-4xl'>{heading}</h1>
                 </div>
                 <div className='flex flex-col gap-12'>
