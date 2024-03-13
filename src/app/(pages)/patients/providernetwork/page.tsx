@@ -1,3 +1,4 @@
+
 'use client'
 import React, { useState } from 'react';
 import { Catagorys, All_providers, Family_physicians, Clinics, Hospitals } from './constants/constants';
@@ -65,7 +66,9 @@ const ProviderNetwork = () => {
   // Generate an array of page numbers for pagination
   const pageNumbers = [currentPage - 1, currentPage, currentPage + 1, totalPages];
 
+
   return (
+
     <div className='h-full w-full flex flex-col justify-center items-center mx-5 my-5'>
       {/* Provider Network header */}
       <div className='w-full h-auto flex flex-col items-center justify-center'>
@@ -150,3 +153,4 @@ const ProviderNetwork = () => {
 }
 
 export default ProviderNetwork;
+

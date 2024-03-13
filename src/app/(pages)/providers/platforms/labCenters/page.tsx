@@ -10,10 +10,20 @@ import Hovertextbox from './hovertextbox'
 import JoiningCarelyoEnablesYouto from './joiningCarelyoEnablesYouto'
 import style from './labCenter.module.css'
 import Revolutionizeyourlaboratory from './revolutionizeyourlaboratory'
+import Navbar from '../../Components/NavBar/navbar'
+import NavbarMobile from '../../Components/NavBar/NavbarMobile'
 
 export default function LabCenters() {
   return (
     <div className="">
+      <div className="  max-h-32px top-25px left-144px ">
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+      </div>
       <BlurBackGroundDesign />
 
       <div className="  flex  justify-end mt-20">
@@ -68,8 +78,6 @@ export default function LabCenters() {
         }
       />
 
-     
-
       <Revolutionizeyourlaboratory
         header={"Revolutionize your laboratory center's with Carelyo"}
         paragraph={
@@ -77,9 +85,7 @@ export default function LabCenters() {
         }
         checktext1={'Sample management and test result tracking'}
         checktext2={'Communication and integrated reporting'}
-        checktext3={
-          'Enhance efficiency, accuracy, and collaboration within laboratory center.'
-        }
+        checktext3={'Enhance efficiency, accuracy, and collaboration within laboratory center.'}
         image={'/revolutionize.png'}
         buttontext={'Join us today'}
         whitebubble={'Convenient Management'}

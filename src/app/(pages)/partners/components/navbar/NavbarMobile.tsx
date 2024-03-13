@@ -74,114 +74,28 @@ const NavbarMobile = () => {
 
           <Link
             onClick={closeMenu}
-            href="/providers/howItWorks"
+            href="/partners/howitworks"
             className="text-black hover:text-sage relative group border-b-2 border-sage"
           >
             <span>How it works</span>
           </Link>
-          <div className="relative group">
-            <div
-              className="text-black text-center hover:text-sage border-b-2 border-sage"
-              onClick={handlePlatformHover}
-            >
-              Platform
-            </div>
-            <div className="absolute top-1/2 right-[-16%] transform -translate-y-1/2">
-              <svg
-                onClick={handlePlatformHover}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={3}
-                className={`w-5 h-5 text-sage ${isPlatformOpen ? 'hidden' : ''}`}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-            <ul
-              className={`${
-                isPlatformOpen ? 'flex' : 'hidden'
-              } text-center border-sage border-b-2 p-2 flex-col gap-5`}
-            >
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="hover:text-sage"
-                  href="/providers/platforms/clinics"
-                >
-                  Clinics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="text-center hover:text-sage"
-                  href="/providers/platforms/diagCenters"
-                >
-                  Diagnostisk Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="hover:text-sage"
-                  href="/providers/platforms/hospitals"
-                >
-                  Hostpital
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="hover:text-sage"
-                  href="/providers/platforms/labCenters"
-                >
-                  LabCenter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="hover:text-sage"
-                  href="/providers/platforms/pharmacies"
-                >
-                  Pharmacies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={closeMenu}
-                  className="hover:text-sage"
-                  href="/providers/platforms/seDoctors"
-                >
-                  SeDoctors
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           <Link
             onClick={closeMenu}
-            href="/providers/pricing"
+            href="/partners/advantage"
             className="text-black hover:text-sage relative group border-b-2 border-sage"
           >
-            <span>Pricing</span>
+            <span>Advantage</span>
           </Link>
+
           <Link
             onClick={closeMenu}
-            href="/providers/blog"
+            href="/partners/blog"
             className="text-black hover:text-sage relative group border-b-2 border-sage"
           >
             <span>Blog</span>
           </Link>
-          <Link
-            onClick={closeMenu}
-            href="/providers/help"
-            className="text-black hover:text-sage relative group border-b-2 border-sage "
-          >
-            <span>Help</span>
-          </Link>
+
           <div className="flex w-[125px] h-[52px] border-[1px] border-sage rounded-[35px] justify-center items-center gap-2">
             <div className="w-[28px] h-[28px] flex justify-center items-center ">
               <Image src="/image 519.png" alt="flagg" width={28} height={28} />

@@ -5,10 +5,20 @@ import WhychooseCarelyo from '../../Components/whyChooseCarelyo'
 import BlurBackGroundDesign from '../../Components/blurBackGroundDesign'
 import FirstTextinplatform from '../../Components/firstTextinplatform'
 import IntegratedHospitalManagement from '../../Components/integratedHospitalManagement'
+import Navbar from '../../Components/NavBar/navbar'
+import NavbarMobile from '../../Components/NavBar/NavbarMobile'
 
 export default function Hospitals() {
   return (
     <div className="">
+      <div className="  max-h-32px top-25px left-144px ">
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+      </div>
       <BlurBackGroundDesign />
       <div className="flex justify-end mt-20">
         <div className="relative w-screen h-auto mt-15">
@@ -34,7 +44,7 @@ export default function Hospitals() {
         </div>
       </div>
       <IntegratedHospitalManagement //In Components folder
-        image='/integratedHospitol.png'
+        image="/integratedHospitol.png"
       />
       <WhychooseCarelyo //Tamplate in Components folder
         image={'/enhanceefficancy.jpg'}

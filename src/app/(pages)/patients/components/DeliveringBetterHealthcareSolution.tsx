@@ -16,7 +16,7 @@ const DeliveringBetterHealthcareSolution = () => {
           Healthcare platform that seamlessly integrates telemedicine, electronic health records,
           and streamlined workflows for a convenient and efficient healthcare experience.
         </p>
-        <div className="button-container lg:justify-start justify-center mt-5 flex gap-7">
+        <div className="button-container lg:items-start lg:justify-start justify-center mt-5 flex gap-7">
           <button className="bg-[#45AC60] text-white rounded-full px-5 py-4">Sign Up</button>
           <a className="my-auto font-bold" href="#">
             Learn More *Arrow*
