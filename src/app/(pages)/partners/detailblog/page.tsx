@@ -16,7 +16,7 @@ const DetailBlog = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-screen flex flex-col justify-center items-center'>
+            <div className='w-screen flex flex-col justify-center items-center mt-14 gap-2 mb-10'>
 
                 <div className='flex flex-col w-[90%] h-auto gap-6'>
                     <div className='flex justify-start'>
@@ -24,7 +24,7 @@ const DetailBlog = () => {
 
                     </div>
                     <div className='flex justify-start'>
-                        <h1 className='text-[Poppins] font-norml text-2xl sm:text-3xl md:text-4xl lg:text-5xl '>Strengthening Cancer Care: A <br /> Collaborative Research Initiative</h1>
+                        <h1 className='text-[Poppins] font-semibold text-xl sm:text-3xl md:text-4xl lg:text-5xl '>Strengthening Cancer Care: A <br /> Collaborative Research Initiative</h1>
 
                     </div>
                     <div className='flex justify-end'>
@@ -47,7 +47,7 @@ const DetailBlog = () => {
 
 
                 </div>
-                <div className='flex flex-col justify-center w-[85%] gap-5'>
+                <div className='flex flex-col justify-center items-center w-[82%] gap-7 mt-16 text-[Poppins] font-normal text-base sm:text-base md:text-lg 2xl:text-xl'>
                     <p>Advancing cancer care requires continuous research, innovation, and collaboration. We embarked on a collaborative research initiative aimed at improving cancer detection and treatment outcomes.</p>
                     <p>Our joint research team comprised leading oncologists, researchers, and data scientists, pooling their expertise to analyze vast datasets and develop predictive models for early cancer detection. By combining our organizations' resources and knowledge, we were able to access a diverse range of patient data, enabling us to identify patterns, risk factors, and potential treatment approaches.</p>
                     <p>
