@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-poppins;
+}
+
+@layer components {
+  .greenBackground {
+    @apply relative h-[730px]  bg-gradient-to-br from-greenBackgroundFrom to-greenBackgroundTo backdrop-blur-md flex justify-center items-center;
+  }
+
+  .greenBackgroundTriangle {
+    @apply w-[264px] h-[254px] bg-greenBackgroundObjects border-transparent border-solid;
+  }
+
+  .greenCircleContainer {
+    @apply absolute top-[530px] left-1/2 transform -translate-x-1/2 w-[487px] h-[487px];
+  }
+
+  .greenCircle {
+    @apply rounded-full bg-gradient-to-b from-greenBackgroundObjects to-transparent to-40% backdrop-blur-md h-full relative overflow-hidden;
+  }
+
+  .checkmark {
+    @apply bg-[#45ac60] text-white flex items-center justify-center w-6 h-6 rounded-full;
+  }
+}
+
+@layer components {
+  .getCareButton {
+    @apply bg-gray-700 px-5 py-2 rounded-lg flex items-center justify-center transition-colors duration-300 bg-[rgba(69,172,96,1)] text-white;
+  }
+  .getCareButton:hover {
+    @apply bg-green-400;
+  }
+  .getCareButton i {
+    @apply ml-2;
+  }
+
+
+  .ulPlatform {
+    @apply transition-transform duration-300 absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 backdrop-blur-md bg-opacity-10;
+    transform-origin: top, font-poppins;
+  }
+  .dropdown-hidden {
+    @apply transform -translate-y-full; /* göm den uppåt */
+    visibility: hidden;
+  }
+
+  .dropdown-visible {
+
+    @apply block z-50 transform translate-y-0.5; /* visa den och placera den i sitt normala läge */
+
+    visibility: visible;
+  }
+  .nav-item {
+    @apply flex     text-black font-poppins;
+  }
+  .carelyoButton {
+    @apply bg-sage rounded-[35px] w-[208px] h-[52px] relative   text-white px-8 py-1   transition-colors duration-300 hover:bg-[rgba(59,199,86,1)];
+  }
+  .carelyoButtonText {
+    @apply h-[22px]   flex items-center justify-between w-full;
+  }
+  /* Styles.css eller en annan .css fil */
+  .selectRoleCard {
+    transition: border 0.3s; /* mjuk övergång */
+  }
+
+  .selectRoleCard:hover {
+    border: 3px solid theme('colors.sage');
+
+  }
+
+  .selectRoleCard:hover {
+    fill: theme('colors.sage');  /* the desired color */
+}
+
+.selectRoleCard:hover:not(.noHoverEffect) .iconHover path {
+  fill: theme('colors.sage');  /* the desired color */
+}
+
+/*   .iconHover:hover {
+    fill: #45AC60;
+}
+
+.iconHover:hover path {
+  fill: #45AC60;
+}
+ */
+
+.selectRoleCard:hover > .noHoverEffect {
+  background-color: inherit;
+}
+
+.blogo{
+  background-image: url(svgPath);
+}
+
+
+/* ClickableBox.module.css */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white; /* Vit bakgrundsfärg */
+  border: 2px solid #ccc; /* Grå kantlinje */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box.checked {
+  background-color: white; /* Vit bakgrundsfärg när kryssad */
+  border: 2px solid #45ac60; /* Grön kantlinje när kryssad */
+  color: #45ac60; /* Grön textfärg när kryssad */
+}
+/* styles.css eller din .scss fil */
+.dropdown-content {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: transform, opacity;
+  pointer-events: none; /* to prevent clicking on hidden items */
+}
+
+.dropdown-content.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Initially set max-height to 0 to hide the dropdown and set the opacity to 0 */
+#dropdownPlatform .dropdown-list {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+/* When active, set a specific max-height value that you know will cover the dropdown's full height.
+   This number might need to be adjusted depending on the actual height of your dropdown content. */
+#dropdownPlatform .dropdown-list.block {
+  max-height: 500px;  /* Adjust this value as necessary */
+  opacity: 1;
+}
+
+/* Keep the styles for the hidden state as you've defined previously */
+#dropdownPlatform .dropdown-list.hidden {
+  display: none;
+}
+
+#dropdownPlatform > div {
+  transform: translateY(-100%);   /* Startposition: Dölj den helt ovanför dess normala position */
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;   /* Här styr du hur länge animationen tar */
+  will-change: transform, opacity;
+}
+
+#dropdownPlatform > div.block {
+  transform: translateY(0);    /* Slutposition: Sätt den till sin normala position */
+  opacity: 1;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+}
+
+
+
+.hover-bordereffect:hover {
+  border-color: #45AC60; /* Change the border color on hover */
+}
+
+
+.custom-shadow {
+  box-shadow: 0px 12px 60px 50px #0000000D;
+}
+
+
+}

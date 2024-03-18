@@ -1,0 +1,94 @@
+
+
+
+@media (max-width: 1180px)  {
+  .hidedoctorimage {
+     
+      display: none;
+      
+  }
+}
+
+
+@media (max-width: 1180px)  {
+  .centertext {
+     
+      justify-content: center;
+      left: auto;
+      align-items: center;
+      
+      
+  }
+}
+
+
+@media (max-width: 1220px)  {
+  .removecircle {
+      display: none;
+     
+     
+      
+  }
+}
+
+
+@media (max-width: 1180px)  {
+  .moveunderline {
+
+      margin-top: 0px; 
+  }
+}
+
+@media (max-width: 660px)  {
+  .removeline {
+     display: none;
+  }
+}
+
+@media (max-width: 660px)  {
+  .hideellipse {
+      display: none;
+  }
+}
+
+@media (max-width: 660px)  {
+  .mediumtext {
+      font-size: 30px
+     
+  }
+}
+
+
+@media (max-width: 660px)  {
+  .alignback {
+      align-items: start;
+      
+
+      
+     
+  }
+}
+
+
+
+@media (max-width: 455px)  {
+  .removefirstrectangle {
+      display: none;
+      
+
+      
+     
+  }
+}
+
+
+
+@media (max-width: 455px)  {
+  .removesecondrectangle {
+      display: none;
+      
+
+      
+     
+  }
+}
