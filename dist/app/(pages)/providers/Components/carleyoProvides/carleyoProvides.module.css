@@ -1,0 +1,20 @@
+
+
+
+
+@media (max-width: 500px)  {
+    .textsize {
+        font-size: 100px;
+      
+        
+       
+        
+    }
+  }
+
+  @media (max-width: 1115px)  {
+    .centerbutton {
+        justify-content: center;
+
+    }
+  }
