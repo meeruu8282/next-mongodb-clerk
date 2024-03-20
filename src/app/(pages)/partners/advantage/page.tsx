@@ -2,8 +2,6 @@
 import HelpCard from "./advantageCard";
 
 import React from 'react'
-import Navbar from '../Components/navbar/Navbar'
-import NavbarMobile from '../Components/navbar/NavbarMobile'
 import IntroStats from "../Components/introStats/IntroStats";
 
 

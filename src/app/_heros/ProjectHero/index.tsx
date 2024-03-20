@@ -23,10 +23,15 @@ export const ProjectHero: React.FC<{
               {createdAt && formatDateTime(createdAt)}
               &nbsp; &mdash; &nbsp;
               {categories?.map((category, index) => {
+                if (typeof category === 'string') {
+                  // Handle the case where category is a string
+                  // You might want to return null or handle this differently based on your use case
+                  return null
+                }
+
+                // Handle the case where category is of type Category
                 const { title: categoryTitle } = category
-
                 const titleToUse = categoryTitle || 'Untitled category'
-
                 const isLast = index === categories.length - 1
 
                 return (

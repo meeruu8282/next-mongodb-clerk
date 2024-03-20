@@ -54,14 +54,16 @@ export const CollectionArchive: React.FC<Props> = props => {
 
   const [results, setResults] = useState<Result>({
     totalDocs: typeof populatedDocsTotal === 'number' ? populatedDocsTotal : 0,
-    docs: populatedDocs?.map(doc => doc.value) || selectedDocs?.map(doc => doc.value) || [],
+    docs: ((populatedDocs || []).filter(doc => typeof doc !== 'string').map(doc => doc.value) as (Project | Post)[]),
     page: 1,
     totalPages: 1,
     hasPrevPage: false,
     hasNextPage: false,
     prevPage: 1,
     nextPage: 1,
-  })
+  });
+  
+  
 
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | undefined>(undefined)
@@ -103,14 +105,13 @@ export const CollectionArchive: React.FC<Props> = props => {
           where: {
             ...(catsFromProps && catsFromProps?.length > 0
               ? {
-                  categories: {
-                    in:
-                      typeof catsFromProps === 'string'
-                        ? [catsFromProps]
-                        : catsFromProps.map(cat => cat.id).join(','),
-                  },
-                }
-              : {}),
+                categories: {
+                  in: typeof catsFromProps === 'string'
+                    ? [catsFromProps]
+                    : catsFromProps.map(cat => (typeof cat === 'string' ? cat : cat.id)),
+                },
+              }
+            : {}),
           },
           limit,
           page,

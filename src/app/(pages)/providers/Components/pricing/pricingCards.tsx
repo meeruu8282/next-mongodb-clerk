@@ -192,8 +192,8 @@ const PricingCards: React.FC<CardsProps> = ({
             onClose={() => {
               setModalOpen(false);
             }}
-          >
-          </RoleModal>
+         />
+       
         </div>
       </div>
     </>
