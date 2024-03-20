@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Link from 'next/link'
 
-import { Post, Project } from '../../../payload/payload-types'
+import { Post, Project, Category } from '../../../payload/payload-types'
 import { Media } from '../Media'
 
 import classes from './index.module.scss'
@@ -51,18 +51,22 @@ export const Card: React.FC<{
             {showCategories && hasCategories && (
               <div>
                 {categories?.map((category, index) => {
-                  const { title: titleFromCategory } = category
+                  if (typeof category === 'string') {
+                    // Handle case when category is a string
+                    return category; // or do something else
+                  } else {
+                    // Handle case when category is a Category object
+                    const categoryTitle = category.title || 'Untitled category'
 
-                  const categoryTitle = titleFromCategory || 'Untitled category'
+                    const isLast = index === categories.length - 1
 
-                  const isLast = index === categories.length - 1
-
-                  return (
-                    <Fragment key={index}>
-                      {categoryTitle}
-                      {!isLast && <Fragment>, &nbsp;</Fragment>}
-                    </Fragment>
-                  )
+                    return (
+                      <Fragment key={index}>
+                        {categoryTitle}
+                        {!isLast && <Fragment>, &nbsp;</Fragment>}
+                      </Fragment>
+                    )
+                  }
                 })}
               </div>
             )}
