@@ -11,7 +11,7 @@ export const formatAppURL = ({ doc }): string => {
 // Notice that the hook itself is not async and we are not awaiting `revalidate`
 export const revalidatePage: AfterChangeHook = ({ doc, req }) => {
   const revalidate = async (): Promise<void> => {
-    let url
+    let url: string
 
     try {
       url = formatAppURL({ doc })
