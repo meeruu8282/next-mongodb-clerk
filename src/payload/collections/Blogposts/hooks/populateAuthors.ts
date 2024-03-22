@@ -1,27 +1,33 @@
-import type { AfterReadHook } from 'payload/dist/collections/config/types'
+import type { AfterReadHook } from 'payload/dist/collections/config/types';
 
-// The `user` collection has access control locked so that users are not publicly accessible
-// This means that we need to populate the authors manually here to protect user privacy
-// GraphQL will not return mutated user data that differs from the underlying schema
-// So we use an alternative `populatedAuthors` field to populate the user data, hidden from the admin UI
+// Define the type of the author object
+interface Author {
+  id: string;
+  name: string;
+}
+
 export const populateAuthors: AfterReadHook = async ({ doc, req: { payload } }) => {
   if (doc?.authors) {
     const authorDocs = await Promise.all(
       doc.authors.map(
-        async author =>
-          await payload.findByID({
+        async (author: string | Author) => { // Explicitly define the type of author
+          const authorId = typeof author === 'object' ? author.id : author;
+          const authorDoc = await payload.findByID({
             collection: 'users',
-            id: typeof author === 'object' ? author?.id : author,
+            id: authorId,
             depth: 0,
-          }),
+          });
+
+          return authorDoc;
+        },
       ),
-    )
+    );
 
     doc.populatedAuthors = authorDocs.map(authorDoc => ({
       id: authorDoc.id,
       name: authorDoc.name,
-    }))
+    }));
   }
 
-  return doc
-}
+  return doc;
+};

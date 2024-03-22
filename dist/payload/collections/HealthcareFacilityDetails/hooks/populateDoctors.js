@@ -37,19 +37,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.populateDoctors = void 0;
-// The `user` collection has access control locked so that users are not publicly accessible
-// This means that we need to populate the authors manually here to protect user privacy
-// GraphQL will not return mutated user data that differs from the underlying schema
-// So we use an alternative `populatedAuthors` field to populate the user data, hidden from the admin UI
 var populateDoctors = function (_a) {
     var doc = _a.doc, payload = _a.req.payload;
     return __awaiter(void 0, void 0, void 0, function () {
-        var authorDocs;
+        var doctorDocs;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
                     if (!(doc === null || doc === void 0 ? void 0 : doc.doctors)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, Promise.all(doc.authors.map(function (doctor) { return __awaiter(void 0, void 0, void 0, function () {
+                    return [4 /*yield*/, Promise.all(doc.doctors.map(function (doctor) { return __awaiter(void 0, void 0, void 0, function () {
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0: return [4 /*yield*/, payload.findByID({
@@ -62,10 +58,10 @@ var populateDoctors = function (_a) {
                             });
                         }); }))];
                 case 1:
-                    authorDocs = _b.sent();
-                    doc.populatedDoctors = authorDocs.map(function (authorDoc) { return ({
-                        id: authorDoc.id,
-                        name: authorDoc.name,
+                    doctorDocs = _b.sent();
+                    doc.populatedDoctors = doctorDocs.map(function (doctorDoc) { return ({
+                        id: doctorDoc.id,
+                        name: doctorDoc.name,
                     }); });
                     _b.label = 2;
                 case 2: return [2 /*return*/, doc];

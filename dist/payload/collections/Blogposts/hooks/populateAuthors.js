@@ -37,10 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.populateAuthors = void 0;
-// The `user` collection has access control locked so that users are not publicly accessible
-// This means that we need to populate the authors manually here to protect user privacy
-// GraphQL will not return mutated user data that differs from the underlying schema
-// So we use an alternative `populatedAuthors` field to populate the user data, hidden from the admin UI
 var populateAuthors = function (_a) {
     var doc = _a.doc, payload = _a.req.payload;
     return __awaiter(void 0, void 0, void 0, function () {
@@ -50,14 +46,19 @@ var populateAuthors = function (_a) {
                 case 0:
                     if (!(doc === null || doc === void 0 ? void 0 : doc.authors)) return [3 /*break*/, 2];
                     return [4 /*yield*/, Promise.all(doc.authors.map(function (author) { return __awaiter(void 0, void 0, void 0, function () {
+                            var authorId, authorDoc;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
-                                    case 0: return [4 /*yield*/, payload.findByID({
-                                            collection: 'users',
-                                            id: typeof author === 'object' ? author === null || author === void 0 ? void 0 : author.id : author,
-                                            depth: 0,
-                                        })];
-                                    case 1: return [2 /*return*/, _a.sent()];
+                                    case 0:
+                                        authorId = typeof author === 'object' ? author.id : author;
+                                        return [4 /*yield*/, payload.findByID({
+                                                collection: 'users',
+                                                id: authorId,
+                                                depth: 0,
+                                            })];
+                                    case 1:
+                                        authorDoc = _a.sent();
+                                        return [2 /*return*/, authorDoc];
                                 }
                             });
                         }); }))];
