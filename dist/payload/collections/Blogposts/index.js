@@ -9,7 +9,6 @@ var hero_1 = require("../../fields/hero");
 var slug_1 = require("../../fields/slug");
 var populateArchiveBlock_1 = require("../../hooks/populateArchiveBlock");
 var populatePublishedDate_1 = require("../../hooks/populatePublishedDate");
-var populateAuthors_1 = require("./hooks/populateAuthors");
 var revalidatePost_1 = require("./hooks/revalidatePost");
 var adminsOrAuthorsOrPublished_1 = require("./access/adminsOrAuthorsOrPublished");
 var adminsOrAuthors_1 = require("./access/adminsOrAuthors");
@@ -29,7 +28,7 @@ exports.BlogPosts = {
             populatePublishedDate_1.populatePublishedDate,
         ],
         afterChange: [revalidatePost_1.revalidatePost],
-        afterRead: [populateArchiveBlock_1.populateArchiveBlock, populateAuthors_1.populateAuthors],
+        afterRead: [populateArchiveBlock_1.populateArchiveBlock],
     },
     versions: {
         drafts: true,
