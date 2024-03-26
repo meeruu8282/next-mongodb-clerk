@@ -40,7 +40,7 @@ function HowItsWorks() {
         <div className='w-full flex justify-center items-center mb-14 mt-4'>
           <HowItWorksSection
             heading={'How It Works'}
-
+            
             number1={'1'}
             header1={'Register on our Website'}
             text1={'Begin the partnership process by visiting our website and accessing the partnership registration page. Fill out and submit the partnership registration form with your organizations details.'}
