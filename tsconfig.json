@@ -23,7 +23,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/providers/auth/signUpHospital", "src/app/providers/auth/clinicSignUp"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/providers/auth/signUpHospital", "src/app/providers/auth/clinicSignUp", "src/payload/**/*.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "transpileOnly": true,
