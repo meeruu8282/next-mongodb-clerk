@@ -64,7 +64,7 @@ export default function Navbar() {
               How it works
             </Link>
 
-            <Link href="/patients/providerNetwork" className="text-black">
+            <Link href="/patients/providernetwork" className="text-black">
               <nav className="flex w-[50px] h-[22px] text-base">Provider Network</nav>
             </Link>
 
