@@ -37,20 +37,47 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.populateAuthors = void 0;
+// Function to validate authors array
+function validateAuthors(authors) {
+    return authors.every(function (author) {
+        if (typeof author === 'string') {
+            // Validate author ID (e.g., check length, format)
+            return isValidAuthorId(author);
+        }
+        else if (typeof author === 'object' && author !== null) {
+            // Validate author object structure (e.g., contains required properties)
+            return isValidAuthorObject(author);
+        }
+        else {
+            return false; // Invalid type
+        }
+    });
+}
+// Example validation functions
+function isValidAuthorId(id) {
+    // Implement validation logic for author ID
+    return id.length === 24; // Example: Check if it's a valid MongoDB ObjectId
+}
+function isValidAuthorObject(author) {
+    // Implement validation logic for author object
+    return author.hasOwnProperty('id'); // Example: Check if it contains required properties
+}
 var populateAuthors = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload;
+    var doc = _a.doc, payload = _a.req.payload, global = _a.global;
     return __awaiter(void 0, void 0, void 0, function () {
-        var authorDocs;
+        var authorDocs, error_1;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    if (!(doc === null || doc === void 0 ? void 0 : doc.authors)) return [3 /*break*/, 2];
+                    _b.trys.push([0, 3, , 4]);
+                    if (!((doc === null || doc === void 0 ? void 0 : doc.authors) && validateAuthors(doc.authors))) return [3 /*break*/, 2];
                     return [4 /*yield*/, Promise.all(doc.authors.map(function (author) { return __awaiter(void 0, void 0, void 0, function () {
-                            var authorId, authorDoc;
+                            var authorId, authorDoc, error_2;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
-                                        authorId = typeof author === 'object' ? author.id : author;
+                                        _a.trys.push([0, 2, , 3]);
+                                        authorId = typeof author === 'object' ? author === null || author === void 0 ? void 0 : author.id : author;
                                         return [4 /*yield*/, payload.findByID({
                                                 collection: 'users',
                                                 id: authorId,
@@ -59,17 +86,30 @@ var populateAuthors = function (_a) {
                                     case 1:
                                         authorDoc = _a.sent();
                                         return [2 /*return*/, authorDoc];
+                                    case 2:
+                                        error_2 = _a.sent();
+                                        console.error('Error fetching author:', error_2);
+                                        // Optionally handle the error, e.g., log it, set a default value, etc.
+                                        return [2 /*return*/, null]; // Or any other default value
+                                    case 3: return [2 /*return*/];
                                 }
                             });
                         }); }))];
                 case 1:
                     authorDocs = _b.sent();
-                    doc.populatedAuthors = authorDocs.map(function (authorDoc) { return ({
+                    doc.populatedAuthors = authorDocs
+                        .filter(function (authorDoc) { return authorDoc !== null; }) // Filter out null values
+                        .map(function (authorDoc) { return ({
                         id: authorDoc.id,
                         name: authorDoc.name,
                     }); });
                     _b.label = 2;
-                case 2: return [2 /*return*/, doc];
+                case 2: return [3 /*break*/, 4];
+                case 3:
+                    error_1 = _b.sent();
+                    console.error('Error populating authors:', error_1);
+                    return [3 /*break*/, 4];
+                case 4: return [2 /*return*/, doc];
             }
         });
     });
