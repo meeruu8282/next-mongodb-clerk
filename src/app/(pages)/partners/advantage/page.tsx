@@ -1,8 +1,11 @@
-
 import HelpCard from "./advantageCard";
+
+import PartnerAdvantage from "./partnerAdvantage";
+
 
 import React from 'react'
 import IntroStats from "../Components/introStats/IntroStats";
+
 
 
 
@@ -51,13 +54,17 @@ function page() {
         } 
         link={""}
         />
-      
+    <PartnerAdvantage
+    
+     image={"/partnerAdvantage.png"}
+     header={"Partner Advantage"}
+     paragraph={"Partnering with us opens up a world of advantages, incloding access to a vast network, collaborative opprtunities, enhanced credibility, increased exposure and marketing, technical support and resources, and the opportunity for continuous growth and collaboration. By becoming our partner, you can leverage these advantages to expand your reach, enhance your organization's reputation, and drive positive change in the healthcare industry."} 
+     buttonText={"Contact Us"}
+     subText={"We are excited to explore the possibilites together!"}>
+
+    </PartnerAdvantage>
      
     </div>
     </div>
   )
 };
-
-
-export default page
-
