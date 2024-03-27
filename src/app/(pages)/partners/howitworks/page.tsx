@@ -6,7 +6,7 @@ import IntroStats from '../Components/introStats/IntroStats'
 
 
 
-function HowItsWorks() {
+const HowItsWorks = () => {
   return (
     <>
     <div>      

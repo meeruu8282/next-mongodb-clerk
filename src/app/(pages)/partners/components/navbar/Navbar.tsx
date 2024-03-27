@@ -12,7 +12,7 @@ type Props = {
   message: string
 }
 
-export default function Navbar() {
+const Navbar= () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -119,3 +119,4 @@ export default function Navbar() {
     </div>
   )
 }
+export default Navbar
