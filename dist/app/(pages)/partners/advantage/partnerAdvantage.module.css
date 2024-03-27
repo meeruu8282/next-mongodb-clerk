@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+    .myClass {
+      padding:20px; 
+      flex-direction: column;
+      gap: 20px;  
+      text-align: center; 
+      margin-right:100px;
+      
+    }
+
+
+    .headerText {
+      white-space: nowrap;
+    }
+
+
+    .hidingImage {
+      display: none;
+    }
+
+
+    .centerButton {
+      display: flex;
+      justify-content: center;  
+      transform: translateX(50px); 
+       
+      }
+    }
+  
+
+
+
+
+
+
+  @media (max-width: 1199px) {
+    .myClass {
+      flex-direction: column; 
+      padding: 50px 20px;
+    }
+   
+   .hidingimage {
+       
+        display: none;
+        
+    }
+  
+  }
+
