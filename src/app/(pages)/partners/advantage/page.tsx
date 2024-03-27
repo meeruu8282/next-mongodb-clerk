@@ -9,7 +9,7 @@ import IntroStats from "../Components/introStats/IntroStats";
 
 
 
-function page() {
+const Advantage = () => {
   return (
 
     <div className="flex justify-center items-center w-screen h-auto flex-col">
@@ -68,3 +68,5 @@ function page() {
     </div>
   )
 };
+
+export default Advantage

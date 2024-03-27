@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Components/navbar/Navbar'
 import NavbarMobile from '../Components/navbar/NavbarMobile'
 
-const page = () => {
+const blog = () => {
   return (
     <div>
       {' '}
@@ -18,4 +18,4 @@ const page = () => {
   )
 }
 
-export default page
+export default blog
