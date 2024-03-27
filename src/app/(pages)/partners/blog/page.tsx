@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../Components/navbar/Navbar'
-import NavbarMobile from '../Components/navbar/NavbarMobile'
+import Navbar from '../Componentspartners/navbar/Navbar'
+import NavbarMobile from '../Componentspartners/navbar/NavbarMobile'
 
 const blog = () => {
   return (

@@ -4,7 +4,7 @@ import PartnerAdvantage from "./partnerAdvantage";
 
 
 import React from 'react'
-import IntroStats from "../Components/introStats/IntroStats";
+import IntroStats from "../Componentspartners/introStats/IntroStats";
 
 
 
