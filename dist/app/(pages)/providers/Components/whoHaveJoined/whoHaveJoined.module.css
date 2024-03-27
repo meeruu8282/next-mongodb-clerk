@@ -1,0 +1,28 @@
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flexitem {
+    flex: 1;
+    /* Add any other styling for your divs */
+  }
+  
+  @media (max-width: 768px) {
+    .flexitem {
+      flex-basis: 50%; /* Two divs side by side on smaller screens */
+    }
+  }
+
+
+  
+   
+    @media (max-width: 768px) {
+      .ButtonCareley{
+       justify-content: center;
+      
+      }
+    }
+  

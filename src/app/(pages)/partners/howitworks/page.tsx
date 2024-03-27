@@ -1,9 +1,8 @@
 import React from 'react'
-import Partnership from '../Components/partnership'
-import FirstPartnerplatform from '../Components/firstPartnerplatform'
 import HowItWorksSection from './howItWorksSection'
 import Navbar from '../Components/navbar/Navbar'
 import NavbarMobile from '../Components/navbar/NavbarMobile'
+import IntroStats from '../Components/introStats/IntroStats'
 
 
 
@@ -19,30 +18,29 @@ function HowItsWorks() {
         <NavbarMobile />
       </div>
     </div>
-    </div><div className='w-screen flex flex-col justify-center items-center'>
-        <div className='w-full flex justify-center items-center sm:mb-14 mb-5'>
-          <FirstPartnerplatform
-            headerBlackText1={"97% of partners say using"}
-            headerGreenText1={"our platform"}
-            headerBlackText2="is satisfying."
-            paragraph1={"Welcome to our partnership program! We value collaboration and aim to create mutually beneficial relationships in the healthcare industry"} />
-        </div>
-        <div className='w-full flex justify-center items-center mb-14'>
-          <Partnership number1={'482'}
-            number2={'2000+'}
-            number3={'232'}
-            number4={'21'}
-            text1={'Family Physician'}
-            text2={'Independent Doctor'}
-            text3={'Clinicor Hospital'}
-            text4={'Country used carelyo'} />
+    </div>
+    <div className='w-screen flex flex-col justify-center items-center'>
+    <IntroStats
+       headerBlackText1={"97% of partners say using"}     
+       headerGreenText1={"our platform"} 
+       headerBlackText2={" is satisfying."} 
+       paragraph1={"Welcome to our partnership program! We value collaboration and aim to create mutually beneficial relationships in the healthcare industry"}
+     number1={"482"}
+     text1={"Family Physician"} 
+     number2={"2000+"} 
+     text2={"Independent Doctor"} 
+     number3={"232"} 
+     text3={"Clinicor Hospital"} 
+     number4={"21"} 
+      text4={"Country used carelyo"}  
+    />
 
-        </div>
+       
 
         <div className='w-full flex justify-center items-center mb-14 mt-4'>
           <HowItWorksSection
             heading={'How It Works'}
-
+            
             number1={'1'}
             header1={'Register on our Website'}
             text1={'Begin the partnership process by visiting our website and accessing the partnership registration page. Fill out and submit the partnership registration form with your organizations details.'}
