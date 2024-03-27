@@ -1,8 +1,8 @@
 import React from 'react'
 import HowItWorksSection from './howItWorksSection'
-import Navbar from '../Components/navbar/Navbar'
-import NavbarMobile from '../Components/navbar/NavbarMobile'
-import IntroStats from '../Components/introStats/IntroStats'
+import Navbar from '../Componentspartners/navbar/Navbar'
+import NavbarMobile from '../Componentspartners/navbar/NavbarMobile'
+import IntroStats from '../Componentspartners/introStats/IntroStats'
 
 
 
