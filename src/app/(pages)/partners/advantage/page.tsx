@@ -10,6 +10,7 @@ import IntroStats from '../Componentspartners/introStats/IntroStats'
 const Advantage = () => {
   return (
     <>
+      {/*   La till navbar och navbarMobile */}
       <div>
         <div className=" max-h-32px top-25px left-144px ">
           <div className="hidden md:block">
