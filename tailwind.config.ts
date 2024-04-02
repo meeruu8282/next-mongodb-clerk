@@ -24,6 +24,7 @@ const config: Config = {
         greenHover: '#3BC756',
         sageOpacityHigh: '#45AC601A',
         sageOpacityHigher: '#45AC600D',
+        graySoftlight: '#fafafa',
         grayLight: '#9C9C9C',
         grayLighter: '#A6A6A6',
         grayDark: '#323232',
