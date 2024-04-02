@@ -6,7 +6,7 @@ import NavbarMobile from './(pages)/providers/Components/NavBar/NavbarMobile'
 import { Widget } from '@typeform/embed-react'
 
 export default function Home() {
-  const typeFormId = 'LwkxcEEA'
+  const typeFormId = 'JlurNqyg'
   return (
     <div>
       <div className="  max-h-32px top-25px left-144px ">
