@@ -4,24 +4,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Table of Contents
 
-- [Project Name](#project-carelyo/providerpage)
+- [Project carelyo/providerpage](#project-carelyoproviderpage)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Features](#features)
   - [Getting Started](#getting-started)
-    - [Learn More](#learn-more)
-      - [Youtube clips that can be helpfull](#youtube-clips-that-can-be-helpfull)
-        - [ How images is implemented](#How-images-is-implemented)
-        - [ How tailwind works 10:00-49:00](#How-tailwind-works-10:00-49:00)
-        - [ Routing](#Routing)
-        - [ How to do tamplates High-Quality React Components ](#High-Quality-React-Components)
-        - [ how to use css files with module ](#How-to-style-with-module.css)
-        - [ How to get glow when hovering ](#How-to-get-glow-when-hovering)
-    - [Deploy on Vercel](#deploy-on-vercel)
-  - [Usage](#usage)
-  - [Configuration](#configuration)
-  - [Contributing](#contributing)
-  - [License](#license)
+  - [Youtube clips that can be helpfull](#youtube-clips-that-can-be-helpfull)
+  - [- How images is implemented](#--how-images-is-implemented)
+  - [- How tailwind works 10:00-49:00](#--how-tailwind-works-1000-4900)
+  - [- Routing](#--routing)
+  - [- High-Quality React Components](#--high-quality-react-components)
+  - [- How to style with module.css](#--how-to-style-with-modulecss)
+  - [- How to get glow when hovering](#--how-to-get-glow-when-hovering)
+  - [Learn More](#learn-more)
+  - [Deploy on Vercel](#deploy-on-vercel)
+  - [Typeform](#typeform)
 
 ## Introduction
 
@@ -58,24 +55,24 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Youtube clips that can be helpfull
 
   ## - How images is implemented
-    https://www.youtube.com/watch?v=EBSrVW5MXoo&ab_channel=Joshtriedcoding 
+    https://www.youtube.com/watch?v=EBSrVW5MXoo&ab_channel=Joshtriedcoding
 
   ## - How tailwind works 10:00-49:00
     https://www.youtube.com/watch?v=tS7upsfuxmo&ab_channel=JavaScriptMastery
 
-  ## - Routing 
-    https://www.youtube.com/watch?v=P4W_LaotmNI&ab_channel=RyanToronto 
+  ## - Routing
+    https://www.youtube.com/watch?v=P4W_LaotmNI&ab_channel=RyanToronto
 
-  ## - High-Quality React Components 
-    Best Practices for Reusability in react code 
-    https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding 
+  ## - High-Quality React Components
+    Best Practices for Reusability in react code
+    https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding
 
   ## - How to style with module.css
-    Dont forget if you using tailwind css and you have to use {` ${style.nameofcss} `} syntax 
-    https://www.youtube.com/watch?v=If5LI88_aY8&ab_channel=LeonvanZyl 
+    Dont forget if you using tailwind css and you have to use {` ${style.nameofcss} `} syntax
+    https://www.youtube.com/watch?v=If5LI88_aY8&ab_channel=LeonvanZyl
 
   ## - How to get glow when hovering
-    https://www.youtube.com/watch?v=5W6kEP65AH4&t=212s&ab_channel=TailwindLabs 
+    https://www.youtube.com/watch?v=5W6kEP65AH4&t=212s&ab_channel=TailwindLabs
 
 
 ## Learn More
@@ -93,3 +90,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Typeform
+
+To find and edit the Typeform page in your code, follow these steps:
+
+Open the file /C:/Users/GTSA - Infinity/Documents/Projekt/Portfolio/providerpage/src/app/page.tsx in your code editor.
+
+Locate the line where the Typeform ID is defined:
+
+The Typeform ID is set to 'JlurNqyg' in this example. You can replace this ID with your own Typeform ID. To do this, go to the Typeform website (https://www.typeform.com/) and log in to your account.
+
+Once logged in, select the Typeform you want to use or create a new one.
+
+In the Typeform editor, click on the "Share" tab.
+
+Under the "Share your typeform" section, you will find the Typeform ID. It is a combination of letters and numbers.
+
+Copy the Typeform ID.
+
+Go back to your code editor and replace 'JlurNqyg' with the copied Typeform ID:
+
+Save the file.
+
+Now, when you run your application, the Typeform with the specified ID will be displayed on the page. Any changes you make to the Typeform on the Typeform website will be reflected in your application.
