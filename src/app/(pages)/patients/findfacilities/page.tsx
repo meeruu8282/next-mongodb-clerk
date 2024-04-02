@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import NavbarMobile from '../components/navbar/NavbarMobile'
+import FindNearbyHealthcareFacilities from '../components/FindNearbyHealthcareFacilities'
 
 function page() {
   return (
@@ -14,6 +15,7 @@ function page() {
           <NavbarMobile />
         </div>
       </div>
+      <FindNearbyHealthcareFacilities />
     </div>
   )
 }
