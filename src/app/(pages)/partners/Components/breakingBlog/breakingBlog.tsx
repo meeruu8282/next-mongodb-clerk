@@ -4,10 +4,6 @@ import Image from "next/image";
 
 
 
-
-
-
-
 interface BreakingBlogTemplateProps {
   heading: string;
   heading2: string;
@@ -35,7 +31,7 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
 
 }) => {
   return (
-    <div className='flex flex-col w-screen justify-center items-center gap-4 '>
+    <div className='flex flex-col w-screen justify-center items-center gap-4 mb-3'>
       <div className='flex justify-center items-start md:flex-row flex-col w-[90%] gap-3 mb-10'>
         <div className='flex justify-start items-center w-full'>
           <h1 className='text-greenText text-[Poppins] font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl'>{heading}</h1>
@@ -55,11 +51,11 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
         </div>
       </div>
 
-      <div className='flex justify-center items-center md:flex-row flex-col w-[90%] border border-black gap-4 h-auto '>
-        <div className='flex flex-col justify-center items-start md:w-2/5 w-full h-full gap-2 '>
+      <div className='flex justify-center items-center md:flex-row flex-col lg:w-[90%] w-[95%] gap-4 h-auto '>
+      <div className='flex flex-col justify-between  items-start md:w-5/12  w-full h-[100%] gap-4  flex-grow'>
           <div className='max-h-[32rem] object-cover w-[100%]'>
             <Image
-              className='max-h-[32rem] object-cover h-[100%]' 
+              className='max-h-[32rem] object-cover h-[100%]'
               layout="responsive"
               width={493}
               height={435}
@@ -67,13 +63,10 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
               alt="GroupHighfive-breakingBlog"
             />
           </div>
-
-
-
-
-
-          <h2 className='text-[Poppins] font-semibold text-base sm:text-lg md:text-xl lg:text-2xl md:w-[86%] w-full  h-[4rem] '>{text1}</h2>
-          <div className='flex flex-row justify-center items-center gap-2 mt-auto '>
+          <div className='2xl:w-[75%] w-full h-auto md:h-[5rem]'>
+            <h2 className='text-[Poppins] font-semibold text-base sm:text-xl md:text-xl lg:text-2xl'>{text1}</h2>
+          </div>
+          <div className='flex flex-row justify-center items-center gap-2'>
             <p className='opacity-[50%] font-semibold text-xs sm:text-sm md:text-base lg:text-base'>Carelyo</p>
             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="3" cy="3.5" r="3" fill="#45AC60" />
@@ -82,7 +75,7 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
           </div>
 
         </div>
-        <div className='flex flex-col justify-center items-start md:w-3/5 w-full h-full gap-2 '>
+        <div className='flex flex-col justify-between items-start md:w-7/12 w-full h-[100%] gap-4  flex-grow'>
 
           <div className='max-h-[32rem] object-cover w-[100%]'>
             <Image
@@ -95,15 +88,16 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
             />
           </div>
 
+          <div className='lg:w-[85%] xl:w-[58%] 2xl:w-[55%] w-full h-auto md:h-[5rem]'>
+            <h2 className='text-[Poppins] font-semibold text-base sm:text-xl md:text-xl lg:text-2xl'>{text2}</h2>
+          </div>
 
-          <h2 className='text-[Poppins] font-semibold text-base sm:text-lg md:text-xl lg:text-2xl md:w-[55%]  w-full h-[4rem]'>{text2}</h2>
-          <div className='flex flex-row justify-center items-center gap-2 mt-auto'>
+          <div className='flex flex-row justify-center items-center gap-2'>
             <p className='opacity-[50%] font-semibold text-xs sm:text-sm md:text-base lg:text-base'>Carelyo</p>
             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="3" cy="3.5" r="3" fill="#45AC60" />
             </svg>
             <p className='opacity-[50%] font-semibold text-xs sm:text-sm md:text-base lg:text-base'>{minutes2}</p>
-
 
           </div>
 
