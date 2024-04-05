@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../Components/navbar/Navbar'
-import NavbarMobile from '../Components/navbar/NavbarMobile'
+import Navbar from '../Componentspartners/navbar/Navbar'
+import NavbarMobile from '../Componentspartners/navbar/NavbarMobile'
 import BreakingBlog from '../Components/breakingBlog/breakingBlog'
 
-const page = () => {
+const blog = () => {
   return (
     <div>
       {' '}
@@ -32,4 +32,4 @@ const page = () => {
   )
 }
 
-export default page
+export default blog

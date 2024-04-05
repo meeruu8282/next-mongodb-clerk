@@ -6,7 +6,6 @@ import HowItWorksPartTwo from './HowItWorksPartTwo'
 import HowItWorksThree from './HowItWorksThree'
 
 import HowItWorksBenefits from './HowItWorksBenefits'
-import './howitwork.css'
 import BlurBackGroundDesign from '../Components/blurBackGroundDesign'
 import HowItWorksWelcome from './HowItWorksWelcome'
 import HowItWorksGreenbackground from './HowItWorksGreenbackground'
