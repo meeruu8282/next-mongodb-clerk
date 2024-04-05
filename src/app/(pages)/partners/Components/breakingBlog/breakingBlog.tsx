@@ -45,7 +45,6 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
                 buttonSize="prb"
                 color="primary"
                 size="small" />
-
             </div>
           </div>
         </div>
@@ -53,9 +52,9 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
 
       <div className='flex justify-center items-center md:flex-row flex-col lg:w-[90%] w-[95%] gap-4 h-auto '>
       <div className='flex flex-col justify-between  items-start md:w-5/12  w-full h-[100%] gap-4  flex-grow'>
-          <div className='max-h-[32rem] object-cover w-[100%]'>
+          <div className='md:max-h-[32rem] max-h-[25rem] object-cover w-[100%]'>
             <Image
-              className='max-h-[32rem] object-cover h-[100%]'
+              className='md:max-h-[32rem] max-h-[25rem] object-cover h-[100%]'
               layout="responsive"
               width={493}
               height={435}
@@ -77,9 +76,9 @@ const breakingBlog: React.FC<BreakingBlogTemplateProps> = ({
         </div>
         <div className='flex flex-col justify-between items-start md:w-7/12 w-full h-[100%] gap-4  flex-grow'>
 
-          <div className='max-h-[32rem] object-cover w-[100%]'>
+          <div className='md:max-h-[32rem] max-h-[25rem] object-cover w-[100%]'>
             <Image
-              className='max-h-[32rem] object-cover h-[100%]'
+              className='md:max-h-[32rem] max-h-[25rem] object-cover h-[100%]'
               layout="responsive"
               width={679}
               height={435}
