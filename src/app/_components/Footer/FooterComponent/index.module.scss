@@ -89,7 +89,7 @@
 .links .navlinks {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 8px;
   padding: 0%;
 }
@@ -128,14 +128,9 @@
   margin-top: 5px;
   
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   padding: 0%;
  
 
 }
 
-
-.navigator{
-
-
-}
