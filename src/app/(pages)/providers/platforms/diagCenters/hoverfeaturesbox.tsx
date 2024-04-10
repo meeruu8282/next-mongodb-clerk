@@ -31,8 +31,7 @@ const Hoverfeaturesbox: React.FC<HoverfeaturesboxTamplateProps> = ({
             />
           </div>
         </div>
-
-        <div className="flex flex-col justify-center items-center gap-[16px] w-[220px] h-[200px]">
+        <div className="flex flex-col justify-evenly items-center w-[14rem] h-[12rem] gap-[1rem]">
           <h1 className="text-base font-semibold leading-7 tracking-wide text-center">{header}</h1>
           <p className="opacity-[50%] text-sm leading-5 font-normal text-center">{paragraph}</p>
         </div>
