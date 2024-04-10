@@ -32,6 +32,9 @@ const config: Config = {
         cadetGray: '#9ca2ad',
         richBlack: '#161c28',
       },
+      root: {
+        sage: '#45AC60',
+      },
       fontFamily: {
         poppins: ['var(--font-poppins)'], //Tailwind default font:  font-poppins
         inter: ['var(--font-inter)'],     //Tailwind use:  font-inter
