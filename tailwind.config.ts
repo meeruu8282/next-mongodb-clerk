@@ -18,7 +18,6 @@ const config: Config = {
         greenBackgroundFrom: '#45AC60',
         greenBackgroundTo: '#7EDC97',
         greenBackgroundObjects: '#45AC6040',
-
         sage: '#45AC60',
         sageLight: '#7EDC97',
         sageDark: '#2B9B5B',
