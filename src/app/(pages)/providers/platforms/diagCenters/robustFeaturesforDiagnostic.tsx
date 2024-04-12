@@ -55,7 +55,7 @@ const RobustFeaturesforDiagnostic: React.FC<RobustFeaturesforDiagnosticTamplateP
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-16 w-full mt-12">
-          <div className="flex flex-col lg:flex-row gap-5 ">
+          <div className="flex flex-col lg:flex-row gap-5">
             <Hoverfeaturesbox icon={icon1} header={header1} paragraph={paragraph1} />
             <Hoverfeaturesbox icon={icon2} header={header2} paragraph={paragraph2} />
           </div>

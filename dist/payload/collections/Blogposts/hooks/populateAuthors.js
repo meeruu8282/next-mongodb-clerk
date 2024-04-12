@@ -63,7 +63,7 @@ function isValidAuthorObject(author) {
     return author.hasOwnProperty('id'); // Example: Check if it contains required properties
 }
 var populateAuthors = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload, global = _a.global;
+    var doc = _a.doc, payload = _a.req.payload;
     return __awaiter(void 0, void 0, void 0, function () {
         var authorDocs, error_1;
         return __generator(this, function (_b) {

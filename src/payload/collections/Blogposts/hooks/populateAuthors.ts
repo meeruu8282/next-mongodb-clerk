@@ -32,7 +32,7 @@ function isValidAuthorObject(author: any): boolean {
   return author.hasOwnProperty('id'); // Example: Check if it contains required properties
 }
 
-export const populateAuthors: AfterReadHook = async ({ doc, req: { payload } , global }) => {
+export const populateAuthors: AfterReadHook = async ({ doc, req: { payload }  }) => {
   try {
     if (doc?.authors && validateAuthors(doc.authors)) {
       const authorDocs = await Promise.all(

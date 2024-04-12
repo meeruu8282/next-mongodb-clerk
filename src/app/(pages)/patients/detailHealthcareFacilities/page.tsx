@@ -1,10 +1,13 @@
 'use client'
-import OurService from "./ourService"
 
+import OurService from "./ourService"
+import React from 'react'
+import Slide from './slides/slide'
+import Thumbswipers from './thumbswiper/thumbswipe'
 const DetailHealthcareFacilities = () => {
   return (
     <div>
-   
+    <Thumbswipers/>
 <OurService
         image={"/ourService.png"}
         header1={"Skin Consultation"}
@@ -20,8 +23,7 @@ const DetailHealthcareFacilities = () => {
 
   </OurService>
 
-  
- 
+       
     </div>
   
   )
