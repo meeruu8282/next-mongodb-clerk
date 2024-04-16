@@ -62,14 +62,14 @@ const HowItWorksSection: React.FC<HowItWorksSectionTemplateProps> = ({
                                 <p className='text-[Poppins] font-normal text-base sm:text-base md:text-base lg:text-base xl:text-lg opacity-50'>{text1}</p>
                             </div>
                         </div>
-                        <div className='rightside w-1/2 h-auto  hidden sm:block'>
+                        <div className='rightside w-1/2 h-auto hidden sm:flex sm:justify-end sm:items-center '>
                             <Image
-                                className='max-h-[33.1rem]'
+                                className='max-h-[33.1rem] w-full 2xl:max-w-[34.4rem] '
                                 layout="responsive"
                                 width={510}
                                 height={424}
                                 src={image1}
-                                alt="mobilephone"
+                                alt="number1"
                             />
                         </div>
                     </div>
@@ -87,9 +87,9 @@ const HowItWorksSection: React.FC<HowItWorksSectionTemplateProps> = ({
                                 <p className='text-[Poppins] font-normal text-base sm:text-base md:text-base lg:text-base xl:text-lg opacity-50'>{text2}</p>
                             </div>
                         </div>
-                        <div className='rightside w-1/2 h-auto hidden sm:block'>
+                        <div className='rightside w-1/2 h-auto hidden sm:flex sm:justify-start sm:items-center'>
                             <Image
-                                className='max-h-[33.1rem]'
+                                className='max-h-[33.1rem] w-full 2xl:max-w-[34.4rem]'
                                 layout="responsive"
                                 width={510}
                                 height={424}
@@ -113,14 +113,14 @@ const HowItWorksSection: React.FC<HowItWorksSectionTemplateProps> = ({
                             </div>
 
                         </div>
-                        <div className='rightside w-1/2 h-auto  hidden sm:block'>
+                        <div className='rightside w-1/2 h-auto hidden sm:flex sm:justify-end sm:items-center'>
                             <Image
-                                className='max-h-[33.1rem]'
+                                className='max-h-[33.1rem]  w-full 2xl:max-w-[34.4rem]'
                                 layout="responsive"
                                 width={510}
                                 height={424}
                                 src={image3}
-                                alt="mobilephone"
+                                alt="number3"
                             />
                         </div>
 
@@ -142,14 +142,14 @@ const HowItWorksSection: React.FC<HowItWorksSectionTemplateProps> = ({
                             </div>
 
                         </div>
-                        <div className='rightside w-1/2 h-auto  hidden sm:block'>
+                        <div className='rightside w-1/2 h-auto hidden sm:flex sm:justify-start sm:items-center'>
                             <Image
-                                className='max-h-[33.1rem]'
+                                className='max-h-[33.1rem]  w-full 2xl:max-w-[34.4rem]'
                                 layout="responsive"
                                 width={510}
                                 height={424}
                                 src={image4}
-                                alt="mobilephone"
+                                alt="number4"
                             />
 
                         </div>
