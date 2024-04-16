@@ -2,7 +2,7 @@ import HelpCard from "./helpCard";
 
 export default function () {
   return (
-    <div className="relative flex w-[95%] lg:w-[90%] flex-wrap justify-center lg:justify-between">
+    <div className="relative flex w-[95%] lg:w-[90%] flex-wrap justify-center lg:justify-between max-w-[1258px]">
       <div className="w-[70%] mt-6 md:mt-12 md:mb-2 mb-20 text-center md:text-left md:w-[90%]">
         <h1 className="text-[Poppins] text-[32px] md:text-[24px] leading-[29px] tracking-[0em] left-0 font-semibold mt-5">Help Center</h1>
         <p className="h-[22px] text-[Poppins] text-[19px] md:text-[16px] leading-[22px] tracking-[0em] left-0 text-[#9C9C9C] mt-6">At Carelyo, we are committed to providing you with the guidance and technical support you need.</p>

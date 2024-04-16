@@ -17,7 +17,6 @@ const config: Config = {
         greenBackgroundFrom: '#45AC60',
         greenBackgroundTo: '#7EDC97',
         greenBackgroundObjects: '#45AC6040',
-
         sage: '#45AC60',
         sageLight: '#7EDC97',
         sageDark: '#2B9B5B',
@@ -31,6 +30,9 @@ const config: Config = {
         stone: '#8E8E8F',
         cadetGray: '#9ca2ad',
         richBlack: '#161c28',
+      },
+      root: {
+        sage: '#45AC60',
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'], //Tailwind default font:  font-poppins
