@@ -16,43 +16,46 @@ import { Providers } from './_providers'
 import { HeaderNav } from './_components/Header/Nav'
 import { Footer } from './_components/Footer'
 import SuperChargeMobile from './(pages)/providers/Components/superCharge/SuperChargeMobile'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter'
+  variable: '--font-inter',
 })
 
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins'
+  variable: '--font-poppins',
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
-      <body>
-        <Providers>
-          <TopBlackNavbar />
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+      <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+        <body>
+          <Providers>
+            <TopBlackNavbar />
+ 
+            <main className="min-h-screen main">{children}</main>
 
-          <main className="min-h-screen main">{children}</main>
+            <div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div>
 
-          <div className="supercharge hidden lg:flex justify-center">
-            <SuperCharge />
-          </div>
-          <div className="superChargeMobile lg:hidden">
-            <SuperChargeMobile />
-          </div>
-
-          <div className="">
-            <Footer />
-          </div>
-          <div className="">{/*<FooterMobile/>*/}</div>
-        </Providers>
-      </body>
-    </html>
+            <div className="">
+              <Footer />
+            </div>
+            <div className="">{/*<FooterMobile/>*/}</div>
+          </Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
 

@@ -92,26 +92,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## Typeform
-
-To find and edit the Typeform page in your code, follow these steps:
-
-Open the file /C:/Users/GTSA - Infinity/Documents/Projekt/Portfolio/providerpage/src/app/page.tsx in your code editor.
-
-Locate the line where the Typeform ID is defined:
-
-The Typeform ID is set to 'JlurNqyg' in this example. You can replace this ID with your own Typeform ID. To do this, go to the Typeform website (https://www.typeform.com/) and log in to your account.
-
-Once logged in, select the Typeform you want to use or create a new one.
-
-In the Typeform editor, click on the "Share" tab.
-
-Under the "Share your typeform" section, you will find the Typeform ID. It is a combination of letters and numbers.
-
-Copy the Typeform ID.
-
-Go back to your code editor and replace 'JlurNqyg' with the copied Typeform ID:
-
-Save the file.
-
-Now, when you run your application, the Typeform with the specified ID will be displayed on the page. Any changes you make to the Typeform on the Typeform website will be reflected in your application.

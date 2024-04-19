@@ -20,6 +20,7 @@
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.12",
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
