@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import style from './findfacilities.module.css';
-import { Searchicon, SearchiconLarge, LocationIcon } from '../components/svgComponent';
+import { SearchiconLarge, LocationIcon } from '../components/svgComponent';
+import ButtonSearch from '../../providers/Components/buttonSearch';
 
 interface FindFacilitiesForHealthcareProps {
   title?: string;
@@ -31,7 +32,7 @@ const FindFacilitiesForHealthcare: React.FC<FindFacilitiesForHealthcareProps> = 
                   <LocationIcon
                     width="14"
                     height="20"
-                    className="fill-current text-black"
+                    color="black"
                   />
                 </div>
                 <div className="hidden sm:block"> {/* Hides text for smaller screens */}
@@ -52,7 +53,8 @@ const FindFacilitiesForHealthcare: React.FC<FindFacilitiesForHealthcareProps> = 
                 <SearchiconLarge
                   width="21"
                   height="22"
-                  className="fill-current text-black opacity-50"
+                  color="black"
+                  className="opacity-50"
                 />
               </div>
               {/* Input field */}
@@ -68,24 +70,7 @@ const FindFacilitiesForHealthcare: React.FC<FindFacilitiesForHealthcareProps> = 
               />
             </div>
             {/* Search Button */}
-            <button className={`${style.searchbarButton} bg-sage text-white
-            transition-colors duration-300 hover:bg-[rgba(59,199,86,1)] flex
-            justify-center items-center rounded-[25px] ml-4 px-8 py-1
-            shadow-[0_20px_50px_-12px_rgba(34,125,44,0.3)]`}>
-
-              <div className="w-[40px] h-[40px] rounded-full
-              flex justify-center items-center bg-white bg-opacity-[25%] shrink-0">
-                <Searchicon
-                  width="14"
-                  height="14"
-                  className="fill-current text-white"
-                />
-              </div>
-              <div className="flex items-center justify-center
-              w-full mx-2 font-semibold">
-                Search
-              </div>
-            </button>
+            <ButtonSearch moduleCss={style.searchbarButton} />
 
           </div>
         </div>

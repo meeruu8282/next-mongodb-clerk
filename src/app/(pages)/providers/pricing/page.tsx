@@ -25,7 +25,7 @@ export default function Pricing() {
   */
 
   const handleCreateCheckoutSession = (productId: string) => {
-    alert(productId) //placeholder function
+    console.log(productId) //placeholder function
   }
 
   return (
