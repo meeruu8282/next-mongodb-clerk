@@ -1,22 +1,25 @@
 'use client'
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import { SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs'
 
 const TopBlackNavbar = () => {
-
   //Read current url pathname
   const currentPath = usePathname()
+  const { user } = useUser() // Using useUser hook to get the user object
 
-  const isCurrentPath = (pathName) => {
-    return currentPath.startsWith(`/${pathName}`);
+  const isCurrentPath = pathName => {
+    return currentPath.startsWith(`/${pathName}`)
   }
 
   return (
     <div className="z-auto">
-      <div className="w-full mb-4 hidden bg-richBlack md:flex">
+      <div className="w-full justify-between mb-4 hidden bg-richBlack md:flex">
         <div className="flex text-white justify-end ml-[8vw]">
-          <div className="mt-6 mb-2 flex space-x-10 text-[13px]
-            font-inter leading-5">
+          <div
+            className="mt-6 mb-2 flex space-x-10 text-[13px] 
+            font-inter leading-5"
+          >
             {/* FOR PATIENTS */}
             <div>
               <Link href="/patients/howitworks">
@@ -24,10 +27,10 @@ const TopBlackNavbar = () => {
                   FOR PATIENTS
                 </h1>
                 <div className="flex justify-center">
-                  <div className={`w-[94%] h-[0.32rem] mt-1
-                    ${isCurrentPath('patients') &&
-                    'bg-white rounded-tr-[24px] rounded-tl-[24px]' }`}>
-                  </div>
+                  <div
+                    className={`w-[94%] h-[0.32rem] mt-1
+                    ${isCurrentPath('patients') && 'bg-white rounded-tr-[24px] rounded-tl-[24px]'}`}
+                  ></div>
                 </div>
               </Link>
             </div>
@@ -38,10 +41,12 @@ const TopBlackNavbar = () => {
                   FOR PROVIDERS
                 </h1>
                 <div className="flex justify-center">
-                  <div className={`w-[94%] h-[0.32rem] mt-1
-                    ${isCurrentPath('providers') &&
-                    'bg-white rounded-tr-[24px] rounded-tl-[24px]' }`}>
-                  </div>
+                  <div
+                    className={`w-[94%] h-[0.32rem] mt-1
+                    ${
+                      isCurrentPath('providers') && 'bg-white rounded-tr-[24px] rounded-tl-[24px]'
+                    }`}
+                  ></div>
                 </div>
               </Link>
             </div>
@@ -52,26 +57,54 @@ const TopBlackNavbar = () => {
                   FOR PARTNERS
                 </h1>
                 <div className="flex justify-center">
-                  <div className={`w-[94%] h-[0.32rem] mt-1
-                    ${isCurrentPath('partners') &&
-                    'bg-white rounded-tr-[24px] rounded-tl-[24px]' }`}>
-                  </div>
+                  <div
+                    className={`w-[94%] h-[0.32rem] mt-1
+                    ${isCurrentPath('partners') && 'bg-white rounded-tr-[24px] rounded-tl-[24px]'}`}
+                  ></div>
                 </div>
               </Link>
             </div>
             {/* FOR SHOP */}
             <div>
               {/* To Do: a correct pathname and a link*/}
-              <h1 className={isCurrentPath('shop') ? 'font-semibold' : 'font-normal'}>
-                FOR SHOP
-              </h1>
+              <h1 className={isCurrentPath('shop') ? 'font-semibold' : 'font-normal'}>FOR SHOP</h1>
               <div className="flex justify-center">
-                <div className={`w-[94%] h-[0.32rem] mt-1
-                  ${isCurrentPath('shop') &&
-                  'bg-white rounded-tr-[24px] rounded-tl-[24px]' }`}>
-                </div>
+                <div
+                  className={`w-[94%] h-[0.32rem] mt-1
+                  ${isCurrentPath('shop') && 'bg-white rounded-tr-[24px] rounded-tl-[24px]'}`}
+                ></div>
               </div>
             </div>
+            {/* Other menu items */}
+            {/* ... */}
+            {/* Authentication links */}
+          </div>
+        </div>
+        <div className=" flex">
+          <div className="flex h-auto items-center text-white ">
+            {!user && (
+              <>
+               <Link href={'/sign-in'} className=" text-gray-300 hover:text-white mr-4">
+              Sign In
+            </Link>
+            <Link href={'/sign-up'} className=" text-gray-300 hover:text-white mr-4">
+              Sign Up
+            </Link>
+              </>
+            )}
+           
+          </div>
+          {/* Profile and user button */}
+          <div className="flex items-center ml-4 mr-5">
+            {user && (
+              <> 
+                <Link href="/profile" className=" text-gray-300 hover:text-white mr-4">
+              Profile
+            </Link>
+            <UserButton afterSignOutUrl="/" />
+              </>
+            )}
+         
           </div>
         </div>
       </div>
@@ -79,4 +112,4 @@ const TopBlackNavbar = () => {
   )
 }
 
-export default TopBlackNavbar;
+export default TopBlackNavbar
