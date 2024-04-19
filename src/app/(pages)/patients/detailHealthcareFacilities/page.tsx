@@ -19,9 +19,9 @@ const DetailHealthcareFacilities = () => {
         header4={"Laser Treatments"}
         paragraph4={"Advanced laser for skin rejuvenation, hair removal, scar reduction, and pigmentation correction."} 
         subtext={"Our service"} 
-        >
+       />
 
-  </OurService>
+
 
        
     </div>
