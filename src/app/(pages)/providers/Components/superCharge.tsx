@@ -1,48 +1,40 @@
 import React from "react";
 import Image from "next/image";
-import CarelyoButton from "../Components/getStartedButton";
-import EllipseBackground from "../Components/ellipseBackground";
+import CarelyoButton from "./getStartedButton";
+import EllipseBackground from "./ellipseBackground";
+import { BgLeftRectandTriangle, BgRightRectandTriangle } from "./greenBackgroundShapes";
 import Link from "next/link";
 
 const SuperCharge: React.FC = () => {
   return (
-    <div className=" relative w-[1258px] h-[446px] top-[top: 2652px] mt-[100px]">
+    <div className="relative w-[1258px] h-[446px] mt-[100px]">
       {/* Green background container */}
-      <div className="greenBackground w-[1258px] h-[373px] rounded-[40px] ">
-        <div className=" absolute top-[35px] left-[271px]">
-          {/* background with about 50 circles */}
+      <div className="greenBackground w-full h-[373px] rounded-[40px]">
+
+        {/* background with about 50 circles */}
+        <div className="absolute top-[35px] left-[271px]">
           <EllipseBackground />
         </div>
-        {/* Green background rectangle */}
-        <div
-          className=" absolute w-[415px] h-[373px] top-0 right-0 rounded-tr-[40px] rounded-br-[40px] bg-sage opacity-5"
-          style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 50%, 100% 0%)" }}
-        >
-          {/* Corner triangle */}
+        {/* Background: Right - green rectangle and triangle */}
+        <div className="absolute w-fit h-full flex items-end top-0 right-0 rounded-tr-[40px] rounded-br-[40px] overflow-hidden">
+					<BgRightRectandTriangle />
+				</div>
+        {/* Background: Left - green rectangle and triangle */}
+        <div className="absolute w-fit h-full bottom-0 left-0 rounded-bl-[40px] rounded-tl-[40px] overflow-hidden">
+					<BgLeftRectandTriangle />
+				</div>
+
+        {/* Background: -green circle */}
+        <div className="absolute w-full h-full right-[6%] top-[178px] flex justify-end">
+          <div className="w-[487px] h-[487px]">
+            <div
+              className="greenCircle"
+              style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
+            ></div>
+          </div>
         </div>
-        <div
-          className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] top-0 right-0  rounded-tr-[40px]"
-          style={{ clipPath: "polygon(0% 0%, 100% 100%, 100% 0%, 0% 0%)" }}
-        ></div>
-        {/* Green background rectangle */}
-        <div
-          className=" absolute w-[415px] h-[373px] top-0 left-0 rounded-bl-[40px] rounded-tl-[40px] bg-sage opacity-5"
-          style={{ clipPath: "polygon(0% 50%, 100% 100%, 0% 100%, 0% 0%)" }}
-        >
-          {/* Corner triangle */}
-        </div>
-        <div
-          className="greenBackgroundTriangle absolute w-[197px] h-[189.5px] bottom-0 left-0 c  rounded-bl-[40px]"
-          style={{ clipPath: "polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%)" }}
-        ></div>
-        {/* Circle div overlapping the container */}
-        <div className="greenCircleContainer left-[950px] top-[178px]">
-          <div
-            className="greenCircle"
-            style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 40%, 0% 40%)" }}
-          ></div>
-        </div>
-        <div className=" absolute w-[401px] h-[446px] bottom-0  left-[150px] ">
+
+        <div className="absolute w-[401px] h-[446px] bottom-[-1px] left-[150px]">
           <Image
             className="absolute"
             layout="fixed "
@@ -73,11 +65,11 @@ const SuperCharge: React.FC = () => {
             <div className=" rounded-full absolute w-3 h-3 top-0 right-0 border border-solid bg-sageDark"></div>
           </div>
 
-          <div className=" absolute w-[125px] h-[49px] top-[25px] left-[80px] gap-[4px] ">
-            <h2 className="  w-[140px] h-[24px] font-poppins text-base font-semibold leading-6 tracking-wide text-left ">
+          <div className="absolute top-[25px] left-[80px] gap-[4px]">
+            <h2 className="text-base font-semibold leading-6 tracking-wide text-left ">
               24/7 Assistance
             </h2>
-            <p className="w-[150px] h-21 opacity-50 font-poppins text-base font-normal leading-5 tracking-wide text-left">
+            <p className="opacity-50 text-base font-normal leading-5 tracking-wide text-left">
               Ready to Assist!
             </p>
           </div>
@@ -101,7 +93,7 @@ const SuperCharge: React.FC = () => {
         <div className=" absolute w-[593px] h-[270px] top-[51px] left-[576px] gap-[36px] ">
           <div className=" relative w-[593px] h-[162px] gap-[12px] ">
             <div className="w-[593px] h-[120px]">
-              <h1 className="  text-[poppins] text-[40px] font-semibold leading-15 tracking-normal  text-left text-white">
+              <h1 className="text-[40px] font-semibold leading-15 tracking-normal  text-left text-white">
                 Supercharge Productivity with Carelyo!
               </h1>
             </div>

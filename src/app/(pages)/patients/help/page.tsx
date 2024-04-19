@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import NavbarMobile from '../components/navbar/NavbarMobile'
-import BlurBackGroundDesign from '../../providers/Components/blurBackGroundDesign'
+import BlurBackGroundDesign from '../../providers/Components/blurBackgrounddesign/blurBackGroundDesign'
 import SearchBar from '../../providers/Components/searchBar'
 import HelpCenter from '../../providers/Components/helpCenter'
 import ContactComponent from '../../providers/Components/contactComponent'
@@ -22,7 +22,7 @@ const patientsHelp = () => {
       {/* Navbar end */}
 
       <div className="flex flex-col items-center mt-16 min-h-screen">
-      {/* <BlurBackGroundDesign /> */}
+      <BlurBackGroundDesign />
         <SearchBar
           title={"Welcome to the Carelyo Help Center!"}
           />

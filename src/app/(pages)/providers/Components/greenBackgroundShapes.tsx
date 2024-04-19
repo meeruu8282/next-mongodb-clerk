@@ -2,26 +2,40 @@ import React from 'react'
 
 interface backgroundRectProps {
   color?: string;
+  opacityRectangle?: number;
+  opacityTriangle?: number;
 }
 
-export const BgLeftRectandTriangle: React.FC<backgroundRectProps> = ({ color = "sage" }) => {
+export const BgRightRectandTriangle: React.FC<backgroundRectProps> = ({
+  color = "sage",
+  opacityRectangle = 0.05,
+  opacityTriangle = 0.13
+}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1192 267" fill="none">
-      <path d="M843 0H1060.3L1258 189.284V373L843 0Z"
-      className={`fill-current text-${color} opacity-[0.05]`} />
-      <path d="M1061 0H1258V189.5L1061 0Z"
-      className={`fill-current text-${color} opacity-[0.13]`} />
+    <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" fill="none"
+    viewBox="0 0 425 382">
+      <path className={`fill-current text-${color} opacity-[${opacityRectangle}]`}
+      d="M0 0h222.545l202.469 193.85V382L0 0Z"/>
+      <path className={`fill-current text-${color} opacity-[${opacityTriangle}]`}
+      d="M425.431 0H222.545l202.469 193.85c.417-82.868.417-193.85.417-193.85Z"/>
     </svg>
   )
 }
 
-export const BgRightRectandTriangle: React.FC<backgroundRectProps> = ({ color = "sage" }) => {
+export const BgLeftRectandTriangle: React.FC<backgroundRectProps> = ({
+  color = "sage",
+  opacityRectangle = 0.05,
+  opacityTriangle = 0.15
+}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 1192 267" fill="none">
-      <path d="M415 373H197.699L-3.05176e-05 183.716V0L415 373Z"
-      className={`fill-current text-${color} opacity-[0.05]`} />
-      <path d="M197 373H0V183.5L197 373Z"
-      className={`fill-current text-${color} opacity-[0.15]`} />
+    <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" fill="none"
+    viewBox="0 0 425 382">
+      <g transform="rotate(180 212.5 191)">
+        <path className={`fill-current text-${color} opacity-[${opacityRectangle}]`}
+        d="M0 0h222.545l202.469 193.85V382L0 0Z"/>
+        <path className={`fill-current text-${color} opacity-[${opacityTriangle}]`}
+        d="M425.431 0H222.545l202.469 193.85c.417-82.868.417-193.85.417-193.85Z"/>
+      </g>
     </svg>
   )
 }

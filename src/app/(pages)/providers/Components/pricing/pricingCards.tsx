@@ -76,10 +76,12 @@ const PricingCards: React.FC<CardsProps> = ({
 
         {combinedData.map((data) => (
           <div className={`${style.priceCard} min-w-[17.5rem] max-w-[29rem]
-          h-auto py-5 px-7 border-[3px] rounded-[25px] border-sage
+          h-auto py-5 px-7 border-[3px] rounded-[25px] border-sage cursor-pointer
           ${
             selectedCard === data.cardId ? "bg-sage" : ""
-          }`} key={data.cardId}>
+          }`}
+          key={data.cardId}
+          onClick={() => handleBoxClick(data.cardId)}>
           <div className="h-full flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-center">
@@ -91,13 +93,12 @@ const PricingCards: React.FC<CardsProps> = ({
                 </div>
                 <div
                   className={`bg-white h-8 w-8 border-2 mt-1 border-sage
-                  rounded-[10px] flex justify-center items-center cursor-pointer
+                  rounded-[10px] flex justify-center items-center
                   ${
                     selectedCard === data.cardId
                     ? "border-white"
                     : "hover:border-greenHover"
                   }`}
-                  onClick={() => handleBoxClick(data.cardId)}
                 >
                   {selectedCard === data.cardId ? (
                     <div className="checked">
@@ -193,7 +194,7 @@ const PricingCards: React.FC<CardsProps> = ({
               setModalOpen(false);
             }}
          />
-       
+
         </div>
       </div>
     </>

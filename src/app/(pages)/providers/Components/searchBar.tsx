@@ -19,17 +19,17 @@ const SearchBar: React.FC<SearchbarTemplateProps> = ({
 				{/* Background: grid 8x8 circles */}
 				<EllipseBackground className="absolute bottom-[-2px] left-[315px]" />
 
-				<div className="absolute w-fit h-full top-0 right-0">
-					{/* Background: Left - green rectangle and triangle */}
-					<BgLeftRectandTriangle />
-				</div>
-				<div className="absolute w-fit h-full bottom-0 left-0 hidden md:block">
+				<div className="absolute w-fit h-full flex items-end top-0 right-0">
 					{/* Background: Right - green rectangle and triangle */}
 					<BgRightRectandTriangle />
 				</div>
+				<div className="absolute w-fit h-full bottom-0 left-0 hidden md:block">
+					{/* Background: Left - green rectangle and triangle */}
+					<BgLeftRectandTriangle />
+				</div>
 
 				<div className="absolute w-full left-[60%] top-[182px]">
-					{/* Background: green circle */}
+					{/* Background: -green circle */}
 					<div className="greenCircle w-[487px] h-[487px]"></div>
 				</div>
 
