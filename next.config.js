@@ -24,7 +24,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy-Report-Only',
-            value: `${ContentSecurityPolicy} frame-src 'self' https://mytgxszc8xw.typeform.com`,
+            value: `${ContentSecurityPolicy} frame-src 'self'`,
           },
         ],
       })
@@ -33,7 +33,7 @@ const nextConfig = {
     // Set the `Content-Security-Policy` header as a security measure to prevent XSS attacks
     // It works by explicitly whitelisting trusted sources of content for your website
     // This will block all inline scripts and styles except for those that are allowed
-    /*    headers.push({
+    headers.push({
       source: '/(.*)',
       headers: [
         {
@@ -41,7 +41,7 @@ const nextConfig = {
           value: ContentSecurityPolicy,
         },
       ],
-    }) */
+    })
 
     // *** IMPORTANT ***
     // Disabled CSP for now, as it was blocking the Trueform scripts.
