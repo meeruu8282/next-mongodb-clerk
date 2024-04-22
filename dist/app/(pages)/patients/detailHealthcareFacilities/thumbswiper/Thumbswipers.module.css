@@ -1,0 +1,17 @@
+/* Thumbswipers.module.css */
+
+/* Anpassa stil för navigeringsknappar */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #45AC60; /* Bakgrundsfärg */
+  color: white; /* Textfärg */
+  border-radius: 50%; /* Rundade hörn */
+  width: 40px; /* Bredd */
+  height: 40px; /* Höjd */
+  font-size: 24px; /* Textstorlek */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #2E7D32; /* Ny bakgrundsfärg vid hover */
+}
