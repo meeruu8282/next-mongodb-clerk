@@ -82,7 +82,7 @@ const TopBlackNavbar = () => {
         </div>
         <div className=" flex">
           <div className="flex h-auto items-center text-white ">
-            {!user && (
+            {!user?.id && (
               <>
                <Link href={'/sign-in'} className=" text-gray-300 hover:text-white mr-4">
               Sign In
@@ -96,7 +96,7 @@ const TopBlackNavbar = () => {
           </div>
           {/* Profile and user button */}
           <div className="flex items-center ml-4 mr-5">
-            {user && (
+            {user?.id && (
               <> 
                 <Link href="/profile" className=" text-gray-300 hover:text-white mr-4">
               Profile
