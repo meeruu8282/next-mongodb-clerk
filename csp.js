@@ -7,7 +7,7 @@ const policies = {
   'img-src': ["'self'", 'https://raw.githubusercontent.com', 'https://img.clerk.com'],
   'font-src': ["'self'"],
   'frame-src': ["'self'", 'https://present-fawn-5.clerk.accounts.dev'],
-  'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev']
+  'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com']
 };
 
 module.exports = Object.entries(policies)
