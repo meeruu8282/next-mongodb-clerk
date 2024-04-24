@@ -5,7 +5,7 @@ const policies = {
   'child-src': ["'self'", 'https://vercel.live'],
   'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com', 'https://vercel.live', 'https://vercel.com'],
   'img-src': ["'self'", 'https://raw.githubusercontent.com', 'https://img.clerk.com', 'https://vercel.com'],
-  'font-src': ["'self'"],
+  'font-src': ["'self'", 'https://vercel.live'], 
   'frame-src': ["'self'", 'https://present-fawn-5.clerk.accounts.dev', 'https://vercel.live'],
   'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com', 'https://vercel.live', 'https://sockjs-us3.pusher.com', 'https://vercel.com'],
 };
@@ -17,4 +17,4 @@ module.exports = Object.entries(policies)
     }
     return '';
   })
-  .join(';');
+  .join('; ');
