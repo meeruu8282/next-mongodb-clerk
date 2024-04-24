@@ -1,6 +1,6 @@
 const policies = {
   'default-src': ["'self'"],
-  'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev'],
+  'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://vercel.live'],
   'worker-src': ["'self'", 'blob:'],
   'child-src': ["'self'"],
   'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
@@ -17,4 +17,5 @@ module.exports = Object.entries(policies)
     }
     return '';
   })
-  .join('; ');
+  .join(';');
+
