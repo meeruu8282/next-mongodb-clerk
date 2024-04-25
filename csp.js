@@ -9,10 +9,7 @@ const policies = {
   'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com', 'https://vercel.live', 'https://sockjs-us3.pusher.com', 'https://vercel.com'],
 };
 
-// Filter out 'frame-src' if it's present
-delete policies['frame-src'];
-
-export default Object.entries(policies)
+module.exports = Object.entries(policies)
   .map(([key, value]) => {
     if (Array.isArray(value)) {
       return `${key} ${value.join(' ')}`;
