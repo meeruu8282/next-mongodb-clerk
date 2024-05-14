@@ -238,7 +238,7 @@ var seed = function (payload) { return __awaiter(void 0, void 0, void 0, functio
                         collection: 'posts',
                         data: JSON.parse(JSON.stringify(__assign(__assign({}, post_1_1.post1), { categories: [technologyCategory.id] }))
                             .replace(/{{IMAGE}}/g, image1Doc.id)
-                            .replace(/{{AUTHOR}}/g, demoAuthorID)),
+                            .replace(/{{OR}}/g, demoAuthorID)),
                     })];
             case 15:
                 post1Doc = _u.sent();

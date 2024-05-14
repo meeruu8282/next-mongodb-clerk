@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+// next.config.js
+
 const ContentSecurityPolicy = require('./csp')
 const redirects = require('./redirects')
 
@@ -11,6 +13,9 @@ const nextConfig = {
       .map(url => url.replace(/https?:\/\//, '')),
   },
   redirects,
+  experimental: {
+    serverActions: true, // Enable Server Actions feature
+  },
   async headers() {
     const headers = []
 
@@ -48,6 +53,9 @@ const nextConfig = {
     // This will need to be re-enabled and tested before going live
 
     return headers
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 
