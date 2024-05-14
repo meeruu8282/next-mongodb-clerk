@@ -57,14 +57,14 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
     return (
         <>
 
-            <div className="flex flex-col w-[100%] justify-center bg-cover bg-center items-center text-white gap-7 h-full" style={{ backgroundImage: 'url("/Frame1000006593.jpg")'}}>
+            <div className="flex flex-col w-[100%] justify-center bg-cover bg-center items-center text-white gap-7 h-full" style={{ backgroundImage: 'url("/Frame1000006593.jpg")', height: '900px'}}>
                 {/* Header */}
                 <div className={`flex w-[90%] flex-row justify-between items-center font-normal mt-3 ${style.madeItToCol540}`}>
                     <div className="flex justify-start items-center w-full">
                         <h1 className="text-[Poppins] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl ">{heading1} <span className="block font-bold">{heading1Bold}</span></h1>
                     </div>
                     <div className="flex justify-end items-center ">
-                        <h2 className={`text-[Poppins] text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl w-[90%] ${style.madeIt100Width540}`}> {heading2} </h2>
+                        <h2 className={`text-[Poppins] text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl w-[100%] ${style.madeIt100Width540}`}> {heading2} </h2>
                     </div>
                 </div>
                 {/* Section */}
@@ -99,7 +99,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                                     <CarelyoButton
                                         buttonText={`${buttonText1}`}
                                         color="third"
-                                        buttonSize="gCb"
+                                        // buttonSize="gCb"
                                         size="small" />
                                 </div>
                             </div>
@@ -152,7 +152,7 @@ const HowItWorksGreenbackground: React.FC<HowItsWorksGreenbackgroundTemplateProp
                                     <CarelyoButton
                                         buttonText={`${buttonText2}`}
                                         color="third"
-                                        buttonSize="gCb"
+                                        // buttonSize="gCb"
                                         size="small" />
                                 </div>
                             </div>

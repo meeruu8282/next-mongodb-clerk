@@ -70,7 +70,7 @@ const CarleyoProvides: React.FC<CarleyoProvidesTemplateProps> = ({
               <Link href="/providers/auth/signIn" passHref>
                 <div className=" rounded-[25px] max-w-[301px] w-full mr-[5px] h-[72px] bottom-0  bg-gradient-to-br from-[rgba(255, 255, 255)] via-[rgba(255, 255, 255)] to-[rgba(255, 255, 255)]  ">
                   <CarelyoButton
-                    className="  w-full h-[72px]  rounded-[25px]  border bg-opacity-25 bg-white gap-[12px] font-semibold "
+                    className="  w-full h-[72px]  rounded-[25px]  border bg-opacity-25 bg-white gap-[12px] font-semibold whitespace-nowrap"
                     buttonText={`${addtext}`}
                   />
                 </div>

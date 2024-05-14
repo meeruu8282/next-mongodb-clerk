@@ -35,7 +35,7 @@ const Navbar= () => {
   }, [])
 
   return (
-    <div className="w-full h-[68.69px] flex flex-col md:flex-row justify-between items-center px-[120px]">
+<div className="w-full h-[68.69px] flex flex-col md:flex-row justify-between items-center px-[120px] ">
       <div className="flex items-center">
         <Link href="/">
           <Image src="/Mask group.png" alt="Mask Image" width={114} height={68.69} />

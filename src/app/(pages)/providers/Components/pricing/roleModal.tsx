@@ -33,6 +33,7 @@ const RoleModal: React.FC<ModalProps> = ({
   const handleConfirm = () => {
     handleRoleChange(selectedRole);
     onClose();
+    window.location.href = '/sign-in';
   };
 
     const handleClosebutton = () => {

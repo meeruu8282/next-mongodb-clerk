@@ -3,6 +3,7 @@ import UseCarelyoRightNow from '../components/UseCarelyoRightNow'
 import WhyJoinCarelyo from '../components/WhyJoinCarelyo'
 import Navbar from '../components/navbar/Navbar'
 import NavbarMobile from '../components/navbar/NavbarMobile'
+import BlurBackGroundDesign from '../../providers/Components/blurBackgrounddesign/blurBackGroundDesign'
 
 const page = () => {
   return (
@@ -16,6 +17,8 @@ const page = () => {
         </div>
       </div>
       <div className="w-4/5 mx-auto flex flex-col gap-32">
+      <BlurBackGroundDesign />
+
         <DeliveringBetterHealthcareSolution />
         <UseCarelyoRightNow />
         <WhyJoinCarelyo />

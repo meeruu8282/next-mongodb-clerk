@@ -48,7 +48,7 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                 </div>
 
                 <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <p className={`text-sm sm:text-base md:text-base lg:text-base xl:text-base w-[70%] ${style.make100Width1240} font-normal text-[Poppins]`}>
+                    <p className={`text-sm sm:text-base md:text-base lg:text-base xl:text-base w-[90%] ${style.make100Width1240} font-normal text-[Poppins]`}>
                         {text2}
                     </p>
                 </div>

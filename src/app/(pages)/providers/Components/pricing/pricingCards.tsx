@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -9,7 +9,7 @@ import RoleModal from "./roleModal";
 import StyledBox from "../styleBox";
 import style from "../../pricing/pricing.module.css"
 
-//Import data
+// Import data
 import { cardDescription } from '../../pricing/data';
 
 interface Product {
@@ -31,30 +31,19 @@ const PricingCards: React.FC<CardsProps> = ({
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
 
-  //Updates the select card state when selecting role in pop-up modal
+  // Updates the selected card state when selecting role in pop-up modal
   const handleSelectedRoleChange = (selectedRole: string) => {
     const index = combinedData.findIndex((data) => data.title === selectedRole);
     setSelectedCard(index);
   };
 
-  //Removes body scrollbar when pop-up modal is opened
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, [isModalOpen]);
-
-  //Handler when clicking on a card's checkbox
+  // Handler when clicking on a card's checkbox
   const handleBoxClick = (cardIndex: number) => {
-    setSelectedCard(selectedCard === cardIndex ? null : cardIndex);
+    // Toggle the selection of the card
+    setSelectedCard((prevSelectedCard) => prevSelectedCard === cardIndex ? null : cardIndex);
   };
 
-  //Combines arrays with matching "title" value
+  // Combines arrays with matching "title" value
   const combinedData = products.map((product) => {
     const cardDesc = cardDescription.find(
       (desc) => desc.title === product.title
@@ -67,6 +56,17 @@ const PricingCards: React.FC<CardsProps> = ({
       cardId: cardDesc.cardId
     };
   });
+
+  // Handler for the "Get Started" button
+  const handleGetStarted = (data: Product) => {
+    // If a card is selected, navigate to the sign-in page
+    if (selectedCard !== null) {
+      window.location.href = '/sign-in';
+    } else {
+      // If no card is selected, open the modal and then navigate to the sign-in page
+      setModalOpen(true);
+    }
+  };
 
   return (
     <>
@@ -172,28 +172,20 @@ const PricingCards: React.FC<CardsProps> = ({
                         : ""
                     }
                   `}
-                  onClick={() => {
-                    if (selectedCard === null) {
-                      //Opens pop-up if no card is selected
-                      setModalOpen(true);
-                    } else {
-                      //sends the selected card's productId to pricing "page"
-                      onClickGetStarted(data?.productId)
-                    }
-                  }}
+                  onClick={() => handleGetStarted(data)}
                   />
                 </div>
               </div>
             </div>
           ))}
 
-          <RoleModal
-            handleRoleChange={handleSelectedRoleChange}
-            isOpen={isModalOpen}
-            onClose={() => {
-              setModalOpen(false);
-            }}
-         />
+<RoleModal
+  handleRoleChange={handleSelectedRoleChange}
+  isOpen={isModalOpen}
+  onClose={() => {
+    setModalOpen(false);
+  }}
+/>
 
         </div>
       </div>

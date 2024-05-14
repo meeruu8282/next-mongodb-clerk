@@ -47,8 +47,8 @@ const HowItWorksPartOne: React.FC<HowItsWorkPartOneTemplateProps> = ({
 
             <div className="flex w-[100%] flex-col justify-center items-center font-normal  bg-gradient-to-br from-sage to-sageLight rounded-3xl text-[Poppins]">
                 <div className="flex flex-col justify-center items-start w-[100%] p-5 gap-2">
-                    <p className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl"> {text1}</p>
-                    <p className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl"> {text2}</p>
+                    <li className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl"> {text1}</li>
+                    <li className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl"> {text2}</li>
                 </div>
             </div>
 

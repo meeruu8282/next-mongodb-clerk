@@ -96,7 +96,7 @@ const Clinics = () => {
         infoParagraph3={'Compassionate environment for individuals seeking mental health services'}
       />
       {/*componentsfolder */}
-      <SuperCharge />
+      {/* <SuperCharge /> */}
     </div>
   )
 }

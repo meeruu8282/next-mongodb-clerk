@@ -162,7 +162,7 @@ export const seed = async (payload: Payload): Promise<void> => {
     data: JSON.parse(
       JSON.stringify({ ...post1, categories: [technologyCategory.id] })
         .replace(/{{IMAGE}}/g, image1Doc.id)
-        .replace(/{{AUTHOR}}/g, demoAuthorID),
+        .replace(/{{OR}}/g, demoAuthorID),
     ),
   })
 

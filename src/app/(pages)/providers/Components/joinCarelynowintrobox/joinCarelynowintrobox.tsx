@@ -51,7 +51,7 @@ const JoinCarelynowintrobox: React.FC<CardTemplateProps> = ({
                 />
               </div>
             </div>
-            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center justify-items-center">
+            <div className=" text-[Poppins] text-sm sm:text-sm md:text-base lg:text-base xl:text-lg w-full h-[1.4rem] justify-center justify-items-center whitespace-nowrap">
               {icon1text}
             </div>
           </div>

@@ -36,7 +36,7 @@ const HowItWorksPartTwo: React.FC<HowItsWorkPartTwoTemplateProps> = ({
 
             <div className="flex w-[100%] flex-col justify-center items-center font-normal  rounded-3xl text-[Poppins]">
                 <div className="flex flex-col justify-center items-start w-[100%] pt-5 pl-2">
-                    <li className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl"> {text1}</li>
+                    <li className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl whitespace-nowrap"> {text1}</li>
                     <li className="text-black font-normal text-[Poppins] text-sm sm:text-base md:text-base lg:text-base xl:text-xl 2xl:text-xl">{text2}</li>
                 </div>
             </div>

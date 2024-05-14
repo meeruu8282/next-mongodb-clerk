@@ -65,7 +65,7 @@ interface seamlessAppointmentManagementTamplateProps {
             <Link href="/providers/pricing" passHref>
             <CarelyoButton
              buttonText={textbutton}
-             className={` absolute bottom-0 w-[308px] left-[-1px] ${style.buttonsize} mb-1  h-[72px]  gap-[12px] text-[16px] font-semibold line-h-22.4  ${style.mobileImage}`}
+             className={` absolute bottom-0 w-[308px] left-[-1px] ${style.buttonsize} mb-1  h-[72px]  gap-[12px] text-[16px] font-semibold line-h-22.4 whitespace-nowrap ${style.mobileImage}`}
            />
          </Link>
          </div>
