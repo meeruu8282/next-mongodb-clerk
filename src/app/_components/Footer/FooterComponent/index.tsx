@@ -10,9 +10,10 @@ import { Footer, Media } from '../../../../payload/payload-types'
 import { Button } from '../../Button'
 
 const FooterComponent = ({ footer }: { footer: Footer }) => {
-  const navItems = footer?.navItems || []
-  const headernavItems = footer?.headernavItems || []
-  const socialmedianavitems = footer?.socialmedianavitems || []
+  const navItems = footer.navItems || []
+  const headernavItems = footer.headernavItems || []
+  const socialmedianavitems = footer.socialmedianavitems || []
+  console.log("Footer prop:", footer);
 
   {
     /* funktion to scroll to top of page */

@@ -7,7 +7,7 @@ const policies = {
   'img-src': ["'self'", 'https://raw.githubusercontent.com', 'https://img.clerk.com', 'https://vercel.com'],
   'font-src': ["'self'", 'https://vercel.live'], 
   'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com', 'https://vercel.live', 'https://sockjs-us3.pusher.com', 'https://vercel.com'],
-  'frame-src': ["'self'", 'https://vercel.com'] // Add frame-src directive
+
 };
 
 module.exports = Object.entries(policies)
