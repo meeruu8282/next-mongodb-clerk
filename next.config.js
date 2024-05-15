@@ -1,8 +1,5 @@
-/** @type {import('next').NextConfig} */
-// next.config.js
-
-const ContentSecurityPolicy = require('./csp')
-const redirects = require('./redirects')
+const ContentSecurityPolicy = require('./csp');
+const redirects = require('./redirects');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -17,7 +14,7 @@ const nextConfig = {
     serverActions: true, // Enable Server Actions feature
   },
   async headers() {
-    const headers = []
+    const headers = [];
 
     // Prevent search engines from indexing the site if it is not live
     // This is useful for staging environments before they are ready to go live
@@ -29,10 +26,10 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy-Report-Only',
-            value: `${ContentSecurityPolicy} frame-src 'self'`,
+            value: `${ContentSecurityPolicy}; frame-src 'self'`, // Separate frame-src directive
           },
         ],
-      })
+      });
     }
 
     // Set the `Content-Security-Policy` header as a security measure to prevent XSS attacks
@@ -46,17 +43,17 @@ const nextConfig = {
           value: ContentSecurityPolicy,
         },
       ],
-    })
+    });
 
     // *** IMPORTANT ***
     // Disabled CSP for now, as it was blocking the Trueform scripts.
     // This will need to be re-enabled and tested before going live
 
-    return headers
+    return headers;
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
