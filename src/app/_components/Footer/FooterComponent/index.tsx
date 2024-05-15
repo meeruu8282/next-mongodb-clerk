@@ -64,7 +64,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                 {inclusion.title === 'CONTACT INFORMATION' && (
                   <div>
                     <p className={classes.contact}>{footer?.email}</p>
-                    <p className={classes.contact}>{footer.phonenumber}</p>
+                    <p className={classes.contact}>{footer?.phonenumber}</p>
                   </div>
                 )}
 
@@ -119,7 +119,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         {/*black footer  */}
         <Gutter>
           <div className={classes.wrap}>
-            <p>{footer.copyright}</p>
+            <p>{footer?.copyright}</p>
 
             <div className={classes.socialLinks}>
               {/*maps all links in black footer lecal policy etc.. */}
