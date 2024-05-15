@@ -1,30 +1,24 @@
-import React from 'react';
-import FooterComponent from './FooterComponent';
-import { fetchFooter } from '../../_api/fetchGlobals';
-import type { Footer } from '../../../payload/payload-types';
+import React from 'react'
+import Link from 'next/link'
 
-interface FooterProps {
-  footer: Footer | null;
-}
+import type { Footer } from '../../../payload/payload-types'
+import { fetchFooter } from '../../_api/fetchGlobals'
+import FooterComponent from './FooterComponent'
 
-const FooterPage = ({ footer }: FooterProps) => {
-  return <FooterComponent footer={footer} />;
-};
 
-export async function getStaticProps() {
-  let footer: Footer | null = null;
+
+export async function Footer() {
+  let footer: Footer | null = null
 
   try {
-    footer = await fetchFooter();
+    footer = await fetchFooter()
   } catch (error) {
-    console.error('Failed to fetch footer data:', error);
   }
 
-  return {
-    props: {
-      footer,
-    },
-  };
+  return (
+  <>
+  <FooterComponent footer={footer} />
+  
+  </>
+  )
 }
-
-export default FooterPage;

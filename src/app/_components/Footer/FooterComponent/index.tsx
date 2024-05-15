@@ -63,7 +63,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
 
                 {inclusion.title === 'CONTACT INFORMATION' && (
                   <div>
-                    <p className={classes.contact}>{footer.email}</p>
+                    <p className={classes.contact}>{footer?.email}</p>
                     <p className={classes.contact}>{footer.phonenumber}</p>
                   </div>
                 )}
