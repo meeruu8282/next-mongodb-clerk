@@ -26,7 +26,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy-Report-Only',
-            value: `${ContentSecurityPolicy} frame-src 'self'`, // Separate frame-src directive
+            value: `${ContentSecurityPolicy}; frame-src 'self'`, // Separate frame-src directive
           },
         ],
       });
