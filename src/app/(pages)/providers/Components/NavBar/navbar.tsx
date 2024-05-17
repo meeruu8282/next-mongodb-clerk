@@ -90,7 +90,7 @@ export default function Navbar() {
             <Image src="/image 519.png" alt="flagg" width={28} height={28} />
           </div>
 
-          <div className=" items-center bg-white ">
+          <div className=" items-center">
             <div className="w-[21px] h-[22px] text-[16px] font-[Poppins] text-1xl  font-semibold">
               en
             </div>
