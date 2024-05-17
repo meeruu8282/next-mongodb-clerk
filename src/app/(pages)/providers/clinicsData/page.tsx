@@ -5,9 +5,10 @@ import NavbarMobile from '../Components/NavBar/NavbarMobile'
 import BlurBackGroundDesign from '../Components/blurBackGroundDesign'
 import SignUpProvisers from '../Components/startFillingYourData'
 import DoctorSignUp from '../auth/signUp/page'
+import ClinicSignUp from '../auth/clinicSignUp/page'
 
 
-export default function PersonalDetails() {
+export default function ClinicsDetails() {
   return (
     <>
       <div className="  max-h-32px top-25px left-144px ">
@@ -18,7 +19,7 @@ export default function PersonalDetails() {
           <NavbarMobile />
         </div>
       </div>
-     <DoctorSignUp></DoctorSignUp>
+     <ClinicSignUp></ClinicSignUp>
     </>
   )
 }

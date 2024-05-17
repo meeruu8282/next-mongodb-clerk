@@ -30,10 +30,10 @@ export default function Help() {
         link2={"hello@swedcon18.com"}
         link3={"+46701410631"}
       />
-      <div className="md:block hidden">
+       <div className="md:block hidden">
         <SuperCharge />
-      </div>
-      <div className="block md:hidden"><SuperChargeMobile /></div>
+      </div> 
+      <div className="block md:hidden"><SuperChargeMobile /></div> 
     </div>
   );
 }

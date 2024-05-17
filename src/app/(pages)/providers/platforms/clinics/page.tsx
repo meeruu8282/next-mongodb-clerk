@@ -7,7 +7,7 @@ import SeamlessAppointmentManagement from './seamlessApointmentManagement'
 import CentralizedPatientRecords from './centralizedPatientRecords'
 import Navbar from '../../Components/NavBar/navbar'
 import NavbarMobile from '../../Components/NavBar/NavbarMobile'
-
+import SuperChargeMobile from '../../Components/superCharge/SuperChargeMobile'
 const Clinics = () => {
   return (
     <div className="">
@@ -96,7 +96,12 @@ const Clinics = () => {
         infoParagraph3={'Compassionate environment for individuals seeking mental health services'}
       />
       {/*componentsfolder */}
-      {/* <SuperCharge /> */}
+       <div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div> 
     </div>
   )
 }

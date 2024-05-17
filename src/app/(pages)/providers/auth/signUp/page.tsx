@@ -8,6 +8,6 @@ import {
 } from "../../Components/svgComponent";
 export default function DoctorSignUp() {
   return (
-   <div> <SignUpProvisers Adress={"Your Address"} telOrMobileNumber={"Telephone Number"} licens={"MDCN License"} providersName={"Full Name"} /> </div>
+   <div> <SignUpProvisers Adress={"Your Address"} telOrMobileNumber={"Mobile Number"} licens={"MDCN License"} providersName={"Full Name"} /> </div>
   );
 }

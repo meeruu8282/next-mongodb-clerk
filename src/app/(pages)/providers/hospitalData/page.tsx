@@ -5,6 +5,7 @@ import NavbarMobile from '../Components/NavBar/NavbarMobile'
 import BlurBackGroundDesign from '../Components/blurBackGroundDesign'
 import SignUpProvisers from '../Components/startFillingYourData'
 import DoctorSignUp from '../auth/signUp/page'
+import SignUpHospital from '../auth/signUpHospital/page'
 
 
 export default function PersonalDetails() {
@@ -18,7 +19,7 @@ export default function PersonalDetails() {
           <NavbarMobile />
         </div>
       </div>
-     <DoctorSignUp></DoctorSignUp>
+     <SignUpHospital></SignUpHospital>
     </>
   )
 }

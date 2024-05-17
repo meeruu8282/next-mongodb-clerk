@@ -1,6 +1,6 @@
 
 import { link } from "fs";
-import SignUpProvisers from "../../Components/startFillingYourData";
+import SignUpProvisers from "../../Components/fillingYourDataClinic";
 
 import {
   MdcnLicense,
@@ -16,7 +16,7 @@ export default function ClinicSignUp() {
         Adress={"Clinic Address"}
         telOrMobileNumber={"Mobile Number"}
         licens={"MDCN License"}
-        providersName={"Full Name"}
+        providersName={"Clinic Name"}
       />
     </div>
   );

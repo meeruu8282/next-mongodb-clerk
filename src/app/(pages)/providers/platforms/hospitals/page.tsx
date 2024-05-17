@@ -7,7 +7,7 @@ import FirstTextinplatform from '../../Components/firstTextinplatform'
 import IntegratedHospitalManagement from '../../Components/integratedHospitalManagement'
 import Navbar from '../../Components/NavBar/navbar'
 import NavbarMobile from '../../Components/NavBar/NavbarMobile'
-
+import SuperChargeMobile from '../../Components/superCharge/SuperChargeMobile'
 export default function Hospitals() {
   return (
     <div className="">
@@ -74,7 +74,12 @@ export default function Hospitals() {
         infoParagraph3={'Healthcare institution that prioritizes patient well-being and comfort.'}
       />
       {/* Code in components folder then superCarge */}
-      <SuperCharge />
-    </div>
+<div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div>   
+              </div>
   )
 }

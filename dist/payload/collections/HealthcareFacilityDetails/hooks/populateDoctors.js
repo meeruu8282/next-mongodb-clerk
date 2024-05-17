@@ -37,36 +37,34 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.populateDoctors = void 0;
-var populateDoctors = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var doctorDocs;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    if (!(doc === null || doc === void 0 ? void 0 : doc.doctors)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, Promise.all(doc.doctors.map(function (doctor) { return __awaiter(void 0, void 0, void 0, function () {
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0: return [4 /*yield*/, payload.findByID({
-                                            collection: 'users',
-                                            id: typeof doctor === 'object' ? doctor === null || doctor === void 0 ? void 0 : doctor.id : doctor,
-                                            depth: 0,
-                                        })];
-                                    case 1: return [2 /*return*/, _a.sent()];
-                                }
-                            });
-                        }); }))];
-                case 1:
-                    doctorDocs = _b.sent();
-                    doc.populatedDoctors = doctorDocs.map(function (doctorDoc) { return ({
-                        id: doctorDoc.id,
-                        name: doctorDoc.name,
-                    }); });
-                    _b.label = 2;
-                case 2: return [2 /*return*/, doc];
-            }
-        });
+var populateDoctors = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var doctorDocs;
+    var doc = _b.doc, payload = _b.req.payload;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0:
+                if (!(doc === null || doc === void 0 ? void 0 : doc.doctors)) return [3 /*break*/, 2];
+                return [4 /*yield*/, Promise.all(doc.doctors.map(function (doctor) { return __awaiter(void 0, void 0, void 0, function () {
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0: return [4 /*yield*/, payload.findByID({
+                                        collection: 'users',
+                                        id: typeof doctor === 'object' ? doctor === null || doctor === void 0 ? void 0 : doctor.id : doctor,
+                                        depth: 0,
+                                    })];
+                                case 1: return [2 /*return*/, _a.sent()];
+                            }
+                        });
+                    }); }))];
+            case 1:
+                doctorDocs = _c.sent();
+                doc.populatedDoctors = doctorDocs.map(function (doctorDoc) { return ({
+                    id: doctorDoc.id,
+                    name: doctorDoc.name,
+                }); });
+                _c.label = 2;
+            case 2: return [2 /*return*/, doc];
+        }
     });
-};
+}); };
 exports.populateDoctors = populateDoctors;

@@ -48,54 +48,52 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.populateArchiveBlock = void 0;
-var populateArchiveBlock = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var layoutWithArchive;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0: return [4 /*yield*/, Promise.all(doc.layout.map(function (block) { return __awaiter(void 0, void 0, void 0, function () {
-                        var archiveBlock_1, res;
-                        var _a;
-                        return __generator(this, function (_b) {
-                            switch (_b.label) {
-                                case 0:
-                                    if (!(block.blockType === 'archive')) return [3 /*break*/, 2];
-                                    archiveBlock_1 = block;
-                                    if (!(archiveBlock_1.populateBy === 'collection')) return [3 /*break*/, 2];
-                                    return [4 /*yield*/, payload.find({
-                                            collection: archiveBlock_1.relationTo,
-                                            limit: archiveBlock_1.limit || 10,
-                                            where: __assign({}, (((_a = archiveBlock_1 === null || archiveBlock_1 === void 0 ? void 0 : archiveBlock_1.categories) === null || _a === void 0 ? void 0 : _a.length) > 0
-                                                ? {
-                                                    categories: {
-                                                        in: archiveBlock_1.categories
-                                                            .map(function (cat) {
-                                                            if (typeof cat === 'string')
-                                                                return cat;
-                                                            return cat.id;
-                                                        })
-                                                            .join(','),
-                                                    },
-                                                }
-                                                : {})),
-                                            sort: '-publishedDate',
-                                        })];
-                                case 1:
-                                    res = _b.sent();
-                                    return [2 /*return*/, __assign(__assign({}, block), { populatedDocsTotal: res.totalDocs, populatedDocs: res.docs.map(function (thisDoc) { return ({
-                                                relationTo: archiveBlock_1.relationTo,
-                                                value: thisDoc.id,
-                                            }); }) })];
-                                case 2: return [2 /*return*/, block];
-                            }
-                        });
-                    }); }))];
-                case 1:
-                    layoutWithArchive = _b.sent();
-                    return [2 /*return*/, __assign(__assign({}, doc), { layout: layoutWithArchive })];
-            }
-        });
+var populateArchiveBlock = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var layoutWithArchive;
+    var doc = _b.doc, payload = _b.req.payload;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0: return [4 /*yield*/, Promise.all(doc.layout.map(function (block) { return __awaiter(void 0, void 0, void 0, function () {
+                    var archiveBlock_1, res;
+                    var _a;
+                    return __generator(this, function (_b) {
+                        switch (_b.label) {
+                            case 0:
+                                if (!(block.blockType === 'archive')) return [3 /*break*/, 2];
+                                archiveBlock_1 = block;
+                                if (!(archiveBlock_1.populateBy === 'collection')) return [3 /*break*/, 2];
+                                return [4 /*yield*/, payload.find({
+                                        collection: archiveBlock_1.relationTo,
+                                        limit: archiveBlock_1.limit || 10,
+                                        where: __assign({}, (((_a = archiveBlock_1 === null || archiveBlock_1 === void 0 ? void 0 : archiveBlock_1.categories) === null || _a === void 0 ? void 0 : _a.length) > 0
+                                            ? {
+                                                categories: {
+                                                    in: archiveBlock_1.categories
+                                                        .map(function (cat) {
+                                                        if (typeof cat === 'string')
+                                                            return cat;
+                                                        return cat.id;
+                                                    })
+                                                        .join(','),
+                                                },
+                                            }
+                                            : {})),
+                                        sort: '-publishedDate',
+                                    })];
+                            case 1:
+                                res = _b.sent();
+                                return [2 /*return*/, __assign(__assign({}, block), { populatedDocsTotal: res.totalDocs, populatedDocs: res.docs.map(function (thisDoc) { return ({
+                                            relationTo: archiveBlock_1.relationTo,
+                                            value: thisDoc.id,
+                                        }); }) })];
+                            case 2: return [2 /*return*/, block];
+                        }
+                    });
+                }); }))];
+            case 1:
+                layoutWithArchive = _c.sent();
+                return [2 /*return*/, __assign(__assign({}, doc), { layout: layoutWithArchive })];
+        }
     });
-};
+}); };
 exports.populateArchiveBlock = populateArchiveBlock;

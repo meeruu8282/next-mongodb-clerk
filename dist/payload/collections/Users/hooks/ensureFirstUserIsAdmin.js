@@ -51,27 +51,25 @@ exports.ensureFirstUserIsAdmin = void 0;
 // 2. if there are no users found, append `admin` to the roles array
 // access control is already handled by this fields `access` property
 // it ensures that only admins can create and update the `roles` field
-var ensureFirstUserIsAdmin = function (_a) {
-    var req = _a.req, operation = _a.operation, value = _a.value;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var users;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    if (!(operation === 'create')) return [3 /*break*/, 2];
-                    return [4 /*yield*/, req.payload.find({ collection: 'users', limit: 0, depth: 0 })];
-                case 1:
-                    users = _b.sent();
-                    if (users.totalDocs === 0) {
-                        // if `admin` not in array of values, add it
-                        if (!(value || []).includes('admin')) {
-                            return [2 /*return*/, __spreadArray(__spreadArray([], (value || []), true), ['admin'], false)];
-                        }
+var ensureFirstUserIsAdmin = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var users;
+    var req = _b.req, operation = _b.operation, value = _b.value;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0:
+                if (!(operation === 'create')) return [3 /*break*/, 2];
+                return [4 /*yield*/, req.payload.find({ collection: 'users', limit: 0, depth: 0 })];
+            case 1:
+                users = _c.sent();
+                if (users.totalDocs === 0) {
+                    // if `admin` not in array of values, add it
+                    if (!(value || []).includes('admin')) {
+                        return [2 /*return*/, __spreadArray(__spreadArray([], (value || []), true), ['admin'], false)];
                     }
-                    _b.label = 2;
-                case 2: return [2 /*return*/, value];
-            }
-        });
+                }
+                _c.label = 2;
+            case 2: return [2 /*return*/, value];
+        }
     });
-};
+}); };
 exports.ensureFirstUserIsAdmin = ensureFirstUserIsAdmin;

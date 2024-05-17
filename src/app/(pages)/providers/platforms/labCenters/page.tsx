@@ -12,7 +12,7 @@ import style from './labCenter.module.css'
 import Revolutionizeyourlaboratory from './revolutionizeyourlaboratory'
 import Navbar from '../../Components/NavBar/navbar'
 import NavbarMobile from '../../Components/NavBar/NavbarMobile'
-
+import SuperChargeMobile from '../../Components/superCharge/SuperChargeMobile'
 export default function LabCenters() {
   return (
     <div className="">
@@ -112,7 +112,7 @@ export default function LabCenters() {
         }
       />
       {/* Code in components folder then superCarge */}
-      <SuperCharge />
-    </div>
+
+              </div>
   )
 }

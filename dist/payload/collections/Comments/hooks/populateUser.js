@@ -41,30 +41,28 @@ exports.populateUser = void 0;
 // This means that we need to populate the user manually here to protect user privacy
 // GraphQL will not return mutated user data that differs from the underlying schema
 // So we use an alternative `populatedUser` field to populate the user data, hidden from the admin UI
-var populateUser = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var userDoc;
-        var _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    if (!(doc === null || doc === void 0 ? void 0 : doc.user)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, payload.findByID({
-                            collection: 'users',
-                            id: typeof doc.user === 'object' ? (_b = doc === null || doc === void 0 ? void 0 : doc.user) === null || _b === void 0 ? void 0 : _b.id : doc === null || doc === void 0 ? void 0 : doc.user,
-                            depth: 0,
-                        })];
-                case 1:
-                    userDoc = _c.sent();
-                    doc.populatedUser = {
-                        id: userDoc.id,
-                        name: userDoc.name,
-                    };
-                    _c.label = 2;
-                case 2: return [2 /*return*/, doc];
-            }
-        });
+var populateUser = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var userDoc;
+    var _c;
+    var doc = _b.doc, payload = _b.req.payload;
+    return __generator(this, function (_d) {
+        switch (_d.label) {
+            case 0:
+                if (!(doc === null || doc === void 0 ? void 0 : doc.user)) return [3 /*break*/, 2];
+                return [4 /*yield*/, payload.findByID({
+                        collection: 'users',
+                        id: typeof doc.user === 'object' ? (_c = doc === null || doc === void 0 ? void 0 : doc.user) === null || _c === void 0 ? void 0 : _c.id : doc === null || doc === void 0 ? void 0 : doc.user,
+                        depth: 0,
+                    })];
+            case 1:
+                userDoc = _d.sent();
+                doc.populatedUser = {
+                    id: userDoc.id,
+                    name: userDoc.name,
+                };
+                _d.label = 2;
+            case 2: return [2 /*return*/, doc];
+        }
     });
-};
+}); };
 exports.populateUser = populateUser;

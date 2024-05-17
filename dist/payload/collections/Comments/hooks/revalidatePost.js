@@ -39,32 +39,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.revalidatePost = void 0;
 var revalidate_1 = require("../../../utilities/revalidate");
 // Revalidate the post that is associated with this comment
-var revalidatePost = function (_a) {
-    var commentDoc = _a.doc, payload = _a.req.payload;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var parentDoc;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    if (!(commentDoc._status === 'published' && commentDoc.doc)) return [3 /*break*/, 2];
-                    if (!(typeof commentDoc.doc === 'string')) return [3 /*break*/, 2];
-                    return [4 /*yield*/, payload.findByID({
-                            collection: 'posts',
-                            id: commentDoc.doc,
-                            depth: 0,
-                        })];
-                case 1:
-                    parentDoc = _b.sent();
-                    if (parentDoc) {
-                        (0, revalidate_1.revalidate)({ payload: payload, collection: 'posts', slug: parentDoc.slug });
-                    }
-                    else {
-                        payload.logger.error("Parent doc for comment '".concat(commentDoc.id, "' was not found, could not revalidate"));
-                    }
-                    _b.label = 2;
-                case 2: return [2 /*return*/, commentDoc];
-            }
-        });
+var revalidatePost = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var parentDoc;
+    var commentDoc = _b.doc, payload = _b.req.payload;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0:
+                if (!(commentDoc._status === 'published' && commentDoc.doc)) return [3 /*break*/, 2];
+                if (!(typeof commentDoc.doc === 'string')) return [3 /*break*/, 2];
+                return [4 /*yield*/, payload.findByID({
+                        collection: 'posts',
+                        id: commentDoc.doc,
+                        depth: 0,
+                    })];
+            case 1:
+                parentDoc = _c.sent();
+                if (parentDoc) {
+                    (0, revalidate_1.revalidate)({ payload: payload, collection: 'posts', slug: parentDoc.slug });
+                }
+                else {
+                    payload.logger.error("Parent doc for comment '".concat(commentDoc.id, "' was not found, could not revalidate"));
+                }
+                _c.label = 2;
+            case 2: return [2 /*return*/, commentDoc];
+        }
     });
-};
+}); };
 exports.revalidatePost = revalidatePost;

@@ -41,36 +41,34 @@ exports.populateAuthors = void 0;
 // This means that we need to populate the authors manually here to protect user privacy
 // GraphQL will not return mutated user data that differs from the underlying schema
 // So we use an alternative `populatedAuthors` field to populate the user data, hidden from the admin UI
-var populateAuthors = function (_a) {
-    var doc = _a.doc, payload = _a.req.payload;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var authorDocs;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    if (!(doc === null || doc === void 0 ? void 0 : doc.authors)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, Promise.all(doc.authors.map(function (author) { return __awaiter(void 0, void 0, void 0, function () {
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0: return [4 /*yield*/, payload.findByID({
-                                            collection: 'users',
-                                            id: typeof author === 'object' ? author === null || author === void 0 ? void 0 : author.id : author,
-                                            depth: 0,
-                                        })];
-                                    case 1: return [2 /*return*/, _a.sent()];
-                                }
-                            });
-                        }); }))];
-                case 1:
-                    authorDocs = _b.sent();
-                    doc.populatedAuthors = authorDocs.map(function (authorDoc) { return ({
-                        id: authorDoc.id,
-                        name: authorDoc.name,
-                    }); });
-                    _b.label = 2;
-                case 2: return [2 /*return*/, doc];
-            }
-        });
+var populateAuthors = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var authorDocs;
+    var doc = _b.doc, payload = _b.req.payload;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0:
+                if (!(doc === null || doc === void 0 ? void 0 : doc.authors)) return [3 /*break*/, 2];
+                return [4 /*yield*/, Promise.all(doc.authors.map(function (author) { return __awaiter(void 0, void 0, void 0, function () {
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0: return [4 /*yield*/, payload.findByID({
+                                        collection: 'users',
+                                        id: typeof author === 'object' ? author === null || author === void 0 ? void 0 : author.id : author,
+                                        depth: 0,
+                                    })];
+                                case 1: return [2 /*return*/, _a.sent()];
+                            }
+                        });
+                    }); }))];
+            case 1:
+                authorDocs = _c.sent();
+                doc.populatedAuthors = authorDocs.map(function (authorDoc) { return ({
+                    id: authorDoc.id,
+                    name: authorDoc.name,
+                }); });
+                _c.label = 2;
+            case 2: return [2 /*return*/, doc];
+        }
     });
-};
+}); };
 exports.populateAuthors = populateAuthors;

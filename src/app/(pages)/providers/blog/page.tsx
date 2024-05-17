@@ -17,7 +17,7 @@ import LatestBlog from '../Components/LatestBlog'
 import CarelyoButton from '../Components/getStartedButton'
 import NavbarMobile from '../Components/NavBar/NavbarMobile'
 import Navbar from '../Components/NavBar/navbar'
-
+import SuperChargeMobile from '../Components/superCharge/SuperChargeMobile'
 // Force this page to be dynamic so that Next.js does not cache it
 // See the note in '../../../[slug]/page.tsx' about this
 export const dynamic = 'force-dynamic'
@@ -32,7 +32,6 @@ export default async function Blog() {
 
   return (
     <div>
-    import Navbar from '../Components/Navbar'; // Import the Navbar component
 
     <div className="  max-h-32px top-25px left-144px ">
         <div className="hidden md:block">
@@ -126,8 +125,12 @@ export default async function Blog() {
         </div>
       </section>
 
-      <SuperCharge />
-    </div>
+ <div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div> </div>
   )
 }
 

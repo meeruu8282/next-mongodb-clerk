@@ -293,12 +293,13 @@ export default function Howitwork() {
           />
         </div>
 
-        {/* <div className="md:block hidden">
-          <SuperCharge />
-        </div> */}
-        <div className="block md:hidden">
-          <SuperChargeMobile />
-        </div>
+        <div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div>
+        
       </div>
     </>
   )

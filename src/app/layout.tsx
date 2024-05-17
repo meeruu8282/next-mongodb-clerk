@@ -40,12 +40,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  
             <main className="min-h-screen main">{children}</main>
 
-            <div className="supercharge hidden lg:flex justify-center">
+            {/* <div className="supercharge hidden lg:flex justify-center">
               <SuperCharge />
             </div>
             <div className="superChargeMobile lg:hidden">
               <SuperChargeMobile />
-            </div>
+            </div> */}
 
             <div className="">
               <Footer />

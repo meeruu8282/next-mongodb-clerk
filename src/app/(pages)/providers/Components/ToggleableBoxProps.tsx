@@ -8,9 +8,9 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 library.add(faCheck);
 
 type ToggleableBoxProps = {
-  id: number;
+  id: string;
   isChecked: boolean;
-  onToggle: (id: number) => void;
+  onToggle: (id: string) => void;
 };
 
 const ToggleableBox: React.FC<ToggleableBoxProps> = ({
@@ -30,8 +30,8 @@ const ToggleableBox: React.FC<ToggleableBoxProps> = ({
 
   return (
     <div
-      className={`bg-white ${isChecked ? "" : "hover:border-greenHover"} h-8 w-8
-      border-2 border-sage rounded-[10px] flex justify-center items-center cursor-pointer`}
+      className={`bg-white ${isChecked ? "" : "hover:border-greenHover"} h-6 w-6
+      border-2 border-sage rounded-[6px] flex justify-center items-center cursor-pointer`}
       onClick={handleToggle}
     >
       {localChecked ? (

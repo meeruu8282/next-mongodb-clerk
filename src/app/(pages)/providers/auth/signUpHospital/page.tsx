@@ -1,4 +1,4 @@
-import SignUpProvisers from "../../Components/startFillingYourData";
+import SignUpProvisers from "../../Components/fillingYourDataHospital";
 
 import {
   MdcnLicense,
@@ -6,7 +6,7 @@ import {
   EmailIcon,
   HouseIcon,
 } from "../../Components/svgComponent";
-export default function SigUpHospital() {
+export default function SignUpHospital() {
   return (
    <div> <SignUpProvisers Adress={"Hospital Address"} telOrMobileNumber={"Mobile Number"} licens={"MDCN License"} providersName={"Hospital Name"} /> </div>
   );

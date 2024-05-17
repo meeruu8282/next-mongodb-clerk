@@ -48,28 +48,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.loginAfterCreate = void 0;
-var loginAfterCreate = function (_a) {
-    var doc = _a.doc, req = _a.req, _b = _a.req, payload = _b.payload, _c = _b.body, body = _c === void 0 ? {} : _c, res = _b.res, operation = _a.operation;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var email, password, _d, user, token;
-        return __generator(this, function (_e) {
-            switch (_e.label) {
-                case 0:
-                    if (!(operation === 'create' && !req.user)) return [3 /*break*/, 2];
-                    email = body.email, password = body.password;
-                    if (!(email && password)) return [3 /*break*/, 2];
-                    return [4 /*yield*/, payload.login({
-                            collection: 'users',
-                            data: { email: email, password: password },
-                            req: req,
-                            res: res,
-                        })];
-                case 1:
-                    _d = _e.sent(), user = _d.user, token = _d.token;
-                    return [2 /*return*/, __assign(__assign({}, doc), { token: token, user: user })];
-                case 2: return [2 /*return*/, doc];
-            }
-        });
+var loginAfterCreate = function (_a) { return __awaiter(void 0, [_a], void 0, function (_b) {
+    var email, password, _c, user, token;
+    var doc = _b.doc, req = _b.req, _d = _b.req, payload = _d.payload, _e = _d.body, body = _e === void 0 ? {} : _e, res = _d.res, operation = _b.operation;
+    return __generator(this, function (_f) {
+        switch (_f.label) {
+            case 0:
+                if (!(operation === 'create' && !req.user)) return [3 /*break*/, 2];
+                email = body.email, password = body.password;
+                if (!(email && password)) return [3 /*break*/, 2];
+                return [4 /*yield*/, payload.login({
+                        collection: 'users',
+                        data: { email: email, password: password },
+                        req: req,
+                        res: res,
+                    })];
+            case 1:
+                _c = _f.sent(), user = _c.user, token = _c.token;
+                return [2 /*return*/, __assign(__assign({}, doc), { token: token, user: user })];
+            case 2: return [2 /*return*/, doc];
+        }
     });
-};
+}); };
 exports.loginAfterCreate = loginAfterCreate;

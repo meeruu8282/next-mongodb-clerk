@@ -179,7 +179,7 @@ export default function SignUpProvisers(props: {
  
 </div>
 <div className="flex w-[1114px] h-[24px] mt-[200px]"> {/* Adjusted mt-[100px] to mt-[120px] */}
-  <div className="flex pr-4">
+<div className="flex pr-4">
     <ToggleableBox id="uniqueId" 
   isChecked={true} 
   onToggle={(id) => console.log("Toggled with ID:", id)}></ToggleableBox>
@@ -195,13 +195,16 @@ export default function SignUpProvisers(props: {
               </div>
             </div>
             <div className=" w-[1114px] h-[54px] flex font-[Poppins] ">
+            <Link href="/providers/personalData">
+
             <div className="flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage hover:bg-sage  hover:text-white ">
   <h1 className="w-[41px] h-[22px]  flex justify-center items-center">
     Back
   </h1>
 </div>
+</Link>
 <div className="w-[10px]"></div> {/* Add this empty div for spacing */}
-<Link href="/providers/clinicsData">
+<Link href="/providers/hospitalData">
   
     <div className="flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage  hover:text-white hover:bg-sage">
       <h1 className="w-[75px] h-[22px]  flex justify-center items-center">

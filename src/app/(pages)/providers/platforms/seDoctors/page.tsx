@@ -11,7 +11,7 @@ import SeDoctorsGreenSection from './seDoctorsGreenSection'
 import SeDoctorsGreenSectionMobile from './seDoctorsGreenSectionMobile'
 import Navbar from '../../Components/NavBar/navbar'
 import NavbarMobile from '../../Components/NavBar/NavbarMobile'
-
+import SuperChargeMobile from '../../Components/superCharge/SuperChargeMobile'
 export default function Sedoctors() {
   return (
     <div className="">
@@ -108,7 +108,11 @@ export default function Sedoctors() {
         infoParagraph3={'Medical center with cutting-edge technology and a team professionals. '}
       />
       {/* Code in components folder then superCarge */}
-      <SuperCharge />
-    </div>
+ <div className="supercharge hidden lg:flex justify-center">
+              <SuperCharge />
+            </div>
+            <div className="superChargeMobile lg:hidden">
+              <SuperChargeMobile />
+            </div>  </div>
   )
 }
