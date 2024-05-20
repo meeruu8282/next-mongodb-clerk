@@ -7,6 +7,8 @@ import {
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "../../pricing/pricing.module.css"
+import { UserButton, useUser } from '@clerk/nextjs'
+
 
 interface ModalProps {
   handleRoleChange: (role: string) => void;
@@ -20,6 +22,7 @@ const RoleModal: React.FC<ModalProps> = ({
   onClose
 }) => {
   const [selectedRole, setSelectedRole] = useState<string>('');
+  const { user } = useUser() // Using useUser hook to get the user object
 
   useEffect(() => {
     if (isOpen) {
@@ -29,12 +32,15 @@ const RoleModal: React.FC<ModalProps> = ({
 
   if (!isOpen) return null;
 
+  const signInUrl = user?.id ? process.env.NEXT_PUBLIC_SIGN_IN_URL_1 : process.env.NEXT_PUBLIC_SIGN_IN_URL_2;
+
   //Handler when clicking the confirm button
   const handleConfirm = () => {
     handleRoleChange(selectedRole);
     onClose();
-    window.location.href = '/sign-in';
-  };
+    if (!user?.id) {
+      window.location.href = signInUrl;
+    }  };
 
     const handleClosebutton = () => {
     setSelectedRole('');

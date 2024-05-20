@@ -29,9 +29,8 @@ export default function Howitwork() {
 
       <div className="w-full justify-center items-center flex flex-col mb-auto">
         <BlurBackGroundDesign />
-        <div className="w-full flex justify-center items-center min-h-screen">
+         <div className="w-4/5 mx-auto flex flex-col gap-32"> 
           <HowItWorksWelcome
-            welcomeText={'Welcome to Carelyo 👋'}
             text1={'Healthcare Platform for Providers!'}
             text2={
               'Are you an independent doctor, family physician, or managing a small to medium-sized clinic or hospital? We at Carelyo are here for you!'
@@ -40,9 +39,9 @@ export default function Howitwork() {
             textButton2={'Discover More'}
             imageSrc={'/firstpageRec.png'}
           />
-        </div>
+        </div> 
 
-        <div className="w-full flex justify-center items-center mx-auto my-auto">
+        <div className="w-full flex justify-center items-center mx-auto my-auto mt-12">
           <HowItWorksGreenbackground
             heading1={'Who Can Become a'}
             heading1Bold={'Carelyo Health Provider?'}

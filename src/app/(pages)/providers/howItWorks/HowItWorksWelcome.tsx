@@ -2,12 +2,13 @@ import CarelyoButton from "../Components/getStartedButton";
 import Image from 'next/image';
 import style from './howItWork.module.css'
 import React from "react";
+import WelcomeToCarelyo from "../../patients/components/WelcomeToCarelyo";
+
 
 
 
 interface HowItsWorkWelcomeTemplateProps {
 
-    welcomeText: string;
     text1: string;
     text2: string;
     textButton1: string;
@@ -18,9 +19,6 @@ interface HowItsWorkWelcomeTemplateProps {
 
 
 const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
-
-
-    welcomeText,
     text1,
     text2,
     textButton1,
@@ -30,94 +28,60 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
 
 }) => {
     return (
-
-        <div className="flex w-[90%] h-auto flex-row justify-center items-center">
-
-            <div className="leftside w-[100%] flex flex-col justify-center items-center gap-6">
-
-                <div className={`flex w-full justify-start items-center ${style.make100Width1240}`}>
-                    <h1 className="text-sm sm:text-base md:text-base lg:text-base xl:text-base text-sage font-semibold text-[Poppins]">
-                        {welcomeText}
-                    </h1>
-                </div>
-
-                <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <h2 className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl  w-[50%] ${style.make100Width1240} font-semibold text-[Poppins]`}>
-                        {text1}
-                    </h2>
-                </div>
-
-                <div className={`flex w-full justify-start items-center ${style.flexJusticeCenter}`}>
-                    <p className={`text-sm sm:text-base md:text-base lg:text-base xl:text-base w-[90%] ${style.make100Width1240} font-normal text-[Poppins]`}>
-                        {text2}
-                    </p>
-                </div>
-
-                <div className={`flex flex-row w-full justify-start items-center gap-2 ${style.flexColumn} ${style.make100Width1240}`}>
-                    <div className={`flex justify-start items-center ${style.width100On380}`}>
-                        <CarelyoButton
-                            buttonText={textButton1}
-                            buttonSize="vLB"
-                            color="primary"
-                            size="small"
-                        />
-                    </div>
-                    <div className="flex w-full justify-start items-center pl-3">
-
-                    <div className="flex justify-center items-center">
-                        <div className="w-full">
-                            <div className="w-[7.2rem] h-[1.4rem]">
-                                <div className="font-semibold text-sm sm:text-base md:text-base lg:text-base xl:text-base text-black text-[Poppins]">
-                                    {textButton2}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="">
-                            <div className="w-[1.5rem] h-[1.5rem]">
-                                <svg
-                                    width="24"
-                                    height="25"
-                                    viewBox="0 0 24 25"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clipPath="url(#clip0_341_3389)">
-                                        <path
-                                            d="M5 13.6914H16.17L11.29 18.5714C10.9 18.9614 10.9 19.6014 11.29 19.9914C11.68 20.3814 12.31 20.3814 12.7 19.9914L19.29 13.4014C19.68 13.0114 19.68 12.3814 19.29 11.9914L12.71 5.39138C12.32 5.00138 11.69 5.00138 11.3 5.39138C10.91 5.78138 10.91 6.41138 11.3 6.80138L16.17 11.6914H5C4.45 11.6914 4 12.1414 4 12.6914C4 13.2414 4.45 13.6914 5 13.6914Z"
-                                            className="fill-current text-grayDark"
-                                        />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_341_3389">
-                                            <rect
-                                                width="24"
-                                                height="24"
-                                                fill="white"
-                                                transform="translate(0 0.691406)"
-                                            />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                 
-
-                </div>
-
-            </div>
-
-            <div className={`rightside w-full h-[100%] block justify-end items-center ${style.hidingImage}`}>
-                <Image
-                    src={imageSrc}
-                    alt="entre"
-                    width={698}
-                    height={667} />
-            </div>
-
+        <div className="flex w-full flex-col lg:flex-row relative top-0 left-0">
+      <div className="w-full lg:w-1/2 justify-center mb-4 flex flex-col">
+        <div className="mb-5">
+          <WelcomeToCarelyo />
         </div>
+        <h1 className="text-3xl mb-3 leading-tight lg:text-[5rem] lg:text-left text-center">                 {text1}
+        </h1>
+        <p className="font-extralight text-center lg:text-left text-lg lg:text-xl xl:text-2xl">
+        {text2}
+        </p>
+        <div className="button-container lg:items-start lg:justify-start justify-center mt-5 flex gap-7">
+          {/* Get started Button */}
+          <div className="flex items-center">
+            <button className="carelyoButton w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold">
+              <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
+{textButton1}                <div className="ml-3">
+                  <div className="h-[28px] w-[28px] rounded-[100px] flex justify-center items-center bg-white bg-opacity-[25%]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </button>
+            {/* Learn more Text */}
+            <div className="font-semibold text-sm sm:text-base md:text-base lg:text-base xl:text-base text-black ml-5">
+{textButton2}            </div>
+            {/* Learn more Icon */}
+            <div className="flex items-center">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_341_3389)">
+                  <path d="M5 13.6914H16.17L11.29 18.5714C10.9 18.9614 10.9 19.6014 11.29 19.9914C11.68 20.3814 12.31 20.3814 12.7 19.9914L19.29 13.4014C19.68 13.0114 19.68 12.3814 19.29 11.9914L12.71 5.39138C12.32 5.00138 11.69 5.00138 11.3 5.39138C10.91 5.78138 10.91 6.41138 11.3 6.80138L16.17 11.6914H5C4.45 11.6914 4 12.1414 4 12.6914C4 13.2414 4.45 13.6914 5 13.6914Z" className="fill-current text-grayDark" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_341_3389">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.691406)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full lg:w-1/2 flex justify-center">
+        <Image src={imageSrc} alt="?" layout="responsive" width={541} height={487} objectFit="" />
+      </div>
+    </div>
 
     );
 };

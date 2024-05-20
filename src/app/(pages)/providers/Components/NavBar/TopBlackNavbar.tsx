@@ -7,6 +7,7 @@ const TopBlackNavbar = () => {
   //Read current url pathname
   const currentPath = usePathname()
   const { user } = useUser() // Using useUser hook to get the user object
+  const signInUrl = user?.id ? process.env.NEXT_PUBLIC_SIGN_IN_URL_2 : process.env.NEXT_PUBLIC_SIGN_IN_URL_1;
 
   const isCurrentPath = pathName => {
     return currentPath.startsWith(`/${pathName}`)
@@ -84,7 +85,7 @@ const TopBlackNavbar = () => {
           <div className="flex h-auto items-center text-white ">
             {!user?.id && (
               <>
-               <Link href={'/sign-in'} className=" text-gray-300 hover:text-white mr-4">
+               <Link href={signInUrl} className=" text-gray-300 hover:text-white mr-4">
               Sign In
             </Link>
             <Link href={'/sign-up'} className=" text-gray-300 hover:text-white mr-4">

@@ -8,6 +8,8 @@ import CarelyoButton from "../getStartedButton";
 import RoleModal from "./roleModal";
 import StyledBox from "../styleBox";
 import style from "../../pricing/pricing.module.css"
+import { UserButton, useUser } from '@clerk/nextjs'
+
 
 // Import data
 import { cardDescription } from '../../pricing/data';
@@ -30,6 +32,7 @@ const PricingCards: React.FC<CardsProps> = ({
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const { user } = useUser() // Using useUser hook to get the user object
 
   // Updates the selected card state when selecting role in pop-up modal
   const handleSelectedRoleChange = (selectedRole: string) => {
@@ -56,12 +59,13 @@ const PricingCards: React.FC<CardsProps> = ({
       cardId: cardDesc.cardId
     };
   });
+  const signInUrl = user?.id ? process.env.NEXT_PUBLIC_SIGN_IN_URL_1 : process.env.NEXT_PUBLIC_SIGN_IN_URL_2;
 
   // Handler for the "Get Started" button
   const handleGetStarted = (data: Product) => {
     // If a card is selected, navigate to the sign-in page
-    if (selectedCard !== null) {
-      window.location.href = '/sign-in';
+    if (selectedCard !== null && !user?.id) {
+      window.location.href = signInUrl;
     } else {
       // If no card is selected, open the modal and then navigate to the sign-in page
       setModalOpen(true);
