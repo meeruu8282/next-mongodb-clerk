@@ -20,8 +20,7 @@ const TopBlackNavbar = () => {
           <div
             className="mt-6 mb-2 flex space-x-10 text-[13px] 
             font-inter leading-5"
-          >
-            {/* FOR PATIENTS */}
+          > {/* FOR PATIENTS */}
             <div>
               <Link href="/patients/howitworks">
                 <h1 className={isCurrentPath('patients') ? 'font-semibold' : 'font-normal'}>
