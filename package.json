@@ -18,9 +18,7 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "start": "next start",
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload",
-    "type": "module",
-    "postinstall": "patch-package"
-
+    "type": "module"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.0.3",
