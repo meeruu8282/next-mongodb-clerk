@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode, useState, useEffect } from "react";
 import StyledBox from "./styleBox";
 import {
