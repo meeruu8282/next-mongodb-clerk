@@ -18,7 +18,9 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "start": "next start",
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload",
-    "type": "module"
+    "type": "module",
+    "postinstall": "patch-package"
+
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.0.3",
@@ -58,9 +60,11 @@
     "mongoose": "8.2.2",
     "next": "^14.2.3",
     "node-fetch": "2.6.7",
+    "patch-package": "^8.0.0",
     "payload": "^2.17.0",
     "payload-admin-bar": "^1.0.6",
     "postcss": "8.4.28",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.45.1",
