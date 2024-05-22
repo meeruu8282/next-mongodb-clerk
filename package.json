@@ -2,7 +2,7 @@
   "name": "providerpage",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts nodemon",
     "seed": "rm -rf media && cross-env PAYLOAD_SEED=true PAYLOAD_DROP_DATABASE=true PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts ts-node src/server.ts",
