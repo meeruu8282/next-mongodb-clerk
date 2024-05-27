@@ -22,8 +22,6 @@ export default function SignUpProvisers(props: {
   const [userData, setUserData] = useState({
     firstName: "",
     email: "",
-
-
   });
 
   useEffect(() => {
