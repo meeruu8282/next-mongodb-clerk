@@ -1,12 +1,11 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import { clerkClient } from "@clerk/nextjs";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
-import { NextResponse } from "next/server";
 import { Webhook } from "svix";
-
 import { createUser } from "@/lib/actions/user.action";
-export async function POST(req: Request) {
-  // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
+
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
   if (!WEBHOOK_SECRET) {
@@ -16,20 +15,17 @@ export async function POST(req: Request) {
   }
 
   // Get the headers
-  const headerPayload = headers();
-  const svix_id = headerPayload.get("svix-id");
-  const svix_timestamp = headerPayload.get("svix-timestamp");
-  const svix_signature = headerPayload.get("svix-signature");
+  const svix_id = req.headers["svix-id"] as string;
+  const svix_timestamp = req.headers["svix-timestamp"] as string;
+  const svix_signature = req.headers["svix-signature"] as string;
 
   // If there are no headers, error out
   if (!svix_id || !svix_timestamp || !svix_signature) {
-    return new Response("Error occured -- no svix headers", {
-      status: 400,
-    });
+    return res.status(400).json({ error: "No svix headers" });
   }
 
   // Get the body
-  const payload = await req.json();
+  const payload = req.body;
   const body = JSON.stringify(payload);
 
   // Create a new Svix instance with your secret.
@@ -46,9 +42,7 @@ export async function POST(req: Request) {
     }) as WebhookEvent;
   } catch (err) {
     console.error("Error verifying webhook:", err);
-    return new Response("Error occured", {
-      status: 400,
-    });
+    return res.status(400).json({ error: "Error verifying webhook" });
   }
 
   // Get the ID and type
@@ -57,8 +51,7 @@ export async function POST(req: Request) {
 
   // CREATE User in mongodb
   if (eventType === "user.created") {
-    const { id, email_addresses, image_url, first_name, last_name, username } =
-      evt.data;
+    const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
       clerkId: id,
@@ -81,11 +74,11 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ message: "New user created", user: newUser });
+    return res.status(200).json({ message: "New user created", user: newUser });
   }
 
-  console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
+  console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
   console.log("Webhook body:", body);
 
-  return new Response("", { status: 200 });
+  return res.status(200).end();
 }
