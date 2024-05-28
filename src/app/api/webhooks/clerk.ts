@@ -15,9 +15,10 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
   }
 
   // Get the headers
-  const svix_id = req.headers["svix-id"] as string;
-  const svix_timestamp = req.headers["svix-timestamp"] as string;
-  const svix_signature = req.headers["svix-signature"] as string;
+  const headerPayload = headers();
+  const svix_id = headerPayload.get("svix-id");
+  const svix_timestamp = headerPayload.get("svix-timestamp");
+  const svix_signature = headerPayload.get("svix-signature");
 
   // If there are no headers, error out
   if (!svix_id || !svix_timestamp || !svix_signature) {
