@@ -26,15 +26,15 @@ export default function SignUpProvisers(props: {
 
   });
 
-  useEffect(() => {
-    axios.get("/api/webhooks/clerk")
-      .then((response) => {
-        setUserData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching user data:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("/api/webhooks/clerk")
+  //     .then((response) => {
+  //       setUserData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching user data:", error);
+  //     });
+  // }, []);
 
   return (
     <div className=" justify-center items-center">
