@@ -27,7 +27,7 @@ export default function SignUpProvisers(props: {
   });
 
   useEffect(() => {
-    axios.get("/api/webhooks")
+    axios.get("/api/webhooks/clerk")
       .then((response) => {
         setUserData(response.data);
       })
