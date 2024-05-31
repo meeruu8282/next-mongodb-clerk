@@ -56,37 +56,37 @@ export async function POST(req: Request) {
   const eventType = evt.type;
 
   // CREATE User in mongodb
-if (eventType === "user.created") {
-  const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
+// if (eventType === "user.created") {
+//   const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
 
-  const user = {
-    clerkId: id,
-    email: email_addresses[0].email_address,
-    username: username!,
-    firstName: first_name,
-    lastName: last_name,
-    photo: image_url,
-  };
+//   const user = {
+//     clerkId: id,
+//     email: email_addresses[0].email_address,
+//     username: username!,
+//     firstName: first_name,
+//     lastName: last_name,
+//     photo: image_url,
+//   };
 
-  console.log("Creating user with data:", user); // Log user data
+//   console.log("Creating user with data:", user); // Log user data
 
-  try {
-    const newUser = await createUser(user);
+//   try {
+//     const newUser = await createUser(user);
 
-    if (newUser) {
-      await clerkClient.users.updateUserMetadata(id, {
-        publicMetadata: {
-          userId: newUser._id,
-        },
-      });
-    }
+//     if (newUser) {
+//       await clerkClient.users.updateUserMetadata(id, {
+//         publicMetadata: {
+//           userId: newUser._id,
+//         },
+//       });
+//     }
 
-    return NextResponse.json({ message: "New user created", user: newUser });
-  } catch (error) {
-    console.error("Error in user creation process:", error);
-    return new Response("Error occurred during user creation", { status: 500 });
-  }
-}
+//     return NextResponse.json({ message: "New user created", user: newUser });
+//   } catch (error) {
+//     console.error("Error in user creation process:", error);
+//     return new Response("Error occurred during user creation", { status: 500 });
+//   }
+// }
 
 
   console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
