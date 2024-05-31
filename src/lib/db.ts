@@ -29,10 +29,10 @@ export const connect = async (): Promise<Mongoose> => {
 
   try {
     cached.conn = await cached.promise;
+    console.log("Connected to MongoDB"); // Log successful connection
     return cached.conn;
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
     throw new Error("Failed to connect to MongoDB.");
   }
 };
-
