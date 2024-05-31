@@ -16,7 +16,7 @@ if (!cached) {
   };
 }
 
-export const connect = async (): Promise<Mongoose> => {
+export const connect = async () => {
   if (cached.conn) return cached.conn;
 
   cached.promise =
@@ -27,12 +27,7 @@ export const connect = async (): Promise<Mongoose> => {
       connectTimeoutMS: 30000,
     });
 
-  try {
-    cached.conn = await cached.promise;
-    return cached.conn;
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error);
-    throw new Error("Failed to connect to MongoDB.");
-  }
-};
+  cached.conn = await cached.promise;
 
+  return cached.conn;
+};
