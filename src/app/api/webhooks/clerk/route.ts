@@ -1,15 +1,11 @@
 import { clerkClient } from "@clerk/nextjs";
 import { WebhookEvent } from "@clerk/nextjs/server";
+import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
 import { createUser } from "@/lib/actions/user.action";
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end(`Method ${req.method} not allowed`);
-  }
-
+export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
@@ -20,15 +16,21 @@ export default async function handler(req, res) {
   }
 
   // Get the headers
-  const { 'svix-id': svix_id, 'svix-timestamp': svix_timestamp, 'svix-signature': svix_signature } = req.headers;
+  const headerPayload = headers();
+  const svix_id = headerPayload.get("svix-id");
+  const svix_timestamp = headerPayload.get("svix-timestamp");
+  const svix_signature = headerPayload.get("svix-signature");
 
   // If there are no headers, error out
   if (!svix_id || !svix_timestamp || !svix_signature) {
-    return res.status(400).json({ error: 'Invalid webhook headers' });
+    return new Response("Error occured -- no svix headers", {
+      status: 400,
+    });
   }
 
   // Get the body
-  const body = JSON.stringify(req.body);
+  const payload = await req.json();
+  const body = JSON.stringify(payload);
 
   // Create a new Svix instance with your secret.
   const wh = new Webhook(WEBHOOK_SECRET);
@@ -44,7 +46,9 @@ export default async function handler(req, res) {
     }) as WebhookEvent;
   } catch (err) {
     console.error("Error verifying webhook:", err);
-    return res.status(400).json({ error: 'Error occurred' });
+    return new Response("Error occured", {
+      status: 400,
+    });
   }
 
   // Get the ID and type
@@ -53,7 +57,8 @@ export default async function handler(req, res) {
 
   // CREATE User in mongodb
   if (eventType === "user.created") {
-    const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
+    const { id, email_addresses, image_url, first_name, last_name, username } =
+      evt.data;
 
     const user = {
       clerkId: id,
@@ -64,28 +69,23 @@ export default async function handler(req, res) {
       photo: image_url,
     };
 
-    console.log("Creating user with data:", user); // Log user data
+    console.log(user);
 
-    try {
-      const newUser = await createUser(user);
+    const newUser = await createUser(user);
 
-      if (newUser) {
-        await clerkClient.users.updateUserMetadata(id, {
-          publicMetadata: {
-            userId: newUser._id,
-          },
-        });
-      }
-
-      return res.status(201).json({ message: "New user created", user: newUser });
-    } catch (error) {
-      console.error("Error in user creation process:", error);
-      return res.status(500).json({ error: "Error occurred during user creation" });
+    if (newUser) {
+      await clerkClient.users.updateUserMetadata(id, {
+        publicMetadata: {
+          userId: newUser._id,
+        },
+      });
     }
+
+    return NextResponse.json({ message: "New user created", user: newUser });
   }
 
   console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
   console.log("Webhook body:", body);
 
-  return res.status(200).json({ message: "Webhook processed" });
+  return new Response("", { status: 200 });
 }
