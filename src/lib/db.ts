@@ -1,33 +1,31 @@
-import mongoose, { Mongoose } from "mongoose";
+// lib/db.ts
+import mongoose from "mongoose";
 
 const MONGODB_URL = process.env.MONGODB_URL!;
 
-interface MongooseConn {
-  conn: Mongoose | null;
-  promise: Promise<Mongoose> | null;
+if (!MONGODB_URL) {
+  throw new Error("Please add your MongoDB URI to .env.local");
 }
 
-let cached: MongooseConn = (global as any).mongoose;
+let cached = global.mongoose;
 
 if (!cached) {
-  cached = (global as any).mongoose = {
-    conn: null,
-    promise: null,
-  };
+  cached = global.mongoose = { conn: null, promise: null };
 }
 
-export const connect = async () => {
+async function connect() {
   if (cached.conn) return cached.conn;
 
-  cached.promise =
-    cached.promise ||
-    mongoose.connect(MONGODB_URL, {
-      dbName: "clerk-next14-db",
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(MONGODB_URL, {
       bufferCommands: false,
       connectTimeoutMS: 30000,
+    }).then(mongoose => {
+      return mongoose;
     });
-
+  }
   cached.conn = await cached.promise;
-
   return cached.conn;
-};
+}
+
+export { connect };
