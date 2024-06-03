@@ -20,7 +20,6 @@ export async function POST(req: NextRequest) {
   const svix_timestamp = Array.isArray(headerPayload.get("svix-timestamp")) ? headerPayload.get("svix-timestamp")[0] : headerPayload.get("svix-timestamp");
   const svix_signature = Array.isArray(headerPayload.get("svix-signature")) ? headerPayload.get("svix-signature")[0] : headerPayload.get("svix-signature");
 
-  // If there are no headers or if they are not strings, error out
   if (!svix_id || !svix_timestamp || !svix_signature || typeof svix_id !== 'string' || typeof svix_timestamp !== 'string' || typeof svix_signature !== 'string') {
     return new NextResponse("Error occurred -- invalid svix headers", { status: 400 });
   }
@@ -41,7 +40,6 @@ export async function POST(req: NextRequest) {
     return new NextResponse("Error occurred during verification", { status: 400 });
   }
 
-  // Process the webhook asynchronously
   (async () => {
     const { id } = evt.data;
     const eventType = evt.type;

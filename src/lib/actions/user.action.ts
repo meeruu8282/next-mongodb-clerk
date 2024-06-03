@@ -3,13 +3,14 @@
 import User from "@/lib/modals/user.modal";
 import { connect } from "@/lib/db";
 
-export async function createUser(user: any) {
+export const createUser = async (user: any) => {
+  await connect();
   try {
-    await connect();
-    const newUser = await User.create(user);
-    return newUser.toObject();
+    const newUser = new User(user);
+    await newUser.save();
+    return newUser;
   } catch (error) {
-    console.error("Error creating user:", error);
-    throw error;
+    console.error('Error creating user:', error);
+    throw new Error('Error creating user');
   }
-}
+};
