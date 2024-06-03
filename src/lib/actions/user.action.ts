@@ -9,9 +9,10 @@ export const createUser = async (user: any) => {
   try {
     const newUser = new User(user);
     await newUser.save();
+    console.log("User successfully created:", newUser);
     return newUser;
   } catch (error) {
-    console.error('Error creating user:', error);
-    throw new Error('Error creating user');
+    console.error("Error creating user:", error);
+    throw new Error("Error creating user");
   }
 };
