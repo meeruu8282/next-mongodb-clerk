@@ -17,8 +17,10 @@ if (!cached) {
 }
 
 export const connect = async (): Promise<Mongoose> => {
-  if (cached.conn) return cached.conn;
-
+  if (cached.conn) {
+    console.log("Using cached MongoDB connection.");
+    return cached.conn;
+  }
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URL, {
       dbName: "clerk-next14-db",
@@ -29,6 +31,7 @@ export const connect = async (): Promise<Mongoose> => {
 
   try {
     cached.conn = await cached.promise;
+    console.log("Successfully connected to MongoDB.");
     return cached.conn;
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
