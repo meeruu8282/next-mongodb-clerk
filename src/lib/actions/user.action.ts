@@ -5,7 +5,6 @@ import { connect } from "@/lib/db";
 
 export const createUser = async (user: any) => {
   await connect();
-  console.log("Attempting to create a new user:", user);
   try {
     const newUser = new User(user);
     await newUser.save();

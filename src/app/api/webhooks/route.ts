@@ -25,7 +25,6 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.text();
-  console.log("Received webhook payload:", body);
   const wh = new Webhook(WEBHOOK_SECRET);
 
   let evt: WebhookEvent;
@@ -36,13 +35,12 @@ export async function POST(req: NextRequest) {
       "svix-timestamp": svix_timestamp,
       "svix-signature": svix_signature,
     }) as WebhookEvent;
-    console.log("Verified webhook event:", evt);
   } catch (err) {
     console.error("Error verifying webhook:", err);
     return new NextResponse("Error occurred during verification", { status: 400 });
   }
 
-  const processEvent = async () => {
+  (async () => {
     const { id } = evt.data;
     const eventType = evt.type;
 
@@ -62,7 +60,6 @@ export async function POST(req: NextRequest) {
 
       try {
         const newUser = await createUser(user);
-        console.log("New user created:", newUser);
 
         if (newUser) {
           await clerkClient.users.updateUserMetadata(id, {
@@ -70,19 +67,14 @@ export async function POST(req: NextRequest) {
               userId: newUser._id,
             },
           });
-          console.log("User metadata updated in Clerk");
         }
-
-        return new NextResponse(JSON.stringify({ message: "New user created", user: newUser }), { status: 201 });
       } catch (error) {
         console.error("Error in user creation process:", error);
-        return new NextResponse("Error occurred during user creation", { status: 500 });
       }
     }
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
-    return new NextResponse("Webhook processed", { status: 200 });
-  };
+  })();
 
-  return processEvent();
+  return new NextResponse("Webhook received and is being processed", { status: 200 });
 }
