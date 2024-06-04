@@ -16,6 +16,18 @@ if (!cached) {
   };
 }
 
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected to DB Cluster');
+});
+
+mongoose.connection.on('error', (error) => {
+  console.error('Mongoose connection error:', error.message);
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected');
+});
+
 export const connect = async (): Promise<Mongoose> => {
   if (cached.conn) {
     console.log("Using cached MongoDB connection.");
@@ -28,7 +40,12 @@ export const connect = async (): Promise<Mongoose> => {
       dbName: "clerk-next14-db",
       bufferCommands: false,
       connectTimeoutMS: 30000,
+      serverSelectionTimeoutMS: 30000,
+    }).catch((error) => {
+      console.error("Error creating MongoDB connection:", error);
+      throw error;
     });
+    console.log("MongoDB connection promise created.");
   }
 
   try {
