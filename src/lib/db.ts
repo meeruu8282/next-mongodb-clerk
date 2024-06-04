@@ -21,7 +21,9 @@ export const connect = async (): Promise<Mongoose> => {
     console.log("Using cached MongoDB connection.");
     return cached.conn;
   }
+
   if (!cached.promise) {
+    console.log("Creating new MongoDB connection promise.");
     cached.promise = mongoose.connect(MONGODB_URL, {
       dbName: "clerk-next14-db",
       bufferCommands: false,
