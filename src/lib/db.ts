@@ -28,6 +28,8 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
+mongoose.set('debug', true);
+
 export const connect = async (): Promise<Mongoose> => {
   if (cached.conn) {
     console.log("Using cached MongoDB connection.");
