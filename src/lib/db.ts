@@ -16,6 +16,9 @@ if (!cached) {
   };
 }
 
+// Enable Mongoose debugging
+mongoose.set('debug', true);
+
 mongoose.connection.on('connected', () => {
   console.log('Mongoose connected to DB Cluster');
 });
@@ -28,9 +31,8 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
-mongoose.set('debug', true);
-
 export const connect = async (): Promise<Mongoose> => {
+  console.log("Entering connect function...");
   if (cached.conn) {
     console.log("Using cached MongoDB connection.");
     return cached.conn;
@@ -43,6 +45,9 @@ export const connect = async (): Promise<Mongoose> => {
       bufferCommands: false,
       connectTimeoutMS: 30000,
       serverSelectionTimeoutMS: 30000,
+    }).then(conn => {
+      console.log("MongoDB connection established.");
+      return conn;
     }).catch((error) => {
       console.error("Error creating MongoDB connection:", error);
       throw error;
