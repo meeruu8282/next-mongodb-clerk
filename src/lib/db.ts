@@ -56,6 +56,7 @@ export const connect = async (): Promise<Mongoose> => {
   }
 
   try {
+    console.log("Awaiting MongoDB connection promise...");
     cached.conn = await cached.promise;
     console.log("Successfully connected to MongoDB.");
     return cached.conn;
