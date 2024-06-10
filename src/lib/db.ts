@@ -16,21 +16,54 @@ if (!cached) {
   };
 }
 
-// Set strictQuery option to prepare for the default change in Mongoose 7
-mongoose.set('strictQuery', true);
+// Enable Mongoose debugging
+mongoose.set('debug', true);
+
+// Set strictQuery to false to prepare for Mongoose 7
+mongoose.set('strictQuery', false);
+
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected to DB Cluster');
+});
+
+mongoose.connection.on('error', (error) => {
+  console.error('Mongoose connection error:', error.message);
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected');
+});
 
 export const connect = async () => {
-  if (cached.conn) return cached.conn;
+  console.log("Entering connect function...");
+  if (cached.conn) {
+    console.log("Using cached MongoDB connection.");
+    return cached.conn;
+  }
 
-  cached.promise =
-    cached.promise ||
-    mongoose.connect(MONGODB_URL, {
+  if (!cached.promise) {
+    console.log("Creating new MongoDB connection promise.");
+    cached.promise = mongoose.connect(MONGODB_URL, {
       dbName: "clerk-next14-db",
       bufferCommands: false,
       connectTimeoutMS: 30000,
+    }).then((conn) => {
+      console.log("MongoDB connection established.");
+      return conn;
+    }).catch((error) => {
+      console.error("Error creating MongoDB connection:", error);
+      throw error;
     });
+    console.log("MongoDB connection promise created.");
+  }
 
-  cached.conn = await cached.promise;
-
-  return cached.conn;
+  try {
+    console.log("Awaiting MongoDB connection promise...");
+    cached.conn = await cached.promise;
+    console.log("Successfully connected to MongoDB.");
+    return cached.conn;
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+    throw new Error("Failed to connect to MongoDB.");
+  }
 };
