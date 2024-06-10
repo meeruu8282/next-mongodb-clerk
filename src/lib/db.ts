@@ -16,7 +16,6 @@ if (!cached) {
   };
 }
 
-// Enable Mongoose debugging
 mongoose.set('debug', true);
 
 // Set strictQuery to false to prepare for Mongoose 7
