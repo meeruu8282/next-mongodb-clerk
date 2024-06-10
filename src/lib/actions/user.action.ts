@@ -3,18 +3,12 @@
 import User from "@/lib/modals/user.modal";
 import { connect } from "@/lib/db";
 
-export const createUser = async (user: any) => {
-  console.log("Connecting to MongoDB...");
-  await connect();
-  console.log("Attempting to create a new user:", user);
-  
+export async function createUser(user: any) {
   try {
-    const newUser = new User(user);
-    await newUser.save();
-    console.log("User successfully created:", newUser);
-    return newUser;
+    await connect();
+    const newUser = await User.create(user);
+    return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
-    console.error("Error creating user:", error);
-    throw new Error("Error creating user");
+    console.log(error);
   }
-};
+}
