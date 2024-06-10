@@ -16,6 +16,9 @@ if (!cached) {
   };
 }
 
+// Set strictQuery option to prepare for the default change in Mongoose 7
+mongoose.set('strictQuery', true);
+
 export const connect = async () => {
   if (cached.conn) return cached.conn;
 
