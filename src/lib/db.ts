@@ -35,28 +35,28 @@ mongoose.connection.on('disconnected', () => {
 
 export const connect = async () => {
   console.log("Entering connect function...");
-  if (cached.conn) {
-    console.log("Using cached MongoDB connection.");
-    return cached.conn;
-  }
-
-  if (!cached.promise) {
-    console.log("Creating new MongoDB connection promise.");
-    cached.promise = mongoose.connect(MONGODB_URL, {
-      dbName: "clerk-next14-db",
-      bufferCommands: false,
-      connectTimeoutMS: 30000,
-    }).then((conn) => {
-      console.log("MongoDB connection established.");
-      return conn;
-    }).catch((error) => {
-      console.error("Error creating MongoDB connection:", error);
-      throw error;
-    });
-    console.log("MongoDB connection promise created.");
-  }
-
   try {
+    if (cached.conn) {
+      console.log("Using cached MongoDB connection.");
+      return cached.conn;
+    }
+
+    if (!cached.promise) {
+      console.log("Creating new MongoDB connection promise.");
+      cached.promise = mongoose.connect(MONGODB_URL, {
+        dbName: "clerk-next14-db",
+        bufferCommands: false,
+        connectTimeoutMS: 30000,
+      }).then((conn) => {
+        console.log("MongoDB connection established.");
+        return conn;
+      }).catch((error) => {
+        console.error("Error creating MongoDB connection:", error);
+        throw error;
+      });
+      console.log("MongoDB connection promise created.");
+    }
+
     console.log("Awaiting MongoDB connection promise...");
     cached.conn = await cached.promise;
     console.log("Successfully connected to MongoDB.");
