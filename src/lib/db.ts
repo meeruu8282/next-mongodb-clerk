@@ -19,6 +19,9 @@ if (!cached) {
 // Enable Mongoose debugging
 mongoose.set('debug', true);
 
+// Set strictQuery to false to prepare for Mongoose 7
+mongoose.set('strictQuery', false);
+
 mongoose.connection.on('connected', () => {
   console.log('Mongoose connected to DB Cluster');
 });
