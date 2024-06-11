@@ -1,7 +1,7 @@
 "use server";
 
 import User from "@/lib/modals/user.modal";
-import { Connect } from "@/lib/db";
+import { connectToDatabase } from "@/lib/db";
 
 export async function createUser(user: any) {
   console.log("Starting user creation process...");
@@ -9,7 +9,7 @@ export async function createUser(user: any) {
 
   try {
     console.log("Connecting to MongoDB...");
-    await Connect();
+    await connectToDatabase();
     console.log("Successfully connected to MongoDB.");
 
     console.log("Creating a new user in the database...");
