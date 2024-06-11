@@ -1,17 +1,36 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
-const connectDB = async () => {
-  if(mongoose.connections[0].readyState){
-    return true;
-  }
+const MONGODB_URL = process.env.MONGODB_URL!;
 
-  try {
-    await mongoose.connect(process.env.MONGODB_URL);
-    console.log('Mongodb connected')
-    return true;
-  } catch (error) {
-    console.log(error)
-  }
+interface MongooseConn {
+  conn: Mongoose | null;
+  promise: Promise<Mongoose> | null;
 }
 
-export default connectDB;
+let cached: MongooseConn = (global as any).mongoose;
+
+if (!cached) {
+  cached = (global as any).mongoose = {
+    conn: null,
+    promise: null,
+  };
+}
+
+// Set strictQuery option to prepare for the default change in Mongoose 7
+mongoose.set('strictQuery', true);
+
+export const connect = async () => {
+  if (cached.conn) return cached.conn;
+
+  cached.promise =
+    cached.promise ||
+    mongoose.connect(MONGODB_URL, {
+      dbName: "clerk-next14-db",
+      bufferCommands: false,
+      connectTimeoutMS: 30000,
+    });
+
+  cached.conn = await cached.promise;
+
+  return cached.conn;
+};
