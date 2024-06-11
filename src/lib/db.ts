@@ -33,7 +33,7 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
-export const connect = async () => {
+export const Connect = async () => {
   console.log("Entering connect function...");
   try {
     if (cached.conn) {
