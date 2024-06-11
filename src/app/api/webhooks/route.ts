@@ -48,7 +48,6 @@ export async function POST(req: NextRequest) {
 
     if (eventType === "user.created") {
       const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
-
       const user = {
         clerkId: id,
         email: email_addresses[0].email_address,
@@ -57,9 +56,7 @@ export async function POST(req: NextRequest) {
         lastName: last_name,
         photo: image_url,
       };
-
       console.log("Creating user with data:", user);
-
     try {
   console.log("Attempting to create a new user with data:", user);
   const newUser = await createUser(user);
@@ -73,7 +70,6 @@ export async function POST(req: NextRequest) {
         userId: newUser._id,
       },
     });
-
     console.log("Clerk user metadata updated successfully.");
   } else {
     console.warn("New user creation returned no result.");
@@ -81,9 +77,7 @@ export async function POST(req: NextRequest) {
 } catch (error) {
   console.error("Error in user creation process:", error);
 }
-
     }
-
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
   })();
 
