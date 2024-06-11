@@ -60,6 +60,7 @@ export async function POST(req: NextRequest) {
     try {
   console.log("Attempting to create a new user with data:", user);
   const newUser = await createUser(user);
+  console.log("New user created successfully:", newUser);
 
   if (newUser) {
     console.log("New user created successfully:", newUser);

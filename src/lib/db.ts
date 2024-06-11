@@ -1,27 +1,37 @@
+import mongoose, { Mongoose } from "mongoose";
 
-import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri = "mongodb+srv://meeru284:f0Gm6ql5OIjDwAXD@cluster0.4isig7q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MONGODB_URL = process.env.MONGODB_URL!;
+console.log(MONGODB_URL,"----mongodb")
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
-export const connect = async () => {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-  connect().catch(console.dir);
+interface MongooseConn {
+  conn: Mongoose | null;
+  promise: Promise<Mongoose> | null;
 }
 
+let cached: MongooseConn = (global as any).mongoose;
+
+if (!cached) {
+  cached = (global as any).mongoose = {
+    conn: null,
+    promise: null,
+  };
+}
+
+// Set strictQuery option to prepare for the default change in Mongoose 7
+mongoose.set('strictQuery', true);
+
+export const connect = async () => {
+  if (cached.conn) return cached.conn;
+
+  cached.promise =
+    cached.promise ||
+    mongoose.connect(MONGODB_URL, {
+      dbName: "clerk-next14-db",
+      bufferCommands: false,
+      connectTimeoutMS: 30000,
+    });
+
+  cached.conn = await cached.promise;
+
+  return cached.conn;
+};
