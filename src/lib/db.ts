@@ -1,7 +1,6 @@
 import mongoose, { Mongoose } from "mongoose";
 
 const MONGODB_URL = process.env.MONGODB_URL!;
-console.log(MONGODB_URL,"----mongodb url")
 
 interface MongooseConn {
   conn: Mongoose | null;
@@ -16,9 +15,6 @@ if (!cached) {
     promise: null,
   };
 }
-
-// Set strictQuery option to prepare for the default change in Mongoose 7
-mongoose.set('strictQuery', true);
 
 export const connect = async () => {
   if (cached.conn) return cached.conn;
