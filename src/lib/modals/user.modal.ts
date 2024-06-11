@@ -27,16 +27,6 @@ const UserSchema = new Schema({
   },
 });
 
-console.log("User schema created:", UserSchema);
-
-if (models?.User) {
-  console.log("Using existing User model");
-} else {
-  console.log("Creating new User model");
-}
-
 const User = models?.User || model("User", UserSchema);
-
-console.log("User model ready:", User);
 
 export default User;
