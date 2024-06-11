@@ -61,18 +61,27 @@ export async function POST(req: NextRequest) {
       console.log("Creating user with data:", user);
 
       try {
+        console.log("Attempting to create a new user with data:", user);
         const newUser = await createUser(user);
-
+      
         if (newUser) {
+          console.log("New user created successfully:", newUser);
+          console.log("Updating Clerk user metadata with new user ID:", newUser._id);
+      
           await clerkClient.users.updateUserMetadata(id, {
             publicMetadata: {
               userId: newUser._id,
             },
           });
+      
+          console.log("Clerk user metadata updated successfully.");
+        } else {
+          console.warn("New user creation returned no result.");
         }
       } catch (error) {
         console.error("Error in user creation process:", error);
       }
+      
     }
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
