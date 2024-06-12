@@ -3,13 +3,13 @@ const nonce = crypto.randomBytes(16).toString('base64');
 
 const policies = {
   'default-src': ["'self'"],
-  'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", `nonce-${nonce}`, 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://vercel.live', 'https://vercel.com', 'https://picked-shark-27.clerk.accounts.dev'],
+  'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", `nonce-${nonce}`, 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://vercel.live', 'https://vercel.com', 'https://picked-shark-27.clerk.accounts.dev', 'https://cloud.mongodb.com'],
   'worker-src': ["'self'", 'blob:'],
   'child-src': ["'self'", 'https://vercel.live'],
   'style-src': ["'self'", "'unsafe-inline'", `nonce-${nonce}`, 'https://fonts.googleapis.com', 'https://vercel.live', 'https://vercel.com'],
   'img-src': ["'self'", 'https://raw.githubusercontent.com', 'https://img.clerk.com', 'https://vercel.com'],
   'font-src': ["'self'", 'https://vercel.live'], 
-  'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com', 'https://vercel.live', 'https://sockjs-us3.pusher.com', 'https://vercel.com', 'mongodb+srv://meeru284:f0Gm6ql5OIjDwAXD@cluster0.4isig7q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 'https://picked-shark-27.clerk.accounts.dev'],
+  'connect-src': ["'self'", 'https://maps.googleapis.com', 'https://present-fawn-5.clerk.accounts.dev', 'https://api.clerk.com', 'https://vercel.live', 'https://sockjs-us3.pusher.com', 'https://vercel.com', 'https://cloud.mongodb.com', 'https://picked-shark-27.clerk.accounts.dev'],
 };
 
 module.exports = Object.entries(policies)
