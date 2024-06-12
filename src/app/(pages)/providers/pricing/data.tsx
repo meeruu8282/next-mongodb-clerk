@@ -57,17 +57,17 @@ export const subscription: dataTypeSub[] = [
     products: [
       {
         title: 'Independent Doctor',
-        price: '$29/month',
+        price: '$10,49/month',
         productId: 'price_123stripe1' //Placeholder Stripe productId
       },
       {
         title: 'Clinic',
-        price: '$99/month',
+        price: '$8,69/month',
         productId: 'price_123stripe2' //Placeholder Stripe productId
       },
       {
         title: 'Hospital',
-        price: '$499/month',
+        price: '$6,90/month',
         productId: 'price_123stripe3' //Placeholder Stripe productId
       }
     ]
@@ -77,18 +77,18 @@ export const subscription: dataTypeSub[] = [
     products: [
       {
         title: 'Independent Doctor',
-        price: '$25/month', //Placeholder price
+        price: '$26,75/month', //Placeholder price
         productId: 'price_123stripe4', //Placeholder Stripe productId
       },
       {
         title: 'Clinic',
-        price: '$84/month', //Placeholder price
+        price: '$22,16/month', //Placeholder price
         productId: 'price_123stripe5' //Placeholder Stripe productId
       },
       {
 
         title: 'Hospital',
-        price: '$424/month', //Placeholder price
+        price: '$17,60/month', //Placeholder price
         productId: 'price_123stripe6' //Placeholder Stripe productId
       }
     ]
@@ -99,19 +99,19 @@ export const subscription: dataTypeSub[] = [
       {
 
         title: 'Independent Doctor',
-        price: '$23/month', //Placeholder price
+        price: '$94,41/month', //Placeholder price
         productId: 'price_123stripe7' //Placeholder Stripe productId
       },
       {
 
         title: 'Clinic',
-        price: '$79/month', //Placeholder price
+        price: '$78,21/month', //Placeholder price
         productId: 'price_123stripe8' //Placeholder Stripe productId
       },
       {
 
         title: 'Hospital',
-        price: '$399/month', //Placeholder price
+        price: '$62,10/month', //Placeholder price
         productId: 'price_123stripe9' //Placeholder Stripe productId
       }
     ]
