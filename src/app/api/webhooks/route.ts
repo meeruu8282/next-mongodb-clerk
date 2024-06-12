@@ -81,7 +81,6 @@ export async function POST(req: NextRequest) {
 } catch (error) {
   console.error("Error in user creation process:", error);
 }
-
     }
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
