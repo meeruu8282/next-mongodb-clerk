@@ -42,7 +42,6 @@ async function handler(request: Request) {
     });
   }
 }
-
 type EventType = "user.created" | "user.updated" | "*";
 
 type Event = {
