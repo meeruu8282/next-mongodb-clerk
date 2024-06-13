@@ -27,7 +27,6 @@ async function handler(request: Request) {
     console.error((err as Error).message);
     return NextResponse.json({}, { status: 400 });
   }
-
   const eventType: EventType = evt.type;
   if (eventType === "user.created" || eventType === "user.updated") {
     const { id, ...attributes } = evt.data;
