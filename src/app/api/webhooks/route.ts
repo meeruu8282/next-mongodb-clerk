@@ -43,4 +43,33 @@ export async function POST(req: NextRequest) {
     console.error("Error verifying webhook:", err);
     return new NextResponse("Error occurred during verification", { status: 400 });
   }
+
+  const eventType = evt.type;
+
+  if (eventType === "user.created" || eventType === "user.updated") {
+    const { id, ...attributes } = evt.data;
+    console.log("Upserting user with data:", id, attributes);
+
+    try {
+      const attributesJson = JSON.stringify(attributes); // Serialize attributes to JSON
+
+      await prisma.user.upsert({
+        where: { externalId: id as string },
+        create: {
+          externalId: id as string,
+          attributes: attributesJson, // Pass serialized JSON to create
+        },
+        update: {
+          attributes: attributesJson, // Pass serialized JSON to update
+        },
+      });
+
+      console.log("User upserted successfully");
+    } catch (error) {
+        console.error("Error upserting user:", error);
+        return new NextResponse("Error occurred during user upsert", { status: 500 });
+      }
+    }
+
+  return new NextResponse("Webhook received and is being processed", { status: 200 });
 }
