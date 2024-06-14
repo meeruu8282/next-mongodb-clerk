@@ -5,8 +5,8 @@ import { Webhook } from "svix";
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-
 const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
+
 if (!WEBHOOK_SECRET) {
   throw new Error("Please add WEBHOOK_SECRET to .env or .env.local");
 }
@@ -44,32 +44,60 @@ export async function POST(req: NextRequest) {
     return new NextResponse("Error occurred during verification", { status: 400 });
   }
 
-  const eventType = evt.type;
+  // Upsert user data using Prisma
+  (async () => {
+    const { id } = evt.data;
+    const eventType = evt.type;
 
-  if (eventType === "user.created" || eventType === "user.updated") {
-    const { id, ...attributes } = evt.data;
-    console.log("Upserting user with data:", id, attributes);
+    if (eventType === "user.created") {
+      const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
 
-    try {
-      const attributesJson = JSON.stringify(attributes); // Serialize attributes to JSON
+      const user = {
+        externalId: id,
+        attributes: {
+          email: email_addresses[0].email_address,
+          username: username!,
+          firstName: first_name,
+          lastName: last_name,
+          photo: image_url,
+        }
+      };
 
-      await prisma.user.upsert({
-        where: { externalId: id as string },
-        create: {
-          externalId: id as string,
-          attributes: attributesJson, // Pass serialized JSON to create
-        },
-        update: {
-          attributes: attributesJson, // Pass serialized JSON to update
-        },
-      });
+      console.log("Upserting user with data:", user);
 
-      console.log("User upserted successfully");
-    } catch (error) {
-        console.error("Error upserting user:", error);
-        return new NextResponse("Error occurred during user upsert", { status: 500 });
+      try {
+        await prisma.user.upsert({
+          where: { externalId: id },
+          update: {
+            attributes: {
+              email: email_addresses[0].email_address,
+              username: username!,
+              firstName: first_name,
+              lastName: last_name,
+              photo: image_url,
+            }
+          },
+          create: {
+            externalId: id,
+            attributes: {
+              email: email_addresses[0].email_address,
+              username: username!,
+              firstName: first_name,
+              lastName: last_name,
+              photo: image_url,
+            }
+          }
+        });
+
+        console.log(`Upserted user with external ID ${id}`);
+      } catch (err) {
+        console.error("Error upserting user:", err);
+        throw new Error("Error upserting user");
       }
     }
+
+    console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
+  })();
 
   return new NextResponse("Webhook received and is being processed", { status: 200 });
 }
