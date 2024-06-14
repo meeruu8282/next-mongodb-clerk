@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
       console.log("Upserting user with data:", user);
 
       try {
-        await prisma.user.upsert({
+        const upsertResult = await prisma.user.upsert({
           where: { externalId: id },
           update: {
             attributes: {
