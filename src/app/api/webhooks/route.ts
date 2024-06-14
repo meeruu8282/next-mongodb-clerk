@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { clerkClient } from "@clerk/nextjs";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { Webhook } from "svix";
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 if (!WEBHOOK_SECRET) {
@@ -45,19 +48,12 @@ export async function POST(req: NextRequest) {
     const { id } = evt.data;
     const eventType = evt.type;
 
-    if (eventType === "user.created") {
-      const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
+    if (eventType === "user.created" || eventType === "user.updated") {
+      const { id, ...attributes } = evt.data;
 
-      const user = {
-        clerkId: id,
-        email: email_addresses[0].email_address,
-        username: username!,
-        firstName: first_name,
-        lastName: last_name,
-        photo: image_url,
-      };
+     
 
-      console.log("Creating user with data:", user);
+      console.log("Upserting user with data:", id, attributes);
 
     }
 
