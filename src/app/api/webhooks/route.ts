@@ -45,16 +45,30 @@ export async function POST(req: NextRequest) {
   }
 
   (async () => {
-    const { id } = evt.data;
+    const { id, ...attributes } = evt.data;
     const eventType = evt.type;
 
     if (eventType === "user.created" || eventType === "user.updated") {
-      const { id, ...attributes } = evt.data;
+      try {
+        // Convert attributes object to JSON string
+        const attributesJson = JSON.stringify(attributes);
 
-     
+        const user = await prisma.user.upsert({
+          where: { externalId: id as string },
+          create: {
+            externalId: id as string,
+            attributes: attributesJson,
+          },
+          update: {
+            attributes: attributesJson,
+          },
+        });
 
-      console.log("Upserting user with data:", id, attributes);
-
+        console.log("Upserting user with data:", user);
+      } catch (error) {
+        console.error("Error upserting user:", error);
+        return new NextResponse("Error occurred during user upsert", { status: 500 });
+      }
     }
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
