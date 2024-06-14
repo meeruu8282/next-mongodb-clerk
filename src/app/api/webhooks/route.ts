@@ -93,10 +93,12 @@ export async function POST(req: NextRequest) {
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
 
+    // Return a successful response after processing
+    return new NextResponse("Webhook received and processed successfully", { status: 200 });
+
   } catch (err) {
     console.error("Error upserting user:", err);
-    throw new Error("Error upserting user");
+    // Handle the error and return an appropriate response
+    return new NextResponse("Error occurred during user upsert", { status: 500 });
   }
-
-  return new NextResponse("Webhook received and is being processed", { status: 200 });
 }
