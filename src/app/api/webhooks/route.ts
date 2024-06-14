@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Upsert user data using Prisma
-  (async () => {
+  try {
     const { id } = evt.data;
     const eventType = evt.type;
 
@@ -65,39 +65,38 @@ export async function POST(req: NextRequest) {
 
       console.log("Upserting user with data:", user);
 
-      try {
-        await prisma.user.upsert({
-          where: { externalId: id },
-          update: {
-            attributes: {
-              email: email_addresses[0].email_address,
-              username: username!,
-              firstName: first_name,
-              lastName: last_name,
-              photo: image_url,
-            }
-          },
-          create: {
-            externalId: id,
-            attributes: {
-              email: email_addresses[0].email_address,
-              username: username!,
-              firstName: first_name,
-              lastName: last_name,
-              photo: image_url,
-            }
+      const upsertResult = await prisma.user.upsert({
+        where: { externalId: id },
+        update: {
+          attributes: {
+            email: email_addresses[0].email_address,
+            username: username!,
+            firstName: first_name,
+            lastName: last_name,
+            photo: image_url,
           }
-        });
+        },
+        create: {
+          externalId: id,
+          attributes: {
+            email: email_addresses[0].email_address,
+            username: username!,
+            firstName: first_name,
+            lastName: last_name,
+            photo: image_url,
+          }
+        }
+      });
 
-        console.log(`Upserted user with external ID ${id}`);
-      } catch (err) {
-        console.error("Error upserting user:", err);
-        throw new Error("Error upserting user");
-      }
+      console.log(`Upserted user with external ID ${id}`);
     }
 
     console.log(`Webhook with an ID of ${id} and type of ${eventType}`);
-  })();
+
+  } catch (err) {
+    console.error("Error upserting user:", err);
+    throw new Error("Error upserting user");
+  }
 
   return new NextResponse("Webhook received and is being processed", { status: 200 });
 }
