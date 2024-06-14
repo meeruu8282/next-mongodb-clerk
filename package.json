@@ -8,7 +8,7 @@
     "build:payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload build",
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "cross-env PAYLOAD_CONFIG_PATH=dist/payload/payload.config.js NEXT_BUILD=true node dist/server.js",
-    "build": "cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles && yarn build:next",
+    "build": "prisma generate && cross-env NODE_ENV=production yarn build:payload && yarn build:server && yarn copyfiles && yarn build:next",
     "serve": "cross-env PAYLOAD_CONFIG_PATH=dist/payload/payload.config.js NODE_ENV=production node dist/server.js",
     "eject": "yarn remove next react react-dom @next/eslint-plugin-next && ts-node eject.ts",
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
@@ -17,7 +17,9 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "start": "next start",
-    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload"
+    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload",
+    "postinstall": "prisma generate"
+
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.0.3",
