@@ -7,6 +7,7 @@ export default authMiddleware({
   publicRoutes: ["/", "/providers/personalData", "/api/webhooks(.*)"],
 });
 
+
 export const config = {
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
