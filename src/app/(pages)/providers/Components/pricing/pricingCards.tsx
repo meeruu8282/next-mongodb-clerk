@@ -183,13 +183,13 @@ const PricingCards: React.FC<CardsProps> = ({
             </div>
           ))}
 
-{/* <RoleModal
+<RoleModal
   handleRoleChange={handleSelectedRoleChange}
   isOpen={isModalOpen}
   onClose={() => {
     setModalOpen(false);
   }}
-/> */}
+/>
 
         </div>
       </div>

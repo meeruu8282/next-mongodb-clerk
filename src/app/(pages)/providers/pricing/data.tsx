@@ -20,33 +20,43 @@ export const cardDescription: dataTypeCard[] = [
     {
       cardId: 0,
       title: 'Independent Doctor',
-      description: 'Enhanced features for \nindependent doctors.', //"\n" = new line
+      description: 'Perfect for independent and sole physician.', //"\n" = new line
       features: [
-        'Appointment management',
-        'Custom branding',
-        'Multiple specialty listings',
+        'Fast appointment booking and payment',
+        'Unlimited Video and In-person consultation',
+        'Fully Intergrated EHR',
+        'Digital Rx and Diagnostics',
+        '24/7 Data Insight & Patient Management',
+        'Single doctor',
+
       ]
     },
     {
       cardId: 1,
       title: 'Clinic',
       description:
-        'Perfect for small clinics with more providers and advanced features.',
+        'Perfect for Small Clinics',
       features: [
-        'Appointment management',
-        'Custom branding and clinic profile',
-        'EHR integration',
+        'Fast appointment booking and payment',
+        'Unlimited Video and In-person consultation',
+        'Fully Intergrated EHR',
+        'Digital Rx and Diagnostics',
+        '24/7 Data Insight & Patient Management',
+        'Max 10 doctors',
       ]
     },
     {
       cardId: 2,
       title: 'Hospital',
       description:
-        'Suitable for small hospitals with limited departments.',
+        'Ideal for Small Hospitals with Mutiple Locations.',
       features: [
-        'Appointment management',
-        'Provider and department profiles for up to 10 departments',
-        'Reporting and analytics',
+        'Fast appointment booking and payment',
+        'Unlimited Video and In-person consultation',
+        'Fully Intergrated EHR',
+        'Digital Rx and Diagnostics',
+        '24/7 Data Insight & Patient Management',
+        'More than 10 doctors',
       ]
     }
 ]
@@ -57,17 +67,17 @@ export const subscription: dataTypeSub[] = [
     products: [
       {
         title: 'Independent Doctor',
-        price: '$10,49/month',
+        price: '$10,49 per doctor/month',
         productId: 'price_123stripe1' //Placeholder Stripe productId
       },
       {
         title: 'Clinic',
-        price: '$8,69/month',
+        price: '$8,69 per doctor/month',
         productId: 'price_123stripe2' //Placeholder Stripe productId
       },
       {
         title: 'Hospital',
-        price: '$6,90/month',
+        price: '$6,90 per doctor/month',
         productId: 'price_123stripe3' //Placeholder Stripe productId
       }
     ]
@@ -77,18 +87,18 @@ export const subscription: dataTypeSub[] = [
     products: [
       {
         title: 'Independent Doctor',
-        price: '$26,75/month', //Placeholder price
+        price: '$26,75 per doctor/month', //Placeholder price
         productId: 'price_123stripe4', //Placeholder Stripe productId
       },
       {
         title: 'Clinic',
-        price: '$22,16/month', //Placeholder price
+        price: '$22,16 per doctor/month', //Placeholder price
         productId: 'price_123stripe5' //Placeholder Stripe productId
       },
       {
 
         title: 'Hospital',
-        price: '$17,60/month', //Placeholder price
+        price: '$17,60 per doctor/month', //Placeholder price
         productId: 'price_123stripe6' //Placeholder Stripe productId
       }
     ]
@@ -99,19 +109,19 @@ export const subscription: dataTypeSub[] = [
       {
 
         title: 'Independent Doctor',
-        price: '$94,41/month', //Placeholder price
+        price: '$94,41 per doctor/month', //Placeholder price
         productId: 'price_123stripe7' //Placeholder Stripe productId
       },
       {
 
         title: 'Clinic',
-        price: '$78,21/month', //Placeholder price
+        price: '$78,21 per doctor/month', //Placeholder price
         productId: 'price_123stripe8' //Placeholder Stripe productId
       },
       {
 
         title: 'Hospital',
-        price: '$62,10/month', //Placeholder price
+        price: '$62,10 per doctor/month', //Placeholder price
         productId: 'price_123stripe9' //Placeholder Stripe productId
       }
     ]

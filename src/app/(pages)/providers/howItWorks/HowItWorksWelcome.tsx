@@ -3,8 +3,7 @@ import Image from 'next/image';
 import style from './howItWork.module.css'
 import React from "react";
 import WelcomeToCarelyo from "../../patients/components/WelcomeToCarelyo";
-
-
+import Link from 'next/link'; 
 
 
 interface HowItsWorkWelcomeTemplateProps {
@@ -33,14 +32,15 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
         <div className="mb-5">
           <WelcomeToCarelyo />
         </div>
-        <h1 className="text-3xl mb-3 leading-tight lg:text-[5rem] lg:text-left text-center">                 {text1}
+        <h1 className="text-3xl mb-3 leading-tight lg:text-[5rem] lg:text-left text-center font-bold">                 {text1}
         </h1>
-        <p className="font-extralight text-center lg:text-left text-lg lg:text-xl xl:text-2xl">
+        <p className="font-extralight text-center lg:text-left text-lg lg:text-xl xl:text-xl font-semibold">
         {text2}
         </p>
         <div className="button-container lg:items-start lg:justify-start justify-center mt-5 flex gap-7">
           {/* Get started Button */}
           <div className="flex items-center">
+            <Link href="/providers/pricing">
             <button className="carelyoButton w-[230px] h-[72px] p-[6px] gap-[10px] font-semibold">
               <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
 {textButton1}                <div className="ml-3">
@@ -59,6 +59,8 @@ const HowItWorksWelcome: React.FC<HowItsWorkWelcomeTemplateProps> = ({
                 </div>
               </div>
             </button>
+            </Link>
+
             {/* Learn more Text */}
             <div className="font-semibold text-sm sm:text-base md:text-base lg:text-base xl:text-base text-black ml-5">
 {textButton2}            </div>

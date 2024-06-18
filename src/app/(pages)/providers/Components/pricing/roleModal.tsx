@@ -52,17 +52,27 @@ const RoleModal: React.FC<ModalProps> = ({
 
     const cards = [
       {
-        title: 'Independent Doctor',
+        title: 'Ghana',
         description: 'Paragraph of explanation is here',
         icon: 'IconIndDoc'
       },
       {
-        title: 'Clinic',
+        title: 'Nigeria',
         description: 'Paragraph of explanation is here',
         icon: 'IconClinic'
       },
       {
-        title: 'Hospital',
+        title: 'Sweden',
+        description: 'Paragraph of explanation is here',
+        icon: 'IconHospital'
+      },
+      {
+        title: 'Togo',
+        description: 'Paragraph of explanation is here',
+        icon: 'IconHospital'
+      },
+      {
+        title: 'United Kingdom',
         description: 'Paragraph of explanation is here',
         icon: 'IconHospital'
       },
@@ -162,7 +172,7 @@ const RoleModal: React.FC<ModalProps> = ({
         <div className="flex flex-col items-center mb-4">
           <div className={`${style.roleModalTitle} font-bold
           text-[1.8rem] tracking-tight`}>
-            Select Your Role
+            Country Of Operation
           </div>
           <div className="font-normal text-[0.9rem] tracking-tight
           text-neutral-600 mb-2">

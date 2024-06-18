@@ -19,7 +19,6 @@
     "start": "next start",
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload",
     "postinstall": "prisma generate"
-
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.0.3",
@@ -82,7 +81,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.9",
     "@types/glob": "^8.1.0",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.5",
     "@types/react": "^18.2.55",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
@@ -98,7 +97,11 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "nodemon": "^3.1.1",
     "prettier": "^3.2.5",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
-  }
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/meeruu8282/next-mongodb-clerk.git",
+  "author": "<meeru284@gmail.com>",
+  "license": "MIT"
 }
