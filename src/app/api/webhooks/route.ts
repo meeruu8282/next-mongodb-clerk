@@ -50,42 +50,27 @@ export async function POST(req: NextRequest) {
     const eventType = evt.type;
 
     if (eventType === "user.created") {
-      const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
+      const { id, email_addresses, image_url, first_name, last_name, username} = evt.data;
 
-      const user = {
-        externalId: id,
-        attributes: {
-          email: email_addresses[0].email_address,
-          username: username!,
-          firstName: first_name,
-          lastName: last_name,
-          photo: image_url,
-        }
+      const userAttributes = {
+        email: email_addresses[0].email_address,
+        username: username!,
+        firstName: first_name,
+        lastName: last_name,
+        photo: image_url,
       };
 
-      console.log("Upserting user with data:", user);
+      console.log("Upserting user with data:", { externalId: id, attributes: userAttributes });
 
       try {
         await prisma.user.upsert({
-          where: { externalId: id },
+          where: { externalId: id as string },
           update: {
-            attributes: {
-              email: email_addresses[0].email_address,
-              username: username!,
-              firstName: first_name,
-              lastName: last_name,
-              photo: image_url,
-            }
+            attributes: userAttributes,
           },
           create: {
             externalId: id,
-            attributes: {
-              email: email_addresses[0].email_address,
-              username: username!,
-              firstName: first_name,
-              lastName: last_name,
-              photo: image_url,
-            }
+            attributes: userAttributes,
           }
         });
 
