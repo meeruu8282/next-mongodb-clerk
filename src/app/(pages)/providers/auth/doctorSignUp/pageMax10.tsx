@@ -1,14 +1,7 @@
-
-import { link } from "fs";
-import DoctorProvisers from "../../Components/doctorOnboarding";
-
+import DoctorProvisers from "../../Components/clinicDoctorOnboarding";
 import {
-  MdcnLicense,
-  AccuntCircle,
-  EmailIcon,
-  HouseIcon,
 } from "../../Components/svgComponent";
-export default function DoctorOnboardSignUp() {
+export default function DoctorOnboardClinicMax10() {
   return (
     <div>
   

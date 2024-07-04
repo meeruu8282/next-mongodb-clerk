@@ -85,11 +85,25 @@ const TopBlackNavbar = () => {
             {!user?.id && (
               <>
                <Link href={signInUrl} className=" text-gray-300 hover:text-white mr-4">
-              Sign In
-            </Link>
+               <button 
+                                className={`w-[130px] h-[45px] p-[6px] gap-[5px] font-semibold button-black-border button-hover-effect`} 
+              
+                            >
+                                <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
+                                    Sign In
+                
+                                </div>
+                            </button>            </Link>
             <Link href={'/sign-up'} className=" text-gray-300 hover:text-white mr-4">
-              Sign Up
-            </Link>
+            <button 
+                                className={`w-[130px] h-[45px] p-[6px] gap-[5px] font-semibold button-black-border button-hover-effect`} 
+              
+                            >
+                                <div className="carelyoButtonText flex items-center justify-center text-[16px] w-full">
+                                    Sign Up
+                
+                                </div>
+                            </button>              </Link>
               </>
             )}
            

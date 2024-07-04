@@ -53,7 +53,7 @@ export default function PlatformProvisers(props: {
   <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
     <div className="w-[883px] h-[52px] flex justify-center ">
       <h1 className=" text-[40px] font-[Poppins] font-semibold ">
-      Platform Details
+     Start Filling Your Platform Details
       </h1>
     </div>
     {/* Add spacing here */}

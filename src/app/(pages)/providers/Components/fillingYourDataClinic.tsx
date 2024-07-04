@@ -14,10 +14,17 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import ToggleableBox from "./ToggleableBoxProps";
 
 export default function SignUpProvisers(props: {
-  Adress: string;
-  telOrMobileNumber: string;
-  licens: ReactNode;
-  providersName: string;
+  providerType: string,
+  telOrMobileNumber: string,
+  email: string,
+  taxno: string,
+  city: string,
+  state: string,
+  country: string,
+  address: string,
+  regno: string,
+  providersName: string,
+  admin: string,
 }) {
   const [userData, setUserData] = useState({
     firstName: "",
@@ -39,11 +46,13 @@ export default function SignUpProvisers(props: {
 
 <div className="background-greenFillText absolute z-[-500] flex justify-center items-center w-screen h-[554px] top-0 bg-sageOpacityHigh rounded-[5px]">
   <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
-    <div className="w-[883px] h-[52px] flex justify-center ">
-      <h1 className=" text-[40px] font-[Poppins] font-semibold ">
-        Start Filling Your Personal Data
-      </h1>
-    </div>
+  <div className="w-[883px] h-auto flex flex-col justify-center items-center text-center">
+  <h1 className="text-[40px] font-[Poppins] font-semibold">
+    Start Filling Customer - Purchaser Information
+  </h1>
+  <h1 className="text-[40px] font-[Poppins] font-semibold">
+Clinic Or Hospital.  </h1>
+</div>
     {/* Add spacing here */}
     <div className="mt-4"></div>
     <div className=" w-[921px] h-[32px] opacity-50 flex justify-center items-center">
@@ -57,7 +66,7 @@ export default function SignUpProvisers(props: {
 
 
         <div className=" flex justify-center items-center   ">
-          <div className=" custom-shadow  bg-white relative z-10 mt-[300px] flex flex-col justify-center items-center  h-[662px] w-[1194px] rounded-[25px]">
+          <div className=" custom-shadow  bg-white relative z-10 mt-[300px] flex flex-col justify-center items-center  h-[880px] w-[1194px] rounded-[25px]">
             <div className="w-[1114px] h-[582px]  ">
             <div className=" justify-end  w-[1114px] h-[526px] mt-5 ">
   <div className="w-[135px] h-[32px] ">
@@ -71,7 +80,7 @@ export default function SignUpProvisers(props: {
   <div className="flex w-[1114px] h-[84px]">
   {/* Full Name input field */}
   <div className="absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
-    {props.providersName}
+    {props.providerType}*
   </div>
 
   <div className="flex justify-center items-center w-[551px] h-[84px]">
@@ -93,7 +102,7 @@ export default function SignUpProvisers(props: {
   
   <div className="flex items-center w-[551px] h-[84px]">
   <div className="absolute w-[121px] h-[80px] font-semibold font-[Poppins] text-[16px]">
-    Email
+    {props.admin}*
   </div>
     <div className="w-[551px] h-[54px] flex justify-center items-center">
       <div className="w-[22px] h-[22px] flex justify-center items-center">
@@ -114,8 +123,8 @@ export default function SignUpProvisers(props: {
 </div>
 
 <div className="flex w-[1114px] h-[84px]">
-  <div className="absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
-{props.telOrMobileNumber}  </div>
+  <div className="absolute w-[250px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+{props.providersName}*  </div>
 
   <div className="flex justify-center items-center w-[551px] h-[84px]">
     <div className="w-[551px] h-[54px] flex justify-center items-center">
@@ -136,7 +145,7 @@ export default function SignUpProvisers(props: {
   
   <div className="flex items-center w-[551px] h-[84px]">
     <div className="absolute w-[121px] h-[80px] font-semibold font-[Poppins] text-[16px]">
-{props.licens}    </div>
+{props.telOrMobileNumber} *   </div>
     <div className="w-[551px] h-[54px] flex justify-center items-center">
       <div className="w-[22px] h-[22px] flex justify-center items-center">
         <EmailIcon/>
@@ -156,13 +165,12 @@ export default function SignUpProvisers(props: {
 
 <div className="flex w-[1114px] h-[84px]">
   <div className="absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
-    {props.Adress}
-  </div>
+{props.email}*  </div>
 
   <div className="flex justify-center items-center w-[551px] h-[84px]">
     <div className="w-[551px] h-[54px] flex justify-center items-center">
       <div className="w-[22px] h-[22px] flex justify-center items-center">
-        <HouseIcon />
+        <AccuntCircle />
       </div>
       <div className="w-[519px] h-[22px] flex justify-center items-center">
         <div className="w-[498px] h-[32px] flex items-center">
@@ -175,9 +183,131 @@ export default function SignUpProvisers(props: {
       </div>
     </div>
   </div>
- 
+  
+  <div className="flex items-center w-[1144px] h-[84px]">
+    <div className="absolute w-[450px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+{props.regno} *   </div>
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <EmailIcon/>
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div className="flex w-[1114px] h-[24px] mt-[200px]"> {/* Adjusted mt-[100px] to mt-[120px] */}
+<div className="flex w-[1114px] h-[84px]">
+  <div className="absolute w-[150px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+{props.taxno}*  </div>
+
+  <div className="flex justify-center items-center w-[551px] h-[84px]">
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <AccuntCircle />
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="flex items-center w-[551px] h-[84px]">
+    <div className="absolute w-[121px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+{props.city} *   </div>
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <EmailIcon/>
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="flex w-[1114px] h-[84px]">
+  <div className="absolute w-[121px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+{props.state}*  </div>
+
+  <div className="flex justify-center items-center w-[551px] h-[84px]">
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <AccuntCircle />
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="flex items-center w-[551px] h-[84px]">
+    <div className="absolute w-[121px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+{props.country} *   </div>
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <EmailIcon/>
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="flex w-[1114px] h-[84px]">
+ 
+  
+  
+  <div className="flex items-center w-[551px] h-[84px]">
+    <div className="absolute w-[200px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+{props.address} *   </div>
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <EmailIcon/>
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder=""
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="flex w-[1114px] h-[24px] mt-[75px]"> {/* Adjusted mt-[100px] to mt-[120px] */}
 <div className="flex pr-4">
     <ToggleableBox id="uniqueId" 
   isChecked={true} 
@@ -193,7 +323,7 @@ export default function SignUpProvisers(props: {
                 </div>
               </div>
             </div>
-            <div className=" w-[1114px] h-[54px] flex font-[Poppins] ">
+            <div className=" w-[1114px] h-[84px] flex font-[Poppins] mt-32">
             <Link href="/providers/personalData">
 
             <div className="flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage hover:bg-sage  hover:text-white ">
@@ -203,7 +333,7 @@ export default function SignUpProvisers(props: {
 </div>
 </Link>
 <div className="w-[10px]"></div> {/* Add this empty div for spacing */}
-<Link href="/providers/hospitalData">
+<Link href="/providers/platformData">
   
     <div className="flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage  hover:text-white hover:bg-sage">
       <h1 className="w-[75px] h-[22px]  flex justify-center items-center">

@@ -6,9 +6,8 @@ import {
 } from "../svgComponent";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import style from "../../pricing/pricing.module.css"
-import { UserButton, useUser } from '@clerk/nextjs'
-
+import style from "../../pricing/pricing.module.css";
+import { useUser } from '@clerk/nextjs';
 
 interface ModalProps {
   handleRoleChange: (role: string) => void;
@@ -22,7 +21,7 @@ const RoleModal: React.FC<ModalProps> = ({
   onClose
 }) => {
   const [selectedRole, setSelectedRole] = useState<string>('');
-  const { user } = useUser() // Using useUser hook to get the user object
+  const { user } = useUser(); // Using useUser hook to get the user object
 
   useEffect(() => {
     if (isOpen) {
@@ -34,133 +33,137 @@ const RoleModal: React.FC<ModalProps> = ({
 
   const signInUrl = user?.id ? process.env.NEXT_PUBLIC_SIGN_IN_URL_1 : process.env.NEXT_PUBLIC_SIGN_IN_URL_2;
 
-  //Handler when clicking the confirm button
+  // Handler when clicking the confirm button
   const handleConfirm = () => {
     handleRoleChange(selectedRole);
     onClose();
     if (!user?.id) {
       window.location.href = signInUrl;
-    }  };
+    }
+  };
 
-    const handleClosebutton = () => {
+  const handleCloseButton = () => {
     setSelectedRole('');
     onClose();
   };
 
-  //Role cards
+  // Role cards
   const SelectableRole: React.FC = () => {
 
     const cards = [
       {
         title: 'Ghana',
-        description: 'Paragraph of explanation is here',
+        // description: 'Paragraph of explanation is here',
         icon: 'IconIndDoc'
       },
       {
         title: 'Nigeria',
-        description: 'Paragraph of explanation is here',
+        // description: 'Paragraph of explanation is here',
         icon: 'IconClinic'
       },
       {
         title: 'Sweden',
-        description: 'Paragraph of explanation is here',
+        // description: 'Paragraph of explanation is here',
         icon: 'IconHospital'
       },
       {
         title: 'Togo',
-        description: 'Paragraph of explanation is here',
+        // description: 'Paragraph of explanation is here',
         icon: 'IconHospital'
       },
       {
         title: 'United Kingdom',
-        description: 'Paragraph of explanation is here',
+        // description: 'Paragraph of explanation is here',
         icon: 'IconHospital'
       },
     ];
 
     return (
       <div className="flex flex-col gap-4">
-        {cards.map((card, index) => (
-        <div
-          key={index}
-          onClick={() => setSelectedRole(card.title)}
-          className={`${style.roleModalCardContainer} group/card transition ease-out
-          py-5 px-6 rounded-[10px] border-[0.1rem] cursor-pointer duration-300 ${
-            selectedRole === card.title
-            ? 'border-sage bg-sage/5'
-            : 'border-gray-300 hover:border-greenHover'
-          }`}
-        >
-          <div className={`${style.roleModalCard} flex items-center justify-between gap-4`}>
-            <div className={`${style.roleModalCardIcon} h-[3.8rem] w-[3.8rem] flex
-            justify-center items-center bg-neutral-50 rounded-full shrink-0 grow-0 ${
-            selectedRole === card.title
-            ? 'text-sage bg-sage/10'
-            : 'bg-gray-50'
-          }`}>
-              {selectedRole === card.title ? (
-                <>
-                  {card.icon === 'IconIndDoc' &&
-                  <IconIndDoc className="fill-current text-sage" />}
-                  {card.icon === 'IconClinic' &&
-                  <IconClinic className="fill-current text-sage" />}
-                  {card.icon === 'IconHospital' &&
-                  <IconHospital className="fill-current text-sage" />}
-                </>
-              ) : (
-                <>
-                  {card.icon === 'IconIndDoc' &&
-                  <IconIndDoc className="fill-current text-neutral-400
-                  group-hover/card:text-sage" />}
-                  {card.icon === 'IconClinic' &&
-                  <IconClinic className="fill-current text-neutral-400
-                  group-hover/card:text-sage" />}
-                  {card.icon === 'IconHospital' &&
-                  <IconHospital className="fill-current text-neutral-400
-                  group-hover/card:text-sage" />}
-                </>
-              )}
-            </div>
-            <div>
-              <h1 className={`${style.roleModalCardtitle}
-              text-[1.1rem] tracking-[-2%] font-bold`}>
-                {card.title}
-              </h1>
-              <div className="font-normal text-[0.9rem]
-              tracking-tight text-gray-500">
-                {card.description}
+        {cards.map((card, index) => {
+          const isDisabled = ['Sweden', 'Togo', 'United Kingdom'].includes(card.title);
+          return (
+            <div
+              key={index}
+              onClick={() => !isDisabled && setSelectedRole(card.title)}
+              className={`${style.roleModalCardContainer} group/card transition ease-out
+              py-5 px-6 rounded-[10px] border-[0.1rem] cursor-pointer duration-300 ${
+                selectedRole === card.title
+                ? 'border-sage bg-sage/5'
+                : 'border-gray-300 hover:border-greenHover'
+              } ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            >
+              <div className={`${style.roleModalCard} flex items-center justify-between gap-4`}>
+                <div className={`${style.roleModalCardIcon} h-[3.8rem] w-[4.8rem] flex
+                justify-center items-center bg-neutral-50 rounded-full shrink-0 grow-0 ${
+                selectedRole === card.title
+                ? 'text-sage bg-sage/10'
+                : 'bg-gray-50'
+              }`}>
+                  {selectedRole === card.title ? (
+                    <>
+                      {card.icon === 'IconIndDoc' &&
+                      <IconIndDoc className="fill-current text-sage" />}
+                      {card.icon === 'IconClinic' &&
+                      <IconClinic className="fill-current text-sage" />}
+                      {card.icon === 'IconHospital' &&
+                      <IconHospital className="fill-current text-sage" />}
+                    </>
+                  ) : (
+                    <>
+                      {card.icon === 'IconIndDoc' &&
+                      <IconIndDoc className="fill-current text-neutral-400
+                      group-hover/card:text-sage" />}
+                      {card.icon === 'IconClinic' &&
+                      <IconClinic className="fill-current text-neutral-400
+                      group-hover/card:text-sage" />}
+                      {card.icon === 'IconHospital' &&
+                      <IconHospital className="fill-current text-neutral-400
+                      group-hover/card:text-sage" />}
+                    </>
+                  )}
+                </div>
+                <div>
+                  <h1 className={`${style.roleModalCardTitle}
+                  text-[1.1rem] tracking-[-2%] font-bold`}>
+                    {card.title}
+                  </h1>
+                  <div className="font-normal text-[0.9rem]
+                  tracking-tight text-gray-500">
+                    {/* {card.description} */}
+                  </div>
+                </div>
+                {/* Checkbox */}
+                <div
+                  className={`${style.roleModalCardCheckbox} h-7 w-7 flex justify-center
+                  items-center rounded-full border-[0.1rem] shrink-0 grow-0 ${
+                    selectedRole === card.title
+                    ? "bg-sage border-sage"
+                    : "bg-white border-gray-300 group-hover/card:border-sage"
+                  }`}
+                  onClick={() => !isDisabled && setSelectedRole(card.title)}
+                >
+                  {selectedRole === card.title && (
+                      <FontAwesomeIcon icon={faCheck} color="white" />
+                  )}
+                </div>
               </div>
             </div>
-            {/* Checkbox */}
-            <div
-              className={`${style.roleModalCardcheckbox} h-7 w-7 flex justify-center
-              items-center rounded-full border-[0.1rem] shrink-0 grow-0 ${
-                selectedRole === card.title
-                ? "bg-sage border-sage"
-                : "bg-white border-gray-300 group-hover/card:border-sage"
-              }`}
-              onClick={() => setSelectedRole(card.title)}
-            >
-              {selectedRole === card.title && (
-                  <FontAwesomeIcon icon={faCheck} color="white" />
-              )}
-            </div>
-          </div>
-        </div>
-      ))}
+          );
+        })}
       </div>
     );
   };
 
-  //Pop-up Modal
+  // Pop-up Modal
   return (
     <div className={`${style.roleModal} fixed overflow-auto top-0 left-0 w-full
     h-full flex flex-col items-center justify-center bg-black/20 z-[1005]`}>
       <div className={`${style.roleModalContent} relative bg-white p-8 my-2 mx-1
       rounded-[24px]`}>
-        {/* close button */}
+        {/* Close button */}
         <div className="flex justify-end">
-          <button onClick={() => handleClosebutton()} className="absolute top-6 right-6
+          <button onClick={() => handleCloseButton()} className="absolute top-6 right-6
           bg-white bg-opacity-70 rounded-full text-gray-400 hover:text-gray-700">
             <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -168,7 +171,7 @@ const RoleModal: React.FC<ModalProps> = ({
             </svg>
           </button>
         </div>
-        {/* cards start */}
+        {/* Cards start */}
         <div className="flex flex-col items-center mb-4">
           <div className={`${style.roleModalTitle} font-bold
           text-[1.8rem] tracking-tight`}>
@@ -176,17 +179,17 @@ const RoleModal: React.FC<ModalProps> = ({
           </div>
           <div className="font-normal text-[0.9rem] tracking-tight
           text-neutral-600 mb-2">
-            Choose one of role available
+            Choose one of regions available
           </div>
         </div>
         <SelectableRole />
         <button
-        onClick={handleConfirm}
-        className={`w-full mt-4 bg-sage hover:bg-greenHover text-white
-        text-[1rem] py-3 px-3 rounded-[10px] ${
-          selectedRole === ""
-          ? "pointer-events-none bg-gray-400" : ""
-        }`}
+          onClick={handleConfirm}
+          className={`w-full mt-4 bg-sage hover:bg-greenHover text-white
+          text-[1rem] py-3 px-3 rounded-[10px] ${
+            selectedRole === ""
+            ? "pointer-events-none bg-gray-400" : ""
+          }`}
         >
           Confirm
         </button>

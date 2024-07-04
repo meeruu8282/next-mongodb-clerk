@@ -23,6 +23,11 @@
         max-width: 25rem;
         height: 32rem;
     }
+    .priceFreeCard {
+        max-width: 25rem;
+        height: 38rem;
+    }
+    
 
     .CardButtonSpace {
         margin-top: 0;

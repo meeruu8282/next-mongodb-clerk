@@ -103,7 +103,15 @@
 
 
 
-
+  .button-black-border {
+    border: 2px solid black;
+    border-radius: 12px;
+  }
+  
+  .button-spacing {
+    margin-right: 20px; /* Adjust the value as needed for spacing */
+  }
+  
 
 
   @media (max-width: 1300px)  {
@@ -270,6 +278,20 @@
     }
   }
 
+  .button-hover-effect {
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+  }
   
+  .button-hover-effect:hover {
+    background-color: rgba(59,199,86,1); 
+    border-color: white; 
+    color: white; 
+  }
+  
+  .button-black-border:hover {
+    background-color: rgba(59,199,86,1); 
+    border-color: white; 
+    color: white; 
+  }
 
   

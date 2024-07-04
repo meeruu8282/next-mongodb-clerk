@@ -1,20 +1,15 @@
 'use client'
-import { ReactNode, useState, useEffect } from "react";
-import StyledBox from "./styleBox";
+import { useState} from "react";
 import {
-  MdcnLicense,
   AccuntCircle,
   EmailIcon,
-  HouseIcon,
 } from "./svgComponent";
 import Link from 'next/link'
-import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import ToggleableBox from "./ToggleableBoxProps";
 
 export default function DoctorProvisers(props: {
     email: string,
+    idno: string,
     expdate: string,
     telOrMobileNumber: string,
     licens: string,
@@ -42,15 +37,19 @@ export default function DoctorProvisers(props: {
 
 <div className="background-greenFillText absolute z-[-500] flex justify-center items-center w-screen h-[554px] top-0 bg-sageOpacityHigh rounded-[5px]">
   <div className=" w-[921px] h-[108px]  justify-center flex  flex-col">
-    <div className="w-[920px] h-[52px] flex justify-center ">
-      <h1 className=" text-[40px] font-[Poppins] font-semibold ">
-Doctor Onboarding      </h1>
-    </div>
+  <div className="w-[883px] h-auto flex flex-col justify-center items-center text-center">
+  <h1 className="text-[40px] font-[Poppins] font-semibold">
+    Onboarding Doctor Information
+  </h1>
+  <h1 className="text-[40px] font-[Poppins] font-semibold">
+    Sole Independent Doctor
+  </h1>
+</div>
     {/* Add spacing here */}
     <div className="mt-4"></div>
     <div className=" w-[921px] h-[32px] opacity-50 flex justify-center items-center">
       <p className="flex justify-center items-center ">
-        Please provide doctor's details.
+        Please provide name of the doctor which must be you.
       </p>
     </div>
   </div>
@@ -61,9 +60,9 @@ Doctor Onboarding      </h1>
           <div className=" custom-shadow  bg-white relative z-10 mt-[300px] flex flex-col justify-center items-center  h-[662px] w-[1194px] rounded-[25px]">
             <div className="w-[1114px] h-[582px]  ">
             <div className=" justify-end  w-[1114px] h-[526px] mt-5 ">
-  <div className="w-[135px] h-[32px] ">
+  <div className="w-[195px] h-[32px] ">
     <h2 className=" font-normal font-[Poppins] text-[20px] ">
-Doctor's Details    </h2>
+Doctor Personal Data    </h2>
   </div>
   {/* Add spacing here */}
   <div className="mt-4"></div>
@@ -178,8 +177,8 @@ Doctor's Details    </h2>
   </div>
   
   <div className="flex items-center w-[551px] h-[84px]">
-  <div className="absolute w-[150px] h-[80px] font-semibold font-[Poppins] text-[16px]">
-    {props.issuedate}
+  <div className="absolute w-[350px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+    {props.idno}
   </div>
     <div className="w-[551px] h-[54px] flex justify-center items-center">
       <div className="w-[22px] h-[22px] flex justify-center items-center">
@@ -202,9 +201,33 @@ Doctor's Details    </h2>
 </div>
 
 
+
+
 <div className="flex w-[1114px] h-[84px]">
+  {/* Full Name input field */}
+  <div className="absolute w-[320px] h-[22px] font-semibold font-[Poppins] text-[16px]">
+    {props.issuedate}
+  </div>
+
+  <div className="flex justify-center items-center w-[551px] h-[84px]">
+    <div className="w-[551px] h-[54px] flex justify-center items-center">
+      <div className="w-[22px] h-[22px] flex justify-center items-center">
+        <AccuntCircle />
+      </div>
+      <div className="w-[519px] h-[22px] flex justify-center items-center">
+        <div className="w-[498px] h-[32px] flex items-center">
+          <input
+            type="text"
+            placeholder={userData.firstName}
+            className="w-[498px] h-[38px] border-[2px] rounded-[8px] pl-4 hover:border-green-500"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div className="flex items-center w-[551px] h-[84px]">
-  <div className="absolute w-[180px] h-[80px] font-semibold font-[Poppins] text-[16px]">
+  <div className="absolute w-[190px] h-[80px] font-semibold font-[Poppins] text-[16px]">
     {props.expdate}
   </div>
     <div className="w-[551px] h-[54px] flex justify-center items-center">
@@ -251,7 +274,7 @@ Doctor's Details    </h2>
 </div>
 </Link>
 <div className="w-[10px]"></div> {/* Add this empty div for spacing */}
-<Link href="/providers/contract">
+<Link href="/providers/clinicMax10Data">
   
     <div className="flex justify-center items-center w-[549px] h-[54px] rounded-[8px] border-[1px] text-sage  hover:text-white hover:bg-sage">
       <h1 className="w-[75px] h-[22px]  flex justify-center items-center">

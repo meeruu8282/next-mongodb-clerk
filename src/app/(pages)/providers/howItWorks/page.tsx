@@ -35,8 +35,8 @@ export default function Howitwork() {
             text2={
               'Are you an independent doctor, family physician, or managing a small to medium-sized clinic or hospital? We at Carelyo are here for you!'
             }
-            textButton1={'Get Started'}
-            textButton2={'Discover More'}
+            textButton1={'See plans and pricing'}
+            textButton2={'Try 90 days free'}
             imageSrc={'/firstpageRec.png'}
           />
         </div> 

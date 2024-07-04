@@ -1,10 +1,5 @@
 'use client'
-import { ReactNode, useState, useEffect } from "react";
-
 import Link from 'next/link'
-import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import ToggleableBox from "../Components/ToggleableBoxProps";
 import Navbar from '../Components/NavBar/navbar'
 import NavbarMobile from '../Components/NavBar/NavbarMobile'
@@ -109,6 +104,8 @@ export default function Contract() {
                 <h1 className="w-[75px] h-[22px] flex justify-center items-center">
                   Continue
                 </h1>
+
+                
               </div>
             </Link>
           </div>
